@@ -1,0 +1,10 @@
+obj_*.?pp
+!obj_utilities.?pp
+!obj_settings.?pp
+Release
+*.o
+*.user
+.libs
+*.la
+.deps
+*.lo

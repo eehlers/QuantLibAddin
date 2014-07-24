@@ -1,0 +1,17 @@
+aclocal.m4
+autom4te.cache/
+config/
+config.hpp
+config.hpp.in
+config.log
+config.status
+configure
+libtool
+Makefile
+Makefile.in
+*.ncb
+Release
+stamp-h1
+*.suo
+test.cpp
+.time-stamp

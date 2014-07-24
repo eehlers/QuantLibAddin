@@ -1,0 +1,8 @@
+cpp_*.?pp
+Release
+*.o
+*.user
+.deps
+.libs
+*.lo
+*.la

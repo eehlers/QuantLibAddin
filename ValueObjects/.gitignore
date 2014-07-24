@@ -1,0 +1,8 @@
+vo_*.?pp
+Release
+*.o
+*.user
+.libs
+.deps
+*.lo
+*.la

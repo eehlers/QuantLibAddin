@@ -1,0 +1,6 @@
+mainQuantLibAddin
+*.user
+.deps
+*.o
+MainQuantLibAddin
+.libs

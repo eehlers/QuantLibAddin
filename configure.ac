@@ -1,0 +1,106 @@
+
+# Process this file with autoconf to produce a configure script.
+
+AC_INIT([QuantLibAddin], [1.5.0],
+        [quantlib-dev@lists.sourceforge.net],
+        [QuantLibAddin])
+AC_PREREQ(2.50)
+AC_CONFIG_SRCDIR([./quantlib.i])
+AC_CONFIG_AUX_DIR([config])
+AC_CONFIG_HEADERS([config.hpp])
+AM_INIT_AUTOMAKE([foreign])
+
+AC_COPYRIGHT([
+Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012,
+    2013, 2014 Eric Ehlers
+Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012,
+    2013, 2014 Ferdinando Ametrano
+
+Copyright (C) 2004, 2006 StatPro Italia srl
+Copyright (C) 2005, 2006 Aurelien Chanudet
+Copyright (C) 2005, 2006 Plamen Neykov
+Copyright (C) 2005 Walter Penschke
+Copyright (C) 2006, 2007 Chiara Fornarola
+Copyright (C) 2006, 2007 Cristina Duminuco
+Copyright (C) 2006, 2007 Francois du Vignaud
+Copyright (C) 2006, 2007 Giorgio Facchinetti
+Copyright (C) 2006, 2007 Katiuscia Manzoni
+Copyright (C) 2006, 2007 Marco Bianchetti
+Copyright (C) 2006 Mario Pucci
+Copyright (C) 2006 Silvia Frasson
+Copyright (C) 2007 Luigi Ballabio
+
+This file is part of QuantLib, a free-software/open-source library
+for financial quantitative analysts and developers - http://quantlib.org/
+
+QuantLib is free software: you can redistribute it and/or modify it under the
+terms of the QuantLib license.  You should have received a copy of the
+license along with this program; if not, please email
+<quantlib-dev@lists.sf.net>. The license is also available online at
+<http://quantlib.org/license.shtml>.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the license for more details.])
+
+AC_PROG_INSTALL
+
+# Default compilation variables
+
+AC_SUBST([CXXFLAGS],[${CXXFLAGS='-g -O2 -Wall'}])
+
+# Continue setup
+
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_CPP
+AC_PROG_LIBTOOL
+AC_LANG([C++])
+AC_CONFIG_MACRO_DIR([m4])
+
+# Help the compiler find external software
+
+AC_ARG_WITH([boost-include],
+            AC_HELP_STRING([--with-boost-include=INCLUDE_PATH],
+                           [Supply the location of Boost header files]),
+            [ql_boost_include_path="`cd ${withval} 2>/dev/null && pwd`"],
+            [ql_boost_include_path=""])
+if test [ -n "$ql_boost_include_path" ] ; then
+   AC_SUBST([BOOST_INCLUDE],["-I${ql_boost_include_path}"])
+   AC_SUBST([CPPFLAGS],["${CPPFLAGS} -I${ql_boost_include_path}"])
+fi
+AC_ARG_WITH([boost-lib],
+            AC_HELP_STRING([--with-boost-lib=LIB_PATH],
+                           [Supply the location of Boost libraries]),
+            [ql_boost_lib_path="`cd ${withval} 2>/dev/null && pwd`"],
+            [ql_boost_lib_path=""])
+if test [ -n "$ql_boost_lib_path" ] ; then
+   AC_SUBST([BOOST_LIB],["-L${ql_boost_lib_path}"])
+   AC_SUBST([LDFLAGS],["${LDFLAGS} -L${ql_boost_lib_path}"])
+fi
+
+# Configure and validate the path to SWIG
+
+AC_ARG_WITH([swig],
+            AC_HELP_STRING([--with-swig=/path/to/SWIG],
+                           [Specify the root directory of the SWIG source tree]),
+            [swig_path=${withval}],
+            [AC_MSG_ERROR([You must specify the location of SWIG: "./configure --with-swig=path/to/SWIG"])])
+AC_CHECK_FILE([${swig_path}/swig], [],
+            [AC_MSG_ERROR([Unable to locate file swig in specified SWIG directory])])
+AC_ARG_VAR(swig_dir, path to SWIG)
+AC_SUBST(swig_dir, [${swig_path}])
+
+# Done, output the configured files
+
+AC_CONFIG_FILES([
+    Makefile
+    m4/Makefile
+    ValueObjects/Makefile
+    AddinObjects/Makefile
+    AddinCpp/Makefile
+    Main/Makefile
+    ])
+
+AC_OUTPUT
+

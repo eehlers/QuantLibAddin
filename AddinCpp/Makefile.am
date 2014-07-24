@@ -4,6 +4,7 @@ AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
 this_includedir=${includedir}/${subdir}
 this_include_HEADERS = \
     convert2.hpp \
+    init.hpp \
     cpp_date.hpp \
     cpp_quote.hpp \
     cpp_settings.hpp \
@@ -11,6 +12,7 @@ this_include_HEADERS = \
 
 libAddinCpp_la_SOURCES = \
     convert2.cpp \
+    init.cpp \
     cpp_date.cpp \
     cpp_quote.cpp \
     cpp_settings.cpp \

@@ -10,6 +10,6 @@ SUBDIRS = \
 
 SWIG_DIR = @swig_dir@
 
-swig:
+SWIG:
 	$(SWIG_DIR)/swig -I$(SWIG_DIR)/Lib/reposit -prefix ql -c++ -reposit quantlib.i
 

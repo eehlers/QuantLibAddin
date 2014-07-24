@@ -4,7 +4,7 @@ ACLOCAL_AMFLAGS = -I m4
 SUBDIRS = \
     m4 \
     ValueObjects \
-    AddinObjects \
+    qlo \
     AddinCpp \
     Main
 

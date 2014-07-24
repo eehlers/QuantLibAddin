@@ -5,7 +5,7 @@
 #include <oh/enumerations/enumregistry.hpp>
 //#include <qlo/enumerations/register/register_all.hpp>
 //#include <qlo/serialization/serializationfactory.hpp>
-#include "AddinObjects/init.hpp"
+#include "qlo/init.hpp"
 
 void QuantLibAddinCpp::initializeAddin() {
 

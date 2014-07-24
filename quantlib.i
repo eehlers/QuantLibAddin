@@ -1,5 +1,4 @@
 
-
 %typemap(rp_cpp_in) QuantLib::Date const & "const ObjectHandler::property_t&";
 
 %typemap(rp_cpp_cnv) QuantLib::Date const & %{
@@ -11,7 +10,12 @@
 %typemap(rp_excel) QuantLib::Date const & "X";
 %typemap(rp_excel_in) QuantLib::Date const & "X";
 
-%module QuantLibAddin
+//%module QuantLibAddin
+%module(
+    rp_obj_dir="qlo",
+    rp_xl_dir="../QuantLibXL2"
+    ) QuantLibAddin
+
 %include date.i
 %include quote.i
 %include utilities.i

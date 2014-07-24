@@ -97,7 +97,7 @@ AC_CONFIG_FILES([
     Makefile
     m4/Makefile
     ValueObjects/Makefile
-    AddinObjects/Makefile
+    qlo/Makefile
     AddinCpp/Makefile
     Main/Makefile
     ])

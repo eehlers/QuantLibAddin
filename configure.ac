@@ -100,6 +100,7 @@ AC_CONFIG_FILES([
     qlo/enumerations/Makefile
     qlo/valueobjects/Makefile
     AddinCpp/Makefile
+    AddinCpp/conversions/Makefile
     Main/Makefile
     ])
 

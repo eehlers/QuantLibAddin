@@ -1,12 +1,12 @@
 
 SUBDIRS = \
+    enumerations \
     valueobjects
 
 AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
 
 this_includedir=${includedir}/${subdir}
 this_include_HEADERS = \
-    enum_factories.hpp \
     init.hpp \
     obj_date.hpp \
     obj_quote.hpp \

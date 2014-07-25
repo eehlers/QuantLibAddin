@@ -17,7 +17,7 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#include <AddinObjects/obj_settings.hpp>
+#include <qlo/obj_settings.hpp>
 #include <ql/settings.hpp>
 
 namespace QuantLibAddin {

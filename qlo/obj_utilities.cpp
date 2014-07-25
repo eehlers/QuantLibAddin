@@ -23,7 +23,7 @@
 //    #include <qlo/config.hpp>
 //#endif
 //#include <qlo/utilities.hpp>
-#include <AddinObjects/obj_utilities.hpp>
+#include <qlo/obj_utilities.hpp>
 //#include <qlo/qladdindefines.hpp>
 #include <ql/version.hpp>
 

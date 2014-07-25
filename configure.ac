@@ -96,8 +96,8 @@ AC_SUBST(swig_dir, [${swig_path}])
 AC_CONFIG_FILES([
     Makefile
     m4/Makefile
-    ValueObjects/Makefile
     qlo/Makefile
+    qlo/valueobjects/Makefile
     AddinCpp/Makefile
     Main/Makefile
     ])

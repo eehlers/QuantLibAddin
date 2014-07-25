@@ -21,7 +21,8 @@ libAddinCpp_la_SOURCES = \
 noinst_LTLIBRARIES = libAddinCpp.la
 
 libAddinCpp_la_LIBADD = \
-    ../ValueObjects/libValueObjects.la ../AddinObjects/libAddinObjects.la
+    ../qlo/libAddinObjects.la
+#    ../qlo/valueobjects/libValueObjects.la ../qlo/libAddinObjects.la
 
 libAddinCpp_la_LDFLAGS = \
     -lQuantLib -lObjectHandler -lboost_filesystem -lboost_serialization -lboost_system -lboost_regex

@@ -1,4 +1,7 @@
 
+SUBDIRS = \
+    valueobjects
+
 AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
 
 this_includedir=${includedir}/${subdir}
@@ -18,4 +21,7 @@ libAddinObjects_la_SOURCES = \
     obj_utilities.cpp
 
 noinst_LTLIBRARIES = libAddinObjects.la
+
+libAddinObjects_la_LIBADD = \
+    valueobjects/libValueObjects.la
 

@@ -1,15 +1,13 @@
 
-AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
+SUBDIRS = \
+    factories
+#    constructors
+#    register
 
-this_includedir=${includedir}/${subdir}
-this_include_HEADERS = \
-    factories.hpp
-
-#libValueObjects_la_SOURCES = \
-#    vo_date.cpp \
-#    vo_quote.cpp \
-#    vo_settings.cpp \
-#    vo_utilities.cpp
-
-#noinst_LTLIBRARIES = libValueObjects.la
+#noinst_LTLIBRARIES = libEnumerations.la
+#
+#libAddinObjects_la_LIBADD = \
+#    constructors/libEnumerationConstructors.la \
+#    factories/libEnumerationFactories.la \
+#    register/libEnumerationRegister.la
 

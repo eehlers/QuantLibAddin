@@ -6,9 +6,9 @@ namespace ObjectHandler {
 
     // FIXME consolidate with AddinObjects/conversions/convert2.cpp
 
-    inline bool is_numeric(const std::string &s, double &l) {
+    inline bool is_numeric(const std::string &s, double &d) {
         try {
-            l = boost::lexical_cast<double>(s);
+            d = boost::lexical_cast<double>(s);
             return true;
         } catch(...) {
             return false;
@@ -36,7 +36,7 @@ namespace ObjectHandler {
     }
 
     template<> 
-    QuantLib::Date convert2<QuantLib::Date, property_t>(const property_t& c) {
+    QuantLib::Date convert2<QuantLib::Date, ConvertOper>(const ConvertOper& c) {
         return convertDate(c);
     }
 }

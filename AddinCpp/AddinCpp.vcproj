@@ -145,6 +145,18 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="conversions"
+			>
+			<File
+				RelativePath=".\conversions\convert2.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\conversions\convert2.hpp"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\cpp_date.cpp"
 			>
@@ -175,6 +187,14 @@
 		</File>
 		<File
 			RelativePath=".\cpp_utilities.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\init.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\init.hpp"
 			>
 		</File>
 	</Files>

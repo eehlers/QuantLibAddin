@@ -170,6 +170,18 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="conversions"
+			>
+			<File
+				RelativePath=".\conversions\convert2.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\conversions\convert2.hpp"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\xl_addin.cpp"
 			>
@@ -180,6 +192,10 @@
 		</File>
 		<File
 			RelativePath=".\xl_quote.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\xl_settings.cpp"
 			>
 		</File>
 		<File

@@ -145,6 +145,70 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="valueobjects"
+			>
+			<File
+				RelativePath=".\valueobjects\vo_date.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\valueobjects\vo_date.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\valueobjects\vo_quote.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\valueobjects\vo_quote.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\valueobjects\vo_settings.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\valueobjects\vo_settings.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\valueobjects\vo_utilities.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\valueobjects\vo_utilities.hpp"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="enumerations"
+			>
+			<Filter
+				Name="constructors"
+				>
+			</Filter>
+			<Filter
+				Name="factories"
+				>
+				<File
+					RelativePath=".\enumerations\factories\all.hpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="register"
+				>
+			</Filter>
+		</Filter>
+		<File
+			RelativePath=".\init.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\init.hpp"
+			>
+		</File>
 		<File
 			RelativePath=".\obj_date.cpp"
 			>

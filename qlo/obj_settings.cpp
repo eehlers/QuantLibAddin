@@ -23,9 +23,8 @@
 
 namespace QuantLibAddin {
 
-    long settingsSetEvaluationDate(const QuantLib::Date& evalDate) {
+    void settingsSetEvaluationDate(const QuantLib::Date& evalDate) {
         QuantLib::Settings::instance().evaluationDate() = evalDate;
-        return 0;
     }
 
     std::string dateToString(const QuantLib::Date& d) {

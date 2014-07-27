@@ -21,7 +21,7 @@
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
-			CharacterSet="1"
+			CharacterSet="2"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -61,7 +61,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="ObjectHandler-xllib-vc90-mt-gd-1_5_0.lib xlsdk-vc90-mt.lib QuantLib-vc90-mt-gd.lib"
+				AdditionalDependencies="ObjectHandler-xllib-vc90-mt-gd-1_5_0.lib xlsdk-vc90-mt-gd.lib QuantLib-vc90-mt-gd.lib"
 				OutputFile="$(OutDir)\$(ProjectName).xll"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="..\..\..\quantlib\ObjectHandler\lib,..\..\..\quantlib\QuantLib\lib"

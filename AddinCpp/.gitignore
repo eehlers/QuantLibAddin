@@ -6,3 +6,4 @@ Release
 .libs
 *.lo
 *.la
+Debug

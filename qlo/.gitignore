@@ -8,3 +8,4 @@ Release
 *.la
 .deps
 *.lo
+Debug

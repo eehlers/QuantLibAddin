@@ -4,3 +4,4 @@ mainQuantLibAddin
 *.o
 MainQuantLibAddin
 .libs
+Debug

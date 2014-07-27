@@ -19,12 +19,19 @@
 
 #include <qlo/obj_settings.hpp>
 #include <ql/settings.hpp>
+#include <sstream>
 
 namespace QuantLibAddin {
 
     long settingsSetEvaluationDate(const QuantLib::Date& evalDate) {
         QuantLib::Settings::instance().evaluationDate() = evalDate;
         return 0;
+    }
+
+    std::string dateToString(const QuantLib::Date& d) {
+        std::ostringstream ret;
+        ret << d;
+        return ret.str();
     }
 
     //void qlSettingsSetEnforceTodaysHistoricFixings(bool b) {

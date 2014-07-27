@@ -44,6 +44,7 @@ namespace QuantLibAddin {
     long settingsSetEvaluationDate(const QuantLib::Date& evalDate);
 
     //void qlSettingsSetEnforceTodaysHistoricFixings(bool b);
+    std::string dateToString(const QuantLib::Date& d);
 }
 
 #endif

@@ -16,8 +16,8 @@ int main() {
         std::cout << QuantLibAddinCpp::qlSimpleQuoteValue("quote") << std::endl;
         QuantLibAddinCpp::qlDate("date", 24950);
         std::cout << QuantLibAddinCpp::qlDateSerialNumber("date") << std::endl;
+        std::cout << QuantLibAddinCpp::qlDateToString("41841") << std::endl;
         QuantLibAddinCpp::qlSettingsSetEvaluationDate(41841L);
-        QuantLibAddinCpp::qlSettingsSetEvaluationDate("41841");
     	std::cout << "bye" << std::endl;
     } catch (const std::exception &e) {
     	std::cout << "error " << e.what() << std::endl;

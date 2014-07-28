@@ -46,6 +46,7 @@
     rp_xl_dir="../QuantLibXL2"
     ) QuantLibAddin
 
+//%include processes.i
 %include quote.i
 %include volatilities.i
 %feature("rp:generation", "manual");

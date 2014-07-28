@@ -3,6 +3,7 @@
 %typemap(rp_cpp_in) QuantLib::Calendar const & "const std::string&";
 %typemap(rp_cpp_in) QuantLib::DayCounter const & "const std::string&";
 %typemap(rp_cpp_in) QuantLib::Volatility "double";
+%typemap(rp_cpp_in) QuantLib::Rate "double";
 
 %typemap(rp_cpp_cnv) QuantLib::Date const & %{
     QuantLib::Date $1_name_cnv =
@@ -27,11 +28,13 @@
 %typemap(rp_excel) QuantLib::Calendar const & "P";
 %typemap(rp_excel) QuantLib::DayCounter const & "P";
 %typemap(rp_excel) QuantLib::Volatility "E";
+%typemap(rp_excel) QuantLib::Rate "E";
 
 %typemap(rp_excel_in) QuantLib::Date const & "OPER*";
 %typemap(rp_excel_in) QuantLib::Calendar const & "OPER*";
 %typemap(rp_excel_in) QuantLib::DayCounter const & "OPER*";
 %typemap(rp_excel_in) QuantLib::Volatility "double*";
+%typemap(rp_excel_in) QuantLib::Rate "double*";
 
 %typemap(rp_excel_cnv) QuantLib::Date const & %{
         QuantLib::Date $1_name_cnv = ObjectHandler::convert2<QuantLib::Date>(
@@ -50,6 +53,7 @@
 %include exercise.i
 %include quote.i
 %include volatilities.i
+%include yieldtermstructures.i
 %feature("rp:generation", "manual");
 %include date.i
 %include utilities.i

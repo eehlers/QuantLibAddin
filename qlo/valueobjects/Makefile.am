@@ -8,7 +8,8 @@ this_include_HEADERS = \
     vo_quote.hpp \
     vo_settings.hpp \
     vo_utilities.hpp \
-    vo_volatilities.hpp
+    vo_volatilities.hpp \
+    vo_yieldtermstructures.hpp
 
 libValueObjects_la_SOURCES = \
     vo_date.cpp \
@@ -16,7 +17,8 @@ libValueObjects_la_SOURCES = \
     vo_quote.cpp \
     vo_settings.cpp \
     vo_utilities.cpp \
-    vo_volatilities.cpp
+    vo_volatilities.cpp \
+    vo_yieldtermstructures.cpp
 
 noinst_LTLIBRARIES = libValueObjects.la
 

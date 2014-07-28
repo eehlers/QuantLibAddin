@@ -12,6 +12,7 @@ this_include_HEADERS = \
     cpp_settings.hpp \
     cpp_utilities.hpp \
     cpp_volatilities.hpp \
+    cpp_yieldtermstructures.hpp \
     init.hpp
 
 libAddinCpp_la_SOURCES = \
@@ -21,6 +22,7 @@ libAddinCpp_la_SOURCES = \
     cpp_settings.cpp \
     cpp_utilities.cpp \
     cpp_volatilities.cpp \
+    cpp_yieldtermstructures.cpp \
     init.cpp
 
 noinst_LTLIBRARIES = libAddinCpp.la

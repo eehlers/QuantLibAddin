@@ -13,7 +13,8 @@ this_include_HEADERS = \
     obj_quote.hpp \
     obj_settings.hpp \
     obj_utilities.hpp \
-    obj_volatilities.hpp
+    obj_volatilities.hpp \
+    obj_yieldtermstructures.hpp
 
 libAddinObjects_la_SOURCES = \
     init.cpp \
@@ -22,7 +23,8 @@ libAddinObjects_la_SOURCES = \
     obj_quote.cpp \
     obj_settings.cpp \
     obj_utilities.cpp \
-    obj_volatilities.cpp
+    obj_volatilities.cpp \
+    obj_yieldtermstructures.cpp
 
 noinst_LTLIBRARIES = libAddinObjects.la
 

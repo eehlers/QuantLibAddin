@@ -8,6 +8,7 @@
 #include "AddinCpp/cpp_settings.hpp"
 #include "AddinCpp/cpp_utilities.hpp"
 #include "AddinCpp/cpp_volatilities.hpp"
+#include "AddinCpp/cpp_yieldtermstructures.hpp"
 
 int main() {
     try {
@@ -20,7 +21,6 @@ int main() {
         std::cout << QuantLibAddinCpp::qlDateToString("40024") << std::endl;
         std::cout << QuantLibAddinCpp::qlDateIsEndOfMonth(40025L) << std::endl;
         QuantLibAddinCpp::qlSettingsSetEvaluationDate(41841L);
-        QuantLibAddinCpp::qlBlackConstantVol("vol", 35932L, "Target", 0.2, "Actual/365 (Fixed)");
 
         // **************EquityOption.cpp
         // set up dates
@@ -37,7 +37,7 @@ int main() {
         double riskFreeRate = 0.06;
         double volatility = 0.20;
         long maturity = 36297;//(17, May, 1999);
-        std::string dayCounter = "Actual365Fixed";
+        std::string dayCounter = "Actual/365 (Fixed)";
 
         std::cout << "Option type = "  << type << std::endl;
         std::cout << "Maturity = "        << maturity << std::endl;
@@ -63,20 +63,12 @@ int main() {
 
         QuantLibAddinCpp::qlEuropeanExercise("exercise", maturity);
 
-//        Handle<Quote> underlyingH(
-//            boost::shared_ptr<Quote>(new SimpleQuote(underlying)));
-//
-//        // bootstrap the yield/dividend/vol curves
-//        Handle<YieldTermStructure> flatTermStructure(
-//            boost::shared_ptr<YieldTermStructure>(
-//                new FlatForward(settlementDate, riskFreeRate, dayCounter)));
-//        Handle<YieldTermStructure> flatDividendTS(
-//            boost::shared_ptr<YieldTermStructure>(
-//                new FlatForward(settlementDate, dividendYield, dayCounter)));
-//        Handle<BlackVolTermStructure> flatVolTS(
-//            boost::shared_ptr<BlackVolTermStructure>(
-//                new BlackConstantVol(settlementDate, calendar, volatility,
-//                                     dayCounter)));
+        QuantLibAddinCpp::qlSimpleQuote("underlying", underlying);
+
+        // bootstrap the yield/dividend/vol curves
+        QuantLibAddinCpp::qlFlatForward("flatTermStructure", settlementDate, riskFreeRate, dayCounter);
+        QuantLibAddinCpp::qlFlatForward("flatDividendTS", settlementDate, dividendYield, dayCounter);
+        QuantLibAddinCpp::qlBlackConstantVol("flatVolTS", settlementDate, calendar, volatility, dayCounter);
 //        boost::shared_ptr<StrikedTypePayoff> payoff(
 //                                        new PlainVanillaPayoff(type, strike));
 //        boost::shared_ptr<BlackScholesMertonProcess> bsmProcess(

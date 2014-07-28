@@ -38,6 +38,7 @@
 //#include <ql/cashflows/digitalcoupon.hpp>
 //#include <ql/currencies/all.hpp>
 //#include <ql/experimental/risk/sensitivityanalysis.hpp>
+#include <ql/option.hpp>
 //#include <ql/instruments/asianoption.hpp>
 //#include <ql/instruments/barrieroption.hpp>
 //#include <ql/instruments/capfloor.hpp>
@@ -428,13 +429,13 @@ namespace QuantLibAddin {
 //            create.registerType("Sep", new QuantLib::Month(QuantLib::Sep));
 //            create.registerType("September", new QuantLib::Month(QuantLib::September));
 //        }
-//
-//        {
-//            ObjectHandler::Create<QuantLib::Option::Type> create;
-//            create.registerType("Call", new QuantLib::Option::Type(QuantLib::Option::Call));
-//            create.registerType("Put", new QuantLib::Option::Type(QuantLib::Option::Put));
-//        }
-//
+
+        {
+            ObjectHandler::Create<QuantLib::Option::Type> create;
+            create.registerType("Call", new QuantLib::Option::Type(QuantLib::Option::Call));
+            create.registerType("Put", new QuantLib::Option::Type(QuantLib::Option::Put));
+        }
+
 //        {
 //            ObjectHandler::Create<QuantLib::OvernightIndexedSwap::Type> create;
 //            create.registerType("Payer", new QuantLib::OvernightIndexedSwap::Type(QuantLib::OvernightIndexedSwap::Payer));

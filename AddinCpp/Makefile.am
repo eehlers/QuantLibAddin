@@ -10,6 +10,7 @@ this_include_HEADERS = \
     cpp_exercise.hpp \
     cpp_includes.hpp \
     cpp_instruments.hpp \
+    cpp_payoffs.hpp \
     cpp_processes.hpp \
     cpp_quote.hpp \
     cpp_settings.hpp \
@@ -22,6 +23,7 @@ libAddinCpp_la_SOURCES = \
     cpp_date.cpp \
     cpp_exercise.cpp \
     cpp_instruments.cpp \
+    cpp_payoffs.cpp \
     cpp_processes.cpp \
     cpp_quote.cpp \
     cpp_settings.cpp \

@@ -19,12 +19,13 @@
 
 #include <qlo/enumerations/register/register_all.hpp>
 #include <qlo/enumerations/register/register_types.hpp>
+#include <qlo/enumerations/register/register_classes.hpp>
 
 namespace QuantLibAddin {
 
     void registerEnumerations() {
 
-        //registerEnumeratedClasses();
+        registerEnumeratedClasses();
         //registerEnumeratedCurves();
         ////registerEnumeratedHistoricalForwardRatesAnalysis();
         registerEnumeratedTypes();

@@ -11,6 +11,7 @@ this_include_HEADERS = \
     obj_date.hpp \
     obj_exercise.hpp \
     obj_instruments.hpp \
+    obj_payoffs.hpp \
     obj_processes.hpp \
     obj_quote.hpp \
     obj_settings.hpp \
@@ -23,6 +24,7 @@ libAddinObjects_la_SOURCES = \
     obj_date.cpp \
     obj_exercise.cpp \
     obj_instruments.cpp \
+    obj_payoffs.cpp \
     obj_processes.cpp \
     obj_quote.cpp \
     obj_settings.cpp \
@@ -33,6 +35,7 @@ libAddinObjects_la_SOURCES = \
 noinst_LTLIBRARIES = libAddinObjects.la
 
 libAddinObjects_la_LIBADD = \
+    enumerations/constructors/libEnumerationConstructors.la \
     enumerations/factories/libEnumerationFactories.la \
     enumerations/register/libEnumerationRegister.la \
     valueobjects/libValueObjects.la

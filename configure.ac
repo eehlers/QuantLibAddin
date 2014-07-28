@@ -98,6 +98,7 @@ AC_CONFIG_FILES([
     m4/Makefile
     qlo/Makefile
     qlo/enumerations/Makefile
+    qlo/enumerations/constructors/Makefile
     qlo/enumerations/factories/Makefile
     qlo/enumerations/register/Makefile
     qlo/valueobjects/Makefile

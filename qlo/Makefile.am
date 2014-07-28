@@ -9,6 +9,7 @@ this_includedir=${includedir}/${subdir}
 this_include_HEADERS = \
     init.hpp \
     obj_date.hpp \
+    obj_exercise.hpp \
     obj_quote.hpp \
     obj_settings.hpp \
     obj_utilities.hpp \
@@ -17,6 +18,7 @@ this_include_HEADERS = \
 libAddinObjects_la_SOURCES = \
     init.cpp \
     obj_date.cpp \
+    obj_exercise.cpp \
     obj_quote.cpp \
     obj_settings.cpp \
     obj_utilities.cpp \

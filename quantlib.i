@@ -47,6 +47,7 @@
     ) QuantLibAddin
 
 //%include processes.i
+%include exercise.i
 %include quote.i
 %include volatilities.i
 %feature("rp:generation", "manual");

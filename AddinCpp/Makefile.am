@@ -6,20 +6,22 @@ AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
 
 this_includedir=${includedir}/${subdir}
 this_include_HEADERS = \
-    init.hpp \
     cpp_date.hpp \
+    cpp_exercise.hpp \
     cpp_quote.hpp \
     cpp_settings.hpp \
     cpp_utilities.hpp \
-    cpp_volatilities.hpp
+    cpp_volatilities.hpp \
+    init.hpp
 
 libAddinCpp_la_SOURCES = \
-    init.cpp \
     cpp_date.cpp \
+    cpp_exercise.cpp \
     cpp_quote.cpp \
     cpp_settings.cpp \
     cpp_utilities.cpp \
-    cpp_volatilities.cpp
+    cpp_volatilities.cpp \
+    init.cpp
 
 noinst_LTLIBRARIES = libAddinCpp.la
 

@@ -3,9 +3,10 @@
 #include <iomanip>
 #include "AddinCpp/init.hpp"
 #include "AddinCpp/cpp_date.hpp"
+#include "AddinCpp/cpp_exercise.hpp"
 #include "AddinCpp/cpp_quote.hpp"
-#include "AddinCpp/cpp_utilities.hpp"
 #include "AddinCpp/cpp_settings.hpp"
+#include "AddinCpp/cpp_utilities.hpp"
 #include "AddinCpp/cpp_volatilities.hpp"
 
 int main() {
@@ -60,9 +61,8 @@ int main() {
                   << std::setw(widths[3]) << std::left << "American"
                   << std::endl;
 
-//        boost::shared_ptr<Exercise> europeanExercise(
-//                                         new EuropeanExercise(maturity));
-//
+        QuantLibAddinCpp::qlEuropeanExercise("exercise", maturity);
+
 //        Handle<Quote> underlyingH(
 //            boost::shared_ptr<Quote>(new SimpleQuote(underlying)));
 //

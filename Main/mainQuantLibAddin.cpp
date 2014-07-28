@@ -4,6 +4,7 @@
 #include "AddinCpp/init.hpp"
 #include "AddinCpp/cpp_date.hpp"
 #include "AddinCpp/cpp_exercise.hpp"
+#include "AddinCpp/cpp_instruments.hpp"
 #include "AddinCpp/cpp_processes.hpp"
 #include "AddinCpp/cpp_quote.hpp"
 #include "AddinCpp/cpp_settings.hpp"
@@ -73,7 +74,7 @@ int main() {
         QuantLibAddinCpp::qlBlackScholesMertonProcess("bsmProcess", "underlying", "flatDividendTS", "flatTermStructure", "flatVolTS");
 
         // options
-//        QuantLibAddinCpp::qlVanillaOption("europeanOption", "PlainVanilla", "europeanExercise");
+        QuantLibAddinCpp::qlVanillaOption("europeanOption", "PlainVanilla", "europeanExercise");
 
         // Analytic formulas:
 

@@ -1,6 +1,7 @@
 obj_*.?pp
 !obj_utilities.?pp
 !obj_settings.?pp
+!obj_date.?pp
 Release
 *.o
 *.user

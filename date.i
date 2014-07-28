@@ -1,14 +1,11 @@
 
 %feature("rp:group", "date");
-%feature("rp:include") %{
-#include <ql/time/date.hpp>
-%}
+%feature("rp:generation", "manual");
+//%feature("rp:include") %{
+//#include <ql/time/date.hpp>
+//%}
 
-namespace QuantLib {
-    class Date {
-      public:
-        Date(long serialNumber);
-        long serialNumber();
-    };
+namespace QuantLibAddin {
+    bool dateIsEndOfMonth(const QuantLib::Date& d);
 }
 

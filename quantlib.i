@@ -11,6 +11,7 @@
 %typemap(rp_cpp_in) boost::shared_ptr<QuantLib::StrikedTypePayoff> const & "const std::string&";
 %typemap(rp_cpp_in) boost::shared_ptr<QuantLib::Exercise> const & "const std::string&";
 %typemap(rp_cpp_in) QuantLib::Option::Type "const std::string&";
+%typemap(rp_cpp_in) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & "const std::string&";
 
 %typemap(rp_cpp_cnv) QuantLib::Date const & %{
     QuantLib::Date $1_name_cnv =
@@ -58,6 +59,10 @@
         ObjectHandler::Create<QuantLib::Option::Type>()($1_name);
 %} 
 
+%typemap(rp_cpp_cnv) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & %{
+    OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::BlackScholesMertonProcess, QuantLib::GeneralizedBlackScholesProcess)
+%}
+
 %typemap(rp_cpp_call) QuantLib::Date const & "$1_name_cnv";
 %typemap(rp_cpp_call) QuantLib::Calendar const & "$1_name_enum";
 %typemap(rp_cpp_call) QuantLib::DayCounter const & "$1_name_enum";
@@ -66,6 +71,7 @@
 %typemap(rp_cpp_call) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "$1_name_handle";
 %typemap(rp_cpp_call) boost::shared_ptr<QuantLib::StrikedTypePayoff> const & "$1_name_get";
 %typemap(rp_cpp_call) boost::shared_ptr<QuantLib::Exercise> const & "$1_name_get";
+%typemap(rp_cpp_call) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & "$1_name_get";
 %typemap(rp_cpp_call) QuantLib::Option::Type "$1_name_enum";
 
 %typemap(rp_excel) QuantLib::Date const & "P";
@@ -80,6 +86,7 @@
 %typemap(rp_excel) boost::shared_ptr< QuantLib::StrikedTypePayoff > const & "X";
 %typemap(rp_excel) boost::shared_ptr< QuantLib::Exercise > const & "X";
 %typemap(rp_excel) QuantLib::Option::Type "X";
+%typemap(rp_excel) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & "X";
 
 %typemap(rp_excel_in) QuantLib::Date const & "OPER*";
 %typemap(rp_excel_in) QuantLib::Calendar const & "OPER*";
@@ -93,6 +100,7 @@
 %typemap(rp_excel_in) boost::shared_ptr< QuantLib::StrikedTypePayoff > const & "xxx";
 %typemap(rp_excel_in) boost::shared_ptr< QuantLib::Exercise > const & "xxx";
 %typemap(rp_excel_in) QuantLib::Option::Type "xxx";
+%typemap(rp_excel_in) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & "xxx";
 
 %typemap(rp_excel_cnv) QuantLib::Date const & %{
         QuantLib::Date $1_name_cnv = ObjectHandler::convert2<QuantLib::Date>(
@@ -110,6 +118,7 @@
 %include exercise.i
 %include instruments.i
 %include payoffs.i
+%include pricingengines.i
 %include processes.i
 %include quote.i
 %include volatilities.i

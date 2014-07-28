@@ -13,6 +13,7 @@ this_include_HEADERS = \
     obj_instruments.hpp \
     obj_payoffs.hpp \
     obj_processes.hpp \
+    obj_pricingengines.hpp \
     obj_quote.hpp \
     obj_settings.hpp \
     obj_utilities.hpp \
@@ -26,6 +27,7 @@ libAddinObjects_la_SOURCES = \
     obj_instruments.cpp \
     obj_payoffs.cpp \
     obj_processes.cpp \
+    obj_pricingengines.cpp \
     obj_quote.cpp \
     obj_settings.cpp \
     obj_utilities.cpp \

@@ -7,6 +7,7 @@
 #include "AddinCpp/cpp_instruments.hpp"
 #include "AddinCpp/cpp_payoffs.hpp"
 #include "AddinCpp/cpp_processes.hpp"
+#include "AddinCpp/cpp_pricingengines.hpp"
 #include "AddinCpp/cpp_quote.hpp"
 #include "AddinCpp/cpp_settings.hpp"
 #include "AddinCpp/cpp_utilities.hpp"
@@ -82,6 +83,7 @@ int main() {
 
         // Black-Scholes for European
         method = "Black-Scholes";
+        QuantLibAddinCpp::qlAnalyticEuropeanEngine("engine", "bsmProcess");
 //        europeanOption.setPricingEngine(boost::shared_ptr<PricingEngine>(
 //                                     new AnalyticEuropeanEngine(bsmProcess)));
 //        std::cout << std::setw(widths[0]) << std::left << method

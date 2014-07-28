@@ -8,6 +8,7 @@ this_include_HEADERS = \
     vo_instruments.hpp \
     vo_payoffs.hpp \
     vo_processes.hpp \
+    vo_pricingengines.hpp \
     vo_quote.hpp \
     vo_settings.hpp \
     vo_utilities.hpp \
@@ -20,6 +21,7 @@ libValueObjects_la_SOURCES = \
     vo_instruments.cpp \
     vo_payoffs.cpp \
     vo_processes.cpp \
+    vo_pricingengines.cpp \
     vo_quote.cpp \
     vo_settings.cpp \
     vo_utilities.cpp \

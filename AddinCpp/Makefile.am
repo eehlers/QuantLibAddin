@@ -12,6 +12,7 @@ this_include_HEADERS = \
     cpp_instruments.hpp \
     cpp_payoffs.hpp \
     cpp_processes.hpp \
+    cpp_pricingengines.hpp \
     cpp_quote.hpp \
     cpp_settings.hpp \
     cpp_utilities.hpp \
@@ -25,6 +26,7 @@ libAddinCpp_la_SOURCES = \
     cpp_instruments.cpp \
     cpp_payoffs.cpp \
     cpp_processes.cpp \
+    cpp_pricingengines.cpp \
     cpp_quote.cpp \
     cpp_settings.cpp \
     cpp_utilities.cpp \

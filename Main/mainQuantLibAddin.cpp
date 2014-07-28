@@ -84,14 +84,16 @@ int main() {
         // Black-Scholes for European
         method = "Black-Scholes";
         QuantLibAddinCpp::qlAnalyticEuropeanEngine("engine", "bsmProcess");
-//        europeanOption.setPricingEngine(boost::shared_ptr<PricingEngine>(
-//                                     new AnalyticEuropeanEngine(bsmProcess)));
-//        std::cout << std::setw(widths[0]) << std::left << method
-//                  << std::fixed
-//                  << std::setw(widths[1]) << std::left << europeanOption.NPV()
-//                  << std::setw(widths[2]) << std::left << "N/A"
-//                  << std::setw(widths[3]) << std::left << "N/A"
-//                  << std::endl;
+        //QuantLibAddinCpp::qlInstrumentSetPricingEngine("europeanOption", "engine");
+        QuantLibAddinCpp::qlVanillaOptionSetPricingEngine("europeanOption", "engine");
+        std::cout << std::setw(widths[0]) << std::left << method
+                  << std::fixed
+                  << std::setw(widths[1]) << std::left <<
+                    //QuantLibAddinCpp::qlInstrumentNPV("europeanOption")
+                    QuantLibAddinCpp::qlVanillaOptionNPV("europeanOption")
+                  << std::setw(widths[2]) << std::left << "N/A"
+                  << std::setw(widths[3]) << std::left << "N/A"
+                  << std::endl;
 
         std::cout << "bye" << std::endl;
     } catch (const std::exception &e) {

@@ -1,4 +1,7 @@
 
+%typemap(rp_cpp_ret) QuantLib::Real "double";
+%typemap(rp_cpp_ret) SWIGTYPE "$1_type";
+
 %typemap(rp_cpp_in) QuantLib::Date const & "const ObjectHandler::property_t&";
 %typemap(rp_cpp_in) QuantLib::Calendar const & "const std::string&";
 %typemap(rp_cpp_in) QuantLib::DayCounter const & "const std::string&";
@@ -12,6 +15,7 @@
 %typemap(rp_cpp_in) boost::shared_ptr<QuantLib::Exercise> const & "const std::string&";
 %typemap(rp_cpp_in) QuantLib::Option::Type "const std::string&";
 %typemap(rp_cpp_in) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & "const std::string&";
+%typemap(rp_cpp_in) const boost::shared_ptr<QuantLib::PricingEngine>& "const std::string&";
 
 %typemap(rp_cpp_cnv) QuantLib::Date const & %{
     QuantLib::Date $1_name_cnv =
@@ -62,6 +66,9 @@
 %typemap(rp_cpp_cnv) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & %{
     OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::BlackScholesMertonProcess, QuantLib::GeneralizedBlackScholesProcess)
 %}
+%typemap(rp_cpp_cnv) const boost::shared_ptr<QuantLib::PricingEngine>& %{
+    OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::AnalyticEuropeanEngine, QuantLib::PricingEngine)
+%}
 
 %typemap(rp_cpp_call) QuantLib::Date const & "$1_name_cnv";
 %typemap(rp_cpp_call) QuantLib::Calendar const & "$1_name_enum";
@@ -73,6 +80,7 @@
 %typemap(rp_cpp_call) boost::shared_ptr<QuantLib::Exercise> const & "$1_name_get";
 %typemap(rp_cpp_call) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & "$1_name_get";
 %typemap(rp_cpp_call) QuantLib::Option::Type "$1_name_enum";
+%typemap(rp_cpp_call) const boost::shared_ptr<QuantLib::PricingEngine>& "$1_name_get";
 
 %typemap(rp_excel) QuantLib::Date const & "P";
 %typemap(rp_excel) QuantLib::Calendar const & "P";
@@ -87,6 +95,7 @@
 %typemap(rp_excel) boost::shared_ptr< QuantLib::Exercise > const & "X";
 %typemap(rp_excel) QuantLib::Option::Type "X";
 %typemap(rp_excel) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & "X";
+%typemap(rp_excel) const boost::shared_ptr<QuantLib::PricingEngine>& "X";
 
 %typemap(rp_excel_in) QuantLib::Date const & "OPER*";
 %typemap(rp_excel_in) QuantLib::Calendar const & "OPER*";
@@ -101,6 +110,7 @@
 %typemap(rp_excel_in) boost::shared_ptr< QuantLib::Exercise > const & "xxx";
 %typemap(rp_excel_in) QuantLib::Option::Type "xxx";
 %typemap(rp_excel_in) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & "xxx";
+%typemap(rp_excel_in) const boost::shared_ptr<QuantLib::PricingEngine>& "xxx";
 
 %typemap(rp_excel_cnv) QuantLib::Date const & %{
         QuantLib::Date $1_name_cnv = ObjectHandler::convert2<QuantLib::Date>(
@@ -109,7 +119,8 @@
 
 %typemap(rp_excel_call) QuantLib::Date const & "$1_name_cnv";
 
-//%module QuantLibAddin
+%typemap(rp_excel_out) QuantLib::Real "double*";
+
 %module(
     rp_obj_dir="qlo",
     rp_xl_dir="../QuantLibXL2"

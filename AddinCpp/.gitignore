@@ -1,4 +1,5 @@
 cpp_*.?pp
+!cpp_includes.hpp
 Release
 *.o
 *.user

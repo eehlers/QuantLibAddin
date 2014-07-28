@@ -4,6 +4,7 @@
 #include "AddinCpp/init.hpp"
 #include "AddinCpp/cpp_date.hpp"
 #include "AddinCpp/cpp_exercise.hpp"
+#include "AddinCpp/cpp_processes.hpp"
 #include "AddinCpp/cpp_quote.hpp"
 #include "AddinCpp/cpp_settings.hpp"
 #include "AddinCpp/cpp_utilities.hpp"
@@ -61,7 +62,7 @@ int main() {
                   << std::setw(widths[3]) << std::left << "American"
                   << std::endl;
 
-        QuantLibAddinCpp::qlEuropeanExercise("exercise", maturity);
+        QuantLibAddinCpp::qlEuropeanExercise("europeanExercise", maturity);
 
         QuantLibAddinCpp::qlSimpleQuote("underlying", underlying);
 
@@ -69,19 +70,15 @@ int main() {
         QuantLibAddinCpp::qlFlatForward("flatTermStructure", settlementDate, riskFreeRate, dayCounter);
         QuantLibAddinCpp::qlFlatForward("flatDividendTS", settlementDate, dividendYield, dayCounter);
         QuantLibAddinCpp::qlBlackConstantVol("flatVolTS", settlementDate, calendar, volatility, dayCounter);
-//        boost::shared_ptr<StrikedTypePayoff> payoff(
-//                                        new PlainVanillaPayoff(type, strike));
-//        boost::shared_ptr<BlackScholesMertonProcess> bsmProcess(
-//                 new BlackScholesMertonProcess(underlyingH, flatDividendTS,
-//                                               flatTermStructure, flatVolTS));
-//
-//        // options
-//        VanillaOption europeanOption(payoff, europeanExercise);
-//
-//        // Analytic formulas:
-//
-//        // Black-Scholes for European
-//        method = "Black-Scholes";
+        QuantLibAddinCpp::qlBlackScholesMertonProcess("bsmProcess", "underlying", "flatDividendTS", "flatTermStructure", "flatVolTS");
+
+        // options
+//        QuantLibAddinCpp::qlVanillaOption("europeanOption", "PlainVanilla", "europeanExercise");
+
+        // Analytic formulas:
+
+        // Black-Scholes for European
+        method = "Black-Scholes";
 //        europeanOption.setPricingEngine(boost::shared_ptr<PricingEngine>(
 //                                     new AnalyticEuropeanEngine(bsmProcess)));
 //        std::cout << std::setw(widths[0]) << std::left << method

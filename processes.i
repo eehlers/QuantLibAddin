@@ -1,5 +1,5 @@
 
-%feature("rp:group", "volatilities");
+%feature("rp:group", "processes");
 %feature("rp:include") %{
 #include <ql/processes/blackscholesprocess.hpp>
 %}
@@ -8,10 +8,10 @@ namespace QuantLib {
     class BlackScholesMertonProcess {
       public:
         BlackScholesMertonProcess(
-            const Handle<Quote>& x0,
-            const Handle<YieldTermStructure>& dividendTS,
-            const Handle<YieldTermStructure>& riskFreeTS,
-            const Handle<BlackVolTermStructure>& blackVolTS);
+            const QuantLib::Handle<QuantLib::Quote>& x0,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& dividendTS,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& riskFreeTS,
+            const QuantLib::Handle<QuantLib::BlackVolTermStructure>& blackVolTS);
     };
 }
 

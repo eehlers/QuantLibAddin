@@ -10,14 +10,16 @@ this_include_HEADERS = \
     cpp_date.hpp \
     cpp_quote.hpp \
     cpp_settings.hpp \
-    cpp_utilities.hpp
+    cpp_utilities.hpp \
+    cpp_volatilities.hpp
 
 libAddinCpp_la_SOURCES = \
     init.cpp \
     cpp_date.cpp \
     cpp_quote.cpp \
     cpp_settings.cpp \
-    cpp_utilities.cpp
+    cpp_utilities.cpp \
+    cpp_volatilities.cpp
 
 noinst_LTLIBRARIES = libAddinCpp.la
 

@@ -1,13 +1,13 @@
-
+#
 SUBDIRS = \
-    factories
-#    constructors
-#    register
-
+    factories \
+    register
+##    constructors
+#
 #noinst_LTLIBRARIES = libEnumerations.la
 #
-#libAddinObjects_la_LIBADD = \
-#    constructors/libEnumerationConstructors.la \
+#libEnumerations_la_LIBADD = \
 #    factories/libEnumerationFactories.la \
 #    register/libEnumerationRegister.la
-
+##    constructors/libEnumerationConstructors.la
+#

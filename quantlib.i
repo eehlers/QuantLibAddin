@@ -1,12 +1,27 @@
 
 %typemap(rp_cpp_in) QuantLib::Date const & "const ObjectHandler::property_t&";
+%typemap(rp_cpp_in) QuantLib::Calendar const & "const std::string&";
+%typemap(rp_cpp_in) QuantLib::DayCounter const & "const std::string&";
+%typemap(rp_cpp_in) QuantLib::Volatility "double";
 
 %typemap(rp_cpp_cnv) QuantLib::Date const & %{
     QuantLib::Date $1_name_cnv =
         ObjectHandler::convert2<QuantLib::Date, ObjectHandler::property_t>($1_name);
 %}
 
+%typemap(rp_cpp_cnv) QuantLib::Calendar const & %{
+    QuantLib::Calendar $1_name_enum =
+        ObjectHandler::Create<QuantLib::Calendar>()($1_name);
+%} 
+
+%typemap(rp_cpp_cnv) QuantLib::DayCounter const & %{
+    QuantLib::DayCounter $1_name_enum =
+        ObjectHandler::Create<QuantLib::DayCounter>()($1_name);
+%} 
+
 %typemap(rp_cpp_call) QuantLib::Date const & "$1_name_cnv";
+%typemap(rp_cpp_call) QuantLib::Calendar const & "$1_name_enum";
+%typemap(rp_cpp_call) QuantLib::DayCounter const & "$1_name_enum";
 
 %typemap(rp_excel) QuantLib::Date const & "P";
 %typemap(rp_excel) QuantLib::Calendar const & "P";
@@ -31,9 +46,10 @@
     rp_xl_dir="../QuantLibXL2"
     ) QuantLibAddin
 
-%include date.i
 %include quote.i
+%include volatilities.i
+%feature("rp:generation", "manual");
+%include date.i
 %include utilities.i
 %include settings.i
-%include volatilities.i
 

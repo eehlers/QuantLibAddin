@@ -1,6 +1,5 @@
 
 %feature("rp:group", "date");
-%feature("rp:generation", "manual");
 //%feature("rp:include") %{
 //#include <ql/time/date.hpp>
 //%}

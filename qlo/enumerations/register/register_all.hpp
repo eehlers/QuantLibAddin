@@ -1,6 +1,7 @@
+/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2008, 2014 Eric Ehlers
+ Copyright (C) 2007, 2014 Eric Ehlers
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -16,17 +17,15 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#ifndef qla_factory_all_hpp
-#define qla_factory_all_hpp
+#ifndef qla_register_all_hpp
+#define qla_register_all_hpp
 
-#include <qlo/enumerations/factories/calendarfactory.hpp>
-//#include <qlo/enumerations/factories/conundrumpricerfactory.hpp>
-//#include <qlo/enumerations/factories/historicalforwardratesanalysisfactory.hpp>
-//#include <qlo/enumerations/factories/iborcouponpricersfactory.hpp>
-//#include <qlo/enumerations/factories/interpolationsfactory.hpp>
-//#include <qlo/enumerations/factories/payoffsfactory.hpp>
-//#include <qlo/enumerations/factories/pricingenginesfactory.hpp>
-//#include <qlo/enumerations/factories/termstructuresfactory.hpp>
+namespace QuantLibAddin {
+
+    // To be called by the application at startup & shutdown
+    void registerEnumerations();
+    void unregisterEnumerations();
+
+}
 
 #endif
-

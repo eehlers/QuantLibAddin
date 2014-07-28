@@ -99,6 +99,7 @@ AC_CONFIG_FILES([
     qlo/Makefile
     qlo/enumerations/Makefile
     qlo/enumerations/factories/Makefile
+    qlo/enumerations/register/Makefile
     qlo/valueobjects/Makefile
     AddinCpp/Makefile
     AddinCpp/conversions/Makefile

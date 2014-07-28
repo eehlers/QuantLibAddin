@@ -9,8 +9,14 @@
 %typemap(rp_cpp_call) QuantLib::Date const & "$1_name_cnv";
 
 %typemap(rp_excel) QuantLib::Date const & "P";
+%typemap(rp_excel) QuantLib::Calendar const & "P";
+%typemap(rp_excel) QuantLib::DayCounter const & "P";
+%typemap(rp_excel) QuantLib::Volatility "E";
 
 %typemap(rp_excel_in) QuantLib::Date const & "OPER*";
+%typemap(rp_excel_in) QuantLib::Calendar const & "OPER*";
+%typemap(rp_excel_in) QuantLib::DayCounter const & "OPER*";
+%typemap(rp_excel_in) QuantLib::Volatility "double*";
 
 %typemap(rp_excel_cnv) QuantLib::Date const & %{
         QuantLib::Date $1_name_cnv = ObjectHandler::convert2<QuantLib::Date>(
@@ -29,4 +35,5 @@
 %include quote.i
 %include utilities.i
 %include settings.i
+%include volatilities.i
 

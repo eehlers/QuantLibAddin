@@ -1,6 +1,5 @@
 
 %typemap(rp_cpp_ret) QuantLib::Real "double";
-%typemap(rp_cpp_ret) SWIGTYPE "$1_type";
 
 %typemap(rp_cpp_in) QuantLib::Date const & "const ObjectHandler::property_t&";
 %typemap(rp_cpp_in) QuantLib::Calendar const & "const std::string&";

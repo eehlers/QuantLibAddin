@@ -1,5 +1,9 @@
 
-%typemap(rp_cpp_ret) QuantLib::Real "double";
+%typemap(rp_cpp_class) QuantLib::Instrument * %{
+    OH_LIB_CLASS(Instrument, QuantLib::Instrument);
+%}
+
+%typemap(rp_cpp_type) QuantLib::Real "double";
 
 %typemap(rp_cpp_in) QuantLib::Date const & "const ObjectHandler::property_t&";
 %typemap(rp_cpp_in) QuantLib::Calendar const & "const std::string&";
@@ -125,16 +129,16 @@
     rp_xl_dir="../QuantLibXL2"
     ) QuantLibAddin
 
-%include exercise.i
+//%include exercise.i
 %include instruments.i
-%include payoffs.i
-%include pricingengines.i
-%include processes.i
-%include quote.i
-%include volatilities.i
-%include yieldtermstructures.i
-%feature("rp:generation", "manual");
-%include date.i
-%include settings.i
-%include utilities.i
+//%include payoffs.i
+//%include pricingengines.i
+//%include processes.i
+//%include quote.i
+//%include volatilities.i
+//%include yieldtermstructures.i
+//%feature("rp:generation", "manual");
+//%include date.i
+//%include settings.i
+//%include utilities.i
 

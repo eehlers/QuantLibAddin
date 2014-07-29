@@ -5,12 +5,15 @@
 %}
 
 namespace QuantLib {
-    class VanillaOption {
+    class Instrument {
+      public:
+        void setPricingEngine(const boost::shared_ptr<QuantLib::PricingEngine>& engine);
+        QuantLib::Real NPV();
+    };
+    class VanillaOption : public Instrument {
       public:
         VanillaOption(const boost::shared_ptr<QuantLib::StrikedTypePayoff>& payoff,
                       const boost::shared_ptr<QuantLib::Exercise>& exercise);
-        void setPricingEngine(const boost::shared_ptr<QuantLib::PricingEngine>& engine);
-        QuantLib::Real NPV();
     };
 }
 

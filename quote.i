@@ -7,7 +7,7 @@
 
 namespace QuantLib {
     bool close(double x, double y);
-    class SimpleQuote : public Quote {
+    class SimpleQuote {
       public:
         SimpleQuote(double value = Null<double>());
         double value() const;

@@ -7,6 +7,7 @@
 namespace QuantLib {
     class Instrument {
       public:
+        Instrument();
         void setPricingEngine(const boost::shared_ptr<QuantLib::PricingEngine>& engine);
         QuantLib::Real NPV();
     };

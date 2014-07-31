@@ -2,17 +2,17 @@
 #include <iostream>
 #include <iomanip>
 #include "AddinCpp/init.hpp"
-#include "AddinCpp/cpp_date.hpp"
-#include "AddinCpp/cpp_exercise.hpp"
-#include "AddinCpp/cpp_instruments.hpp"
-#include "AddinCpp/cpp_payoffs.hpp"
-#include "AddinCpp/cpp_processes.hpp"
-#include "AddinCpp/cpp_pricingengines.hpp"
-#include "AddinCpp/cpp_quote.hpp"
-#include "AddinCpp/cpp_settings.hpp"
-#include "AddinCpp/cpp_utilities.hpp"
-#include "AddinCpp/cpp_volatilities.hpp"
-#include "AddinCpp/cpp_yieldtermstructures.hpp"
+#include "AddinCpp/add_date.hpp"
+#include "AddinCpp/add_exercise.hpp"
+#include "AddinCpp/add_instruments.hpp"
+#include "AddinCpp/add_payoffs.hpp"
+#include "AddinCpp/add_processes.hpp"
+#include "AddinCpp/add_pricingengines.hpp"
+#include "AddinCpp/add_quote.hpp"
+#include "AddinCpp/add_settings.hpp"
+#include "AddinCpp/add_utilities.hpp"
+#include "AddinCpp/add_volatilities.hpp"
+#include "AddinCpp/add_yieldtermstructures.hpp"
 
 int main() {
     try {

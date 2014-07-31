@@ -13,6 +13,5 @@ Makefile.in
 Release
 stamp-h1
 *.suo
-test.cpp
 .time-stamp
 Debug

@@ -1,5 +1,5 @@
-cpp_*.?pp
-!cpp_includes.hpp
+add_*.?pp
+!add_includes.hpp
 Release
 *.o
 *.user

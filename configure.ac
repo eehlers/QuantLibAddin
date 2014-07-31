@@ -5,7 +5,7 @@ AC_INIT([QuantLibAddin], [1.5.0],
         [quantlib-dev@lists.sourceforge.net],
         [QuantLibAddin])
 AC_PREREQ(2.50)
-AC_CONFIG_SRCDIR([./quantlib.i])
+AC_CONFIG_SRCDIR([./swig/quantlib.i])
 AC_CONFIG_AUX_DIR([config])
 AC_CONFIG_HEADERS([config.hpp])
 AM_INIT_AUTOMAKE([foreign])
@@ -96,6 +96,7 @@ AC_SUBST(swig_dir, [${swig_path}])
 AC_CONFIG_FILES([
     Makefile
     m4/Makefile
+    swig/Makefile
     qlo/Makefile
     qlo/enumerations/Makefile
     qlo/enumerations/constructors/Makefile

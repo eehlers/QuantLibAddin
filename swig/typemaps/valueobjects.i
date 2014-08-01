@@ -64,24 +64,5 @@
 // No conversion is required for values of type "any" (const ObjectHandler::property_t&)
 %typemap(rp_val_cnv) ql_val_cnv_any "value";
 
-// These QuantLib types behave like double.
-%typemap(rp_val_cnv) QuantLib::Real = ql_val_cnv_dbl;
-%typemap(rp_val_cnv) QuantLib::Rate = ql_val_cnv_dbl;
-%typemap(rp_val_cnv) QuantLib::Volatility = ql_val_cnv_dbl;
-
-// These QuantLib types behave like string.
-%typemap(rp_val_cnv) QuantLib::Option::Type = ql_val_cnv_str;
-%typemap(rp_val_cnv) QuantLib::Handle<QuantLib::Quote> const & = ql_val_cnv_str;
-%typemap(rp_val_cnv) QuantLib::Handle<QuantLib::YieldTermStructure> const & = ql_val_cnv_str;
-%typemap(rp_val_cnv) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & = ql_val_cnv_str;
-%typemap(rp_val_cnv) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & = ql_val_cnv_str;
-%typemap(rp_val_cnv) QuantLib::Calendar const & = ql_val_cnv_str;
-%typemap(rp_val_cnv) QuantLib::DayCounter const & = ql_val_cnv_str;
-
-// These QuantLib types behave like any.
-%typemap(rp_val_cnv) QuantLib::Date const & = ql_val_cnv_any;
-%typemap(rp_val_cnv) boost::shared_ptr< QuantLib::StrikedTypePayoff > const & = ql_val_cnv_any;
-%typemap(rp_val_cnv) boost::shared_ptr< QuantLib::Exercise > const & = ql_val_cnv_any;
-
 // *** END   typemap rp_val_cnv
 

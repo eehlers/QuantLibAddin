@@ -1,5 +1,7 @@
 
 // rp_add_* - C++ addin
+// These typemaps generate source code for cpp and hpp files in the AddinCpp directory.
+// This code is not used for the Excel addin.
 
 %typemap(rp_add_typ) QuantLib::Real "double";
 

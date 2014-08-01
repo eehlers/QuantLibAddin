@@ -4,4 +4,5 @@
 %include addinobjects.i
 %include cppaddin.i
 %include exceladdin.i
+%include quantlib2.i
 

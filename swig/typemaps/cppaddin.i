@@ -1,7 +1,7 @@
 
 // rp_add_* - C++ addin
 
-%typemap(rp_add_type) QuantLib::Real "double";
+%typemap(rp_add_typ) QuantLib::Real "double";
 
 %typemap(rp_add_in) QuantLib::Date const & "const ObjectHandler::property_t&";
 %typemap(rp_add_in) QuantLib::Calendar const & "const std::string&";

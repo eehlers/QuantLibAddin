@@ -1,6 +1,21 @@
 
 // rp_val_* - valueobjects
 
+%typemap(rp_val_in) QuantLib::Date const & "const ObjectHandler::property_t&";
+%typemap(rp_val_in) QuantLib::Calendar const & "const std::string&";
+%typemap(rp_val_in) QuantLib::DayCounter const & "const std::string&";
+%typemap(rp_val_in) QuantLib::Volatility "double";
+%typemap(rp_val_in) QuantLib::Rate "double";
+%typemap(rp_val_in) QuantLib::Real "double";
+%typemap(rp_val_in) QuantLib::Handle<QuantLib::Quote> const & "const std::string&";
+%typemap(rp_val_in) QuantLib::Handle<QuantLib::YieldTermStructure> const & "const std::string&";
+%typemap(rp_val_in) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "const std::string&";
+%typemap(rp_val_in) boost::shared_ptr<QuantLib::StrikedTypePayoff> const & "const std::string&";
+%typemap(rp_val_in) boost::shared_ptr<QuantLib::Exercise> const & "const std::string&";
+%typemap(rp_val_in) QuantLib::Option::Type "const std::string&";
+%typemap(rp_val_in) boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & "const std::string&";
+%typemap(rp_val_in) const boost::shared_ptr<QuantLib::PricingEngine>& "const std::string&";
+
 %typemap(rp_val_declare) QuantLib::Date const & "ObjectHandler::property_t $1_name_";
 %typemap(rp_val_declare) boost::shared_ptr< QuantLib::StrikedTypePayoff > const & "ObjectHandler::property_t $1_name_";
 %typemap(rp_val_declare) boost::shared_ptr< QuantLib::Exercise > const & "ObjectHandler::property_t $1_name_";

@@ -28,14 +28,17 @@ namespace QuantLibAddin {
         registerEnumeratedClasses();
         //registerEnumeratedCurves();
         ////registerEnumeratedHistoricalForwardRatesAnalysis();
-        registerEnumeratedTypes();
 
+        registerTypesCalendars();
+        registerTypesDayCounters();
+        registerTypesOptionTypes();
     }
 
     void unregisterEnumerations() {
 
-        unregisterEnumeratedTypes();
-
+        unregisterTypesCalendars();
+        unregisterTypesDayCounters();
+        unregisterTypesOptionTypes();
     }
 
 }

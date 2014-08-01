@@ -10,7 +10,9 @@ this_include_HEADERS = \
 libEnumerationRegister_la_SOURCES = \
     register_all.cpp \
     register_classes.cpp \
-    register_types.cpp
+    register_types_calendars.cpp \
+    register_types_daycounters.cpp \
+    register_types_optiontypes.cpp
 
 noinst_LTLIBRARIES = libEnumerationRegister.la
 

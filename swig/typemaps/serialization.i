@@ -1,5 +1,7 @@
 
 // rp_ser_* - serialization
+// These typemaps generate source code for the serialization create functions.
+// At present the default behavior is adequate.
 
 //%typemap(rp_ser_cnv) YYY %{
 //    QuantLib::Date $1_name =

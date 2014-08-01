@@ -159,35 +159,95 @@
 			</File>
 		</Filter>
 		<File
-			RelativePath=".\cpp_date.cpp"
+			RelativePath=".\add_date.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\cpp_date.hpp"
+			RelativePath=".\add_date.hpp"
 			>
 		</File>
 		<File
-			RelativePath=".\cpp_quote.cpp"
+			RelativePath=".\add_exercise.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\cpp_quote.hpp"
+			RelativePath=".\add_exercise.hpp"
 			>
 		</File>
 		<File
-			RelativePath=".\cpp_settings.cpp"
+			RelativePath=".\add_includes.hpp"
 			>
 		</File>
 		<File
-			RelativePath=".\cpp_settings.hpp"
+			RelativePath=".\add_instruments.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\cpp_utilities.cpp"
+			RelativePath=".\add_instruments.hpp"
 			>
 		</File>
 		<File
-			RelativePath=".\cpp_utilities.hpp"
+			RelativePath=".\add_payoffs.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_payoffs.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_pricingengines.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_pricingengines.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_processes.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_processes.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_quote.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_quote.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_settings.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_settings.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_utilities.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_utilities.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_volatilities.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_volatilities.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_yieldtermstructures.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_yieldtermstructures.hpp"
 			>
 		</File>
 		<File

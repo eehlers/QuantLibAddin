@@ -206,6 +206,14 @@
 			Name="conversions"
 			>
 			<File
+				RelativePath=".\conversions\convert2.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\conversions\convert2.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\conversions\cnv_tmpl.hpp"
 				>
 			</File>

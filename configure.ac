@@ -113,7 +113,8 @@ AC_CONFIG_FILES([
     qlo/enumerations/register/Makefile
     qlo/valueobjects/Makefile
     AddinCpp/Makefile
-    Main/Makefile
+    Clients/Makefile
+    Clients/Cpp/Makefile
 ])
 
 AC_OUTPUT

@@ -6,7 +6,7 @@ SUBDIRS = \
     swig \
     qlo \
     AddinCpp \
-    Main
+    Clients
 
 .PHONY: SWIG
 SWIG:

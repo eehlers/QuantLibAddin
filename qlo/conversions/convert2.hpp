@@ -1,6 +1,6 @@
 
-#ifndef addincpp_convert2_hpp
-#define addincpp_convert2_hpp
+#ifndef qlo_convert2_hpp
+#define qlo_convert2_hpp
 
 #include <oh/property.hpp>
 #include <oh/conversions/convert2.hpp>

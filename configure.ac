@@ -81,32 +81,40 @@ fi
 
 # Configure and validate the path to SWIG
 
+# Use this if SWIG was installed via "make install" to a directory on our $PATH.
+
+#AC_PATH_PROG([SWIG], [swig])
+
+# This allows us to run SWIG from its source code tree instead of from its installed path.
+# It means that after recompiling SWIG we can just do "make" instead of "make install".
+
 AC_ARG_WITH([swig],
             AC_HELP_STRING([--with-swig=/path/to/SWIG],
                            [Specify the root directory of the SWIG source tree]),
             [swig_path=${withval}],
             [AC_MSG_ERROR([You must specify the location of SWIG: "./configure --with-swig=path/to/SWIG"])])
-AC_CHECK_FILE([${swig_path}/swig], [],
-            [AC_MSG_ERROR([Unable to locate file swig in specified SWIG directory])])
+AC_CHECK_FILE([${swig_path}/preinst-swig], [],
+            [AC_MSG_ERROR([Unable to locate file preinst-swig in specified SWIG directory])])
 AC_ARG_VAR(swig_dir, path to SWIG)
 AC_SUBST(swig_dir, [${swig_path}])
 
 # Done, output the configured files
 
+#    AddinCpp/conversions/Makefile
 AC_CONFIG_FILES([
     Makefile
     m4/Makefile
     swig/Makefile
     qlo/Makefile
+    qlo/conversions/Makefile
     qlo/enumerations/Makefile
     qlo/enumerations/constructors/Makefile
     qlo/enumerations/factories/Makefile
     qlo/enumerations/register/Makefile
     qlo/valueobjects/Makefile
     AddinCpp/Makefile
-    AddinCpp/conversions/Makefile
     Main/Makefile
-    ])
+])
 
 AC_OUTPUT
 

@@ -1,6 +1,9 @@
 
-#ifndef addinobjects_conversions_cnv_tmpl_hpp
-#define addinobjects_conversions_cnv_tmpl_hpp
+#ifndef qlo_conversions_cnv_tmpl_hpp
+#define qlo_conversions_cnv_tmpl_hpp
+
+// This file contains some templates common to AddinObjects and AddinXl.
+// This file should be #included only by AddinXxx/conversions/xxx.cpp.
 
 #include <ql/time/date.hpp>
 #include <boost/lexical_cast.hpp>

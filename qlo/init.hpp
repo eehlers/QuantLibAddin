@@ -5,7 +5,7 @@
 namespace QuantLibAddin {
 
     void initializeAddin();
-
+    void closeAddin();
 }
 
 #endif

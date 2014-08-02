@@ -12,3 +12,9 @@ void QuantLibAddin::initializeAddin() {
         registerEnumerations();
 }
 
+void QuantLibAddin::closeAddin() {
+
+        // Clear the Enumeration Registry
+        unregisterEnumerations();
+}
+

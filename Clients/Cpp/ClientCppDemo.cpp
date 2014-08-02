@@ -14,6 +14,12 @@
 #include "AddinCpp/add_volatilities.hpp"
 #include "AddinCpp/add_yieldtermstructures.hpp"
 
+#include <oh/ohdefines.hpp>
+#if defined BOOST_MSVC
+#include <oh/auto_link.hpp>
+#include <ql/auto_link.hpp>
+#endif
+
 int main() {
     try {
         std::cout << "hi" << std::endl;

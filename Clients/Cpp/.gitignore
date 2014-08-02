@@ -1,0 +1,8 @@
+ClientCppDemo
+*.user
+.deps
+*.o
+.libs
+Debug
+Release
+bin

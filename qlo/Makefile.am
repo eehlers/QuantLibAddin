@@ -1,5 +1,6 @@
 
 SUBDIRS = \
+    conversions \
     enumerations \
     valueobjects
 
@@ -37,6 +38,7 @@ libAddinObjects_la_SOURCES = \
 noinst_LTLIBRARIES = libAddinObjects.la
 
 libAddinObjects_la_LIBADD = \
+    conversions/libConversions.la \
     enumerations/constructors/libEnumerationConstructors.la \
     enumerations/factories/libEnumerationFactories.la \
     enumerations/register/libEnumerationRegister.la \

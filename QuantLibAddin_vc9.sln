@@ -11,24 +11,39 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClientCppDemo", "Clients\Cp
 		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145} = {9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swig", "swig\swig_vc9.vcproj", "{88BE5568-6E55-41C5-A251-670FAFB44336}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Win32 = All|Win32
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1F9CC2E-FDB4-4853-856E-E47A2A7495DF}.All|Win32.ActiveCfg = Release|Win32
+		{B1F9CC2E-FDB4-4853-856E-E47A2A7495DF}.All|Win32.Build.0 = Release|Win32
 		{B1F9CC2E-FDB4-4853-856E-E47A2A7495DF}.Debug|Win32.ActiveCfg = Debug|Win32
 		{B1F9CC2E-FDB4-4853-856E-E47A2A7495DF}.Debug|Win32.Build.0 = Debug|Win32
 		{B1F9CC2E-FDB4-4853-856E-E47A2A7495DF}.Release|Win32.ActiveCfg = Release|Win32
 		{B1F9CC2E-FDB4-4853-856E-E47A2A7495DF}.Release|Win32.Build.0 = Release|Win32
+		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}.All|Win32.ActiveCfg = Release|Win32
+		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}.All|Win32.Build.0 = Release|Win32
 		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}.Debug|Win32.ActiveCfg = Debug|Win32
 		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}.Debug|Win32.Build.0 = Debug|Win32
 		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}.Release|Win32.ActiveCfg = Release|Win32
 		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}.Release|Win32.Build.0 = Release|Win32
+		{87144B17-16DA-48D6-9283-E3DDF091F4C9}.All|Win32.ActiveCfg = Release|Win32
+		{87144B17-16DA-48D6-9283-E3DDF091F4C9}.All|Win32.Build.0 = Release|Win32
 		{87144B17-16DA-48D6-9283-E3DDF091F4C9}.Debug|Win32.ActiveCfg = Debug|Win32
 		{87144B17-16DA-48D6-9283-E3DDF091F4C9}.Debug|Win32.Build.0 = Debug|Win32
 		{87144B17-16DA-48D6-9283-E3DDF091F4C9}.Release|Win32.ActiveCfg = Release|Win32
 		{87144B17-16DA-48D6-9283-E3DDF091F4C9}.Release|Win32.Build.0 = Release|Win32
+		{88BE5568-6E55-41C5-A251-670FAFB44336}.All|Win32.ActiveCfg = All|Win32
+		{88BE5568-6E55-41C5-A251-670FAFB44336}.All|Win32.Build.0 = All|Win32
+		{88BE5568-6E55-41C5-A251-670FAFB44336}.Debug|Win32.ActiveCfg = All|Win32
+		{88BE5568-6E55-41C5-A251-670FAFB44336}.Debug|Win32.Build.0 = All|Win32
+		{88BE5568-6E55-41C5-A251-670FAFB44336}.Release|Win32.ActiveCfg = All|Win32
+		{88BE5568-6E55-41C5-A251-670FAFB44336}.Release|Win32.Build.0 = All|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

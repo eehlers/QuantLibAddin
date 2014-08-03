@@ -1,0 +1,22 @@
+
+SWIG_ROOT_DIR=..\..\..\swig
+SWIG_EXE=$(SWIG_ROOT_DIR)\Release\swig.exe
+SWIG_INC=$(SWIG_ROOT_DIR)\Lib
+REPOSIT_INC=$(SWIG_ROOT_DIR)\Lib\reposit
+BUILDFLAG=$(BUILD_DIR)\buildflag
+BUILD_DIR=build\vc
+MAKEFILE=Makefile.vc
+SWIG_FILE=quantlib.i
+
+ALL : $(BUILDFLAG)
+
+$(BUILD_DIR) :
+    if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)
+
+$(BUILDFLAG) : $(BUILD_DIR) $(SWIG_FILE)
+	$(SWIG_EXE) -I$(SWIG_INC) -I$(REPOSIT_INC) -DSWIG_MSVC -c++ -reposit -prefix ql $(SWIG_FILE)
+	echo flagged > $@
+
+CLEAN :
+	-@ if EXIST $(BUILD_DIR)\* del /f /q $(BUILD_DIR)\*
+

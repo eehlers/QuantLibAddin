@@ -19,9 +19,11 @@
 %apply ql_val_any { QuantLib::Date const & };
 %apply ql_val_any { boost::shared_ptr< QuantLib::StrikedTypePayoff > const & };
 %apply ql_val_any { boost::shared_ptr< QuantLib::Exercise > const & };
+%apply ql_val_any { QuantLib::Handle< QuantLib::Quote > const & };
 
 // Names of variables after they have been converted.
 %apply ql_cnv_val { QuantLib::Date const & };
+%apply ql_cnv_val { const QuantLib::DayCounter& };
 %apply ql_cnv_enm { QuantLib::Calendar const & };
 %apply ql_cnv_enm { QuantLib::DayCounter const & };
 %apply ql_cnv_enm { QuantLib::Option::Type };

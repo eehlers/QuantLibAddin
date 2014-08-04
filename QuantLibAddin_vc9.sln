@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClientCppDemo", "Clients\Cp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swig", "swig\swig_vc9.vcproj", "{88BE5568-6E55-41C5-A251-670FAFB44336}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuantLibXLStatic", "..\QuantLibXL2\qlxl\QuantLibXLStatic_vc9.vcproj", "{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Win32 = All|Win32
@@ -44,6 +46,12 @@ Global
 		{88BE5568-6E55-41C5-A251-670FAFB44336}.Debug|Win32.Build.0 = All|Win32
 		{88BE5568-6E55-41C5-A251-670FAFB44336}.Release|Win32.ActiveCfg = All|Win32
 		{88BE5568-6E55-41C5-A251-670FAFB44336}.Release|Win32.Build.0 = All|Win32
+		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.All|Win32.ActiveCfg = Release|Win32
+		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.All|Win32.Build.0 = Release|Win32
+		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Debug|Win32.Build.0 = Debug|Win32
+		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Release|Win32.ActiveCfg = Release|Win32
+		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

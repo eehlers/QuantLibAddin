@@ -14,12 +14,15 @@
 %apply ql_val_str { QuantLib::Handle<QuantLib::Quote> const & };
 %apply ql_val_str { QuantLib::Handle<QuantLib::YieldTermStructure> const & };
 %apply ql_val_str { QuantLib::Option::Type };
+%apply ql_val_str { QuantLib::Handle< QuantLib::Quote > const & };
+%apply ql_val_str { boost::shared_ptr< QuantLib::StrikedTypePayoff > const & };
+%apply ql_val_str { boost::shared_ptr< QuantLib::Exercise > const & };
 
 // These QuantLib types behave like any.
 %apply ql_val_any { QuantLib::Date const & };
-%apply ql_val_any { boost::shared_ptr< QuantLib::StrikedTypePayoff > const & };
-%apply ql_val_any { boost::shared_ptr< QuantLib::Exercise > const & };
-%apply ql_val_any { QuantLib::Handle< QuantLib::Quote > const & };
+//%apply ql_val_any { boost::shared_ptr< QuantLib::StrikedTypePayoff > const & };
+//%apply ql_val_any { boost::shared_ptr< QuantLib::Exercise > const & };
+//%apply ql_val_any { QuantLib::Handle< QuantLib::Quote > const & };
 
 // Names of variables after they have been converted.
 %apply ql_cnv_val { QuantLib::Date const & };

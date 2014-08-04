@@ -5,6 +5,7 @@
 	Name="ClientCppDemo"
 	ProjectGUID="{87144B17-16DA-48D6-9283-E3DDF091F4C9}"
 	Keyword="Win32Proj"
+	TargetFrameworkVersion="0"
 	>
 	<Platforms>
 		<Platform

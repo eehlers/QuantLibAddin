@@ -1,5 +1,4 @@
 add_*.?pp
-!add_includes.hpp
 Release
 *.o
 *.user

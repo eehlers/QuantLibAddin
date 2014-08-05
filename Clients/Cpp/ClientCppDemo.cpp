@@ -1,18 +1,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include "AddinCpp/init.hpp"
-#include "AddinCpp/add_date.hpp"
-#include "AddinCpp/add_exercise.hpp"
-#include "AddinCpp/add_instruments.hpp"
-#include "AddinCpp/add_payoffs.hpp"
-#include "AddinCpp/add_processes.hpp"
-#include "AddinCpp/add_pricingengines.hpp"
-#include "AddinCpp/add_quote.hpp"
-#include "AddinCpp/add_settings.hpp"
-#include "AddinCpp/add_utilities.hpp"
-#include "AddinCpp/add_volatilities.hpp"
-#include "AddinCpp/add_yieldtermstructures.hpp"
+#include "AddinCpp/add_all.hpp"
 
 #include <oh/ohdefines.hpp>
 #if defined BOOST_MSVC

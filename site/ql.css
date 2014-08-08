@@ -78,7 +78,7 @@ body {
 }
 #sidebar li {
     margin: 0px;
-    border-bottom: 2px solid #A1CFFF;
+    border-bottom: 2px solid #A4DAA4;
 }
 #sidebar li.menuheader {
     border-bottom: 0px;
@@ -94,7 +94,7 @@ body {
     outline: none;
 }
 #sidebar a:hover {
-    color: #074BB4;
+    color: #1D6700;
 }
 #sidebar li.menuheader a {
     padding: 5px 0px 5px 30px;
@@ -119,14 +119,14 @@ body {
     font-family: sans-serif;
     font-size: 10px;
     text-align: center;
-    color: #074BB4;
+    color: #1D6700;
     padding-top: 22px;
     line-height: 125%;
 }
 
 #footer a, #footer a.focus, #footer a.hover, #footer a.active, #footer a.visited {
     text-decoration: underline;
-    color: #074BB4;
+    color: #1D6700;
     background-color: transparent; /* override doxygen setting*/
 }
 

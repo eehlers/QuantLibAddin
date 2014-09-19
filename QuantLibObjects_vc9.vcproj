@@ -563,14 +563,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\qlo\obj_date.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_date.hpp"
-			>
-		</File>
-		<File
 			RelativePath=".\qlo\obj_exercise.cpp"
 			>
 		</File>
@@ -619,22 +611,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\qlo\obj_settings.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_settings.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_utilities.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_utilities.hpp"
-			>
-		</File>
-		<File
 			RelativePath=".\qlo\obj_volatilities.cpp"
 			>
 		</File>
@@ -648,6 +624,30 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_yieldtermstructures.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_date.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_date.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_settings.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_settings.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_utilities.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_utilities.hpp"
 			>
 		</File>
 	</Files>

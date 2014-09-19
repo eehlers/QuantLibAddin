@@ -173,6 +173,10 @@
 			</File>
 		</Filter>
 		<File
+			RelativePath=".\add_all.hpp"
+			>
+		</File>
+		<File
 			RelativePath=".\add_date.cpp"
 			>
 		</File>

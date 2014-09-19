@@ -1,6 +1,6 @@
 
 %feature("rp:group", "exercise");
-%feature("rp:include") %{
+%feature("rp:obj_include") %{
 #include <ql/exercise.hpp>
 %}
 
@@ -10,4 +10,6 @@ namespace QuantLib {
         EuropeanExercise(const QuantLib::Date& date);
     };
 }
+
+%feature("rp:group", "");
 

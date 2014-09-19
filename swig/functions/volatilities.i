@@ -1,6 +1,6 @@
 
 %feature("rp:group", "volatilities");
-%feature("rp:include") %{
+%feature("rp:obj_include") %{
 #include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>
 %}
 
@@ -13,4 +13,6 @@ namespace QuantLib {
                          const QuantLib::DayCounter& dayCounter);
     };
 }
+
+%feature("rp:group", "");
 

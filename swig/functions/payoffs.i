@@ -1,6 +1,6 @@
 
 %feature("rp:group", "payoffs");
-%feature("rp:include") %{
+%feature("rp:obj_include") %{
 #include <ql/instruments/payoffs.hpp>
 %}
 
@@ -11,4 +11,6 @@ namespace QuantLib {
                            QuantLib::Real strike);
     };
 }
+
+%feature("rp:group", "");
 

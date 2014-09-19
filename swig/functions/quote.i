@@ -1,6 +1,6 @@
 
 %feature("rp:group", "quote");
-%feature("rp:include") %{
+%feature("rp:obj_include") %{
 #include <ql/quotes/simplequote.hpp>
 #include <ql/math/comparison.hpp>
 %}
@@ -13,4 +13,6 @@ namespace QuantLib {
         double value() const;
     };
 }
+
+%feature("rp:group", "");
 

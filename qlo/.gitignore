@@ -5,9 +5,7 @@ Debug
 *.lo
 *.o
 obj_*.?pp
-!obj_date.cpp
-!obj_settings.cpp
-!obj_utilities.cpp
+objmanual_*.?pp.template
 !obj_all.hpp
 Release
 *.user

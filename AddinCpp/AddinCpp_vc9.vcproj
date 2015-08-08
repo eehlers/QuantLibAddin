@@ -193,10 +193,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\add_includes.hpp"
-			>
-		</File>
-		<File
 			RelativePath=".\add_instruments.cpp"
 			>
 		</File>

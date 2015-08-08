@@ -8,7 +8,6 @@ this_includedir=${includedir}/${subdir}
 this_include_HEADERS = \
     add_date.hpp \
     add_exercise.hpp \
-    add_includes.hpp \
     add_instruments.hpp \
     add_payoffs.hpp \
     add_processes.hpp \

@@ -2,7 +2,7 @@
 #SUBDIRS = \
 #    conversions
 
-AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
+AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir} -I/home/countify/sdk/Eric-SDK -I/home/countify/sdk/Eric-SDK/ACE_wrappers -I/home/countify/sdk/Eric-SDK/ACE_wrappers/debian
 
 this_includedir=${includedir}/${subdir}
 this_include_HEADERS = \
@@ -19,7 +19,7 @@ this_include_HEADERS = \
     cfy_yieldtermstructures.hpp \
     init.hpp
 
-libAddinCfy_la_SOURCES = \
+libCountifyQuantLibAddin_la_SOURCES = \
     cfy_date.cpp \
     cfy_exercise.cpp \
     cfy_instruments.cpp \
@@ -33,15 +33,15 @@ libAddinCfy_la_SOURCES = \
     cfy_yieldtermstructures.cpp \
     init.cpp
 
-#noinst_LTLIBRARIES = libAddinCfy.la
-lib_LTLIBRARIES = libAddinCfy.la
+#noinst_LTLIBRARIES = libCountifyQuantLibAddin.la
+lib_LTLIBRARIES = libCountifyQuantLibAddin.la
 
-#libAddinCfy_la_LIBADD = \
+#libCountifyQuantLibAddin_la_LIBADD = \
 #    ../qlo/libAddinObjects.la conversions/libConversions.la
 
-libAddinCfy_la_LIBADD = \
+libCountifyQuantLibAddin_la_LIBADD = \
     ../qlo/libAddinObjects.la
 
-libAddinCfy_la_LDFLAGS = \
-    -lQuantLib -lObjectHandler -lboost_filesystem -lboost_serialization -lboost_system -lboost_regex
+libCountifyQuantLibAddin_la_LDFLAGS = \
+    -lQuantLib -lObjectHandler -lboost_filesystem -lboost_serialization -lboost_system -lboost_regex -L/home/countify/countify/lib -lFlyLib
 

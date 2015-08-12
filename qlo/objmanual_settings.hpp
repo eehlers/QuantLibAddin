@@ -10,6 +10,14 @@
 
 namespace QuantLibAddin {
 
+    // BEGIN typemap rp_tm_obj_ret long
+    long
+    // END   typemap rp_tm_obj_ret
+    settingsEvaluationDate(
+        // BEGIN typemap rp_tm_default
+        // END   typemap rp_tm_default
+    );
+
     // BEGIN typemap rp_tm_obj_ret void
     void
     // END   typemap rp_tm_obj_ret

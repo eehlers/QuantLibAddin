@@ -23,6 +23,11 @@
 
 namespace QuantLibAddin {
 
+    long settingsEvaluationDate() {
+        QuantLib::Date x = QuantLib::Settings::instance().evaluationDate();
+         return x.serialNumber();
+    }
+
     void settingsSetEvaluationDate(const QuantLib::Date& evalDate) {
         QuantLib::Settings::instance().evaluationDate() = evalDate;
     }

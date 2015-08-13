@@ -289,6 +289,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_handles.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_handles.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_instruments.cpp"
 					>
 				</File>
@@ -382,6 +390,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_exercise.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_handles.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_handles.hpp"
 					>
 				</File>
 				<File
@@ -482,6 +498,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_handles.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_handles.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_instruments.cpp"
 				>
 			</File>
@@ -554,6 +578,14 @@
 				>
 			</File>
 		</Filter>
+		<File
+			RelativePath=".\qlo\handle.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\handleimpl.hpp"
+			>
+		</File>
 		<File
 			RelativePath=".\qlo\init.cpp"
 			>
@@ -632,6 +664,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_date.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_handles.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_handles.hpp"
 			>
 		</File>
 		<File

@@ -3,6 +3,7 @@
 #define obj_all_hpp
 
 #include <qlo/obj_exercise.hpp>
+#include <qlo/objmanual_handles.hpp>
 #include <qlo/obj_instruments.hpp>
 #include <qlo/obj_payoffs.hpp>
 #include <qlo/obj_pricingengines.hpp>

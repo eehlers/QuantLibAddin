@@ -62,6 +62,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\handles.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\indexes.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\instruments.i"
 					>
 				</File>

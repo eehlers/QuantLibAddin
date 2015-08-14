@@ -27,7 +27,7 @@
 %typemap(rp_tm_xll_prm) QuantLib::Real "double*";
 %typemap(rp_tm_xll_prm) boost::shared_ptr< QuantLib::GeneralizedBlackScholesProcess > const & "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::Quote > const & "char*";
-%typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "char*";
+%typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "OPER*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Calendar const & "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Volatility "double*";
@@ -81,9 +81,15 @@
 %} 
 
 %typemap(rp_tm_xll_cnv) QuantLib::Handle< QuantLib::YieldTermStructure > const & %{
-    OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
-    QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
-        QuantLib::Handle<QuantLib::YieldTermStructure>($1_name_get);
+        std::string $1_name_vo = ObjectHandler::convert2<std::string>(
+            ObjectHandler::ConvertOper(*$1_name), "$1_name", "");
+
+        OH_GET_OBJECT_DEFAULT($1_nameCoerce, $1_name_vo, ObjectHandler::Object)
+        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
+            QuantLibAddin::CoerceHandle<
+                QuantLibAddin::YieldTermStructure,
+                QuantLib::YieldTermStructure>()(
+                    $1_nameCoerce, QuantLib::Handle<QuantLib::YieldTermStructure>());
 %} 
 
 %typemap(rp_tm_xll_cnv) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & %{
@@ -116,6 +122,7 @@
 %typemap(rp_tm_xll_cll_val) const boost::shared_ptr<QuantLib::Exercise>& "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) boost::shared_ptr< QuantLib::GeneralizedBlackScholesProcess > const & "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::Quote > const & "$1_name_vo";
+%typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) QuantLib::Volatility "*$1_name";
 %typemap(rp_tm_xll_cll_val) const QuantLib::Date& "$1_name_cnv2";
 %typemap(rp_tm_xll_cll_val) QuantLib::DayCounter const & "$1_name";

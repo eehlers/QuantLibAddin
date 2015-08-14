@@ -33,6 +33,7 @@
 %typemap(rp_tm_xll_prm) QuantLib::Volatility "double*";
 %typemap(rp_tm_xll_prm) QuantLib::DayCounter const & "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Rate "double*";
+%typemap(rp_tm_xll_prm) QuantLib::Period const & "char*";
 
 %typemap(rp_tm_xll_cnv) QuantLib::Date const & %{
         QuantLib::Date $1_name_cnv = ObjectHandler::convert2<QuantLib::Date>(
@@ -109,7 +110,11 @@
 //    std::string $1_name_cnv = ObjectHandler::convert2<std::string>(
 //        ObjectHandler::ConvertOper(*$1_name), "$1_name", QuantLib::DayCounter());        
 %} 
-        
+
+%typemap(rp_tm_xll_cnv) QuantLib::Period const & %{
+        QuantLib::Period $1_name_cnv = f($1_name);
+%} 
+
 %typemap(rp_xll_call) ql_cnv_val "$1_name_cnv";
 
 //%typemap(rp_tm_xll_ret) ql_val_dbl "double*";
@@ -141,6 +146,7 @@
 %typemap(rp_tm_xll_cll_obj) QuantLib::DayCounter const & "$1_name_enum";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Volatility "*$1_name";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Rate "*$1_name";
+%typemap(rp_tm_xll_cll_obj) const QuantLib::Period& "$1_name_cnv";
 
 %typemap(rp_tm_xll_rdc) QuantLib::Real %{
         static QuantLib::Real ret;

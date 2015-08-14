@@ -17,6 +17,7 @@
 %apply ql_val_str { QuantLib::Handle< QuantLib::Quote > const & };
 %apply ql_val_str { boost::shared_ptr< QuantLib::StrikedTypePayoff > const & };
 %apply ql_val_str { boost::shared_ptr< QuantLib::Exercise > const & };
+%apply ql_val_str { QuantLib::Period const & };
 
 // These QuantLib types behave like any.
 %apply ql_val_any { QuantLib::Date const & };

@@ -2,6 +2,7 @@
 %feature("rp:group", "indexes");
 
 %feature("rp:obj_include") %{
+#include <ql/indexes/ibor/euribor.hpp>
 #include <ql/indexes/ibor/eonia.hpp>
 %}
 
@@ -20,11 +21,16 @@ namespace QuantLib {
     class IborIndex : public InterestRateIndex {};
     
     class OvernightIndex : public IborIndex {};
+    
+    class Euribor : public IborIndex {
+        public:
+            Euribor(const QuantLib::Period& tenor,
+                const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve);
+    };
 
     class Eonia : public OvernightIndex {
         public:
-            Eonia(const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve =
-                QuantLib::Handle<YieldTermStructure>());
+            Eonia(const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve);
     };    
 }
 

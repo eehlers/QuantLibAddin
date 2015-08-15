@@ -5,9 +5,10 @@
 %apply ql_val_dbl { QuantLib::Volatility };
 
 // These QuantLib types behave like string.
-%apply ql_val_str { boost::shared_ptr<QuantLib::Exercise> const & };
+%apply ql_val_str { const boost::shared_ptr<QuantLib::Exercise> & };
 %apply ql_val_str { const boost::shared_ptr<QuantLib::PricingEngine>& };
-%apply ql_val_str { boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & };
+%apply ql_val_str { const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> & };
+%apply ql_val_str { const boost::shared_ptr<QuantLib::Index> & };
 %apply ql_val_str { QuantLib::Calendar const & };
 %apply ql_val_str { QuantLib::DayCounter const & };
 %apply ql_val_str { QuantLib::Handle<QuantLib::BlackVolTermStructure> const & };

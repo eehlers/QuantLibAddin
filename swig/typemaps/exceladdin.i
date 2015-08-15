@@ -23,9 +23,10 @@
 %typemap(rp_tm_xll_prm) const QuantLib::Date& "OPER*";
 %typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& "char*";
 %typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::Exercise>& "char*";
+%typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> & "char*";
+%typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::Index>& "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Option::Type "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Real "double*";
-%typemap(rp_tm_xll_prm) boost::shared_ptr< QuantLib::GeneralizedBlackScholesProcess > const & "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::Quote > const & "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "OPER*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "char*";
@@ -48,8 +49,14 @@
 //            ObjectHandler::ConvertOper(*$1_name), "$1_name", QuantLib::DayCounter());
 //%} 
 
+%typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLib::Index>& %{
+        OH_GET_REFERENCE($1_name_obj, $1_name,
+            QuantLibAddin::Index, QuantLib::Index);        
+%} 
+
 %typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLib::PricingEngine>& %{
-        OH_GET_REFERENCE($1_name_obj, $1_name, QuantLibAddin::AnalyticEuropeanEngine, QuantLib::PricingEngine);        
+        OH_GET_REFERENCE($1_name_obj, $1_name,
+            QuantLibAddin::AnalyticEuropeanEngine, QuantLib::PricingEngine);        
 %} 
                       
 %typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& %{
@@ -136,6 +143,7 @@
 %typemap(rp_tm_xll_cll_obj) const boost::shared_ptr<QuantLib::PricingEngine>& "$1_name_obj";
 %typemap(rp_tm_xll_cll_obj) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& "$1_name_obj";
 %typemap(rp_tm_xll_cll_obj) const boost::shared_ptr<QuantLib::Exercise>& "$1_name_obj";
+%typemap(rp_tm_xll_cll_obj) const boost::shared_ptr<QuantLib::Index>& "$1_name_obj";
 %typemap(rp_tm_xll_cll_obj) boost::shared_ptr< QuantLib::GeneralizedBlackScholesProcess > const & "$1_name_obj";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Option::Type "$1_name_enum";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Real "*$1_name";

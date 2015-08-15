@@ -4,18 +4,19 @@
 %feature("rp:obj_include") %{
 #include <ql/indexes/ibor/euribor.hpp>
 #include <ql/indexes/ibor/eonia.hpp>
+#include <qlo/objmanual_indexes2.hpp>
 %}
 
 namespace QuantLib {
 
-    class Index {
-      public:
-        bool allowsNativeFixings();
+//    class Index {
+//      public:
+//        bool allowsNativeFixings();
 //        void addFixings(/*const std::vector<QuantLib::Date>& dates,
 //                        const std::vector<QuantLib::Real>& values,
 //                        bool forceOverwrite, bool updateValuObject = true*/);
-    };
-    
+//    };
+   
     class InterestRateIndex : public Index {};
     
     class IborIndex : public InterestRateIndex {};

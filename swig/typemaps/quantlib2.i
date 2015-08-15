@@ -42,3 +42,4 @@
 %apply ql_cnv_obj { const boost::shared_ptr<QuantLib::PricingEngine>& };
 %apply ql_cnv_obj { boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> const & };
 
+%apply rp_tp_add_obj { QuantLibAddin::Index };

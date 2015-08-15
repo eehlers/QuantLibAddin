@@ -3,6 +3,7 @@
 %include exercise.i
 %include handles.i
 %include indexes.i
+%include indexes2.i
 %include instruments.i
 %include payoffs.i
 %include pricingengines.i

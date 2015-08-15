@@ -36,11 +36,11 @@ namespace QuantLibAddin {
 
     class Index : public ObjectHandler::LibraryObject<QuantLib::Index> {
       public:
+        OH_LIB_CTOR(Index, QuantLib::Index);
         void addFixings(const std::vector<QuantLib::Date>& dates,
                         const std::vector<QuantLib::Real>& values,
                         bool forceOverwrite, bool updateValuObject = true);
-      public:
-        OH_LIB_CTOR(Index, QuantLib::Index);
+        double fixing(const QuantLib::Date& fixingDate);
     };
 
 }

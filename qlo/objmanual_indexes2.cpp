@@ -25,39 +25,39 @@
 #include <ql/timeseries.hpp>
 #include <ql/index.hpp>
 
-namespace QuantLibAddin {
-
-    void Index::addFixings(const std::vector<QuantLib::Date>& dates,
-                           const std::vector<QuantLib::Real>& values,
-                           bool forceOverwrite, bool updateValuObject) {
-        QL_REQUIRE(dates.size()==values.size(),
-                   "size mismatch between dates (" << dates.size() <<
-                   ") and values (" << values.size() << ")");
-        std::vector<QuantLib::Date> d;
-        std::vector<QuantLib::Real> v;
-        for (QuantLib::Size i=0; i<values.size(); ++i) {
-            // skip null fixings
-            if (values[i]!=QuantLib::Null<QuantLib::Real>()) {
-                d.push_back(dates[i]);
-                v.push_back(values[i]);
-            }
-        }
-        libraryObject_->addFixings(d.begin(), d.end(),
-                                   v.begin(), forceOverwrite);
-
-        if (updateValuObject) {
-            std::vector<long> fixingDates;
-            std::vector<QuantLib::Real> fixingRates;
-            const QuantLib::TimeSeries<QuantLib::Real>& history = libraryObject_->timeSeries();
-            for (QuantLib::TimeSeries<QuantLib::Real>::const_iterator hi = history.begin();
-                 hi != history.end(); ++hi) {
-                fixingDates.push_back(hi->first.serialNumber());
-                fixingRates.push_back(hi->second);
-            }
-            boost::shared_ptr<ObjectHandler::ValueObject> inst_properties = properties();
-            inst_properties->setProperty("IndexFixingDates", fixingDates);
-            inst_properties->setProperty("IndexFixingRates", fixingRates);
+void QuantLibAddin::Index::addFixings(const std::vector<QuantLib::Date>& dates,
+                       const std::vector<QuantLib::Real>& values,
+                       bool forceOverwrite, bool updateValuObject) {
+    QL_REQUIRE(dates.size()==values.size(),
+               "size mismatch between dates (" << dates.size() <<
+               ") and values (" << values.size() << ")");
+    std::vector<QuantLib::Date> d;
+    std::vector<QuantLib::Real> v;
+    for (QuantLib::Size i=0; i<values.size(); ++i) {
+        // skip null fixings
+        if (values[i]!=QuantLib::Null<QuantLib::Real>()) {
+            d.push_back(dates[i]);
+            v.push_back(values[i]);
         }
     }
+    libraryObject_->addFixings(d.begin(), d.end(),
+                               v.begin(), forceOverwrite);
 
+    if (updateValuObject) {
+        std::vector<long> fixingDates;
+        std::vector<QuantLib::Real> fixingRates;
+        const QuantLib::TimeSeries<QuantLib::Real>& history = libraryObject_->timeSeries();
+        for (QuantLib::TimeSeries<QuantLib::Real>::const_iterator hi = history.begin();
+             hi != history.end(); ++hi) {
+            fixingDates.push_back(hi->first.serialNumber());
+            fixingRates.push_back(hi->second);
+        }
+        boost::shared_ptr<ObjectHandler::ValueObject> inst_properties = properties();
+        inst_properties->setProperty("IndexFixingDates", fixingDates);
+        inst_properties->setProperty("IndexFixingRates", fixingRates);
+    }
+}
+
+double QuantLibAddin::Index::fixing(const QuantLib::Date& fixingDate) {
+    return libraryObject_->fixing(fixingDate);
 }

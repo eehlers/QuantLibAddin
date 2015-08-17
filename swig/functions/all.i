@@ -1,5 +1,6 @@
 
 %include date.i
+%include date2.i
 %include exercise.i
 %include handles.i
 %include indexes.i

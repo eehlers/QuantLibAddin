@@ -3,6 +3,7 @@
 #define obj_all_hpp
 
 #include <qlo/objmanual_date.hpp>
+#include <qlo/objmanual_date2.hpp>
 #include <qlo/obj_exercise.hpp>
 #include <qlo/objmanual_handles.hpp>
 #include <qlo/obj_indexes.hpp>

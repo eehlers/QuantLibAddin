@@ -755,6 +755,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\qlo\objmanual_date2.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_date2.hpp"
+			>
+		</File>
+		<File
 			RelativePath=".\qlo\objmanual_handles.cpp"
 			>
 		</File>

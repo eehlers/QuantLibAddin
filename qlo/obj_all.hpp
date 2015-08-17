@@ -9,6 +9,7 @@
 #include <qlo/objmanual_indexes2.hpp>
 #include <qlo/obj_instruments.hpp>
 #include <qlo/obj_payoffs.hpp>
+#include <qlo/obj_prices.hpp>
 #include <qlo/obj_pricingengines.hpp>
 #include <qlo/obj_processes.hpp>
 #include <qlo/obj_quote.hpp>

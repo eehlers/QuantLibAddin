@@ -6,6 +6,7 @@
 %include indexes2.i
 %include instruments.i
 %include payoffs.i
+%include prices.i
 %include pricingengines.i
 %include processes.i
 %include quote.i

@@ -1,26 +1,8 @@
 
 // rp_xll_* - Excel addin
 
-%typemap(rp_tm_xll_cod) ql_val_dbl "E";
-%typemap(rp_tm_xll_cod) ql_val_str "C";
-%typemap(rp_tm_xll_cod) ql_val_any "P";
-
-%typemap(rp_tm_xll_cod) QuantLib::FlatForward * "C";
-%typemap(rp_tm_xll_cod) QuantLib::BlackConstantVol * "C";
-%typemap(rp_tm_xll_cod) QuantLib::SimpleQuote * "C";
-%typemap(rp_tm_xll_cod) QuantLib::BlackScholesMertonProcess * "C";
-%typemap(rp_tm_xll_cod) QuantLib::AnalyticEuropeanEngine * "C";
-%typemap(rp_tm_xll_cod) QuantLib::PlainVanillaPayoff * "C";
-%typemap(rp_tm_xll_cod) QuantLib::Instrument * "C";
-%typemap(rp_tm_xll_cod) QuantLib::EuropeanExercise * "C";
-%typemap(rp_tm_xll_cod) QuantLib::VanillaOption * "C";
-//%typemap(rp_tm_xll_cod) const QuantLib::DayCounter& "C";
-%typemap(rp_tm_xll_cod) std::vector< QuantLib::Date > const & "P";
 %typemap(rp_tm_xll_cod) std::vector< QuantLib::Real > const & "P";
 
-//%typemap(rp_tm_xll_prm) ql_val_dbl "double*";
-//%typemap(rp_tm_xll_prm) ql_val_str "OPER*";
-//%typemap(rp_tm_xll_prm) ql_val_any "OPER*";
 %typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::PricingEngine>& "char*";
 %typemap(rp_tm_xll_prm) const QuantLib::Date& "OPER*";
 %typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& "char*";
@@ -39,19 +21,6 @@
 %typemap(rp_tm_xll_prm) QuantLib::Period const & "char*";
 %typemap(rp_tm_xll_prm) std::vector< QuantLib::Date > const & "OPER*";
 %typemap(rp_tm_xll_prm) std::vector< QuantLib::Real > const & "OPER*";
-
-%typemap(rp_tm_xll_cnv) QuantLib::Date const & %{
-        QuantLib::Date $1_name_cnv = ObjectHandler::convert2<QuantLib::Date>(
-            ObjectHandler::ConvertOper(*$1_name), "$1_name", QuantLib::Date());
-            
-        ObjectHandler::property_t $1_name_cnv2 = ObjectHandler::convert2<ObjectHandler::property_t>(
-            ObjectHandler::ConvertOper(*$1_name));            
-%} 
-
-//%typemap(rp_tm_xll_cnv) const QuantLib::DayCounter& %{
-//        std::string $1_name_cnv = ObjectHandler::convert2<std::string>(
-//            ObjectHandler::ConvertOper(*$1_name), "$1_name", QuantLib::DayCounter());
-//%} 
 
 %typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLib::Index>& %{
         OH_GET_REFERENCE($1_name_obj, $1_name,
@@ -118,8 +87,6 @@
 %typemap(rp_tm_xll_cnv) QuantLib::DayCounter const & %{
     QuantLib::DayCounter $1_name_enum =
         ObjectHandler::Create<QuantLib::DayCounter>()($1_name);
-//    std::string $1_name_cnv = ObjectHandler::convert2<std::string>(
-//        ObjectHandler::ConvertOper(*$1_name), "$1_name", QuantLib::DayCounter());        
 %}
 
 %typemap(rp_tm_xll_cnv) QuantLib::Period const & %{
@@ -136,13 +103,9 @@
             ObjectHandler::operToVector<QuantLib::Real>(*$1_name, "$1_name");
 %}
 
-%typemap(rp_xll_call) ql_cnv_val "$1_name_cnv";
-
-//%typemap(rp_tm_xll_ret) ql_val_dbl "double*";
 %typemap(rp_tm_xll_ret) QuantLib::Real "double*";
 
-%typemap(rp_tm_xll_cll_val) ql_val_dbl "*$1_name";
-//%typemap(rp_tm_xll_cll_val) const QuantLib::DayCounter& "$1_name_cnv";
+//%typemap(rp_tm_xll_cll_val) ql_val_dbl "*$1_name";
 %typemap(rp_tm_xll_cll_val) const QuantLib::DayCounter& "$1_name";
 %typemap(rp_tm_xll_cll_val) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) const boost::shared_ptr<QuantLib::Exercise>& "$1_name_vo";

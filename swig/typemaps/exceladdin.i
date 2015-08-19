@@ -1,27 +1,6 @@
 
 // rp_xll_* - Excel addin
 
-%typemap(rp_tm_xll_cod) std::vector< QuantLib::Real > const & "P";
-
-%typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::PricingEngine>& "char*";
-%typemap(rp_tm_xll_prm) const QuantLib::Date& "OPER*";
-%typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& "char*";
-%typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::Exercise>& "char*";
-%typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess> & "char*";
-%typemap(rp_tm_xll_prm) const boost::shared_ptr<QuantLib::Index>& "char*";
-%typemap(rp_tm_xll_prm) QuantLib::Option::Type "char*";
-%typemap(rp_tm_xll_prm) QuantLib::Real "double*";
-%typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::Quote > const & "char*";
-%typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "OPER*";
-%typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "char*";
-%typemap(rp_tm_xll_prm) QuantLib::Calendar const & "char*";
-%typemap(rp_tm_xll_prm) QuantLib::Volatility "double*";
-%typemap(rp_tm_xll_prm) QuantLib::DayCounter const & "char*";
-%typemap(rp_tm_xll_prm) QuantLib::Rate "double*";
-%typemap(rp_tm_xll_prm) QuantLib::Period const & "char*";
-%typemap(rp_tm_xll_prm) std::vector< QuantLib::Date > const & "OPER*";
-%typemap(rp_tm_xll_prm) std::vector< QuantLib::Real > const & "OPER*";
-
 %typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLib::Index>& %{
         OH_GET_REFERENCE($1_name_obj, $1_name,
             QuantLibAddin::Index, QuantLib::Index);        
@@ -103,10 +82,6 @@
             ObjectHandler::operToVector<QuantLib::Real>(*$1_name, "$1_name");
 %}
 
-%typemap(rp_tm_xll_ret) QuantLib::Real "double*";
-
-//%typemap(rp_tm_xll_cll_val) ql_val_dbl "*$1_name";
-%typemap(rp_tm_xll_cll_val) const QuantLib::DayCounter& "$1_name";
 %typemap(rp_tm_xll_cll_val) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) const boost::shared_ptr<QuantLib::Exercise>& "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) boost::shared_ptr< QuantLib::GeneralizedBlackScholesProcess > const & "$1_name_vo";

@@ -21,7 +21,6 @@
 
 // These QuantLib types behave like any.
 %apply rp_tp_any { QuantLib::Date const & };
-%apply rp_tp_any { std::vector< QuantLib::Date > const & };
 %apply rp_tp_any { QuantLib::Handle<QuantLib::YieldTermStructure> const & };
 
 // Names of variables after they have been converted.

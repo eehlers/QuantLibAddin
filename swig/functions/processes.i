@@ -8,7 +8,10 @@
 #include \"qlo/obj_volatilities.hpp\""
 
 namespace QuantLib {
-    class BlackScholesMertonProcess {
+
+    class GeneralizedBlackScholesProcess {};
+    
+    class BlackScholesMertonProcess : public GeneralizedBlackScholesProcess {
       public:
         BlackScholesMertonProcess(
             const QuantLib::Handle< QuantLib::Quote >& x0,

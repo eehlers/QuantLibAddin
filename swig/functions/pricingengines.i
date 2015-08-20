@@ -6,7 +6,10 @@
 %feature("rp:add_include") "#include \"qlo/obj_processes.hpp\""
 
 namespace QuantLib {
-    class AnalyticEuropeanEngine {
+
+    class PricingEngine {};
+    
+    class AnalyticEuropeanEngine : public PricingEngine {
       public:
         AnalyticEuropeanEngine(
             const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& process);

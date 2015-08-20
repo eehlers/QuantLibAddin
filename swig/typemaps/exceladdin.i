@@ -1,38 +1,6 @@
 
 // rp_xll_* - Excel addin
 
-%typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLib::Index>& %{
-        OH_GET_REFERENCE($1_name_obj, $1_name,
-            QuantLibAddin::Index, QuantLib::Index);        
-%} 
-
-%typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLib::PricingEngine>& %{
-        OH_GET_REFERENCE($1_name_obj, $1_name,
-            QuantLibAddin::AnalyticEuropeanEngine, QuantLib::PricingEngine);        
-%}
-
-%typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& %{
-        OH_GET_REFERENCE($1_name_obj, $1_name,
-            QuantLibAddin::PlainVanillaPayoff, QuantLib::StrikedTypePayoff)
-        std::string $1_name_vo = std::string($1_name);
-%}
-
-%typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLib::Exercise>& %{
-        OH_GET_REFERENCE($1_name_obj, $1_name,
-            QuantLibAddin::EuropeanExercise, QuantLib::Exercise)
-        std::string $1_name_vo = std::string($1_name);
-%}
-
-%typemap(rp_tm_xll_cnv) QuantLib::Option::Type %{
-    QuantLib::Option::Type $1_name_enum =
-        ObjectHandler::Create<QuantLib::Option::Type>()($1_name);
-%}
-
-%typemap(rp_tm_xll_cnv) boost::shared_ptr< QuantLib::GeneralizedBlackScholesProcess > const & %{
-    OH_GET_REFERENCE($1_name_obj, $1_name, QuantLibAddin::BlackScholesMertonProcess, QuantLib::GeneralizedBlackScholesProcess)
-        std::string $1_name_vo = std::string($1_name);
-%}
-
 %typemap(rp_tm_xll_cnv) QuantLib::Handle< QuantLib::Quote > const & %{
     OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::SimpleQuote, QuantLib::Quote)
     QuantLib::Handle<QuantLib::Quote> $1_name_handle =
@@ -58,60 +26,14 @@
         QuantLib::Handle<QuantLib::BlackVolTermStructure>($1_name_get);
 %}
 
-%typemap(rp_tm_xll_cnv) QuantLib::Calendar const & %{
-   QuantLib::Calendar calendar_enum =
-        ObjectHandler::Create<QuantLib::Calendar>()(calendar);
-%}
-
-%typemap(rp_tm_xll_cnv) QuantLib::DayCounter const & %{
-    QuantLib::DayCounter $1_name_enum =
-        ObjectHandler::Create<QuantLib::DayCounter>()($1_name);
-%}
-
 %typemap(rp_tm_xll_cnv) QuantLib::Period const & %{
         QuantLib::Period $1_name_cnv = f($1_name);
 %}
 
-%typemap(rp_tm_xll_cnv) const std::vector<QuantLib::Date>& %{
-        std::vector<QuantLib::Date> $1_name_lib =
-            ObjectHandler::operToVector<QuantLib::Date>(*$1_name, "$1_name");
-%}
-
-%typemap(rp_tm_xll_cnv) const std::vector<QuantLib::Real>& %{
-        std::vector<QuantLib::Real> $1_name_lib =
-            ObjectHandler::operToVector<QuantLib::Real>(*$1_name, "$1_name");
-%}
-
-%typemap(rp_tm_xll_cll_val) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& "$1_name_vo";
-%typemap(rp_tm_xll_cll_val) const boost::shared_ptr<QuantLib::Exercise>& "$1_name_vo";
-%typemap(rp_tm_xll_cll_val) boost::shared_ptr< QuantLib::GeneralizedBlackScholesProcess > const & "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::Quote > const & "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_vo";
-%typemap(rp_tm_xll_cll_val) QuantLib::Volatility "*$1_name";
-%typemap(rp_tm_xll_cll_val) const QuantLib::Date& "$1_name_cnv2";
-%typemap(rp_tm_xll_cll_val) QuantLib::DayCounter const & "$1_name";
 
-%typemap(rp_tm_xll_cll_obj) const QuantLib::Date& "$1_name_cnv";
-%typemap(rp_tm_xll_cll_obj) const boost::shared_ptr<QuantLib::PricingEngine>& "$1_name_obj";
-%typemap(rp_tm_xll_cll_obj) const boost::shared_ptr<QuantLib::StrikedTypePayoff>& "$1_name_obj";
-%typemap(rp_tm_xll_cll_obj) const boost::shared_ptr<QuantLib::Exercise>& "$1_name_obj";
-%typemap(rp_tm_xll_cll_obj) const boost::shared_ptr<QuantLib::Index>& "$1_name_obj";
-%typemap(rp_tm_xll_cll_obj) boost::shared_ptr< QuantLib::GeneralizedBlackScholesProcess > const & "$1_name_obj";
-%typemap(rp_tm_xll_cll_obj) QuantLib::Option::Type "$1_name_enum";
-%typemap(rp_tm_xll_cll_obj) QuantLib::Real "*$1_name";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Handle< QuantLib::Quote > const & "$1_name_handle";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_handle";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "$1_name_handle";
-%typemap(rp_tm_xll_cll_obj) QuantLib::Calendar const & "$1_name_enum";
-%typemap(rp_tm_xll_cll_obj) QuantLib::DayCounter const & "$1_name_enum";
-%typemap(rp_tm_xll_cll_obj) QuantLib::Volatility "*$1_name";
-%typemap(rp_tm_xll_cll_obj) QuantLib::Rate "*$1_name";
 %typemap(rp_tm_xll_cll_obj) const QuantLib::Period& "$1_name_cnv";
-%typemap(rp_tm_xll_cll_obj) const std::vector<QuantLib::Date>& "$1_name_lib";
-%typemap(rp_tm_xll_cll_obj) const std::vector<QuantLib::Real>& "$1_name_lib";
-
-%typemap(rp_tm_xll_rdc) QuantLib::Real %{
-        static QuantLib::Real ret;
-        ret = returnValue;
-        return &ret;
-%}

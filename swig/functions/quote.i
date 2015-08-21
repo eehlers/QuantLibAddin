@@ -3,6 +3,7 @@
 %feature("rp:obj_include") %{
 #include <ql/quotes/simplequote.hpp>
 #include <ql/quotes/lastfixingquote.hpp>
+#include <ql/quotes/futuresconvadjustmentquote.hpp>
 #include <ql/math/comparison.hpp>
 %}
 
@@ -22,6 +23,15 @@ namespace QuantLib {
     class LastFixingQuote : public Quote {
       public:
         LastFixingQuote(const boost::shared_ptr<QuantLib::Index>& index);
+    };
+    
+    class FuturesConvAdjustmentQuote : public Quote {
+      public:
+        FuturesConvAdjustmentQuote(const boost::shared_ptr<QuantLib::IborIndex>& index,
+                                   const std::string& immCode,
+                                   const QuantLib::Handle<QuantLib::Quote>& futuresQuote,
+                                   const QuantLib::Handle<QuantLib::Quote>& volatility,
+                                   const QuantLib::Handle<QuantLib::Quote>& meanReversion);    
     };
 }
 

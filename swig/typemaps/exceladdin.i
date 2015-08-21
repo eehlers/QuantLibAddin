@@ -30,6 +30,13 @@
         QuantLib::Period $1_name_cnv = f($1_name);
 %}
 
+%typemap(rp_tm_xll_rdc) std::vector<QuantLib::Date> %{
+        std::vector<long> returnValVec = QuantLibAddin::libraryToVector(returnValue);
+        static OPER xRet;
+        ObjectHandler::vectorToOper(returnValVec, xRet);
+        return &xRet;
+%}
+
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::Quote > const & "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_vo";
 

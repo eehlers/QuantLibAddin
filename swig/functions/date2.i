@@ -10,6 +10,10 @@
 
 namespace QuantLibAddin {
 
+    std::vector<QuantLib::Date> IMMNextDates(
+        const QuantLib::Date& d,
+        const std::vector<bool>& mainCycle);
+
     std::vector<std::string> IMMNextCodes(
         const QuantLib::Date& RefDate,
         const std::vector<bool>& MainCycle);

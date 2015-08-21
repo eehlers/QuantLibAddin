@@ -166,6 +166,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\conversions\conversions.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\conversions.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\conversions\convert2.cpp"
 				>
 			</File>

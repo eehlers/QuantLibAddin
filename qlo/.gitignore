@@ -6,6 +6,5 @@ Debug
 *.o
 obj_*.?pp
 objmanual_*.?pp.template
-!obj_all.hpp
 Release
 *.user

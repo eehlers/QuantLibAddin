@@ -25,6 +25,8 @@
 
 #include <vector>
 
+#include <boost/bind.hpp>
+
 namespace QuantLib {
     class Period;
     class Date;
@@ -53,6 +55,18 @@ namespace QuantLibAddin {
     std::vector<std::string> ASXNextCodes(const QuantLib::Date& d,
                                             const std::vector<bool>& mainCycle);
     std::vector<QuantLib::Date> ECBKnownDates();
+
+    std::string IMMcode(const QuantLib::Date& immDate);
+
+    // FIXME - need to autogenerate this
+    typedef     boost::_bi::bind_t<
+                std::string,
+                std::string (__cdecl*)(
+                    const QuantLib::Date&),
+                boost::_bi::list1<
+                    boost::arg<1> > >
+                qlIMMcodeBind;
+
 }
 
 #endif

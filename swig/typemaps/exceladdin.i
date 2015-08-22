@@ -44,3 +44,12 @@
 %typemap(rp_tm_xll_cll_obj) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_handle";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "$1_name_handle";
 %typemap(rp_tm_xll_cll_obj) const QuantLib::Period& "$1_name_cnv";
+
+%typemap(rp_tm_xll_ret) QuantLib::Date "long*";
+%typemap(rp_tm_xll_cod) QuantLib::Date "N";
+
+%typemap(rp_tm_xll_rdc) QuantLib::Date %{
+        static long returnValueXL;
+        returnValueXL = static_cast<long>(QuantLibAddin::libraryToScalar(returnValue));
+        return &returnValueXL;
+%}

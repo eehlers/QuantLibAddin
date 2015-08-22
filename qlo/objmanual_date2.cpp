@@ -111,3 +111,20 @@ to IMM_code. */
 std::string QuantLibAddin::IMMcode(const QuantLib::Date& immDate) {
     return QuantLib::IMM::code(immDate);
 }
+
+std::string QuantLibAddin::IMMnextCode(
+    const QuantLib::Date& RefDate,
+    bool MainCycle) {
+    return QuantLib::IMM::nextCode(RefDate, MainCycle);
+}
+
+std::string QuantLibAddin::ECBnextCode(const QuantLib::Date& RefDate) {
+    return QuantLib::ECB::nextCode(RefDate);
+}
+
+QuantLib::Date QuantLibAddin::ECBdate(
+    const std::string& ecbCode,
+    const QuantLib::Date& referenceDate) {
+    return QuantLib::ECB::date(ecbCode, referenceDate);
+}
+

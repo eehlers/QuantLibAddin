@@ -36,7 +36,7 @@ namespace QuantLibAddin {
 
 //    double libraryToScalar(const QuantLib::InterestRate&);
 //    double libraryToScalar(const QuantLib::Rate&);
-//    long libraryToScalar(const QuantLib::Date&);
+    long libraryToScalar(const QuantLib::Date&);
 //    std::string libraryToScalar(const QuantLib::Period&);
 //
     std::vector<long> libraryToVector(const std::vector<QuantLib::Date>&);

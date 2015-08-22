@@ -49,9 +49,9 @@
 //        return r;
 //    }
 //
-//    long libraryToScalar(const QuantLib::Date &d) {
-//        return d.serialNumber();
-//    }
+long QuantLibAddin::libraryToScalar(const QuantLib::Date &d) {
+    return d.serialNumber();
+}
 //
 //    std::string libraryToScalar(const QuantLib::Period &period) {
 //        std::ostringstream s;

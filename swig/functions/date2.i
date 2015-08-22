@@ -18,7 +18,15 @@ namespace QuantLibAddin {
         const QuantLib::Date& RefDate,
         const std::vector<bool>& MainCycle);
         
-    std::string IMMcode(const QuantLib::Date& immDate);        
+    std::string IMMcode(const QuantLib::Date& immDate);
+    
+    std::string IMMnextCode(const QuantLib::Date& d = Date(),
+                                bool mainCycle = true);
+    
+    std::string ECBnextCode(const QuantLib::Date& RefDate = QuantLib::Date());
+    QuantLib::Date ECBdate(const std::string& ecbCode,
+        const QuantLib::Date& referenceDate = QuantLib::Date());
+    
 }
 
 %feature("rp:override_obj", "");

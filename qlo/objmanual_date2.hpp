@@ -21,13 +21,13 @@
 #ifndef qla_date_hpp
 #define qla_date_hpp
 
+#include <ql/time/date.hpp>
 #include <ql/time/frequency.hpp>
 
 #include <vector>
 
 namespace QuantLib {
     class Period;
-    class Date;
 }
 
 namespace QuantLibAddin {
@@ -55,6 +55,13 @@ namespace QuantLibAddin {
     std::vector<QuantLib::Date> ECBKnownDates();
 
     std::string IMMcode(const QuantLib::Date& immDate);
+    std::string IMMnextCode(const QuantLib::Date& RefDate = QuantLib::Date(),
+                                bool MainCycle = true);
+
+    std::string ECBnextCode(const QuantLib::Date& RefDate = QuantLib::Date());
+    QuantLib::Date ECBdate(const std::string& ecbCode,
+                         const QuantLib::Date& referenceDate = QuantLib::Date());
+
 }
 
 #endif

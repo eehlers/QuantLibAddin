@@ -249,6 +249,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\enumerations\register\register_types_conventions.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\enumerations\register\register_types_daycounters.cpp"
 					>
 				</File>
@@ -278,6 +282,14 @@
 				>
 				<File
 					RelativePath=".\qlo\serialization\create\create_all.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_calendars.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_calendars.hpp"
 					>
 				</File>
 				<File
@@ -406,6 +418,14 @@
 				>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_all.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_calendars.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_calendars.hpp"
 					>
 				</File>
 				<File
@@ -672,6 +692,22 @@
 		</File>
 		<File
 			RelativePath=".\qlo\init.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\loop.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_all.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_calendars.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_calendars.hpp"
 			>
 		</File>
 		<File

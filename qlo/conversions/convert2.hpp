@@ -14,6 +14,9 @@ namespace ObjectHandler {
 
     template<> 
     QuantLib::Date convert2<QuantLib::Date, property_t>(const property_t& c);   
+
+    template<>
+    QuantLib::Period convert2<QuantLib::Period, property_t>(const property_t& p);
 }
 
 QuantLib::Period f(const std::string &p_inp);

@@ -25,10 +25,12 @@ namespace QuantLibAddin {
     void registerTypesCalendars();
     void registerTypesDayCounters();
     void registerTypesOptionTypes();
+    void registerTypesConventions();
 
     void unregisterTypesCalendars();
     void unregisterTypesDayCounters();
     void unregisterTypesOptionTypes();
+    void unregisterTypesConventions();
 }
 
 #endif

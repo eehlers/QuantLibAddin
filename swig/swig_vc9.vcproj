@@ -54,6 +54,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\calendars.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\date.i"
 					>
 				</File>

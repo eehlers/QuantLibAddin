@@ -10,8 +10,10 @@
 
 // These QuantLib types behave like enum.
 %apply rp_tp_enm { QuantLib::Option::Type };
+%apply rp_tp_enm { QuantLib::Calendar };
 %apply rp_tp_enm { QuantLib::Calendar const & };
 %apply rp_tp_enm { QuantLib::DayCounter const & };
+%apply rp_tp_enm { QuantLib::BusinessDayConvention };
 
 // Some types that require overrides within QuantLib, tell reposit to treat them like strings.
 %apply rp_tp_string { QuantLib::Handle<QuantLib::BlackVolTermStructure> const & };

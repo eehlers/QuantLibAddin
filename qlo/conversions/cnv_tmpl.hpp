@@ -5,8 +5,11 @@
 // This file contains some templates common to AddinObjects and AddinXl.
 // This file should be #included only by AddinXxx/conversions/xxx.cpp.
 
-#include <ql/time/date.hpp>
 #include <boost/lexical_cast.hpp>
+
+#include <ql/time/date.hpp>
+#include <ql/time/period.hpp>
+#include <ql/utilities/dataparsers.hpp>
 
 namespace ObjectHandler {
 
@@ -37,6 +40,11 @@ namespace ObjectHandler {
         //    return d2 + p;
         }
         OH_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Date'");
+    }
+
+    template<class container_t>
+    QuantLib::Period convertPeriod(const container_t& c) {
+        return QuantLib::PeriodParser::parse(c.operator std::string());
     }
 }
 

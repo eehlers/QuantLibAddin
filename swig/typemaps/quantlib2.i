@@ -30,3 +30,4 @@
 %apply rp_tp_obj1 { const boost::shared_ptr<QuantLib::StrikedTypePayoff>& };
 %apply rp_tp_obj1 { const boost::shared_ptr<QuantLib::Exercise>& };
 %apply rp_tp_obj1 { const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& };
+

@@ -39,3 +39,4 @@ namespace QuantLib {
 }
 
 %feature("rp:group", "");
+

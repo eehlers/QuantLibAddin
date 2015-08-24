@@ -13,6 +13,7 @@
 %include processes.i
 %include quote.i
 %include quote2.i
+%include ratehelpers.i
 %include settings.i
 %include utilities.i
 %include volatilities.i

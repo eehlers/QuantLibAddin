@@ -83,10 +83,10 @@ std::vector<long> QuantLibAddin::libraryToVector(const std::vector<QuantLib::Dat
 //        return ret;
 //    }
 //
-//    void cppToLibrary(const std::string &in, QuantLib::Period &ret) {
-//        ret = QuantLib::PeriodParser::parse(in);
-//        ret.normalize();
-//    }
+void QuantLibAddin::cppToLibrary(const std::string &in, QuantLib::Period &ret) {
+    ret = QuantLib::PeriodParser::parse(in);
+    ret.normalize();
+}
 //
 //    void cppToLibrary(const long &in, QuantLib::Size &ret) {
 //        ret = QuantLib::Size(in);

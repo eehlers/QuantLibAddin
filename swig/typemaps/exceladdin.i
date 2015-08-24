@@ -30,6 +30,11 @@
         QuantLib::Period $1_name_cnv = f($1_name);
 %}
 
+%typemap(rp_tm_xll_cnv) QuantLib::Period %{
+        QuantLib::Period $1_name_cnv;
+        QuantLibAddin::cppToLibrary($1_name, $1_name_cnv);
+%}
+
 %typemap(rp_tm_xll_rdc) std::vector<QuantLib::Date> %{
         std::vector<long> returnValVec = QuantLibAddin::libraryToVector(returnValue);
         static OPER xRet;
@@ -40,18 +45,21 @@
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::Quote > const & "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_vo";
 
+%typemap(rp_tm_xll_cll_obj) QuantLib::Period "$1_name_cnv";
+%typemap(rp_tm_xll_cll_obj) const QuantLib::Period& "$1_name_cnv";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Handle< QuantLib::Quote > const & "$1_name_handle";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_handle";
 %typemap(rp_tm_xll_cll_obj) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "$1_name_handle";
-%typemap(rp_tm_xll_cll_obj) const QuantLib::Period& "$1_name_cnv";
 
 %typemap(rp_tm_xll_ret) QuantLib::Date "long*";
 
+%typemap(rp_tm_xll_cod) QuantLib::Period "C";
 %typemap(rp_tm_xll_cod) QuantLib::Date "N";
 %typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::Quote > const & "C";
 %typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::YieldTermStructure > const & "P";
 %typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "C";
 
+%typemap(rp_tm_xll_prm) QuantLib::Period "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::Quote > const & "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "OPER*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "char*";

@@ -389,6 +389,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_ratehelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_ratehelpers.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_settings.cpp"
 					>
 				</File>
@@ -533,6 +541,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_ratehelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_ratehelpers.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_register.hpp"
 					>
 				</File>
@@ -670,6 +686,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_ratehelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_ratehelpers.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_settings.cpp"
 				>
 			</File>
@@ -796,6 +820,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_quote.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_ratehelpers.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_ratehelpers.hpp"
 			>
 		</File>
 		<File

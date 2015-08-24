@@ -19,6 +19,7 @@ namespace ObjectHandler {
     QuantLib::Period convert2<QuantLib::Period, property_t>(const property_t& p);
 }
 
+// FIXME when do we use this function and when do we use function "cppToLibrary"?
 QuantLib::Period f(const std::string &p_inp);
 
 #endif

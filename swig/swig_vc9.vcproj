@@ -110,6 +110,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\ratehelpers.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\settings.i"
 					>
 				</File>

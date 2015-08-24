@@ -15,5 +15,6 @@ namespace QuantLibAddin {
 
 }
 
+%feature("rp:override_obj", "");
 %feature("rp:group", "");
 

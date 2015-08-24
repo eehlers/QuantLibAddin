@@ -43,7 +43,8 @@ namespace QuantLibAddin {
 //    std::vector<std::string> libraryToVector(const std::vector<QuantLib::Period>&);
 //    std::vector<double> libraryToVector(const std::vector<QuantLib::Real>&);
 //
-//    void cppToLibrary(const std::string &in, QuantLib::Period &ret);
+    // FIXME when do we use this function and when do we use function "f()"?
+    void cppToLibrary(const std::string &in, QuantLib::Period &ret);
 //    void cppToLibrary(const long &in, QuantLib::Size &ret);
 //
 //    // Function below required on 64-bit systems but on 32-bit systems it

@@ -35,6 +35,13 @@
         QuantLibAddin::cppToLibrary($1_name, $1_name_cnv);
 %}
 
+%typemap(rp_tm_xll_cnv) const std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> >& %{
+        std::vector<std::string> z =
+            ObjectHandler::operToVector<std::string>(*$1_name, "$1_name");
+        std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> > $1_name_vec =
+            ObjectHandler::getObjectVector<QuantLibAddin::RateHelper>(z);
+%}
+
 %typemap(rp_tm_xll_rdc) std::vector<QuantLib::Date> %{
         std::vector<long> returnValVec = QuantLibAddin::libraryToVector(returnValue);
         static OPER xRet;
@@ -69,3 +76,5 @@
         returnValueXL = static_cast<long>(QuantLibAddin::libraryToScalar(returnValue));
         return &returnValueXL;
 %}
+
+

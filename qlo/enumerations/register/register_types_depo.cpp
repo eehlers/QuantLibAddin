@@ -22,20 +22,22 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#include <ql/option.hpp>
+#include <qlo/objmanual_ratehelpers.hpp>
 
 #include <oh/enumerations/typefactory.hpp>
 #include <qlo/enumerations/register/register_types.hpp>
 
-void QuantLibAddin::registerTypesOptionTypes() {
+void QuantLibAddin::registerTypesDepos() {
 
-    ObjectHandler::Create<QuantLib::Option::Type> create;
-    create.registerType("Call", new QuantLib::Option::Type(QuantLib::Option::Call));
-    create.registerType("Put", new QuantLib::Option::Type(QuantLib::Option::Put));
+    ObjectHandler::Create<QuantLibAddin::RateHelper::DepoInclusionCriteria> create;
+    create.registerType("AllDepos", new QuantLibAddin::RateHelper::DepoInclusionCriteria(QuantLibAddin::RateHelper::AllDepos));
+    create.registerType("DeposBeforeFirstFuturesExpiryDate", new QuantLibAddin::RateHelper::DepoInclusionCriteria(QuantLibAddin::RateHelper::DeposBeforeFirstFuturesExpiryDate));
+    create.registerType("DeposBeforeFirstFuturesStartDate", new QuantLibAddin::RateHelper::DepoInclusionCriteria(QuantLibAddin::RateHelper::DeposBeforeFirstFuturesStartDate));
+    create.registerType("DeposBeforeFirstFuturesStartDatePlusOne", new QuantLibAddin::RateHelper::DepoInclusionCriteria(QuantLibAddin::RateHelper::DeposBeforeFirstFuturesStartDatePlusOne));
 }
 
-void QuantLibAddin::unregisterTypesOptionTypes() {
+void QuantLibAddin::unregisterTypesDepos() {
 
-    ObjectHandler::Create<QuantLib::Option::Type>().unregisterTypes();
+    ObjectHandler::Create<QuantLibAddin::RateHelper::DepoInclusionCriteria>().unregisterTypes();
 }
 

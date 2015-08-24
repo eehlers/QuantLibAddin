@@ -257,6 +257,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\enumerations\register\register_types_depo.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\enumerations\register\register_types_optiontypes.cpp"
 					>
 				</File>

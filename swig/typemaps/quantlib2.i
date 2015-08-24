@@ -17,6 +17,7 @@
 %apply rp_tp_enm { QuantLib::DayCounter const & };
 %apply rp_tp_enm { QuantLib::BusinessDayConvention };
 %apply rp_tp_enm { QuantLib::Futures::Type };
+%apply rp_tp_enm { QuantLibAddin::RateHelper::DepoInclusionCriteria };
 
 // Some types that require overrides within QuantLib, tell reposit to treat them like strings.
 %apply rp_tp_string { QuantLib::Period const & };

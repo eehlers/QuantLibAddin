@@ -33,6 +33,7 @@ namespace QuantLibAddin {
         registerTypesDayCounters();
         registerTypesOptionTypes();
         registerTypesConventions();
+        registerTypesDepos();
     }
 
     void unregisterEnumerations() {
@@ -41,7 +42,7 @@ namespace QuantLibAddin {
         unregisterTypesDayCounters();
         unregisterTypesOptionTypes();
         unregisterTypesConventions();
+        unregisterTypesDepos();
     }
-
 }
 

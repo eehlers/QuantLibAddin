@@ -53,6 +53,15 @@ namespace QuantLibAddin {
             const boost::shared_ptr<QuantLib::OvernightIndex>& overnightIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& discount);
     };
+    
+    std::vector<std::string> rateHelperSelection(
+        const std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> >& qlarhs,
+        const std::vector<QuantLib::Natural>& priority,
+        QuantLib::Natural nImmFutures,
+        QuantLib::Natural nSerialFutures,
+        QuantLib::Natural frontFuturesRollingDays,
+        RateHelper::DepoInclusionCriteria depoInclusionCriteria,
+        const std::vector<QuantLib::Natural>& minDistance);    
 }
 
 %feature("rp:override_obj", "");

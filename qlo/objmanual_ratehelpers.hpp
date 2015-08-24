@@ -16,17 +16,36 @@ namespace QuantLibAddin {
 
     class RateHelper : public ObjectHandler::LibraryObject<QuantLib::RateHelper> {
       public:
-        //enum DepoInclusionCriteria {AllDepos,
-        //                            DeposBeforeFirstFuturesStartDate,
-        //                            DeposBeforeFirstFuturesStartDatePlusOne,
-        //                            DeposBeforeFirstFuturesExpiryDate
-        //};
+        enum DepoInclusionCriteria {AllDepos,
+                                    DeposBeforeFirstFuturesStartDate,
+                                    DeposBeforeFirstFuturesStartDatePlusOne,
+                                    DeposBeforeFirstFuturesExpiryDate
+        };
         std::string quoteName() { return quoteName_; }
         QuantLib::Date earliestDate();
         QuantLib::Date latestDate();
       protected:
         OH_LIB_CTOR(RateHelper, QuantLib::RateHelper);
         std::string quoteName_;
+    };
+
+    class DepositRateHelper : public RateHelper {
+      public:
+        DepositRateHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& rate,
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
+            bool permanent);
+        DepositRateHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& quote,
+            const QuantLib::Period& p,
+            QuantLib::Natural settlementDays,
+            const QuantLib::Calendar& calendar,
+            QuantLib::BusinessDayConvention convention,
+            bool endOfMonth,
+            const QuantLib::DayCounter& dayCounter,
+            bool permanent);
     };
 
     class FuturesRateHelper : 
@@ -86,6 +105,18 @@ namespace QuantLibAddin {
             // END   typemap rp_tm_default
             bool permanent);
     };
+
+
+    // Processes the set of curve bootstrapping instruments
+    // and selects a subset according to the given rules and parameters
+    std::vector<std::string> rateHelperSelection(
+        const std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> >& qlarhs,
+        const std::vector<QuantLib::Natural>& priority,
+        QuantLib::Natural nImmFutures,
+        QuantLib::Natural nSerialFutures,
+        QuantLib::Natural frontFuturesRollingDays,
+        RateHelper::DepoInclusionCriteria depoInclusionCriteria,
+        const std::vector<QuantLib::Natural>& minDistance);
 
 } // namespace QuantLibAddin
 

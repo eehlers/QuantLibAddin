@@ -21,39 +21,30 @@
  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
-//
-//#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
-//    #include <qlo/config.hpp>
-//#endif
-//
-//#include <qlo/qladdindefines.hpp>
 
 #include <ql/time/businessdayconvention.hpp>
 
 #include <oh/enumerations/typefactory.hpp>
 #include <qlo/enumerations/register/register_types.hpp>
 
-namespace QuantLibAddin {
+void QuantLibAddin::registerTypesConventions() {
 
-    void registerTypesConventions() {
+    ObjectHandler::Create<QuantLib::BusinessDayConvention> create;
+    create.registerType("F", new QuantLib::BusinessDayConvention(QuantLib::Following));
+    create.registerType("Following", new QuantLib::BusinessDayConvention(QuantLib::Following));
+    create.registerType("HMMF", new QuantLib::BusinessDayConvention(QuantLib::HalfMonthModifiedFollowing));
+    create.registerType("Half-Month Modified Following", new QuantLib::BusinessDayConvention(QuantLib::HalfMonthModifiedFollowing));
+    create.registerType("Indifferent", new QuantLib::BusinessDayConvention(QuantLib::Unadjusted));
+    create.registerType("MF", new QuantLib::BusinessDayConvention(QuantLib::ModifiedFollowing));
+    create.registerType("MP", new QuantLib::BusinessDayConvention(QuantLib::ModifiedPreceding));
+    create.registerType("Modified Following", new QuantLib::BusinessDayConvention(QuantLib::ModifiedFollowing));
+    create.registerType("Modified Preceding", new QuantLib::BusinessDayConvention(QuantLib::ModifiedPreceding));
+    create.registerType("P", new QuantLib::BusinessDayConvention(QuantLib::Preceding));
+    create.registerType("Preceding", new QuantLib::BusinessDayConvention(QuantLib::Preceding));
+    create.registerType("Unadjusted", new QuantLib::BusinessDayConvention(QuantLib::Unadjusted));
+}
 
-        ObjectHandler::Create<QuantLib::BusinessDayConvention> create;
-        create.registerType("F", new QuantLib::BusinessDayConvention(QuantLib::Following));
-        create.registerType("Following", new QuantLib::BusinessDayConvention(QuantLib::Following));
-        create.registerType("HMMF", new QuantLib::BusinessDayConvention(QuantLib::HalfMonthModifiedFollowing));
-        create.registerType("Half-Month Modified Following", new QuantLib::BusinessDayConvention(QuantLib::HalfMonthModifiedFollowing));
-        create.registerType("Indifferent", new QuantLib::BusinessDayConvention(QuantLib::Unadjusted));
-        create.registerType("MF", new QuantLib::BusinessDayConvention(QuantLib::ModifiedFollowing));
-        create.registerType("MP", new QuantLib::BusinessDayConvention(QuantLib::ModifiedPreceding));
-        create.registerType("Modified Following", new QuantLib::BusinessDayConvention(QuantLib::ModifiedFollowing));
-        create.registerType("Modified Preceding", new QuantLib::BusinessDayConvention(QuantLib::ModifiedPreceding));
-        create.registerType("P", new QuantLib::BusinessDayConvention(QuantLib::Preceding));
-        create.registerType("Preceding", new QuantLib::BusinessDayConvention(QuantLib::Preceding));
-        create.registerType("Unadjusted", new QuantLib::BusinessDayConvention(QuantLib::Unadjusted));
-    }
+void QuantLibAddin::unregisterTypesConventions() {
 
-    void unregisterTypesConventions() {
-    
-        ObjectHandler::Create<QuantLib::BusinessDayConvention>().unregisterTypes();
-    }
+    ObjectHandler::Create<QuantLib::BusinessDayConvention>().unregisterTypes();
 }

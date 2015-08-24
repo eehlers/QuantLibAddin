@@ -22,70 +22,59 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-//#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
-//    #include <qlo/config.hpp>
-//#endif
-//
-//#include <qlo/qladdindefines.hpp>
-//
 #include <ql/time/daycounters/all.hpp>
-//#include <ql/default.hpp> // RL ADD 2010-07-15
 
 #include <oh/enumerations/typefactory.hpp>
 #include <qlo/enumerations/register/register_types.hpp>
 
-namespace QuantLibAddin {
+void QuantLibAddin::registerTypesDayCounters() {
 
-    void registerTypesDayCounters() {
-    
-        ObjectHandler::Create<QuantLib::DayCounter> create;
-        create.registerType("1/1", new QuantLib::OneDayCounter());
-        create.registerType("30/360", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
-        create.registerType("30/360 (Bond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
-        create.registerType("30/360 (Eurobond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        create.registerType("30/360 (Italian)", new QuantLib::Thirty360(QuantLib::Thirty360::Italian));
-        create.registerType("30E/360", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        create.registerType("30E/360 (Eurobond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        create.registerType("360/360", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
-        create.registerType("A/360", new QuantLib::Actual360());
-        create.registerType("A/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        create.registerType("A/365 (Fixed)", new QuantLib::Actual365Fixed());
-        create.registerType("A/365F", new QuantLib::Actual365Fixed());
-        create.registerType("Act/360", new QuantLib::Actual360());
-        create.registerType("Act/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        create.registerType("Act/365 (Fixed)", new QuantLib::Actual365Fixed());
-        create.registerType("Act/365 (NL)", new QuantLib::Actual365NoLeap());
-        create.registerType("Act/Act", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        create.registerType("Actual/360", new QuantLib::Actual360());
-        create.registerType("Actual/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        create.registerType("Actual/365 (Fixed)", new QuantLib::Actual365Fixed());
-        create.registerType("Actual/365 (JGB)", new QuantLib::Actual365NoLeap());
-        create.registerType("Actual/365 (No Leap)", new QuantLib::Actual365NoLeap());
-        create.registerType("Actual/Actual", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        create.registerType("Actual/Actual (AFB)", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
-        create.registerType("Actual/Actual (Bond)", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
-        create.registerType("Actual/Actual (Euro)", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
-        create.registerType("Actual/Actual (ISDA)", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        create.registerType("Actual/Actual (ISMA)", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
-        create.registerType("Bond Basis", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
-        create.registerType("Business252", new QuantLib::Business252());
-        create.registerType("DayCounter", new QuantLib::DayCounter());
-        create.registerType("Eurobond Basis", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        create.registerType("LIN 30/360", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        create.registerType("LIN ACT/360", new QuantLib::Actual360());
-        create.registerType("LIN ACT/365", new QuantLib::Actual365Fixed());
-        create.registerType("LIN ACT/ACT", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
-        create.registerType("LIN ACTACT ISDA", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        create.registerType("LIN ACTACT ISMA", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
-        create.registerType("NL/365", new QuantLib::Actual365NoLeap());
-        create.registerType("NoDayCounter", new QuantLib::DayCounter());
-        create.registerType("Simple", new QuantLib::SimpleDayCounter());
-    }
+    ObjectHandler::Create<QuantLib::DayCounter> create;
+    create.registerType("1/1", new QuantLib::OneDayCounter());
+    create.registerType("30/360", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
+    create.registerType("30/360 (Bond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
+    create.registerType("30/360 (Eurobond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+    create.registerType("30/360 (Italian)", new QuantLib::Thirty360(QuantLib::Thirty360::Italian));
+    create.registerType("30E/360", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+    create.registerType("30E/360 (Eurobond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+    create.registerType("360/360", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
+    create.registerType("A/360", new QuantLib::Actual360());
+    create.registerType("A/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+    create.registerType("A/365 (Fixed)", new QuantLib::Actual365Fixed());
+    create.registerType("A/365F", new QuantLib::Actual365Fixed());
+    create.registerType("Act/360", new QuantLib::Actual360());
+    create.registerType("Act/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+    create.registerType("Act/365 (Fixed)", new QuantLib::Actual365Fixed());
+    create.registerType("Act/365 (NL)", new QuantLib::Actual365NoLeap());
+    create.registerType("Act/Act", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+    create.registerType("Actual/360", new QuantLib::Actual360());
+    create.registerType("Actual/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+    create.registerType("Actual/365 (Fixed)", new QuantLib::Actual365Fixed());
+    create.registerType("Actual/365 (JGB)", new QuantLib::Actual365NoLeap());
+    create.registerType("Actual/365 (No Leap)", new QuantLib::Actual365NoLeap());
+    create.registerType("Actual/Actual", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+    create.registerType("Actual/Actual (AFB)", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
+    create.registerType("Actual/Actual (Bond)", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
+    create.registerType("Actual/Actual (Euro)", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
+    create.registerType("Actual/Actual (ISDA)", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+    create.registerType("Actual/Actual (ISMA)", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
+    create.registerType("Bond Basis", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
+    create.registerType("Business252", new QuantLib::Business252());
+    create.registerType("DayCounter", new QuantLib::DayCounter());
+    create.registerType("Eurobond Basis", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+    create.registerType("LIN 30/360", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+    create.registerType("LIN ACT/360", new QuantLib::Actual360());
+    create.registerType("LIN ACT/365", new QuantLib::Actual365Fixed());
+    create.registerType("LIN ACT/ACT", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
+    create.registerType("LIN ACTACT ISDA", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+    create.registerType("LIN ACTACT ISMA", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
+    create.registerType("NL/365", new QuantLib::Actual365NoLeap());
+    create.registerType("NoDayCounter", new QuantLib::DayCounter());
+    create.registerType("Simple", new QuantLib::SimpleDayCounter());
+}
 
-    void unregisterTypesDayCounters() {
-    
-        ObjectHandler::Create<QuantLib::DayCounter>().unregisterTypes();
-    }
+void QuantLibAddin::unregisterTypesDayCounters() {
 
+    ObjectHandler::Create<QuantLib::DayCounter>().unregisterTypes();
 }
 

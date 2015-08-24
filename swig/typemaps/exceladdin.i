@@ -42,6 +42,10 @@
             ObjectHandler::getObjectVector<QuantLibAddin::RateHelper>(z);
 %}
 
+%typemap(rp_tm_xll_cnv) const boost::shared_ptr<QuantLibAddin::RateHelper>& qlarh %{
+        OH_GET_OBJECT($1_name_obj, $1_name, QuantLibAddin::RateHelper);        
+%}
+
 %typemap(rp_tm_xll_rdc) std::vector<QuantLib::Date> %{
         std::vector<long> returnValVec = QuantLibAddin::libraryToVector(returnValue);
         static OPER xRet;

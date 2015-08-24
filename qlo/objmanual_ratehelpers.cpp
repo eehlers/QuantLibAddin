@@ -2,6 +2,10 @@
 #include <qlo/objmanual_ratehelpers.hpp>
 #include <qlo/conversions/convert2.hpp>
 
+#include <ql/termstructures/yield/ratehelpers.hpp>
+#include <ql/termstructures/yield/bondhelpers.hpp>
+#include <ql/termstructures/yield/oisratehelper.hpp>
+
 // Within each of the RateHelper classes we want to remember the ID
 // of the associated Rate object.  So below we coerce that input
 // into a string.  If the caller passed in a double instead of a
@@ -331,4 +335,62 @@ std::vector<std::string> QuantLibAddin::rateHelperSelection(
     for (k = rhs.begin(); k != rhs.end(); ++k)
         result.push_back(k->objectID);
     return result;
+}
+
+namespace {
+
+    class RateInspector
+        : public QuantLib::AcyclicVisitor,
+          public QuantLib::Visitor<QuantLib::DepositRateHelper>,
+          public QuantLib::Visitor<QuantLib::FraRateHelper>,
+          public QuantLib::Visitor<QuantLib::FuturesRateHelper>,
+          public QuantLib::Visitor<QuantLib::SwapRateHelper>,
+          public QuantLib::Visitor<QuantLib::OISRateHelper>,
+          public QuantLib::Visitor<QuantLib::DatedOISRateHelper>,
+          public QuantLib::Visitor<QuantLib::BMASwapRateHelper>,
+          public QuantLib::Visitor<QuantLib::FixedRateBondHelper> {
+        QuantLib::Rate rate_;
+      public:
+        QuantLib::Rate rate() const { return rate_; }
+        void visit(QuantLib::DepositRateHelper& h) {
+            rate_ = h.quote()->value();
+        }
+        void visit(QuantLib::FraRateHelper& h) {
+            rate_ = h.quote()->value();
+        }
+        void visit(QuantLib::FuturesRateHelper& h) {
+            QuantLib::Rate futureRate = 1.0 - h.quote()->value()/100.0;
+            QuantLib::Rate convAdj = h.convexityAdjustment();
+            // Convexity, as FRA/futures adjustment, has been used in the
+            // past to take into account futures margining vs FRA.
+            // Therefore, there's no requirement for it to be non-negative.
+            rate_ = futureRate - convAdj;
+        }
+        void visit(QuantLib::SwapRateHelper& h) {
+            rate_ = h.quote()->value();
+        }
+        void visit(QuantLib::OISRateHelper& h) {
+            rate_ = h.quote()->value();
+        }
+        void visit(QuantLib::DatedOISRateHelper& h) {
+            rate_ = h.quote()->value();
+        }
+        void visit(QuantLib::BMASwapRateHelper& h) {
+            rate_ = h.quote()->value();
+        }
+        void visit(QuantLib::FixedRateBondHelper& h) {
+            QL_FAIL("not implemented yet");
+        }
+    };
+}
+
+QuantLib::Real QuantLibAddin::rateHelperRate(
+    const boost::shared_ptr<QuantLibAddin::RateHelper>& qlarh) {
+
+    boost::shared_ptr<QuantLib::RateHelper> qlrh;
+    qlarh->getLibraryObject(qlrh);
+
+    RateInspector v;
+    qlrh->accept(v);
+    return v.rate();
 }

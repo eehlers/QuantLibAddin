@@ -118,6 +118,11 @@ namespace QuantLibAddin {
         RateHelper::DepoInclusionCriteria depoInclusionCriteria,
         const std::vector<QuantLib::Natural>& minDistance);
 
+    // Returns the rate, if any, associated to the given rate helper
+    // FIXME I think this could be implemented as a member function of QuantLibAddin::RateHelper
+    QuantLib::Real rateHelperRate(
+        const boost::shared_ptr<QuantLibAddin::RateHelper>& qlarh);
+
 } // namespace QuantLibAddin
 
 #endif

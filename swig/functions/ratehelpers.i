@@ -62,6 +62,9 @@ namespace QuantLibAddin {
         QuantLib::Natural frontFuturesRollingDays,
         RateHelper::DepoInclusionCriteria depoInclusionCriteria,
         const std::vector<QuantLib::Natural>& minDistance);    
+        
+    QuantLib::Real rateHelperRate(
+        const boost::shared_ptr<QuantLibAddin::RateHelper>& qlarh);        
 }
 
 %feature("rp:override_obj", "");

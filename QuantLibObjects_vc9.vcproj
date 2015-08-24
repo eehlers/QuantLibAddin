@@ -196,6 +196,14 @@
 					RelativePath=".\qlo\enumerations\constructors\enumeratedclasses.hpp"
 					>
 				</File>
+				<File
+					RelativePath=".\qlo\enumerations\constructors\enumeratedpairs.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\enumerations\constructors\enumeratedpairs.hpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="factories"
@@ -213,7 +221,31 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\enumerations\factories\conundrumpricerfactory.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\enumerations\factories\historicalforwardratesanalysisfactory.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\enumerations\factories\iborcouponpricersfactory.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\enumerations\factories\interpolationsfactory.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\enumerations\factories\payoffsfactory.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\enumerations\factories\pricingenginesfactory.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\enumerations\factories\termstructuresfactory.hpp"
 					>
 				</File>
 			</Filter>
@@ -234,6 +266,10 @@
 				</File>
 				<File
 					RelativePath=".\qlo\enumerations\register\register_classes.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\enumerations\register\register_pairs.cpp"
 					>
 				</File>
 				<File

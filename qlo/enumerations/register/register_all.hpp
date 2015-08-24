@@ -1,7 +1,7 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2007, 2014 Eric Ehlers
+ Copyright (C) 2007 Eric Ehlers
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -21,6 +21,12 @@
 #define qla_register_all_hpp
 
 namespace QuantLibAddin {
+
+    void registerEnumeratedClasses();
+    void registerEnumeratedCurves();
+    //void registerEnumeratedHistoricalForwardRatesAnalysis();
+    void registerEnumeratedTypes();
+    void unregisterEnumeratedTypes();
 
     // To be called by the application at startup & shutdown
     void registerEnumerations();

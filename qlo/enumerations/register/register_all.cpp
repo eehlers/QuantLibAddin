@@ -1,7 +1,7 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2007, 2014 Eric Ehlers
+ Copyright (C) 2007 Eric Ehlers
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -18,31 +18,23 @@
 */
 
 #include <qlo/enumerations/register/register_all.hpp>
-#include <qlo/enumerations/register/register_types.hpp>
-#include <qlo/enumerations/register/register_classes.hpp>
 
 namespace QuantLibAddin {
 
     void registerEnumerations() {
 
         registerEnumeratedClasses();
-        //registerEnumeratedCurves();
-        ////registerEnumeratedHistoricalForwardRatesAnalysis();
+        registerEnumeratedCurves();
+        //registerEnumeratedHistoricalForwardRatesAnalysis();
+        registerEnumeratedTypes();
 
-        registerTypesCalendars();
-        registerTypesDayCounters();
-        registerTypesOptionTypes();
-        registerTypesConventions();
-        registerTypesDepos();
     }
 
     void unregisterEnumerations() {
 
-        unregisterTypesCalendars();
-        unregisterTypesDayCounters();
-        unregisterTypesOptionTypes();
-        unregisterTypesConventions();
-        unregisterTypesDepos();
+        unregisterEnumeratedTypes();
+
     }
+
 }
 

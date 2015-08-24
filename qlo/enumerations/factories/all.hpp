@@ -1,6 +1,6 @@
 
 /*
- Copyright (C) 2008, 2014 Eric Ehlers
+ Copyright (C) 2008 Eric Ehlers
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -20,13 +20,13 @@
 #define qla_factory_all_hpp
 
 #include <qlo/enumerations/factories/calendarfactory.hpp>
-////#include <qlo/enumerations/factories/conundrumpricerfactory.hpp>
-////#include <qlo/enumerations/factories/historicalforwardratesanalysisfactory.hpp>
-////#include <qlo/enumerations/factories/iborcouponpricersfactory.hpp>
-////#include <qlo/enumerations/factories/interpolationsfactory.hpp>
-//#include <qlo/enumerations/factories/payoffsfactory.hpp>
-////#include <qlo/enumerations/factories/pricingenginesfactory.hpp>
-////#include <qlo/enumerations/factories/termstructuresfactory.hpp>
+#include <qlo/enumerations/factories/conundrumpricerfactory.hpp>
+#include <qlo/enumerations/factories/historicalforwardratesanalysisfactory.hpp>
+#include <qlo/enumerations/factories/iborcouponpricersfactory.hpp>
+#include <qlo/enumerations/factories/interpolationsfactory.hpp>
+#include <qlo/enumerations/factories/payoffsfactory.hpp>
+#include <qlo/enumerations/factories/pricingenginesfactory.hpp>
+#include <qlo/enumerations/factories/termstructuresfactory.hpp>
 
 #endif
 

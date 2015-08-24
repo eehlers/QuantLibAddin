@@ -34,11 +34,12 @@
 #endif
 
 #include <qlo/qladdindefines.hpp>
-#include <qlo/interpolation.hpp>
-#include <qlo/interpolation2D.hpp>
-#include <qlo/ratehelpers.hpp>
-#include <qlo/piecewiseyieldcurve.hpp>
-#include <qlo/indexes/swapindex.hpp>
+//#include <qlo/interpolation.hpp>
+//#include <qlo/interpolation2D.hpp>
+//#include <qlo/ratehelpers.hpp>
+#include <qlo/objmanual_ratehelpers.hpp>
+//#include <qlo/piecewiseyieldcurve.hpp>
+//#include <qlo/indexes/swapindex.hpp>
 
 #include <ql/cashflows/cashflows.hpp>
 #include <ql/cashflows/conundrumpricer.hpp>
@@ -401,11 +402,11 @@ namespace QuantLibAddin {
             create.registerType("Weekly", new QuantLib::Frequency(QuantLib::Weekly));
         }
 
-        {
-            ObjectHandler::Create<QuantLib::Futures::Type> create;
-            create.registerType("ASX", new QuantLib::Futures::Type(QuantLib::Futures::ASX));
-            create.registerType("IMM", new QuantLib::Futures::Type(QuantLib::Futures::IMM));
-        }
+        //{
+        //    ObjectHandler::Create<QuantLib::Futures::Type> create;
+        //    create.registerType("ASX", new QuantLib::Futures::Type(QuantLib::Futures::ASX));
+        //    create.registerType("IMM", new QuantLib::Futures::Type(QuantLib::Futures::IMM));
+        //}
 
         {
             ObjectHandler::Create<QuantLib::GFunctionFactory::YieldCurveModel> create;
@@ -559,32 +560,32 @@ namespace QuantLibAddin {
             create.registerType("Wednesday", new QuantLib::Weekday(QuantLib::Wednesday));
         }
 
-        {
-            ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Interpolator> create;
-            create.registerType("BackwardFlat", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::BackwardFlat));
-            create.registerType("CubicNaturalSpline", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::CubicNaturalSpline));
-            create.registerType("ForwardFlat", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::ForwardFlat));
-            create.registerType("FritschButlandCubic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::FritschButlandCubic));
-            create.registerType("FritschButlandLogCubic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::FritschButlandLogCubic));
-            create.registerType("KrugerCubic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::KrugerCubic));
-            create.registerType("KrugerLogCubic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::KrugerLogCubic));
-            create.registerType("Linear", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::Linear));
-            create.registerType("LogCubicNaturalSpline", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::LogCubicNaturalSpline));
-            create.registerType("LogLinear", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::LogLinear));
-            create.registerType("LogParabolic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::LogParabolic));
-            create.registerType("MonotonicCubicNaturalSpline", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::MonotonicCubicNaturalSpline));
-            create.registerType("MonotonicLogCubicNaturalSpline", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::MonotonicLogCubicNaturalSpline));
-            create.registerType("MonotonicLogParabolic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::MonotonicLogParabolic));
-            create.registerType("MonotonicParabolic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::MonotonicParabolic));
-            create.registerType("Parabolic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::Parabolic));
-        }
+        //{
+        //    ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Interpolator> create;
+        //    create.registerType("BackwardFlat", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::BackwardFlat));
+        //    create.registerType("CubicNaturalSpline", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::CubicNaturalSpline));
+        //    create.registerType("ForwardFlat", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::ForwardFlat));
+        //    create.registerType("FritschButlandCubic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::FritschButlandCubic));
+        //    create.registerType("FritschButlandLogCubic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::FritschButlandLogCubic));
+        //    create.registerType("KrugerCubic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::KrugerCubic));
+        //    create.registerType("KrugerLogCubic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::KrugerLogCubic));
+        //    create.registerType("Linear", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::Linear));
+        //    create.registerType("LogCubicNaturalSpline", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::LogCubicNaturalSpline));
+        //    create.registerType("LogLinear", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::LogLinear));
+        //    create.registerType("LogParabolic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::LogParabolic));
+        //    create.registerType("MonotonicCubicNaturalSpline", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::MonotonicCubicNaturalSpline));
+        //    create.registerType("MonotonicLogCubicNaturalSpline", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::MonotonicLogCubicNaturalSpline));
+        //    create.registerType("MonotonicLogParabolic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::MonotonicLogParabolic));
+        //    create.registerType("MonotonicParabolic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::MonotonicParabolic));
+        //    create.registerType("Parabolic", new QuantLibAddin::InterpolatedYieldCurve::Interpolator(QuantLibAddin::InterpolatedYieldCurve::Parabolic));
+        //}
 
-        {
-            ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Traits> create;
-            create.registerType("Discount", new QuantLibAddin::InterpolatedYieldCurve::Traits(QuantLibAddin::InterpolatedYieldCurve::Discount));
-            create.registerType("ForwardRate", new QuantLibAddin::InterpolatedYieldCurve::Traits(QuantLibAddin::InterpolatedYieldCurve::ForwardRate));
-            create.registerType("ZeroYield", new QuantLibAddin::InterpolatedYieldCurve::Traits(QuantLibAddin::InterpolatedYieldCurve::ZeroYield));
-        }
+        //{
+        //    ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Traits> create;
+        //    create.registerType("Discount", new QuantLibAddin::InterpolatedYieldCurve::Traits(QuantLibAddin::InterpolatedYieldCurve::Discount));
+        //    create.registerType("ForwardRate", new QuantLibAddin::InterpolatedYieldCurve::Traits(QuantLibAddin::InterpolatedYieldCurve::ForwardRate));
+        //    create.registerType("ZeroYield", new QuantLibAddin::InterpolatedYieldCurve::Traits(QuantLibAddin::InterpolatedYieldCurve::ZeroYield));
+        //}
 
         {
             ObjectHandler::Create<QuantLibAddin::RateHelper::DepoInclusionCriteria> create;
@@ -594,15 +595,15 @@ namespace QuantLibAddin {
             create.registerType("DeposBeforeFirstFuturesStartDatePlusOne", new QuantLibAddin::RateHelper::DepoInclusionCriteria(QuantLibAddin::RateHelper::DeposBeforeFirstFuturesStartDatePlusOne));
         }
 
-        {
-            ObjectHandler::Create<QuantLibAddin::SwapIndex::FixingType> create;
-            create.registerType("IfrFix", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IfrFix));
-            create.registerType("Isda", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::Isda));
-            create.registerType("IsdaFixA", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixA));
-            create.registerType("IsdaFixAm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixAm));
-            create.registerType("IsdaFixB", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixB));
-            create.registerType("IsdaFixPm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixPm));
-        }
+        //{
+        //    ObjectHandler::Create<QuantLibAddin::SwapIndex::FixingType> create;
+        //    create.registerType("IfrFix", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IfrFix));
+        //    create.registerType("Isda", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::Isda));
+        //    create.registerType("IsdaFixA", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixA));
+        //    create.registerType("IsdaFixAm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixAm));
+        //    create.registerType("IsdaFixB", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixB));
+        //    create.registerType("IsdaFixPm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixPm));
+        //}
 
     }
 
@@ -623,7 +624,7 @@ namespace QuantLibAddin {
         ObjectHandler::Create<QuantLib::Duration::Type>().unregisterTypes();
         ObjectHandler::Create<QuantLib::EndCriteria::Type>().unregisterTypes();
         ObjectHandler::Create<QuantLib::Frequency>().unregisterTypes();
-        ObjectHandler::Create<QuantLib::Futures::Type>().unregisterTypes();
+        //ObjectHandler::Create<QuantLib::Futures::Type>().unregisterTypes();
         ObjectHandler::Create<QuantLib::GFunctionFactory::YieldCurveModel>().unregisterTypes();
         ObjectHandler::Create<QuantLib::Month>().unregisterTypes();
         ObjectHandler::Create<QuantLib::Option::Type>().unregisterTypes();
@@ -639,10 +640,10 @@ namespace QuantLibAddin {
         ObjectHandler::Create<QuantLib::TimeUnit>().unregisterTypes();
         ObjectHandler::Create<QuantLib::VanillaSwap::Type>().unregisterTypes();
         ObjectHandler::Create<QuantLib::Weekday>().unregisterTypes();
-        ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Interpolator>().unregisterTypes();
-        ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Traits>().unregisterTypes();
-        ObjectHandler::Create<QuantLibAddin::RateHelper::DepoInclusionCriteria>().unregisterTypes();
-        ObjectHandler::Create<QuantLibAddin::SwapIndex::FixingType>().unregisterTypes();
+        //ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Interpolator>().unregisterTypes();
+        //ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Traits>().unregisterTypes();
+        //ObjectHandler::Create<QuantLibAddin::RateHelper::DepoInclusionCriteria>().unregisterTypes();
+        //ObjectHandler::Create<QuantLibAddin::SwapIndex::FixingType>().unregisterTypes();
     
     }
 

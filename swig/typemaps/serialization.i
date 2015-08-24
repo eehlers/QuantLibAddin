@@ -9,3 +9,9 @@
 //            valueObject->getProperty("$1_name"), "$1_name");
 //%}
 
+%typemap(rp_tm_cre_cnv) QuantLib::Period %{
+        std::string $1_name_cpp =
+            ObjectHandler::convert2<std::string>(valueObject->getProperty("$1_name_cpp"));
+        QuantLib::Period $1_name;
+        QuantLibAddin::cppToLibrary($1_name_cpp, $1_name);
+%}

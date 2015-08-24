@@ -34,39 +34,42 @@ namespace QuantLib {
 
 namespace QuantLibAddin {
 
-//    double libraryToScalar(const QuantLib::InterestRate&);
-//    double libraryToScalar(const QuantLib::Rate&);
+    double libraryToScalar(const QuantLib::InterestRate&);
+    double libraryToScalar(const QuantLib::Rate&);
     long libraryToScalar(const QuantLib::Date&);
-//    std::string libraryToScalar(const QuantLib::Period&);
-//
+    std::string libraryToScalar(const QuantLib::Period&);
+
     std::vector<long> libraryToVector(const std::vector<QuantLib::Date>&);
-//    std::vector<std::string> libraryToVector(const std::vector<QuantLib::Period>&);
-//    std::vector<double> libraryToVector(const std::vector<QuantLib::Real>&);
-//
-    // FIXME when do we use this function and when do we use function "f()"?
+    std::vector<std::string> libraryToVector(const std::vector<QuantLib::Period>&);
+    std::vector<double> libraryToVector(const std::vector<QuantLib::Real>&);
+
     void cppToLibrary(const std::string &in, QuantLib::Period &ret);
-//    void cppToLibrary(const long &in, QuantLib::Size &ret);
-//
-//    // Function below required on 64-bit systems but on 32-bit systems it
-//    // conflicts with QuantLib::Size override.
-//    // FIXME Need a #define that specifically distinguishes 32/64-bit
-//#if defined(__GNUC__) && defined(__x86_64__)
-//#define WAZOO_64_BIT
-//#endif
-//#if defined(_WIN64)
-//#define WAZOO_64_BIT
-//#endif
-//#if defined(WAZOO_64_BIT)
-//    void cppToLibrary(const long &in, QuantLib::Natural &ret);
-//#endif
-//
-//    template <class Tin, class Tout>
-//    std::vector<Tout> convertVector(const std::vector<Tin>& v) {
-//        return std::vector<Tout>(v.begin(), v.end());
-//    }
-//
-//    QuantLib::Matrix vvToQlMatrix(const std::vector<std::vector<double> > &vv);
-//    std::vector<std::vector<double> > qlMatrixToVv(const QuantLib::Matrix &m);
+    void cppToLibrary(const long &in, QuantLib::Size &ret);
+
+    // Function below required on 64-bit systems but on 32-bit systems it
+    // conflicts with QuantLib::Size override.
+    // FIXME Need a #define that specifically distinguishes 32/64-bit
+#if defined(__GNUC__) && defined(__x86_64__)
+#define WAZOO_64_BIT
+#endif
+#if defined(_WIN64)
+#define WAZOO_64_BIT
+#endif
+#if defined(WAZOO_64_BIT)
+    void cppToLibrary(const long &in, QuantLib::Natural &ret);
+#endif
+
+    template <class Tin, class Tout>
+    std::vector<Tout> convertVector(const std::vector<Tin>& v) {
+        return std::vector<Tout>(v.begin(), v.end());
+    }
+
+    QuantLib::Matrix vvToQlMatrix(const std::vector<std::vector<double> > &vv);
+    std::vector<std::vector<double> > qlMatrixToVv(const QuantLib::Matrix &m);
+
 }
+// FIXME in the old build this conversion was performed in the ctor
+// of QuantLibAddin::Euribor, for now it is performed here.
+QuantLib::Period f(const std::string &p_inp);
 
 #endif

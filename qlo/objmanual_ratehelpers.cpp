@@ -1,6 +1,6 @@
 
 #include <qlo/objmanual_ratehelpers.hpp>
-#include <qlo/conversions/convert2.hpp>
+//#include <qlo/conversions/convert2.hpp>
 
 #include <ql/termstructures/yield/ratehelpers.hpp>
 #include <ql/termstructures/yield/bondhelpers.hpp>

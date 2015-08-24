@@ -1,3 +1,4 @@
+/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
  Copyright (C) 2006, 2007 Eric Ehlers
@@ -19,21 +20,21 @@
 #ifndef qlo_conversions_all_hpp
 #define qlo_conversions_all_hpp
 
-//#include <oh/conversions/coerce.hpp>
-//#include <oh/conversions/getobjectvector.hpp>
-//#include <qlo/conversions/conversions.hpp>
-#include <qlo/coercions/coercehandle.hpp>
-//#include <qlo/conversions/coercelibrarydifferent.hpp>
-//#include <qlo/conversions/coercelibrarysame.hpp>
-//#include <qlo/conversions/coerceobject.hpp>
-////#include <qlo/conversions/coercequote.hpp>
-////#include <qlo/conversions/coercetermstructure.hpp>
-//#include <qlo/conversions/varianttodate.hpp>
-//#include <qlo/conversions/varianttoperiod.hpp>
-//#include <qlo/conversions/varianttoquote.hpp>
-//#include <qlo/conversions/varianttoquotehandle.hpp>
-//#include <qlo/conversions/varianttosize.hpp>
-//#include <qlo/conversions/varianttotimeseries.hpp>
+#include <oh/conversions/coerce.hpp>
+#include <oh/conversions/getobjectvector.hpp>
+#include <qlo/conversions/conversions.hpp>
+#include <qlo/conversions/coercehandle.hpp>
+#include <qlo/conversions/coercelibrarydifferent.hpp>
+#include <qlo/conversions/coercelibrarysame.hpp>
+#include <qlo/conversions/coerceobject.hpp>
+//#include <qlo/conversions/coercequote.hpp>
+//#include <qlo/conversions/coercetermstructure.hpp>
+#include <qlo/conversions/varianttodate.hpp>
+#include <qlo/conversions/varianttoperiod.hpp>
+#include <qlo/conversions/varianttoquote.hpp>
+#include <qlo/conversions/varianttoquotehandle.hpp>
+#include <qlo/conversions/varianttosize.hpp>
+#include <qlo/conversions/varianttotimeseries.hpp>
 
 #endif
 

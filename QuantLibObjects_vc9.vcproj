@@ -162,7 +162,35 @@
 			Name="conversions"
 			>
 			<File
-				RelativePath=".\qlo\conversions\cnv_tmpl.hpp"
+				RelativePath=".\qlo\conversions\all.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\coercehandle.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\coercelibrarydifferent.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\coercelibrarysame.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\coerceobject.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\coercequote.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\coercetermstructure.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\conversion_tmpl.hpp"
 				>
 			</File>
 			<File
@@ -174,11 +202,27 @@
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\conversions\convert2.cpp"
+				RelativePath=".\qlo\conversions\varianttodate.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\conversions\convert2.hpp"
+				RelativePath=".\qlo\conversions\varianttoperiod.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\varianttoquote.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\varianttoquotehandle.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\varianttosize.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\varianttotimeseries.hpp"
 				>
 			</File>
 		</Filter>
@@ -278,26 +322,6 @@
 				</File>
 				<File
 					RelativePath=".\qlo\enumerations\register\register_types.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\enumerations\register\register_types_calendars.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\enumerations\register\register_types_conventions.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\enumerations\register\register_types_daycounters.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\enumerations\register\register_types_depo.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\enumerations\register\register_types_optiontypes.cpp"
 					>
 				</File>
 			</Filter>

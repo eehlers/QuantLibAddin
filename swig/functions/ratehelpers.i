@@ -3,6 +3,15 @@
 
 %feature("rp:override_obj");
 
+namespace QuantLib {
+
+    class RateHelper {
+      public:
+        QuantLib::Date earliestDate();
+        QuantLib::Date latestDate();
+    };
+}
+
 namespace QuantLibAddin {
 
     class RateHelper {};

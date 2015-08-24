@@ -15,6 +15,14 @@ std::string f(const ObjectHandler::property_t &p) {
     }
 }
 
+QuantLib::Date QuantLibAddin::RateHelper::earliestDate() {
+    return libraryObject_->earliestDate();
+}
+
+QuantLib::Date QuantLibAddin::RateHelper::latestDate() {
+    return libraryObject_->latestDate();
+}
+
 QuantLibAddin::FuturesRateHelper::FuturesRateHelper(
         const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
         const QuantLib::Handle<QuantLib::Quote>& price,

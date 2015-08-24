@@ -22,6 +22,8 @@ namespace QuantLibAddin {
         //                            DeposBeforeFirstFuturesExpiryDate
         //};
         std::string quoteName() { return quoteName_; }
+        QuantLib::Date earliestDate();
+        QuantLib::Date latestDate();
       protected:
         OH_LIB_CTOR(RateHelper, QuantLib::RateHelper);
         std::string quoteName_;

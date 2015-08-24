@@ -823,14 +823,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\qlo\obj_ratehelpers.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_ratehelpers.hpp"
-			>
-		</File>
-		<File
 			RelativePath=".\qlo\obj_volatilities.cpp"
 			>
 		</File>
@@ -884,6 +876,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_quote2.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_ratehelpers.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_ratehelpers.hpp"
 			>
 		</File>
 		<File

@@ -20,10 +20,11 @@ namespace QuantLibAddin {
     std::string IMMnextCode(const QuantLib::Date& d,
                                 bool mainCycle);
     
+    std::string ECBcode(const QuantLib::Date& ecbDate);
     std::string ECBnextCode(const QuantLib::Date& RefDate);
     QuantLib::Date ECBdate(const std::string& ecbCode,
         const QuantLib::Date& referenceDate);
-    
+    QuantLib::Date ECBnextDate(const QuantLib::Date& date);
 }
 
 %feature("rp:override_obj", "");

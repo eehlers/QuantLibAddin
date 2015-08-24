@@ -127,6 +127,10 @@ std::string QuantLibAddin::IMMnextCode(
     return QuantLib::IMM::nextCode(RefDate, MainCycle);
 }
 
+std::string QuantLibAddin::ECBcode(const QuantLib::Date& ecbDate) {
+    return QuantLib::ECB::code(ecbDate);
+}
+
 std::string QuantLibAddin::ECBnextCode(const QuantLib::Date& RefDate) {
     return QuantLib::ECB::nextCode(RefDate);
 }
@@ -137,3 +141,6 @@ QuantLib::Date QuantLibAddin::ECBdate(
     return QuantLib::ECB::date(ecbCode, referenceDate);
 }
 
+QuantLib::Date QuantLibAddin::ECBnextDate(const QuantLib::Date& date) {
+    return QuantLib::ECB::nextDate(date);
+}

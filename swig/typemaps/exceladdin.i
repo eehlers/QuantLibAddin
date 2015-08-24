@@ -46,7 +46,15 @@
 %typemap(rp_tm_xll_cll_obj) const QuantLib::Period& "$1_name_cnv";
 
 %typemap(rp_tm_xll_ret) QuantLib::Date "long*";
+
 %typemap(rp_tm_xll_cod) QuantLib::Date "N";
+%typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::Quote > const & "C";
+%typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::YieldTermStructure > const & "P";
+%typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "C";
+
+%typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::Quote > const & "char*";
+%typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "OPER*";
+%typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "char*";
 
 %typemap(rp_tm_xll_rdc) QuantLib::Date %{
         static long returnValueXL;

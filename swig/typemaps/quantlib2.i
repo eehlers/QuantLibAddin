@@ -6,7 +6,6 @@
 
 // These QuantLib types behave like any.
 %apply rp_tp_any { QuantLib::Date const & };
-%apply rp_tp_any { QuantLib::Handle<QuantLib::YieldTermStructure> const & };
 
 // These QuantLib types behave like enum.
 %apply rp_tp_enm { QuantLib::Option::Type };
@@ -16,9 +15,6 @@
 %apply rp_tp_enm { QuantLib::BusinessDayConvention };
 
 // Some types that require overrides within QuantLib, tell reposit to treat them like strings.
-%apply rp_tp_string { QuantLib::Handle<QuantLib::BlackVolTermStructure> const & };
-%apply rp_tp_string { QuantLib::Handle<QuantLib::Quote> const & };
-%apply rp_tp_string { QuantLib::Handle< QuantLib::Quote > const & };
 %apply rp_tp_string { QuantLib::Period const & };
 
 // Names of variables after they have been converted.

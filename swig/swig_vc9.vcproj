@@ -106,6 +106,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\quote2.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\settings.i"
 					>
 				</File>

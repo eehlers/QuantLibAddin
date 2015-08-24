@@ -15,9 +15,9 @@ namespace QuantLib {
     
     class SimpleQuote : public Quote {
       public:
-        SimpleQuote(double value = QuantLib::Null<double>());
+        SimpleQuote(double value);
         double value() const;
-        double setValue(double value = QuantLib::Null<double>());
+        double setValue(double value);
     };
     
     class LastFixingQuote : public Quote {

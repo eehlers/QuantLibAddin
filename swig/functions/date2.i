@@ -20,12 +20,12 @@ namespace QuantLibAddin {
         
     std::string IMMcode(const QuantLib::Date& immDate);
     
-    std::string IMMnextCode(const QuantLib::Date& d = Date(),
-                                bool mainCycle = true);
+    std::string IMMnextCode(const QuantLib::Date& d,
+                                bool mainCycle);
     
-    std::string ECBnextCode(const QuantLib::Date& RefDate = QuantLib::Date());
+    std::string ECBnextCode(const QuantLib::Date& RefDate);
     QuantLib::Date ECBdate(const std::string& ecbCode,
-        const QuantLib::Date& referenceDate = QuantLib::Date());
+        const QuantLib::Date& referenceDate);
     
 }
 

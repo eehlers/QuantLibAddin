@@ -105,9 +105,18 @@ vector<Date> QuantLibAddin::ECBKnownDates() {
                         ECB::knownDates().end());
 }
 
-/* This function QuantLibAddin::IMMcode is a direct wrapper of QuantLib::IMM::code
-and is required only to work around a feature of SWIG where IMM::code is converted
-to IMM_code. */
+/* All of the functions below are temporary workarounds for a glitch in SWIG.
+   At present the reposit SWIG module is unable to wrap functions in the form:
+   namespace QuantLib {
+       struct Foo {
+           static void f();
+       };
+    };
+    SWIG autogenerates the identifier Foo_f where we want Foo::f.
+    With Foo_f the underscore gets exported to the Excel function name.
+    So as a temporary workaround we wrap the QuantLib functions
+    with QuantLibAddin functions that have the name we want.
+*/
 std::string QuantLibAddin::IMMcode(const QuantLib::Date& immDate) {
     return QuantLib::IMM::code(immDate);
 }

@@ -1,18 +1,16 @@
 
-%feature("rp:group", "quote");
-%feature("rp:obj_include") %{
-%}
+%feature("rp:group", "quote2");
+
+%feature("rp:override_obj");
 
 namespace QuantLibAddin {
 
-     class CompositeQuote {
+     class CompositeQuote : public Quote {
       public:
         CompositeQuote(
-                    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
                     const QuantLib::Handle<QuantLib::Quote>& element1,
                     const QuantLib::Handle<QuantLib::Quote>& element2,
-                    const std::string& op,
-                    bool permanent);
+                    const std::string& op);
     };
 
 }

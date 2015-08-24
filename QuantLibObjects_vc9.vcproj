@@ -381,6 +381,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_quote2.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_quote2.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_settings.cpp"
 					>
 				</File>
@@ -517,6 +525,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_quote2.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_quote2.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_register.hpp"
 					>
 				</File>
@@ -643,6 +659,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_quote.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_quote2.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_quote2.hpp"
 				>
 			</File>
 			<File
@@ -820,6 +844,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_indexes2.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_quote2.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_quote2.hpp"
 			>
 		</File>
 		<File

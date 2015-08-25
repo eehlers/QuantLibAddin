@@ -77,6 +77,34 @@ namespace QuantLibAddin {
     typedef     QuantLib::Date 
                 (QuantLib::Calendar::* qlCalendarEndOfMonthSignature)(
                     const QuantLib::Date&) const;
+
+    // qlDayCounterYearFraction
+
+    typedef     boost::_bi::bind_t<
+                double,
+                boost::_mfi::cmf4<
+                    double,
+                    QuantLib::DayCounter,
+                    const QuantLib::Date&,
+                    const QuantLib::Date&,
+                    const QuantLib::Date&,
+                    const QuantLib::Date&>,
+                boost::_bi::list5<
+                    boost::_bi::value<QuantLib::DayCounter >,
+                    boost::_bi::value<QuantLib::Date>,
+                    boost::arg<1>,
+                    boost::_bi::value<QuantLib::Date>,
+                    boost::_bi::value<QuantLib::Date> > >
+                qlDayCounterYearFractionBind;
+
+    typedef     double 
+                (QuantLib::DayCounter::* qlDayCounterYearFractionSignature)(
+                    const QuantLib::Date&,
+                    const QuantLib::Date&,
+                    const QuantLib::Date&,
+                    const QuantLib::Date&) const;
+
+
 }
 
 #endif

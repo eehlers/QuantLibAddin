@@ -2,6 +2,7 @@
 %include calendars.i
 %include date.i
 %include date2.i
+%include daycounters.i
 %include exercise.i
 %include handles.i
 %include indexes.i

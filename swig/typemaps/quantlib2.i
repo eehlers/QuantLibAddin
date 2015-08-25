@@ -5,6 +5,7 @@
 // These QuantLib types behave like double.
 %apply rp_tp_double { QuantLib::Real };
 %apply rp_tp_double { QuantLib::Rate };
+%apply rp_tp_double { QuantLib::Time };
 %apply rp_tp_double { QuantLib::Volatility };
 %apply rp_tp_double { QuantLib::DiscountFactor };
 
@@ -13,6 +14,7 @@
 
 // These QuantLib types behave like enum.
 %apply rp_tp_enm { QuantLib::Option::Type };
+%apply rp_tp_enm { QuantLib::DayCounter };
 %apply rp_tp_enm { QuantLib::Calendar };
 %apply rp_tp_enm { QuantLib::Calendar const & };
 %apply rp_tp_enm { QuantLib::DayCounter const & };

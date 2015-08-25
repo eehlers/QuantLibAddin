@@ -66,6 +66,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\daycounters.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\exercise.i"
 					>
 				</File>

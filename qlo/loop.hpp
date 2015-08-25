@@ -8,6 +8,18 @@
 
 namespace QuantLibAddin {
 
+    // qlIMMdate
+
+    typedef     boost::_bi::bind_t<
+                QuantLib::Date,
+                QuantLib::Date (__cdecl*)(
+                    const std::string&,
+                    const QuantLib::Date&),
+                boost::_bi::list2<
+                    boost::arg<1>,
+                    boost::_bi::value<QuantLib::Date> > >
+                qlIMMdateBind;
+
     // qlIMMcode
 
     typedef     boost::_bi::bind_t<
@@ -103,8 +115,6 @@ namespace QuantLibAddin {
                     const QuantLib::Date&,
                     const QuantLib::Date&,
                     const QuantLib::Date&) const;
-
-
 }
 
 #endif

@@ -117,6 +117,13 @@ vector<Date> QuantLibAddin::ECBKnownDates() {
     So as a temporary workaround we wrap the QuantLib functions
     with QuantLibAddin functions that have the name we want.
 */
+
+QuantLib::Date QuantLibAddin::IMMdate(
+    const std::string& immCode,
+    const QuantLib::Date &referenceDate) {
+    return QuantLib::IMM::date(immCode);
+}
+
 std::string QuantLibAddin::IMMcode(const QuantLib::Date& immDate) {
     return QuantLib::IMM::code(immDate);
 }

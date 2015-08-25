@@ -42,6 +42,10 @@ namespace QuantLibAddin {
     // e.g. it returns "11M" when the input is "1Y-1M"
     QuantLib::Period periodEquivalent(const QuantLib::Period& p);
 
+    QuantLib::Date IMMdate(
+        const std::string& immCode,
+        const QuantLib::Date &referenceDate);
+
     std::vector<QuantLib::Date> IMMNextDates(const QuantLib::Date& d,
                                                const std::vector<bool>& mainCycle);
 

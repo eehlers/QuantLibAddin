@@ -403,11 +403,11 @@ namespace QuantLibAddin {
             create.registerType("Weekly", new QuantLib::Frequency(QuantLib::Weekly));
         }
 
-        //{
-        //    ObjectHandler::Create<QuantLib::Futures::Type> create;
-        //    create.registerType("ASX", new QuantLib::Futures::Type(QuantLib::Futures::ASX));
-        //    create.registerType("IMM", new QuantLib::Futures::Type(QuantLib::Futures::IMM));
-        //}
+        {
+            ObjectHandler::Create<QuantLib::Futures::Type> create;
+            create.registerType("ASX", new QuantLib::Futures::Type(QuantLib::Futures::ASX));
+            create.registerType("IMM", new QuantLib::Futures::Type(QuantLib::Futures::IMM));
+        }
 
         {
             ObjectHandler::Create<QuantLib::GFunctionFactory::YieldCurveModel> create;

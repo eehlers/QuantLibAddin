@@ -8,6 +8,14 @@
                 QuantLib::TermStructure>()(
                     yyy);        
 %}
+%typemap(rp_tm_xxx_oh_get) QuantLib::YieldTermStructure %{
+        OH_GET_OBJECT(yyy, objectID, ObjectHandler::Object)
+        boost::shared_ptr<QuantLib::YieldTermStructure> xxx =
+            QuantLibAddin::CoerceTermStructure<
+                QuantLibAddin::YieldTermStructure,
+                QuantLib::YieldTermStructure>()(
+                    yyy);        
+%}
 
 %typemap(rp_tm_xll_cnv) QuantLib::Handle< QuantLib::Quote > const & %{
         OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::Quote, QuantLib::Quote)

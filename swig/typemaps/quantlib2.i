@@ -48,3 +48,4 @@
 %apply rp_tp_obj2 { QuantLibAddin::RateHelper };
 %apply rp_tp_obj2 { QuantLibAddin::RelinkableHandle };
 
+

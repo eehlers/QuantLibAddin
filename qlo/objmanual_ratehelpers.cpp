@@ -19,6 +19,10 @@ std::string f(const ObjectHandler::property_t &p) {
     }
 }
 
+QuantLib::Real QuantLibAddin::RateHelper::quoteValue() {
+    return libraryObject_->quote()->value();
+}
+
 QuantLib::Date QuantLibAddin::RateHelper::earliestDate() {
     return libraryObject_->earliestDate();
 }

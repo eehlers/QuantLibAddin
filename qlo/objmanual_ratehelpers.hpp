@@ -22,6 +22,7 @@ namespace QuantLibAddin {
                                     DeposBeforeFirstFuturesExpiryDate
         };
         std::string quoteName() { return quoteName_; }
+        QuantLib::Real quoteValue();
         QuantLib::Date earliestDate();
         QuantLib::Date latestDate();
       protected:

@@ -128,3 +128,7 @@
 %typemap(rp_tm_xxx_oh_get) QuantLibAddin::Interpolation %{
         OH_GET_OBJECT(xxx, objectID, $rp_typedef_obj_add);
 %}
+
+%typemap(rp_tm_xxx_oh_get) QuantLibAddin::RateHelper %{
+        OH_GET_OBJECT(xxx, objectID, $rp_typedef_obj_add);
+%}

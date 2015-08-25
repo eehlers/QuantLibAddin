@@ -14,7 +14,10 @@ namespace QuantLib {
 
 namespace QuantLibAddin {
 
-    class RateHelper {};
+    class RateHelper {
+      public:
+        std::string quoteName();
+    };
     
     class FuturesRateHelper : public RateHelper {
       public:

@@ -64,6 +64,32 @@ namespace QuantLibAddin {
             bool permanent);
     };
 
+    class SwapRateHelper : public RateHelper {
+      public:
+        //SwapRateHelper(
+        //    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        //    const QuantLib::Handle<QuantLib::Quote>& quote,
+        //    const boost::shared_ptr<QuantLib::SwapIndex>& swapIndex,
+        //    const QuantLib::Handle<QuantLib::Quote>& spread,
+        //    const QuantLib::Period& forwardStart,
+        //    const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+        //    bool permanent);
+        SwapRateHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& quote,
+            QuantLib::Natural settlementDays,
+            const QuantLib::Period& p,
+            const QuantLib::Calendar& calendar,
+            const QuantLib::Frequency& fixedFrequency,
+            QuantLib::BusinessDayConvention fixedConvention,
+            const QuantLib::DayCounter& fixedDayCounter,
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
+            const QuantLib::Handle<QuantLib::Quote>& spread,
+            const QuantLib::Period& forwardStart,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+            bool permanent);
+     };
+
     class FraRateHelper : 
         public RateHelper {
     public:

@@ -2,7 +2,7 @@
 // rp_xll_* - Excel addin
 
 %typemap(rp_tm_xll_cnv) QuantLib::Handle< QuantLib::Quote > const & %{
-        OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::SimpleQuote, QuantLib::Quote)
+        OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::Quote, QuantLib::Quote)
         QuantLib::Handle<QuantLib::Quote> $1_name_handle =
             QuantLib::Handle<QuantLib::Quote>($1_name_get);
             std::string $1_name_vo = std::string($1_name);        
@@ -94,6 +94,7 @@
 //%typemap(rp_tm_xll_ret) QuantLib::Date & "long*";
 
 %typemap(rp_tm_xll_cod) QuantLib::Period "C";
+//%typemap(rp_tm_xll_cod) QuantLib::Frequency const & "C";
 %typemap(rp_tm_xll_cod) QuantLib::Date "N";
 //%typemap(rp_tm_xll_cod) QuantLib::Date & "N";
 %typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::Quote > const & "C";
@@ -101,6 +102,7 @@
 %typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "C";
 
 %typemap(rp_tm_xll_prm) QuantLib::Period "char*";
+//%typemap(rp_tm_xll_prm) QuantLib::Frequency const & "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::Quote > const & "char*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "OPER*";
 %typemap(rp_tm_xll_prm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "char*";

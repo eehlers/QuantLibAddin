@@ -78,6 +78,43 @@ QuantLibAddin::FuturesRateHelper::FuturesRateHelper(
     quoteName_ = f(properties->getSystemProperty("Price"));
 }
 
+//SwapRateHelper::SwapRateHelper(
+//        const shared_ptr<ValueObject>& properties,
+//        const QuantLib::Handle<QuantLib::Quote>& rate,
+//        const shared_ptr<QuantLib::SwapIndex>& swapIndex,
+//        const QuantLib::Handle<QuantLib::Quote>& spread,
+//        const QuantLib::Period& forwardStart,
+//        const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+//        bool permanent)
+//: RateHelper(properties, permanent) {
+//    libraryObject_ = shared_ptr<QuantLib::RateHelper>(new
+//        QuantLib::SwapRateHelper(rate,
+//                                 swapIndex,
+//                                 spread, forwardStart, discount));
+//    quoteName_ = f(properties->getSystemProperty("Rate"));
+//}
+
+QuantLibAddin::SwapRateHelper::SwapRateHelper(
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const QuantLib::Handle<QuantLib::Quote>& rate,
+        QuantLib::Natural settlementDays,
+        const QuantLib::Period& p,
+        const QuantLib::Calendar& cal,
+        const QuantLib::Frequency& fixFreq,
+        QuantLib::BusinessDayConvention fixConv,
+        const QuantLib::DayCounter& fixDC,
+        const boost::shared_ptr<QuantLib::IborIndex>& ibor,
+        const QuantLib::Handle<QuantLib::Quote>& spread,
+        const QuantLib::Period& forwardStart,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+        bool permanent)
+: RateHelper(properties, permanent) {
+    libraryObject_ = boost::shared_ptr<QuantLib::RateHelper>(new
+        QuantLib::SwapRateHelper(rate,
+                                 p, cal, fixFreq, fixConv, fixDC, ibor,
+                                 spread, forwardStart, discount, settlementDays));
+    quoteName_ = f(properties->getSystemProperty("Rate"));
+}
 
 QuantLibAddin::FraRateHelper::FraRateHelper(
         const boost::shared_ptr<ObjectHandler::ValueObject>& properties,

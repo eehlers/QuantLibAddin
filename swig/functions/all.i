@@ -8,6 +8,7 @@
 %include indexes2.i
 %include instruments.i
 %include payoffs.i
+%include piecewiseyieldcurve.i
 %include prices.i
 %include pricingengines.i
 %include processes.i

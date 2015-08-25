@@ -22,19 +22,19 @@
 #define qla_convert_quote_hpp
 
 //#include <qlo/quote.hpp>
-//#include <ql/quote.hpp>
-//#include <ql/quotes/simplequote.hpp>
-//
-//namespace ObjectHandler {
-//    
-//    class ConvertOper;
-//
-//    template<>
-//    boost::shared_ptr<QuantLib::Quote> convert2<boost::shared_ptr<QuantLib::Quote>, property_t>(const property_t& c);
-//
-//    template<>
-//    boost::shared_ptr<QuantLib::Quote> convert2<boost::shared_ptr<QuantLib::Quote>, ConvertOper>(const ConvertOper& c);
-//
-//}
+#include <ql/quote.hpp>
+#include <ql/quotes/simplequote.hpp>
+
+namespace ObjectHandler {
+    
+    class ConvertOper;
+
+    template<>
+    boost::shared_ptr<QuantLib::Quote> convert2<boost::shared_ptr<QuantLib::Quote>, property_t>(const property_t& c);
+
+    template<>
+    boost::shared_ptr<QuantLib::Quote> convert2<boost::shared_ptr<QuantLib::Quote>, ConvertOper>(const ConvertOper& c);
+
+}
 
 #endif

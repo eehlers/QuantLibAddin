@@ -90,6 +90,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\piecewiseyieldcurve.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\prices.i"
 					>
 				</File>

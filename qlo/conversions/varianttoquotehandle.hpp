@@ -22,19 +22,19 @@
 #define qla_convert_quotehandle_hpp
 
 //#include <qlo/quote.hpp>
-//#include <ql/quotes/simplequote.hpp>
-//#include <oh/conversions/convert2.hpp>
-//
-//namespace ObjectHandler {
-//
-//    class ConvertOper;
-//
-//    template<>
-//    QuantLib::Handle<QuantLib::Quote> convert2<QuantLib::Handle<QuantLib::Quote>, property_t>(const property_t& c);
-//
-//    template<>
-//    QuantLib::Handle<QuantLib::Quote> convert2<QuantLib::Handle<QuantLib::Quote>, ConvertOper>(const ConvertOper& c);
-//
-//}
+#include <ql/quotes/simplequote.hpp>
+#include <oh/conversions/convert2.hpp>
+
+namespace ObjectHandler {
+
+    class ConvertOper;
+
+    template<>
+    QuantLib::Handle<QuantLib::Quote> convert2<QuantLib::Handle<QuantLib::Quote>, property_t>(const property_t& c);
+
+    template<>
+    QuantLib::Handle<QuantLib::Quote> convert2<QuantLib::Handle<QuantLib::Quote>, ConvertOper>(const ConvertOper& c);
+
+}
 
 #endif

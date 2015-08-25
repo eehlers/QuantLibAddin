@@ -365,6 +365,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_date2.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_date2.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_exercise.cpp"
 					>
 				</File>
@@ -410,6 +418,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\create\create_payoffs.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_piecewiseyieldcurve.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_piecewiseyieldcurve.hpp"
 					>
 				</File>
 				<File
@@ -517,6 +533,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_date2.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_date2.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_exercise.cpp"
 					>
 				</File>
@@ -562,6 +586,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_payoffs.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_piecewiseyieldcurve.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_piecewiseyieldcurve.hpp"
 					>
 				</File>
 				<File
@@ -654,11 +686,27 @@
 			Name="valueobjects"
 			>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_calendars.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_calendars.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_date.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_date.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_date2.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_date2.hpp"
 				>
 			</File>
 			<File
@@ -707,6 +755,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_payoffs.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_piecewiseyieldcurve.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_piecewiseyieldcurve.hpp"
 				>
 			</File>
 			<File
@@ -932,6 +988,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_indexes2.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_piecewiseyieldcurve.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_piecewiseyieldcurve.hpp"
 			>
 		</File>
 		<File

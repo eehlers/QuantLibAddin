@@ -120,15 +120,3 @@
 
 %typemap(rp_xll_get) void "";
 %typemap(rp_xll_get) SWIGTYPE "$1_type returnValue =";
-
-%typemap(rp_tm_xxx_oh_get) QuantLibAddin::PiecewiseYieldCurve %{
-        OH_GET_OBJECT(xxx, objectID, $rp_typedef_obj_add);
-%}
-
-%typemap(rp_tm_xxx_oh_get) QuantLibAddin::Interpolation %{
-        OH_GET_OBJECT(xxx, objectID, $rp_typedef_obj_add);
-%}
-
-%typemap(rp_tm_xxx_oh_get) QuantLibAddin::RateHelper %{
-        OH_GET_OBJECT(xxx, objectID, $rp_typedef_obj_add);
-%}

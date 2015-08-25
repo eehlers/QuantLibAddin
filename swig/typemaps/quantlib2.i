@@ -41,3 +41,7 @@
 %apply rp_tp_obj1 { const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& };
 %apply rp_tp_obj1 { const boost::shared_ptr<QuantLibAddin::RateHelper>& };
 
+%apply rp_tp_obj2 { QuantLibAddin::PiecewiseYieldCurve };
+%apply rp_tp_obj2 { QuantLibAddin::Interpolation };
+%apply rp_tp_obj2 { QuantLibAddin::RateHelper };
+

@@ -16,7 +16,7 @@
 %include quote2.i
 %include ratehelpers.i
 %include settings.i
+%include termstructures.i
 %include utilities.i
 %include volatilities.i
-%include yieldtermstructures.i
 

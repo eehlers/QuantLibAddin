@@ -90,9 +90,11 @@
 %typemap(rp_tm_xll_cll_obj) const std::vector<QuantLib::Date>& "$1_name_vec2";
 
 %typemap(rp_tm_xll_ret) QuantLib::Date "long*";
+//%typemap(rp_tm_xll_ret) QuantLib::Date & "long*";
 
 %typemap(rp_tm_xll_cod) QuantLib::Period "C";
 %typemap(rp_tm_xll_cod) QuantLib::Date "N";
+//%typemap(rp_tm_xll_cod) QuantLib::Date & "N";
 %typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::Quote > const & "C";
 %typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::YieldTermStructure > const & "P";
 %typemap(rp_tm_xll_cod) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "C";
@@ -108,4 +110,6 @@
         return &returnValueXL;
 %}
 
+%typemap(rp_xll_get) void "";
+%typemap(rp_xll_get) SWIGTYPE "$1_type returnValue =";
 

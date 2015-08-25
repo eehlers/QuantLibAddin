@@ -6,6 +6,7 @@
 %apply rp_tp_double { QuantLib::Real };
 %apply rp_tp_double { QuantLib::Rate };
 %apply rp_tp_double { QuantLib::Volatility };
+%apply rp_tp_double { QuantLib::DiscountFactor };
 
 // These QuantLib types behave like any.
 %apply rp_tp_any { QuantLib::Date const & };

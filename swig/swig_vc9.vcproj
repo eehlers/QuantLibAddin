@@ -122,15 +122,15 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\termstructures.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\utilities.i"
 					>
 				</File>
 				<File
 					RelativePath=".\functions\volatilities.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\yieldtermstructures.i"
 					>
 				</File>
 			</Filter>

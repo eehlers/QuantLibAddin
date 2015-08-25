@@ -485,6 +485,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_termstructures.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_termstructures.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_utilities.cpp"
 					>
 				</File>
@@ -498,14 +506,6 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\create\create_volatilities.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\create\create_yieldtermstructures.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\create\create_yieldtermstructures.hpp"
 					>
 				</File>
 			</Filter>
@@ -657,6 +657,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_termstructures.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_termstructures.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_utilities.cpp"
 					>
 				</File>
@@ -670,14 +678,6 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_volatilities.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_yieldtermstructures.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_yieldtermstructures.hpp"
 					>
 				</File>
 			</Filter>
@@ -822,6 +822,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_termstructures.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_termstructures.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_utilities.cpp"
 				>
 			</File>
@@ -835,14 +843,6 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_volatilities.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_yieldtermstructures.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_yieldtermstructures.hpp"
 				>
 			</File>
 		</Filter>
@@ -943,19 +943,19 @@
 			>
 		</File>
 		<File
+			RelativePath=".\qlo\obj_termstructures.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_termstructures.hpp"
+			>
+		</File>
+		<File
 			RelativePath=".\qlo\obj_volatilities.cpp"
 			>
 		</File>
 		<File
 			RelativePath=".\qlo\obj_volatilities.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_yieldtermstructures.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_yieldtermstructures.hpp"
 			>
 		</File>
 		<File

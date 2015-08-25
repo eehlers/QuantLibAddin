@@ -4,23 +4,9 @@
 
 #include <qlo/handleimpl.hpp>
 #include <oh/libraryobject.hpp>
-#include <ql/termstructures/yieldtermstructure.hpp>
-
-namespace QuantLib {
-    class Extrapolator;
-    class YieldTermStructure;
-}
+#include <qlo/obj_termstructures.hpp>
 
 namespace QuantLibAddin {
-
-    class Extrapolator : public ObjectHandler::LibraryObject<QuantLib::Extrapolator> {
-        public:
-        //    void enableExtrapolation(bool b);
-        //protected:
-            OH_LIB_CTOR(Extrapolator, QuantLib::Extrapolator)
-    };
-    OH_OBJ_CLASS(TermStructure, Extrapolator);
-    OH_OBJ_CLASS(YieldTermStructure, TermStructure);
 
     class RelinkableHandleYieldTermStructure : public RelinkableHandleImpl<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure>{
     public:

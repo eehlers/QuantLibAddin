@@ -7,6 +7,7 @@
 #include <oh/valueobject.hpp>
 #include <boost/shared_ptr.hpp>
 
+#include <qlo/obj_termstructures.hpp>
 //#include <ql/instruments/payoffs.hpp>
 #include <ql/time/calendar.hpp>
 #include <ql/termstructures/yield/ratehelpers.hpp>
@@ -14,8 +15,7 @@
 
 namespace QuantLibAddin {
 
-    class PiecewiseYieldCurve : 
-        public ObjectHandler::LibraryObject<QuantLib::Extrapolator> {
+    class PiecewiseYieldCurve : public YieldTermStructure {
     public:
         PiecewiseYieldCurve(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,

@@ -1,11 +1,13 @@
 
+%include termstructures.i
+
 %feature("rp:group", "piecewiseyieldcurve");
 
 %feature("rp:override_obj");
 
 namespace QuantLibAddin {
 
-    class PiecewiseYieldCurve /*: public YieldTermStructure*/ {
+    class PiecewiseYieldCurve : public YieldTermStructure {
       public:
         PiecewiseYieldCurve(
             QuantLib::Natural nDays,

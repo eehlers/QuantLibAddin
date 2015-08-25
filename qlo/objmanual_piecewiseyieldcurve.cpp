@@ -18,8 +18,7 @@ QuantLibAddin::PiecewiseYieldCurve::PiecewiseYieldCurve(
         const std::string& traitsID,
         const std::string& interpolatorID,
         bool permanent)
-//: YieldTermStructure(properties, permanent)
-: ObjectHandler::LibraryObject<QuantLib::Extrapolator>(properties, permanent)
+: YieldTermStructure(properties, permanent)
 {
     libraryObject_ = ObjectHandler::Create<boost::shared_ptr<
         QuantLib::YieldTermStructure> >()(traitsID,

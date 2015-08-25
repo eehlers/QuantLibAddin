@@ -11,12 +11,15 @@ namespace QuantLib {
 
     bool close(double x, double y);
     
-    class Quote {};
+    class Quote {
+      public:
+        double value();
+        bool isValid();
+    };
     
     class SimpleQuote : public Quote {
       public:
         SimpleQuote(double value);
-        double value() const;
         double setValue(double value);
     };
     

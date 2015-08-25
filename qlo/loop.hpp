@@ -30,6 +30,25 @@ namespace QuantLibAddin {
                     boost::arg<1> > >
                 qlIMMcodeBind;
 
+    // qlCalendarAdjust
+
+    typedef     boost::_bi::bind_t<
+                QuantLib::Date,
+                boost::_mfi::cmf2<
+                    QuantLib::Date,
+                    QuantLib::Calendar,
+                    const QuantLib::Date&,
+                    QuantLib::BusinessDayConvention>,
+                boost::_bi::list3<
+                    boost::_bi::value<QuantLib::Calendar >,
+                    boost::arg<1>,
+                    boost::_bi::value<QuantLib::BusinessDayConvention> > >
+                qlCalendarAdjustBind;
+
+    typedef     QuantLib::Date 
+                (QuantLib::Calendar::* qlCalendarAdjustSignature)(
+                    const QuantLib::Date&,
+                    QuantLib::BusinessDayConvention) const;
     // qlCalendarAdvance
 
     typedef     boost::_bi::bind_t<

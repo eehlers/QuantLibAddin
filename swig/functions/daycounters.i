@@ -1,27 +1,22 @@
 
-%feature("rp:group", "calendars");
+%feature("rp:group", "daycounters");
 %feature("rp:obj_include") %{
-#include <ql/time/calendar.hpp>
+#include <ql/time/daycounter.hpp>
 %}
 
-%feature("rp:loopParameter", "date") QuantLib::Calendar::isEndOfMonth;
-%feature("rp:loopParameter", "date") QuantLib::Calendar::endOfMonth;
-%feature("rp:loopParameter", "period") QuantLib::Calendar::advance;
+%feature("rp:loopParameter", "EndDate") QuantLib::DayCounter::yearFraction;
 
 namespace QuantLib {
 
-    class Calendar {
+    class DayCounter {
     
     public:
     
-        bool isEndOfMonth(const QuantLib::Date& date) const;
-        QuantLib::Date endOfMonth(const QuantLib::Date& date) const;
-        
-        QuantLib::Date advance(
-            const QuantLib::Date& date,
-            const QuantLib::Period& period,
-            QuantLib::BusinessDayConvention convention,
-            bool endOfMonth) const;        
+        QuantLib::Time yearFraction(
+            const QuantLib::Date& StartDate,
+            const Date& EndDate,
+            const QuantLib::Date& refPeriodStart,
+            const QuantLib::Date& refPeriodEnd);
     };
 }
 

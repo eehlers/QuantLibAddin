@@ -25,6 +25,13 @@ namespace QuantLibAddin {
             const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
             const QuantLib::Handle<QuantLib::Quote>& convAdj);
     };
+
+    class DepositRateHelper : public RateHelper {
+      public:
+        DepositRateHelper(
+            const QuantLib::Handle<QuantLib::Quote>& rate,
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex);
+    };
     
     class FraRateHelper : public RateHelper {
       public:

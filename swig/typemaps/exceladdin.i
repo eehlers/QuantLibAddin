@@ -110,6 +110,16 @@
         return &returnValueXL;
 %}
 
+%typemap(rp_tm_xll_rdc) std::vector<QuantLib::Real> %{
+        std::vector<double> returnValVec = QuantLibAddin::libraryToVector(returnValue);
+        static OPER xRet;
+        ObjectHandler::vectorToOper(returnValVec, xRet);
+        return &xRet;
+%}
+
 %typemap(rp_xll_get) void "";
 %typemap(rp_xll_get) SWIGTYPE "$1_type returnValue =";
 
+%typemap(rp_tm_xxx_oh_get) QuantLibAddin::PiecewiseYieldCurve %{
+        OH_GET_OBJECT(x, objectID, $rp_typedef_obj_add);
+%}

@@ -7,7 +7,8 @@
 #include <oh/valueobject.hpp>
 #include <boost/shared_ptr.hpp>
 
-#include <qlo/obj_termstructures.hpp>
+//#include <qlo/obj_termstructures.hpp>
+#include <qlo/yieldtermstructures.hpp>
 //#include <ql/instruments/payoffs.hpp>
 #include <ql/time/calendar.hpp>
 #include <ql/termstructures/yield/ratehelpers.hpp>
@@ -31,6 +32,28 @@ namespace QuantLibAddin {
             std::string const &interpolatorID,
             // END   typemap rp_tm_default
             bool permanent);
+
+ //       const std::vector<QuantLib::Time>& times() const;
+
+ //       const std::vector<QuantLib::Date>& dates() const;
+
+        const std::vector<QuantLib::Real>& data() const;
+
+ //       //const std::vector<QuantLib::Real>& improvements() const;
+
+ //       //QuantLib::Size iterations() const;
+
+ //       InterpolatedYieldCurvePair interpolatedYieldCurvePair() const {
+ //           return pair_;
+ //       }
+
+ //       const std::vector<QuantLib::Time>& jumpTimes() const;
+
+ //       const std::vector<QuantLib::Date>& jumpDates() const;
+
+	private:
+		InterpolatedYieldCurvePair pair_;
+
     };
 
 } // namespace QuantLibAddin

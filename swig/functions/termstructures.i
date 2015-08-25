@@ -6,7 +6,9 @@
 
 namespace QuantLib {
 
-    class TermStructure {
+    class Extrapolator {};
+    
+    class TermStructure : public Extrapolator {
       public:
         QuantLib::Date referenceDate();
     };

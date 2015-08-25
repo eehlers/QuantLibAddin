@@ -90,6 +90,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\interpolation.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\payoffs.i"
 					>
 				</File>

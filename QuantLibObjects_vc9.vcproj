@@ -373,6 +373,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_daycounters.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_daycounters.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_exercise.cpp"
 					>
 				</File>
@@ -410,6 +418,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\create\create_instruments.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_interpolation.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_interpolation.hpp"
 					>
 				</File>
 				<File
@@ -541,6 +557,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_daycounters.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_daycounters.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_exercise.cpp"
 					>
 				</File>
@@ -578,6 +602,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_instruments.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_interpolation.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_interpolation.hpp"
 					>
 				</File>
 				<File
@@ -710,6 +742,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_daycounters.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_daycounters.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_exercise.cpp"
 				>
 			</File>
@@ -747,6 +787,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_instruments.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_interpolation.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_interpolation.hpp"
 				>
 			</File>
 			<File
@@ -988,6 +1036,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_indexes2.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_interpolation.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_interpolation.hpp"
 			>
 		</File>
 		<File

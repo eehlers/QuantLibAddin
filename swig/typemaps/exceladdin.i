@@ -79,6 +79,7 @@
 %typemap(rp_tm_xll_cll_val) const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& "$1_name_vec";
 %typemap(rp_tm_xll_cll_val) const std::vector<QuantLib::Handle<QuantLib::Quote> >& "$1_name_vec";
 %typemap(rp_tm_xll_cll_val) const std::vector<QuantLib::Date>& "$1_name_vec";
+%typemap(rp_tm_xll_cll_val) const std::vector<QuantLib::Real>& "$1_name_vec";
 
 %typemap(rp_tm_xll_cll_obj) QuantLib::Period "$1_name_cnv";
 %typemap(rp_tm_xll_cll_obj) const QuantLib::Period& "$1_name_cnv";
@@ -121,5 +122,9 @@
 %typemap(rp_xll_get) SWIGTYPE "$1_type returnValue =";
 
 %typemap(rp_tm_xxx_oh_get) QuantLibAddin::PiecewiseYieldCurve %{
-        OH_GET_OBJECT(x, objectID, $rp_typedef_obj_add);
+        OH_GET_OBJECT(xxx, objectID, $rp_typedef_obj_add);
+%}
+
+%typemap(rp_tm_xxx_oh_get) QuantLibAddin::Interpolation %{
+        OH_GET_OBJECT(xxx, objectID, $rp_typedef_obj_add);
 %}

@@ -28,8 +28,8 @@
 #include <qlo/conversions/coercelibrarydifferent.hpp>
 
 #include <qlo/yieldtermstructures.hpp>
-#include <qlo/defaulttermstructures.hpp>
-#include <qlo/swaptionvolstructure.hpp>
+//#include <qlo/defaulttermstructures.hpp>
+//#include <qlo/swaptionvolstructure.hpp>
 
 #include <ql/termstructures/yieldtermstructure.hpp>
 #include <ql/termstructures/defaulttermstructure.hpp>
@@ -53,7 +53,7 @@ namespace QuantLibAddin {
             static Conversion conversions[] = {
                 objectToLibrary<ObjectTermStructure, LibraryTermStructure>,
                 handleToLibraryDifferent<YieldTermStructure, QuantLib::YieldTermStructure, LibraryTermStructure>,
-                handleToLibraryDifferent<SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure, LibraryTermStructure>,
+                //handleToLibraryDifferent<SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure, LibraryTermStructure>,
                 0
             };
             return conversions;
@@ -82,21 +82,21 @@ namespace QuantLibAddin {
     // CoerceTermStructure: Specialization for QuantLib::SwaptionVolatilityStructure -
     // wrap handleToLibrarySame<> instead of handleToLibraryDifferent<>
 
-    template <>
-    class CoerceTermStructure<SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>
-        : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>,
-        boost::shared_ptr<QuantLib::SwaptionVolatilityStructure> > {
+    //template <>
+    //class CoerceTermStructure<SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>
+    //    : public ObjectHandler::Coerce<
+    //    boost::shared_ptr<ObjectHandler::Object>,
+    //    boost::shared_ptr<QuantLib::SwaptionVolatilityStructure> > {
 
-        Conversion *getConversions() {
-            static Conversion conversions[] = {
-                objectToLibrary<SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>,
-                handleToLibrarySame<SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>,
-                0
-            };
-            return conversions;
-        };
-    };
+    //    Conversion *getConversions() {
+    //        static Conversion conversions[] = {
+    //            objectToLibrary<SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>,
+    //            handleToLibrarySame<SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>,
+    //            0
+    //        };
+    //        return conversions;
+    //    };
+    //};
 
     // CoerceTermStructureObject: A substitute for CoerceObject which hard-codes
     // those template parameters that are specific to Handle<TermStructure>.

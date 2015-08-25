@@ -46,4 +46,5 @@
 %apply rp_tp_obj2 { QuantLibAddin::PiecewiseYieldCurve };
 %apply rp_tp_obj2 { QuantLibAddin::Interpolation };
 %apply rp_tp_obj2 { QuantLibAddin::RateHelper };
+%apply rp_tp_obj2 { QuantLibAddin::RelinkableHandle };
 

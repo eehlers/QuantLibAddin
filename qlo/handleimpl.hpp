@@ -56,7 +56,7 @@ namespace QuantLibAddin {
                 boost::shared_ptr<LibraryClass> observable;
                 object_->getLibraryObject(observable);
                 // FIXME I think observable needs to be const...
-                //handle_.linkTo(observable);
+                handle_.linkTo(observable);
             }
 
             properties()->setProperty("CurrentLink", objectId);

@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="swig"
+	Name="swigrun"
 	ProjectGUID="{88BE5568-6E55-41C5-A251-670FAFB44336}"
 	Keyword="MakeFileProj"
 	TargetFrameworkVersion="131072"

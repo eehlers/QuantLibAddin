@@ -17,7 +17,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClientCppDemo", "Clients\Cp
 		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145} = {9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swig", "swig\swig_vc9.vcproj", "{88BE5568-6E55-41C5-A251-670FAFB44336}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swigrun", "swig\swigrun_vc9.vcproj", "{88BE5568-6E55-41C5-A251-670FAFB44336}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuantLibXLStatic", "..\QuantLibXL2\qlxl\QuantLibXLStatic_vc9.vcproj", "{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}"
 	ProjectSection(ProjectDependencies) = postProject

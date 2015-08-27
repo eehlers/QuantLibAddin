@@ -1,5 +1,4 @@
-tar czvf src.tgz \
-./AddinObjects/obj.?pp \
-./AddinXl/AddinXl.cpp \
-./AddinCpp/sla.?pp \
-./ValueObjects/vo.?pp
+./configure --prefix=/home/countify/install \
+    --with-boost-include=/home/countify/install/include \
+    --with-boost-lib=/home/countify/install/lib \
+    --with-swig=/home/countify/projects/swig

@@ -1,8 +1,10 @@
 
-AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
+AM_CPPFLAGS = -I${top_srcdir}
+includedir = $(prefix)/include/qlo/enumerations/register
 
-this_includedir=${includedir}/${subdir}
-this_include_HEADERS = \
+noinst_LTLIBRARIES = libEnumerationRegister.la
+
+include_HEADERS = \
     register_all.hpp \
     register_classes.hpp \
     register_types.hpp
@@ -10,9 +12,6 @@ this_include_HEADERS = \
 libEnumerationRegister_la_SOURCES = \
     register_all.cpp \
     register_classes.cpp \
-    register_types_calendars.cpp \
-    register_types_daycounters.cpp \
-    register_types_optiontypes.cpp
-
-noinst_LTLIBRARIES = libEnumerationRegister.la
+    register_pairs.cpp \
+    register_types.cpp
 

@@ -1,12 +1,14 @@
 
-AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
-
-this_includedir=${includedir}/${subdir}
-this_include_HEADERS = \
-    enumeratedclasses.hpp
-
-libEnumerationConstructors_la_SOURCES = \
-    enumeratedclasses.cpp
+AM_CPPFLAGS = -I${top_srcdir}
+includedir = $(prefix)/include/qlo/enumerations/constructors
 
 noinst_LTLIBRARIES = libEnumerationConstructors.la
+
+include_HEADERS = \
+    enumeratedclasses.hpp \
+    enumeratedpairs.hpp
+
+libEnumerationConstructors_la_SOURCES = \
+    enumeratedclasses.cpp \
+    enumeratedpairs.cpp
 

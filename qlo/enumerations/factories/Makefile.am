@@ -1,14 +1,20 @@
 
-AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
+AM_CPPFLAGS = -I${top_srcdir}
+includedir = $(prefix)/include/qlo/enumerations/factories
 
-this_includedir=${includedir}/${subdir}
-this_include_HEADERS = \
+noinst_LTLIBRARIES = libEnumerationFactories.la
+
+include_HEADERS = \
     all.hpp \
     calendarfactory.hpp \
-    payoffsfactory.hpp
+    conundrumpricerfactory.hpp \
+    historicalforwardratesanalysisfactory.hpp \
+    iborcouponpricersfactory.hpp \
+    interpolationsfactory.hpp \
+    payoffsfactory.hpp \
+    pricingenginesfactory.hpp \
+    termstructuresfactory.hpp
 
 libEnumerationFactories_la_SOURCES = \
     calendarfactory.cpp
-
-noinst_LTLIBRARIES = libEnumerationFactories.la
 

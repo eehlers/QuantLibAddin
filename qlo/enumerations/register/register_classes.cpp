@@ -28,9 +28,9 @@
 // This source code file was generated from the following stub:
 //      c:/Users/erik/Documents/repos/reposit/quantlib/QuantLibAddin/gensrc/stubs/stub.enum.classes
 
-#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
-    #include <qlo/config.hpp>
-#endif
+//#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
+//    #include <qlo/config.hpp>
+//#endif
 
 #include <qlo/enumerations/constructors/enumeratedclasses.hpp>
 #include <qlo/enumerations/factories/conundrumpricerfactory.hpp>

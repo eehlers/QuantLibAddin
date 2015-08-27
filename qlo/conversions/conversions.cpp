@@ -18,9 +18,9 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
-    #include <qlo/config.hpp>
-#endif
+//#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
+//    #include <qlo/config.hpp>
+//#endif
 #include <qlo/conversions/conversions.hpp>
 #include <ql/utilities/dataparsers.hpp>
 #include <ql/time/date.hpp>

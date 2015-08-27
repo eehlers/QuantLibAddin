@@ -29,9 +29,9 @@
 // This source code file was generated from the following stub:
 //      c:/Users/erik/Documents/repos/reposit/quantlib/QuantLibAddin/gensrc/stubs/stub.enum.types
 
-#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
-    #include <qlo/config.hpp>
-#endif
+//#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
+//    #include <qlo/config.hpp>
+//#endif
 
 #include <qlo/qladdindefines.hpp>
 //#include <qlo/interpolation.hpp>

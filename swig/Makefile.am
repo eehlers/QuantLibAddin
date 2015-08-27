@@ -5,6 +5,6 @@ SWIG_BIN = $(SWIG_DIR)/preinst-swig
 
 .PHONY: SWIG
 SWIG:
-#	$(SWIG) -prefix ql -c++ -reposit quantlib.i
-	$(SWIG_BIN) $(SWIG_DEBUG) -c++ -reposit -gencpp -gencfy -prefix ql quantlib.i
+#	$(SWIG_BIN) $(SWIG_DEBUG) -c++ -reposit -gencpp -gencfy -prefix ql quantlib.i
+	$(SWIG_BIN) $(SWIG_DEBUG) -c++ -reposit -prefix ql quantlib.i
 

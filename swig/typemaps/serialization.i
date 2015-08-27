@@ -1,13 +1,8 @@
 
 // rp_ser_* - serialization
 // These typemaps generate source code for the serialization create functions.
-// At present the default behavior is adequate.
 
-%typemap(rp_tm_cre_cnv) QuantLib::Period %{
-    std::string $1_name_str =
-        ObjectHandler::convert2<std::string>(valueObject->getProperty("$1_name"));
-    QuantLib::Period $1_name;
-    QuantLibAddin::cppToLibrary($1_name_str, $1_name);
+%typemap(rp_tm_cre_cnv) const std::vector<QuantLib::Real>& %{
 %}
 
 %typemap(rp_tm_cre_cnv) const QuantLib::Period& %{
@@ -38,11 +33,18 @@
                 $1_name_coerce, QuantLib::Handle<QuantLib::YieldTermStructure>());
 %}
 
+%typemap(rp_tm_cre_cnv) const std::vector<QuantLib::Real>& %{
+   std::vector<double> $1_name_vec =
+        ObjectHandler::vector::convert2<double>(valueObject->getProperty("$1_name"), "$1_name");
+   std::vector<QuantLib::Real> $1_name =
+        QuantLibAddin::convertVector<double, QuantLib::Real>($1_name_vec);
+%}
+
 %typemap(rp_tm_cre_cnv) const std::vector<QuantLib::Date>& %{
     std::vector<ObjectHandler::property_t> $1_name_vec =
         ObjectHandler::vector::convert2<ObjectHandler::property_t>(valueObject->getProperty("$1_name"), "$1_name");
-        std::vector<QuantLib::Date> $1_name =
-            ObjectHandler::vector::convert2<QuantLib::Date>($1_name_vec, "$1_name");
+    std::vector<QuantLib::Date> $1_name =
+        ObjectHandler::vector::convert2<QuantLib::Date>($1_name_vec, "$1_name");
 %}
 
 %typemap(rp_tm_cre_cnv) const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& %{

@@ -18,9 +18,9 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#if defined(HAVE_CONFIG_H)
-    #include <qlo/config.hpp>
-#endif
+//#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
+//    #include <qlo/config.hpp>
+//#endif
 //#include <qlo/interpolation.hpp>
 #include <qlo/objmanual_interpolation.hpp>
 #include <qlo/enumerations/factories/interpolationsfactory.hpp>

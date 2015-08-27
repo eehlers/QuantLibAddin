@@ -330,6 +330,14 @@
 			Name="serialization"
 			>
 			<File
+				RelativePath=".\qlo\serialization\processor.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\serialization\processor.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\serialization\register_creators.cpp"
 				>
 			</File>

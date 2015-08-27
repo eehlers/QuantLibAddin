@@ -68,8 +68,5 @@ namespace QuantLibAddin {
     std::vector<std::vector<double> > qlMatrixToVv(const QuantLib::Matrix &m);
 
 }
-// FIXME in the old build this conversion was performed in the ctor
-// of QuantLibAddin::Euribor, for now it is performed here.
-QuantLib::Period f(const std::string &p_inp);
 
 #endif

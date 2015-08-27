@@ -625,7 +625,7 @@ namespace QuantLibAddin {
         ObjectHandler::Create<QuantLib::Duration::Type>().unregisterTypes();
         ObjectHandler::Create<QuantLib::EndCriteria::Type>().unregisterTypes();
         ObjectHandler::Create<QuantLib::Frequency>().unregisterTypes();
-        //ObjectHandler::Create<QuantLib::Futures::Type>().unregisterTypes();
+        ObjectHandler::Create<QuantLib::Futures::Type>().unregisterTypes();
         ObjectHandler::Create<QuantLib::GFunctionFactory::YieldCurveModel>().unregisterTypes();
         ObjectHandler::Create<QuantLib::Month>().unregisterTypes();
         ObjectHandler::Create<QuantLib::Option::Type>().unregisterTypes();
@@ -641,11 +641,10 @@ namespace QuantLibAddin {
         ObjectHandler::Create<QuantLib::TimeUnit>().unregisterTypes();
         ObjectHandler::Create<QuantLib::VanillaSwap::Type>().unregisterTypes();
         ObjectHandler::Create<QuantLib::Weekday>().unregisterTypes();
-        //ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Interpolator>().unregisterTypes();
-        //ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Traits>().unregisterTypes();
-        //ObjectHandler::Create<QuantLibAddin::RateHelper::DepoInclusionCriteria>().unregisterTypes();
+        ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Interpolator>().unregisterTypes();
+        ObjectHandler::Create<QuantLibAddin::InterpolatedYieldCurve::Traits>().unregisterTypes();
+        ObjectHandler::Create<QuantLibAddin::RateHelper::DepoInclusionCriteria>().unregisterTypes();
         //ObjectHandler::Create<QuantLibAddin::SwapIndex::FixingType>().unregisterTypes();
-    
     }
 
 }

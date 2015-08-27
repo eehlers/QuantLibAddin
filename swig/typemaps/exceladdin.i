@@ -43,7 +43,8 @@
 %}
 
 %typemap(rp_tm_xll_cnv) QuantLib::Period const & %{
-        QuantLib::Period $1_name_cnv = f($1_name);
+        QuantLib::Period $1_name_cnv;
+        QuantLibAddin::cppToLibrary($1_name, $1_name_cnv);
 %}
 
 %typemap(rp_tm_xll_cnv) QuantLib::Period %{

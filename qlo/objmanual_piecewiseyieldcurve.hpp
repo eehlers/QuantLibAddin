@@ -7,6 +7,8 @@
 #include <oh/valueobject.hpp>
 #include <boost/shared_ptr.hpp>
 
+// FIXME this #include is required by create_piecewiseyieldcurve.cpp
+#include <qlo/objmanual_ratehelpers.hpp>
 //#include <qlo/obj_termstructures.hpp>
 #include <qlo/yieldtermstructures.hpp>
 //#include <ql/instruments/payoffs.hpp>

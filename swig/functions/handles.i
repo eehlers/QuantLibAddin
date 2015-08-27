@@ -3,6 +3,8 @@
 
 %feature("rp:override_obj");
 
+%feature("rp:processorName", "RelinkableHandleProcessor") QuantLibAddin::RelinkableHandleYieldTermStructure::RelinkableHandleYieldTermStructure;
+
 namespace QuantLibAddin {
 
     class RelinkableHandle {

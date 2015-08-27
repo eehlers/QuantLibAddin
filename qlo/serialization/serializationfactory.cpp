@@ -18,6 +18,8 @@
 
 #include <qlo/serialization/serializationfactory.hpp>
 #include <qlo/serialization/create/create_all.hpp>
+#include <qlo/serialization/processor.hpp>
+
 #include <qlo/serialization/register/serialization_register.hpp>
 
 #include <boost/serialization/vector.hpp>
@@ -28,6 +30,31 @@ namespace QuantLibAddin {
     SerializationFactory::SerializationFactory() {    
 
         registerCreators();
+
+        ObjectHandler::ProcessorPtr relinkableHandleProcessor(
+            new RelinkableHandleProcessor());
+        ObjectHandler::ProcessorFactory::instance().storeProcessor(
+            "RelinkableHandleProcessor", relinkableHandleProcessor);
+
+  //      ObjectHandler::ProcessorPtr instrumentProcessor(
+  //          new InstrumentProcessor());
+  //      ObjectHandler::ProcessorFactory::instance().storeProcessor(
+		//	"InstrumentProcessor", instrumentProcessor);
+
+  //      ObjectHandler::ProcessorPtr legProcessor(
+  //          new LegProcessor());
+  //      ObjectHandler::ProcessorFactory::instance().storeProcessor(
+		//	"LegProcessor", legProcessor);
+
+  //      ObjectHandler::ProcessorPtr indexProcessor(
+  //          new IndexProcessor());
+  //      ObjectHandler::ProcessorFactory::instance().storeProcessor(
+		//	"IndexProcessor", indexProcessor);
+
+  //      ObjectHandler::ProcessorPtr extrapolatorProcessor(
+  //          new ExtrapolatorProcessor());
+  //      ObjectHandler::ProcessorFactory::instance().storeProcessor(
+		//	"ExtrapolatorProcessor", extrapolatorProcessor);
     }
 
     void SerializationFactory::register_out(boost::archive::xml_oarchive &ar,

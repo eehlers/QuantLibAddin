@@ -31,12 +31,10 @@ this_include_HEADERS = \
     objmanual_utilities.hpp \
     obj_payoffs.hpp \
     obj_prices.hpp \
-    obj_pricingengines.hpp \
     obj_quote.hpp \
     obj_termstructures.hpp \
     obj_volatilities.hpp \
-    qladdindefines.hpp \
-    yieldtermstructures.hpp
+    qladdindefines.hpp
 
 libAddinObjects_la_SOURCES = \
     init.cpp \
@@ -57,11 +55,9 @@ libAddinObjects_la_SOURCES = \
     objmanual_utilities.cpp \
     obj_payoffs.cpp \
     obj_prices.cpp \
-    obj_pricingengines.cpp \
     obj_quote.cpp \
     obj_termstructures.cpp \
-    obj_volatilities.cpp \
-    yieldtermstructures.cpp
+    obj_volatilities.cpp
 
 noinst_LTLIBRARIES = libAddinObjects.la
 

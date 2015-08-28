@@ -2,9 +2,6 @@
 // rp_ser_* - serialization
 // These typemaps generate source code for the serialization create functions.
 
-%typemap(rp_tm_cre_cnv) const std::vector<QuantLib::Real>& %{
-%}
-
 %typemap(rp_tm_cre_cnv) const QuantLib::Period& %{
     std::string $1_name_str =
         ObjectHandler::convert2<std::string>(valueObject->getProperty("$1_name"));

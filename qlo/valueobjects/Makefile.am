@@ -18,16 +18,13 @@ this_include_HEADERS = \
     vo_payoffs.hpp \
     vo_piecewiseyieldcurve.hpp \
     vo_prices.hpp \
-    vo_pricingengines.hpp \
-    vo_processes.hpp \
     vo_quote2.hpp \
     vo_quote.hpp \
     vo_ratehelpers.hpp \
     vo_settings.hpp \
     vo_termstructures.hpp \
     vo_utilities.hpp \
-    vo_volatilities.hpp \
-    vo_yieldtermstructures.hpp
+    vo_volatilities.hpp
 
 libValueObjects_la_SOURCES = \
     vo_calendars.cpp \
@@ -43,14 +40,11 @@ libValueObjects_la_SOURCES = \
     vo_payoffs.cpp \
     vo_piecewiseyieldcurve.cpp \
     vo_prices.cpp \
-    vo_pricingengines.cpp \
-    vo_processes.cpp \
     vo_quote2.cpp \
     vo_quote.cpp \
     vo_ratehelpers.cpp \
     vo_settings.cpp \
     vo_termstructures.cpp \
     vo_utilities.cpp \
-    vo_volatilities.cpp \
-    vo_yieldtermstructures.cpp
+    vo_volatilities.cpp
 

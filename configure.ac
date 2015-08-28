@@ -114,6 +114,7 @@ AC_CONFIG_FILES([
     qlo/serialization/Makefile
     qlo/serialization/register/Makefile
     qlo/valueobjects/Makefile
+    AddinCfy/Makefile
 ])
 
 AC_OUTPUT

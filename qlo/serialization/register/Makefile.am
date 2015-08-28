@@ -19,7 +19,6 @@ noinst_HEADERS = \
     serialization_payoffs.hpp \
     serialization_piecewiseyieldcurve.hpp \
     serialization_prices.hpp \
-    serialization_pricingengines.hpp \
     serialization_quote2.hpp \
     serialization_quote.hpp \
     serialization_ratehelpers.hpp \
@@ -27,8 +26,7 @@ noinst_HEADERS = \
     serialization_settings.hpp \
     serialization_termstructures.hpp \
     serialization_utilities.hpp \
-    serialization_volatilities.hpp \
-    serialization_yieldtermstructures.hpp
+    serialization_volatilities.hpp
 
 libRegister_la_SOURCES = \
     serialization_calendars.cpp \
@@ -44,13 +42,11 @@ libRegister_la_SOURCES = \
     serialization_payoffs.cpp \
     serialization_piecewiseyieldcurve.cpp \
     serialization_prices.cpp \
-    serialization_pricingengines.cpp \
     serialization_quote2.cpp \
     serialization_quote.cpp \
     serialization_ratehelpers.cpp \
     serialization_settings.cpp \
     serialization_termstructures.cpp \
     serialization_utilities.cpp \
-    serialization_volatilities.cpp \
-    serialization_yieldtermstructures.cpp
+    serialization_volatilities.cpp
 

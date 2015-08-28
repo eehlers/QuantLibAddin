@@ -19,7 +19,6 @@ include_HEADERS = \
     create_payoffs.hpp \
     create_piecewiseyieldcurve.hpp \
     create_prices.hpp \
-    create_pricingengines.hpp \
     create_quote2.hpp \
     create_quote.hpp \
     create_ratehelpers.hpp \
@@ -42,7 +41,6 @@ libCreate_la_SOURCES = \
     create_payoffs.cpp \
     create_piecewiseyieldcurve.cpp \
     create_prices.cpp \
-    create_pricingengines.cpp \
     create_quote2.cpp \
     create_quote.cpp \
     create_ratehelpers.cpp \

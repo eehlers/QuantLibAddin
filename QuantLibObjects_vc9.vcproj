@@ -469,14 +469,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\create\create_processes.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\create\create_processes.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\create\create_quote.cpp"
 					>
 				</File>
@@ -650,14 +642,6 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_pricingengines.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_processes.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_processes.hpp"
 					>
 				</File>
 				<File
@@ -838,14 +822,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\valueobjects\vo_processes.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_processes.hpp"
-				>
-			</File>
-			<File
 				RelativePath=".\qlo\valueobjects\vo_quote.cpp"
 				>
 			</File>
@@ -980,14 +956,6 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_pricingengines.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_processes.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_processes.hpp"
 			>
 		</File>
 		<File

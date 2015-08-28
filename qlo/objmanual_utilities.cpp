@@ -26,6 +26,8 @@
 #include <qlo/objmanual_utilities.hpp>
 //#include <qlo/qladdindefines.hpp>
 #include <ql/version.hpp>
+#include <oh/repository.hpp>
+#include <qlo/serialization/serializationfactory.hpp>
 
 //#if defined BOOST_MSVC       // Microsoft Visual C++
 //#  define BOOST_LIB_DIAGNOSTIC
@@ -55,6 +57,22 @@ namespace QuantLibAddin {
 //        else
 //            return VERSION_STRING;
 //    }
+
+    long ObjectCount() {
+        return ObjectHandler::Repository::instance().objectCount();
+    }
+
+    std::string ObjectLoad() {
+        try {
+            QuantLibAddin::SerializationFactory::instance().loadObject(
+                "/home/countify/", "data.xml", false, true);
+            return "success";
+        } catch (const std::exception &e) {
+            return e.what();
+        } catch (...) {
+            return "error";
+        }
+    }
 
 }
 

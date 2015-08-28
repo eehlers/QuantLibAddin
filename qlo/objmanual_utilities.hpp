@@ -17,6 +17,10 @@ namespace QuantLibAddin {
         // BEGIN typemap rp_tm_default
         // END   typemap rp_tm_default
     );
+
+    // quick fix for =countify
+    long ObjectCount();
+    std::string ObjectLoad();
 } // namespace QuantLibAddin
 
 #endif

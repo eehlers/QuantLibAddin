@@ -7,6 +7,10 @@
 #include \"qlo/obj_payoffs.hpp\"
 #include \"qlo/obj_exercise.hpp\""
 
+%feature("rp:generate_countify") QuantLib::VanillaOption::VanillaOption;
+%feature("rp:generate_countify") QuantLib::Instrument::setPricingEngine;
+%feature("rp:generate_countify") QuantLib::Instrument::NPV;
+
 namespace QuantLib {
     class Instrument {
       public:

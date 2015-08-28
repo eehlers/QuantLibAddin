@@ -7,6 +7,8 @@
 #include <ql/math/comparison.hpp>
 %}
 
+%feature("rp:generate_countify") QuantLib::SimpleQuote::SimpleQuote;
+
 namespace QuantLib {
 
     bool close(double x, double y);

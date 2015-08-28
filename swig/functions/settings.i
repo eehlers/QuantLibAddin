@@ -2,6 +2,7 @@
 %feature("rp:group", "settings");
 
 %feature("rp:override_obj");
+%feature("rp:generate_countify") QuantLibAddin::settingsSetEvaluationDate;
 
 namespace QuantLibAddin {
     long settingsEvaluationDate();

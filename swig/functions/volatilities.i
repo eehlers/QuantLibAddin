@@ -4,6 +4,7 @@
 #include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>
 #include <qlo/objmanual_piecewiseyieldcurve.hpp>
 %}
+%feature("rp:generate_countify") QuantLib::BlackConstantVol::BlackConstantVol;
 
 namespace QuantLib {
 

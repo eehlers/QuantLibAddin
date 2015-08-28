@@ -5,6 +5,8 @@
 %}
 %feature("rp:add_include") "#include \"qlo/obj_processes.hpp\""
 
+%feature("rp:generate_countify") QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine;
+
 namespace QuantLib {
 
     class PricingEngine {};

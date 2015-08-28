@@ -4,6 +4,8 @@
 #include <ql/exercise.hpp>
 %}
 
+%feature("rp:generate_countify") QuantLib::EuropeanExercise::EuropeanExercise;
+
 namespace QuantLib {
 
     class Exercise {};

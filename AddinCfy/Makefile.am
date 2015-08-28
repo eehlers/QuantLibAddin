@@ -9,7 +9,16 @@ this_include_HEADERS = \
     init.hpp
 
 libCountifyQuantLibAddin_la_SOURCES = \
+    cfy_exercise.cpp \
+    cfy_instruments.cpp \
+    cfy_payoffs.cpp \
+    cfy_pricingengines.cpp \
+    cfy_processes.cpp \
+    cfy_quote.cpp \
+    cfy_settings.cpp \
+    cfy_termstructures.cpp \
     cfy_utilities.cpp \
+    cfy_volatilities.cpp \
     init.cpp
 
 #noinst_LTLIBRARIES = libCountifyQuantLibAddin.la

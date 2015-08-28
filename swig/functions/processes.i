@@ -6,6 +6,8 @@
 %feature("rp:add_include") "#include \"qlo/obj_quote.hpp\"
 #include \"qlo/obj_volatilities.hpp\""
 
+%feature("rp:generate_countify") QuantLib::BlackScholesMertonProcess::BlackScholesMertonProcess;
+
 namespace QuantLib {
 
     class GeneralizedBlackScholesProcess {};

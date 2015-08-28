@@ -4,6 +4,8 @@
 #include <ql/termstructures/yield/flatforward.hpp>
 %}
 
+%feature("rp:generate_countify") QuantLib::FlatForward::FlatForward;
+
 namespace QuantLib {
 
     class Extrapolator {};

@@ -6,7 +6,7 @@
 %typemap(rp_tm_cfy_prm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "const char * $1_name";
 %typemap(rp_tm_cfy_prm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "const char * $1_name";
 
-//%typemap(rp_tm_cfy_mng) ql_val_dbl "REAL32";
+%typemap(rp_tm_cfy_mng) QuantLib::Date "INT32";
 %typemap(rp_tm_cfy_mng) QuantLib::Date const & "INT32";
 
 %typemap(rp_tm_cfy_cnv) QuantLib::Date const & %{
@@ -37,4 +37,11 @@
 %typemap(rp_tm_cfy_cll) const QuantLib::Handle< QuantLib::Quote >& "$1_name_handle";
 %typemap(rp_tm_cfy_cll) const QuantLib::Handle<QuantLib::YieldTermStructure>& "$1_name_handle";
 %typemap(rp_tm_cfy_cll) const QuantLib::Handle<QuantLib::BlackVolTermStructure>& "$1_name_handle";
+
+%typemap(rp_tm_cfy_ret1) QuantLib::Date "QuantLib::Date returnValue =";
+%typemap(rp_tm_cfy_ret2) QuantLib::Date "return returnValue.serialNumber();";
+
+%typemap(rp_tm_add_cll) QuantLib::Date const & "$1_name_cnv";
+
+%typemap(rp_tm_cfy_rt3) QuantLib::Date "long";
 

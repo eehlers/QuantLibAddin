@@ -20,7 +20,7 @@ namespace QuantLib {
             bool extrapolate);
     };
     
-    class FlatForward : public TermStructure {
+    class FlatForward : public YieldTermStructure {
       public:
         FlatForward(const QuantLib::Date& referenceDate,
                     QuantLib::Rate forward,

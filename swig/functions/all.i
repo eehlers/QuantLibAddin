@@ -12,8 +12,8 @@
 %include payoffs.i
 %include piecewiseyieldcurve.i
 %include prices.i
-//%include pricingengines.i
-//%include processes.i
+%include pricingengines.i
+%include processes.i
 %include quote.i
 %include quote2.i
 %include ratehelpers.i

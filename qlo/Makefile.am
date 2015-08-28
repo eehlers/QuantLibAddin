@@ -31,6 +31,8 @@ this_include_HEADERS = \
     objmanual_utilities.hpp \
     obj_payoffs.hpp \
     obj_prices.hpp \
+    obj_pricingengines.hpp \
+    obj_processes.hpp \
     obj_quote.hpp \
     obj_termstructures.hpp \
     obj_volatilities.hpp \
@@ -55,6 +57,8 @@ libAddinObjects_la_SOURCES = \
     objmanual_utilities.cpp \
     obj_payoffs.cpp \
     obj_prices.cpp \
+    obj_pricingengines.cpp \
+    obj_processes.cpp \
     obj_quote.cpp \
     obj_termstructures.cpp \
     obj_volatilities.cpp

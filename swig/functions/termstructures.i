@@ -28,5 +28,6 @@ namespace QuantLib {
     };
 }
 
+%feature("rp:obj_include", "");
 %feature("rp:group", "");
 

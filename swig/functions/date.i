@@ -10,6 +10,7 @@ namespace QuantLibAddin {
     bool dateIsEndOfMonth(const QuantLib::Date& d);
 }
 
+%feature("rp:obj_include", "");
 %feature("rp:override_obj", "");
 %feature("rp:group", "");
 

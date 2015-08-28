@@ -30,6 +30,18 @@
                 $1_name_coerce, QuantLib::Handle<QuantLib::YieldTermStructure>());
 %}
 
+%typemap(rp_tm_cre_cnv) const QuantLib::Handle<QuantLib::BlackVolTermStructure>& %{
+    std::string $1_name_str =
+        ObjectHandler::convert2<std::string>(valueObject->getProperty("$1_name"));
+    valueObject->processPrecedentID($1_name_str);
+    OH_GET_OBJECT_DEFAULT($1_name_coerce, $1_name_str, ObjectHandler::Object)
+    QuantLib::Handle<QuantLib::BlackVolTermStructure> $1_name =
+        QuantLibAddin::CoerceHandle<
+            QuantLibAddin::BlackVolTermStructure,
+            QuantLib::BlackVolTermStructure>()(
+                $1_name_coerce, QuantLib::Handle<QuantLib::BlackVolTermStructure>());
+%}
+
 %typemap(rp_tm_cre_cnv) const std::vector<QuantLib::Real>& %{
    std::vector<double> $1_name_vec =
         ObjectHandler::vector::convert2<double>(valueObject->getProperty("$1_name"), "$1_name");

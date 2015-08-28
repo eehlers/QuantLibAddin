@@ -15,5 +15,6 @@ namespace QuantLib {
                  const double ask);                       
 }
 
+%feature("rp:obj_include", "");
 %feature("rp:group", "");
 

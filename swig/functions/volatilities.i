@@ -6,7 +6,10 @@
 %}
 
 namespace QuantLib {
-    class BlackConstantVol : public TermStructure {
+
+    class BlackVolTermStructure : public TermStructure {};
+
+    class BlackConstantVol : public BlackVolTermStructure {
       public:
         BlackConstantVol(const QuantLib::Date& referenceDate,
                          const QuantLib::Calendar& calendar,
@@ -15,5 +18,6 @@ namespace QuantLib {
     };
 }
 
+%feature("rp:obj_include", "");
 %feature("rp:group", "");
 

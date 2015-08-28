@@ -4,7 +4,6 @@
 #include <ql/processes/blackscholesprocess.hpp>
 %}
 %feature("rp:add_include") "#include \"qlo/obj_quote.hpp\"
-#include \"qlo/obj_yieldtermstructures.hpp\"
 #include \"qlo/obj_volatilities.hpp\""
 
 namespace QuantLib {
@@ -21,5 +20,7 @@ namespace QuantLib {
     };
 }
 
+%feature("rp:obj_include", "");
+%feature("rp:add_include", "");
 %feature("rp:group", "");
 

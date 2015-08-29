@@ -61,18 +61,5 @@ namespace QuantLibAddin {
     long ObjectCount() {
         return ObjectHandler::Repository::instance().objectCount();
     }
-
-    std::string ObjectLoad() {
-        try {
-            QuantLibAddin::SerializationFactory::instance().loadObject(
-                "/home/countify/", "data.xml", false, true);
-            return "success";
-        } catch (const std::exception &e) {
-            return e.what();
-        } catch (...) {
-            return "error";
-        }
-    }
-
 }
 

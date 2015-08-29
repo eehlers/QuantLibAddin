@@ -20,7 +20,6 @@ namespace QuantLibAddin {
 
     // quick fix for =countify
     long ObjectCount();
-    std::string ObjectLoad();
 } // namespace QuantLibAddin
 
 #endif

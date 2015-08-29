@@ -6,6 +6,7 @@
 
 namespace QuantLibAddin {
     std::string version();
+    long ObjectCount();
 }
 
 %feature("rp:override_obj", "");

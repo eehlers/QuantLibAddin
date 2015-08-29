@@ -5,6 +5,8 @@
 %}
 
 %feature("rp:generate_countify") QuantLib::FlatForward::FlatForward;
+%feature("rp:generate_countify") QuantLib::TermStructure::referenceDate;
+%feature("rp:generate_countify") QuantLib::YieldTermStructure::discount;
 
 namespace QuantLib {
 

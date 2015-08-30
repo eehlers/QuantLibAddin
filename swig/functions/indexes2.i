@@ -10,7 +10,8 @@ namespace QuantLibAddin {
         void addFixings(const std::vector<QuantLib::Date>& dates,
                         const std::vector<QuantLib::Real>& values,
                         bool forceOverwrite);
-        double fixing(const QuantLib::Date& fixingDate);
+        double fixing(const QuantLib::Date& fixingDate,
+                            bool forecastTodaysFixing);
     };
 }
 

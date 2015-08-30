@@ -91,6 +91,20 @@
         return &xRet;
 %}
 
+%typemap(rp_tm_xll_rdc) QuantLib::Natural %{
+        static long ret;
+        ret = returnValue;
+        return &ret;
+%}
+
+%typemap(rp_tm_xll_rdc) QuantLib::DayCounter const & %{
+        std::ostringstream os;
+        os << returnValue;
+        static char ret[XL_MAX_STR_LEN];
+        ObjectHandler::stringToChar(os.str(), ret);
+        return ret;
+%}
+
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::Quote > const & "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_vo";
 %typemap(rp_tm_xll_cll_val) const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& "$1_name_vec";

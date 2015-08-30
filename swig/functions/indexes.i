@@ -11,7 +11,11 @@
 
 namespace QuantLib {
    
-    class InterestRateIndex : public Index {};
+    class InterestRateIndex : public Index {
+        public:
+        QuantLib::Natural fixingDays();
+        const QuantLib::DayCounter& dayCounter();
+    };
     
     class IborIndex : public InterestRateIndex {};
     class SwapIndex : public InterestRateIndex {};

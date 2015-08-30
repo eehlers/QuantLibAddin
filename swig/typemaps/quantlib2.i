@@ -15,6 +15,7 @@
 // These QuantLib types behave like enum.
 %apply rp_tp_enm { QuantLib::Option::Type };
 %apply rp_tp_enm { QuantLib::DayCounter };
+%apply rp_tp_enm { QuantLib::DayCounter const & };
 %apply rp_tp_enm { QuantLib::Frequency const & };
 %apply rp_tp_enm { QuantLib::Calendar };
 %apply rp_tp_enm { QuantLib::Calendar const & };

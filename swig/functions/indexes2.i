@@ -12,6 +12,8 @@ namespace QuantLibAddin {
                         bool forceOverwrite);
         double fixing(const QuantLib::Date& fixingDate,
                             bool forecastTodaysFixing);
+        //QuantLib::Calendar fixingCalendar();
+        std::string fixingCalendar();
     };
 }
 

@@ -62,3 +62,9 @@ double QuantLibAddin::Index::fixing(const QuantLib::Date& fixingDate,
                             bool forecastTodaysFixing) {
     return libraryObject_->fixing(fixingDate, forecastTodaysFixing);
 }
+
+std::string QuantLibAddin::Index::fixingCalendar() {
+    std::ostringstream os;
+    os << libraryObject_->fixingCalendar();
+    return os.str();
+}

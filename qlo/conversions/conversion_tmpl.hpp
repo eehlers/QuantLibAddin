@@ -27,7 +27,7 @@
 #define qlo_Conversions_conversion_tmpl_hpp
 
 #include <ql/quotes/simplequote.hpp>
-#include <qlo/obj_quote.hpp>
+#include <qlo/objmanual_quote.hpp>
 
 namespace ObjectHandler {
 

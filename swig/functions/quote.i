@@ -23,8 +23,10 @@ namespace QuantLibAddin {
     
     class SimpleQuote : public Quote {
       public:
-        SimpleQuote(double value);
-        QuantLib::Real setValue(QuantLib::Real value);
+        SimpleQuote(double Value);
+        // NB The parameter below must be called "Value" because of some hard-coding
+        // in objmanual_quote.cpp to update a property with that name in the value object.
+        QuantLib::Real setValue(QuantLib::Real Value);
     };
     
     class LastFixingQuote : public Quote {

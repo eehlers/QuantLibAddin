@@ -23,6 +23,7 @@ namespace QuantLib {
                  bool endOfMonth,
                  const QuantLib::Date& firstDate,
                  const QuantLib::Date& nextToLastDate);
+         std::vector<QuantLib::Date> dates();
      };
 }
 

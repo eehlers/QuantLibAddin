@@ -16,6 +16,7 @@
 %include processes.i
 %include quote.i
 %include ratehelpers.i
+%include schedule.i
 %include settings.i
 %include termstructures.i
 %include utilities.i

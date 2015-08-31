@@ -122,6 +122,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\schedule.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\settings.i"
 					>
 				</File>

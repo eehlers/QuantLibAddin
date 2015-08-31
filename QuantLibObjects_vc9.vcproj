@@ -493,6 +493,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_schedule.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_schedule.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_settings.cpp"
 					>
 				</File>
@@ -673,6 +681,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_schedule.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_schedule.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_settings.cpp"
 					>
 				</File>
@@ -846,6 +862,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_schedule.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_schedule.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_settings.cpp"
 				>
 			</File>
@@ -964,6 +988,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_processes.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_schedule.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_schedule.hpp"
 			>
 		</File>
 		<File

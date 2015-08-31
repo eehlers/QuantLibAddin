@@ -4,8 +4,6 @@
 %feature("rp:override_obj");
 
 namespace QuantLibAddin {
-
-    class Leg {};
     
     class IborLeg : public Leg {
       public:

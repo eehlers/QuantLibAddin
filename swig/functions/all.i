@@ -10,6 +10,7 @@
 %include indexes2.i
 %include instruments.i
 %include interpolation.i
+%include leg.i
 %include payoffs.i
 %include piecewiseyieldcurve.i
 %include prices.i

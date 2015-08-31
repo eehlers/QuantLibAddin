@@ -98,6 +98,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\leg.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\payoffs.i"
 					>
 				</File>

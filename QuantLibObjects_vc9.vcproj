@@ -445,6 +445,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_leg.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_leg.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_payoffs.cpp"
 					>
 				</File>
@@ -634,6 +642,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_interpolation.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_leg.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_leg.hpp"
 					>
 				</File>
 				<File
@@ -827,6 +843,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_interpolation.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_leg.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_leg.hpp"
 				>
 			</File>
 			<File
@@ -1084,6 +1108,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_interpolation.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_leg.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_leg.hpp"
 			>
 		</File>
 		<File

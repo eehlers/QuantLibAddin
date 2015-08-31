@@ -7,12 +7,10 @@
 #include <oh/valueobject.hpp>
 #include <boost/shared_ptr.hpp>
 
+#include <qlo/objmanual_leg.hpp>
 #include <ql/cashflows/iborcoupon.hpp>
 
 namespace QuantLibAddin {
-    // BEGIN typemap rp_tm_obj_cls
-    OH_LIB_CLASS(Leg, QuantLib::Leg);
-    // END   typemap rp_tm_obj_cls
 
     class IborLeg : 
         public Leg {

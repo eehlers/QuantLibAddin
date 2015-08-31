@@ -2,6 +2,8 @@
 %feature("rp:group", "instruments");
 %feature("rp:obj_include") %{
 #include <ql/instruments/vanillaoption.hpp>
+#include <ql/cashflow.hpp>
+#include <ql/instruments/swap.hpp>
 %}
 %feature("rp:add_include") "#include \"qlo/obj_pricingengines.hpp\"
 #include \"qlo/obj_payoffs.hpp\"
@@ -24,6 +26,12 @@ namespace QuantLib {
       public:
         VanillaOption(const boost::shared_ptr<QuantLib::StrikedTypePayoff>& payoff,
                       const boost::shared_ptr<QuantLib::Exercise>& exercise);
+    };
+    
+    class Swap : public Instrument {
+      public:
+        Swap(const std::vector<QuantLib::Leg>& legs,
+            const std::vector<bool>& payer);
     };
 }
 

@@ -365,6 +365,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_couponvectors.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_couponvectors.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_date.cpp"
 					>
 				</File>
@@ -546,6 +554,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_calendars.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_couponvectors.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_couponvectors.hpp"
 					>
 				</File>
 				<File
@@ -731,6 +747,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_calendars.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_couponvectors.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_couponvectors.hpp"
 				>
 			</File>
 			<File
@@ -1012,6 +1036,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_volatilities.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_couponvectors.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_couponvectors.hpp"
 			>
 		</File>
 		<File

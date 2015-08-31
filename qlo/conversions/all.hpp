@@ -45,6 +45,7 @@
 #include <qlo/obj_processes.hpp>
 #include <qlo/obj_termstructures.hpp>
 #include <qlo/obj_volatilities.hpp>
+#include <qlo/obj_schedule.hpp>
 
 #endif
 

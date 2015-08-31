@@ -58,6 +58,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\couponvectors.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\date.i"
 					>
 				</File>

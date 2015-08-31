@@ -45,6 +45,7 @@
 %apply rp_tp_obj1 { const boost::shared_ptr<QuantLib::Exercise>& };
 %apply rp_tp_obj1 { const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& };
 %apply rp_tp_obj1 { const boost::shared_ptr<QuantLibAddin::RateHelper>& };
+%apply rp_tp_obj1 { const boost::shared_ptr<QuantLib::Schedule>& };
 
 // For addin functions that wrap QuantLibAddin objects rather than QuantLib objects
 %apply rp_tp_obj2 { QuantLibAddin::PiecewiseYieldCurve };

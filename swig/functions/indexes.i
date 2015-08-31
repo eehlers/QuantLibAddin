@@ -15,9 +15,15 @@ namespace QuantLib {
         public:
         QuantLib::Natural fixingDays();
         const QuantLib::DayCounter& dayCounter();
+        QuantLib::Date valueDate(const QuantLib::Date& fixingDate);
+        QuantLib::Period tenor();
     };
     
-    class IborIndex : public InterestRateIndex {};
+    class IborIndex : public InterestRateIndex {
+        public:
+        QuantLib::BusinessDayConvention businessDayConvention();
+    };
+    
     class SwapIndex : public InterestRateIndex {};
     
     class OvernightIndex : public IborIndex {};

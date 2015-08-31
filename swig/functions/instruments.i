@@ -12,12 +12,14 @@
 %feature("rp:generate_countify") QuantLib::Instrument::NPV;
 
 namespace QuantLib {
+
     class Instrument {
       public:
         //Instrument();
         void setPricingEngine(const boost::shared_ptr<QuantLib::PricingEngine>& engine);
         QuantLib::Real NPV();
     };
+    
     class VanillaOption : public Instrument {
       public:
         VanillaOption(const boost::shared_ptr<QuantLib::StrikedTypePayoff>& payoff,

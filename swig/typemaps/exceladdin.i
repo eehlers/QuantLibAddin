@@ -84,17 +84,18 @@
             ObjectHandler::operToVector<QuantLib::Date>(*$1_name, "$1_name");
 %}
 
-%typemap(rp_tm_xll_rdc) std::vector<QuantLib::Date> %{
-        std::vector<long> returnValVec = QuantLibAddin::libraryToVector(returnValue);
-        static OPER xRet;
-        ObjectHandler::vectorToOper(returnValVec, xRet);
-        return &xRet;
-%}
-
 %typemap(rp_tm_xll_rdc) QuantLib::Natural %{
         static long ret;
         ret = returnValue;
         return &ret;
+%}
+
+%typemap(rp_tm_xll_rdc) QuantLib::BusinessDayConvention %{
+        std::ostringstream os;
+        os << returnValue;
+        static char ret[XL_MAX_STR_LEN];
+        ObjectHandler::stringToChar(os.str(), ret);
+        return ret;
 %}
 
 %typemap(rp_tm_xll_rdc) QuantLib::DayCounter const & %{
@@ -103,6 +104,13 @@
         static char ret[XL_MAX_STR_LEN];
         ObjectHandler::stringToChar(os.str(), ret);
         return ret;
+%}
+
+%typemap(rp_tm_xll_rdc) std::vector<QuantLib::Date> %{
+        std::vector<long> returnValVec = QuantLibAddin::libraryToVector(returnValue);
+        static OPER xRet;
+        ObjectHandler::vectorToOper(returnValVec, xRet);
+        return &xRet;
 %}
 
 %typemap(rp_tm_xll_cll_val) QuantLib::Handle< QuantLib::Quote > const & "$1_name_vo";
@@ -122,7 +130,7 @@
 %typemap(rp_tm_xll_cll_obj) const std::vector<QuantLib::Date>& "$1_name_vec2";
 
 %typemap(rp_tm_xll_ret) QuantLib::Date "long*";
-//%typemap(rp_tm_xll_ret) QuantLib::Date & "long*";
+%typemap(rp_tm_xll_ret) QuantLib::Period "char*";
 
 %typemap(rp_tm_xll_cod) QuantLib::Period "C";
 //%typemap(rp_tm_xll_cod) QuantLib::Frequency const & "C";
@@ -142,6 +150,13 @@
         static long returnValueXL;
         returnValueXL = static_cast<long>(QuantLibAddin::libraryToScalar(returnValue));
         return &returnValueXL;
+%}
+
+%typemap(rp_tm_xll_rdc) QuantLib::Period %{
+        std::string str = QuantLibAddin::libraryToScalar(returnValue);
+        static char ret[XL_MAX_STR_LEN];
+        ObjectHandler::stringToChar(str, ret);
+        return ret;
 %}
 
 %typemap(rp_tm_xll_rdc) std::vector<QuantLib::Real> %{

@@ -7,9 +7,11 @@
 #include <ql/math/comparison.hpp>
 %}
 
+%feature("rp:override_obj");
+
 %feature("rp:generate_countify") QuantLib::SimpleQuote::SimpleQuote;
 
-namespace QuantLib {
+namespace QuantLibAddin {
 
     bool close(double x, double y);
     
@@ -22,7 +24,7 @@ namespace QuantLib {
     class SimpleQuote : public Quote {
       public:
         SimpleQuote(double value);
-        double setValue(double value);
+        QuantLib::Real setValue(QuantLib::Real value);
     };
     
     class LastFixingQuote : public Quote {
@@ -38,8 +40,17 @@ namespace QuantLib {
                                    const QuantLib::Handle<QuantLib::Quote>& volatility,
                                    const QuantLib::Handle<QuantLib::Quote>& meanReversion);    
     };
+
+     class CompositeQuote : public Quote {
+      public:
+        CompositeQuote(
+                    const QuantLib::Handle<QuantLib::Quote>& element1,
+                    const QuantLib::Handle<QuantLib::Quote>& element2,
+                    const std::string& op);
+    };    
 }
 
 %feature("rp:obj_include", "");
+%feature("rp:override_obj", "");
 %feature("rp:group", "");
 

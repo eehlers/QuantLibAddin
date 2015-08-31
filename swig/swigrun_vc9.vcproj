@@ -118,10 +118,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\functions\quote2.i"
-					>
-				</File>
-				<File
 					RelativePath=".\functions\ratehelpers.i"
 					>
 				</File>

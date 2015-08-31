@@ -31,6 +31,8 @@
 %apply rp_tp_cnv2 { QuantLib::Date const & };
 
 // Types on which we want to invoke member functions.
+%apply rp_tp_add_obj { QuantLibAddin::Quote };
+%apply rp_tp_add_obj { QuantLibAddin::SimpleQuote };
 %apply rp_tp_add_obj { QuantLibAddin::Index };
 
 // Data types of objects passed as function parameters to be retrieved from the repository

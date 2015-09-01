@@ -9,7 +9,7 @@
 
 %feature("rp:override_obj");
 
-%feature("rp:generate_countify") QuantLib::SimpleQuote::SimpleQuote;
+%feature("rp:generate_countify") QuantLibAddin::SimpleQuote::SimpleQuote;
 
 namespace QuantLibAddin {
 

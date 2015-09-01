@@ -14,6 +14,7 @@ libCountifyQuantLibAddin_la_SOURCES = \
     cfy_payoffs.cpp \
     cfy_pricingengines.cpp \
     cfy_processes.cpp \
+    cfy_quote.cpp \
     cfy_settings.cpp \
     cfy_termstructures.cpp \
     cfy_utilities.cpp \

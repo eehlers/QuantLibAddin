@@ -6,6 +6,7 @@ noinst_LTLIBRARIES = libValueObjects.la
 this_includedir=${includedir}/${subdir}
 this_include_HEADERS = \
     vo_calendars.hpp \
+    vo_couponvectors.hpp \
     vo_date2.hpp \
     vo_date.hpp \
     vo_daycounters.hpp \
@@ -15,14 +16,15 @@ this_include_HEADERS = \
     vo_indexes.hpp \
     vo_instruments.hpp \
     vo_interpolation.hpp \
+    vo_leg.hpp \
     vo_payoffs.hpp \
     vo_piecewiseyieldcurve.hpp \
     vo_prices.hpp \
     vo_pricingengines.hpp \
     vo_processes.hpp \
-    vo_quote2.hpp \
     vo_quote.hpp \
     vo_ratehelpers.hpp \
+    vo_schedule.hpp \
     vo_settings.hpp \
     vo_termstructures.hpp \
     vo_utilities.hpp \
@@ -30,6 +32,7 @@ this_include_HEADERS = \
 
 libValueObjects_la_SOURCES = \
     vo_calendars.cpp \
+    vo_couponvectors.cpp \
     vo_date2.cpp \
     vo_date.cpp \
     vo_daycounters.cpp \
@@ -39,14 +42,15 @@ libValueObjects_la_SOURCES = \
     vo_indexes.cpp \
     vo_instruments.cpp \
     vo_interpolation.cpp \
+    vo_leg.cpp \
     vo_payoffs.cpp \
     vo_piecewiseyieldcurve.cpp \
     vo_prices.cpp \
     vo_pricingengines.cpp \
     vo_processes.cpp \
-    vo_quote2.cpp \
     vo_quote.cpp \
     vo_ratehelpers.cpp \
+    vo_schedule.cpp \
     vo_settings.cpp \
     vo_termstructures.cpp \
     vo_utilities.cpp \

@@ -19,13 +19,15 @@ this_include_HEADERS = \
     obj_exercise.hpp \
     obj_indexes.hpp \
     obj_instruments.hpp \
+    objmanual_couponvectors.hpp \
     objmanual_date2.hpp \
     objmanual_date.hpp \
     objmanual_handles.hpp \
     objmanual_indexes2.hpp \
     objmanual_interpolation.hpp \
+    objmanual_leg.hpp \
     objmanual_piecewiseyieldcurve.hpp \
-    objmanual_quote2.hpp \
+    objmanual_quote.hpp \
     objmanual_ratehelpers.hpp \
     objmanual_settings.hpp \
     objmanual_utilities.hpp \
@@ -33,10 +35,11 @@ this_include_HEADERS = \
     obj_prices.hpp \
     obj_pricingengines.hpp \
     obj_processes.hpp \
-    obj_quote.hpp \
+    obj_schedule.hpp \
     obj_termstructures.hpp \
     obj_volatilities.hpp \
-    qladdindefines.hpp
+    qladdindefines.hpp \
+    yieldtermstructures.hpp
 
 libAddinObjects_la_SOURCES = \
     init.cpp \
@@ -45,13 +48,15 @@ libAddinObjects_la_SOURCES = \
     obj_exercise.cpp \
     obj_indexes.cpp \
     obj_instruments.cpp \
+    objmanual_couponvectors.cpp \
     objmanual_date2.cpp \
     objmanual_date.cpp \
     objmanual_handles.cpp \
     objmanual_indexes2.cpp \
     objmanual_interpolation.cpp \
+    objmanual_leg.cpp \
     objmanual_piecewiseyieldcurve.cpp \
-    objmanual_quote2.cpp \
+    objmanual_quote.cpp \
     objmanual_ratehelpers.cpp \
     objmanual_settings.cpp \
     objmanual_utilities.cpp \
@@ -59,9 +64,10 @@ libAddinObjects_la_SOURCES = \
     obj_prices.cpp \
     obj_pricingengines.cpp \
     obj_processes.cpp \
-    obj_quote.cpp \
+    obj_schedule.cpp \
     obj_termstructures.cpp \
-    obj_volatilities.cpp
+    obj_volatilities.cpp \
+    yieldtermstructures.cpp
 
 noinst_LTLIBRARIES = libAddinObjects.la
 

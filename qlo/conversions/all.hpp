@@ -46,6 +46,7 @@
 #include <qlo/obj_termstructures.hpp>
 #include <qlo/obj_volatilities.hpp>
 #include <qlo/obj_schedule.hpp>
+#include <qlo/objmanual_couponvectors.hpp>
 
 #endif
 

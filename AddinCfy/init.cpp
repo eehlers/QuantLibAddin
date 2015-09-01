@@ -46,7 +46,7 @@ void initializeAddin() {
 
         // load the euro market
         QuantLibAddin::SerializationFactory::instance().loadObject(
-                "/home/countify/", "data.xml", false, true);
+                "/home/countify/", "data2.xml", false, true);
 
         RP_LOG_MESSAGE("initializeAddin", "initialization done.\n");
         initializationDone = true;

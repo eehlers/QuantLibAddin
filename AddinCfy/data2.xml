@@ -16076,8 +16076,8 @@
 		<px class_id="20" tracking_level="1" version="0" object_id="_1339">
 			<ObjectId>EUR1EON3E10Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E10Y_Quote#0000</element1>
-			<element2>EUREON3E10Y_Quote#0000</element2>
+			<element1>EURAB3E10Y_Quote</element1>
+			<element2>EUREON3E10Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16090,8 +16090,8 @@
 		<px class_id_reference="20" object_id="_1340">
 			<ObjectId>EUR1EON3E11Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E11Y_Quote#0000</element1>
-			<element2>EUREON3E11Y_Quote#0000</element2>
+			<element1>EURAB3E11Y_Quote</element1>
+			<element2>EUREON3E11Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16104,8 +16104,8 @@
 		<px class_id_reference="20" object_id="_1341">
 			<ObjectId>EUR1EON3E12Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E12Y_Quote#0000</element1>
-			<element2>EUREON3E12Y_Quote#0000</element2>
+			<element1>EURAB3E12Y_Quote</element1>
+			<element2>EUREON3E12Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16118,8 +16118,8 @@
 		<px class_id_reference="20" object_id="_1342">
 			<ObjectId>EUR1EON3E13Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E13Y_Quote#0000</element1>
-			<element2>EUREON3E13Y_Quote#0000</element2>
+			<element1>EURAB3E13Y_Quote</element1>
+			<element2>EUREON3E13Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16132,8 +16132,8 @@
 		<px class_id_reference="20" object_id="_1343">
 			<ObjectId>EUR1EON3E14Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E14Y_Quote#0000</element1>
-			<element2>EUREON3E14Y_Quote#0000</element2>
+			<element1>EURAB3E14Y_Quote</element1>
+			<element2>EUREON3E14Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16146,8 +16146,8 @@
 		<px class_id_reference="20" object_id="_1344">
 			<ObjectId>EUR1EON3E15M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E15M_Quote#0000</element1>
-			<element2>EUREON3E15M_Quote#0000</element2>
+			<element1>EURAB3E15M_Quote</element1>
+			<element2>EUREON3E15M_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16160,8 +16160,8 @@
 		<px class_id_reference="20" object_id="_1345">
 			<ObjectId>EUR1EON3E15Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E15Y_Quote#0000</element1>
-			<element2>EUREON3E15Y_Quote#0000</element2>
+			<element1>EURAB3E15Y_Quote</element1>
+			<element2>EUREON3E15Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16174,8 +16174,8 @@
 		<px class_id_reference="20" object_id="_1346">
 			<ObjectId>EUR1EON3E16Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E16Y_Quote#0000</element1>
-			<element2>EUREON3E16Y_Quote#0000</element2>
+			<element1>EURAB3E16Y_Quote</element1>
+			<element2>EUREON3E16Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16188,8 +16188,8 @@
 		<px class_id_reference="20" object_id="_1347">
 			<ObjectId>EUR1EON3E17Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E17Y_Quote#0000</element1>
-			<element2>EUREON3E17Y_Quote#0000</element2>
+			<element1>EURAB3E17Y_Quote</element1>
+			<element2>EUREON3E17Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16202,8 +16202,8 @@
 		<px class_id_reference="20" object_id="_1348">
 			<ObjectId>EUR1EON3E18M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E18M_Quote#0000</element1>
-			<element2>EUREON3E18M_Quote#0000</element2>
+			<element1>EURAB3E18M_Quote</element1>
+			<element2>EUREON3E18M_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16216,8 +16216,8 @@
 		<px class_id_reference="20" object_id="_1349">
 			<ObjectId>EUR1EON3E18Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E18Y_Quote#0000</element1>
-			<element2>EUREON3E18Y_Quote#0000</element2>
+			<element1>EURAB3E18Y_Quote</element1>
+			<element2>EUREON3E18Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16230,8 +16230,8 @@
 		<px class_id_reference="20" object_id="_1350">
 			<ObjectId>EUR1EON3E19Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E19Y_Quote#0000</element1>
-			<element2>EUREON3E19Y_Quote#0000</element2>
+			<element1>EURAB3E19Y_Quote</element1>
+			<element2>EUREON3E19Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16244,8 +16244,8 @@
 		<px class_id_reference="20" object_id="_1351">
 			<ObjectId>EUR1EON3E1Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E1Y_Quote#0000</element1>
-			<element2>EUREON3E1Y_Quote#0000</element2>
+			<element1>EURAB3E1Y_Quote</element1>
+			<element2>EUREON3E1Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16258,8 +16258,8 @@
 		<px class_id_reference="20" object_id="_1352">
 			<ObjectId>EUR1EON3E20Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E20Y_Quote#0000</element1>
-			<element2>EUREON3E20Y_Quote#0000</element2>
+			<element1>EURAB3E20Y_Quote</element1>
+			<element2>EUREON3E20Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16272,8 +16272,8 @@
 		<px class_id_reference="20" object_id="_1353">
 			<ObjectId>EUR1EON3E21M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E21M_Quote#0000</element1>
-			<element2>EUREON3E21M_Quote#0000</element2>
+			<element1>EURAB3E21M_Quote</element1>
+			<element2>EUREON3E21M_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16286,8 +16286,8 @@
 		<px class_id_reference="20" object_id="_1354">
 			<ObjectId>EUR1EON3E21Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E21Y_Quote#0000</element1>
-			<element2>EUREON3E21Y_Quote#0000</element2>
+			<element1>EURAB3E21Y_Quote</element1>
+			<element2>EUREON3E21Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16300,8 +16300,8 @@
 		<px class_id_reference="20" object_id="_1355">
 			<ObjectId>EUR1EON3E22Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E22Y_Quote#0000</element1>
-			<element2>EUREON3E22Y_Quote#0000</element2>
+			<element1>EURAB3E22Y_Quote</element1>
+			<element2>EUREON3E22Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16314,8 +16314,8 @@
 		<px class_id_reference="20" object_id="_1356">
 			<ObjectId>EUR1EON3E23Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E23Y_Quote#0000</element1>
-			<element2>EUREON3E23Y_Quote#0000</element2>
+			<element1>EURAB3E23Y_Quote</element1>
+			<element2>EUREON3E23Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16328,8 +16328,8 @@
 		<px class_id_reference="20" object_id="_1357">
 			<ObjectId>EUR1EON3E24Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E24Y_Quote#0000</element1>
-			<element2>EUREON3E24Y_Quote#0000</element2>
+			<element1>EURAB3E24Y_Quote</element1>
+			<element2>EUREON3E24Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16342,8 +16342,8 @@
 		<px class_id_reference="20" object_id="_1358">
 			<ObjectId>EUR1EON3E25Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E25Y_Quote#0000</element1>
-			<element2>EUREON3E25Y_Quote#0000</element2>
+			<element1>EURAB3E25Y_Quote</element1>
+			<element2>EUREON3E25Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16356,8 +16356,8 @@
 		<px class_id_reference="20" object_id="_1359">
 			<ObjectId>EUR1EON3E26Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E26Y_Quote#0000</element1>
-			<element2>EUREON3E26Y_Quote#0000</element2>
+			<element1>EURAB3E26Y_Quote</element1>
+			<element2>EUREON3E26Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16370,8 +16370,8 @@
 		<px class_id_reference="20" object_id="_1360">
 			<ObjectId>EUR1EON3E27Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E27Y_Quote#0000</element1>
-			<element2>EUREON3E27Y_Quote#0000</element2>
+			<element1>EURAB3E27Y_Quote</element1>
+			<element2>EUREON3E27Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16384,8 +16384,8 @@
 		<px class_id_reference="20" object_id="_1361">
 			<ObjectId>EUR1EON3E28Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E28Y_Quote#0000</element1>
-			<element2>EUREON3E28Y_Quote#0000</element2>
+			<element1>EURAB3E28Y_Quote</element1>
+			<element2>EUREON3E28Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16398,8 +16398,8 @@
 		<px class_id_reference="20" object_id="_1362">
 			<ObjectId>EUR1EON3E29Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E29Y_Quote#0000</element1>
-			<element2>EUREON3E29Y_Quote#0000</element2>
+			<element1>EURAB3E29Y_Quote</element1>
+			<element2>EUREON3E29Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16412,8 +16412,8 @@
 		<px class_id_reference="20" object_id="_1363">
 			<ObjectId>EUR1EON3E2Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E2Y_Quote#0000</element1>
-			<element2>EUREON3E2Y_Quote#0000</element2>
+			<element1>EURAB3E2Y_Quote</element1>
+			<element2>EUREON3E2Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16426,8 +16426,8 @@
 		<px class_id_reference="20" object_id="_1364">
 			<ObjectId>EUR1EON3E30Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E30Y_Quote#0000</element1>
-			<element2>EUREON3E30Y_Quote#0000</element2>
+			<element1>EURAB3E30Y_Quote</element1>
+			<element2>EUREON3E30Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16440,8 +16440,8 @@
 		<px class_id_reference="20" object_id="_1365">
 			<ObjectId>EUR1EON3E35Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E35Y_Quote#0000</element1>
-			<element2>EUREON3E35Y_Quote#0000</element2>
+			<element1>EURAB3E35Y_Quote</element1>
+			<element2>EUREON3E35Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16454,8 +16454,8 @@
 		<px class_id_reference="20" object_id="_1366">
 			<ObjectId>EUR1EON3E3Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E3Y_Quote#0000</element1>
-			<element2>EUREON3E3Y_Quote#0000</element2>
+			<element1>EURAB3E3Y_Quote</element1>
+			<element2>EUREON3E3Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16468,8 +16468,8 @@
 		<px class_id_reference="20" object_id="_1367">
 			<ObjectId>EUR1EON3E40Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E40Y_Quote#0000</element1>
-			<element2>EUREON3E40Y_Quote#0000</element2>
+			<element1>EURAB3E40Y_Quote</element1>
+			<element2>EUREON3E40Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16482,8 +16482,8 @@
 		<px class_id_reference="20" object_id="_1368">
 			<ObjectId>EUR1EON3E4Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E4Y_Quote#0000</element1>
-			<element2>EUREON3E4Y_Quote#0000</element2>
+			<element1>EURAB3E4Y_Quote</element1>
+			<element2>EUREON3E4Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16496,8 +16496,8 @@
 		<px class_id_reference="20" object_id="_1369">
 			<ObjectId>EUR1EON3E50Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E50Y_Quote#0000</element1>
-			<element2>EUREON3E50Y_Quote#0000</element2>
+			<element1>EURAB3E50Y_Quote</element1>
+			<element2>EUREON3E50Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16510,8 +16510,8 @@
 		<px class_id_reference="20" object_id="_1370">
 			<ObjectId>EUR1EON3E5Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E5Y_Quote#0000</element1>
-			<element2>EUREON3E5Y_Quote#0000</element2>
+			<element1>EURAB3E5Y_Quote</element1>
+			<element2>EUREON3E5Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16524,8 +16524,8 @@
 		<px class_id_reference="20" object_id="_1371">
 			<ObjectId>EUR1EON3E60Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E60Y_Quote#0000</element1>
-			<element2>EUREON3E60Y_Quote#0000</element2>
+			<element1>EURAB3E60Y_Quote</element1>
+			<element2>EUREON3E60Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16538,8 +16538,8 @@
 		<px class_id_reference="20" object_id="_1372">
 			<ObjectId>EUR1EON3E6Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E6Y_Quote#0000</element1>
-			<element2>EUREON3E6Y_Quote#0000</element2>
+			<element1>EURAB3E6Y_Quote</element1>
+			<element2>EUREON3E6Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16552,8 +16552,8 @@
 		<px class_id_reference="20" object_id="_1373">
 			<ObjectId>EUR1EON3E7Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E7Y_Quote#0000</element1>
-			<element2>EUREON3E7Y_Quote#0000</element2>
+			<element1>EURAB3E7Y_Quote</element1>
+			<element2>EUREON3E7Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16566,8 +16566,8 @@
 		<px class_id_reference="20" object_id="_1374">
 			<ObjectId>EUR1EON3E8Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E8Y_Quote#0000</element1>
-			<element2>EUREON3E8Y_Quote#0000</element2>
+			<element1>EURAB3E8Y_Quote</element1>
+			<element2>EUREON3E8Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16580,8 +16580,8 @@
 		<px class_id_reference="20" object_id="_1375">
 			<ObjectId>EUR1EON3E9Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB3E9Y_Quote#0000</element1>
-			<element2>EUREON3E9Y_Quote#0000</element2>
+			<element1>EURAB3E9Y_Quote</element1>
+			<element2>EUREON3E9Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16595,7 +16595,7 @@
 			<ObjectId>EURAB12EBASIS10Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E10Y_Quote</element1>
-			<element2>EUR6E12E10Y_Quote#0000</element2>
+			<element2>EUR6E12E10Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16609,7 +16609,7 @@
 			<ObjectId>EURAB12EBASIS11Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E11Y_Quote</element1>
-			<element2>EUR6E12E11Y_Quote#0000</element2>
+			<element2>EUR6E12E11Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16623,7 +16623,7 @@
 			<ObjectId>EURAB12EBASIS12Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E12Y_Quote</element1>
-			<element2>EUR6E12E12Y_Quote#0000</element2>
+			<element2>EUR6E12E12Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16637,7 +16637,7 @@
 			<ObjectId>EURAB12EBASIS13Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E13Y_Quote</element1>
-			<element2>EUR6E12E13Y_Quote#0000</element2>
+			<element2>EUR6E12E13Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16651,7 +16651,7 @@
 			<ObjectId>EURAB12EBASIS14Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E14Y_Quote</element1>
-			<element2>EUR6E12E14Y_Quote#0000</element2>
+			<element2>EUR6E12E14Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16665,7 +16665,7 @@
 			<ObjectId>EURAB12EBASIS15M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E15M_Quote</element1>
-			<element2>EUR6E12E15M_Quote#0000</element2>
+			<element2>EUR6E12E15M_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16679,7 +16679,7 @@
 			<ObjectId>EURAB12EBASIS15Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E15Y_Quote</element1>
-			<element2>EUR6E12E15Y_Quote#0000</element2>
+			<element2>EUR6E12E15Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16693,7 +16693,7 @@
 			<ObjectId>EURAB12EBASIS16Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E16Y_Quote</element1>
-			<element2>EUR6E12E16Y_Quote#0000</element2>
+			<element2>EUR6E12E16Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16707,7 +16707,7 @@
 			<ObjectId>EURAB12EBASIS17Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E17Y_Quote</element1>
-			<element2>EUR6E12E17Y_Quote#0000</element2>
+			<element2>EUR6E12E17Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16721,7 +16721,7 @@
 			<ObjectId>EURAB12EBASIS18M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E18M_Quote</element1>
-			<element2>EUR6E12E18M_Quote#0000</element2>
+			<element2>EUR6E12E18M_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16735,7 +16735,7 @@
 			<ObjectId>EURAB12EBASIS18Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E18Y_Quote</element1>
-			<element2>EUR6E12E18Y_Quote#0000</element2>
+			<element2>EUR6E12E18Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16749,7 +16749,7 @@
 			<ObjectId>EURAB12EBASIS19Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E19Y_Quote</element1>
-			<element2>EUR6E12E19Y_Quote#0000</element2>
+			<element2>EUR6E12E19Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16763,7 +16763,7 @@
 			<ObjectId>EURAB12EBASIS1Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E1Y_Quote</element1>
-			<element2>EUR6E12E1Y_Quote#0000</element2>
+			<element2>EUR6E12E1Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16777,7 +16777,7 @@
 			<ObjectId>EURAB12EBASIS20Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E20Y_Quote</element1>
-			<element2>EUR6E12E20Y_Quote#0000</element2>
+			<element2>EUR6E12E20Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16791,7 +16791,7 @@
 			<ObjectId>EURAB12EBASIS21M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E21M_Quote</element1>
-			<element2>EUR6E12E21M_Quote#0000</element2>
+			<element2>EUR6E12E21M_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16805,7 +16805,7 @@
 			<ObjectId>EURAB12EBASIS21Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E21Y_Quote</element1>
-			<element2>EUR6E12E21Y_Quote#0000</element2>
+			<element2>EUR6E12E21Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16819,7 +16819,7 @@
 			<ObjectId>EURAB12EBASIS22Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E22Y_Quote</element1>
-			<element2>EUR6E12E22Y_Quote#0000</element2>
+			<element2>EUR6E12E22Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16833,7 +16833,7 @@
 			<ObjectId>EURAB12EBASIS23Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E23Y_Quote</element1>
-			<element2>EUR6E12E23Y_Quote#0000</element2>
+			<element2>EUR6E12E23Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16847,7 +16847,7 @@
 			<ObjectId>EURAB12EBASIS24Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E24Y_Quote</element1>
-			<element2>EUR6E12E24Y_Quote#0000</element2>
+			<element2>EUR6E12E24Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16861,7 +16861,7 @@
 			<ObjectId>EURAB12EBASIS25Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E25Y_Quote</element1>
-			<element2>EUR6E12E25Y_Quote#0000</element2>
+			<element2>EUR6E12E25Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16875,7 +16875,7 @@
 			<ObjectId>EURAB12EBASIS26Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E26Y_Quote</element1>
-			<element2>EUR6E12E26Y_Quote#0000</element2>
+			<element2>EUR6E12E26Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16889,7 +16889,7 @@
 			<ObjectId>EURAB12EBASIS27Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E27Y_Quote</element1>
-			<element2>EUR6E12E27Y_Quote#0000</element2>
+			<element2>EUR6E12E27Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16903,7 +16903,7 @@
 			<ObjectId>EURAB12EBASIS28Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E28Y_Quote</element1>
-			<element2>EUR6E12E28Y_Quote#0000</element2>
+			<element2>EUR6E12E28Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16917,7 +16917,7 @@
 			<ObjectId>EURAB12EBASIS29Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E29Y_Quote</element1>
-			<element2>EUR6E12E29Y_Quote#0000</element2>
+			<element2>EUR6E12E29Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16931,7 +16931,7 @@
 			<ObjectId>EURAB12EBASIS2Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E2Y_Quote</element1>
-			<element2>EUR6E12E2Y_Quote#0000</element2>
+			<element2>EUR6E12E2Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16945,7 +16945,7 @@
 			<ObjectId>EURAB12EBASIS30Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E30Y_Quote</element1>
-			<element2>EUR6E12E30Y_Quote#0000</element2>
+			<element2>EUR6E12E30Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16959,7 +16959,7 @@
 			<ObjectId>EURAB12EBASIS35Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E35Y_Quote</element1>
-			<element2>EUR6E12E35Y_Quote#0000</element2>
+			<element2>EUR6E12E35Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16973,7 +16973,7 @@
 			<ObjectId>EURAB12EBASIS3Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E3Y_Quote</element1>
-			<element2>EUR6E12E3Y_Quote#0000</element2>
+			<element2>EUR6E12E3Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -16987,7 +16987,7 @@
 			<ObjectId>EURAB12EBASIS40Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E40Y_Quote</element1>
-			<element2>EUR6E12E40Y_Quote#0000</element2>
+			<element2>EUR6E12E40Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17001,7 +17001,7 @@
 			<ObjectId>EURAB12EBASIS4Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E4Y_Quote</element1>
-			<element2>EUR6E12E4Y_Quote#0000</element2>
+			<element2>EUR6E12E4Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17015,7 +17015,7 @@
 			<ObjectId>EURAB12EBASIS50Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E50Y_Quote</element1>
-			<element2>EUR6E12E50Y_Quote#0000</element2>
+			<element2>EUR6E12E50Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17029,7 +17029,7 @@
 			<ObjectId>EURAB12EBASIS5Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E5Y_Quote</element1>
-			<element2>EUR6E12E5Y_Quote#0000</element2>
+			<element2>EUR6E12E5Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17043,7 +17043,7 @@
 			<ObjectId>EURAB12EBASIS60Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E60Y_Quote</element1>
-			<element2>EUR6E12E60Y_Quote#0000</element2>
+			<element2>EUR6E12E60Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17057,7 +17057,7 @@
 			<ObjectId>EURAB12EBASIS6Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E6Y_Quote</element1>
-			<element2>EUR6E12E6Y_Quote#0000</element2>
+			<element2>EUR6E12E6Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17071,7 +17071,7 @@
 			<ObjectId>EURAB12EBASIS7Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E7Y_Quote</element1>
-			<element2>EUR6E12E7Y_Quote#0000</element2>
+			<element2>EUR6E12E7Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17085,7 +17085,7 @@
 			<ObjectId>EURAB12EBASIS8Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E8Y_Quote</element1>
-			<element2>EUR6E12E8Y_Quote#0000</element2>
+			<element2>EUR6E12E8Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17099,7 +17099,7 @@
 			<ObjectId>EURAB12EBASIS9Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
 			<element1>EURAB6E9Y_Quote</element1>
-			<element2>EUR6E12E9Y_Quote#0000</element2>
+			<element2>EUR6E12E9Y_Quote</element2>
 			<op>+</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17112,8 +17112,8 @@
 		<px class_id_reference="20" object_id="_1413">
 			<ObjectId>EURAB1EBASIS10Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E10Y_Quote#0000</element1>
-			<element2>EUR1E6E10Y_Quote#0000</element2>
+			<element1>EURAB6E10Y_Quote</element1>
+			<element2>EUR1E6E10Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17126,8 +17126,8 @@
 		<px class_id_reference="20" object_id="_1414">
 			<ObjectId>EURAB1EBASIS11Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E11Y_Quote#0000</element1>
-			<element2>EUR1E6E11Y_Quote#0000</element2>
+			<element1>EURAB6E11Y_Quote</element1>
+			<element2>EUR1E6E11Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17140,8 +17140,8 @@
 		<px class_id_reference="20" object_id="_1415">
 			<ObjectId>EURAB1EBASIS12Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E12Y_Quote#0000</element1>
-			<element2>EUR1E6E12Y_Quote#0000</element2>
+			<element1>EURAB6E12Y_Quote</element1>
+			<element2>EUR1E6E12Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17154,8 +17154,8 @@
 		<px class_id_reference="20" object_id="_1416">
 			<ObjectId>EURAB1EBASIS13Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E13Y_Quote#0000</element1>
-			<element2>EUR1E6E13Y_Quote#0000</element2>
+			<element1>EURAB6E13Y_Quote</element1>
+			<element2>EUR1E6E13Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17168,8 +17168,8 @@
 		<px class_id_reference="20" object_id="_1417">
 			<ObjectId>EURAB1EBASIS14Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E14Y_Quote#0000</element1>
-			<element2>EUR1E6E14Y_Quote#0000</element2>
+			<element1>EURAB6E14Y_Quote</element1>
+			<element2>EUR1E6E14Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17182,8 +17182,8 @@
 		<px class_id_reference="20" object_id="_1418">
 			<ObjectId>EURAB1EBASIS15M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E15M_Quote#0000</element1>
-			<element2>EUR1E6E15M_Quote#0000</element2>
+			<element1>EURAB6E15M_Quote</element1>
+			<element2>EUR1E6E15M_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17196,8 +17196,8 @@
 		<px class_id_reference="20" object_id="_1419">
 			<ObjectId>EURAB1EBASIS15Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E15Y_Quote#0000</element1>
-			<element2>EUR1E6E15Y_Quote#0000</element2>
+			<element1>EURAB6E15Y_Quote</element1>
+			<element2>EUR1E6E15Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17210,8 +17210,8 @@
 		<px class_id_reference="20" object_id="_1420">
 			<ObjectId>EURAB1EBASIS16Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E16Y_Quote#0000</element1>
-			<element2>EUR1E6E16Y_Quote#0000</element2>
+			<element1>EURAB6E16Y_Quote</element1>
+			<element2>EUR1E6E16Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17224,8 +17224,8 @@
 		<px class_id_reference="20" object_id="_1421">
 			<ObjectId>EURAB1EBASIS17Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E17Y_Quote#0000</element1>
-			<element2>EUR1E6E17Y_Quote#0000</element2>
+			<element1>EURAB6E17Y_Quote</element1>
+			<element2>EUR1E6E17Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17238,8 +17238,8 @@
 		<px class_id_reference="20" object_id="_1422">
 			<ObjectId>EURAB1EBASIS18M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E18M_Quote#0000</element1>
-			<element2>EUR1E6E18M_Quote#0000</element2>
+			<element1>EURAB6E18M_Quote</element1>
+			<element2>EUR1E6E18M_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17252,8 +17252,8 @@
 		<px class_id_reference="20" object_id="_1423">
 			<ObjectId>EURAB1EBASIS18Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E18Y_Quote#0000</element1>
-			<element2>EUR1E6E18Y_Quote#0000</element2>
+			<element1>EURAB6E18Y_Quote</element1>
+			<element2>EUR1E6E18Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17266,8 +17266,8 @@
 		<px class_id_reference="20" object_id="_1424">
 			<ObjectId>EURAB1EBASIS19Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E19Y_Quote#0000</element1>
-			<element2>EUR1E6E19Y_Quote#0000</element2>
+			<element1>EURAB6E19Y_Quote</element1>
+			<element2>EUR1E6E19Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17280,8 +17280,8 @@
 		<px class_id_reference="20" object_id="_1425">
 			<ObjectId>EURAB1EBASIS1Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E1Y_Quote#0000</element1>
-			<element2>EUR1E6E1Y_Quote#0000</element2>
+			<element1>EURAB6E1Y_Quote</element1>
+			<element2>EUR1E6E1Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17294,8 +17294,8 @@
 		<px class_id_reference="20" object_id="_1426">
 			<ObjectId>EURAB1EBASIS20Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E20Y_Quote#0000</element1>
-			<element2>EUR1E6E20Y_Quote#0000</element2>
+			<element1>EURAB6E20Y_Quote</element1>
+			<element2>EUR1E6E20Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17308,8 +17308,8 @@
 		<px class_id_reference="20" object_id="_1427">
 			<ObjectId>EURAB1EBASIS21M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E21M_Quote#0000</element1>
-			<element2>EUR1E6E21M_Quote#0000</element2>
+			<element1>EURAB6E21M_Quote</element1>
+			<element2>EUR1E6E21M_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17322,8 +17322,8 @@
 		<px class_id_reference="20" object_id="_1428">
 			<ObjectId>EURAB1EBASIS21Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E21Y_Quote#0000</element1>
-			<element2>EUR1E6E21Y_Quote#0000</element2>
+			<element1>EURAB6E21Y_Quote</element1>
+			<element2>EUR1E6E21Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17336,8 +17336,8 @@
 		<px class_id_reference="20" object_id="_1429">
 			<ObjectId>EURAB1EBASIS22Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E22Y_Quote#0000</element1>
-			<element2>EUR1E6E22Y_Quote#0000</element2>
+			<element1>EURAB6E22Y_Quote</element1>
+			<element2>EUR1E6E22Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17350,8 +17350,8 @@
 		<px class_id_reference="20" object_id="_1430">
 			<ObjectId>EURAB1EBASIS23Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E23Y_Quote#0000</element1>
-			<element2>EUR1E6E23Y_Quote#0000</element2>
+			<element1>EURAB6E23Y_Quote</element1>
+			<element2>EUR1E6E23Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17364,8 +17364,8 @@
 		<px class_id_reference="20" object_id="_1431">
 			<ObjectId>EURAB1EBASIS24Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E24Y_Quote#0000</element1>
-			<element2>EUR1E6E24Y_Quote#0000</element2>
+			<element1>EURAB6E24Y_Quote</element1>
+			<element2>EUR1E6E24Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17378,8 +17378,8 @@
 		<px class_id_reference="20" object_id="_1432">
 			<ObjectId>EURAB1EBASIS25Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E25Y_Quote#0000</element1>
-			<element2>EUR1E6E25Y_Quote#0000</element2>
+			<element1>EURAB6E25Y_Quote</element1>
+			<element2>EUR1E6E25Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17392,8 +17392,8 @@
 		<px class_id_reference="20" object_id="_1433">
 			<ObjectId>EURAB1EBASIS26Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E26Y_Quote#0000</element1>
-			<element2>EUR1E6E26Y_Quote#0000</element2>
+			<element1>EURAB6E26Y_Quote</element1>
+			<element2>EUR1E6E26Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17406,8 +17406,8 @@
 		<px class_id_reference="20" object_id="_1434">
 			<ObjectId>EURAB1EBASIS27Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E27Y_Quote#0000</element1>
-			<element2>EUR1E6E27Y_Quote#0000</element2>
+			<element1>EURAB6E27Y_Quote</element1>
+			<element2>EUR1E6E27Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17420,8 +17420,8 @@
 		<px class_id_reference="20" object_id="_1435">
 			<ObjectId>EURAB1EBASIS28Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E28Y_Quote#0000</element1>
-			<element2>EUR1E6E28Y_Quote#0000</element2>
+			<element1>EURAB6E28Y_Quote</element1>
+			<element2>EUR1E6E28Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17434,8 +17434,8 @@
 		<px class_id_reference="20" object_id="_1436">
 			<ObjectId>EURAB1EBASIS29Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E29Y_Quote#0000</element1>
-			<element2>EUR1E6E29Y_Quote#0000</element2>
+			<element1>EURAB6E29Y_Quote</element1>
+			<element2>EUR1E6E29Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17448,8 +17448,8 @@
 		<px class_id_reference="20" object_id="_1437">
 			<ObjectId>EURAB1EBASIS2Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E2Y_Quote#0000</element1>
-			<element2>EUR1E6E2Y_Quote#0000</element2>
+			<element1>EURAB6E2Y_Quote</element1>
+			<element2>EUR1E6E2Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17462,8 +17462,8 @@
 		<px class_id_reference="20" object_id="_1438">
 			<ObjectId>EURAB1EBASIS30Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E30Y_Quote#0000</element1>
-			<element2>EUR1E6E30Y_Quote#0000</element2>
+			<element1>EURAB6E30Y_Quote</element1>
+			<element2>EUR1E6E30Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17476,8 +17476,8 @@
 		<px class_id_reference="20" object_id="_1439">
 			<ObjectId>EURAB1EBASIS35Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E35Y_Quote#0000</element1>
-			<element2>EUR1E6E35Y_Quote#0000</element2>
+			<element1>EURAB6E35Y_Quote</element1>
+			<element2>EUR1E6E35Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17490,8 +17490,8 @@
 		<px class_id_reference="20" object_id="_1440">
 			<ObjectId>EURAB1EBASIS3Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E3Y_Quote#0000</element1>
-			<element2>EUR1E6E3Y_Quote#0000</element2>
+			<element1>EURAB6E3Y_Quote</element1>
+			<element2>EUR1E6E3Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17504,8 +17504,8 @@
 		<px class_id_reference="20" object_id="_1441">
 			<ObjectId>EURAB1EBASIS40Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E40Y_Quote#0000</element1>
-			<element2>EUR1E6E40Y_Quote#0000</element2>
+			<element1>EURAB6E40Y_Quote</element1>
+			<element2>EUR1E6E40Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17518,8 +17518,8 @@
 		<px class_id_reference="20" object_id="_1442">
 			<ObjectId>EURAB1EBASIS4Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E4Y_Quote#0000</element1>
-			<element2>EUR1E6E4Y_Quote#0000</element2>
+			<element1>EURAB6E4Y_Quote</element1>
+			<element2>EUR1E6E4Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17532,8 +17532,8 @@
 		<px class_id_reference="20" object_id="_1443">
 			<ObjectId>EURAB1EBASIS50Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E50Y_Quote#0000</element1>
-			<element2>EUR1E6E50Y_Quote#0000</element2>
+			<element1>EURAB6E50Y_Quote</element1>
+			<element2>EUR1E6E50Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17546,8 +17546,8 @@
 		<px class_id_reference="20" object_id="_1444">
 			<ObjectId>EURAB1EBASIS5Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E5Y_Quote#0000</element1>
-			<element2>EUR1E6E5Y_Quote#0000</element2>
+			<element1>EURAB6E5Y_Quote</element1>
+			<element2>EUR1E6E5Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17560,8 +17560,8 @@
 		<px class_id_reference="20" object_id="_1445">
 			<ObjectId>EURAB1EBASIS60Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E60Y_Quote#0000</element1>
-			<element2>EUR1E6E60Y_Quote#0000</element2>
+			<element1>EURAB6E60Y_Quote</element1>
+			<element2>EUR1E6E60Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17574,8 +17574,8 @@
 		<px class_id_reference="20" object_id="_1446">
 			<ObjectId>EURAB1EBASIS6Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E6Y_Quote#0000</element1>
-			<element2>EUR1E6E6Y_Quote#0000</element2>
+			<element1>EURAB6E6Y_Quote</element1>
+			<element2>EUR1E6E6Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17588,8 +17588,8 @@
 		<px class_id_reference="20" object_id="_1447">
 			<ObjectId>EURAB1EBASIS7Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E7Y_Quote#0000</element1>
-			<element2>EUR1E6E7Y_Quote#0000</element2>
+			<element1>EURAB6E7Y_Quote</element1>
+			<element2>EUR1E6E7Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17602,8 +17602,8 @@
 		<px class_id_reference="20" object_id="_1448">
 			<ObjectId>EURAB1EBASIS8Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E8Y_Quote#0000</element1>
-			<element2>EUR1E6E8Y_Quote#0000</element2>
+			<element1>EURAB6E8Y_Quote</element1>
+			<element2>EUR1E6E8Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17616,8 +17616,8 @@
 		<px class_id_reference="20" object_id="_1449">
 			<ObjectId>EURAB1EBASIS9Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E9Y_Quote#0000</element1>
-			<element2>EUR1E6E9Y_Quote#0000</element2>
+			<element1>EURAB6E9Y_Quote</element1>
+			<element2>EUR1E6E9Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17630,8 +17630,8 @@
 		<px class_id_reference="20" object_id="_1450">
 			<ObjectId>EURAB3EBASIS10Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E10Y_Quote#0000</element1>
-			<element2>EUR3E6E10Y_Quote#0000</element2>
+			<element1>EURAB6E10Y_Quote</element1>
+			<element2>EUR3E6E10Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17644,8 +17644,8 @@
 		<px class_id_reference="20" object_id="_1451">
 			<ObjectId>EURAB3EBASIS11Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E11Y_Quote#0000</element1>
-			<element2>EUR3E6E11Y_Quote#0000</element2>
+			<element1>EURAB6E11Y_Quote</element1>
+			<element2>EUR3E6E11Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17658,8 +17658,8 @@
 		<px class_id_reference="20" object_id="_1452">
 			<ObjectId>EURAB3EBASIS12Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E12Y_Quote#0000</element1>
-			<element2>EUR3E6E12Y_Quote#0000</element2>
+			<element1>EURAB6E12Y_Quote</element1>
+			<element2>EUR3E6E12Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17672,8 +17672,8 @@
 		<px class_id_reference="20" object_id="_1453">
 			<ObjectId>EURAB3EBASIS13Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E13Y_Quote#0000</element1>
-			<element2>EUR3E6E13Y_Quote#0000</element2>
+			<element1>EURAB6E13Y_Quote</element1>
+			<element2>EUR3E6E13Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17686,8 +17686,8 @@
 		<px class_id_reference="20" object_id="_1454">
 			<ObjectId>EURAB3EBASIS14Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E14Y_Quote#0000</element1>
-			<element2>EUR3E6E14Y_Quote#0000</element2>
+			<element1>EURAB6E14Y_Quote</element1>
+			<element2>EUR3E6E14Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17700,8 +17700,8 @@
 		<px class_id_reference="20" object_id="_1455">
 			<ObjectId>EURAB3EBASIS15M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E15M_Quote#0000</element1>
-			<element2>EUR3E6E15M_Quote#0000</element2>
+			<element1>EURAB6E15M_Quote</element1>
+			<element2>EUR3E6E15M_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17714,8 +17714,8 @@
 		<px class_id_reference="20" object_id="_1456">
 			<ObjectId>EURAB3EBASIS15Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E15Y_Quote#0000</element1>
-			<element2>EUR3E6E15Y_Quote#0000</element2>
+			<element1>EURAB6E15Y_Quote</element1>
+			<element2>EUR3E6E15Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17728,8 +17728,8 @@
 		<px class_id_reference="20" object_id="_1457">
 			<ObjectId>EURAB3EBASIS16Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E16Y_Quote#0000</element1>
-			<element2>EUR3E6E16Y_Quote#0000</element2>
+			<element1>EURAB6E16Y_Quote</element1>
+			<element2>EUR3E6E16Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17742,8 +17742,8 @@
 		<px class_id_reference="20" object_id="_1458">
 			<ObjectId>EURAB3EBASIS17Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E17Y_Quote#0000</element1>
-			<element2>EUR3E6E17Y_Quote#0000</element2>
+			<element1>EURAB6E17Y_Quote</element1>
+			<element2>EUR3E6E17Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17756,8 +17756,8 @@
 		<px class_id_reference="20" object_id="_1459">
 			<ObjectId>EURAB3EBASIS18M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E18M_Quote#0000</element1>
-			<element2>EUR3E6E18M_Quote#0000</element2>
+			<element1>EURAB6E18M_Quote</element1>
+			<element2>EUR3E6E18M_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17770,8 +17770,8 @@
 		<px class_id_reference="20" object_id="_1460">
 			<ObjectId>EURAB3EBASIS18Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E18Y_Quote#0000</element1>
-			<element2>EUR3E6E18Y_Quote#0000</element2>
+			<element1>EURAB6E18Y_Quote</element1>
+			<element2>EUR3E6E18Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17784,8 +17784,8 @@
 		<px class_id_reference="20" object_id="_1461">
 			<ObjectId>EURAB3EBASIS19Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E19Y_Quote#0000</element1>
-			<element2>EUR3E6E19Y_Quote#0000</element2>
+			<element1>EURAB6E19Y_Quote</element1>
+			<element2>EUR3E6E19Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17798,8 +17798,8 @@
 		<px class_id_reference="20" object_id="_1462">
 			<ObjectId>EURAB3EBASIS1Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E1Y_Quote#0000</element1>
-			<element2>EUR3E6E1Y_Quote#0000</element2>
+			<element1>EURAB6E1Y_Quote</element1>
+			<element2>EUR3E6E1Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17812,8 +17812,8 @@
 		<px class_id_reference="20" object_id="_1463">
 			<ObjectId>EURAB3EBASIS20Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E20Y_Quote#0000</element1>
-			<element2>EUR3E6E20Y_Quote#0000</element2>
+			<element1>EURAB6E20Y_Quote</element1>
+			<element2>EUR3E6E20Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17826,8 +17826,8 @@
 		<px class_id_reference="20" object_id="_1464">
 			<ObjectId>EURAB3EBASIS21M_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E21M_Quote#0000</element1>
-			<element2>EUR3E6E21M_Quote#0000</element2>
+			<element1>EURAB6E21M_Quote</element1>
+			<element2>EUR3E6E21M_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17840,8 +17840,8 @@
 		<px class_id_reference="20" object_id="_1465">
 			<ObjectId>EURAB3EBASIS21Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E21Y_Quote#0000</element1>
-			<element2>EUR3E6E21Y_Quote#0000</element2>
+			<element1>EURAB6E21Y_Quote</element1>
+			<element2>EUR3E6E21Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17854,8 +17854,8 @@
 		<px class_id_reference="20" object_id="_1466">
 			<ObjectId>EURAB3EBASIS22Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E22Y_Quote#0000</element1>
-			<element2>EUR3E6E22Y_Quote#0000</element2>
+			<element1>EURAB6E22Y_Quote</element1>
+			<element2>EUR3E6E22Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17868,8 +17868,8 @@
 		<px class_id_reference="20" object_id="_1467">
 			<ObjectId>EURAB3EBASIS23Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E23Y_Quote#0000</element1>
-			<element2>EUR3E6E23Y_Quote#0000</element2>
+			<element1>EURAB6E23Y_Quote</element1>
+			<element2>EUR3E6E23Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17882,8 +17882,8 @@
 		<px class_id_reference="20" object_id="_1468">
 			<ObjectId>EURAB3EBASIS24Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E24Y_Quote#0000</element1>
-			<element2>EUR3E6E24Y_Quote#0000</element2>
+			<element1>EURAB6E24Y_Quote</element1>
+			<element2>EUR3E6E24Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17896,8 +17896,8 @@
 		<px class_id_reference="20" object_id="_1469">
 			<ObjectId>EURAB3EBASIS25Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E25Y_Quote#0000</element1>
-			<element2>EUR3E6E25Y_Quote#0000</element2>
+			<element1>EURAB6E25Y_Quote</element1>
+			<element2>EUR3E6E25Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17910,8 +17910,8 @@
 		<px class_id_reference="20" object_id="_1470">
 			<ObjectId>EURAB3EBASIS26Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E26Y_Quote#0000</element1>
-			<element2>EUR3E6E26Y_Quote#0000</element2>
+			<element1>EURAB6E26Y_Quote</element1>
+			<element2>EUR3E6E26Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17924,8 +17924,8 @@
 		<px class_id_reference="20" object_id="_1471">
 			<ObjectId>EURAB3EBASIS27Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E27Y_Quote#0000</element1>
-			<element2>EUR3E6E27Y_Quote#0000</element2>
+			<element1>EURAB6E27Y_Quote</element1>
+			<element2>EUR3E6E27Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17938,8 +17938,8 @@
 		<px class_id_reference="20" object_id="_1472">
 			<ObjectId>EURAB3EBASIS28Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E28Y_Quote#0000</element1>
-			<element2>EUR3E6E28Y_Quote#0000</element2>
+			<element1>EURAB6E28Y_Quote</element1>
+			<element2>EUR3E6E28Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17952,8 +17952,8 @@
 		<px class_id_reference="20" object_id="_1473">
 			<ObjectId>EURAB3EBASIS29Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E29Y_Quote#0000</element1>
-			<element2>EUR3E6E29Y_Quote#0000</element2>
+			<element1>EURAB6E29Y_Quote</element1>
+			<element2>EUR3E6E29Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17966,8 +17966,8 @@
 		<px class_id_reference="20" object_id="_1474">
 			<ObjectId>EURAB3EBASIS2Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E2Y_Quote#0000</element1>
-			<element2>EUR3E6E2Y_Quote#0000</element2>
+			<element1>EURAB6E2Y_Quote</element1>
+			<element2>EUR3E6E2Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17980,8 +17980,8 @@
 		<px class_id_reference="20" object_id="_1475">
 			<ObjectId>EURAB3EBASIS30Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E30Y_Quote#0000</element1>
-			<element2>EUR3E6E30Y_Quote#0000</element2>
+			<element1>EURAB6E30Y_Quote</element1>
+			<element2>EUR3E6E30Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -17994,8 +17994,8 @@
 		<px class_id_reference="20" object_id="_1476">
 			<ObjectId>EURAB3EBASIS35Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E35Y_Quote#0000</element1>
-			<element2>EUR3E6E35Y_Quote#0000</element2>
+			<element1>EURAB6E35Y_Quote</element1>
+			<element2>EUR3E6E35Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18008,8 +18008,8 @@
 		<px class_id_reference="20" object_id="_1477">
 			<ObjectId>EURAB3EBASIS3Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E3Y_Quote#0000</element1>
-			<element2>EUR3E6E3Y_Quote#0000</element2>
+			<element1>EURAB6E3Y_Quote</element1>
+			<element2>EUR3E6E3Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18022,8 +18022,8 @@
 		<px class_id_reference="20" object_id="_1478">
 			<ObjectId>EURAB3EBASIS40Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E40Y_Quote#0000</element1>
-			<element2>EUR3E6E40Y_Quote#0000</element2>
+			<element1>EURAB6E40Y_Quote</element1>
+			<element2>EUR3E6E40Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18036,8 +18036,8 @@
 		<px class_id_reference="20" object_id="_1479">
 			<ObjectId>EURAB3EBASIS4Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E4Y_Quote#0000</element1>
-			<element2>EUR3E6E4Y_Quote#0000</element2>
+			<element1>EURAB6E4Y_Quote</element1>
+			<element2>EUR3E6E4Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18050,8 +18050,8 @@
 		<px class_id_reference="20" object_id="_1480">
 			<ObjectId>EURAB3EBASIS50Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E50Y_Quote#0000</element1>
-			<element2>EUR3E6E50Y_Quote#0000</element2>
+			<element1>EURAB6E50Y_Quote</element1>
+			<element2>EUR3E6E50Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18064,8 +18064,8 @@
 		<px class_id_reference="20" object_id="_1481">
 			<ObjectId>EURAB3EBASIS5Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E5Y_Quote#0000</element1>
-			<element2>EUR3E6E5Y_Quote#0000</element2>
+			<element1>EURAB6E5Y_Quote</element1>
+			<element2>EUR3E6E5Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18078,8 +18078,8 @@
 		<px class_id_reference="20" object_id="_1482">
 			<ObjectId>EURAB3EBASIS60Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E60Y_Quote#0000</element1>
-			<element2>EUR3E6E60Y_Quote#0000</element2>
+			<element1>EURAB6E60Y_Quote</element1>
+			<element2>EUR3E6E60Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18092,8 +18092,8 @@
 		<px class_id_reference="20" object_id="_1483">
 			<ObjectId>EURAB3EBASIS6Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E6Y_Quote#0000</element1>
-			<element2>EUR3E6E6Y_Quote#0000</element2>
+			<element1>EURAB6E6Y_Quote</element1>
+			<element2>EUR3E6E6Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18106,8 +18106,8 @@
 		<px class_id_reference="20" object_id="_1484">
 			<ObjectId>EURAB3EBASIS7Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E7Y_Quote#0000</element1>
-			<element2>EUR3E6E7Y_Quote#0000</element2>
+			<element1>EURAB6E7Y_Quote</element1>
+			<element2>EUR3E6E7Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18120,8 +18120,8 @@
 		<px class_id_reference="20" object_id="_1485">
 			<ObjectId>EURAB3EBASIS8Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E8Y_Quote#0000</element1>
-			<element2>EUR3E6E8Y_Quote#0000</element2>
+			<element1>EURAB6E8Y_Quote</element1>
+			<element2>EUR3E6E8Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18134,8 +18134,8 @@
 		<px class_id_reference="20" object_id="_1486">
 			<ObjectId>EURAB3EBASIS9Y_Quote</ObjectId>
 			<ClassName>qlCompositeQuote</ClassName>
-			<element1>EURAB6E9Y_Quote#0000</element1>
-			<element2>EUR3E6E9Y_Quote#0000</element2>
+			<element1>EURAB6E9Y_Quote</element1>
+			<element2>EUR3E6E9Y_Quote</element2>
 			<op>-</op>
 			<Permanent>0</Permanent>
 			<UserProperties>
@@ -18157,7 +18157,7 @@
 					<first>CurrentLink</first>
 					<second class_id="34" tracking_level="0" version="0">
 						<which>2</which>
-						<value>_EURYC1M#0000</value>
+						<value>_EURYC1M</value>
 					</second>
 				</item>
 			</UserProperties>
@@ -18176,7 +18176,7 @@
 					<first>CurrentLink</first>
 					<second>
 						<which>2</which>
-						<value>_EURYC1Y#0000</value>
+						<value>_EURYC1Y</value>
 					</second>
 				</item>
 			</UserProperties>
@@ -18195,7 +18195,7 @@
 					<first>CurrentLink</first>
 					<second>
 						<which>2</which>
-						<value>_EURYC3M#0000</value>
+						<value>_EURYC3M</value>
 					</second>
 				</item>
 			</UserProperties>
@@ -18214,7 +18214,7 @@
 					<first>CurrentLink</first>
 					<second>
 						<which>2</which>
-						<value>_EURYC6M#0000</value>
+						<value>_EURYC6M</value>
 					</second>
 				</item>
 			</UserProperties>
@@ -18233,7 +18233,7 @@
 					<first>CurrentLink</first>
 					<second>
 						<which>2</which>
-						<value>_EURYCON#0000</value>
+						<value>_EURYCON</value>
 					</second>
 				</item>
 			</UserProperties>
@@ -18252,7 +18252,7 @@
 					<first>CurrentLink</first>
 					<second>
 						<which>2</which>
-						<value>_EURYCSTD#0000</value>
+						<value>_EURYCSTD</value>
 					</second>
 				</item>
 			</UserProperties>
@@ -20290,7 +20290,7 @@
 				<value>42529</value>
 			</endDate>
 			<fixedRate>EURECBOISAPR16_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -20315,7 +20315,7 @@
 				<value>42395</value>
 			</endDate>
 			<fixedRate>EURECBOISDEC15_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -20340,7 +20340,7 @@
 				<value>42445</value>
 			</endDate>
 			<fixedRate>EURECBOISJAN16_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -20365,7 +20365,7 @@
 				<value>42256</value>
 			</endDate>
 			<fixedRate>EURECBOISJUL15_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -20390,7 +20390,7 @@
 				<value>42207</value>
 			</endDate>
 			<fixedRate>EURECBOISJUN15_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -20415,7 +20415,7 @@
 				<value>42487</value>
 			</endDate>
 			<fixedRate>EURECBOISMAR16_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -20440,7 +20440,7 @@
 				<value>42347</value>
 			</endDate>
 			<fixedRate>EURECBOISOCT15_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -20465,7 +20465,7 @@
 				<value>42305</value>
 			</endDate>
 			<fixedRate>EURECBOISSEP15_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -20521,7 +20521,7 @@
 			<ObjectId>EUR4MD_Quote_rh</ObjectId>
 			<ClassName>qlDepositRateHelper</ClassName>
 			<rate>EUR4MD_Quote</rate>
-			<iborIndex>idx6#0000</iborIndex>
+			<iborIndex>idx6</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -20534,7 +20534,7 @@
 			<ObjectId>EUR5MD_Quote_rh</ObjectId>
 			<ClassName>qlDepositRateHelper</ClassName>
 			<rate>EUR5MD_Quote</rate>
-			<iborIndex>idx7#0000</iborIndex>
+			<iborIndex>idx7</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -22935,7 +22935,7 @@
 		<px class_id="18" tracking_level="1" version="0" object_id="_1740">
 			<ObjectId>EoniaLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>Eonia#0000</index>
+			<index>Eonia</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -22947,7 +22947,7 @@
 		<px class_id_reference="18" object_id="_1741">
 			<ObjectId>Euribor1MLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>Euribor1M#0000</index>
+			<index>Euribor1M</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -22959,7 +22959,7 @@
 		<px class_id_reference="18" object_id="_1742">
 			<ObjectId>Euribor1YLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>Euribor1Y#0000</index>
+			<index>Euribor1Y</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -22971,7 +22971,7 @@
 		<px class_id_reference="18" object_id="_1743">
 			<ObjectId>Euribor2MLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>Euribor2M#0000</index>
+			<index>Euribor2M</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -22983,7 +22983,7 @@
 		<px class_id_reference="18" object_id="_1744">
 			<ObjectId>Euribor2WLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>Euribor2W#0000</index>
+			<index>Euribor2W</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -22995,7 +22995,7 @@
 		<px class_id_reference="18" object_id="_1745">
 			<ObjectId>Euribor3MLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>Euribor3M#0000</index>
+			<index>Euribor3M</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -23007,7 +23007,7 @@
 		<px class_id_reference="18" object_id="_1746">
 			<ObjectId>Euribor6MLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>Euribor6M#0000</index>
+			<index>Euribor6M</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -23019,7 +23019,7 @@
 		<px class_id_reference="18" object_id="_1747">
 			<ObjectId>Euribor9MLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>Euribor9M#0000</index>
+			<index>Euribor9M</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -23031,7 +23031,7 @@
 		<px class_id_reference="18" object_id="_1748">
 			<ObjectId>EuriborSWLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>EuriborSW#0000</index>
+			<index>EuriborSW</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -23046,7 +23046,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>10M</tenor>
 			<fixedRate>EUREON10M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23065,7 +23065,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>10Y</tenor>
 			<fixedRate>EUREON10Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23084,7 +23084,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>11M</tenor>
 			<fixedRate>EUREON11M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23103,7 +23103,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>11Y</tenor>
 			<fixedRate>EUREON11Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23122,7 +23122,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>12Y</tenor>
 			<fixedRate>EUREON12Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23141,7 +23141,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>15M</tenor>
 			<fixedRate>EUREON15M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23160,7 +23160,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>15Y</tenor>
 			<fixedRate>EUREON15Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23179,7 +23179,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>18M</tenor>
 			<fixedRate>EUREON18M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23198,7 +23198,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>1M</tenor>
 			<fixedRate>EUREON1M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23217,7 +23217,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>1Y</tenor>
 			<fixedRate>EUREON1Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23236,7 +23236,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>20Y</tenor>
 			<fixedRate>EUREON20Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23255,7 +23255,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>21M</tenor>
 			<fixedRate>EUREON21M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23274,7 +23274,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>25Y</tenor>
 			<fixedRate>EUREON25Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23293,7 +23293,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>2M</tenor>
 			<fixedRate>EUREON2M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23312,7 +23312,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>2W</tenor>
 			<fixedRate>EUREON2W_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23331,7 +23331,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>2Y</tenor>
 			<fixedRate>EUREON2Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23350,7 +23350,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>30Y</tenor>
 			<fixedRate>EUREON30Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23369,7 +23369,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>3M</tenor>
 			<fixedRate>EUREON3M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23388,7 +23388,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>3W</tenor>
 			<fixedRate>EUREON3W_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23407,7 +23407,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>3Y</tenor>
 			<fixedRate>EUREON3Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23426,7 +23426,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>40Y</tenor>
 			<fixedRate>EUREON40Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23445,7 +23445,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>4M</tenor>
 			<fixedRate>EUREON4M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23464,7 +23464,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>4Y</tenor>
 			<fixedRate>EUREON4Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23483,7 +23483,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>50Y</tenor>
 			<fixedRate>EUREON50Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23502,7 +23502,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>5M</tenor>
 			<fixedRate>EUREON5M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23521,7 +23521,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>5Y</tenor>
 			<fixedRate>EUREON5Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23540,7 +23540,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>60Y</tenor>
 			<fixedRate>EUREON60Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23559,7 +23559,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>6M</tenor>
 			<fixedRate>EUREON6M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23578,7 +23578,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>6Y</tenor>
 			<fixedRate>EUREON6Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23597,7 +23597,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>7M</tenor>
 			<fixedRate>EUREON7M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23616,7 +23616,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>7Y</tenor>
 			<fixedRate>EUREON7Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23635,7 +23635,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>8M</tenor>
 			<fixedRate>EUREON8M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23654,7 +23654,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>8Y</tenor>
 			<fixedRate>EUREON8Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23673,7 +23673,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>9M</tenor>
 			<fixedRate>EUREON9M_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23692,7 +23692,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>9Y</tenor>
 			<fixedRate>EUREON9Y_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23711,7 +23711,7 @@
 			<settlementDays>2</settlementDays>
 			<tenor>1W</tenor>
 			<fixedRate>EUREONSW_Quote</fixedRate>
-			<overnightIndex>idx3#0000</overnightIndex>
+			<overnightIndex>idx3</overnightIndex>
 			<discount>
 				<which>2</which>
 				<value></value>
@@ -23734,8 +23734,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_10M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_10M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23759,8 +23759,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_11M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_11M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23784,8 +23784,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_12M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_12M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23809,8 +23809,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_1S#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_1S</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23834,8 +23834,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_1S#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_1S</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23859,8 +23859,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_1S#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_1S</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23884,8 +23884,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_2S#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_2S</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23909,8 +23909,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_2S#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_2S</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23934,8 +23934,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_2M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_2M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23959,8 +23959,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_3S#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_3S</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -23984,8 +23984,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_3M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_3M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24009,8 +24009,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_4S#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_4S</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24034,8 +24034,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_4M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_4M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24059,8 +24059,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_5M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_5M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24084,8 +24084,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_6M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_6M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24109,8 +24109,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_7M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_7M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24134,8 +24134,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_8M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_8M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24159,8 +24159,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>Actual/360</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_9M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_9M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24184,8 +24184,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_10Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_10Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24209,8 +24209,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_11Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_11Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24234,8 +24234,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_12Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_12Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24259,8 +24259,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_13Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_13Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24284,8 +24284,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_14Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_14Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24309,8 +24309,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_15M#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_15M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24334,8 +24334,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_15Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_15Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24359,8 +24359,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_16Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_16Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24384,8 +24384,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_17Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_17Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24409,8 +24409,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_18M#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_18M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24434,8 +24434,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_18Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_18Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24459,8 +24459,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_19Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_19Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24484,8 +24484,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_1Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_1Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24509,8 +24509,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_20Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_20Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24534,8 +24534,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_21M#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_21M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24559,8 +24559,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_21Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_21Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24584,8 +24584,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_22Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_22Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24609,8 +24609,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_23Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_23Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24634,8 +24634,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_24Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_24Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24659,8 +24659,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_25Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_25Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24684,8 +24684,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_26Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_26Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24709,8 +24709,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_27Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_27Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24734,8 +24734,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_28Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_28Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24759,8 +24759,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_29Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_29Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24784,8 +24784,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_2Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_2Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24809,8 +24809,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_30Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_30Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24834,8 +24834,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_35Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_35Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24859,8 +24859,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_3Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_3Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24884,8 +24884,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_40Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_40Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24909,8 +24909,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_4Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_4Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24934,8 +24934,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_50Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_50Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24959,8 +24959,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_5Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_5Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -24984,8 +24984,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_60Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_60Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25009,8 +25009,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_6Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_6Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25034,8 +25034,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_7Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_7Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25059,8 +25059,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_8Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_8Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25084,8 +25084,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx20#0000</iborIndex>
-			<spread>null_quote7_9Y#0000</spread>
+			<iborIndex>idx20</iborIndex>
+			<spread>null_quote7_9Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25109,8 +25109,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_10Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_10Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25134,8 +25134,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_11Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_11Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25159,8 +25159,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_12Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_12Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25184,8 +25184,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_13Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_13Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25209,8 +25209,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_14Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_14Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25234,8 +25234,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_15M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_15M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25259,8 +25259,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_15Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_15Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25284,8 +25284,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_16Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_16Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25309,8 +25309,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_17Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_17Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25334,8 +25334,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_18M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_18M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25359,8 +25359,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_18Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_18Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25384,8 +25384,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_19Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_19Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25409,8 +25409,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_1Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_1Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25434,8 +25434,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_20Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_20Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25459,8 +25459,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_21M#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_21M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25484,8 +25484,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_21Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_21Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25509,8 +25509,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_22Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_22Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25534,8 +25534,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_23Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_23Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25559,8 +25559,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_24Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_24Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25584,8 +25584,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_25Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_25Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25609,8 +25609,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_26Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_26Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25634,8 +25634,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_27Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_27Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25659,8 +25659,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_28Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_28Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25684,8 +25684,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_29Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_29Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25709,8 +25709,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_2Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_2Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25734,8 +25734,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_30Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_30Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25759,8 +25759,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_35Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_35Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25784,8 +25784,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_3Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_3Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25809,8 +25809,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_40Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_40Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25834,8 +25834,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_4Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_4Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25859,8 +25859,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_50Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_50Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25884,8 +25884,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_5Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_5Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25909,8 +25909,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_60Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_60Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25934,8 +25934,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_6Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_6Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25959,8 +25959,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_7Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_7Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -25984,8 +25984,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_8Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_8Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26009,8 +26009,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx8#0000</iborIndex>
-			<spread>dummy_null_9Y#0000</spread>
+			<iborIndex>idx8</iborIndex>
+			<spread>dummy_null_9Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26034,8 +26034,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_10Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_10Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26059,8 +26059,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_11Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_11Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26084,8 +26084,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_12Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_12Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26109,8 +26109,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_13Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_13Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26134,8 +26134,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_14Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_14Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26159,8 +26159,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_15M#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_15M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26184,8 +26184,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_15Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_15Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26209,8 +26209,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_16Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_16Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26234,8 +26234,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_17Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_17Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26259,8 +26259,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_18M#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_18M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26284,8 +26284,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_18Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_18Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26309,8 +26309,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_19Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_19Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26334,8 +26334,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_1Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_1Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26359,8 +26359,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_20Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_20Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26384,8 +26384,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_21M#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_21M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26409,8 +26409,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_21Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_21Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26434,8 +26434,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_22Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_22Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26459,8 +26459,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_23Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_23Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26484,8 +26484,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_24Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_24Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26509,8 +26509,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_25Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_25Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26534,8 +26534,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_26Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_26Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26559,8 +26559,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_27Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_27Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26584,8 +26584,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_28Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_28Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26609,8 +26609,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_29Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_29Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26634,8 +26634,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_2Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_2Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26659,8 +26659,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_30Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_30Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26684,8 +26684,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_35Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_35Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26709,8 +26709,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_3Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_3Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26734,8 +26734,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_40Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_40Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26759,8 +26759,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_4Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_4Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26784,8 +26784,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_50Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_50Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26809,8 +26809,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_5Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_5Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26834,8 +26834,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_60Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_60Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26859,8 +26859,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_6Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_6Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26884,8 +26884,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_7Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_7Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26909,8 +26909,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_8Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_8Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26934,8 +26934,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx10#0000</iborIndex>
-			<spread>dummy_null2_9Y#0000</spread>
+			<iborIndex>idx10</iborIndex>
+			<spread>dummy_null2_9Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26959,8 +26959,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_10Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_10Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -26984,8 +26984,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_11Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_11Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27009,8 +27009,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_12Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_12Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27034,8 +27034,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_13Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_13Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27059,8 +27059,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_14Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_14Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27084,8 +27084,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_15M#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_15M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27109,8 +27109,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_15Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_15Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27134,8 +27134,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_16Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_16Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27159,8 +27159,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_17Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_17Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27184,8 +27184,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_18M#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_18M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27209,8 +27209,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_18Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_18Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27234,8 +27234,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_19Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_19Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27259,8 +27259,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_1Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_1Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27284,8 +27284,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_20Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_20Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27309,8 +27309,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_21M#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_21M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27334,8 +27334,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_21Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_21Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27359,8 +27359,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_22Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_22Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27384,8 +27384,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_23Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_23Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27409,8 +27409,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_24Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_24Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27434,8 +27434,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_25Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_25Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27459,8 +27459,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_26Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_26Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27484,8 +27484,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_27Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_27Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27509,8 +27509,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_28Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_28Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27534,8 +27534,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_29Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_29Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27559,8 +27559,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_2Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_2Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27584,8 +27584,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_30Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_30Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27609,8 +27609,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_35Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_35Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27634,8 +27634,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_3Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_3Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27659,8 +27659,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_40Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_40Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27684,8 +27684,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_4Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_4Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27709,8 +27709,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_50Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_50Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27734,8 +27734,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_5Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_5Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27759,8 +27759,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_60Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_60Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27784,8 +27784,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_6Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_6Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27809,8 +27809,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_7Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_7Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27834,8 +27834,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_8Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_8Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27859,8 +27859,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx12#0000</iborIndex>
-			<spread>rh_null3_9Y#0000</spread>
+			<iborIndex>idx12</iborIndex>
+			<spread>rh_null3_9Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27884,8 +27884,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_10Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_10Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27909,8 +27909,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_11Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_11Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27934,8 +27934,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_12Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_12Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27959,8 +27959,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_13Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_13Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -27984,8 +27984,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_14Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_14Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28009,8 +28009,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_15M#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_15M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28034,8 +28034,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_15Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_15Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28059,8 +28059,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_16Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_16Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28084,8 +28084,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_17Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_17Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28109,8 +28109,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_18M#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_18M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28134,8 +28134,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_18Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_18Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28159,8 +28159,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_19Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_19Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28184,8 +28184,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_1Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_1Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28209,8 +28209,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_20Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_20Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28234,8 +28234,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_21M#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_21M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28259,8 +28259,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_21Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_21Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28284,8 +28284,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_22Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_22Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28309,8 +28309,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_23Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_23Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28334,8 +28334,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_24Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_24Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28359,8 +28359,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_25Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_25Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28384,8 +28384,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_26Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_26Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28409,8 +28409,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_27Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_27Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28434,8 +28434,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_28Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_28Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28459,8 +28459,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_29Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_29Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28484,8 +28484,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_2Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_2Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28509,8 +28509,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_30Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_30Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28534,8 +28534,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_35Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_35Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28559,8 +28559,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_3Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_3Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28584,8 +28584,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_40Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_40Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28609,8 +28609,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_4Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_4Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28634,8 +28634,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_50Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_50Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28659,8 +28659,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_5Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_5Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28684,8 +28684,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_60Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_60Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28709,8 +28709,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_6Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_6Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28734,8 +28734,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_7Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_7Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28759,8 +28759,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_8Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_8Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28784,8 +28784,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx14#0000</iborIndex>
-			<spread>null_quote5_9Y#0000</spread>
+			<iborIndex>idx14</iborIndex>
+			<spread>null_quote5_9Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28809,8 +28809,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_10Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_10Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28834,8 +28834,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_11Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_11Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28859,8 +28859,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_12Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_12Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28884,8 +28884,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_13Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_13Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28909,8 +28909,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_14Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_14Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28934,8 +28934,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_15M#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_15M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28959,8 +28959,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_15Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_15Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -28984,8 +28984,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_16Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_16Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29009,8 +29009,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_17Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_17Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29034,8 +29034,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_18M#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_18M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29059,8 +29059,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_18Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_18Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29084,8 +29084,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_19Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_19Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29109,8 +29109,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_1Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_1Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29134,8 +29134,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_20Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_20Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29159,8 +29159,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_21M#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_21M</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29184,8 +29184,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_21Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_21Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29209,8 +29209,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_22Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_22Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29234,8 +29234,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_23Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_23Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29259,8 +29259,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_24Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_24Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29284,8 +29284,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_25Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_25Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29309,8 +29309,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_26Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_26Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29334,8 +29334,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_27Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_27Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29359,8 +29359,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_28Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_28Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29384,8 +29384,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_29Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_29Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29409,8 +29409,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_2Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_2Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29434,8 +29434,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_30Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_30Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29459,8 +29459,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_35Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_35Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29484,8 +29484,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_3Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_3Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29509,8 +29509,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_40Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_40Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29534,8 +29534,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_4Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_4Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29559,8 +29559,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_50Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_50Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29584,8 +29584,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_5Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_5Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29609,8 +29609,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_60Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_60Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29634,8 +29634,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_6Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_6Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29659,8 +29659,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_7Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_7Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29684,8 +29684,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_8Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_8Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>
@@ -29709,8 +29709,8 @@
 			<fixedFrequency>Annual</fixedFrequency>
 			<fixedConvention>Modified Following</fixedConvention>
 			<fixedDayCounter>30/360 (Bond Basis)</fixedDayCounter>
-			<iborIndex>idx16#0000</iborIndex>
-			<spread>null_quote6_9Y#0000</spread>
+			<iborIndex>idx16</iborIndex>
+			<spread>null_quote6_9Y</spread>
 			<forwardStart>0D</forwardStart>
 			<discount>
 				<which>2</which>

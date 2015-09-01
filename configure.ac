@@ -115,6 +115,8 @@ AC_CONFIG_FILES([
     qlo/serialization/register/Makefile
     qlo/valueobjects/Makefile
     AddinCfy/Makefile
+    Clients/Makefile
+    Clients/Countify/Makefile
 ])
 
 AC_OUTPUT

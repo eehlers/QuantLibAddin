@@ -44,7 +44,7 @@
 				AdditionalOptions="/MP"
 				Optimization="0"
 				EnableIntrinsicFunctions="false"
-				AdditionalIncludeDirectories=".,..\..\quantlib\ObjectHandler,..\..\quantlib\QuantLib"
+				AdditionalIncludeDirectories=".,..\..\quantlib\reposit,..\..\quantlib\QuantLib"
 				PreprocessorDefinitions="_DEBUG;WIN32;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;"
 				MinimalRebuild="false"
 				BasicRuntimeChecks="3"
@@ -67,7 +67,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="lib\QuantLibObjects-vc90-mt-gd-1_5_0.lib"
+				OutputFile="lib\QuantLibObjects-vc90-mt-gd-1_7_0.lib"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -114,7 +114,7 @@
 				AdditionalOptions="/MP"
 				Optimization="2"
 				EnableIntrinsicFunctions="false"
-				AdditionalIncludeDirectories=".,..\..\quantlib\ObjectHandler,..\..\quantlib\QuantLib"
+				AdditionalIncludeDirectories=".,..\..\quantlib\reposit,..\..\quantlib\QuantLib"
 				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;"
 				MinimalRebuild="false"
 				RuntimeLibrary="2"
@@ -136,7 +136,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="lib\QuantLibObjects-vc90-mt-1_5_0.lib"
+				OutputFile="lib\QuantLibObjects-vc90-mt-1_7_0.lib"
 			/>
 			<Tool
 				Name="VCALinkTool"

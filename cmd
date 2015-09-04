@@ -1,7 +1,13 @@
 
+#IDIR=/home/countify/install
+#SWIG_DIR=/home/countify/projects/swig
+
+IDIR=/media/windows/linux/repos/reposit/install
+SWIG_DIR=/media/windows/linux/repos/reposit/swig
+
 #    CXXFLAGS=-gdwarf-2 \
 ./configure \
-    --prefix=/home/countify/install \
-    --with-boost-include=/home/countify/install/include \
-    --with-boost-lib=/home/countify/install/lib \
-    --with-swig=/home/countify/projects/swig
+    --prefix=$IDIR \
+    --with-boost-include=$IDIR/include \
+    --with-boost-lib=$IDIR/lib \
+    --with-swig=$SWIG_DIR

@@ -31,34 +31,34 @@ namespace QuantLibAddin {
 
         registerCreators();
 
-        ObjectHandler::ProcessorPtr relinkableHandleProcessor(
+        reposit::ProcessorPtr relinkableHandleProcessor(
             new RelinkableHandleProcessor());
-        ObjectHandler::ProcessorFactory::instance().storeProcessor(
+        reposit::ProcessorFactory::instance().storeProcessor(
             "RelinkableHandleProcessor", relinkableHandleProcessor);
 
-  //      ObjectHandler::ProcessorPtr instrumentProcessor(
+  //      reposit::ProcessorPtr instrumentProcessor(
   //          new InstrumentProcessor());
-  //      ObjectHandler::ProcessorFactory::instance().storeProcessor(
+  //      reposit::ProcessorFactory::instance().storeProcessor(
 		//	"InstrumentProcessor", instrumentProcessor);
 
-  //      ObjectHandler::ProcessorPtr legProcessor(
+  //      reposit::ProcessorPtr legProcessor(
   //          new LegProcessor());
-  //      ObjectHandler::ProcessorFactory::instance().storeProcessor(
+  //      reposit::ProcessorFactory::instance().storeProcessor(
 		//	"LegProcessor", legProcessor);
 
-  //      ObjectHandler::ProcessorPtr indexProcessor(
+  //      reposit::ProcessorPtr indexProcessor(
   //          new IndexProcessor());
-  //      ObjectHandler::ProcessorFactory::instance().storeProcessor(
+  //      reposit::ProcessorFactory::instance().storeProcessor(
 		//	"IndexProcessor", indexProcessor);
 
-  //      ObjectHandler::ProcessorPtr extrapolatorProcessor(
+  //      reposit::ProcessorPtr extrapolatorProcessor(
   //          new ExtrapolatorProcessor());
-  //      ObjectHandler::ProcessorFactory::instance().storeProcessor(
+  //      reposit::ProcessorFactory::instance().storeProcessor(
 		//	"ExtrapolatorProcessor", extrapolatorProcessor);
     }
 
     void SerializationFactory::register_out(boost::archive::xml_oarchive &ar,
-        std::vector<boost::shared_ptr<ObjectHandler::ValueObject> >& valueObjects){
+        std::vector<boost::shared_ptr<reposit::ValueObject> >& valueObjects){
 
             tpl_register_classes(ar);
             ar << boost::serialization::make_nvp("object_list", valueObjects);
@@ -66,7 +66,7 @@ namespace QuantLibAddin {
 
 
     void SerializationFactory::register_in(boost::archive::xml_iarchive &ar,
-        std::vector<boost::shared_ptr<ObjectHandler::ValueObject> >& valueObjects){
+        std::vector<boost::shared_ptr<reposit::ValueObject> >& valueObjects){
 
             tpl_register_classes(ar);
             ar >> boost::serialization::make_nvp("object_list", valueObjects);

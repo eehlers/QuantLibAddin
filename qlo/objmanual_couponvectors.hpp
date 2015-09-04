@@ -3,8 +3,8 @@
 #define obj_couponvectors_hpp
 
 #include <string>
-#include <oh/libraryobject.hpp>
-#include <oh/valueobject.hpp>
+#include <rp/libraryobject.hpp>
+#include <rp/valueobject.hpp>
 #include <boost/shared_ptr.hpp>
 
 #include <qlo/objmanual_leg.hpp>
@@ -16,7 +16,7 @@ namespace QuantLibAddin {
         public Leg {
     public:
         IborLeg(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             QuantLib::BusinessDayConvention paymentConvention,
             std::vector< QuantLib::Real > const &nominals,
@@ -80,9 +80,9 @@ namespace QuantLibAddin {
 //
 //namespace QuantLibAddin {
 //
-//    class DigitalReplication : public ObjectHandler::LibraryObject<QuantLib::DigitalReplication>{
+//    class DigitalReplication : public reposit::LibraryObject<QuantLib::DigitalReplication>{
 //    public:
-//        DigitalReplication(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        DigitalReplication(const boost::shared_ptr<reposit::ValueObject>& properties,
 //                           QuantLib::Replication::Type replicationType,
 //                           QuantLib::Real eps,
 //                           bool permanent) ;
@@ -91,7 +91,7 @@ namespace QuantLibAddin {
 //    class FixedRateLeg : public Leg {
 //      public:
 //        FixedRateLeg(
-//            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const boost::shared_ptr<reposit::ValueObject>& properties,
 //            QuantLib::BusinessDayConvention paymentConvention,
 //            const std::vector<QuantLib::Real>& nominals,
 //            const boost::shared_ptr<QuantLib::Schedule>& schedule,
@@ -99,7 +99,7 @@ namespace QuantLibAddin {
 //            const QuantLib::DayCounter& paymentDayCounter,
 //            bool permanent);
 //        FixedRateLeg(
-//            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const boost::shared_ptr<reposit::ValueObject>& properties,
 //            QuantLib::BusinessDayConvention paymentConvention,
 //            const std::vector<QuantLib::Real>& nominals,
 //            const boost::shared_ptr<QuantLib::Schedule>& schedule,
@@ -110,7 +110,7 @@ namespace QuantLibAddin {
 //    class IborLeg : public Leg {
 //      public:
 //        IborLeg(
-//            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const boost::shared_ptr<reposit::ValueObject>& properties,
 //            QuantLib::BusinessDayConvention paymentConvention,
 //            const std::vector<QuantLib::Real>& nominals,
 //            const boost::shared_ptr<QuantLib::Schedule>& schedule,
@@ -128,7 +128,7 @@ namespace QuantLibAddin {
 //    class DigitalIborLeg : public Leg {
 //      public:
 //        DigitalIborLeg(
-//            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const boost::shared_ptr<reposit::ValueObject>& properties,
 //            QuantLib::BusinessDayConvention paymentConvention,
 //            const std::vector<QuantLib::Real>& nominals,
 //            const boost::shared_ptr<QuantLib::Schedule>& schedule,
@@ -151,7 +151,7 @@ namespace QuantLibAddin {
 //    class CmsLeg : public Leg {
 //      public:
 //        CmsLeg(
-//            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const boost::shared_ptr<reposit::ValueObject>& properties,
 //            QuantLib::BusinessDayConvention paymentConvention,
 //            const std::vector<QuantLib::Real>& nominals,
 //            const boost::shared_ptr<QuantLib::Schedule>& schedule,
@@ -169,7 +169,7 @@ namespace QuantLibAddin {
 //    class DigitalCmsLeg : public Leg {
 //      public:
 //        DigitalCmsLeg(
-//            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const boost::shared_ptr<reposit::ValueObject>& properties,
 //            QuantLib::BusinessDayConvention paymentConvention,
 //            const std::vector<QuantLib::Real>& nominals,
 //            const boost::shared_ptr<QuantLib::Schedule>& schedule,
@@ -192,7 +192,7 @@ namespace QuantLibAddin {
 //    class RangeAccrualLeg : public Leg {
 //      public:
 //        RangeAccrualLeg(
-//            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const boost::shared_ptr<reposit::ValueObject>& properties,
 //           QuantLib::BusinessDayConvention paymentConvention,
 //           const std::vector<QuantLib::Real>& nominals,
 //           const boost::shared_ptr<QuantLib::Schedule>& schedule,
@@ -211,7 +211,7 @@ namespace QuantLibAddin {
 //    class CmsZeroLeg : public Leg {
 //      public:
 //        CmsZeroLeg(
-//            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const boost::shared_ptr<reposit::ValueObject>& properties,
 //            QuantLib::BusinessDayConvention paymentConvention,
 //            const std::vector<QuantLib::Real>& nominals,
 //            const boost::shared_ptr<QuantLib::Schedule>& schedule,
@@ -226,12 +226,12 @@ namespace QuantLibAddin {
 //            bool permanent);
 //    };
 //
-//    OH_LIB_CLASS(FloatingRateCouponPricer, QuantLib::FloatingRateCouponPricer);
+//    RP_LIB_CLASS(FloatingRateCouponPricer, QuantLib::FloatingRateCouponPricer);
 //    
 //    class IborCouponPricer : public FloatingRateCouponPricer {
 //      public:
 //        IborCouponPricer(
-//            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const boost::shared_ptr<reposit::ValueObject>& properties,
 //            const QuantLib::Handle<QuantLib::OptionletVolatilityStructure>& vol,
 //            const std::string& typeOfIborCouponPricer,
 //            bool permanent);

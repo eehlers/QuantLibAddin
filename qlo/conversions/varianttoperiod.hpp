@@ -21,10 +21,10 @@
 #ifndef qla_convert_period_hpp
 #define qla_convert_period_hpp
 
-#include <oh/conversions/convert2.hpp>
+#include <rp/conversions/convert2.hpp>
 #include <ql/utilities/dataparsers.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     class ConvertOper;
 

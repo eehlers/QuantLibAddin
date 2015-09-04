@@ -21,11 +21,11 @@
 #ifndef qla_pricingenginesfactory_hpp
 #define qla_pricingenginesfactory_hpp
 
-#include <oh/enumerations/typefactory.hpp>
+#include <rp/enumerations/typefactory.hpp>
 #include <ql/pricingengine.hpp>
 //#include <qlo/pricingengines.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     //// This factory uses a slightly different design than the others.  Usually Create
     //// - retrieves the constructor

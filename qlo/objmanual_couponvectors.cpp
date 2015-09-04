@@ -2,7 +2,7 @@
 #include <qlo/objmanual_couponvectors.hpp>
 
 QuantLibAddin::IborLeg::IborLeg (
-    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    const boost::shared_ptr<reposit::ValueObject>& properties,
     // BEGIN typemap rp_tm_default
     QuantLib::BusinessDayConvention paymentConvention,
     std::vector< QuantLib::Real > const &nominals,
@@ -71,9 +71,9 @@ QuantLibAddin::IborLeg::IborLeg (
 //#include <ql/cashflows/rangeaccrual.hpp>
 //#include <ql/cashflows/cashflows.hpp>
 //
-//using ObjectHandler::LibraryObject;
-//using ObjectHandler::Create;
-//using ObjectHandler::ValueObject;
+//using reposit::LibraryObject;
+//using reposit::Create;
+//using reposit::ValueObject;
 //using QuantLib::earlier_than;
 //using QuantLib::CashFlow;
 //using boost::shared_ptr;
@@ -213,7 +213,7 @@ QuantLibAddin::IborLeg::IborLeg (
 //                isCallATMIncluded = false;
 //                break;
 //            default:
-//                OH_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for call option: "
+//                RP_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for call option: "
 //                        << callPositionAndATMInclusion);
 //                break;
 //        }
@@ -242,7 +242,7 @@ QuantLibAddin::IborLeg::IborLeg (
 //                isPutATMIncluded = false;
 //                break;
 //            default:
-//                OH_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for put option: "
+//                RP_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for put option: "
 //                        << callPositionAndATMInclusion);
 //                break;
 //        }
@@ -361,7 +361,7 @@ QuantLibAddin::IborLeg::IborLeg (
 //                isCallATMIncluded = false;
 //                break;
 //            default:
-//                OH_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for call option: "
+//                RP_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for call option: "
 //                        << callPositionAndATMInclusion);
 //                break;
 //        }
@@ -390,7 +390,7 @@ QuantLibAddin::IborLeg::IborLeg (
 //                isPutATMIncluded = false;
 //                break;
 //            default:
-//                OH_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for put option: "
+//                RP_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for put option: "
 //                        << callPositionAndATMInclusion);
 //                break;
 //        }

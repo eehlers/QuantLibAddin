@@ -23,7 +23,7 @@
 
 #include <ql/utilities/dataparsers.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     class ConvertOper;
 

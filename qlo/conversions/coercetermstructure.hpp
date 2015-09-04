@@ -20,8 +20,8 @@
 #ifndef qlo_conversions_coercetermstructure_hpp
 #define qlo_conversions_coercetermstructure_hpp
 
-#include <oh/conversions/coerce.hpp>
-#include <oh/exception.hpp>
+#include <rp/conversions/coerce.hpp>
+#include <rp/exception.hpp>
 
 #include <qlo/handle.hpp>
 #include <qlo/conversions/coerceobject.hpp>
@@ -41,12 +41,12 @@ namespace QuantLibAddin {
     // those template parameters that are specific to Handle<TermStructure>
 
     template <class ObjectTermStructure, class LibraryTermStructure>
-    class CoerceTermStructure : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>,
+    class CoerceTermStructure : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>,
         boost::shared_ptr<LibraryTermStructure> > {
 
-        typedef typename ObjectHandler::Coerce<
-            boost::shared_ptr<ObjectHandler::Object>,
+        typedef typename reposit::Coerce<
+            boost::shared_ptr<reposit::Object>,
             boost::shared_ptr<LibraryTermStructure> >::Conversion Conversion;
 
         Conversion *getConversions() {
@@ -65,8 +65,8 @@ namespace QuantLibAddin {
 
     template <>
     class CoerceTermStructure<YieldTermStructure, QuantLib::YieldTermStructure>
-        : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>,
+        : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>,
         boost::shared_ptr<QuantLib::YieldTermStructure> > {
 
         Conversion *getConversions() {
@@ -84,8 +84,8 @@ namespace QuantLibAddin {
 
     //template <>
     //class CoerceTermStructure<SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>
-    //    : public ObjectHandler::Coerce<
-    //    boost::shared_ptr<ObjectHandler::Object>,
+    //    : public reposit::Coerce<
+    //    boost::shared_ptr<reposit::Object>,
     //    boost::shared_ptr<QuantLib::SwaptionVolatilityStructure> > {
 
     //    Conversion *getConversions() {
@@ -108,12 +108,12 @@ namespace QuantLibAddin {
     // Handle<YieldTermStructure> or Handle<SwaptionVolatilityStructure>.
 
     template <class ObjectTermStructure>
-    class CoerceTermStructureObject : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>,
+    class CoerceTermStructureObject : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>,
         boost::shared_ptr<ObjectTermStructure> > {
 
-        typedef typename ObjectHandler::Coerce<
-            boost::shared_ptr<ObjectHandler::Object>,
+        typedef typename reposit::Coerce<
+            boost::shared_ptr<reposit::Object>,
             boost::shared_ptr<ObjectTermStructure> >::Conversion Conversion;
 
         Conversion *getConversions() {

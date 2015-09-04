@@ -20,8 +20,8 @@
 #ifndef qlo_conversions_all_hpp
 #define qlo_conversions_all_hpp
 
-#include <oh/conversions/coerce.hpp>
-#include <oh/conversions/getobjectvector.hpp>
+#include <rp/conversions/coerce.hpp>
+#include <rp/conversions/getobjectvector.hpp>
 #include <qlo/conversions/conversions.hpp>
 #include <qlo/conversions/coercehandle.hpp>
 #include <qlo/conversions/coercelibrarydifferent.hpp>

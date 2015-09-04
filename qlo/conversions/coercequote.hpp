@@ -30,12 +30,12 @@ namespace QuantLibAddin {
     // those template parameters that are specific to Handle<Quote>
 
     template <class ObjectQuote, class LibraryQuote>
-    class CoerceQuote : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>,
+    class CoerceQuote : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>,
         boost::shared_ptr<LibraryQuote> > {
 
-        typedef typename ObjectHandler::Coerce<
-            boost::shared_ptr<ObjectHandler::Object>,
+        typedef typename reposit::Coerce<
+            boost::shared_ptr<reposit::Object>,
             boost::shared_ptr<LibraryQuote> >::Conversion Conversion;
 
         Conversion *getConversions() {
@@ -53,8 +53,8 @@ namespace QuantLibAddin {
 
     template <>
     class CoerceQuote<Quote, QuantLib::Quote>
-        : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>,
+        : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>,
         boost::shared_ptr<QuantLib::Quote> > {
 
         Conversion *getConversions() {
@@ -76,12 +76,12 @@ namespace QuantLibAddin {
     // where in either case T inherits from Quote.
 
     template <class ObjectQuote>
-    class CoerceQuoteObject : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>,
+    class CoerceQuoteObject : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>,
         boost::shared_ptr<ObjectQuote> > {
 
-        typedef typename ObjectHandler::Coerce<
-            boost::shared_ptr<ObjectHandler::Object>,
+        typedef typename reposit::Coerce<
+            boost::shared_ptr<reposit::Object>,
             boost::shared_ptr<ObjectQuote> >::Conversion Conversion;
 
         Conversion *getConversions() {

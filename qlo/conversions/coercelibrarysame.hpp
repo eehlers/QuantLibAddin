@@ -20,8 +20,8 @@
 #ifndef qlo_conversions_coercelibrarysame_hpp
 #define qlo_conversions_coercelibrarysame_hpp
 
-#include <oh/conversions/coerce.hpp>
-#include <oh/exception.hpp>
+#include <rp/conversions/coerce.hpp>
+#include <rp/exception.hpp>
 #include <qlo/handleimpl.hpp>
 
 namespace QuantLibAddin {
@@ -43,7 +43,7 @@ namespace QuantLibAddin {
 
     template <class ObjectClass, class LibraryClass>
     bool objectToLibrary(
-        const boost::shared_ptr<ObjectHandler::Object> &in,
+        const boost::shared_ptr<reposit::Object> &in,
         boost::shared_ptr<LibraryClass> &out) {
 
         boost::shared_ptr<ObjectClass> object = 
@@ -58,7 +58,7 @@ namespace QuantLibAddin {
     
     template <class ObjectClass, class LibraryClass>
     bool handleToLibrarySame(
-        const boost::shared_ptr<ObjectHandler::Object> &in,
+        const boost::shared_ptr<reposit::Object> &in,
         boost::shared_ptr<LibraryClass> &out) {
 
         typedef RelinkableHandleImpl<ObjectClass, LibraryClass> HandleClass;
@@ -67,7 +67,7 @@ namespace QuantLibAddin {
 
         if (handle) {
             out = handle->handle().currentLink();
-            OH_REQUIRE(out, "unable to retrieve reference contained in handle");
+            RP_REQUIRE(out, "unable to retrieve reference contained in handle");
             return true;
         } else {
             return false;
@@ -75,12 +75,12 @@ namespace QuantLibAddin {
     }
 
     template <class ObjectClass, class LibraryClass>
-    class CoerceLibrarySame : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>, 
+    class CoerceLibrarySame : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>, 
         boost::shared_ptr<LibraryClass> > {
 
-        typedef typename ObjectHandler::Coerce<
-            boost::shared_ptr<ObjectHandler::Object>,
+        typedef typename reposit::Coerce<
+            boost::shared_ptr<reposit::Object>,
             boost::shared_ptr<LibraryClass> >::Conversion Conversion;
  
         Conversion *getConversions() {

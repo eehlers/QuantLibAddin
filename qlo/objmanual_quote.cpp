@@ -30,7 +30,7 @@ QuantLibAddin::close(
 }
 
 QuantLibAddin::SimpleQuote::SimpleQuote(
-    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    const boost::shared_ptr<reposit::ValueObject>& properties,
     // BEGIN typemap rp_tm_default
     double value,
     // END   typemap rp_tm_default
@@ -42,7 +42,7 @@ QuantLibAddin::SimpleQuote::SimpleQuote(
 
 // QuantLibAddin::SimpleQuote::setValue() wraps QuantLib::SimpleQuote::setValue(),
 // updating the ValueObject.  The "Value" property of the ValueObject is represented
-// as datatype ObjectHandler::Variant (rather than double), this is necessary for
+// as datatype reposit::Variant (rather than double), this is necessary for
 // platform-independent processing of value Null<Real>.
 QuantLib::Real QuantLibAddin::SimpleQuote::setValue(QuantLib::Real value) {
 
@@ -69,7 +69,7 @@ QuantLib::Real QuantLibAddin::SimpleQuote::setValue(QuantLib::Real value) {
 }
 
 QuantLibAddin::CompositeQuote::CompositeQuote(
-    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    const boost::shared_ptr<reposit::ValueObject>& properties,
     // BEGIN typemap rp_tm_default
     QuantLib::Handle< QuantLib::Quote > const &element1,
     QuantLib::Handle< QuantLib::Quote > const &element2,
@@ -137,7 +137,7 @@ QuantLibAddin::CompositeQuote::CompositeQuote(
 //namespace QuantLibAddin {
 //
 //    SimpleQuote::SimpleQuote(
-//            const shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const shared_ptr<reposit::ValueObject>& properties,
 //            Real value,
 //            Real tickValue,
 //            bool permanent) : Quote(properties, permanent) {
@@ -160,7 +160,7 @@ QuantLibAddin::CompositeQuote::CompositeQuote(
 //
 //    // QuantLibAddin::SimpleQuote::setValue() wraps QuantLib::SimpleQuote::setValue(),
 //    // updating the ValueObject.  The "Value" property of the ValueObject is represented
-//    // as datatype ObjectHandler::Variant (rather than double), this is necessary for
+//    // as datatype reposit::Variant (rather than double), this is necessary for
 //    // platform-independent processing of value Null<Real>.
 //    Real SimpleQuote::setValue(Real value) {
 //
@@ -188,7 +188,7 @@ QuantLibAddin::CompositeQuote::CompositeQuote(
 //
 //
 //    ForwardValueQuote::ForwardValueQuote(
-//        const shared_ptr<ObjectHandler::ValueObject>& properties,
+//        const shared_ptr<reposit::ValueObject>& properties,
 //        const shared_ptr<QuantLib::IborIndex>& index,
 //        const QuantLib::Date& fixingDate,
 //        bool permanent) : Quote(properties, permanent)
@@ -198,7 +198,7 @@ QuantLibAddin::CompositeQuote::CompositeQuote(
 //    }
 //
 //    ForwardSwapQuote::ForwardSwapQuote(
-//            const shared_ptr<ObjectHandler::ValueObject>& properties,
+//            const shared_ptr<reposit::ValueObject>& properties,
 //            const shared_ptr<QuantLib::SwapIndex>& swapIndex,
 //            const QuantLib::Handle<QuantLib::Quote>& spread,
 //            const QuantLib::Period& fwdStart,
@@ -209,7 +209,7 @@ QuantLibAddin::CompositeQuote::CompositeQuote(
 //    }
 //
 //    ImpliedStdDevQuote::ImpliedStdDevQuote(
-//                            const shared_ptr<ObjectHandler::ValueObject>& properties,
+//                            const shared_ptr<reposit::ValueObject>& properties,
 //                            QuantLib::Option::Type optionType,
 //                            const QuantLib::Handle<QuantLib::Quote>& forward,
 //                            const QuantLib::Handle<QuantLib::Quote>& price,
@@ -224,7 +224,7 @@ QuantLibAddin::CompositeQuote::CompositeQuote(
 //    }
 //
 //    EurodollarFuturesImpliedStdDevQuote::EurodollarFuturesImpliedStdDevQuote(
-//                        const shared_ptr<ObjectHandler::ValueObject>& properties,
+//                        const shared_ptr<reposit::ValueObject>& properties,
 //                        const QuantLib::Handle<QuantLib::Quote>& forward,
 //                        const QuantLib::Handle<QuantLib::Quote>& callPrice,
 //                        const QuantLib::Handle<QuantLib::Quote>& putPrice,
@@ -239,7 +239,7 @@ QuantLibAddin::CompositeQuote::CompositeQuote(
 //    }
 //
 //    FuturesConvAdjustmentQuote::FuturesConvAdjustmentQuote(
-//                               const shared_ptr<ObjectHandler::ValueObject>& properties,
+//                               const shared_ptr<reposit::ValueObject>& properties,
 //                               const shared_ptr<QuantLib::IborIndex>& index,
 //                               const std::string& immCode,
 //                               const QuantLib::Handle<QuantLib::Quote>& futuresQuote,
@@ -255,7 +255,7 @@ QuantLibAddin::CompositeQuote::CompositeQuote(
 //    }
 //
 //    CompositeQuote::CompositeQuote(
-//                    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//                    const boost::shared_ptr<reposit::ValueObject>& properties,
 //                    const QuantLib::Handle<QuantLib::Quote>& element1,
 //                    const QuantLib::Handle<QuantLib::Quote>& element2,
 //                    const std::string& op,
@@ -275,7 +275,7 @@ QuantLibAddin::CompositeQuote::CompositeQuote(
 //    }
 //
 //    LastFixingQuote::LastFixingQuote(
-//                    const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+//                    const boost::shared_ptr<reposit::ValueObject>& p,
 //                    const boost::shared_ptr<QuantLib::Index>& index,
 //                    bool permanent)
 //    : Quote(p, permanent)

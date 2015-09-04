@@ -20,7 +20,7 @@
 #ifndef qla_historicalforwardratesanalysisfactory_hpp
 #define qla_historicalforwardratesanalysisfactory_hpp
 
-#include <oh/enumerations/typefactory.hpp>
+#include <rp/enumerations/typefactory.hpp>
 #include <ql/types.hpp>
 #include <ql/models/marketmodels/historicalforwardratesanalysis.hpp>
 
@@ -35,7 +35,7 @@ namespace QuantLib {
     typedef BootstrapHelper<YieldTermStructure> RateHelper;
 }
 
-namespace ObjectHandler {
+namespace reposit {
 
     typedef boost::shared_ptr<QuantLib::HistoricalForwardRatesAnalysis>(*HistoricalForwardRatesAnalysisConstructor)(
                 const boost::shared_ptr<QuantLib::SequenceStatistics>& stats,

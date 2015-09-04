@@ -23,7 +23,7 @@
 #ifndef qla_index_hpp
 #define qla_index_hpp
 
-#include <oh/libraryobject.hpp>
+#include <rp/libraryobject.hpp>
 
 #include <ql/types.hpp>
 
@@ -34,9 +34,9 @@ namespace QuantLib {
 
 namespace QuantLibAddin {
 
-    class Index : public ObjectHandler::LibraryObject<QuantLib::Index> {
+    class Index : public reposit::LibraryObject<QuantLib::Index> {
       public:
-        OH_LIB_CTOR(Index, QuantLib::Index);
+        RP_LIB_CTOR(Index, QuantLib::Index);
         void addFixings(const std::vector<QuantLib::Date>& dates,
                         const std::vector<QuantLib::Real>& values,
                         bool forceOverwrite, bool updateValuObject = true);

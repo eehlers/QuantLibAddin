@@ -21,10 +21,10 @@
 #ifndef qla_iborcouponpricerfactory_hpp
 #define qla_iborcouponpricerfactory_hpp
 
-#include <oh/enumerations/typefactory.hpp>
+#include <rp/enumerations/typefactory.hpp>
 #include <ql/cashflows/couponpricer.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     typedef boost::shared_ptr<QuantLib::IborCouponPricer>(*IborCouponPricerConstructor)(
             const QuantLib::Handle<QuantLib::OptionletVolatilityStructure>& capletVol);

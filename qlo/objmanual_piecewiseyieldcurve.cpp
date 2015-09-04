@@ -9,7 +9,7 @@
 namespace QuantLibAddin {
     
 PiecewiseYieldCurve::PiecewiseYieldCurve(
-        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<reposit::ValueObject>& properties,
         QuantLib::Natural nDays,
         const QuantLib::Calendar& calendar,
         const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& qlrhs,
@@ -22,7 +22,7 @@ PiecewiseYieldCurve::PiecewiseYieldCurve(
         bool permanent)
 : YieldTermStructure(properties, permanent)
 {
-    libraryObject_ = ObjectHandler::Create<boost::shared_ptr<
+    libraryObject_ = reposit::Create<boost::shared_ptr<
         QuantLib::YieldTermStructure> >()(traitsID,
                                           interpolatorID,
                                           nDays,
@@ -35,9 +35,9 @@ PiecewiseYieldCurve::PiecewiseYieldCurve(
 
 	// convert input strings to enumerated datatypes
 	InterpolatedYieldCurve::Traits traits =
-        ObjectHandler::Create<InterpolatedYieldCurve::Traits>()(traitsID);
+        reposit::Create<InterpolatedYieldCurve::Traits>()(traitsID);
 	InterpolatedYieldCurve::Interpolator interpolator=
-		ObjectHandler::Create<InterpolatedYieldCurve::Interpolator>()(interpolatorID);
+		reposit::Create<InterpolatedYieldCurve::Interpolator>()(interpolatorID);
 
 	pair_ = InterpolatedYieldCurvePair(traits, interpolator);
 }
@@ -81,7 +81,7 @@ class Caller : public CallerBase {
     const CurveClass *get(const QuantLib::Extrapolator *extrapolator) const {
 
         const CurveClass *ret = dynamic_cast<const CurveClass*>(extrapolator);
-        OH_REQUIRE(ret, "Unable to convert from type " << typeid(extrapolator).name()
+        RP_REQUIRE(ret, "Unable to convert from type " << typeid(extrapolator).name()
             << " to type " << typeid(CurveClass).name());
         return ret;
     }
@@ -200,7 +200,7 @@ public:
     // Retrieve the Caller pointer corresponding to a given InterpolatedYieldCurvePair
     const CallerBase *getCaller(InterpolatedYieldCurvePair tokenPair) const {
         CallerMap::const_iterator i = callerMap_.find(tokenPair);
-        OH_REQUIRE(i!=callerMap_.end(), "Unable to retrieve caller for type " << tokenPair);
+        RP_REQUIRE(i!=callerMap_.end(), "Unable to retrieve caller for type " << tokenPair);
         return i->second;
     }
 

@@ -20,8 +20,8 @@
 #ifndef qlo_conversions_coercelibrarydifferent_hpp
 #define qlo_conversions_coercelibrarydifferent_hpp
 
-#include <oh/conversions/coerce.hpp>
-#include <oh/exception.hpp>
+#include <rp/conversions/coerce.hpp>
+#include <rp/exception.hpp>
 #include <qlo/handle.hpp>
 #include <qlo/conversions/coercelibrarysame.hpp>
 
@@ -45,7 +45,7 @@ namespace QuantLibAddin {
 
     template <class ObjectFrom, class LibraryFrom, class LibraryTo>
     bool handleToLibraryDifferent(
-        const boost::shared_ptr<ObjectHandler::Object> &in,
+        const boost::shared_ptr<reposit::Object> &in,
         boost::shared_ptr<LibraryTo> &out) {
 
         typedef RelinkableHandleImpl<ObjectFrom, LibraryFrom> HandleClass;
@@ -56,11 +56,11 @@ namespace QuantLibAddin {
 
         boost::shared_ptr<LibraryFrom> libraryFrom =
             handle->handle().currentLink();
-        OH_REQUIRE(libraryFrom, "unable to retrieve reference "
+        RP_REQUIRE(libraryFrom, "unable to retrieve reference "
             "contained in handle");
 
         out = boost::dynamic_pointer_cast<LibraryTo>(libraryFrom);
-        OH_REQUIRE(out, "unable to convert reference from class '"
+        RP_REQUIRE(out, "unable to convert reference from class '"
             << typeid(LibraryFrom).name()<< "' to class '"
             << typeid(LibraryTo).name() << "'");
 
@@ -68,12 +68,12 @@ namespace QuantLibAddin {
     }
 
     template <class ObjectFrom, class LibraryFrom, class ObjectTo, class LibraryTo>
-    class CoerceLibraryDifferent : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>,
+    class CoerceLibraryDifferent : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>,
         boost::shared_ptr<LibraryTo> > {
 
-        typedef typename ObjectHandler::Coerce<
-            boost::shared_ptr<ObjectHandler::Object>,
+        typedef typename reposit::Coerce<
+            boost::shared_ptr<reposit::Object>,
             boost::shared_ptr<LibraryTo> >::Conversion Conversion;
 
         Conversion *getConversions() {

@@ -21,11 +21,11 @@
 #ifndef qla_interpolationsfactory_hpp
 #define qla_interpolationsfactory_hpp
 
-#include <oh/enumerations/typefactory.hpp>
+#include <rp/enumerations/typefactory.hpp>
 #include <ql/math/interpolation.hpp>
 #include <ql/math/interpolations/interpolation2d.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     /* *** 1D Interpolation *** */
     typedef const std::vector<double>::const_iterator dbl_itr;

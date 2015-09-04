@@ -50,7 +50,7 @@ namespace QuantLibAddin {
     //class DiscountCurve : public YieldTermStructure {
     //  public:
     //    DiscountCurve(
-    //        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //        const boost::shared_ptr<reposit::ValueObject>& properties,
     //        const std::vector<QuantLib::Date>& dates,
     //        const std::vector<QuantLib::DiscountFactor>& dfs,
     //        const QuantLib::DayCounter& dayCounter,
@@ -59,7 +59,7 @@ namespace QuantLibAddin {
 
     //class ZeroCurve : public YieldTermStructure {
     //  public:
-    //    ZeroCurve(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //    ZeroCurve(const boost::shared_ptr<reposit::ValueObject>& properties,
     //              const std::vector<QuantLib::Date>& dates,
     //              const std::vector<QuantLib::Rate>& zeroRates,
     //              const QuantLib::DayCounter& dayCounter,
@@ -68,7 +68,7 @@ namespace QuantLibAddin {
 
     //class ForwardCurve : public YieldTermStructure {
     //  public:
-    //    ForwardCurve(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //    ForwardCurve(const boost::shared_ptr<reposit::ValueObject>& properties,
     //                 const std::vector<QuantLib::Date>& dates,
     //                 const std::vector<QuantLib::Rate>& forwardRates,
     //                 const QuantLib::DayCounter& dayCounter,
@@ -77,7 +77,7 @@ namespace QuantLibAddin {
 
     //class FlatForward : public YieldTermStructure {
     //  public:
-    //    FlatForward(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //    FlatForward(const boost::shared_ptr<reposit::ValueObject>& properties,
     //                QuantLib::Natural nDays,
     //                const QuantLib::Calendar& calendar,
     //                const QuantLib::Handle<QuantLib::Quote>& forward,
@@ -90,7 +90,7 @@ namespace QuantLibAddin {
     //class ForwardSpreadedTermStructure : public YieldTermStructure {
     //  public:
     //    ForwardSpreadedTermStructure(
-    //        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //        const boost::shared_ptr<reposit::ValueObject>& properties,
     //        const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
     //        const QuantLib::Handle<QuantLib::Quote>& spread,
     //        bool permanent);
@@ -99,7 +99,7 @@ namespace QuantLibAddin {
     //class ImpliedTermStructure : public YieldTermStructure {
     //  public:
     //    ImpliedTermStructure(
-    //        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //        const boost::shared_ptr<reposit::ValueObject>& properties,
     //        const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
     //        const QuantLib::Date& referenceDate,
     //        bool permanent);
@@ -130,7 +130,7 @@ namespace QuantLibAddin {
                             MonotonicLogParabolic
         };
         InterpolatedYieldCurve(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             const std::vector<QuantLib::Date>& dates,
             const std::vector<QuantLib::Real>& data,
             const QuantLib::Calendar& calendar,
@@ -147,7 +147,7 @@ namespace QuantLibAddin {
         const std::vector<QuantLib::Date>& jumpDates() const;
       protected:
         InterpolatedYieldCurve(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             const std::string& traitsID,
             const std::string& interpolatorID,
             bool permanent);

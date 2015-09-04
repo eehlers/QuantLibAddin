@@ -3,8 +3,8 @@
 #define obj_utilities_hpp
 
 #include <string>
-#include <oh/libraryobject.hpp>
-#include <oh/valueobject.hpp>
+#include <rp/libraryobject.hpp>
+#include <rp/valueobject.hpp>
 #include <boost/shared_ptr.hpp>
 #include <ql/time/date.hpp>
 

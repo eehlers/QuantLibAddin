@@ -10,25 +10,25 @@
 %typemap(rp_tm_cfy_mng) QuantLib::Date const & "INT32";
 
 %typemap(rp_tm_cfy_cnv) QuantLib::Date const & %{
-        ObjectHandler::property_t $1_name($1_name_cfy);
+        reposit::property_t $1_name($1_name_cfy);
         QuantLib::Date $1_name_cnv =
-            ObjectHandler::convert2<QuantLib::Date, ObjectHandler::property_t>($1_name);
+            reposit::convert2<QuantLib::Date, reposit::property_t>($1_name);
 %}
 
 %typemap(rp_tm_cfy_cnv) QuantLib::Handle<QuantLib::Quote> const & %{
-        OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::SimpleQuote, QuantLib::Quote)
+        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::SimpleQuote, QuantLib::Quote)
         QuantLib::Handle<QuantLib::Quote> $1_name_handle =
             QuantLib::Handle<QuantLib::Quote>($1_name_get);
 %} 
 
 %typemap(rp_tm_cfy_cnv) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
-        OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
+        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
         QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
             QuantLib::Handle<QuantLib::YieldTermStructure>($1_name_get);
 %} 
 
 %typemap(rp_tm_cfy_cnv) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & %{
-        OH_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
+        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
         QuantLib::Handle<QuantLib::BlackVolTermStructure> $1_name_handle =
             QuantLib::Handle<QuantLib::BlackVolTermStructure>($1_name_get);
 %} 

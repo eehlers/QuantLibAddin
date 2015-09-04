@@ -21,10 +21,10 @@
 #ifndef qla_conundrumpricerfactory_hpp
 #define qla_conundrumpricerfactory_hpp
 
-#include <oh/enumerations/typefactory.hpp>
+#include <rp/enumerations/typefactory.hpp>
 #include <ql/cashflows/conundrumpricer.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     typedef boost::shared_ptr<QuantLib::CmsCouponPricer>(*CmsCouponPricerConstructor)(
             const QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>& swaptionVol,

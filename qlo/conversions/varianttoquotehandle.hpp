@@ -23,9 +23,9 @@
 
 //#include <qlo/quote.hpp>
 #include <ql/quotes/simplequote.hpp>
-#include <oh/conversions/convert2.hpp>
+#include <rp/conversions/convert2.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     class ConvertOper;
 

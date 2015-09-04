@@ -20,8 +20,8 @@
 #ifndef qlo_conversions_coerceobject2_hpp
 #define qlo_conversions_coerceobject2_hpp
 
-#include <oh/conversions/coerce.hpp>
-#include <oh/exception.hpp>
+#include <rp/conversions/coerce.hpp>
+#include <rp/exception.hpp>
 #include <qlo/handle.hpp>
 #include <qlo/handleimpl.hpp>
 #include <qlo/conversions/coerceobject.hpp>
@@ -43,7 +43,7 @@ namespace QuantLibAddin {
 
     template <class ObjectTo>
     bool objectToObject(
-        const boost::shared_ptr<ObjectHandler::Object> &in,
+        const boost::shared_ptr<reposit::Object> &in,
         boost::shared_ptr<ObjectTo> &out) {
 
         out = boost::dynamic_pointer_cast<ObjectTo>(in);
@@ -52,7 +52,7 @@ namespace QuantLibAddin {
 
     template <class ObjectFrom, class LibraryFrom, class ObjectTo>
     bool handleToObject(
-        const boost::shared_ptr<ObjectHandler::Object> &in,
+        const boost::shared_ptr<reposit::Object> &in,
         boost::shared_ptr<ObjectTo> &out) {
 
         // FIXME gcc doesn't like this typedef
@@ -65,7 +65,7 @@ namespace QuantLibAddin {
         if (!handle) return false;
 
         out = boost::dynamic_pointer_cast<ObjectTo>(handle->object());
-        OH_REQUIRE(out, "unable to convert reference from class '"
+        RP_REQUIRE(out, "unable to convert reference from class '"
             << typeid(ObjectFrom).name()<< "' to class '"
             << typeid(ObjectTo).name() << "'");
 
@@ -73,12 +73,12 @@ namespace QuantLibAddin {
     }
 
     template <class ObjectFrom, class LibraryFrom, class ObjectTo>
-    class CoerceObject : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>,
+    class CoerceObject : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>,
         boost::shared_ptr<ObjectTo> > {
 
-        typedef typename ObjectHandler::Coerce<
-            boost::shared_ptr<ObjectHandler::Object>,
+        typedef typename reposit::Coerce<
+            boost::shared_ptr<reposit::Object>,
             boost::shared_ptr<ObjectTo> >::Conversion Conversion;
 
         Conversion *getConversions() {

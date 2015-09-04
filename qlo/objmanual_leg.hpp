@@ -3,8 +3,8 @@
 #define obj_leg_hpp
 
 #include <string>
-#include <oh/libraryobject.hpp>
-#include <oh/valueobject.hpp>
+#include <rp/libraryobject.hpp>
+#include <rp/valueobject.hpp>
 #include <boost/shared_ptr.hpp>
 
 #include <ql/cashflow.hpp>
@@ -12,10 +12,10 @@
 namespace QuantLibAddin {
 
     class Leg : 
-        public ObjectHandler::LibraryObject<QuantLib::Leg> {
+        public reposit::LibraryObject<QuantLib::Leg> {
     public:
         Leg(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             std::vector< QuantLib::Real > const &amounts,
             std::vector< QuantLib::Date > const &dates,
@@ -23,7 +23,7 @@ namespace QuantLibAddin {
             // END   typemap rp_tm_default
             bool permanent);
       protected:
-        OH_LIB_CTOR(Leg, QuantLib::Leg)
+        RP_LIB_CTOR(Leg, QuantLib::Leg)
     };
 
 
@@ -31,7 +31,7 @@ namespace QuantLibAddin {
         public Leg {
     public:
         MultiPhaseLeg(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             std::vector< boost::shared_ptr< Leg > > const &legs,
             bool toBeSorted,
@@ -68,7 +68,7 @@ namespace QuantLibAddin {
 //#ifndef qla_leg_hpp
 //#define qla_leg_hpp
 //
-//#include <oh/libraryobject.hpp>
+//#include <rp/libraryobject.hpp>
 //
 //#include <ql/types.hpp>
 //#include <ql/compounding.hpp>
@@ -86,39 +86,39 @@ namespace QuantLibAddin {
 //
 //namespace QuantLibAddin {
 //
-//    class Leg : public ObjectHandler::LibraryObject<QuantLib::Leg> {
+//    class Leg : public reposit::LibraryObject<QuantLib::Leg> {
 //      public:
-//        Leg(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        Leg(const boost::shared_ptr<reposit::ValueObject>& properties,
 //            const std::vector<QuantLib::Real>& amounts,
 //            const std::vector<QuantLib::Date>& dates,
 //            bool toBeSorted,
 //            bool permanent);
-//        Leg(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        Leg(const boost::shared_ptr<reposit::ValueObject>& properties,
 //            const boost::shared_ptr<QuantLib::CapFloor>& capFloor,
 //            bool permanent);
-//        Leg(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        Leg(const boost::shared_ptr<reposit::ValueObject>& properties,
 //            const boost::shared_ptr<QuantLib::Swap>& swap,
 //            QuantLib::Size i,
 //            bool permanent);
 //        void setCouponPricers(
 //            const std::vector<boost::shared_ptr<QuantLibAddin::FloatingRateCouponPricer> >&);
-//        std::vector<std::vector<ObjectHandler::property_t> > flowAnalysis(
+//        std::vector<std::vector<reposit::property_t> > flowAnalysis(
 //                                            const QuantLib::Date& d) const;
 //      protected:
-//        OH_LIB_CTOR(Leg, QuantLib::Leg)
+//        RP_LIB_CTOR(Leg, QuantLib::Leg)
 //    };
 //
 //    class MultiPhaseLeg : public Leg {
 //      public:
-//        MultiPhaseLeg(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        MultiPhaseLeg(const boost::shared_ptr<reposit::ValueObject>& properties,
 //                      const std::vector<boost::shared_ptr<Leg> >& legs,
 //                      bool toBeSorted,
 //                      bool permanent);
 //    };
 //
-//    class InterestRate : public ObjectHandler::LibraryObject<QuantLib::InterestRate> {
+//    class InterestRate : public reposit::LibraryObject<QuantLib::InterestRate> {
 //      public:
-//        InterestRate(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        InterestRate(const boost::shared_ptr<reposit::ValueObject>& properties,
 //                     QuantLib::Rate r,
 //                     const QuantLib::DayCounter& dc,
 //                     QuantLib::Compounding comp,

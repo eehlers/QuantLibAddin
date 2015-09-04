@@ -19,54 +19,54 @@
 #ifndef qla_processor_hpp
 #define qla_processor_hpp
 
-#include <oh/repository.hpp>
-#include <oh/processor.hpp>
+#include <rp/repository.hpp>
+#include <rp/processor.hpp>
 
 namespace QuantLibAddin {
 
-    //class InstrumentProcessor : public ObjectHandler::Processor {
+    //class InstrumentProcessor : public reposit::Processor {
 
-    //    std::string process(const ObjectHandler::SerializationFactory& factory,
-    //        const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+    //    std::string process(const reposit::SerializationFactory& factory,
+    //        const boost::shared_ptr<reposit::ValueObject> &valueObject,
     //        bool overwriteExisting) const;
 
     //    void postProcess() const {}
     //};
 
-    class RelinkableHandleProcessor : public ObjectHandler::Processor {
+    class RelinkableHandleProcessor : public reposit::Processor {
 
-        std::string process(const ObjectHandler::SerializationFactory& factory,
-            const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+        std::string process(const reposit::SerializationFactory& factory,
+            const boost::shared_ptr<reposit::ValueObject> &valueObject,
             bool overwriteExisting) const;
 
         void postProcess() const;
 
     private:
-        mutable ObjectHandler::HandlesList handles;
+        mutable reposit::HandlesList handles;
     };
 
-    //class LegProcessor : public ObjectHandler::Processor {
+    //class LegProcessor : public reposit::Processor {
 
-    //    std::string process(const ObjectHandler::SerializationFactory& factory,
-    //        const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+    //    std::string process(const reposit::SerializationFactory& factory,
+    //        const boost::shared_ptr<reposit::ValueObject> &valueObject,
     //        bool overwriteExisting) const;
 
     //    void postProcess() const {}
     //};
 
-    //class IndexProcessor : public ObjectHandler::Processor {
+    //class IndexProcessor : public reposit::Processor {
 
-    //    std::string process(const ObjectHandler::SerializationFactory& factory,
-    //        const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+    //    std::string process(const reposit::SerializationFactory& factory,
+    //        const boost::shared_ptr<reposit::ValueObject> &valueObject,
     //        bool overwriteExisting) const;
 
     //    void postProcess() const {}
     //};
 
-    //class ExtrapolatorProcessor : public ObjectHandler::Processor {
+    //class ExtrapolatorProcessor : public reposit::Processor {
 
-    //    std::string process(const ObjectHandler::SerializationFactory& factory,
-    //        const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+    //    std::string process(const reposit::SerializationFactory& factory,
+    //        const boost::shared_ptr<reposit::ValueObject> &valueObject,
     //        bool overwriteExisting) const;
 
     //    void postProcess() const {}

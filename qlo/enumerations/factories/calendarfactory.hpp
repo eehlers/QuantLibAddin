@@ -20,10 +20,10 @@
 #ifndef qla_calendarfactory_hpp
 #define qla_calendarfactory_hpp
 
-#include <oh/enumerations/typefactory.hpp>
+#include <rp/enumerations/typefactory.hpp>
 #include <ql/time/calendars/jointcalendar.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     template<>
     class Create<QuantLib::Calendar> :

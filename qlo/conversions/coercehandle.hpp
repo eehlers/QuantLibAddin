@@ -20,8 +20,8 @@
 #ifndef qlo_conversions_coercehandle_hpp
 #define qlo_conversions_coercehandle_hpp
 
-#include <oh/conversions/coerce.hpp>
-#include <oh/exception.hpp>
+#include <rp/conversions/coerce.hpp>
+#include <rp/exception.hpp>
 #include <qlo/handleimpl.hpp>
 
 namespace QuantLibAddin {
@@ -38,7 +38,7 @@ namespace QuantLibAddin {
 
     template <class ObjectClass, class LibraryClass>
     bool objectToHandle(
-        const boost::shared_ptr<ObjectHandler::Object> &object,
+        const boost::shared_ptr<reposit::Object> &object,
         QuantLib::Handle<LibraryClass> &out) {
 
         typedef RelinkableHandleImpl<ObjectClass, LibraryClass> HandleClass;
@@ -54,7 +54,7 @@ namespace QuantLibAddin {
 
     template <class ObjectClass, class LibraryClass>
     bool wrapObject(
-        const boost::shared_ptr<ObjectHandler::Object> &object,
+        const boost::shared_ptr<reposit::Object> &object,
         QuantLib::Handle<LibraryClass> &out) {
 
         boost::shared_ptr<ObjectClass> qloPointer =
@@ -70,12 +70,12 @@ namespace QuantLibAddin {
     }
 
     template <class ObjectClass, class LibraryClass>
-    class CoerceHandle : public ObjectHandler::Coerce<
-        boost::shared_ptr<ObjectHandler::Object>, 
+    class CoerceHandle : public reposit::Coerce<
+        boost::shared_ptr<reposit::Object>, 
         QuantLib::Handle<LibraryClass> > {
 
-        typedef typename ObjectHandler::Coerce<
-            boost::shared_ptr<ObjectHandler::Object>,
+        typedef typename reposit::Coerce<
+            boost::shared_ptr<reposit::Object>,
             QuantLib::Handle<LibraryClass> >::Conversion Conversion;
 
         Conversion *getConversions() {
@@ -87,7 +87,7 @@ namespace QuantLibAddin {
             return conversions; 
         };
 
-        virtual bool inputMissing(const boost::shared_ptr<ObjectHandler::Object> &object) {
+        virtual bool inputMissing(const boost::shared_ptr<reposit::Object> &object) {
             return !object;
         }
     };
@@ -96,7 +96,7 @@ namespace QuantLibAddin {
     std::vector<QuantLib::Handle<LibraryClass> > coerceHandleVector(const std::vector<std::string> &objectIDs) {
         std::vector<QuantLib::Handle<LibraryClass> > ret;
         for (std::vector<std::string>::const_iterator i=objectIDs.begin(); objectIDs.end()!=i; ++i) {
-            OH_GET_OBJECT(object, *i, ObjectHandler::Object)
+            RP_GET_OBJECT(object, *i, reposit::Object)
             ret.push_back(CoerceHandle<ObjectClass, LibraryClass>()(
                 object, QuantLib::Handle<LibraryClass>()));
         }

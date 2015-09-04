@@ -100,6 +100,9 @@ AC_SUBST(swig_dir, [${swig_path}])
 
 # Done, output the configured files
 
+    #AddinCfy/Makefile
+    #Clients/Makefile
+    #Clients/Countify/Makefile
 AC_CONFIG_FILES([
     Makefile
     m4/Makefile
@@ -114,9 +117,6 @@ AC_CONFIG_FILES([
     qlo/serialization/Makefile
     qlo/serialization/register/Makefile
     qlo/valueobjects/Makefile
-    AddinCfy/Makefile
-    Clients/Makefile
-    Clients/Countify/Makefile
 ])
 
 AC_OUTPUT

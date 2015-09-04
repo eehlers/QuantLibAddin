@@ -19,12 +19,12 @@ FOR A PARTICULAR PURPOSE.  See the license for more details.
 #ifndef qlo_serialization_factory_hpp
 #define qlo_serialization_factory_hpp
 
-#include <oh/ohdefines.hpp>
-#include <oh/serializationfactory.hpp>
+#include <rp/rpdefines.hpp>
+#include <rp/serializationfactory.hpp>
 
 namespace QuantLibAddin {
 
-    class SerializationFactory : public ObjectHandler::SerializationFactory {
+    class SerializationFactory : public reposit::SerializationFactory {
 
     public:
 
@@ -35,9 +35,9 @@ namespace QuantLibAddin {
         void registerCreators();
 
         virtual void register_out(boost::archive::xml_oarchive &ar,
-            std::vector<boost::shared_ptr<ObjectHandler::ValueObject> >& valueObjects);
+            std::vector<boost::shared_ptr<reposit::ValueObject> >& valueObjects);
         virtual void register_in(boost::archive::xml_iarchive &ar,
-            std::vector<boost::shared_ptr<ObjectHandler::ValueObject> >& valueObjects);
+            std::vector<boost::shared_ptr<reposit::ValueObject> >& valueObjects);
 
     };
 

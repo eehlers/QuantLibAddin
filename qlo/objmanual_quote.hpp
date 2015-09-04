@@ -3,8 +3,8 @@
 #define obj_quote_hpp
 
 #include <string>
-#include <oh/libraryobject.hpp>
-#include <oh/valueobject.hpp>
+#include <rp/libraryobject.hpp>
+#include <rp/valueobject.hpp>
 #include <boost/shared_ptr.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <ql/quotes/lastfixingquote.hpp>
@@ -23,12 +23,12 @@ namespace QuantLibAddin {
         // END   typemap rp_tm_default
     );
 
-    class Quote : public ObjectHandler::LibraryObject<QuantLib::Quote> {
+    class Quote : public reposit::LibraryObject<QuantLib::Quote> {
         protected:
             Quote(
-                const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                const boost::shared_ptr<reposit::ValueObject>& properties,
                 bool permanent)
-            : ObjectHandler::LibraryObject<QuantLib::Quote>(properties, permanent) {}
+            : reposit::LibraryObject<QuantLib::Quote>(properties, permanent) {}
     public:
         double value() { return libraryObject_->value(); }
         bool isValid() { return libraryObject_->isValid(); }
@@ -38,7 +38,7 @@ namespace QuantLibAddin {
         public Quote {
     public:
         SimpleQuote(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             double value,
             // END   typemap rp_tm_default
@@ -52,7 +52,7 @@ namespace QuantLibAddin {
         public Quote {
     public:
         LastFixingQuote(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             boost::shared_ptr< QuantLib::Index > const &index,
             // END   typemap rp_tm_default
@@ -71,7 +71,7 @@ namespace QuantLibAddin {
         public Quote {
     public:
         FuturesConvAdjustmentQuote(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             boost::shared_ptr< QuantLib::IborIndex > const &index,
             std::string const &immCode,
@@ -98,7 +98,7 @@ namespace QuantLibAddin {
         public Quote {
     public:
         CompositeQuote(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             QuantLib::Handle< QuantLib::Quote > const &element1,
             QuantLib::Handle< QuantLib::Quote > const &element2,
@@ -160,7 +160,7 @@ namespace QuantLibAddin {
 //
 //    class SimpleQuote : public Quote {
 //      public:
-//        SimpleQuote(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        SimpleQuote(const boost::shared_ptr<reposit::ValueObject>& properties,
 //                    QuantLib::Real value,
 //                    QuantLib::Real tickValue,
 //                    bool permanent);
@@ -175,7 +175,7 @@ namespace QuantLibAddin {
 //
 //    class ForwardValueQuote : public Quote {
 //      public:
-//        ForwardValueQuote(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        ForwardValueQuote(const boost::shared_ptr<reposit::ValueObject>& properties,
 //                          const boost::shared_ptr<QuantLib::IborIndex>&,
 //                          const QuantLib::Date& fixingDate,
 //                          bool permanent);
@@ -183,7 +183,7 @@ namespace QuantLibAddin {
 //
 //    class ForwardSwapQuote : public Quote {
 //      public:
-//        ForwardSwapQuote(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        ForwardSwapQuote(const boost::shared_ptr<reposit::ValueObject>& properties,
 //                         const boost::shared_ptr<QuantLib::SwapIndex>& swapIndex,
 //                         const QuantLib::Handle<QuantLib::Quote>& spread,
 //                         const QuantLib::Period& fwdStart,
@@ -192,7 +192,7 @@ namespace QuantLibAddin {
 //
 //    class ImpliedStdDevQuote : public Quote {
 //      public:
-//        ImpliedStdDevQuote(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//        ImpliedStdDevQuote(const boost::shared_ptr<reposit::ValueObject>& properties,
 //                           QuantLib::Option::Type optionType,
 //                           const QuantLib::Handle<QuantLib::Quote>& forward,
 //                           const QuantLib::Handle<QuantLib::Quote>& price,
@@ -205,7 +205,7 @@ namespace QuantLibAddin {
 //    class EurodollarFuturesImpliedStdDevQuote : public Quote {
 //      public:
 //        EurodollarFuturesImpliedStdDevQuote(
-//                        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//                        const boost::shared_ptr<reposit::ValueObject>& properties,
 //                        const QuantLib::Handle<QuantLib::Quote>& forward,
 //                        const QuantLib::Handle<QuantLib::Quote>& callPrice,
 //                        const QuantLib::Handle<QuantLib::Quote>& putPrice,
@@ -218,7 +218,7 @@ namespace QuantLibAddin {
 //     class FuturesConvAdjustmentQuote : public Quote {
 //      public:
 //        FuturesConvAdjustmentQuote(
-//                    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//                    const boost::shared_ptr<reposit::ValueObject>& properties,
 //                    const boost::shared_ptr<QuantLib::IborIndex>& index,
 //                    const std::string& immCode,
 //                    const QuantLib::Handle<QuantLib::Quote>& futuresQuote,
@@ -230,7 +230,7 @@ namespace QuantLibAddin {
 //     class CompositeQuote : public Quote {
 //      public:
 //        CompositeQuote(
-//                    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+//                    const boost::shared_ptr<reposit::ValueObject>& properties,
 //                    const QuantLib::Handle<QuantLib::Quote>& element1,
 //                    const QuantLib::Handle<QuantLib::Quote>& element2,
 //                    const std::string& op,
@@ -239,7 +239,7 @@ namespace QuantLibAddin {
 //
 //    class LastFixingQuote : public Quote {
 //      public:
-//        LastFixingQuote(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+//        LastFixingQuote(const boost::shared_ptr<reposit::ValueObject>& p,
 //                        const boost::shared_ptr<QuantLib::Index>& index,
 //                        bool permanent);
 //    };

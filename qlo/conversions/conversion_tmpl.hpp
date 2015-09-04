@@ -20,7 +20,7 @@
 
 /*! \file
     \brief template conversion functions for QuantLib data types - used to convert from property_t or OPER to an C++ data type
-    Not to be included directly by client code - instead the template functions in oh/Conversions/convert2.hpp should be used.
+    Not to be included directly by client code - instead the template functions in rp/Conversions/convert2.hpp should be used.
 */
 
 #ifndef qlo_Conversions_conversion_tmpl_hpp
@@ -29,7 +29,7 @@
 #include <ql/quotes/simplequote.hpp>
 #include <qlo/objmanual_quote.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     inline bool is_numeric(const std::string &s, double &d) {
         try {
@@ -58,7 +58,7 @@ namespace ObjectHandler {
             return d2 + p;
         }
         else {
-            OH_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Date'");
+            RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Date'");
         }
     }
 
@@ -81,10 +81,10 @@ namespace ObjectHandler {
             double d;
             if (is_numeric(s, d))
                 return boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(d));
-            OH_GET_OBJECT(temp, s, ObjectHandler::Object)
+            RP_GET_OBJECT(temp, s, reposit::Object)
             return QuantLibAddin::CoerceObject<QuantLibAddin::Quote, QuantLib::Quote, QuantLib::Quote>()(temp);
         } else {
-            OH_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
+            RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
         }
     }
 
@@ -99,21 +99,21 @@ namespace ObjectHandler {
             double d;
             if (is_numeric(s, d))
                 return QuantLib::Handle<QuantLib::Quote>(boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(d)));
-            OH_GET_OBJECT(object, s, ObjectHandler::Object)
+            RP_GET_OBJECT(object, s, reposit::Object)
             return QuantLibAddin::CoerceHandle<QuantLibAddin::Quote, QuantLib::Quote>()(object);
         }
         else
-            OH_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
+            RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
     }
     
     //template<class container_t>
     //QuantLib::TimeSeriesDef convertTimeSeriesDef(const container_t& c) {
     //    if(c.type() == typeid(std::string)) {
     //        std::string s = c.operator std::string();
-    //        OH_GET_UNDERLYING(temp, s, QuantLibAddin::TimeSeriesDef, QuantLib::TimeSeriesDef)
+    //        RP_GET_UNDERLYING(temp, s, QuantLibAddin::TimeSeriesDef, QuantLib::TimeSeriesDef)
     //        return temp;
     //    } else {
-    //        OH_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::TimeSeriesDef'");
+    //        RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::TimeSeriesDef'");
     //    }
     //}
 

@@ -30,7 +30,7 @@
 
 //#include <qlo/timeseries.hpp>
 
-#include <oh/objecthandler.hpp>
+#include <rp/reposit.hpp>
 #include <qlo/conversions/coercehandle.hpp>
 #include <qlo/conversions/coerceobject.hpp>
 #include <qlo/conversions/varianttoquotehandle.hpp>
@@ -135,7 +135,7 @@ namespace QuantLibAddin {
 
 
 
-namespace ObjectHandler {
+namespace reposit {
 
     template<> 
     QuantLib::Date convert2<QuantLib::Date, property_t>(const property_t& c) {

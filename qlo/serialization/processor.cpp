@@ -29,33 +29,33 @@
 
 namespace QuantLibAddin {
 
-    //std::string InstrumentProcessor::process(const ObjectHandler::SerializationFactory& factory,
-    //    const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+    //std::string InstrumentProcessor::process(const reposit::SerializationFactory& factory,
+    //    const boost::shared_ptr<reposit::ValueObject> &valueObject,
     //    bool overwriteExisting) const {
     //
-    //    ObjectHandler::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
+    //    reposit::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
     //    boost::shared_ptr<Instrument> instrument =
     //        boost::dynamic_pointer_cast<Instrument>(object.second);
     //    if (instrument && valueObject->hasProperty("EngineID")) {
-    //        std::string pricingEngineID = ObjectHandler::convert2<std::string>(
+    //        std::string pricingEngineID = reposit::convert2<std::string>(
     //            valueObject->getProperty("EngineID"), "EngineID");
-    //        OH_GET_OBJECT(pricingEngineObjPtr, pricingEngineID, QuantLibAddin::PricingEngine)
+    //        RP_GET_OBJECT(pricingEngineObjPtr, pricingEngineID, QuantLibAddin::PricingEngine)
     //        instrument->setPricingEngine(pricingEngineObjPtr);
     //    }
     //
     //    return object.first;
     //}
 
-    std::string RelinkableHandleProcessor::process(const ObjectHandler::SerializationFactory& factory,
-        const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+    std::string RelinkableHandleProcessor::process(const reposit::SerializationFactory& factory,
+        const boost::shared_ptr<reposit::ValueObject> &valueObject,
         bool overwriteExisting) const {
 
-        ObjectHandler::StrObjectPair link;
+        reposit::StrObjectPair link;
 
         link.first = boost::get<std::string>(valueObject->getProperty("CurrentLink"));
         valueObject->setProperty("CurrentLink", std::string(""));
 
-        ObjectHandler::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
+        reposit::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
 
         link.second = object.second;
         handles.push_back(link);
@@ -64,24 +64,24 @@ namespace QuantLibAddin {
     }
 
     void RelinkableHandleProcessor::postProcess() const {
-        for(ObjectHandler::HandlesList::iterator i = handles.begin(); i != handles.end(); ++i) {
+        for(reposit::HandlesList::iterator i = handles.begin(); i != handles.end(); ++i) {
             boost::dynamic_pointer_cast<QuantLibAddin::RelinkableHandle>(i->second)->linkTo(i->first);
         }
         handles.clear();
     }
 
-    //std::string LegProcessor::process(const ObjectHandler::SerializationFactory& factory,
-    //    const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+    //std::string LegProcessor::process(const reposit::SerializationFactory& factory,
+    //    const boost::shared_ptr<reposit::ValueObject> &valueObject,
     //    bool overwriteExisting) const {
     //
-    //    ObjectHandler::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
+    //    reposit::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
     //    boost::shared_ptr<Leg> inst = boost::dynamic_pointer_cast<Leg>(object.second);
     //    if (inst && valueObject->hasProperty("UserLegIDs")) {
     //        std::vector<boost::shared_ptr<QuantLibAddin::FloatingRateCouponPricer> > legs2;
     //        std::vector<std::string> legs =
-    //            ObjectHandler::vector::convert2<std::string>(valueObject->getProperty("UserLegIDs"), "UserLegIDs");
+    //            reposit::vector::convert2<std::string>(valueObject->getProperty("UserLegIDs"), "UserLegIDs");
     //        for (std::vector<std::string>::const_iterator i = legs.begin(); i!= legs.end(); ++i) {
-    //            OH_GET_OBJECT(leg, *i, QuantLibAddin::FloatingRateCouponPricer)
+    //            RP_GET_OBJECT(leg, *i, QuantLibAddin::FloatingRateCouponPricer)
     //            legs2.push_back(leg);
     //        }
     //        inst->setCouponPricers(legs2);
@@ -90,20 +90,20 @@ namespace QuantLibAddin {
     //    return object.first;
     //}
 
-    //std::string IndexProcessor::process(const ObjectHandler::SerializationFactory& factory,
-    //    const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+    //std::string IndexProcessor::process(const reposit::SerializationFactory& factory,
+    //    const boost::shared_ptr<reposit::ValueObject> &valueObject,
     //    bool overwriteExisting) const {
     //
-    //    ObjectHandler::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
+    //    reposit::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
     //    boost::shared_ptr<Index> index = boost::dynamic_pointer_cast<Index>(object.second);
     //    if(index) {
     //        try {
-    //            ObjectHandler::property_t dates = valueObject->getProperty("IndexFixingDates");
-    //            ObjectHandler::property_t fixings = valueObject->getProperty("IndexFixingRates");
+    //            reposit::property_t dates = valueObject->getProperty("IndexFixingDates");
+    //            reposit::property_t fixings = valueObject->getProperty("IndexFixingRates");
     //            std::vector<QuantLib::Date> vct_dates =
-    //                ObjectHandler::vector::convert2<QuantLib::Date>(dates, "IndexFixingDates");
+    //                reposit::vector::convert2<QuantLib::Date>(dates, "IndexFixingDates");
     //            std::vector<QuantLib::Rate> vct_fixings =
-    //                ObjectHandler::vector::convert2<QuantLib::Rate>(fixings, "IndexFixingRates");
+    //                reposit::vector::convert2<QuantLib::Rate>(fixings, "IndexFixingRates");
     //            index->addFixings(vct_dates, vct_fixings, true, false);
     //        }
     //        catch(const std::exception& ) {}
@@ -113,14 +113,14 @@ namespace QuantLibAddin {
     //}
 
 
-    //std::string ExtrapolatorProcessor::process(const ObjectHandler::SerializationFactory& factory,
-    //    const boost::shared_ptr<ObjectHandler::ValueObject> &valueObject,
+    //std::string ExtrapolatorProcessor::process(const reposit::SerializationFactory& factory,
+    //    const boost::shared_ptr<reposit::ValueObject> &valueObject,
     //    bool overwriteExisting) const {
-    //    ObjectHandler::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
+    //    reposit::StrObjectPair object = factory.restoreObject(valueObject, overwriteExisting);
     //    boost::shared_ptr<Extrapolator> extrapolator =
     //        boost::dynamic_pointer_cast<Extrapolator>(object.second);
     //    if (extrapolator && valueObject->hasProperty("UserExtrapolation")) {
-    //        bool extrapolation = ObjectHandler::convert2<bool>(
+    //        bool extrapolation = reposit::convert2<bool>(
     //            valueObject->getProperty("UserExtrapolation"), "UserExtrapolation");
     //        extrapolator->enableExtrapolation(extrapolation);
     //    }

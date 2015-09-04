@@ -21,10 +21,10 @@
 #ifndef qla_payoffsfactory_hpp
 #define qla_payoffsfactory_hpp
 
-#include <oh/enumerations/typefactory.hpp>
+#include <rp/enumerations/typefactory.hpp>
 #include <ql/instruments/payoffs.hpp>
 
-namespace ObjectHandler {
+namespace reposit {
 
     typedef boost::shared_ptr<QuantLib::Payoff>(*StrikedTypePayoffConstructor1)(
         const QuantLib::Option::Type&, const double);

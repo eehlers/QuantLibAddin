@@ -43,7 +43,7 @@
 using boost::algorithm::to_upper_copy;
 using boost::shared_ptr;
 
-using ObjectHandler::ValueObject;
+using reposit::ValueObject;
 
 using QuantLib::CubicInterpolation;
 using QuantLib::InterpolatedDiscountCurve;
@@ -562,7 +562,7 @@ namespace QuantLibAddin {
                 out << "<ZeroYield, ";
                 break;
             default:
-                OH_FAIL("Unknown value for enumeration QuantLibAddin::InterpolatedYieldCurve::Traits");
+                RP_FAIL("Unknown value for enumeration QuantLibAddin::InterpolatedYieldCurve::Traits");
         }
 
         switch (tokenPair.second) {
@@ -615,7 +615,7 @@ namespace QuantLibAddin {
                 out << "MonotonicLogParabolic>";
                 break;
             default:
-                OH_FAIL("Unknown value for enumeration QuantLibAddin::InterpolatedYieldCurve::Interpolator");
+                RP_FAIL("Unknown value for enumeration QuantLibAddin::InterpolatedYieldCurve::Interpolator");
         }
 
         return out;

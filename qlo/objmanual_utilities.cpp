@@ -26,7 +26,7 @@
 #include <qlo/objmanual_utilities.hpp>
 //#include <qlo/qladdindefines.hpp>
 #include <ql/version.hpp>
-#include <oh/repository.hpp>
+#include <rp/repository.hpp>
 #include <qlo/serialization/serializationfactory.hpp>
 
 //#if defined BOOST_MSVC       // Microsoft Visual C++
@@ -59,7 +59,7 @@ namespace QuantLibAddin {
 //    }
 
     long ObjectCount() {
-        return ObjectHandler::Repository::instance().objectCount();
+        return reposit::Repository::instance().objectCount();
     }
 }
 

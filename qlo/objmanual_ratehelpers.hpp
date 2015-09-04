@@ -3,8 +3,8 @@
 #define obj_ratehelpers_hpp
 
 #include <string>
-#include <oh/libraryobject.hpp>
-#include <oh/valueobject.hpp>
+#include <rp/libraryobject.hpp>
+#include <rp/valueobject.hpp>
 //#include <boost/shared_ptr.hpp>
 //#include <ql/quotes/simplequote.hpp>
 //#include <ql/quotes/lastfixingquote.hpp>
@@ -14,7 +14,7 @@
 
 namespace QuantLibAddin {
 
-    class RateHelper : public ObjectHandler::LibraryObject<QuantLib::RateHelper> {
+    class RateHelper : public reposit::LibraryObject<QuantLib::RateHelper> {
       public:
         enum DepoInclusionCriteria {AllDepos,
                                     DeposBeforeFirstFuturesStartDate,
@@ -26,19 +26,19 @@ namespace QuantLibAddin {
         QuantLib::Date earliestDate();
         QuantLib::Date latestDate();
       protected:
-        OH_LIB_CTOR(RateHelper, QuantLib::RateHelper);
+        RP_LIB_CTOR(RateHelper, QuantLib::RateHelper);
         std::string quoteName_;
     };
 
     class DepositRateHelper : public RateHelper {
       public:
         DepositRateHelper(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::Quote>& rate,
             const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
             bool permanent);
         DepositRateHelper(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::Quote>& quote,
             const QuantLib::Period& p,
             QuantLib::Natural settlementDays,
@@ -53,7 +53,7 @@ namespace QuantLibAddin {
         public RateHelper {
     public:
         FuturesRateHelper(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             QuantLib::Handle< QuantLib::Quote > const &price,
             QuantLib::Futures::Type type,
@@ -67,7 +67,7 @@ namespace QuantLibAddin {
     class SwapRateHelper : public RateHelper {
       public:
         //SwapRateHelper(
-        //    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        //    const boost::shared_ptr<reposit::ValueObject>& properties,
         //    const QuantLib::Handle<QuantLib::Quote>& quote,
         //    const boost::shared_ptr<QuantLib::SwapIndex>& swapIndex,
         //    const QuantLib::Handle<QuantLib::Quote>& spread,
@@ -75,7 +75,7 @@ namespace QuantLibAddin {
         //    const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
         //    bool permanent);
         SwapRateHelper(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::Quote>& quote,
             QuantLib::Natural settlementDays,
             const QuantLib::Period& p,
@@ -94,7 +94,7 @@ namespace QuantLibAddin {
         public RateHelper {
     public:
         FraRateHelper(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             QuantLib::Handle< QuantLib::Quote > const &rate,
             QuantLib::Period periodToStart,
@@ -107,7 +107,7 @@ namespace QuantLibAddin {
         public RateHelper {
     public:
         OISRateHelper(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             QuantLib::Natural settlementDays,
             QuantLib::Period const &tenor,
@@ -122,7 +122,7 @@ namespace QuantLibAddin {
         public RateHelper {
     public:
         DatedOISRateHelper(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
             QuantLib::Date const &startDate,
             QuantLib::Date const &endDate,

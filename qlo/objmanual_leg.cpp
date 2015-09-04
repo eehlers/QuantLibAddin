@@ -4,14 +4,14 @@
 #include <ql/cashflows/simplecashflow.hpp>
 
 QuantLibAddin::Leg::Leg(
-    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    const boost::shared_ptr<reposit::ValueObject>& properties,
     // BEGIN typemap rp_tm_default
     std::vector< QuantLib::Real > const &amounts,
     std::vector< QuantLib::Date > const &dates,
     bool toBeSorted,
     // END   typemap rp_tm_default
     bool permanent)
-: ObjectHandler::LibraryObject<QuantLib::Leg>(properties, permanent) {
+: reposit::LibraryObject<QuantLib::Leg>(properties, permanent) {
 
         QL_REQUIRE(amounts.size() == dates.size(),
                    "Dates (" << dates.size() << ") and amounts (" <<
@@ -34,7 +34,7 @@ QuantLibAddin::Leg::Leg(
 }
 
 QuantLibAddin::MultiPhaseLeg::MultiPhaseLeg(
-    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    const boost::shared_ptr<reposit::ValueObject>& properties,
     // BEGIN typemap rp_tm_default
     std::vector< boost::shared_ptr< Leg > > const &legs,
     bool toBeSorted,
@@ -94,9 +94,9 @@ QuantLibAddin::MultiPhaseLeg::MultiPhaseLeg(
 //#include <ql/cashflows/cmscoupon.hpp>
 //#include <ql/cashflows/couponpricer.hpp>
 //
-//using ObjectHandler::ValueObject;
-//using ObjectHandler::LibraryObject;
-//using ObjectHandler::property_t;
+//using reposit::ValueObject;
+//using reposit::LibraryObject;
+//using reposit::property_t;
 //
 //using QuantLib::earlier_than;
 //using QuantLib::CashFlow;
@@ -120,7 +120,7 @@ QuantLibAddin::MultiPhaseLeg::MultiPhaseLeg(
 //             const vector<Date>& dates,
 //             bool toBeSorted,
 //             bool permanent)
-//    : ObjectHandler::LibraryObject<QuantLib::Leg>(p, permanent)
+//    : reposit::LibraryObject<QuantLib::Leg>(p, permanent)
 //    {
 //        QL_REQUIRE(amounts.size() == dates.size(),
 //                   "Dates (" << dates.size() << ") and amounts (" <<
@@ -145,17 +145,17 @@ QuantLibAddin::MultiPhaseLeg::MultiPhaseLeg(
 //    Leg::Leg(const shared_ptr<ValueObject>& prop,
 //             const shared_ptr<QuantLib::CapFloor>& capFloor,
 //             bool permanent)
-//    : ObjectHandler::LibraryObject<QuantLib::Leg>(prop, permanent)
+//    : reposit::LibraryObject<QuantLib::Leg>(prop, permanent)
 //    {
 //        libraryObject_ = shared_ptr<QuantLib::Leg>(new QuantLib::Leg());
 //        *libraryObject_ = capFloor->floatingLeg();
 //    }
 //
-//    Leg::Leg(const shared_ptr<ObjectHandler::ValueObject>& prop,
+//    Leg::Leg(const shared_ptr<reposit::ValueObject>& prop,
 //             const shared_ptr<QuantLib::Swap>& swap,
 //             QuantLib::Size i,
 //             bool permanent)
-//    : ObjectHandler::LibraryObject<QuantLib::Leg>(prop, permanent)
+//    : reposit::LibraryObject<QuantLib::Leg>(prop, permanent)
 //    {
 //        libraryObject_ = shared_ptr<QuantLib::Leg>(new QuantLib::Leg());
 //        *libraryObject_ = swap->leg(i);
@@ -174,7 +174,7 @@ QuantLibAddin::MultiPhaseLeg::MultiPhaseLeg(
 //        }
 //        QuantLib::setCouponPricers(*libraryObject_, ql_pricers);
 //
-//        shared_ptr<ObjectHandler::ValueObject> inst_properties = properties();
+//        shared_ptr<reposit::ValueObject> inst_properties = properties();
 //        inst_properties->setProperty("UserLegIDs", ids);
 //    }
 //

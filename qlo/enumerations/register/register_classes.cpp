@@ -44,7 +44,7 @@ namespace QuantLibAddin {
     void registerEnumeratedClasses() {
     
         //{
-        //    ObjectHandler::Create<ObjectHandler::PricingEngineConstructor1> create;
+        //    reposit::Create<reposit::PricingEngineConstructor1> create;
         //    create.registerType("AB", reinterpret_cast<void*>(AB_Engine));
         //    create.registerType("AC", reinterpret_cast<void*>(AC_Engine));
         //    create.registerType("ACGAPA", reinterpret_cast<void*>(ACGAPA_Engine));
@@ -61,7 +61,7 @@ namespace QuantLibAddin {
         //}
 
         //{
-        //    ObjectHandler::Create<ObjectHandler::PricingEngineConstructor2> create;
+        //    reposit::Create<reposit::PricingEngineConstructor2> create;
         //    create.registerType("AEQPB", reinterpret_cast<void*>(AEQPB_Engine));
         //    create.registerType("CRR", reinterpret_cast<void*>(CRR_Engine));
         //    create.registerType("FDA", reinterpret_cast<void*>(FDA_Engine));
@@ -75,19 +75,19 @@ namespace QuantLibAddin {
         //}
 
         {
-            ObjectHandler::Create<boost::shared_ptr<QuantLib::CmsCouponPricer> > create;
+            reposit::Create<boost::shared_ptr<QuantLib::CmsCouponPricer> > create;
             create.registerType("ConundrumByBlack", reinterpret_cast<void*>(CONUNDRUM_BY_BLACK_Pricer));
             create.registerType("ConundrumByNumericalIntegration", reinterpret_cast<void*>(CONUNDRUM_BY_NUMERICAL_INTEGRATION_Pricer));
         }
 
         {
-            ObjectHandler::Create<boost::shared_ptr<QuantLib::IborCouponPricer> > create;
+            reposit::Create<boost::shared_ptr<QuantLib::IborCouponPricer> > create;
             create.registerType("DummyIborByBlack", reinterpret_cast<void*>(IBOR_BY_BLACK_Pricer));
             create.registerType("IborByBlack", reinterpret_cast<void*>(IBOR_BY_BLACK_Pricer));
         }
 
         {
-            ObjectHandler::Create<boost::shared_ptr<QuantLib::Interpolation> > create;
+            reposit::Create<boost::shared_ptr<QuantLib::Interpolation> > create;
             create.registerType("Abcd", reinterpret_cast<void*>(ABCD_Interpolation));
             create.registerType("BackwardFlat", reinterpret_cast<void*>(BACKWARDFLAT_Interpolation));
             create.registerType("CubicNaturalSpline", reinterpret_cast<void*>(CUBICNATURALSPLINE_Interpolation));
@@ -108,13 +108,13 @@ namespace QuantLibAddin {
         }
 
         {
-            ObjectHandler::Create<boost::shared_ptr<QuantLib::Interpolation2D> > create;
+            reposit::Create<boost::shared_ptr<QuantLib::Interpolation2D> > create;
             create.registerType("BiCubic", reinterpret_cast<void*>(BICUBICSPLINE));
             create.registerType("BiLinear", reinterpret_cast<void*>(BILINEAR_Interpolation));
         }
 
         {
-            ObjectHandler::Create<boost::shared_ptr<QuantLib::Payoff> > create;
+            reposit::Create<boost::shared_ptr<QuantLib::Payoff> > create;
             create.registerType("AssetOrNothing", reinterpret_cast<void*>(ASSETORNOTHING_Payoff));
             create.registerType("CashOrNothing", reinterpret_cast<void*>(CASHORNOTHING_Payoff));
             create.registerType("Gap", reinterpret_cast<void*>(GAP_Payoff));

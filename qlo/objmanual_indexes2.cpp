@@ -52,7 +52,7 @@ void QuantLibAddin::Index::addFixings(const std::vector<QuantLib::Date>& dates,
             fixingDates.push_back(hi->first.serialNumber());
             fixingRates.push_back(hi->second);
         }
-        boost::shared_ptr<ObjectHandler::ValueObject> inst_properties = properties();
+        boost::shared_ptr<reposit::ValueObject> inst_properties = properties();
         inst_properties->setProperty("IndexFixingDates", fixingDates);
         inst_properties->setProperty("IndexFixingRates", fixingRates);
     }

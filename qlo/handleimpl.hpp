@@ -21,7 +21,7 @@
 #define qla_handleimpl_hpp
 
 #include <qlo/handle.hpp>
-#include <oh/repository.hpp>
+#include <rp/repository.hpp>
 #include <ql/handle.hpp>
 
 namespace QuantLibAddin {
@@ -31,7 +31,7 @@ namespace QuantLibAddin {
 
     public:
 
-        RelinkableHandleImpl(const boost::shared_ptr<ObjectHandler::ValueObject> &properties,
+        RelinkableHandleImpl(const boost::shared_ptr<reposit::ValueObject> &properties,
             const std::string &objectId,
             bool permanent) : RelinkableHandle(properties/*, objectId*/, permanent) {
 
@@ -39,7 +39,7 @@ namespace QuantLibAddin {
         }
 
         const boost::shared_ptr<ObjectClass> &object() const {
-            OH_REQUIRE(object_, "Attempt to retrieve null object reference");
+            RP_REQUIRE(object_, "Attempt to retrieve null object reference");
             return object_;
         }
 
@@ -52,7 +52,7 @@ namespace QuantLibAddin {
         void linkTo(const std::string &objectId) {
 
             if (!objectId.empty()) {
-                ObjectHandler::Repository::instance().retrieveObject(object_, objectId);
+                reposit::Repository::instance().retrieveObject(object_, objectId);
                 boost::shared_ptr<LibraryClass> observable;
                 object_->getLibraryObject(observable);
                 // FIXME I think observable needs to be const...

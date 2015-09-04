@@ -35,8 +35,8 @@ using std::vector;
 using boost::shared_ptr;
 using boost::dynamic_pointer_cast;
 
-using ObjectHandler::ValueObject;
-using ObjectHandler::Create;
+using reposit::ValueObject;
+using reposit::Create;
 
 using QuantLib::Real;
 using QuantLib::Size;

@@ -74,7 +74,7 @@ namespace QuantLibAddin {
         }
         void performCalculations() const;
       protected:
-        Interpolation(const boost::shared_ptr<ObjectHandler::ValueObject>&,
+        Interpolation(const boost::shared_ptr<reposit::ValueObject>&,
                       const std::vector<QuantLib::Real>& x,
                       const std::vector<QuantLib::Handle<QuantLib::Quote> >& yh,
                       bool permanent);
@@ -87,7 +87,7 @@ namespace QuantLibAddin {
 
     class GenericInterp : public Interpolation {
       public:
-        GenericInterp(const boost::shared_ptr<ObjectHandler::ValueObject>&,
+        GenericInterp(const boost::shared_ptr<reposit::ValueObject>&,
                       const std::string& type,
                       const std::vector<QuantLib::Real>& x,
                       const std::vector<QuantLib::Handle<QuantLib::Quote> >& y,
@@ -97,7 +97,7 @@ namespace QuantLibAddin {
     //class MixedLinearCubicInterpolation : public Interpolation {
     //  public:
     //    MixedLinearCubicInterpolation(
-    //        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //        const boost::shared_ptr<reposit::ValueObject>& properties,
     //        const std::vector<QuantLib::Real>& x,
     //        const std::vector<QuantLib::Handle<QuantLib::Quote> >& y,
     //        QuantLib::Size n,
@@ -119,7 +119,7 @@ namespace QuantLibAddin {
     //class CubicInterpolation : public Interpolation {
     //  public:
     //    CubicInterpolation(
-    //        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //        const boost::shared_ptr<reposit::ValueObject>& properties,
     //        const std::vector<QuantLib::Real>& x,
     //        const std::vector<QuantLib::Handle<QuantLib::Quote> >& y,
     //        QuantLib::CubicInterpolation::DerivativeApprox da,
@@ -156,7 +156,7 @@ namespace QuantLibAddin {
     //class AbcdInterpolation : public Interpolation {
     //  public:
     //    AbcdInterpolation(
-    //        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //        const boost::shared_ptr<reposit::ValueObject>& properties,
     //        const std::vector<QuantLib::Real>& x,
     //        const std::vector<QuantLib::Handle<QuantLib::Quote> >& y,
     //        QuantLib::Real a,
@@ -206,7 +206,7 @@ namespace QuantLibAddin {
     //class SABRInterpolation : public Interpolation {
     //  public:
     //    SABRInterpolation(
-    //        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //        const boost::shared_ptr<reposit::ValueObject>& properties,
     //        const std::vector<QuantLib::Real>& x,
     //        const std::vector<QuantLib::Handle<QuantLib::Quote> >& y,
     //        QuantLib::Time t,

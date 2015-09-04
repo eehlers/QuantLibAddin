@@ -11,9 +11,9 @@
 // into a string.  If the caller passed in a double instead of a
 // Rate object then the coerce below will fail in which case we
 // return an empty string.
-std::string f(const ObjectHandler::property_t &p) {
+std::string f(const reposit::property_t &p) {
     try {
-        return ObjectHandler::convert2<std::string>(p);
+        return reposit::convert2<std::string>(p);
     } catch(...) {
         return std::string();
     }
@@ -32,7 +32,7 @@ QuantLib::Date QuantLibAddin::RateHelper::latestDate() {
 }
 
 QuantLibAddin::DepositRateHelper::DepositRateHelper(
-        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<reposit::ValueObject>& properties,
         const QuantLib::Handle<QuantLib::Quote>& rate,
         const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
         bool permanent)
@@ -43,7 +43,7 @@ QuantLibAddin::DepositRateHelper::DepositRateHelper(
 }
 
 QuantLibAddin::DepositRateHelper::DepositRateHelper(
-        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<reposit::ValueObject>& properties,
         const QuantLib::Handle<QuantLib::Quote>& quote,
         const QuantLib::Period& p,
         QuantLib::Natural fixingDays,
@@ -65,7 +65,7 @@ QuantLibAddin::DepositRateHelper::DepositRateHelper(
 }
 
 QuantLibAddin::FuturesRateHelper::FuturesRateHelper(
-        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<reposit::ValueObject>& properties,
         const QuantLib::Handle<QuantLib::Quote>& price,
         QuantLib::Futures::Type type,
         const QuantLib::Date& date,
@@ -95,7 +95,7 @@ QuantLibAddin::FuturesRateHelper::FuturesRateHelper(
 //}
 
 QuantLibAddin::SwapRateHelper::SwapRateHelper(
-        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<reposit::ValueObject>& properties,
         const QuantLib::Handle<QuantLib::Quote>& rate,
         QuantLib::Natural settlementDays,
         const QuantLib::Period& p,
@@ -117,7 +117,7 @@ QuantLibAddin::SwapRateHelper::SwapRateHelper(
 }
 
 QuantLibAddin::FraRateHelper::FraRateHelper(
-        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<reposit::ValueObject>& properties,
         const QuantLib::Handle<QuantLib::Quote>& rate,
         QuantLib::Period periodToStart,
         const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
@@ -130,7 +130,7 @@ QuantLibAddin::FraRateHelper::FraRateHelper(
 
 
 QuantLibAddin::OISRateHelper::OISRateHelper(
-                    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                    const boost::shared_ptr<reposit::ValueObject>& properties,
                     QuantLib::Natural settlementDays,
                     const QuantLib::Period& tenor,
                     const QuantLib::Handle<QuantLib::Quote>& fixedRate,
@@ -147,7 +147,7 @@ QuantLibAddin::OISRateHelper::OISRateHelper(
 }
 
 QuantLibAddin::DatedOISRateHelper::DatedOISRateHelper(
-                    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                    const boost::shared_ptr<reposit::ValueObject>& properties,
                     const QuantLib::Date& startDate,
                     const QuantLib::Date& endDate,
                     const QuantLib::Handle<QuantLib::Quote>& fixedRate,
@@ -238,7 +238,7 @@ std::vector<std::string> QuantLibAddin::rateHelperSelection(
     for (QuantLib::Size i=0; i<nInstruments; ++i) {
         qlarh = qlarhs[i];
         qlarh->getLibraryObject(qlrh);
-        std::string qlarh_id = ObjectHandler::convert2<std::string>(
+        std::string qlarh_id = reposit::convert2<std::string>(
             qlarh->propertyValue("OBJECTID"));
         bool isFutures = bool(boost::dynamic_pointer_cast<QuantLibAddin::FuturesRateHelper>(qlarh));
         bool isMainFutures = false, isSerialFutures = false;

@@ -8,6 +8,8 @@ BUILD_DIR=build\vc
 MAKEFILE=Makefile.vc
 SWIG_FILE=quantlib.i
 
+INTERFACE_FILES=functions\*.i typemaps\*.i
+
 # This variable is set in the VC project properties.
 #SWIG_ARGS=-genxll
 #SWIG_ARGS=-gencpp
@@ -17,7 +19,7 @@ ALL : $(BUILDFLAG)
 $(BUILD_DIR) :
     if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)
 
-$(BUILDFLAG) : $(BUILD_DIR) $(SWIG_FILE) $(SWIG_EXE)
+$(BUILDFLAG) : $(SWIG_EXE) $(BUILD_DIR) $(SWIG_FILE) $(INTERFACE_FILES)
 	$(SWIG_EXE) -I$(SWIG_INC) -I$(REPOSIT_INC) -DSWIG_MSVC -c++ -reposit $(SWIG_ARGS) -prefix ql $(SWIG_FILE)
 	echo flagged > $@
 

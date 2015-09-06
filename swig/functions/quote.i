@@ -1,13 +1,13 @@
 
-%feature("rp:group", "quote");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="quote";
+%pragma(reposit) override_obj="true";
+
+%pragma(reposit) obj_include=%{
 #include <ql/quotes/simplequote.hpp>
 #include <ql/quotes/lastfixingquote.hpp>
 #include <ql/quotes/futuresconvadjustmentquote.hpp>
 #include <ql/math/comparison.hpp>
 %}
-
-%feature("rp:override_obj");
 
 %feature("rp:generate_countify") QuantLibAddin::SimpleQuote::SimpleQuote;
 %feature("rp:generate_cpp") QuantLibAddin::SimpleQuote::SimpleQuote;
@@ -52,8 +52,4 @@ namespace QuantLibAddin {
                     const std::string& op);
     };    
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:override_obj", "");
-%feature("rp:group", "");
 

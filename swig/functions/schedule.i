@@ -1,6 +1,7 @@
 
-%feature("rp:group", "schedule");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="schedule";
+
+%pragma(reposit) obj_include=%{
 #include <ql/time/schedule.hpp>
 %}
 
@@ -26,7 +27,4 @@ namespace QuantLib {
          std::vector<QuantLib::Date> dates();
      };
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

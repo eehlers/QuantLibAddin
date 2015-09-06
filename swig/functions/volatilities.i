@@ -1,9 +1,11 @@
 
-%feature("rp:group", "volatilities");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="volatilities";
+
+%pragma(reposit) obj_include=%{
 #include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>
 #include <qlo/objmanual_piecewiseyieldcurve.hpp>
 %}
+
 %feature("rp:generate_countify") QuantLib::BlackConstantVol::BlackConstantVol;
 %feature("rp:generate_cpp") QuantLib::BlackConstantVol::BlackConstantVol;
 
@@ -19,7 +21,4 @@ namespace QuantLib {
                          const QuantLib::DayCounter& dayCounter);
     };
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

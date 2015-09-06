@@ -1,9 +1,8 @@
 
 %include termstructures.i
 
-%feature("rp:group", "piecewiseyieldcurve");
-
-%feature("rp:override_obj");
+%pragma(reposit) group="piecewiseyieldcurve";
+%pragma(reposit) override_obj="true";
 
 namespace QuantLibAddin {
 
@@ -23,5 +22,3 @@ namespace QuantLibAddin {
     }; 
 }
 
-%feature("rp:override_obj", "");
-%feature("rp:group", "");

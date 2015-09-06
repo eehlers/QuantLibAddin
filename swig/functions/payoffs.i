@@ -1,8 +1,10 @@
 
-%feature("rp:group", "payoffs");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="payoffs";
+
+%pragma(reposit) obj_include=%{
 #include <ql/instruments/payoffs.hpp>
 %}
+
 %feature("rp:generate_countify") QuantLib::PlainVanillaPayoff::PlainVanillaPayoff;
 %feature("rp:generate_cpp") QuantLib::PlainVanillaPayoff::PlainVanillaPayoff;
 
@@ -16,7 +18,4 @@ namespace QuantLib {
                            QuantLib::Real strike);
     };
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

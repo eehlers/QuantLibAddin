@@ -1,7 +1,6 @@
 
-%feature("rp:group", "leg");
-
-%feature("rp:override_obj");
+%pragma(reposit) group="leg";
+%pragma(reposit) override_obj="true";
 
 namespace QuantLibAddin {
 
@@ -18,7 +17,4 @@ namespace QuantLibAddin {
                       bool toBeSorted);
     };    
 }
-
-%feature("rp:override_obj", "");
-%feature("rp:group", "");
 

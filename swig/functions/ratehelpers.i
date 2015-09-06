@@ -1,7 +1,6 @@
 
-%feature("rp:group", "ratehelpers");
-
-%feature("rp:override_obj");
+%pragma(reposit) group="ratehelpers";
+%pragma(reposit) override_obj="true";
 
 namespace QuantLib {
 
@@ -109,5 +108,3 @@ namespace QuantLibAddin {
         const boost::shared_ptr<QuantLibAddin::RateHelper>& qlarh);        
 }
 
-%feature("rp:override_obj", "");
-%feature("rp:group", "");

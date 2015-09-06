@@ -1,7 +1,6 @@
 
-%feature("rp:group", "couponvectors");
-
-%feature("rp:override_obj");
+%pragma(reposit) group="couponvectors";
+%pragma(reposit) override_obj="true";
 
 namespace QuantLibAddin {
     
@@ -21,7 +20,4 @@ namespace QuantLibAddin {
             const std::vector<QuantLib::Rate>& caps);
     };
 }
-
-%feature("rp:override_obj", "");
-%feature("rp:group", "");
 

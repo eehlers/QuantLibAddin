@@ -1,6 +1,7 @@
 
-%feature("rp:group", "daycounters");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="daycounters";
+
+%pragma(reposit) obj_include=%{
 #include <ql/time/daycounter.hpp>
 %}
 
@@ -19,7 +20,4 @@ namespace QuantLib {
             const QuantLib::Date& refPeriodEnd);
     };
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

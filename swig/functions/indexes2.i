@@ -1,7 +1,6 @@
 
-%feature("rp:group", "indexes2");
-
-%feature("rp:override_obj");
+%pragma(reposit) group="indexes2";
+%pragma(reposit) override_obj="true";
 
 namespace QuantLibAddin {
 
@@ -16,7 +15,4 @@ namespace QuantLibAddin {
         std::string fixingCalendar();
     };
 }
-
-%feature("rp:override_obj", "");
-%feature("rp:group", "");
 

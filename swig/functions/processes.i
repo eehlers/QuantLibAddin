@@ -1,9 +1,11 @@
 
-%feature("rp:group", "processes");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="processes";
+
+%pragma(reposit) obj_include=%{
 #include <ql/processes/blackscholesprocess.hpp>
 %}
-%feature("rp:add_include") %{
+
+%pragma(reposit) add_include=%{
 #include "qlo/objmanual_quote.hpp"
 #include "qlo/obj_volatilities.hpp"
 %}
@@ -24,8 +26,4 @@ namespace QuantLib {
             const QuantLib::Handle<QuantLib::BlackVolTermStructure>& blackVolTS);
     };
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:add_include", "");
-%feature("rp:group", "");
 

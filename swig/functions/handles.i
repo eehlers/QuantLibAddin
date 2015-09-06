@@ -1,7 +1,6 @@
 
-%feature("rp:group", "handles");
-
-%feature("rp:override_obj");
+%pragma(reposit) group="handles";
+%pragma(reposit) override_obj="true";
 
 %feature("rp:processorName", "RelinkableHandleProcessor") QuantLibAddin::RelinkableHandleYieldTermStructure::RelinkableHandleYieldTermStructure;
 
@@ -17,8 +16,4 @@ namespace QuantLibAddin {
         RelinkableHandleYieldTermStructure(const std::string &linkTo) {}
     };
 }
-
-%feature("rp:override_obj", "");
-
-%feature("rp:group", "");
 

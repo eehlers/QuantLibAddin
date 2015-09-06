@@ -1,10 +1,14 @@
 
-%feature("rp:group", "pricingengines");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="pricingengines";
+
+%pragma(reposit) obj_include=%{
 #include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>
 #include <ql/pricingengines/swap/discountingswapengine.hpp>
 %}
-%feature("rp:add_include") "#include \"qlo/obj_processes.hpp\""
+
+%pragma(reposit) add_include=%{
+#include "qlo/obj_processes.hpp"
+%}
 
 %feature("rp:generate_countify") QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine;
 %feature("rp:generate_cpp") QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine;
@@ -33,7 +37,4 @@ namespace QuantLib {
                const QuantLib::Date & npvDate);    
     };
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

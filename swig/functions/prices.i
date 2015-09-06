@@ -1,6 +1,7 @@
 
-%feature("rp:group", "prices");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="prices";
+
+%pragma(reposit) obj_include=%{
 #include <ql/prices.hpp>
 %}
 
@@ -14,7 +15,4 @@ namespace QuantLib {
     double midSafe(const double bid,
                  const double ask);                       
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

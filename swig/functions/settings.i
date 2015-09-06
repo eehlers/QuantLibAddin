@@ -1,7 +1,7 @@
 
-%feature("rp:group", "settings");
+%pragma(reposit) group="settings";
+%pragma(reposit) override_obj="true";
 
-%feature("rp:override_obj");
 %feature("rp:generate_countify") QuantLibAddin::settingsEvaluationDate;
 %feature("rp:generate_cpp") QuantLibAddin::settingsEvaluationDate;
 %feature("rp:generate_cpp") QuantLibAddin::settingsSetEvaluationDate;
@@ -11,7 +11,4 @@ namespace QuantLibAddin {
     void settingsSetEvaluationDate(const QuantLib::Date& evalDate);
     std::string dateToString(const QuantLib::Date& d);
 }
-
-%feature("rp:override_obj", "");
-%feature("rp:group", "");
 

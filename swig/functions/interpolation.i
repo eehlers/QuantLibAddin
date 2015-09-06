@@ -1,7 +1,6 @@
 
-%feature("rp:group", "interpolation");
-
-%feature("rp:override_obj");
+%pragma(reposit) group="interpolation";
+%pragma(reposit) override_obj="true";
 
 namespace QuantLibAddin {
 
@@ -19,7 +18,4 @@ namespace QuantLibAddin {
             const std::vector<QuantLib::Handle<QuantLib::Quote> >& y);
     };    
 }
-
-%feature("rp:override_obj", "");
-%feature("rp:group", "");
 

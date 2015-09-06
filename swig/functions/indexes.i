@@ -1,7 +1,7 @@
 
-%feature("rp:group", "indexes");
+%pragma(reposit) group="indexes";
 
-%feature("rp:obj_include") %{
+%pragma(reposit) obj_include=%{
 #include <ql/indexes/ibor/euribor.hpp>
 #include <ql/indexes/ibor/eonia.hpp>
 #include <ql/indexes/swapindex.hpp>
@@ -47,7 +47,4 @@ namespace QuantLib {
     };
     
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

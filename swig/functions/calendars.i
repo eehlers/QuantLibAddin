@@ -1,6 +1,7 @@
 
-%feature("rp:group", "calendars");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="calendars";
+
+%pragma(reposit) obj_include=%{
 #include <ql/time/calendar.hpp>
 %}
 
@@ -28,7 +29,4 @@ namespace QuantLib {
             QuantLib::BusinessDayConvention convention);
     };
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

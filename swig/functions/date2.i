@@ -1,7 +1,6 @@
 
-%feature("rp:group", "date2");
-
-%feature("rp:override_obj");
+%pragma(reposit) group="date2";
+%pragma(reposit) override_obj="true";
 
 %feature("rp:loopParameter", "immCode") QuantLibAddin::IMMdate;
 %feature("rp:loopParameter", "immDate") QuantLibAddin::IMMcode;
@@ -31,7 +30,4 @@ namespace QuantLibAddin {
         const QuantLib::Date& referenceDate);
     QuantLib::Date ECBnextDate(const QuantLib::Date& date);
 }
-
-%feature("rp:override_obj", "");
-%feature("rp:group", "");
 

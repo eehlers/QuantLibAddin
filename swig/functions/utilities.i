@@ -1,7 +1,7 @@
 
-%feature("rp:group", "utilities");
+%pragma(reposit) group="utilities";
+%pragma(reposit) override_obj="true";
 
-%feature("rp:override_obj");
 %feature("rp:generate_countify");
 %feature("rp:generate_cpp");
 
@@ -10,8 +10,6 @@ namespace QuantLibAddin {
     long ObjectCount();
 }
 
-%feature("rp:override_obj", "");
 %feature("rp:generate_countify", "");
 %feature("rp:generate_cpp", "");
-%feature("rp:group", "");
 

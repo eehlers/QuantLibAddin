@@ -1,6 +1,7 @@
 
-%feature("rp:group", "termstructures");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="termstructures";
+
+%pragma(reposit) obj_include=%{
 #include <ql/termstructures/yield/flatforward.hpp>
 %}
 
@@ -34,7 +35,4 @@ namespace QuantLib {
                     const QuantLib::DayCounter& dayCounter);
     };
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

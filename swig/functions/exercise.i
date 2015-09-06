@@ -1,6 +1,7 @@
 
-%feature("rp:group", "exercise");
-%feature("rp:obj_include") %{
+%pragma(reposit) group="exercise";
+
+%pragma(reposit) obj_include=%{
 #include <ql/exercise.hpp>
 %}
 
@@ -16,7 +17,4 @@ namespace QuantLib {
         EuropeanExercise(const QuantLib::Date& date);
     };
 }
-
-%feature("rp:obj_include", "");
-%feature("rp:group", "");
 

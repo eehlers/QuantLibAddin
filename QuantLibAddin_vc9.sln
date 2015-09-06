@@ -17,18 +17,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClientCppDemo", "Clients\Cp
 		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145} = {9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swigrun", "swig\swigrun_vc9.vcproj", "{88BE5568-6E55-41C5-A251-670FAFB44336}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuantLibXLStatic", "..\QuantLibXL2\qlxl\QuantLibXLStatic_vc9.vcproj", "{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}"
-	ProjectSection(ProjectDependencies) = postProject
-		{88BE5568-6E55-41C5-A251-670FAFB44336} = {88BE5568-6E55-41C5-A251-670FAFB44336}
-		{9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145} = {9DAAB1B1-0EEF-4C89-A6F6-AAE48A182145}
-		{AD0A27DA-91DA-46A2-ACBD-296C419ED3AA} = {AD0A27DA-91DA-46A2-ACBD-296C419ED3AA}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swigcpp", "swig\swigcpp_vc9.vcproj", "{88BE5568-6E55-41C5-A251-670FAFB44336}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuantLib", "..\QuantLib\QuantLib_vc9.vcproj", "{AD0A27DA-91DA-46A2-ACBD-296C419ED3AA}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ohlib", "..\ObjectHandler\ohlib_vc9.vcproj", "{CD623FE5-3B3E-4511-80A9-A99D893349A4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ohlib", "..\reposit\rplib_vc9.vcproj", "{CD623FE5-3B3E-4511-80A9-A99D893349A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,16 +72,6 @@ Global
 		{88BE5568-6E55-41C5-A251-670FAFB44336}.Release (static runtime)|Win32.Build.0 = All|Win32
 		{88BE5568-6E55-41C5-A251-670FAFB44336}.Release|Win32.ActiveCfg = All|Win32
 		{88BE5568-6E55-41C5-A251-670FAFB44336}.Release|Win32.Build.0 = All|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.All|Win32.ActiveCfg = Release|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.All|Win32.Build.0 = Release|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Debug (static runtime)|Win32.ActiveCfg = Debug|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Debug (static runtime)|Win32.Build.0 = Debug|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Debug|Win32.ActiveCfg = Debug|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Debug|Win32.Build.0 = Debug|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Release (static runtime)|Win32.ActiveCfg = Release|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Release (static runtime)|Win32.Build.0 = Release|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Release|Win32.ActiveCfg = Release|Win32
-		{E2A6F3D4-19EF-419A-A529-9FC53E6DB0B6}.Release|Win32.Build.0 = Release|Win32
 		{AD0A27DA-91DA-46A2-ACBD-296C419ED3AA}.All|Win32.ActiveCfg = Debug (static runtime)|Win32
 		{AD0A27DA-91DA-46A2-ACBD-296C419ED3AA}.All|Win32.Build.0 = Debug (static runtime)|Win32
 		{AD0A27DA-91DA-46A2-ACBD-296C419ED3AA}.Debug (static runtime)|Win32.ActiveCfg = Debug (static runtime)|Win32

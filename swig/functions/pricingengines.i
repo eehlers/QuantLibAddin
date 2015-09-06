@@ -7,6 +7,7 @@
 %feature("rp:add_include") "#include \"qlo/obj_processes.hpp\""
 
 %feature("rp:generate_countify") QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine;
+%feature("rp:generate_cpp") QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine;
 
 namespace QuantLib {
 

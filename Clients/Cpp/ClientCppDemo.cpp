@@ -3,9 +3,9 @@
 #include <iomanip>
 #include "AddinCpp/add_all.hpp"
 
-#include <oh/ohdefines.hpp>
+#include <rp/rpdefines.hpp>
 #if defined BOOST_MSVC
-#include <oh/auto_link.hpp>
+#include <rp/auto_link.hpp>
 #include <ql/auto_link.hpp>
 #endif
 
@@ -14,12 +14,12 @@ int main() {
         std::cout << "hi" << std::endl;
         QuantLibAddinCpp::initializeAddin();
         std::cout << "ql version=" << QuantLibAddinCpp::qlVersion() << std::endl;
-        std::cout << QuantLibAddinCpp::qlClose(1, 2) << std::endl;
-        QuantLibAddinCpp::qlSimpleQuote("quote", 1);
-        std::cout << QuantLibAddinCpp::qlSimpleQuoteValue("quote") << std::endl;
-        std::cout << QuantLibAddinCpp::qlDateToString("40024") << std::endl;
-        std::cout << QuantLibAddinCpp::qlDateIsEndOfMonth(40025L) << std::endl;
-        QuantLibAddinCpp::qlSettingsSetEvaluationDate(41841L);
+        //std::cout << QuantLibAddinCpp::qlClose(1, 2) << std::endl;
+        //QuantLibAddinCpp::qlSimpleQuote("quote", 1);
+        //std::cout << QuantLibAddinCpp::qlSimpleQuoteValue("quote") << std::endl;
+        //std::cout << QuantLibAddinCpp::qlDateToString("40024") << std::endl;
+        //std::cout << QuantLibAddinCpp::qlDateIsEndOfMonth(40025L) << std::endl;
+        //QuantLibAddinCpp::qlSettingsSetEvaluationDate(41841L);
 
         // **************EquityOption.cpp
         // set up dates
@@ -60,29 +60,30 @@ int main() {
                   << std::setw(widths[3]) << std::left << "American"
                   << std::endl;
 
-        QuantLibAddinCpp::qlEuropeanExercise("europeanExercise", maturity);
+        reposit::property_t trigger;
+        QuantLibAddinCpp::qlEuropeanExercise(trigger, "europeanExercise", true, false, maturity);
 
-        QuantLibAddinCpp::qlSimpleQuote("underlying", underlying);
+        QuantLibAddinCpp::qlSimpleQuote(trigger, "underlying", true, false, underlying);
 
         // bootstrap the yield/dividend/vol curves
-        QuantLibAddinCpp::qlFlatForward("flatTermStructure", settlementDate, riskFreeRate, dayCounter);
-        QuantLibAddinCpp::qlFlatForward("flatDividendTS", settlementDate, dividendYield, dayCounter);
-        QuantLibAddinCpp::qlBlackConstantVol("flatVolTS", settlementDate, calendar, volatility, dayCounter);
-        QuantLibAddinCpp::qlBlackScholesMertonProcess("bsmProcess", "underlying", "flatDividendTS", "flatTermStructure", "flatVolTS");
+        QuantLibAddinCpp::qlFlatForward(trigger, "flatTermStructure", true, false, settlementDate, riskFreeRate, dayCounter);
+        QuantLibAddinCpp::qlFlatForward(trigger, "flatDividendTS", true, false, settlementDate, dividendYield, dayCounter);
+        QuantLibAddinCpp::qlBlackConstantVol(trigger, "flatVolTS", true, false, settlementDate, calendar, volatility, dayCounter);
+        QuantLibAddinCpp::qlBlackScholesMertonProcess(trigger, "bsmProcess", true, false, "underlying", "flatDividendTS", "flatTermStructure", "flatVolTS");
 
         // options
-        QuantLibAddinCpp::qlPlainVanillaPayoff("payoff", "PUT", strike);
-        QuantLibAddinCpp::qlVanillaOption("europeanOption", "payoff", "europeanExercise");
+        QuantLibAddinCpp::qlPlainVanillaPayoff(trigger, "payoff", true, false, "PUT", strike);
+        QuantLibAddinCpp::qlVanillaOption(trigger, "europeanOption", true, false, "payoff", "europeanExercise");
 
         // Analytic formulas:
 
         // Black-Scholes for European
         method = "Black-Scholes";
-        QuantLibAddinCpp::qlAnalyticEuropeanEngine("engine", "bsmProcess");
-        QuantLibAddinCpp::qlInstrumentSetPricingEngine("europeanOption", "engine");
+        QuantLibAddinCpp::qlAnalyticEuropeanEngine(trigger, "engine", true, false, "bsmProcess");
+        QuantLibAddinCpp::qlInstrumentSetPricingEngine(trigger, "europeanOption", "engine");
         std::cout << std::setw(widths[0]) << std::left << method
                   << std::fixed
-                  << std::setw(widths[1]) << std::left << QuantLibAddinCpp::qlInstrumentNPV("europeanOption")
+                  << std::setw(widths[1]) << std::left << QuantLibAddinCpp::qlInstrumentNPV(trigger, "europeanOption")
                   << std::setw(widths[2]) << std::left << "N/A"
                   << std::setw(widths[3]) << std::left << "N/A"
                   << std::endl;

@@ -1,8 +1,7 @@
 
 ACLOCAL_AMFLAGS = -I m4
 
-#SUBDIRS = m4 swig qlo AddinCfy Clients
-SUBDIRS = m4 swig qlo
+SUBDIRS = m4 swig qlo AddinCpp AddinCfy Clients
 
 .PHONY: SWIG
 SWIG:

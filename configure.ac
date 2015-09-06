@@ -1,7 +1,7 @@
 
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT([QuantLibAddin], [1.5.0],
+AC_INIT([QuantLibAddin], [1.7.0],
         [quantlib-dev@lists.sourceforge.net],
         [QuantLibAddin])
 AC_PREREQ(2.50)
@@ -98,11 +98,36 @@ AC_CHECK_FILE([${swig_path}/preinst-swig], [],
 AC_ARG_VAR(swig_dir, path to SWIG)
 AC_SUBST(swig_dir, [${swig_path}])
 
+# Possibly enable features
+
+AC_ARG_ENABLE([addin-cpp],
+              AC_HELP_STRING([--enable-addin-cpp],
+                             [build C++ addin and clients [[default=no]]]),
+                             [qla_build_cpp=$enableval],
+                             [qla_build_cpp=omitted])
+#AC_ARG_ENABLE([addin-calc],
+#              AC_HELP_STRING([--enable-addin-calc],
+#                             [build Calc addin [[default=no]]]),
+#                             [qla_build_calc=$enableval],
+#                             [qla_build_calc=omitted])
+AC_ARG_ENABLE([addin-cfy],
+              AC_HELP_STRING([--enable-addin-cfy],
+                             [build C++ addin and clients [[default=no]]]),
+                             [qla_build_cfy=$enableval],
+                             [qla_build_cfy=omitted])
+AC_ARG_ENABLE([addin-all],
+              AC_HELP_STRING([--enable-addin-all],
+                             [build all addins and clients [[default=no]]]),
+                             [qla_build_all=$enableval])
+AM_CONDITIONAL(BUILD_CPP, [test "$qla_build_cpp" = "omitted" \
+    && test "$qla_build_all" = "yes" || test "$qla_build_cpp" = "yes"])
+#AM_CONDITIONAL(BUILD_CALC, [test "$qla_build_calc" = "omitted" \
+#    && test "$qla_build_all" = "yes" || test "$qla_build_calc" = "yes"])
+AM_CONDITIONAL(BUILD_CFY, [test "$qla_build_cfy" = "omitted" \
+    && test "$qla_build_all" = "yes" || test "$qla_build_cfy" = "yes"])
+
 # Done, output the configured files
 
-    #AddinCfy/Makefile
-    #Clients/Makefile
-    #Clients/Countify/Makefile
 AC_CONFIG_FILES([
     Makefile
     m4/Makefile
@@ -117,6 +142,11 @@ AC_CONFIG_FILES([
     qlo/serialization/Makefile
     qlo/serialization/register/Makefile
     qlo/valueobjects/Makefile
+    AddinCpp/Makefile
+    AddinCfy/Makefile
+    Clients/Makefile
+    Clients/Cpp/Makefile
+    Clients/Countify/Makefile
 ])
 
 AC_OUTPUT

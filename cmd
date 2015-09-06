@@ -7,6 +7,8 @@ SWIG_DIR=/media/windows/linux/repos/reposit/swig
 
 #    CXXFLAGS=-gdwarf-2 \
 ./configure \
+    --enable-addin-cpp \
+    CXXFLAGS=-Wno-unused-local-typedefs \
     --prefix=$IDIR \
     --with-boost-include=$IDIR/include \
     --with-boost-lib=$IDIR/lib \

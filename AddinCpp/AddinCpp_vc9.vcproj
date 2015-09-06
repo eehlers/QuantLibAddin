@@ -44,7 +44,7 @@
 				AdditionalOptions="/MP"
 				Optimization="0"
 				EnableIntrinsicFunctions="false"
-				AdditionalIncludeDirectories="..,..\..\..\quantlib\ObjectHandler,..\..\..\quantlib\QuantLib"
+				AdditionalIncludeDirectories="..,..\..\..\quantlib\reposit,..\..\..\quantlib\QuantLib"
 				PreprocessorDefinitions="_DEBUG;WIN32;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -115,7 +115,7 @@
 				Optimization="2"
 				EnableIntrinsicFunctions="false"
 				WholeProgramOptimization="false"
-				AdditionalIncludeDirectories="..,..\..\..\quantlib\ObjectHandler,..\..\..\quantlib\QuantLib"
+				AdditionalIncludeDirectories="..,..\..\..\quantlib\reposit,..\..\..\quantlib\QuantLib"
 				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;"
 				MinimalRebuild="false"
 				RuntimeLibrary="2"
@@ -177,14 +177,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\add_date.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_date.hpp"
-			>
-		</File>
-		<File
 			RelativePath=".\add_exercise.cpp"
 			>
 		</File>
@@ -241,6 +233,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\add_termstructures.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\add_termstructures.hpp"
+			>
+		</File>
+		<File
 			RelativePath=".\add_utilities.cpp"
 			>
 		</File>
@@ -254,14 +254,6 @@
 		</File>
 		<File
 			RelativePath=".\add_volatilities.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_yieldtermstructures.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_yieldtermstructures.hpp"
 			>
 		</File>
 		<File

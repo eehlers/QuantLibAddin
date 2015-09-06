@@ -12,6 +12,9 @@
 %feature("rp:generate_countify") QuantLib::VanillaOption::VanillaOption;
 %feature("rp:generate_countify") QuantLib::Instrument::setPricingEngine;
 %feature("rp:generate_countify") QuantLib::Instrument::NPV;
+%feature("rp:generate_cpp") QuantLib::VanillaOption::VanillaOption;
+%feature("rp:generate_cpp") QuantLib::Instrument::setPricingEngine;
+%feature("rp:generate_cpp") QuantLib::Instrument::NPV;
 
 namespace QuantLib {
 

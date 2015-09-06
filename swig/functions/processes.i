@@ -3,10 +3,13 @@
 %feature("rp:obj_include") %{
 #include <ql/processes/blackscholesprocess.hpp>
 %}
-%feature("rp:add_include") "#include \"qlo/obj_quote.hpp\"
-#include \"qlo/obj_volatilities.hpp\""
+%feature("rp:add_include") %{
+#include "qlo/objmanual_quote.hpp"
+#include "qlo/obj_volatilities.hpp"
+%}
 
 %feature("rp:generate_countify") QuantLib::BlackScholesMertonProcess::BlackScholesMertonProcess;
+%feature("rp:generate_cpp") QuantLib::BlackScholesMertonProcess::BlackScholesMertonProcess;
 
 namespace QuantLib {
 

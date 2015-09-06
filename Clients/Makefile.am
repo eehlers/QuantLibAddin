@@ -1,3 +1,3 @@
 
-SUBDIRS = Countify
+SUBDIRS = Cpp Countify
 

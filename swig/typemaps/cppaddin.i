@@ -5,9 +5,13 @@
 
 %typemap(rp_tm_add_ret) ql_val_dbl "double";
 
-%typemap(rp_tm_add_prm) ql_val_dbl "double";
-%typemap(rp_tm_add_prm) ql_val_str "const std::string&";
-%typemap(rp_tm_add_prm) ql_val_any "const reposit::property_t&";
+//%typemap(rp_tm_add_prm) ql_val_dbl "double";
+//%typemap(rp_tm_add_prm) ql_val_str "const std::string&";
+//%typemap(rp_tm_add_prm) ql_val_any "const reposit::property_t&";
+%typemap(rp_tm_add_prm) QuantLib::Date const & "const reposit::property_t&";
+%typemap(rp_tm_add_prm) QuantLib::Handle< QuantLib::Quote > const & "const std::string &";
+%typemap(rp_tm_add_prm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "const std::string &";
+%typemap(rp_tm_add_prm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "const std::string &";
 
 %typemap(rp_tm_add_cnv) QuantLib::Date const & %{
     QuantLib::Date $1_name_cnv =
@@ -62,10 +66,19 @@
     RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::AnalyticEuropeanEngine, QuantLib::PricingEngine)
 %}
 
-%typemap(rp_tm_add_cll) ql_cnv_val "$1_name_cnv";
-%typemap(rp_tm_add_cll) ql_cnv_enm "$1_name_enum";
-%typemap(rp_tm_add_cll) ql_cnv_hnd "$1_name_handle";
-%typemap(rp_tm_add_cll) ql_cnv_obj "$1_name_get";
+//%typemap(rp_tm_add_cll) ql_cnv_val "$1_name_cnv";
+//%typemap(rp_tm_add_cll) ql_cnv_enm "$1_name_enum";
+//%typemap(rp_tm_add_cll) ql_cnv_hnd "$1_name_handle";
+//%typemap(rp_tm_add_cll) ql_cnv_obj "$1_name_get";
+%typemap(rp_tm_add_cll) QuantLib::Date const & "$1_name_cnv";
+%typemap(rp_tm_add_cll) const QuantLib::Handle< QuantLib::Quote >& "$1_name_handle";
+%typemap(rp_tm_add_cll) const QuantLib::Handle<QuantLib::YieldTermStructure>& "$1_name_handle";
+%typemap(rp_tm_add_cll) const QuantLib::Handle<QuantLib::BlackVolTermStructure>& "$1_name_handle";
+
+%typemap(rp_tm_add_ret1) QuantLib::Date "QuantLib::Date returnValue =";
+%typemap(rp_tm_add_ret2) QuantLib::Date "return returnValue.serialNumber();";
+
+%typemap(rp_tm_add_rt3) QuantLib::Date "long";
 
 %typemap(rp_tm_add_prm) ql_val_dbl "double";
 %typemap(rp_tm_add_prm) ql_val_str "const std::string &";

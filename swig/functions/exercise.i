@@ -5,6 +5,7 @@
 %}
 
 %feature("rp:generate_countify") QuantLib::EuropeanExercise::EuropeanExercise;
+%feature("rp:generate_cpp") QuantLib::EuropeanExercise::EuropeanExercise;
 
 namespace QuantLib {
 

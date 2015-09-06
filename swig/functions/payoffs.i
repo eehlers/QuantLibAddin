@@ -4,6 +4,7 @@
 #include <ql/instruments/payoffs.hpp>
 %}
 %feature("rp:generate_countify") QuantLib::PlainVanillaPayoff::PlainVanillaPayoff;
+%feature("rp:generate_cpp") QuantLib::PlainVanillaPayoff::PlainVanillaPayoff;
 
 namespace QuantLib {
 

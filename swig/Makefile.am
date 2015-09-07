@@ -44,7 +44,8 @@ EXTRA_DIST = \
     $(SWIG_FILES)
 
 SWIG_DIR = @swig_dir@
-SWIG_BIN = $(SWIG_DIR)/preinst-swig
+SWIG_BIN = $(SWIG_DIR)/swig
+SWIG_CMD = $(SWIG_DIR)/preinst-swig
 #SWIG_DEBUG = -debug-top 4 -debug-tmsearch
 
 SWIG_ARGS = -c++ -reposit -prefix ql
@@ -62,8 +63,8 @@ SWIG_ARGS += quantlib.i
 .PHONY: SWIG
 SWIG: .time-stamp
 
-.time-stamp: $(SWIG_FILES)
-	$(SWIG_BIN) $(SWIG_DEBUG) $(SWIG_ARGS)
+.time-stamp: $(SWIG_FILES) $(SWIG_BIN)
+	$(SWIG_CMD) $(SWIG_DEBUG) $(SWIG_ARGS)
 	touch .time-stamp
 
 clean:

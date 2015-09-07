@@ -5,5 +5,6 @@
 %include cppaddin.i
 %include cfyaddin.i
 %include exceladdin.i
-%include quantlib2.i
+// This one has to be last.
+%include apply.i
 

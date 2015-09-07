@@ -56,7 +56,7 @@ namespace QuantLibAddin {
         SwapRateHelper(
             const QuantLib::Handle<QuantLib::Quote>& rate,
             QuantLib::Natural settlementDays,
-            const QuantLib::Period& p,
+            const QuantLib::Period& tenor,
             const QuantLib::Calendar& calendar,
             const QuantLib::Frequency& fixedFrequency,
             QuantLib::BusinessDayConvention fixedConvention,

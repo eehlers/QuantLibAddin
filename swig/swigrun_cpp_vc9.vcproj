@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="swigxl"
+	Name="swigrun_cpp"
 	ProjectGUID="{88BE5568-6E55-41C5-A251-670FAFB44336}"
 	Keyword="MakeFileProj"
 	TargetFrameworkVersion="131072"
@@ -23,8 +23,8 @@
 			>
 			<Tool
 				Name="VCNMakeTool"
-				BuildCommandLine="NMAKE /f Makefile.vc SWIG_ARGS=-genxll"
-				ReBuildCommandLine="NMAKE /f Makefile.vc /a SWIG_ARGS=-genxll"
+				BuildCommandLine="NMAKE /f Makefile.vc SWIG_ARGS=-gencpp"
+				ReBuildCommandLine="NMAKE /f Makefile.vc /a SWIG_ARGS=-gencpp"
 				CleanCommandLine="NMAKE /f Makefile.vc clean"
 				Output=""
 				PreprocessorDefinitions="WIN32;_DEBUG"

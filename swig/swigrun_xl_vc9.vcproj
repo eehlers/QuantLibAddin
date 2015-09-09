@@ -154,7 +154,15 @@
 				Name="typemaps"
 				>
 				<File
-					RelativePath=".\typemaps\addinobjects.i"
+					RelativePath=".\typemaps\addincountify.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\addincpp.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\addinexcel.i"
 					>
 				</File>
 				<File
@@ -162,19 +170,19 @@
 					>
 				</File>
 				<File
-					RelativePath=".\typemaps\cppaddin.i"
-					>
-				</File>
-				<File
-					RelativePath=".\typemaps\exceladdin.i"
-					>
-				</File>
-				<File
 					RelativePath=".\typemaps\apply.i"
 					>
 				</File>
 				<File
+					RelativePath=".\typemaps\libraryobjects.i"
+					>
+				</File>
+				<File
 					RelativePath=".\typemaps\serialization.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\shared.i"
 					>
 				</File>
 				<File

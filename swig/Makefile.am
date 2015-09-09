@@ -26,22 +26,15 @@ SWIG_FILES := \
     functions/termstructures.i \
     functions/utilities.i \
     functions/volatilities.i \
-    typemaps/addinobjects.i \
+    typemaps/addincountify.i \
+    typemaps/addincpp.i \
+    typemaps/addinexcel.i \
     typemaps/all.i \
     typemaps/apply.i \
-    typemaps/cfyaddin.i \
-    typemaps/cppaddin.i \
-    typemaps/exceladdin.i \
+    typemaps/libraryobjects.i \
     typemaps/serialization.i \
-    typemaps/typemaps.ods \
+    typemaps/shared.i \
     typemaps/valueobjects.i
-
-EXTRA_DIST = \
-    .time-stamp \
-    Makefile.vc \
-    swigrun_cpp_vc9.vcproj \
-    swigrun_xl_vc9.vcproj \
-    $(SWIG_FILES)
 
 SWIG_DIR = @swig_dir@
 SWIG_BIN = $(SWIG_DIR)/swig
@@ -58,6 +51,7 @@ endif
 if BUILD_CFY
     SWIG_ARGS += -gencfy
 endif
+SWIG_ARGS += -genxll
 SWIG_ARGS += quantlib.i
 
 .PHONY: SWIG

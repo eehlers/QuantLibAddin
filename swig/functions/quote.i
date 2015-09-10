@@ -30,6 +30,13 @@ namespace QuantLibAddin {
         QuantLib::Real setValue(QuantLib::Real Value);
     };
     
+    class ForwardSwapQuote : public Quote {
+      public:
+        ForwardSwapQuote(const boost::shared_ptr<QuantLib::SwapIndex>& swapIndex,
+                         const QuantLib::Handle<QuantLib::Quote>& spread,
+                         const QuantLib::Period& fwdStart);
+    };
+    
     class LastFixingQuote : public Quote {
       public:
         LastFixingQuote(const boost::shared_ptr<QuantLib::Index>& index);

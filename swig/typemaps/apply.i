@@ -47,6 +47,7 @@
 // Data types of objects passed as function parameters to be retrieved from the repository
 %apply rp_tp_obj1 { boost::shared_ptr<QuantLib::Index> const & };
 %apply rp_tp_obj1 { boost::shared_ptr<QuantLib::IborIndex> const & };
+%apply rp_tp_obj1 { boost::shared_ptr<QuantLib::SwapIndex> const & };
 %apply rp_tp_obj1 { boost::shared_ptr<QuantLib::OvernightIndex> const & };
 %apply rp_tp_obj1 { boost::shared_ptr<QuantLib::PricingEngine> const & };
 %apply rp_tp_obj1 { boost::shared_ptr<QuantLib::StrikedTypePayoff> const & };

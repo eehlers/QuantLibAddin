@@ -9,13 +9,15 @@
 #include <ql/quotes/simplequote.hpp>
 #include <ql/quotes/lastfixingquote.hpp>
 #include <ql/quotes/futuresconvadjustmentquote.hpp>
+#include <ql/quotes/forwardswapquote.hpp>
 #include <ql/math/comparison.hpp>
 
 namespace QuantLibAddin {
 
-    // BEGIN typemap rp_tm_obj_ret bool
+
+    // BEGIN typemap rp_tm_default bool
     bool
-    // END   typemap rp_tm_obj_ret
+    // END   typemap rp_tm_default
     close(
         // BEGIN typemap rp_tm_default
         double x,
@@ -40,13 +42,37 @@ namespace QuantLibAddin {
         SimpleQuote(
             const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
-            double value,
+            double Value,
             // END   typemap rp_tm_default
             bool permanent);
         QuantLib::Real setValue(QuantLib::Real value);
     private:
         boost::shared_ptr<QuantLib::SimpleQuote> simpleQuote_;
     };
+
+
+    class ForwardSwapQuote : 
+        public Quote {
+    public:
+        ForwardSwapQuote(
+            const boost::shared_ptr<reposit::ValueObject>& properties,
+            // BEGIN typemap rp_tm_default
+            boost::shared_ptr< QuantLib::SwapIndex > const &swapIndex,
+            QuantLib::Handle< QuantLib::Quote > const &spread,
+            QuantLib::Period const &fwdStart,
+            // END   typemap rp_tm_default
+            bool permanent)
+        : Quote(properties, permanent) {
+            libraryObject_ = boost::shared_ptr<QuantLib::Quote>(new QuantLib::ForwardSwapQuote(
+                // BEGIN typemap rp_tm_default
+                swapIndex,
+                spread,
+                fwdStart
+                // END   typemap rp_tm_default
+            ));
+        }
+    };
+
 
     class LastFixingQuote : 
         public Quote {

@@ -13,7 +13,9 @@ namespace QuantLibAddin {
     
     class RelinkableHandleYieldTermStructure {
     public:
-        RelinkableHandleYieldTermStructure(const std::string &linkTo) {}
+        // NB: The parameter below must be called "CurrentLink" because there
+        // is code which updates a property with that name in the value object.
+        RelinkableHandleYieldTermStructure(const std::string &CurrentLink) {}
     };
 }
 

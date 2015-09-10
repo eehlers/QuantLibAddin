@@ -24,9 +24,9 @@ namespace QuantLibAddin {
     
     class SimpleQuote : public Quote {
       public:
+        // NB: The parameter below must be called "Value" because there
+        // is code which updates a property with that name in the value object.
         SimpleQuote(double Value);
-        // NB The parameter below must be called "Value" because of some hard-coding
-        // in objmanual_quote.cpp to update a property with that name in the value object.
         QuantLib::Real setValue(QuantLib::Real Value);
     };
     

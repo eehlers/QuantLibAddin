@@ -17,12 +17,12 @@ this_include_HEADERS = \
     obj_calendars.hpp \
     obj_daycounters.hpp \
     obj_exercise.hpp \
-    obj_indexes.hpp \
     obj_instruments.hpp \
     objmanual_couponvectors.hpp \
     objmanual_date2.hpp \
     objmanual_date.hpp \
     objmanual_handles.hpp \
+    objmanual_indexes.hpp \
     objmanual_indexes2.hpp \
     objmanual_interpolation.hpp \
     objmanual_leg.hpp \
@@ -46,13 +46,11 @@ libAddinObjects_la_SOURCES = \
     obj_calendars.cpp \
     obj_daycounters.cpp \
     obj_exercise.cpp \
-    obj_indexes.cpp \
     obj_instruments.cpp \
     objmanual_couponvectors.cpp \
     objmanual_date2.cpp \
     objmanual_date.cpp \
     objmanual_handles.cpp \
-    objmanual_indexes2.cpp \
     objmanual_interpolation.cpp \
     objmanual_leg.cpp \
     objmanual_piecewiseyieldcurve.cpp \

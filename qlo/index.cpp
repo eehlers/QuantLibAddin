@@ -20,7 +20,7 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#include <qlo/objmanual_indexes2.hpp>
+#include <qlo/index.hpp>
 
 #include <ql/timeseries.hpp>
 #include <ql/index.hpp>

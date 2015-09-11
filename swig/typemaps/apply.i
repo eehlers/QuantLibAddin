@@ -21,6 +21,8 @@
 %apply rp_tp_any { QuantLib::Date const & };
 
 // These QuantLib types behave like enum.
+%apply rp_tp_enm { QuantLib::Currency };
+%apply rp_tp_enm { QuantLib::Currency & };
 %apply rp_tp_enm { QuantLib::Option::Type };
 %apply rp_tp_enm { QuantLib::DayCounter };
 %apply rp_tp_enm { QuantLib::DayCounter const & };
@@ -32,6 +34,7 @@
 %apply rp_tp_enm { QuantLib::Futures::Type };
 %apply rp_tp_enm { QuantLibAddin::RateHelper::DepoInclusionCriteria };
 %apply rp_tp_enm { QuantLib::DateGeneration::Rule };
+%apply rp_tp_enm { QuantLibAddin::SwapIndex::FixingType };
 
 // Some types that require overrides within QuantLib, tell reposit to treat them like strings.
 %apply rp_tp_string { QuantLib::Period const & };

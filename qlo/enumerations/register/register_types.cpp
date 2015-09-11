@@ -40,7 +40,7 @@
 #include <qlo/objmanual_ratehelpers.hpp>
 //#include <qlo/piecewiseyieldcurve.hpp>
 #include <qlo/yieldtermstructures.hpp>
-//#include <qlo/indexes/swapindex.hpp>
+#include <qlo/indexes/swapindex.hpp>
 
 #include <ql/cashflows/cashflows.hpp>
 #include <ql/cashflows/conundrumpricer.hpp>
@@ -596,15 +596,15 @@ namespace QuantLibAddin {
             create.registerType("DeposBeforeFirstFuturesStartDatePlusOne", new QuantLibAddin::RateHelper::DepoInclusionCriteria(QuantLibAddin::RateHelper::DeposBeforeFirstFuturesStartDatePlusOne));
         }
 
-        //{
-        //    reposit::Create<QuantLibAddin::SwapIndex::FixingType> create;
-        //    create.registerType("IfrFix", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IfrFix));
-        //    create.registerType("Isda", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::Isda));
-        //    create.registerType("IsdaFixA", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixA));
-        //    create.registerType("IsdaFixAm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixAm));
-        //    create.registerType("IsdaFixB", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixB));
-        //    create.registerType("IsdaFixPm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixPm));
-        //}
+        {
+            reposit::Create<QuantLibAddin::SwapIndex::FixingType> create;
+            create.registerType("IfrFix", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IfrFix));
+            create.registerType("Isda", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::Isda));
+            create.registerType("IsdaFixA", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixA));
+            create.registerType("IsdaFixAm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixAm));
+            create.registerType("IsdaFixB", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixB));
+            create.registerType("IsdaFixPm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixPm));
+        }
 
     }
 

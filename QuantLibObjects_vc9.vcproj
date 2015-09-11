@@ -950,12 +950,64 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="indexes"
+			>
+			<File
+				RelativePath=".\qlo\indexes\iborindex.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\indexes\interestrateindex.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\indexes\swapindex.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\indexes\swapindex.hpp"
+				>
+			</File>
+			<Filter
+				Name="swap"
+				>
+				<File
+					RelativePath=".\qlo\indexes\swap\isdafixaswap.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\indexes\swap\liborswap.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\indexes\swap\liborswap.hpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="ibor"
+				>
+				<File
+					RelativePath=".\qlo\indexes\ibor\euribor.hpp"
+					>
+				</File>
+			</Filter>
+		</Filter>
 		<File
 			RelativePath=".\qlo\handle.hpp"
 			>
 		</File>
 		<File
 			RelativePath=".\qlo\handleimpl.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\index.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\index.hpp"
 			>
 		</File>
 		<File
@@ -988,14 +1040,6 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_exercise.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_indexes.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\obj_indexes.hpp"
 			>
 		</File>
 		<File
@@ -1095,7 +1139,7 @@
 			>
 		</File>
 		<File
-			RelativePath=".\qlo\objmanual_indexes2.cpp"
+			RelativePath=".\qlo\objmanual_indexes.hpp"
 			>
 		</File>
 		<File

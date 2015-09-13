@@ -954,6 +954,10 @@
 			Name="indexes"
 			>
 			<File
+				RelativePath=".\qlo\indexes\iborindex.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\indexes\iborindex.hpp"
 				>
 			</File>
@@ -973,6 +977,18 @@
 				Name="swap"
 				>
 				<File
+					RelativePath=".\qlo\indexes\swap\euriborswap.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\indexes\swap\euriborswap.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\indexes\swap\isdafixaswap.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\indexes\swap\isdafixaswap.hpp"
 					>
 				</File>
@@ -989,7 +1005,19 @@
 				Name="ibor"
 				>
 				<File
+					RelativePath=".\qlo\indexes\ibor\euribor.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\indexes\ibor\euribor.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\indexes\ibor\libor.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\indexes\ibor\libor.hpp"
 					>
 				</File>
 			</Filter>

@@ -2,8 +2,8 @@
 
 /*
  Copyright (C) 2006, 2007, 2008, 2009 Ferdinando Ametrano
+ Copyright (C) 2005, 2015 Eric Ehlers
  Copyright (C) 2006 Katiuscia Manzoni
- Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
 
  This file is part of QuantLib, a free-software/open-source library
@@ -42,3 +42,4 @@ namespace QuantLibAddin {
 }
 
 #endif
+

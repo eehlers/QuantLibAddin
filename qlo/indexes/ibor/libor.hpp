@@ -1,7 +1,7 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2006, 2007, 2008, 2009 Ferdinando Ametrano
+ Copyright (C) 2006, 2007 Ferdinando Ametrano
  Copyright (C) 2005, 2015 Eric Ehlers
  Copyright (C) 2006 Katiuscia Manzoni
  Copyright (C) 2005 Plamen Neykov
@@ -20,24 +20,27 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#ifndef qla_isdafixaswap_hpp
-#define qla_isdafixaswap_hpp
+#ifndef qla_libor_hpp
+#define qla_libor_hpp
 
-#include <qlo/indexes/swapindex.hpp>
+#include <qlo/indexes/iborindex.hpp>
 
 namespace QuantLibAddin {
 
-    class EuriborSwapIsdaFixA : 
-        public SwapIndex {
-    public:
-        EuriborSwapIsdaFixA(
-            const boost::shared_ptr<reposit::ValueObject>& properties,
-            // BEGIN typemap rp_tm_default
-            QuantLib::Period const &tenor,
-            QuantLib::Handle< QuantLib::YieldTermStructure > const &forwarding,
-            QuantLib::Handle< QuantLib::YieldTermStructure > const &discounting,
-            // END   typemap rp_tm_default
-            bool permanent);
+    class Libor : public IborIndex {
+      public:
+        Libor(const boost::shared_ptr<reposit::ValueObject>& properties,
+              const QuantLib::Currency& currency,
+              const std::string& p,
+              const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+              bool permanent);
+    };
+
+    class Sonia : public OvernightIndex {
+      public:
+        Sonia(const boost::shared_ptr<reposit::ValueObject>& properties,
+              const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+              bool permanent);
     };
 }
 

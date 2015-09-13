@@ -57,14 +57,3 @@ void QuantLibAddin::Index::addFixings(const std::vector<QuantLib::Date>& dates,
         inst_properties->setProperty("IndexFixingRates", fixingRates);
     }
 }
-
-double QuantLibAddin::Index::fixing(const QuantLib::Date& fixingDate,
-                            bool forecastTodaysFixing) {
-    return libraryObject_->fixing(fixingDate, forecastTodaysFixing);
-}
-
-std::string QuantLibAddin::Index::fixingCalendar() {
-    std::ostringstream os;
-    os << libraryObject_->fixingCalendar();
-    return os.str();
-}

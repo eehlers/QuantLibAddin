@@ -18,7 +18,7 @@ namespace QuantLibAddin {
             QuantLib::Real accuracy,
             const std::string& traitsID,
             const std::string& interpolatorID);
-        std::vector<QuantLib::Real> data();            
-    }; 
+        std::vector<QuantLib::Real> data();
+    };
 }
 

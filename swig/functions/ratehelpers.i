@@ -18,7 +18,7 @@ namespace QuantLibAddin {
         std::string quoteName();
         QuantLib::Real quoteValue();
     };
-    
+
     class FuturesRateHelper : public RateHelper {
       public:
         FuturesRateHelper(
@@ -30,14 +30,14 @@ namespace QuantLibAddin {
     };
 
     class DepositRateHelper : public RateHelper {
-        %rename(DepositRateHelper2) 
+        %rename(DepositRateHelper2)
         DepositRateHelper(const QuantLib::Handle<QuantLib::Quote>&,
                           const QuantLib::Period&,
                           QuantLib::Natural,
                           const QuantLib::Calendar&,
                           QuantLib::BusinessDayConvention,
                           bool,
-                          const QuantLib::DayCounter&);            
+                          const QuantLib::DayCounter&);
       public:
         DepositRateHelper(
             const QuantLib::Handle<QuantLib::Quote>& rate,
@@ -48,9 +48,9 @@ namespace QuantLibAddin {
                           const QuantLib::Calendar& calendar,
                           QuantLib::BusinessDayConvention convention,
                           bool endOfMonth,
-                          const QuantLib::DayCounter& dayCounter);            
+                          const QuantLib::DayCounter& dayCounter);
     };
-    
+
     class SwapRateHelper : public RateHelper {
       public:
         SwapRateHelper(
@@ -65,8 +65,8 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::Quote>& spread,
             const QuantLib::Period& forwardStart,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& discount);
-     };    
-     
+     };
+
     class FraRateHelper : public RateHelper {
       public:
         FraRateHelper(
@@ -94,7 +94,7 @@ namespace QuantLibAddin {
             const boost::shared_ptr<QuantLib::OvernightIndex>& overnightIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& discount);
     };
-    
+
     std::vector<std::string> rateHelperSelection(
         const std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> >& qlarhs,
         const std::vector<QuantLib::Natural>& priority,
@@ -102,9 +102,9 @@ namespace QuantLibAddin {
         QuantLib::Natural nSerialFutures,
         QuantLib::Natural frontFuturesRollingDays,
         RateHelper::DepoInclusionCriteria depoInclusionCriteria,
-        const std::vector<QuantLib::Natural>& minDistance);    
-        
+        const std::vector<QuantLib::Natural>& minDistance);
+
     QuantLib::Real rateHelperRate(
-        const boost::shared_ptr<QuantLibAddin::RateHelper>& qlarh);        
+        const boost::shared_ptr<QuantLibAddin::RateHelper>& qlarh);
 }
 

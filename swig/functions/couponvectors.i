@@ -3,7 +3,7 @@
 %pragma(reposit) override_obj="true";
 
 namespace QuantLibAddin {
-    
+
     class IborLeg : public Leg {
       public:
         IborLeg(

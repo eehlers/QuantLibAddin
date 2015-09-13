@@ -15,6 +15,6 @@ namespace QuantLibAddin {
       public:
         MultiPhaseLeg(const std::vector<boost::shared_ptr<Leg> >& legs,
                       bool toBeSorted);
-    };    
+    };
 }
 

@@ -5,4 +5,5 @@
 
 #include <qlo/indexes/swap/isdafixaswap.hpp>
 #include <qlo/indexes/ibor/euribor.hpp>
+#include <qlo/indexes/ibor/libor.hpp>
 #include <qlo/indexes/swap/liborswap.hpp>

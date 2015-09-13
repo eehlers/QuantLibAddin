@@ -9,8 +9,13 @@
 
 namespace QuantLib {
 
-    class Index {};
-    
+    class Index {
+        public:
+            double fixing(const QuantLib::Date& fixingDate,
+                                bool forecastTodaysFixing);
+            QuantLib::Calendar fixingCalendar();
+    };
+
     class InterestRateIndex : public Index {
         public:
             QuantLib::Natural fixingDays();
@@ -18,9 +23,9 @@ namespace QuantLib {
             QuantLib::Date valueDate(const QuantLib::Date& fixingDate);
             QuantLib::Period tenor();
     };
-    
+
     class IborIndex : public InterestRateIndex {
         public:
             QuantLib::BusinessDayConvention businessDayConvention();
-    };    
+    };
 }

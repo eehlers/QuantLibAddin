@@ -11,7 +11,7 @@
 namespace QuantLib {
 
     class StrikedTypePayoff {};
-    
+
     class PlainVanillaPayoff : public StrikedTypePayoff {
       public:
         PlainVanillaPayoff(QuantLib::Option::Type optionType,

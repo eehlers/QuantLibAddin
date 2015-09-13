@@ -16,13 +16,13 @@
 namespace QuantLib {
 
     class PricingEngine {};
-    
+
     class AnalyticEuropeanEngine : public PricingEngine {
       public:
         AnalyticEuropeanEngine(
             const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& process);
     };
-    
+
     class DiscountingSwapEngine : public PricingEngine {
       public:
         DiscountingSwapEngine(
@@ -32,9 +32,9 @@ namespace QuantLib {
                // This is because the typemaps currently work for "const Date&" as an input value
                // and for "Date" as a return value but not for "Date" as an input value.
                //QuantLib::Date settlementDate,
-               //QuantLib::Date npvDate);    
+               //QuantLib::Date npvDate);
                const QuantLib::Date & settlementDate,
-               const QuantLib::Date & npvDate);    
+               const QuantLib::Date & npvDate);
     };
 }
 

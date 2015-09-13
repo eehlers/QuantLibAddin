@@ -28,12 +28,12 @@
 %typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Natural> const & %{
         std::vector<long> $1_name_vec =
             reposit::operToVector<long>(*$1_name, "$1_name");
-        std::vector<QuantLib::Natural> $1_name_vec2 = 
+        std::vector<QuantLib::Natural> $1_name_vec2 =
             QuantLibAddin::convertVector<long, QuantLib::Natural>($1_name_vec);
 %}
 
 %typemap(rp_tm_xll_cnvt) boost::shared_ptr<QuantLibAddin::RateHelper> const & qlarh %{
-        RP_GET_OBJECT($1_name_obj, $1_name, QuantLibAddin::RateHelper);        
+        RP_GET_OBJECT($1_name_obj, $1_name, QuantLibAddin::RateHelper);
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
@@ -78,7 +78,7 @@
         std::vector<std::string> $1_name_vec =
             reposit::operToVector<std::string>(*$1_name, "$1_name");
         std::vector<boost::shared_ptr<QuantLib::RateHelper> > $1_name_vec2 =
-            reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);            
+            reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);
 %}
 
 %typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & %{
@@ -99,13 +99,13 @@
         std::vector<std::string> $1_name_vec =
             reposit::operToVector<std::string>(*$1_name, "$1_name");
         std::vector<boost::shared_ptr<QuantLibAddin::Leg> > $1_name_vec_temp =
-            reposit::getObjectVector<QuantLibAddin::Leg>($1_name_vec);            
+            reposit::getObjectVector<QuantLibAddin::Leg>($1_name_vec);
         std::vector<QuantLib::Leg> $1_name_vec2($1_name_vec_temp.size());
         boost::shared_ptr<QuantLib::Leg> qlLeg;
         for (QuantLib::Size i=0; i<$1_name_vec_temp.size(); ++i) {
             $1_name_vec_temp[i]->getLibraryObject(qlLeg);
             $1_name_vec2[i] = *qlLeg;
-        }            
+        }
 %}
 
 // rp_tm_xll_argf - arguments to the underlying Library function
@@ -135,6 +135,14 @@
 %}
 
 %typemap(rp_tm_xll_rtst) QuantLib::DayCounter const & %{
+        std::ostringstream os;
+        os << returnValue;
+        static char ret[XL_MAX_STR_LEN];
+        reposit::stringToChar(os.str(), ret);
+        return ret;
+%}
+
+%typemap(rp_tm_xll_rtst) QuantLib::Calendar %{
         std::ostringstream os;
         os << returnValue;
         static char ret[XL_MAX_STR_LEN];

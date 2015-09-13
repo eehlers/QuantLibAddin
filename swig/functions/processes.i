@@ -16,7 +16,7 @@
 namespace QuantLib {
 
     class GeneralizedBlackScholesProcess {};
-    
+
     class BlackScholesMertonProcess : public GeneralizedBlackScholesProcess {
       public:
         BlackScholesMertonProcess(

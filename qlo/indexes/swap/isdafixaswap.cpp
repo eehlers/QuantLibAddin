@@ -20,26 +20,28 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#ifndef qla_isdafixaswap_hpp
-#define qla_isdafixaswap_hpp
+//#if defined(HAVE_CONFIG_H)
+//    #include <qlo/config.hpp>
+//#endif
 
-#include <qlo/indexes/swapindex.hpp>
+#include <qlo/indexes/swap/isdafixaswap.hpp>
 
-namespace QuantLibAddin {
+#include <ql/termstructures/yieldtermstructure.hpp>
+#include <ql/indexes/swap/euriborswap.hpp>
 
-    class EuriborSwapIsdaFixA : 
-        public SwapIndex {
-    public:
-        EuriborSwapIsdaFixA(
-            const boost::shared_ptr<reposit::ValueObject>& properties,
-            // BEGIN typemap rp_tm_default
-            QuantLib::Period const &tenor,
-            QuantLib::Handle< QuantLib::YieldTermStructure > const &forwarding,
-            QuantLib::Handle< QuantLib::YieldTermStructure > const &discounting,
-            // END   typemap rp_tm_default
-            bool permanent);
-    };
+QuantLibAddin::EuriborSwapIsdaFixA::EuriborSwapIsdaFixA(
+    const boost::shared_ptr<reposit::ValueObject>& properties,
+    const QuantLib::Period& tenor,
+    const QuantLib::Handle<QuantLib::YieldTermStructure>& forwarding,
+    const QuantLib::Handle<QuantLib::YieldTermStructure>& discounting,
+    bool permanent)
+: SwapIndex(properties, permanent) {
+    libraryObject_ = boost::shared_ptr<QuantLib::SwapIndex>(new QuantLib::EuriborSwapIsdaFixA(
+        // BEGIN typemap rp_tm_default
+        tenor,
+        forwarding,
+        discounting
+        // END   typemap rp_tm_default
+    ));
 }
-
-#endif
 

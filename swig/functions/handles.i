@@ -10,7 +10,7 @@ namespace QuantLibAddin {
     public:
         void linkTo(const std::string &objectID2);
     };
-    
+
     class RelinkableHandleYieldTermStructure {
     public:
         // NB: The parameter below must be called "CurrentLink" because there

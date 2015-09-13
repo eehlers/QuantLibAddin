@@ -15,8 +15,8 @@
 %typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
     reposit::property_t $1_name_prop =
         valueObject->getProperty("$1_name");
-    valueObject->processVariant($1_name_prop);            
-    QuantLib::Handle<QuantLib::Quote> $1_name = 
+    valueObject->processVariant($1_name_prop);
+    QuantLib::Handle<QuantLib::Quote> $1_name =
         reposit::convert2<QuantLib::Handle<QuantLib::Quote> >(
             $1_name_prop, "$1_name");
 %}
@@ -85,7 +85,7 @@
         reposit::vector::convert2<std::string>(valueObject->getProperty("$1_name"), "$1_name");
     for (std::vector<std::string>::const_iterator i = $1_name_vec.begin();
             i != $1_name_vec.end(); ++i)
-        valueObject->processPrecedentID(*i);            
+        valueObject->processPrecedentID(*i);
     std::vector<boost::shared_ptr<QuantLib::RateHelper> > $1_name =
         reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);
 %}
@@ -105,7 +105,7 @@
         //std::vector<std::string> $1_name_vec =
         //    reposit::operToVector<std::string>(*$1_name, "$1_name");
         //std::vector<boost::shared_ptr<QuantLibAddin::Leg> > $1_name_vec_temp =
-        //    reposit::getObjectVector<QuantLibAddin::Leg>($1_name_vec);            
+        //    reposit::getObjectVector<QuantLibAddin::Leg>($1_name_vec);
         //std::vector<QuantLib::Leg> $1_name_vec2($1_name_vec_temp.size());
         //boost::shared_ptr<QuantLib::Leg> qlLeg;
         //for (QuantLib::Size i=0; i<$1_name_vec_temp.size(); ++i) {

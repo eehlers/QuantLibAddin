@@ -2,8 +2,8 @@
 
 /*
  Copyright (C) 2006, 2007, 2009 Ferdinando Ametrano
+ Copyright (C) 2005, 2015 Eric Ehlers
  Copyright (C) 2006 Katiuscia Manzoni
- Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
 
  This file is part of QuantLib, a free-software/open-source library
@@ -27,18 +27,18 @@
 
 #include <ql/time/businessdayconvention.hpp>
 
-//namespace QuantLib {
-//    class Period;
-//    class Currency;
-//    class Calendar;
-//    class DayCounter;
-//    class YieldTermStructure;
-//    class IborIndex;
-//    class Quote;
-//
-//    template <class T>
-//    class Handle;
-//}
+namespace QuantLib {
+    class Period;
+    class Currency;
+    class Calendar;
+    class DayCounter;
+    class YieldTermStructure;
+    class IborIndex;
+    class Quote;
+
+    template <class T>
+    class Handle;
+}
 
 namespace QuantLibAddin {
 
@@ -98,3 +98,4 @@ namespace QuantLibAddin {
 }
 
 #endif
+

@@ -10,9 +10,9 @@
 namespace QuantLib {
 
     class DayCounter {
-    
+
     public:
-    
+
         QuantLib::Time yearFraction(
             const QuantLib::Date& StartDate,
             const Date& EndDate,

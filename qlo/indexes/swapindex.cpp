@@ -2,8 +2,8 @@
 
 /*
  Copyright (C) 2006, 2007, 2008, 2009 Ferdinando Ametrano
+ Copyright (C) 2005, 2015 Eric Ehlers
  Copyright (C) 2006 Katiuscia Manzoni
- Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
 
  This file is part of QuantLib, a free-software/open-source library
@@ -19,6 +19,10 @@
  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
+
+//#if defined(HAVE_CONFIG_H)
+//    #include <qlo/config.hpp>
+//#endif
 
 #include <qlo/indexes/swapindex.hpp>
 #include <ql/indexes/swapindex.hpp>
@@ -62,3 +66,4 @@ std::ostream& QuantLibAddin::operator<<(std::ostream& out,
         QL_FAIL("unknown SwapIndex::FixingType(" << QuantLib::Integer(t) << ")");
     }
 }
+

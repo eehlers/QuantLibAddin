@@ -2,8 +2,8 @@
 
 /*
  Copyright (C) 2006, 2007 Ferdinando Ametrano
+ Copyright (C) 2005, 2015 Eric Ehlers
  Copyright (C) 2006 Katiuscia Manzoni
- Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
 
  This file is part of QuantLib, a free-software/open-source library
@@ -25,10 +25,6 @@
 
 #include <qlo/indexes/iborindex.hpp>
 
-// FIXME put ctor implementations, and these #includes, into the cpp file
-#include <ql/indexes/ibor/euribor.hpp>
-#include <ql/indexes/ibor/eonia.hpp>
-
 namespace QuantLibAddin {
 
     class Euribor : 
@@ -40,20 +36,12 @@ namespace QuantLibAddin {
             QuantLib::Period const &tenor,
             QuantLib::Handle< QuantLib::YieldTermStructure > const &YieldCurve,
             // END   typemap rp_tm_default
-            bool permanent)
-        : IborIndex(properties, permanent) {
-            libraryObject_ = boost::shared_ptr<QuantLib::IborIndex>(new QuantLib::Euribor(
-                // BEGIN typemap rp_tm_default
-                tenor,
-                YieldCurve
-                // END   typemap rp_tm_default
-            ));
-        }
+            bool permanent);
     };
 
     //class Euribor365 : public IborIndex {
     //  public:
-    //    Euribor365(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //    Euribor365(const boost::shared_ptr<reposit::ValueObject>& properties,
     //               const std::string& p,
     //               const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
     //               bool permanent);
@@ -67,15 +55,9 @@ namespace QuantLibAddin {
             // BEGIN typemap rp_tm_default
             QuantLib::Handle< QuantLib::YieldTermStructure > const &YieldCurve,
             // END   typemap rp_tm_default
-            bool permanent)
-        : OvernightIndex(properties, permanent) {
-            libraryObject_ = boost::shared_ptr<QuantLib::OvernightIndex>(new QuantLib::Eonia(
-                // BEGIN typemap rp_tm_default
-                YieldCurve
-                // END   typemap rp_tm_default
-            ));
-        }
+            bool permanent);
     };
 }
 
 #endif
+

@@ -14,16 +14,12 @@ namespace QuantLibAddin {
             void addFixings(const std::vector<QuantLib::Date>& dates,
                             const std::vector<QuantLib::Real>& values,
                             bool forceOverwrite);
-            double fixing(const QuantLib::Date& fixingDate,
-                                bool forecastTodaysFixing);
-            //QuantLib::Calendar fixingCalendar();
-            std::string fixingCalendar();
     };
 
     class InterestRateIndex : public Index {};
-    
+
     class IborIndex : public InterestRateIndex {};
-    
+
     class SwapIndex : public InterestRateIndex {
         public:
             SwapIndex(const std::string& familyName,
@@ -47,9 +43,9 @@ namespace QuantLibAddin {
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& f,
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& d);
     };
-        
+
     class OvernightIndex : public IborIndex {};
-    
+
     class Euribor : public IborIndex {
         public:
             Euribor(const QuantLib::Period& tenor,
@@ -60,11 +56,23 @@ namespace QuantLibAddin {
         public:
             Eonia(const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve);
     };
-    
+
     class EuriborSwapIsdaFixA : public SwapIndex {
       public:
             EuriborSwapIsdaFixA(const QuantLib::Period& tenor,
                                 const QuantLib::Handle<QuantLib::YieldTermStructure>& forwarding,
                                 const QuantLib::Handle<QuantLib::YieldTermStructure>& discounting);
     };
+    
+    class Libor : public IborIndex {
+      public:
+        Libor(const QuantLib::Currency& currency,
+              const std::string& p,
+              const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS);
+    };
+
+    class Sonia : public OvernightIndex {
+      public:
+        Sonia(const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS);
+    };    
 }

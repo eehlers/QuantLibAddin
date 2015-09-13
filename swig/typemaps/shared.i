@@ -10,7 +10,7 @@
             QuantLibAddin::CoerceTermStructure<
                 QuantLibAddin::TermStructure,
                 QuantLib::TermStructure>()(
-                    yyy);        
+                    yyy);
 %}
 %typemap(rp_tm_xxx_rp_get) QuantLib::YieldTermStructure %{
         RP_GET_OBJECT(yyy, objectID, reposit::Object)
@@ -18,6 +18,6 @@
             QuantLibAddin::CoerceTermStructure<
                 QuantLibAddin::YieldTermStructure,
                 QuantLib::YieldTermStructure>()(
-                    yyy);        
+                    yyy);
 %}
 

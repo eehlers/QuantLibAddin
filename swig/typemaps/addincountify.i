@@ -25,19 +25,19 @@
         RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::SimpleQuote, QuantLib::Quote)
         QuantLib::Handle<QuantLib::Quote> $1_name_handle =
             QuantLib::Handle<QuantLib::Quote>($1_name_get);
-%} 
+%}
 
 %typemap(rp_tm_cfy_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
         RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
         QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
             QuantLib::Handle<QuantLib::YieldTermStructure>($1_name_get);
-%} 
+%}
 
 %typemap(rp_tm_cfy_cnvt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & %{
         RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
         QuantLib::Handle<QuantLib::BlackVolTermStructure> $1_name_handle =
             QuantLib::Handle<QuantLib::BlackVolTermStructure>($1_name_get);
-%} 
+%}
 
 // rp_tm_cfy_rtdf - declare variable to capture return value of Library function (FM)
 

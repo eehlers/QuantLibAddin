@@ -11,7 +11,7 @@
 namespace QuantLib {
 
     class Exercise {};
-    
+
     class EuropeanExercise : public Exercise {
       public:
         EuropeanExercise(const QuantLib::Date& date);

@@ -86,6 +86,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\indexes2.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\instruments.i"
 					>
 				</File>

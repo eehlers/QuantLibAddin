@@ -13,7 +13,6 @@ noinst_HEADERS = \
     serialization_daycounters.hpp \
     serialization_exercise.hpp \
     serialization_handles.hpp \
-    serialization_indexes2.hpp \
     serialization_indexes.hpp \
     serialization_instruments.hpp \
     serialization_interpolation.hpp \
@@ -40,7 +39,6 @@ libRegister_la_SOURCES = \
     serialization_daycounters.cpp \
     serialization_exercise.cpp \
     serialization_handles.cpp \
-    serialization_indexes2.cpp \
     serialization_indexes.cpp \
     serialization_instruments.cpp \
     serialization_interpolation.cpp \

@@ -13,7 +13,6 @@ include_HEADERS = \
     create_daycounters.hpp \
     create_exercise.hpp \
     create_handles.hpp \
-    create_indexes2.hpp \
     create_indexes.hpp \
     create_instruments.hpp \
     create_interpolation.hpp \
@@ -39,7 +38,6 @@ libCreate_la_SOURCES = \
     create_daycounters.cpp \
     create_exercise.cpp \
     create_handles.cpp \
-    create_indexes2.cpp \
     create_indexes.cpp \
     create_instruments.cpp \
     create_interpolation.cpp \

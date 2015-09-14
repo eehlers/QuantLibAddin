@@ -1,11 +1,11 @@
 
-// For most of the QuantLib index classes, we have handwritten code in
-// the QuantLibAddin layer to provide custom behavior.  This file defines
-// all of the constructors and memberfunctions of the QuantLibAddin
-// wrapper classes.  See also indexes2.i.
-
 %pragma(reposit) group="indexes";
 %pragma(reposit) override_obj="true";
+
+// For most of the QuantLib index classes, we have handwritten code in the
+// QuantLibAddin layer to provide custom behavior.  In the QuantLibAddin
+// namespace we define all of the constructors and memberfunctions of the
+// QuantLibAddin wrapper classes.  See also the QuantLib namespace below.
 
 namespace QuantLibAddin {
 
@@ -75,4 +75,30 @@ namespace QuantLibAddin {
       public:
         Sonia(const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS);
     };    
+}
+
+// In the QuantLib namespace we define member functions which are invoked
+// directly on the underlying QuantLib objects.
+
+namespace QuantLib {
+
+    class Index {
+        public:
+            double fixing(const QuantLib::Date& fixingDate,
+                                bool forecastTodaysFixing);
+            QuantLib::Calendar fixingCalendar();
+    };
+
+    class InterestRateIndex : public Index {
+        public:
+            QuantLib::Natural fixingDays();
+            const QuantLib::DayCounter& dayCounter();
+            QuantLib::Date valueDate(const QuantLib::Date& fixingDate);
+            QuantLib::Period tenor();
+    };
+
+    class IborIndex : public InterestRateIndex {
+        public:
+            QuantLib::BusinessDayConvention businessDayConvention();
+    };
 }

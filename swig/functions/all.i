@@ -7,7 +7,6 @@
 %include exercise.i
 %include handles.i
 %include indexes.i
-%include indexes2.i
 %include instruments.i
 %include interpolation.i
 %include leg.i

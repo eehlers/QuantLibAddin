@@ -12,7 +12,6 @@ this_include_HEADERS = \
     vo_daycounters.hpp \
     vo_exercise.hpp \
     vo_handles.hpp \
-    vo_indexes2.hpp \
     vo_indexes.hpp \
     vo_instruments.hpp \
     vo_interpolation.hpp \
@@ -38,7 +37,6 @@ libValueObjects_la_SOURCES = \
     vo_daycounters.cpp \
     vo_exercise.cpp \
     vo_handles.cpp \
-    vo_indexes2.cpp \
     vo_indexes.cpp \
     vo_instruments.cpp \
     vo_interpolation.cpp \

@@ -3,13 +3,13 @@
 
 %pragma(reposit) obj_include=%{
 #include <ql/instruments/vanillaswap.hpp>
+#include <qlo/obj_instruments.hpp>
 %}
 
 namespace QuantLib {
 
-    class VanillaSwap /*: public Swap*/ {
+    class VanillaSwap : public /*Swap*/Instrument {
       public:
-        //enum Type { Receiver = -1, Payer = 1 };
         VanillaSwap(
             QuantLib::VanillaSwap::Type type,
             QuantLib::Real nominal,
@@ -22,5 +22,6 @@ namespace QuantLib {
             const QuantLib::DayCounter& floatingDayCount/*,
             boost::optional<QuantLib::BusinessDayConvention> paymentConvention =
                                                                  boost::none*/);
+        QuantLib::Rate fairRate();                                                                 
     };
 }

@@ -3,6 +3,7 @@
 
 %pragma(reposit) obj_include=%{
 #include <ql/models/shortrate/calibrationhelpers/swaptionhelper.hpp>
+#include <ql/models/shortrate/onefactormodels/hullwhite.hpp>
 %}
 
 namespace QuantLib {
@@ -23,4 +24,10 @@ namespace QuantLib {
                        const QuantLib::Real nominal = 1.0,
                        const QuantLib::Real shift = 0.0*/);
         };
+        
+    class HullWhite /*: public Vasicek, public TermStructureConsistentModel*/ {
+      public:
+        HullWhite(const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure/*,
+                  Real a = 0.1, Real sigma = 0.01*/);
+        };        
 }

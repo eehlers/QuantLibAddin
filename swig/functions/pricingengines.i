@@ -4,6 +4,7 @@
 %pragma(reposit) obj_include=%{
 #include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>
 #include <ql/pricingengines/swap/discountingswapengine.hpp>
+#include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
 %}
 
 %pragma(reposit) add_include=%{
@@ -35,6 +36,14 @@ namespace QuantLib {
                //QuantLib::Date npvDate);
                const QuantLib::Date & settlementDate,
                const QuantLib::Date & npvDate);
+    };
+    
+    class JamshidianSwaptionEngine : public PricingEngine {
+      public:
+        JamshidianSwaptionEngine(
+                         const boost::shared_ptr<QuantLib::OneFactorAffineModel>& model/*,
+                         const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure =
+                                                 QuantLib::Handle<QuantLib::YieldTermStructure>()*/);
     };
 }
 

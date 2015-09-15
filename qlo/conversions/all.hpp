@@ -48,6 +48,7 @@
 #include <qlo/objmanual_couponvectors.hpp>
 #include <qlo/objmanual_indexes.hpp>
 #include <qlo/objmanual_quote.hpp>
+#include <qlo/obj_models.hpp>
 
 #endif
 

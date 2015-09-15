@@ -8,7 +8,12 @@
 
 namespace QuantLib {
 
-    class SwaptionHelper /*: public CalibrationHelper*/ {
+    class CalibrationHelper {
+      public:
+        void setPricingEngine(const boost::shared_ptr<QuantLib::PricingEngine>& engine);
+    };
+
+    class SwaptionHelper : public CalibrationHelper {
       public:
         SwaptionHelper(const QuantLib::Period& maturity,
                        const QuantLib::Period& length,
@@ -25,7 +30,9 @@ namespace QuantLib {
                        const QuantLib::Real shift = 0.0*/);
         };
         
-    class HullWhite /*: public Vasicek, public TermStructureConsistentModel*/ {
+    class OneFactorAffineModel {};
+    
+    class HullWhite : public /*Vasicek, public TermStructureConsistentModel*/OneFactorAffineModel {
       public:
         HullWhite(const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure/*,
                   Real a = 0.1, Real sigma = 0.01*/);

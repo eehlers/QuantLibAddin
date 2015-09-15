@@ -26,6 +26,7 @@ this_include_HEADERS = \
     objmanual_indexes2.hpp \
     objmanual_interpolation.hpp \
     objmanual_leg.hpp \
+    objmanual_models.hpp \
     objmanual_piecewiseyieldcurve.hpp \
     objmanual_quote.hpp \
     objmanual_ratehelpers.hpp \
@@ -54,6 +55,7 @@ libAddinObjects_la_SOURCES = \
     objmanual_handles.cpp \
     objmanual_interpolation.cpp \
     objmanual_leg.cpp \
+    objmanual_models.cpp \
     objmanual_piecewiseyieldcurve.cpp \
     objmanual_quote.cpp \
     objmanual_ratehelpers.cpp \

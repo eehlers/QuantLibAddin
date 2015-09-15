@@ -17,6 +17,7 @@ noinst_HEADERS = \
     serialization_instruments.hpp \
     serialization_interpolation.hpp \
     serialization_leg.hpp \
+    serialization_models.hpp \
     serialization_payoffs.hpp \
     serialization_piecewiseyieldcurve.hpp \
     serialization_prices.hpp \
@@ -44,6 +45,7 @@ libRegister_la_SOURCES = \
     serialization_instruments.cpp \
     serialization_interpolation.cpp \
     serialization_leg.cpp \
+    serialization_models.cpp \
     serialization_payoffs.cpp \
     serialization_piecewiseyieldcurve.cpp \
     serialization_prices.cpp \

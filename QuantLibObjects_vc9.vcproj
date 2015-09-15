@@ -445,6 +445,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_models.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_models.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_payoffs.cpp"
 					>
 				</File>
@@ -642,6 +650,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_leg.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_models.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_models.hpp"
 					>
 				</File>
 				<File
@@ -843,6 +859,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_leg.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_models.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_models.hpp"
 				>
 			</File>
 			<File
@@ -1076,6 +1100,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_instruments.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_models.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_models.hpp"
 			>
 		</File>
 		<File

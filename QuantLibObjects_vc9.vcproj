@@ -533,6 +533,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_vanillaswaps.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_vanillaswaps.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_volatilities.cpp"
 					>
 				</File>
@@ -729,6 +737,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_vanillaswaps.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_vanillaswaps.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_volatilities.cpp"
 					>
 				</File>
@@ -918,6 +934,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_vanillaswaps.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_vanillaswaps.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_volatilities.cpp"
 				>
 			</File>
@@ -1100,6 +1124,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_termstructures.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_vanillaswaps.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_vanillaswaps.hpp"
 			>
 		</File>
 		<File

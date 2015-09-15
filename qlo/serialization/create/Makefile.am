@@ -28,6 +28,7 @@ include_HEADERS = \
     create_settings.hpp \
     create_termstructures.hpp \
     create_utilities.hpp \
+    create_vanillaswaps.hpp \
     create_volatilities.hpp
 
 libCreate_la_SOURCES = \
@@ -53,5 +54,6 @@ libCreate_la_SOURCES = \
     create_settings.cpp \
     create_termstructures.cpp \
     create_utilities.cpp \
+    create_vanillaswaps.cpp \
     create_volatilities.cpp
 

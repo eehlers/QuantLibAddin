@@ -25,6 +25,11 @@
         QuantLibAddin::cppToLibrary($1_name, $1_name_cnv);
 %}
 
+%typemap(rp_tm_xll_cnvt) QuantLib::Schedule const & %{
+        RP_GET_REFERENCE($1_name_cnv, $1_name,
+            QuantLibAddin::Schedule, QuantLib::Schedule)
+%}
+
 %typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Natural> const & %{
         std::vector<long> $1_name_vec =
             reposit::operToVector<long>(*$1_name, "$1_name");
@@ -111,6 +116,7 @@
 // rp_tm_xll_argf - arguments to the underlying Library function
 %typemap(rp_tm_xll_argf) QuantLib::Period "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Period const & "$1_name_cnv";
+%typemap(rp_tm_xll_argf) QuantLib::Schedule const & "*$1_name_cnv";
 %typemap(rp_tm_xll_argf) ql_tp_handle "$1_name_handle";
 %typemap(rp_tm_xll_argf) const std::vector<QuantLib::Date>& "$1_name_vec2";
 %typemap(rp_tm_xll_argf) const std::vector<QuantLib::Natural>& "$1_name_vec2";

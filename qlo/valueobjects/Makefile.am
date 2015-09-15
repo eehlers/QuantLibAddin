@@ -27,6 +27,7 @@ this_include_HEADERS = \
     vo_settings.hpp \
     vo_termstructures.hpp \
     vo_utilities.hpp \
+    vo_vanillaswaps.hpp \
     vo_volatilities.hpp
 
 libValueObjects_la_SOURCES = \
@@ -52,5 +53,6 @@ libValueObjects_la_SOURCES = \
     vo_settings.cpp \
     vo_termstructures.cpp \
     vo_utilities.cpp \
+    vo_vanillaswaps.cpp \
     vo_volatilities.cpp
 

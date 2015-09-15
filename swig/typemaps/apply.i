@@ -35,9 +35,11 @@
 %apply rp_tp_enm { QuantLibAddin::RateHelper::DepoInclusionCriteria };
 %apply rp_tp_enm { QuantLib::DateGeneration::Rule };
 %apply rp_tp_enm { QuantLibAddin::SwapIndex::FixingType };
+%apply rp_tp_enm { QuantLib::VanillaSwap::Type };
 
 // Some types that require overrides within QuantLib, tell reposit to treat them like strings.
 %apply rp_tp_string { QuantLib::Period const & };
+%apply rp_tp_string { QuantLib::Schedule const & };
 
 // Names of variables after they have been converted.
 %apply rp_tp_cnv2 { QuantLib::Date const & };

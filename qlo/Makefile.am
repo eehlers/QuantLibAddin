@@ -37,6 +37,7 @@ this_include_HEADERS = \
     obj_processes.hpp \
     obj_schedule.hpp \
     obj_termstructures.hpp \
+    obj_vanillaswaps.hpp \
     obj_volatilities.hpp \
     qladdindefines.hpp \
     yieldtermstructures.hpp
@@ -64,6 +65,7 @@ libAddinObjects_la_SOURCES = \
     obj_processes.cpp \
     obj_schedule.cpp \
     obj_termstructures.cpp \
+    obj_vanillaswaps.cpp \
     obj_volatilities.cpp \
     yieldtermstructures.cpp
 

@@ -21,5 +21,6 @@
 %include settings.i
 %include termstructures.i
 %include utilities.i
+%include vanillaswaps.i
 %include volatilities.i
 

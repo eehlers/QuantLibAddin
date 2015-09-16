@@ -34,7 +34,7 @@ namespace QuantLib {
                        const QuantLib::Real nominal = 1.0,
                        const QuantLib::Real shift = 0.0*/);
           QuantLib::Real modelValue();
-        };
+    };
         
     class CalibratedModel {
       public:
@@ -47,11 +47,12 @@ namespace QuantLib {
                 const std::vector<bool>& fixParameters = std::vector<bool>()*/);
     };
     
-    class OneFactorAffineModel : public CalibratedModel {};
+    class ShortRateModel : public CalibratedModel {};
+    class OneFactorAffineModel : public ShortRateModel {};
     
     class HullWhite : public /*Vasicek, public TermStructureConsistentModel*/OneFactorAffineModel {
       public:
         HullWhite(const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure/*,
                   Real a = 0.1, Real sigma = 0.01*/);
-        };        
+    };
 }

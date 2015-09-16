@@ -5,6 +5,7 @@
 #include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>
 #include <ql/pricingengines/swap/discountingswapengine.hpp>
 #include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
+#include <ql/pricingengines/swaption/treeswaptionengine.hpp>
 %}
 
 %pragma(reposit) add_include=%{
@@ -44,6 +45,14 @@ namespace QuantLib {
                          const boost::shared_ptr<QuantLib::OneFactorAffineModel>& model/*,
                          const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure =
                                                  QuantLib::Handle<QuantLib::YieldTermStructure>()*/);
+    };
+    
+    class TreeSwaptionEngine : public PricingEngine {
+      public:
+        TreeSwaptionEngine(const boost::shared_ptr<QuantLib::ShortRateModel>& x,
+                           QuantLib::Size timeSteps/*,
+                           const Handle<YieldTermStructure>& termStructure =
+                                                 Handle<YieldTermStructure>()*/);    
     };
 }
 

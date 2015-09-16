@@ -11,6 +11,11 @@ namespace QuantLib {
     class CalibrationHelper {
       public:
         void setPricingEngine(const boost::shared_ptr<QuantLib::PricingEngine>& engine);
+        QuantLib::Volatility impliedVolatility(QuantLib::Real targetValue,
+                             QuantLib::Real accuracy,
+                             QuantLib::Size maxEvaluations,
+                             QuantLib::Volatility minVol,
+                             QuantLib::Volatility maxVol);
     };
 
     class SwaptionHelper : public CalibrationHelper {
@@ -28,6 +33,7 @@ namespace QuantLib {
                        const QuantLib::Real strike = QuantLib::Null<QuantLib::Real>(),
                        const QuantLib::Real nominal = 1.0,
                        const QuantLib::Real shift = 0.0*/);
+          QuantLib::Real modelValue();
         };
         
     class CalibratedModel {

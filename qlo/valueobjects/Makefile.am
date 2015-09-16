@@ -16,6 +16,7 @@ this_include_HEADERS = \
     vo_instruments.hpp \
     vo_interpolation.hpp \
     vo_leg.hpp \
+    vo_math.hpp \
     vo_models.hpp \
     vo_payoffs.hpp \
     vo_piecewiseyieldcurve.hpp \
@@ -43,6 +44,7 @@ libValueObjects_la_SOURCES = \
     vo_instruments.cpp \
     vo_interpolation.cpp \
     vo_leg.cpp \
+    vo_math.cpp \
     vo_models.cpp \
     vo_payoffs.cpp \
     vo_piecewiseyieldcurve.cpp \

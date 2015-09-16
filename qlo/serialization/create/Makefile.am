@@ -17,6 +17,7 @@ include_HEADERS = \
     create_instruments.hpp \
     create_interpolation.hpp \
     create_leg.hpp \
+    create_math.hpp \
     create_models.hpp \
     create_payoffs.hpp \
     create_piecewiseyieldcurve.hpp \
@@ -44,6 +45,7 @@ libCreate_la_SOURCES = \
     create_instruments.cpp \
     create_interpolation.cpp \
     create_leg.cpp \
+    create_math.cpp \
     create_models.cpp \
     create_payoffs.cpp \
     create_piecewiseyieldcurve.cpp \

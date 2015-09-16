@@ -30,6 +30,16 @@
             QuantLibAddin::Schedule, QuantLib::Schedule)
 %}
 
+%typemap(rp_tm_xll_cnvt) QuantLib::OptimizationMethod & %{
+        RP_GET_REFERENCE($1_name_cnv, $1_name,
+            QuantLibAddin::OptimizationMethod, QuantLib::OptimizationMethod)
+%}
+
+%typemap(rp_tm_xll_cnvt) QuantLib::EndCriteria const & %{
+        RP_GET_REFERENCE($1_name_cnv, $1_name,
+            QuantLibAddin::EndCriteria, QuantLib::EndCriteria)
+%}
+
 %typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Natural> const & %{
         std::vector<long> $1_name_vec =
             reposit::operToVector<long>(*$1_name, "$1_name");
@@ -86,6 +96,13 @@
             reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);
 %}
 
+%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLib::CalibrationHelper> > const & %{
+        std::vector<std::string> $1_name_vec =
+            reposit::operToVector<std::string>(*$1_name, "$1_name");
+        std::vector<boost::shared_ptr<QuantLib::CalibrationHelper> > $1_name_vec2 =
+            reposit::getLibraryObjectVector<QuantLibAddin::CalibrationHelper, QuantLib::CalibrationHelper>($1_name_vec);
+%}
+
 %typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & %{
         std::vector<reposit::property_t> $1_name_vec =
             reposit::operToVector<reposit::property_t>(*$1_name, "$1_name");
@@ -117,6 +134,9 @@
 %typemap(rp_tm_xll_argf) QuantLib::Period "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Period const & "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Schedule const & "*$1_name_cnv";
+%typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLib::CalibrationHelper> > const & "$1_name_vec2";
+%typemap(rp_tm_xll_argf) QuantLib::OptimizationMethod& "*$1_name_cnv";
+%typemap(rp_tm_xll_argf) QuantLib::EndCriteria const & "*$1_name_cnv";
 %typemap(rp_tm_xll_argf) ql_tp_handle "$1_name_handle";
 %typemap(rp_tm_xll_argf) const std::vector<QuantLib::Date>& "$1_name_vec2";
 %typemap(rp_tm_xll_argf) const std::vector<QuantLib::Natural>& "$1_name_vec2";

@@ -30,7 +30,18 @@ namespace QuantLib {
                        const QuantLib::Real shift = 0.0*/);
         };
         
-    class OneFactorAffineModel {};
+    class CalibratedModel {
+      public:
+        virtual void calibrate(
+                const std::vector<boost::shared_ptr<QuantLib::CalibrationHelper> >& x,
+                QuantLib::OptimizationMethod& method,
+                const QuantLib::EndCriteria& endCriteria/*,
+                const Constraint& constraint = Constraint(),
+                const std::vector<Real>& weights = std::vector<Real>(),
+                const std::vector<bool>& fixParameters = std::vector<bool>()*/);
+    };
+    
+    class OneFactorAffineModel : public CalibratedModel {};
     
     class HullWhite : public /*Vasicek, public TermStructureConsistentModel*/OneFactorAffineModel {
       public:

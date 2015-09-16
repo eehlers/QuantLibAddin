@@ -1,5 +1,6 @@
 
 // These QuantLib types behave like long.
+%apply rp_tp_long { QuantLib::Size };
 %apply rp_tp_long { QuantLib::Natural };
 %apply std::vector<rp_tp_long> const & { std::vector<QuantLib::Natural> const & };
 
@@ -40,6 +41,8 @@
 // Some types that require overrides within QuantLib, tell reposit to treat them like strings.
 %apply rp_tp_string { QuantLib::Period const & };
 %apply rp_tp_string { QuantLib::Schedule const & };
+%apply rp_tp_string { QuantLib::OptimizationMethod & };
+%apply rp_tp_string { QuantLib::EndCriteria const & };
 
 // Names of variables after they have been converted.
 %apply rp_tp_cnv2 { QuantLib::Date const & };

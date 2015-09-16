@@ -32,6 +32,7 @@ this_include_HEADERS = \
     objmanual_ratehelpers.hpp \
     objmanual_settings.hpp \
     objmanual_utilities.hpp \
+    obj_math.hpp \
     obj_payoffs.hpp \
     obj_prices.hpp \
     obj_pricingengines.hpp \
@@ -61,6 +62,7 @@ libAddinObjects_la_SOURCES = \
     objmanual_ratehelpers.cpp \
     objmanual_settings.cpp \
     objmanual_utilities.cpp \
+    obj_math.cpp \
     obj_payoffs.cpp \
     obj_prices.cpp \
     obj_pricingengines.cpp \

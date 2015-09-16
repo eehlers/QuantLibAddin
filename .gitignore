@@ -10,8 +10,7 @@ libtool
 Makefile
 Makefile.in
 *.ncb
-Release
 stamp-h1
 *.suo
 .time-stamp
-Debug
+build

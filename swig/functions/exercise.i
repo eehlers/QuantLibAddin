@@ -16,5 +16,11 @@ namespace QuantLib {
       public:
         EuropeanExercise(const QuantLib::Date& date);
     };
+
+    class BermudanExercise : public Exercise {
+      public:
+        BermudanExercise(const std::vector<QuantLib::Date>& dates/*,
+                         bool payoffAtExpiry = false*/);
+    };    
 }
 

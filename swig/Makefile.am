@@ -10,7 +10,6 @@ SWIG_FILES := \
     functions/exercise.i \
     functions/handles.i \
     functions/indexes.i \
-    functions/indexes2.i \
     functions/instruments.i \
     functions/interpolation.i \
     functions/leg.i \

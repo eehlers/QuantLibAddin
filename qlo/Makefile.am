@@ -23,16 +23,15 @@ this_include_HEADERS = \
     objmanual_date.hpp \
     objmanual_handles.hpp \
     objmanual_indexes.hpp \
-    objmanual_indexes2.hpp \
     objmanual_interpolation.hpp \
     objmanual_leg.hpp \
-    objmanual_models.hpp \
     objmanual_piecewiseyieldcurve.hpp \
     objmanual_quote.hpp \
     objmanual_ratehelpers.hpp \
     objmanual_settings.hpp \
     objmanual_utilities.hpp \
     obj_math.hpp \
+    obj_models.hpp \
     obj_payoffs.hpp \
     obj_prices.hpp \
     obj_pricingengines.hpp \
@@ -56,13 +55,13 @@ libAddinObjects_la_SOURCES = \
     objmanual_handles.cpp \
     objmanual_interpolation.cpp \
     objmanual_leg.cpp \
-    objmanual_models.cpp \
     objmanual_piecewiseyieldcurve.cpp \
     objmanual_quote.cpp \
     objmanual_ratehelpers.cpp \
     objmanual_settings.cpp \
     objmanual_utilities.cpp \
     obj_math.cpp \
+    obj_models.cpp \
     obj_payoffs.cpp \
     obj_prices.cpp \
     obj_pricingengines.cpp \

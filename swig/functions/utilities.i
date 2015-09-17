@@ -3,7 +3,8 @@
 %pragma(reposit) override_obj="true";
 
 %feature("rp:generate_countify");
-%feature("rp:generate_cpp");
+%feature("rp:generate_cpp") QuantLibAddin::version;
+%feature("rp:generate_cpp") QuantLibAddin::ObjectCount;
 
 namespace QuantLibAddin {
     std::string version();
@@ -13,5 +14,4 @@ namespace QuantLibAddin {
 }
 
 %feature("rp:generate_countify", "");
-%feature("rp:generate_cpp", "");
 

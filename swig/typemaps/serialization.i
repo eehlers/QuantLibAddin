@@ -12,6 +12,15 @@
     QuantLibAddin::cppToLibrary($1_name_str, $1_name);
 %}
 
+%typemap(rp_tm_scr_cnvt) QuantLib::Schedule const & %{
+    std::string $1_name_str =
+        reposit::convert2<std::string>(valueObject->getProperty("$1_name"));
+    RP_GET_REFERENCE($1_name_obj, $1_name_str,
+        QuantLibAddin::Schedule, QuantLib::Schedule)
+    const QuantLib::Schedule &$1_name = *$1_name_obj;
+    valueObject->processPrecedentID($1_name_str);
+%}
+
 %typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
     reposit::property_t $1_name_prop =
         valueObject->getProperty("$1_name");
@@ -100,7 +109,7 @@
 
 %typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Leg> const & %{
         // FIXME temporary hack to allow create_instruments.cpp to compile under Linux.
-        // For the moment we have no need to deserialize a swap.
+        // For the moment we have no need to deserialize a leg.
         std::vector<QuantLib::Leg> $1_name;
         //std::vector<std::string> $1_name_vec =
         //    reposit::operToVector<std::string>(*$1_name, "$1_name");

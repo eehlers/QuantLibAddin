@@ -45,10 +45,6 @@ this_include_HEADERS = \
 
 libAddinObjects_la_SOURCES = \
     init.cpp \
-    obj_calendars.cpp \
-    obj_daycounters.cpp \
-    obj_exercise.cpp \
-    obj_instruments.cpp \
     objmanual_couponvectors.cpp \
     objmanual_date2.cpp \
     objmanual_date.cpp \
@@ -60,16 +56,7 @@ libAddinObjects_la_SOURCES = \
     objmanual_ratehelpers.cpp \
     objmanual_settings.cpp \
     objmanual_utilities.cpp \
-    obj_math.cpp \
-    obj_models.cpp \
-    obj_payoffs.cpp \
     obj_prices.cpp \
-    obj_pricingengines.cpp \
-    obj_processes.cpp \
-    obj_schedule.cpp \
-    obj_termstructures.cpp \
-    obj_vanillaswaps.cpp \
-    obj_volatilities.cpp \
     yieldtermstructures.cpp
 
 noinst_LTLIBRARIES = libAddinObjects.la

@@ -1,7 +1,7 @@
 
 %pragma(reposit) group="termstructures";
 
-%pragma(reposit) obj_include=%{
+%insert(termstructures_lib_inc) %{
 #include <ql/termstructures/yield/flatforward.hpp>
 %}
 

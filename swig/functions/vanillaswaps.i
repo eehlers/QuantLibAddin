@@ -1,7 +1,7 @@
 
 %pragma(reposit) group="vanillaswaps";
 
-%pragma(reposit) obj_include=%{
+%insert(vanillaswaps_lib_inc) %{
 #include <ql/instruments/vanillaswap.hpp>
 #include <qlo/obj_instruments.hpp>
 %}

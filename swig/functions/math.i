@@ -1,7 +1,7 @@
 
 %pragma(reposit) group="math";
 
-%pragma(reposit) obj_include=%{
+%insert(math_lib_inc) %{
 #include <ql/math/optimization/levenbergmarquardt.hpp>
 #include <ql/math/optimization/endcriteria.hpp>
 %}

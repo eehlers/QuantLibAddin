@@ -2,7 +2,7 @@
 %pragma(reposit) group="quote";
 %pragma(reposit) override_obj="true";
 
-%pragma(reposit) obj_include=%{
+%insert(quote_lib_inc) %{
 #include <ql/quotes/simplequote.hpp>
 #include <ql/quotes/lastfixingquote.hpp>
 #include <ql/quotes/futuresconvadjustmentquote.hpp>

@@ -1,11 +1,11 @@
 
 %pragma(reposit) group="processes";
 
-%pragma(reposit) obj_include=%{
+%insert(processes_lib_inc) %{
 #include <ql/processes/blackscholesprocess.hpp>
 %}
 
-%pragma(reposit) add_include=%{
+%insert(processes_cpp_inc) %{
 #include "qlo/objmanual_quote.hpp"
 #include "qlo/obj_volatilities.hpp"
 %}

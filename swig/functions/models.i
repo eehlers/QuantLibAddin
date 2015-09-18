@@ -1,7 +1,7 @@
 
 %pragma(reposit) group="models";
 
-%pragma(reposit) obj_include=%{
+%insert(models_lib_inc) %{
 #include <ql/models/shortrate/calibrationhelpers/swaptionhelper.hpp>
 #include <ql/models/shortrate/onefactormodels/hullwhite.hpp>
 %}

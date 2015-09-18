@@ -1,7 +1,7 @@
 
 %pragma(reposit) group="daycounters";
 
-%pragma(reposit) obj_include=%{
+%insert(daycounters_lib_inc) %{
 #include <ql/time/daycounter.hpp>
 %}
 

@@ -1,7 +1,7 @@
 
 %pragma(reposit) group="schedule";
 
-%pragma(reposit) obj_include=%{
+%insert(schedule_lib_inc) %{
 #include <ql/time/schedule.hpp>
 %}
 

@@ -1,14 +1,14 @@
 
 %pragma(reposit) group="pricingengines";
 
-%pragma(reposit) obj_include=%{
+%insert(pricingengines_lib_inc) %{
 #include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>
 #include <ql/pricingengines/swap/discountingswapengine.hpp>
 #include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
 #include <ql/pricingengines/swaption/treeswaptionengine.hpp>
 %}
 
-%pragma(reposit) add_include=%{
+%insert(pricingengines_cpp_inc) %{
 #include "qlo/obj_processes.hpp"
 %}
 

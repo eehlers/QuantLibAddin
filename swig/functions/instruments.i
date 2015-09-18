@@ -1,14 +1,14 @@
 
 %pragma(reposit) group="instruments";
 
-%pragma(reposit) obj_include=%{
+%insert(instruments_lib_inc) %{
 #include <ql/instruments/vanillaoption.hpp>
 #include <ql/cashflow.hpp>
 #include <ql/instruments/swap.hpp>
 #include <ql/instruments/swaption.hpp>
 %}
 
-%pragma(reposit) add_include=%{
+%insert(instruments_cpp_inc) %{
 #include "qlo/obj_pricingengines.hpp"
 #include "qlo/obj_payoffs.hpp"
 #include "qlo/obj_exercise.hpp"

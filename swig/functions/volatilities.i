@@ -1,7 +1,7 @@
 
 %pragma(reposit) group="volatilities";
 
-%pragma(reposit) obj_include=%{
+%insert(volatilities_lib_inc) %{
 #include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>
 #include <qlo/objmanual_piecewiseyieldcurve.hpp>
 %}

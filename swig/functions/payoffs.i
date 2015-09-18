@@ -1,7 +1,7 @@
 
 %pragma(reposit) group="payoffs";
 
-%pragma(reposit) obj_include=%{
+%insert(payoffs_lib_inc) %{
 #include <ql/instruments/payoffs.hpp>
 %}
 

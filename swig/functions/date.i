@@ -2,7 +2,7 @@
 %pragma(reposit) group="date";
 %pragma(reposit) override_obj="true";
 
-%pragma(reposit) obj_include=%{
+%insert(date_lib_inc) %{
 #include <ql/time/date.hpp>
 %}
 

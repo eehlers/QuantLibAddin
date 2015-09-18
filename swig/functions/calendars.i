@@ -1,7 +1,7 @@
 
 %pragma(reposit) group="calendars";
 
-%pragma(reposit) obj_include=%{
+%insert(calendars_lib_inc) %{
 #include <ql/time/calendar.hpp>
 %}
 

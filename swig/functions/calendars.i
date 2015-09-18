@@ -5,10 +5,10 @@
 #include <ql/time/calendar.hpp>
 %}
 
-%feature("rp:loopParameter", "date") QuantLib::Calendar::isEndOfMonth;
-%feature("rp:loopParameter", "date") QuantLib::Calendar::endOfMonth;
-%feature("rp:loopParameter", "period") QuantLib::Calendar::advance;
-%feature("rp:loopParameter", "date") QuantLib::Calendar::adjust;
+%loop(QuantLib::Calendar::isEndOfMonth, date)
+%loop(QuantLib::Calendar::endOfMonth, date)
+%loop(QuantLib::Calendar::advance, period)
+%loop(QuantLib::Calendar::adjust, date)
 
 namespace QuantLib {
 

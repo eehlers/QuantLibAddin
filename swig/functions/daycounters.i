@@ -5,7 +5,7 @@
 #include <ql/time/daycounter.hpp>
 %}
 
-%feature("rp:loopParameter", "EndDate") QuantLib::DayCounter::yearFraction;
+%loop(QuantLib::DayCounter::yearFraction, EndDate)
 
 namespace QuantLib {
 

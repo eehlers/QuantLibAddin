@@ -40,6 +40,7 @@ SWIG_FILES := \
 
 SWIG_DIR = @swig_dir@
 SWIG_BIN = $(SWIG_DIR)/swig
+SWIG_SWG = $(SWIG_DIR)/Lib/reposit/reposit.swg
 SWIG_CMD = $(SWIG_DIR)/preinst-swig
 #SWIG_DEBUG = -debug-top 4 -debug-tmsearch
 
@@ -59,7 +60,7 @@ SWIG_ARGS += quantlib.i
 .PHONY: SWIG
 SWIG: .time-stamp
 
-.time-stamp: $(SWIG_FILES) $(SWIG_BIN)
+.time-stamp: $(SWIG_FILES) $(SWIG_BIN) $(SWIG_SWG)
 	$(SWIG_CMD) $(SWIG_DEBUG) $(SWIG_ARGS)
 	touch .time-stamp
 

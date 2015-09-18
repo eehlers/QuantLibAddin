@@ -12,6 +12,12 @@
 #include "qlo/obj_processes.hpp"
 %}
 
+%insert(pricingengines_scr_inc) %{
+#include <qlo/obj_processes.hpp>
+#include <qlo/obj_termstructures.hpp>
+#include <qlo/obj_models.hpp>
+%}
+
 %feature("rp:generate_countify") QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine;
 %feature("rp:generate_cpp") QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine;
 

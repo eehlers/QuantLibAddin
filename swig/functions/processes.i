@@ -10,6 +10,11 @@
 #include "qlo/obj_volatilities.hpp"
 %}
 
+%insert(processes_scr_inc) %{
+#include <qlo/obj_termstructures.hpp>
+#include <qlo/obj_volatilities.hpp>
+%}
+
 %feature("rp:generate_countify") QuantLib::BlackScholesMertonProcess::BlackScholesMertonProcess;
 %feature("rp:generate_cpp") QuantLib::BlackScholesMertonProcess::BlackScholesMertonProcess;
 

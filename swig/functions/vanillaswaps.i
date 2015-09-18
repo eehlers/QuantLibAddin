@@ -6,6 +6,11 @@
 #include <qlo/obj_instruments.hpp>
 %}
 
+%insert(vanillaswaps_scr_inc) %{
+#include <qlo/obj_schedule.hpp>
+#include <qlo/objmanual_indexes.hpp>
+%}
+
 namespace QuantLib {
 
     class VanillaSwap : public /*Swap*/Instrument {

@@ -2,6 +2,11 @@
 %pragma(reposit) group="couponvectors";
 %pragma(reposit) override_obj="true";
 
+%insert(couponvectors_scr_inc) %{
+#include <qlo/obj_schedule.hpp>
+#include <qlo/objmanual_indexes.hpp>
+%}
+
 namespace QuantLibAddin {
 
     class IborLeg : public Leg {

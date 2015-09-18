@@ -14,6 +14,12 @@
 #include "qlo/obj_exercise.hpp"
 %}
 
+%insert(instruments_scr_inc) %{
+#include <qlo/obj_payoffs.hpp>
+#include "qlo/obj_exercise.hpp"
+#include "qlo/obj_vanillaswaps.hpp"
+%}
+
 %feature("rp:generate_countify") QuantLib::VanillaOption::VanillaOption;
 %feature("rp:generate_countify") QuantLib::Instrument::setPricingEngine;
 %feature("rp:generate_countify") QuantLib::Instrument::NPV;

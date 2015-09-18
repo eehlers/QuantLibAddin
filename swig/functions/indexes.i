@@ -2,6 +2,10 @@
 %pragma(reposit) group="indexes";
 %pragma(reposit) override_obj="true";
 
+%insert(indexes_scr_inc) %{
+#include <qlo/obj_termstructures.hpp>
+%}
+
 // For most of the QuantLib index classes, we have handwritten code in the
 // QuantLibAddin layer to provide custom behavior.  In the QuantLibAddin
 // namespace we define all of the constructors and memberfunctions of the

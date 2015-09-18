@@ -2,6 +2,11 @@
 %pragma(reposit) group="ratehelpers";
 %pragma(reposit) override_obj="true";
 
+%insert(ratehelpers_scr_inc) %{
+#include <qlo/objmanual_indexes.hpp>
+#include <qlo/obj_termstructures.hpp>
+%}
+
 namespace QuantLib {
 
     class RateHelper {

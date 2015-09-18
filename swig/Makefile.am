@@ -13,6 +13,8 @@ SWIG_FILES := \
     functions/instruments.i \
     functions/interpolation.i \
     functions/leg.i \
+    functions/math.i \
+    functions/models.i \
     functions/payoffs.i \
     functions/piecewiseyieldcurve.i \
     functions/prices.i \
@@ -24,6 +26,7 @@ SWIG_FILES := \
     functions/settings.i \
     functions/termstructures.i \
     functions/utilities.i \
+    functions/vanillaswaps.i \
     functions/volatilities.i \
     typemaps/addincountify.i \
     typemaps/addincpp.i \

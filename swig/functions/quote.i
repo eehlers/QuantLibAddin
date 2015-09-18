@@ -9,6 +9,10 @@
 #include <ql/math/comparison.hpp>
 %}
 
+%insert(quote_scr_inc) %{
+#include <qlo/objmanual_indexes.hpp>
+%}
+
 %feature("rp:generate_countify") QuantLibAddin::SimpleQuote::SimpleQuote;
 %feature("rp:generate_cpp") QuantLibAddin::SimpleQuote::SimpleQuote;
 

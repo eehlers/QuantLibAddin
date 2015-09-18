@@ -1,6 +1,6 @@
 
 %pragma(reposit) group="indexes";
-%pragma(reposit) override_obj="true";
+%override
 
 %insert(indexes_scr_inc) %{
 #include <qlo/obj_termstructures.hpp>

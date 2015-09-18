@@ -1,6 +1,6 @@
 
 %pragma(reposit) group="interpolation";
-%pragma(reposit) override_obj="true";
+%override
 
 namespace QuantLibAddin {
 

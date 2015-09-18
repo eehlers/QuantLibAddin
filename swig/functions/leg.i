@@ -1,6 +1,6 @@
 
 %pragma(reposit) group="leg";
-%pragma(reposit) override_obj="true";
+%override
 
 namespace QuantLibAddin {
 

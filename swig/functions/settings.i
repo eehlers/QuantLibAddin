@@ -1,6 +1,6 @@
 
 %pragma(reposit) group="settings";
-%pragma(reposit) override_obj="true";
+%override
 
 %feature("rp:generate_countify") QuantLibAddin::settingsEvaluationDate;
 %feature("rp:generate_cpp") QuantLibAddin::settingsEvaluationDate;

@@ -1,6 +1,6 @@
 
 %pragma(reposit) group="utilities";
-%pragma(reposit) override_obj="true";
+%override
 
 %feature("rp:generate_countify");
 %feature("rp:generate_cpp") QuantLibAddin::version;

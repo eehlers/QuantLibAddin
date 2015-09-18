@@ -1,6 +1,6 @@
 
 %pragma(reposit) group="quote";
-%pragma(reposit) override_obj="true";
+%override
 
 %insert(quote_lib_inc) %{
 #include <ql/quotes/simplequote.hpp>

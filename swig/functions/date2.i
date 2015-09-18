@@ -1,6 +1,6 @@
 
 %pragma(reposit) group="date2";
-%pragma(reposit) override_obj="true";
+%override
 
 %feature("rp:loopParameter", "immCode") QuantLibAddin::IMMdate;
 %feature("rp:loopParameter", "immDate") QuantLibAddin::IMMcode;

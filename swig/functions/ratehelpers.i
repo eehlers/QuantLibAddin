@@ -1,6 +1,6 @@
 
 %pragma(reposit) group="ratehelpers";
-%pragma(reposit) override_obj="true";
+%override
 
 %insert(ratehelpers_scr_inc) %{
 #include <qlo/objmanual_indexes.hpp>

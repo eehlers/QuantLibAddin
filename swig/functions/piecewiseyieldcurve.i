@@ -2,7 +2,7 @@
 %include termstructures.i
 
 %pragma(reposit) group="piecewiseyieldcurve";
-%pragma(reposit) override_obj="true";
+%override
 
 namespace QuantLibAddin {
 

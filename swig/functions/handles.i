@@ -1,6 +1,6 @@
 
 %pragma(reposit) group="handles";
-%pragma(reposit) override_obj="true";
+%override
 
 %feature("rp:processorName", "RelinkableHandleProcessor") QuantLibAddin::RelinkableHandleYieldTermStructure::RelinkableHandleYieldTermStructure;
 

@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="pricingengines";
+%group(pricingengines);
 
 %insert(pricingengines_lib_inc) %{
 #include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>

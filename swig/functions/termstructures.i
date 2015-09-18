@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="termstructures";
+%group(termstructures);
 
 %insert(termstructures_lib_inc) %{
 #include <ql/termstructures/yield/flatforward.hpp>

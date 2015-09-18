@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="settings";
+%group(settings);
 %override
 
 %feature("rp:generate_countify") QuantLibAddin::settingsEvaluationDate;

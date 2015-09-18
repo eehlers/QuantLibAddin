@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="instruments";
+%group(instruments);
 
 %insert(instruments_lib_inc) %{
 #include <ql/instruments/vanillaoption.hpp>

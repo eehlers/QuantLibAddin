@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="calendars";
+%group(calendars);
 
 %insert(calendars_lib_inc) %{
 #include <ql/time/calendar.hpp>

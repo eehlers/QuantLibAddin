@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="schedule";
+%group(schedule);
 
 %insert(schedule_lib_inc) %{
 #include <ql/time/schedule.hpp>

@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="date";
+%group(date);
 %override
 
 %insert(date_lib_inc) %{

@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="interpolation";
+%group(interpolation);
 %override
 
 namespace QuantLibAddin {

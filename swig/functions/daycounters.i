@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="daycounters";
+%group(daycounters);
 
 %insert(daycounters_lib_inc) %{
 #include <ql/time/daycounter.hpp>

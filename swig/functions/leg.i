@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="leg";
+%group(leg);
 %override
 
 namespace QuantLibAddin {

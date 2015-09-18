@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="couponvectors";
+%group(couponvectors);
 %override
 
 %insert(couponvectors_scr_inc) %{

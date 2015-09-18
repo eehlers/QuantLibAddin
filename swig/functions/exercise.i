@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="exercise";
+%group(exercise);
 
 %insert(exercise_lib_inc) %{
 #include <ql/exercise.hpp>

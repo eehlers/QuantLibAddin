@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="math";
+%group(math);
 
 %insert(math_lib_inc) %{
 #include <ql/math/optimization/levenbergmarquardt.hpp>

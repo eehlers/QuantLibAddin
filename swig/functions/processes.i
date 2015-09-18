@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="processes";
+%group(processes);
 
 %insert(processes_lib_inc) %{
 #include <ql/processes/blackscholesprocess.hpp>

@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="models";
+%group(models);
 
 %insert(models_lib_inc) %{
 #include <ql/models/shortrate/calibrationhelpers/swaptionhelper.hpp>

@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="ratehelpers";
+%group(ratehelpers);
 %override
 
 %insert(ratehelpers_scr_inc) %{

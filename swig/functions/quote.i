@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="quote";
+%group(quote);
 %override
 
 %insert(quote_lib_inc) %{

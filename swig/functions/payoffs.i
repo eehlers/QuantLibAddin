@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="payoffs";
+%group(payoffs);
 
 %insert(payoffs_lib_inc) %{
 #include <ql/instruments/payoffs.hpp>

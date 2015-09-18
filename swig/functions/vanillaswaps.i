@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="vanillaswaps";
+%group(vanillaswaps);
 
 %insert(vanillaswaps_lib_inc) %{
 #include <ql/instruments/vanillaswap.hpp>

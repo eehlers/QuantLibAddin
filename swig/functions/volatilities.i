@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="volatilities";
+%group(volatilities);
 
 %insert(volatilities_lib_inc) %{
 #include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>

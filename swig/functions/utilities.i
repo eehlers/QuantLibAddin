@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="utilities";
+%group(utilities);
 %override
 
 %feature("rp:generate_countify");

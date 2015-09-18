@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="prices";
+%group(prices);
 
 %insert(prices_lib_inc) %{
 #include <ql/prices.hpp>

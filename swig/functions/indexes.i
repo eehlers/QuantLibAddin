@@ -1,5 +1,5 @@
 
-%pragma(reposit) group="indexes";
+%group(indexes);
 %override
 
 %insert(indexes_scr_inc) %{

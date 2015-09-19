@@ -1,7 +1,7 @@
 
 %group(prices);
 
-%insert(prices_lib_inc) %{
+%insert(prices_library_hpp) %{
 #include <ql/prices.hpp>
 %}
 

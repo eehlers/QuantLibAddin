@@ -1,7 +1,7 @@
 
 %group(calendars);
 
-%insert(calendars_lib_inc) %{
+%insert(calendars_library_hpp) %{
 #include <ql/time/calendar.hpp>
 %}
 

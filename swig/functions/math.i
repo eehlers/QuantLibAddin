@@ -1,7 +1,7 @@
 
 %group(math);
 
-%insert(math_lib_inc) %{
+%insert(math_library_hpp) %{
 #include <ql/math/optimization/levenbergmarquardt.hpp>
 #include <ql/math/optimization/endcriteria.hpp>
 %}

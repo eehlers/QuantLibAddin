@@ -1,18 +1,18 @@
 
 %group(pricingengines);
 
-%insert(pricingengines_lib_inc) %{
+%insert(pricingengines_library_hpp) %{
 #include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>
 #include <ql/pricingengines/swap/discountingswapengine.hpp>
 #include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
 #include <ql/pricingengines/swaption/treeswaptionengine.hpp>
 %}
 
-%insert(pricingengines_cpp_inc) %{
+%insert(pricingengines_cppaddin_cpp) %{
 #include "qlo/obj_processes.hpp"
 %}
 
-%insert(pricingengines_scr_inc) %{
+%insert(pricingengines_serialization_cpp) %{
 #include <qlo/obj_processes.hpp>
 #include <qlo/obj_termstructures.hpp>
 #include <qlo/obj_models.hpp>

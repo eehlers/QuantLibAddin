@@ -1,12 +1,12 @@
 
 %group(models);
 
-%insert(models_lib_inc) %{
+%insert(models_library_hpp) %{
 #include <ql/models/shortrate/calibrationhelpers/swaptionhelper.hpp>
 #include <ql/models/shortrate/onefactormodels/hullwhite.hpp>
 %}
 
-%insert(models_scr_inc) %{
+%insert(models_serialization_cpp) %{
 #include <qlo/objmanual_indexes.hpp>
 #include <qlo/obj_termstructures.hpp>
 %}

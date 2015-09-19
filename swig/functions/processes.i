@@ -1,16 +1,16 @@
 
 %group(processes);
 
-%insert(processes_lib_inc) %{
+%insert(processes_library_hpp) %{
 #include <ql/processes/blackscholesprocess.hpp>
 %}
 
-%insert(processes_cpp_inc) %{
+%insert(processes_cppaddin_cpp) %{
 #include "qlo/objmanual_quote.hpp"
 #include "qlo/obj_volatilities.hpp"
 %}
 
-%insert(processes_scr_inc) %{
+%insert(processes_serialization_cpp) %{
 #include <qlo/obj_termstructures.hpp>
 #include <qlo/obj_volatilities.hpp>
 %}

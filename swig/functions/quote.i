@@ -2,14 +2,14 @@
 %group(quote);
 %override
 
-%insert(quote_lib_inc) %{
+%insert(quote_library_hpp) %{
 #include <ql/quotes/simplequote.hpp>
 #include <ql/quotes/lastfixingquote.hpp>
 #include <ql/quotes/futuresconvadjustmentquote.hpp>
 #include <ql/math/comparison.hpp>
 %}
 
-%insert(quote_scr_inc) %{
+%insert(quote_serialization_cpp) %{
 #include <qlo/objmanual_indexes.hpp>
 %}
 

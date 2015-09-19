@@ -1,7 +1,7 @@
 
 %group(exercise);
 
-%insert(exercise_lib_inc) %{
+%insert(exercise_library_hpp) %{
 #include <ql/exercise.hpp>
 %}
 

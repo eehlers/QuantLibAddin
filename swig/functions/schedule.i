@@ -1,7 +1,7 @@
 
 %group(schedule);
 
-%insert(schedule_lib_inc) %{
+%insert(schedule_library_hpp) %{
 #include <ql/time/schedule.hpp>
 %}
 

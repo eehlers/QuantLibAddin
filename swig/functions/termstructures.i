@@ -1,7 +1,7 @@
 
 %group(termstructures);
 
-%insert(termstructures_lib_inc) %{
+%insert(termstructures_library_hpp) %{
 #include <ql/termstructures/yield/flatforward.hpp>
 %}
 

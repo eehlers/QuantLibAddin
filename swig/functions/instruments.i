@@ -1,20 +1,20 @@
 
 %group(instruments);
 
-%insert(instruments_lib_inc) %{
+%insert(instruments_library_hpp) %{
 #include <ql/instruments/vanillaoption.hpp>
 #include <ql/cashflow.hpp>
 #include <ql/instruments/swap.hpp>
 #include <ql/instruments/swaption.hpp>
 %}
 
-%insert(instruments_cpp_inc) %{
+%insert(instruments_cppaddin_cpp) %{
 #include "qlo/obj_pricingengines.hpp"
 #include "qlo/obj_payoffs.hpp"
 #include "qlo/obj_exercise.hpp"
 %}
 
-%insert(instruments_scr_inc) %{
+%insert(instruments_serialization_cpp) %{
 #include <qlo/obj_payoffs.hpp>
 #include "qlo/obj_exercise.hpp"
 #include "qlo/obj_vanillaswaps.hpp"

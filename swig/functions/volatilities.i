@@ -1,7 +1,7 @@
 
 %group(volatilities);
 
-%insert(volatilities_lib_inc) %{
+%insert(volatilities_library_hpp) %{
 #include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>
 #include <qlo/objmanual_piecewiseyieldcurve.hpp>
 %}

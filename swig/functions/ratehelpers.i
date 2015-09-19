@@ -2,7 +2,7 @@
 %group(ratehelpers);
 %override
 
-%insert(ratehelpers_scr_inc) %{
+%insert(ratehelpers_serialization_cpp) %{
 #include <qlo/objmanual_indexes.hpp>
 #include <qlo/obj_termstructures.hpp>
 %}

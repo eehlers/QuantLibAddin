@@ -1,12 +1,12 @@
 
 %group(vanillaswaps);
 
-%insert(vanillaswaps_lib_inc) %{
+%insert(vanillaswaps_library_hpp) %{
 #include <ql/instruments/vanillaswap.hpp>
 #include <qlo/obj_instruments.hpp>
 %}
 
-%insert(vanillaswaps_scr_inc) %{
+%insert(vanillaswaps_serialization_cpp) %{
 #include <qlo/obj_schedule.hpp>
 #include <qlo/objmanual_indexes.hpp>
 %}

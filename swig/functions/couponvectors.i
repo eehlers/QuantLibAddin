@@ -2,7 +2,7 @@
 %group(couponvectors);
 %override
 
-%insert(couponvectors_scr_inc) %{
+%insert(couponvectors_serialization_cpp) %{
 #include <qlo/obj_schedule.hpp>
 #include <qlo/objmanual_indexes.hpp>
 %}

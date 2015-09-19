@@ -2,7 +2,7 @@
 %group(date);
 %override
 
-%insert(date_lib_inc) %{
+%insert(date_library_hpp) %{
 #include <ql/time/date.hpp>
 %}
 

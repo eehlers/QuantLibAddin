@@ -1,7 +1,7 @@
 
 %group(payoffs);
 
-%insert(payoffs_lib_inc) %{
+%insert(payoffs_library_hpp) %{
 #include <ql/instruments/payoffs.hpp>
 %}
 

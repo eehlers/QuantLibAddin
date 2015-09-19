@@ -2,8 +2,6 @@
 %group(handles);
 %override
 
-%feature("rp:processorName", "RelinkableHandleProcessor") QuantLibAddin::RelinkableHandleYieldTermStructure::RelinkableHandleYieldTermStructure;
-
 namespace QuantLibAddin {
 
     class RelinkableHandle {
@@ -13,6 +11,8 @@ namespace QuantLibAddin {
 
     class RelinkableHandleYieldTermStructure {
     public:
+        // attach processor RelinkableHandleProcessor to ctor RelinkableHandleYieldTermStructure.
+        %processor(RelinkableHandleYieldTermStructure, RelinkableHandleProcessor);
         // NB: The parameter below must be called "CurrentLink" because there
         // is code which updates a property with that name in the value object.
         RelinkableHandleYieldTermStructure(const std::string &CurrentLink) {}

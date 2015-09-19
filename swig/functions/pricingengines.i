@@ -18,15 +18,14 @@
 #include <qlo/obj_models.hpp>
 %}
 
-%feature("rp:generate_countify") QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine;
-%feature("rp:generate_cpp") QuantLib::AnalyticEuropeanEngine::AnalyticEuropeanEngine;
-
 namespace QuantLib {
 
     class PricingEngine {};
 
     class AnalyticEuropeanEngine : public PricingEngine {
       public:
+        %generate(cpp, AnalyticEuropeanEngine);
+        %generate(countify, AnalyticEuropeanEngine);
         AnalyticEuropeanEngine(
             const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& process);
     };

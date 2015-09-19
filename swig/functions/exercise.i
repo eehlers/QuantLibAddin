@@ -5,15 +5,14 @@
 #include <ql/exercise.hpp>
 %}
 
-%feature("rp:generate_countify") QuantLib::EuropeanExercise::EuropeanExercise;
-%feature("rp:generate_cpp") QuantLib::EuropeanExercise::EuropeanExercise;
-
 namespace QuantLib {
 
     class Exercise {};
 
     class EuropeanExercise : public Exercise {
       public:
+        %generate(cpp, EuropeanExercise);
+        %generate(countify, EuropeanExercise);
         EuropeanExercise(const QuantLib::Date& date);
     };
 

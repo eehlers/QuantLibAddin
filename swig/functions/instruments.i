@@ -20,24 +20,22 @@
 #include "qlo/obj_vanillaswaps.hpp"
 %}
 
-%feature("rp:generate_countify") QuantLib::VanillaOption::VanillaOption;
-%feature("rp:generate_countify") QuantLib::Instrument::setPricingEngine;
-%feature("rp:generate_countify") QuantLib::Instrument::NPV;
-%feature("rp:generate_cpp") QuantLib::VanillaOption::VanillaOption;
-%feature("rp:generate_cpp") QuantLib::Instrument::setPricingEngine;
-%feature("rp:generate_cpp") QuantLib::Instrument::NPV;
-
 namespace QuantLib {
 
     class Instrument {
       public:
-        //Instrument();
+        %generate(cpp, setPricingEngine);
+        %generate(countify, setPricingEngine);
         void setPricingEngine(const boost::shared_ptr<QuantLib::PricingEngine>& engine);
+        %generate(cpp, NPV);
+        %generate(countify, NPV);
         QuantLib::Real NPV();
     };
 
     class VanillaOption : public Instrument {
       public:
+        %generate(cpp, VanillaOption);
+        %generate(countify, VanillaOption);
         VanillaOption(const boost::shared_ptr<QuantLib::StrikedTypePayoff>& payoff,
                       const boost::shared_ptr<QuantLib::Exercise>& exercise);
     };

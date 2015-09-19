@@ -6,8 +6,6 @@
 #include <qlo/objmanual_piecewiseyieldcurve.hpp>
 %}
 
-%feature("rp:generate_countify") QuantLib::BlackConstantVol::BlackConstantVol;
-%feature("rp:generate_cpp") QuantLib::BlackConstantVol::BlackConstantVol;
 
 namespace QuantLib {
 
@@ -15,6 +13,8 @@ namespace QuantLib {
 
     class BlackConstantVol : public BlackVolTermStructure {
       public:
+        %generate(cpp, BlackConstantVol);
+        %generate(countify, BlackConstantVol);
         BlackConstantVol(const QuantLib::Date& referenceDate,
                          const QuantLib::Calendar& calendar,
                          QuantLib::Volatility volatility,

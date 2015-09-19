@@ -13,9 +13,6 @@
 #include <qlo/objmanual_indexes.hpp>
 %}
 
-%feature("rp:generate_countify") QuantLibAddin::SimpleQuote::SimpleQuote;
-%feature("rp:generate_cpp") QuantLibAddin::SimpleQuote::SimpleQuote;
-
 namespace QuantLibAddin {
 
     bool close(double x, double y);
@@ -28,6 +25,8 @@ namespace QuantLibAddin {
 
     class SimpleQuote : public Quote {
       public:
+        %generate(cpp, SimpleQuote);
+        %generate(countify, SimpleQuote);
         // NB: The parameter below must be called "Value" because there
         // is code which updates a property with that name in the value object.
         SimpleQuote(double Value);

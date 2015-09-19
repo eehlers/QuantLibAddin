@@ -15,15 +15,14 @@
 #include <qlo/obj_volatilities.hpp>
 %}
 
-%feature("rp:generate_countify") QuantLib::BlackScholesMertonProcess::BlackScholesMertonProcess;
-%feature("rp:generate_cpp") QuantLib::BlackScholesMertonProcess::BlackScholesMertonProcess;
-
 namespace QuantLib {
 
     class GeneralizedBlackScholesProcess {};
 
     class BlackScholesMertonProcess : public GeneralizedBlackScholesProcess {
       public:
+        %generate(cpp, BlackScholesMertonProcess);
+        %generate(countify, BlackScholesMertonProcess);
         BlackScholesMertonProcess(
             const QuantLib::Handle< QuantLib::Quote >& x0,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& dividendTS,

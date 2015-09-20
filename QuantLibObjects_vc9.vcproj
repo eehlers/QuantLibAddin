@@ -426,10 +426,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\create\create_calendars.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\create\create_calendars.hpp"
 					>
 				</File>
@@ -442,23 +438,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\create\create_date.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\create\create_date.hpp"
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\create\create_date2.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\create\create_date2.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\create\create_daycounters.cpp"
 					>
 				</File>
 				<File
@@ -546,10 +530,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\create\create_prices.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\create\create_prices.hpp"
 					>
 				</File>
@@ -594,10 +574,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\create\create_settings.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\create\create_settings.hpp"
 					>
 				</File>
@@ -607,10 +583,6 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\create\create_termstructures.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\create\create_utilities.cpp"
 					>
 				</File>
 				<File

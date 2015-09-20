@@ -8,8 +8,8 @@ include_HEADERS = \
     create_all.hpp \
     create_calendars.hpp \
     create_couponvectors.hpp \
-    create_date2.hpp \
     create_date.hpp \
+    create_date2.hpp \
     create_daycounters.hpp \
     create_exercise.hpp \
     create_handles.hpp \
@@ -34,11 +34,7 @@ include_HEADERS = \
     create_volatilities.hpp
 
 libCreate_la_SOURCES = \
-    create_calendars.cpp \
     create_couponvectors.cpp \
-    create_date2.cpp \
-    create_date.cpp \
-    create_daycounters.cpp \
     create_exercise.cpp \
     create_handles.cpp \
     create_indexes.cpp \
@@ -49,15 +45,12 @@ libCreate_la_SOURCES = \
     create_models.cpp \
     create_payoffs.cpp \
     create_piecewiseyieldcurve.cpp \
-    create_prices.cpp \
     create_pricingengines.cpp \
     create_processes.cpp \
     create_quote.cpp \
     create_ratehelpers.cpp \
     create_schedule.cpp \
-    create_settings.cpp \
     create_termstructures.cpp \
-    create_utilities.cpp \
     create_vanillaswaps.cpp \
     create_volatilities.cpp
 

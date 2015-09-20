@@ -1,6 +1,6 @@
 
 %group(utilities);
-%override
+%override;
 
 namespace QuantLibAddin {
     %generate(cpp, version);

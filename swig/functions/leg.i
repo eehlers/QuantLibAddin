@@ -1,6 +1,6 @@
 
 %group(leg);
-%override
+%override;
 
 namespace QuantLibAddin {
 

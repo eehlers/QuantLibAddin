@@ -11,7 +11,7 @@ namespace QuantLib {
 
     public:
 
-        %loop(yearFraction, EndDate)
+        %loop(yearFraction, EndDate);
         Time yearFraction(
             const Date& StartDate,
             const Date& EndDate,

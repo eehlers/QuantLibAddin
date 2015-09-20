@@ -1,6 +1,6 @@
 
 %group(quote);
-%override
+%override;
 
 %insert(quote_library_hpp) %{
 #include <ql/quotes/simplequote.hpp>

@@ -1,6 +1,6 @@
 
 %group(date);
-%override
+%override;
 
 %insert(date_library_hpp) %{
 #include <ql/time/date.hpp>

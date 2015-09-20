@@ -11,20 +11,20 @@ namespace QuantLib {
 
     public:
 
-        %loop(isEndOfMonth, date)
+        %loop(isEndOfMonth, date);
         bool isEndOfMonth(const Date& date) const;
 
-        %loop(endOfMonth, date)
+        %loop(endOfMonth, date);
         Date endOfMonth(const Date& date) const;
 
-        %loop(advance, period)
+        %loop(advance, period);
         Date advance(
             const Date& date,
             const Period& period,
             BusinessDayConvention convention,
             bool endOfMonth) const;
 
-        %loop(adjust, date)
+        %loop(adjust, date);
         Date adjust(const Date& date,
             BusinessDayConvention convention);
     };

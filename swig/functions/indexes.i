@@ -1,6 +1,6 @@
 
 %group(indexes);
-%override
+%override;
 
 %insert(indexes_serialization_cpp) %{
 #include <qlo/obj_termstructures.hpp>

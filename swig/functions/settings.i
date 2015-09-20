@@ -1,6 +1,6 @@
 
 %group(settings);
-%override
+%override;
 
 namespace QuantLibAddin {
     %generate(cpp, settingsEvaluationDate);

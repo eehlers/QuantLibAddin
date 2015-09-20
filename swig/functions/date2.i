@@ -1,6 +1,6 @@
 
 %group(date2);
-%override
+%override;
 
 namespace QuantLibAddin {
 
@@ -12,12 +12,12 @@ namespace QuantLibAddin {
         const QuantLib::Date& RefDate,
         const std::vector<bool>& MainCycle);
 
-    %loop(IMMdate, immCode)
+    %loop(IMMdate, immCode);
     QuantLib::Date IMMdate(
         const std::string& immCode,
         const QuantLib::Date &referenceDate);
 
-    %loop(IMMcode, immDate)
+    %loop(IMMcode, immDate);
     std::string IMMcode(const QuantLib::Date& immDate);
 
     std::string IMMnextCode(const QuantLib::Date& d,

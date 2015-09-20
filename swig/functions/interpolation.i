@@ -1,6 +1,6 @@
 
 %group(interpolation);
-%override
+%override;
 
 namespace QuantLibAddin {
 

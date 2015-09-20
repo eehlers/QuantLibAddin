@@ -1,6 +1,6 @@
 
 %group(piecewiseyieldcurve);
-%override
+%override;
 
 namespace QuantLibAddin {
 

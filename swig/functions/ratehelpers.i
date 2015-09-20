@@ -1,6 +1,6 @@
 
 %group(ratehelpers);
-%override
+%override;
 
 %insert(ratehelpers_serialization_cpp) %{
 #include <qlo/objmanual_indexes.hpp>

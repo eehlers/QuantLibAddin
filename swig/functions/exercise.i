@@ -13,12 +13,12 @@ namespace QuantLib {
       public:
         %generate(cpp, EuropeanExercise);
         %generate(countify, EuropeanExercise);
-        EuropeanExercise(const QuantLib::Date& date);
+        EuropeanExercise(const Date& date);
     };
 
     class BermudanExercise : public Exercise {
       public:
-        BermudanExercise(const std::vector<QuantLib::Date>& dates/*,
+        BermudanExercise(const std::vector<Date>& dates/*,
                          bool payoffAtExpiry = false*/);
     };    
 }

@@ -27,35 +27,35 @@ namespace QuantLib {
         %generate(cpp, AnalyticEuropeanEngine);
         %generate(countify, AnalyticEuropeanEngine);
         AnalyticEuropeanEngine(
-            const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& process);
+            const boost::shared_ptr<GeneralizedBlackScholesProcess>& process);
     };
 
     class DiscountingSwapEngine : public PricingEngine {
       public:
         DiscountingSwapEngine(
-               const QuantLib::Handle<QuantLib::YieldTermStructure>& discountCurve,
+               const Handle<YieldTermStructure>& discountCurve,
                bool includeSettlementDateFlows,
-               // FIXME we declare effectiveDate as "const QuantLib::Date&" instead of "QuantLib::Date".
+               // FIXME we declare effectiveDate as "const Date&" instead of "Date".
                // This is because the typemaps currently work for "const Date&" as an input value
                // and for "Date" as a return value but not for "Date" as an input value.
-               //QuantLib::Date settlementDate,
-               //QuantLib::Date npvDate);
-               const QuantLib::Date & settlementDate,
-               const QuantLib::Date & npvDate);
+               //Date settlementDate,
+               //Date npvDate);
+               const Date & settlementDate,
+               const Date & npvDate);
     };
     
     class JamshidianSwaptionEngine : public PricingEngine {
       public:
         JamshidianSwaptionEngine(
-                         const boost::shared_ptr<QuantLib::OneFactorAffineModel>& model/*,
-                         const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure =
-                                                 QuantLib::Handle<QuantLib::YieldTermStructure>()*/);
+                         const boost::shared_ptr<OneFactorAffineModel>& model/*,
+                         const Handle<YieldTermStructure>& termStructure =
+                                                 Handle<YieldTermStructure>()*/);
     };
     
     class TreeSwaptionEngine : public PricingEngine {
       public:
-        TreeSwaptionEngine(const boost::shared_ptr<QuantLib::ShortRateModel>& x,
-                           QuantLib::Size timeSteps/*,
+        TreeSwaptionEngine(const boost::shared_ptr<ShortRateModel>& x,
+                           Size timeSteps/*,
                            const Handle<YieldTermStructure>& termStructure =
                                                  Handle<YieldTermStructure>()*/);    
     };

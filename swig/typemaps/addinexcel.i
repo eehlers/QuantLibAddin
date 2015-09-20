@@ -30,6 +30,11 @@
             QuantLibAddin::Schedule, QuantLib::Schedule)
 %}
 
+%typemap(rp_tm_xll_cnvt) QuantLib::Calendar const & %{
+        $rp_typedef_base $1_name_enm =
+            reposit::Create<$rp_typedef_base>()($1_name);
+%}
+
 %typemap(rp_tm_xll_cnvt) QuantLib::OptimizationMethod & %{
         RP_GET_REFERENCE($1_name_cnv, $1_name,
             QuantLibAddin::OptimizationMethod, QuantLib::OptimizationMethod)
@@ -138,12 +143,13 @@
 %typemap(rp_tm_xll_argf) QuantLib::OptimizationMethod& "*$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::EndCriteria const & "*$1_name_cnv";
 %typemap(rp_tm_xll_argf) ql_tp_handle "$1_name_handle";
-%typemap(rp_tm_xll_argf) const std::vector<QuantLib::Date>& "$1_name_vec2";
-%typemap(rp_tm_xll_argf) const std::vector<QuantLib::Natural>& "$1_name_vec2";
-%typemap(rp_tm_xll_argf) const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& "$1_name_vec2";
-%typemap(rp_tm_xll_argf) const std::vector<QuantLib::Handle<QuantLib::Quote> >& "$1_name_vec2";
-%typemap(rp_tm_xll_argf) const std::vector<boost::shared_ptr<QuantLibAddin::Leg> >& "$1_name_vec2";
-%typemap(rp_tm_xll_argf) const std::vector<QuantLib::Leg>& "$1_name_vec2";
+%typemap(rp_tm_xll_argf) std::vector<QuantLib::Date> const & "$1_name_vec2";
+%typemap(rp_tm_xll_argf) std::vector<QuantLib::Natural> const & "$1_name_vec2";
+%typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLib::RateHelper> > const & "$1_name_vec2";
+%typemap(rp_tm_xll_argf) std::vector<QuantLib::Handle<QuantLib::Quote> > const & "$1_name_vec2";
+%typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "$1_name_vec2";
+%typemap(rp_tm_xll_argf) std::vector<QuantLib::Leg> const & "$1_name_vec2";
+%typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> > const & "$1_name_vec";
 
 // rp_tm_xll_rtst - return statement (F/M)
 %typemap(rp_tm_xll_rtst) QuantLib::Natural %{

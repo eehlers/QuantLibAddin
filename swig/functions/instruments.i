@@ -26,30 +26,30 @@ namespace QuantLib {
       public:
         %generate(cpp, setPricingEngine);
         %generate(countify, setPricingEngine);
-        void setPricingEngine(const boost::shared_ptr<QuantLib::PricingEngine>& engine);
+        void setPricingEngine(const boost::shared_ptr<PricingEngine>& engine);
         %generate(cpp, NPV);
         %generate(countify, NPV);
-        QuantLib::Real NPV();
+        Real NPV();
     };
 
     class VanillaOption : public Instrument {
       public:
         %generate(cpp, VanillaOption);
         %generate(countify, VanillaOption);
-        VanillaOption(const boost::shared_ptr<QuantLib::StrikedTypePayoff>& payoff,
-                      const boost::shared_ptr<QuantLib::Exercise>& exercise);
+        VanillaOption(const boost::shared_ptr<StrikedTypePayoff>& payoff,
+                      const boost::shared_ptr<Exercise>& exercise);
     };
 
     class Swap : public Instrument {
       public:
-        Swap(const std::vector<QuantLib::Leg>& legs,
+        Swap(const std::vector<Leg>& legs,
             const std::vector<bool>& payer);
     };
     
     class Swaption : public /*Option*/Instrument {
       public:
-        Swaption(const boost::shared_ptr<QuantLib::VanillaSwap>& swap,
-                 const boost::shared_ptr<QuantLib::Exercise>& exercise/*,
+        Swaption(const boost::shared_ptr<VanillaSwap>& swap,
+                 const boost::shared_ptr<Exercise>& exercise/*,
                  Settlement::Type delivery = Settlement::Physical*/);
     };
 }

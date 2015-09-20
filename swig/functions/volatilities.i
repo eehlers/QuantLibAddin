@@ -15,10 +15,10 @@ namespace QuantLib {
       public:
         %generate(cpp, BlackConstantVol);
         %generate(countify, BlackConstantVol);
-        BlackConstantVol(const QuantLib::Date& referenceDate,
-                         const QuantLib::Calendar& calendar,
-                         QuantLib::Volatility volatility,
-                         const QuantLib::DayCounter& dayCounter);
+        BlackConstantVol(const Date& referenceDate,
+                         const Calendar& calendar,
+                         Volatility volatility,
+                         const DayCounter& dayCounter);
     };
 }
 

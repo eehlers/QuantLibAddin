@@ -1,6 +1,4 @@
 
-%include termstructures.i
-
 %group(piecewiseyieldcurve);
 %override
 

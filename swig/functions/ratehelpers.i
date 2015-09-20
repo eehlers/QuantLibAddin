@@ -11,8 +11,8 @@ namespace QuantLib {
 
     class RateHelper {
       public:
-        QuantLib::Date earliestDate();
-        QuantLib::Date latestDate();
+        Date earliestDate();
+        Date latestDate();
     };
 }
 

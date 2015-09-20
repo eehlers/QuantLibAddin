@@ -16,17 +16,17 @@ namespace QuantLib {
     class VanillaSwap : public /*Swap*/Instrument {
       public:
         VanillaSwap(
-            QuantLib::VanillaSwap::Type type,
-            QuantLib::Real nominal,
-            const QuantLib::Schedule& fixedSchedule,
-            QuantLib::Rate fixedRate,
-            const QuantLib::DayCounter& fixedDayCount,
-            const QuantLib::Schedule& floatSchedule,
-            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
-            QuantLib::Spread spread,
-            const QuantLib::DayCounter& floatingDayCount/*,
-            boost::optional<QuantLib::BusinessDayConvention> paymentConvention =
+            VanillaSwap::Type type,
+            Real nominal,
+            const Schedule& fixedSchedule,
+            Rate fixedRate,
+            const DayCounter& fixedDayCount,
+            const Schedule& floatSchedule,
+            const boost::shared_ptr<IborIndex>& iborIndex,
+            Spread spread,
+            const DayCounter& floatingDayCount/*,
+            boost::optional<BusinessDayConvention> paymentConvention =
                                                                  boost::none*/);
-        QuantLib::Rate fairRate();                                                                 
+        Rate fairRate();                                                                 
     };
 }

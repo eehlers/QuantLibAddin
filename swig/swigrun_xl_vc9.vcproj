@@ -198,6 +198,14 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="typedefs"
+				>
+				<File
+					RelativePath=".\typedefs\all.i"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<File
 			RelativePath="Makefile.vc"

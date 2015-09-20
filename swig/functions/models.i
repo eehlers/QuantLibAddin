@@ -15,38 +15,38 @@ namespace QuantLib {
 
     class CalibrationHelper {
       public:
-        void setPricingEngine(const boost::shared_ptr<QuantLib::PricingEngine>& engine);
-        QuantLib::Volatility impliedVolatility(QuantLib::Real targetValue,
-                             QuantLib::Real accuracy,
-                             QuantLib::Size maxEvaluations,
-                             QuantLib::Volatility minVol,
-                             QuantLib::Volatility maxVol);
+        void setPricingEngine(const boost::shared_ptr<PricingEngine>& engine);
+        Volatility impliedVolatility(Real targetValue,
+                             Real accuracy,
+                             Size maxEvaluations,
+                             Volatility minVol,
+                             Volatility maxVol);
     };
 
     class SwaptionHelper : public CalibrationHelper {
       public:
-        SwaptionHelper(const QuantLib::Period& maturity,
-                       const QuantLib::Period& length,
-                       const QuantLib::Handle<QuantLib::Quote>& volatility,
-                       const boost::shared_ptr<QuantLib::IborIndex>& index,
-                       const QuantLib::Period& fixedLegTenor,
-                       const QuantLib::DayCounter& fixedLegDayCounter,
-                       const QuantLib::DayCounter& floatingLegDayCounter,
-                       const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure/*,
-                       QuantLib::CalibrationHelper::CalibrationErrorType errorType
-                                      = QuantLib::CalibrationHelper::RelativePriceError,
-                       const QuantLib::Real strike = QuantLib::Null<QuantLib::Real>(),
-                       const QuantLib::Real nominal = 1.0,
-                       const QuantLib::Real shift = 0.0*/);
-          QuantLib::Real modelValue();
+        SwaptionHelper(const Period& maturity,
+                       const Period& length,
+                       const Handle<Quote>& volatility,
+                       const boost::shared_ptr<IborIndex>& index,
+                       const Period& fixedLegTenor,
+                       const DayCounter& fixedLegDayCounter,
+                       const DayCounter& floatingLegDayCounter,
+                       const Handle<YieldTermStructure>& termStructure/*,
+                       CalibrationHelper::CalibrationErrorType errorType
+                                      = CalibrationHelper::RelativePriceError,
+                       const Real strike = Null<Real>(),
+                       const Real nominal = 1.0,
+                       const Real shift = 0.0*/);
+          Real modelValue();
     };
         
     class CalibratedModel {
       public:
         virtual void calibrate(
-                const std::vector<boost::shared_ptr<QuantLib::CalibrationHelper> >& x,
-                QuantLib::OptimizationMethod& method,
-                const QuantLib::EndCriteria& endCriteria/*,
+                const std::vector<boost::shared_ptr<CalibrationHelper> >& x,
+                OptimizationMethod& method,
+                const EndCriteria& endCriteria/*,
                 const Constraint& constraint = Constraint(),
                 const std::vector<Real>& weights = std::vector<Real>(),
                 const std::vector<bool>& fixParameters = std::vector<bool>()*/);
@@ -57,7 +57,7 @@ namespace QuantLib {
     
     class HullWhite : public /*Vasicek, public TermStructureConsistentModel*/OneFactorAffineModel {
       public:
-        HullWhite(const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure/*,
+        HullWhite(const Handle<YieldTermStructure>& termStructure/*,
                   Real a = 0.1, Real sigma = 0.01*/);
     };
 }

@@ -10,5 +10,6 @@
 ) QuantLibAddin
 
 %include typemaps/all.i
+%include typedefs/all.i
 %include functions/all.i
 

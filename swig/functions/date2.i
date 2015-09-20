@@ -2,9 +2,6 @@
 %group(date2);
 %override
 
-%loop(QuantLibAddin::IMMdate, immCode)
-%loop(QuantLibAddin::IMMcode, immDate)
-
 namespace QuantLibAddin {
 
     std::vector<QuantLib::Date> IMMNextDates(
@@ -15,10 +12,12 @@ namespace QuantLibAddin {
         const QuantLib::Date& RefDate,
         const std::vector<bool>& MainCycle);
 
+    %loop(IMMdate, immCode)
     QuantLib::Date IMMdate(
         const std::string& immCode,
         const QuantLib::Date &referenceDate);
 
+    %loop(IMMcode, immDate)
     std::string IMMcode(const QuantLib::Date& immDate);
 
     std::string IMMnextCode(const QuantLib::Date& d,

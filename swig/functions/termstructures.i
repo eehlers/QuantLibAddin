@@ -13,15 +13,15 @@ namespace QuantLib {
       public:
         %generate(cpp, referenceDate);
         %generate(countify, referenceDate);
-        QuantLib::Date referenceDate();
+        Date referenceDate();
     };
 
     class YieldTermStructure : public TermStructure {
       public:
         %generate(cpp, discount);
         %generate(countify, discount);
-        QuantLib::DiscountFactor discount(
-            const QuantLib::Date& d,
+        DiscountFactor discount(
+            const Date& d,
             bool extrapolate);
     };
 
@@ -29,9 +29,9 @@ namespace QuantLib {
       public:
         %generate(cpp, FlatForward);
         %generate(countify, FlatForward);
-        FlatForward(const QuantLib::Date& referenceDate,
-                    QuantLib::Rate forward,
-                    const QuantLib::DayCounter& dayCounter);
+        FlatForward(const Date& referenceDate,
+                    Rate forward,
+                    const DayCounter& dayCounter);
     };
 }
 

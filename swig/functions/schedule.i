@@ -14,17 +14,17 @@ namespace QuantLib {
                  // This is because the typemaps currently work for "const Date&" as an input value
                  // and for "Date" as a return value but not for "Date" as an input value.
                  //QuantLib::Date effectiveDate,
-                 const QuantLib::Date& effectiveDate,
-                 const QuantLib::Date& terminationDate,
-                 const QuantLib::Period& tenor,
-                 const QuantLib::Calendar& calendar,
-                 QuantLib::BusinessDayConvention convention,
-                 QuantLib::BusinessDayConvention terminationDateConvention,
-                 QuantLib::DateGeneration::Rule rule,
+                 const Date& effectiveDate,
+                 const Date& terminationDate,
+                 const Period& tenor,
+                 const Calendar& calendar,
+                 BusinessDayConvention convention,
+                 BusinessDayConvention terminationDateConvention,
+                 DateGeneration::Rule rule,
                  bool endOfMonth,
-                 const QuantLib::Date& firstDate,
-                 const QuantLib::Date& nextToLastDate);
-         std::vector<QuantLib::Date> dates();
+                 const Date& firstDate,
+                 const Date& nextToLastDate);
+         std::vector<Date> dates();
      };
 }
 

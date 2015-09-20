@@ -24,10 +24,10 @@ namespace QuantLib {
         %generate(cpp, BlackScholesMertonProcess);
         %generate(countify, BlackScholesMertonProcess);
         BlackScholesMertonProcess(
-            const QuantLib::Handle< QuantLib::Quote >& x0,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& dividendTS,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& riskFreeTS,
-            const QuantLib::Handle<QuantLib::BlackVolTermStructure>& blackVolTS);
+            const Handle<Quote>& x0,
+            const Handle<YieldTermStructure>& dividendTS,
+            const Handle<YieldTermStructure>& riskFreeTS,
+            const Handle<BlackVolTermStructure>& blackVolTS);
     };
 }
 

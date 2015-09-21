@@ -35,18 +35,12 @@ namespace QuantLibAddin {
     };
 
     class DepositRateHelper : public RateHelper {
-        %rename(DepositRateHelper2)
-        DepositRateHelper(const QuantLib::Handle<QuantLib::Quote>&,
-                          const QuantLib::Period&,
-                          QuantLib::Natural,
-                          const QuantLib::Calendar&,
-                          QuantLib::BusinessDayConvention,
-                          bool,
-                          const QuantLib::DayCounter&);
       public:
         DepositRateHelper(
             const QuantLib::Handle<QuantLib::Quote>& rate,
             const boost::shared_ptr<QuantLib::IborIndex>& iborIndex);
+        // Overloaded ctors; the directive below causes the second to be called qlDepositRateHelper2().
+        %rename(DepositRateHelper2) DepositRateHelper;
         DepositRateHelper(const QuantLib::Handle<QuantLib::Quote>& rate,
                           const QuantLib::Period& tenor,
                           QuantLib::Natural fixingDays,

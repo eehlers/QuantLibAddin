@@ -106,3 +106,4 @@ namespace QuantLib {
             BusinessDayConvention businessDayConvention();
     };
 }
+

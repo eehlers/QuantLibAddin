@@ -30,6 +30,7 @@ namespace QuantLibAddin {
         // NB: The parameter below must be called "Value" because there
         // is code which updates a property with that name in the value object.
         SimpleQuote(double Value);
+
         QuantLib::Real setValue(QuantLib::Real Value);
     };
 

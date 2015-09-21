@@ -27,6 +27,7 @@ namespace QuantLib {
         %generate(cpp, setPricingEngine);
         %generate(countify, setPricingEngine);
         void setPricingEngine(const boost::shared_ptr<PricingEngine>& engine);
+
         %generate(cpp, NPV);
         %generate(countify, NPV);
         Real NPV();

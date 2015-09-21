@@ -35,13 +35,8 @@ namespace QuantLib {
         DiscountingSwapEngine(
                const Handle<YieldTermStructure>& discountCurve,
                bool includeSettlementDateFlows,
-               // FIXME we declare effectiveDate as "const Date&" instead of "Date".
-               // This is because the typemaps currently work for "const Date&" as an input value
-               // and for "Date" as a return value but not for "Date" as an input value.
-               //Date settlementDate,
-               //Date npvDate);
-               const Date & settlementDate,
-               const Date & npvDate);
+               Date settlementDate,
+               Date npvDate);
     };
     
     class JamshidianSwaptionEngine : public PricingEngine {

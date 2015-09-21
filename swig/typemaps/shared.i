@@ -21,4 +21,5 @@
                     yyy);
 %}
 
+%typemap(rp_tm_xxx_loop) QuantLib::Date "$1_name_cnv";
 %typemap(rp_tm_xxx_loop) QuantLib::Date const & "$1_name_cnv";

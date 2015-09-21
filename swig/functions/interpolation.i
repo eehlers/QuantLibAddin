@@ -4,7 +4,7 @@
 
 namespace QuantLibAddin {
 
-    class Interpolation : public Extrapolator {
+    class Interpolation /*: public Extrapolator*/ {
     public:
         QuantLib::Real interpolate(QuantLib::Real x,
                                   bool allowExtrapolation);

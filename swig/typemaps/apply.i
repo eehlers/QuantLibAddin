@@ -5,9 +5,6 @@
 %apply rp_tp_string { QuantLib::OptimizationMethod & };
 %apply rp_tp_string { QuantLib::EndCriteria const & };
 
-// These QuantLib types behave like any.
-%apply rp_tp_any { QuantLib::Date const & };
-
 // These QuantLib types behave like enum.
 %apply rp_tp_enm { QuantLib::Currency };
 %apply rp_tp_enm { QuantLib::Currency & };
@@ -24,9 +21,6 @@
 %apply rp_tp_enm_cls { QuantLib::Calendar const & };
 %apply rp_tp_enm_cls { QuantLib::DayCounter };
 %apply rp_tp_enm_cls { QuantLib::DayCounter const & };
-
-// Names of variables after they have been converted.
-%apply rp_tp_cnv2 { QuantLib::Date const & };
 
 // Types on which we want to invoke member functions.
 %apply rp_tp_add_obj { QuantLibAddin::Quote };

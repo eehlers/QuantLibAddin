@@ -426,27 +426,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\create\create_calendars.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\create\create_couponvectors.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\create\create_couponvectors.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\create\create_date.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\create\create_date2.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\create\create_daycounters.hpp"
 					>
 				</File>
 				<File
@@ -530,10 +514,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\create\create_prices.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\create\create_pricingengines.cpp"
 					>
 				</File>
@@ -574,19 +554,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\create\create_settings.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\create\create_termstructures.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\create\create_termstructures.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\create\create_utilities.hpp"
 					>
 				</File>
 				<File
@@ -614,43 +586,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\register\serialization_calendars.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_calendars.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\register\serialization_couponvectors.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_couponvectors.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_date.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_date.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_date2.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_date2.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_daycounters.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_daycounters.hpp"
 					>
 				</File>
 				<File
@@ -734,14 +674,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\register\serialization_prices.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_prices.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\register\serialization_pricingengines.cpp"
 					>
 				</File>
@@ -786,27 +718,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\qlo\serialization\register\serialization_settings.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_settings.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\serialization\register\serialization_termstructures.cpp"
 					>
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_termstructures.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_utilities.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\serialization\register\serialization_utilities.hpp"
 					>
 				</File>
 				<File
@@ -831,43 +747,11 @@
 			Name="valueobjects"
 			>
 			<File
-				RelativePath=".\qlo\valueobjects\vo_calendars.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_calendars.hpp"
-				>
-			</File>
-			<File
 				RelativePath=".\qlo\valueobjects\vo_couponvectors.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_couponvectors.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_date.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_date.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_date2.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_date2.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_daycounters.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_daycounters.hpp"
 				>
 			</File>
 			<File
@@ -951,14 +835,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\valueobjects\vo_prices.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_prices.hpp"
-				>
-			</File>
-			<File
 				RelativePath=".\qlo\valueobjects\vo_pricingengines.cpp"
 				>
 			</File>
@@ -999,27 +875,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\valueobjects\vo_settings.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_settings.hpp"
-				>
-			</File>
-			<File
 				RelativePath=".\qlo\valueobjects\vo_termstructures.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_termstructures.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_utilities.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\valueobjects\vo_utilities.hpp"
 				>
 			</File>
 			<File
@@ -1112,6 +972,10 @@
 			</Filter>
 		</Filter>
 		<File
+			RelativePath=".\qlo\auto_link.hpp"
+			>
+		</File>
+		<File
 			RelativePath=".\qlo\handle.hpp"
 			>
 		</File>
@@ -1145,6 +1009,10 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_calendars.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_daycounters.hpp"
 			>
 		</File>
 		<File
@@ -1289,6 +1157,10 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_utilities.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\qladdindefines.hpp"
 			>
 		</File>
 		<File

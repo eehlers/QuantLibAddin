@@ -6,11 +6,7 @@ noinst_LTLIBRARIES = libCreate.la
 
 include_HEADERS = \
     create_all.hpp \
-    create_calendars.hpp \
     create_couponvectors.hpp \
-    create_date.hpp \
-    create_date2.hpp \
-    create_daycounters.hpp \
     create_exercise.hpp \
     create_handles.hpp \
     create_indexes.hpp \
@@ -21,15 +17,12 @@ include_HEADERS = \
     create_models.hpp \
     create_payoffs.hpp \
     create_piecewiseyieldcurve.hpp \
-    create_prices.hpp \
     create_pricingengines.hpp \
     create_processes.hpp \
     create_quote.hpp \
     create_ratehelpers.hpp \
     create_schedule.hpp \
-    create_settings.hpp \
     create_termstructures.hpp \
-    create_utilities.hpp \
     create_vanillaswaps.hpp \
     create_volatilities.hpp
 

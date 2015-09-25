@@ -1092,10 +1092,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\qlo\objmanual_handles.cpp"
-			>
-		</File>
-		<File
 			RelativePath=".\qlo\objmanual_handles.hpp"
 			>
 		</File>

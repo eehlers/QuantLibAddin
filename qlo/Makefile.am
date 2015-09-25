@@ -48,7 +48,6 @@ libAddinObjects_la_SOURCES = \
     objmanual_couponvectors.cpp \
     objmanual_date2.cpp \
     objmanual_date.cpp \
-    objmanual_handles.cpp \
     objmanual_interpolation.cpp \
     objmanual_leg.cpp \
     objmanual_piecewiseyieldcurve.cpp \

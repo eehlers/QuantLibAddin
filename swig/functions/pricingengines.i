@@ -6,6 +6,7 @@
 #include <ql/pricingengines/swap/discountingswapengine.hpp>
 #include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
 #include <ql/pricingengines/swaption/treeswaptionengine.hpp>
+#include <ql/pricingengines/swaption/g2swaptionengine.hpp>
 %}
 
 %insert(pricingengines_cppaddin_cpp) %{
@@ -54,5 +55,13 @@ namespace QuantLib {
                            const Handle<YieldTermStructure>& termStructure =
                                                  Handle<YieldTermStructure>()*/);    
     };
+    
+    class G2SwaptionEngine : public PricingEngine {
+      public:
+        G2SwaptionEngine(const boost::shared_ptr<G2>& model,
+                         Real range,
+                         Size intervals);
+    };
+    
 }
 

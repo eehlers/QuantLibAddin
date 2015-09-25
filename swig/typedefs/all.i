@@ -28,6 +28,7 @@ namespace QuantLib {
 
     class OneFactorAffineModel;
     class ShortRateModel;
+    class G2;
     class PricingEngine;
     class StrikedTypePayoff;
     class VanillaSwap;

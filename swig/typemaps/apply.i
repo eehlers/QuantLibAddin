@@ -40,6 +40,7 @@
 %apply rp_tp_obj1 { boost::shared_ptr<QuantLib::Schedule> const & };
 %apply rp_tp_obj1 { boost::shared_ptr<QuantLib::OneFactorAffineModel> const & };
 %apply rp_tp_obj1 { boost::shared_ptr<QuantLib::ShortRateModel> const & };
+%apply rp_tp_obj1 { boost::shared_ptr<QuantLib::G2> const & };
 %apply rp_tp_obj1 { boost::shared_ptr<QuantLib::VanillaSwap> const & };
 
 // For addin functions that wrap QuantLibAddin objects rather than QuantLib objects

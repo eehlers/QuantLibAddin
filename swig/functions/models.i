@@ -63,7 +63,9 @@ namespace QuantLib {
                   Real a = 0.1, Real sigma = 0.01*/);
     };
 
-    class G2 : public /*AffineModel, public TermStructureConsistentModel*/TwoFactorModel {
+    class G2 : public TwoFactorModel/*,
+               public AffineModel,
+               public TermStructureConsistentModel*/ {    
       public:
         %rename(G2Model) G2;
         G2(const Handle<YieldTermStructure>& termStructure/*,

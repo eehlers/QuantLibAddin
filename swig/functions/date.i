@@ -2,13 +2,9 @@
 %group(date);
 %override;
 
-%insert(date_library_hpp) %{
-#include <ql/time/date.hpp>
-%}
-
 namespace QuantLibAddin {
 
-    bool dateIsEndOfMonth(const QuantLib::Date& d);
+    //bool dateIsEndOfMonth(const QuantLib::Date& d);
 
     std::vector<QuantLib::Date> IMMNextDates(
         const QuantLib::Date& d,
@@ -17,21 +13,32 @@ namespace QuantLibAddin {
     std::vector<std::string> IMMNextCodes(
         const QuantLib::Date& RefDate,
         const std::vector<bool>& MainCycle);
+}
 
-    %loop(IMMdate, immCode);
-    QuantLib::Date IMMdate(
-        const std::string& immCode,
-        const QuantLib::Date &referenceDate);
+namespace QuantLib {
 
-    %loop(IMMcode, immDate);
-    std::string IMMcode(const QuantLib::Date& immDate);
-
-    std::string IMMnextCode(const QuantLib::Date& d,
-                                bool mainCycle);
-
-    std::string ECBcode(const QuantLib::Date& ecbDate);
-    std::string ECBnextCode(const QuantLib::Date& RefDate);
-    QuantLib::Date ECBdate(const std::string& ecbCode,
-        const QuantLib::Date& referenceDate);
-    QuantLib::Date ECBnextDate(const QuantLib::Date& date);    
+    class Date {
+    public:
+        static bool isEndOfMonth(const Date& d);
+    };
+    
+    struct IMM {
+        %loop(date, immCode);
+        static Date date(const std::string& immCode,
+                         const Date& referenceDate);
+                         
+        %loop(code, immDate);
+        static std::string code(const Date& immDate);
+        
+        static std::string nextCode(const Date& d,
+                                    bool mainCycle);
+    };
+    
+    struct ECB {
+        static Date date(const std::string& ecbCode,
+                         const Date& referenceDate);
+        static std::string code(const Date& ecbDate);
+        static Date nextDate(const Date& d);
+        static std::string nextCode(const Date& d);
+    };
 }

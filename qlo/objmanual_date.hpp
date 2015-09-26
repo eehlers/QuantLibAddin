@@ -9,10 +9,13 @@
 #include <boost/shared_ptr.hpp>
 #include <ql/time/date.hpp>
 #include <ql/time/frequency.hpp>
+#include <ql/time/imm.hpp>
+#include <ql/time/ecb.hpp>
 
 namespace QuantLib {
     class Period;
 }
+
 namespace QuantLibAddin {
 
     // to be removed using coercion
@@ -24,10 +27,6 @@ namespace QuantLibAddin {
     // it is not a dummy function!
     // e.g. it returns "11M" when the input is "1Y-1M"
     QuantLib::Period periodEquivalent(const QuantLib::Period& p);
-
-    QuantLib::Date IMMdate(
-        const std::string& immCode,
-        const QuantLib::Date &referenceDate);
 
     std::vector<QuantLib::Date> IMMNextDates(const QuantLib::Date& d,
                                                const std::vector<bool>& mainCycle);
@@ -41,18 +40,8 @@ namespace QuantLibAddin {
                                             const std::vector<bool>& mainCycle);
     std::vector<QuantLib::Date> ECBKnownDates();
 
-    std::string IMMcode(const QuantLib::Date& immDate);
-    std::string IMMnextCode(const QuantLib::Date& RefDate = QuantLib::Date(),
-                                bool MainCycle = true);
-
-    std::string ECBcode(const QuantLib::Date& ecbDate);
-    std::string ECBnextCode(const QuantLib::Date& RefDate = QuantLib::Date());
-    QuantLib::Date ECBdate(const std::string& ecbCode,
-                         const QuantLib::Date& referenceDate = QuantLib::Date());
-    QuantLib::Date ECBnextDate(const QuantLib::Date& date = QuantLib::Date());
-
-    bool dateIsEndOfMonth(QuantLib::Date const &d);
 } // namespace QuantLibAddin
+
 
 #endif
 

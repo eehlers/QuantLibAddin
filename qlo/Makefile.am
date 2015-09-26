@@ -19,7 +19,6 @@ this_include_HEADERS = \
     obj_exercise.hpp \
     obj_instruments.hpp \
     objmanual_couponvectors.hpp \
-    objmanual_date2.hpp \
     objmanual_date.hpp \
     objmanual_handles.hpp \
     objmanual_indexes.hpp \
@@ -46,7 +45,6 @@ this_include_HEADERS = \
 libAddinObjects_la_SOURCES = \
     init.cpp \
     objmanual_couponvectors.cpp \
-    objmanual_date2.cpp \
     objmanual_date.cpp \
     objmanual_interpolation.cpp \
     objmanual_leg.cpp \

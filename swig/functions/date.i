@@ -4,8 +4,6 @@
 
 namespace QuantLibAddin {
 
-    //bool dateIsEndOfMonth(const QuantLib::Date& d);
-
     std::vector<QuantLib::Date> IMMNextDates(
         const QuantLib::Date& d,
         const std::vector<bool>& mainCycle);

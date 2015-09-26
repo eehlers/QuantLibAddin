@@ -1036,10 +1036,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\qlo\obj_prices.cpp"
-			>
-		</File>
-		<File
 			RelativePath=".\qlo\obj_prices.hpp"
 			>
 		</File>

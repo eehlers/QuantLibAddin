@@ -53,7 +53,6 @@ libAddinObjects_la_SOURCES = \
     objmanual_ratehelpers.cpp \
     objmanual_settings.cpp \
     objmanual_utilities.cpp \
-    obj_prices.cpp \
     yieldtermstructures.cpp
 
 noinst_LTLIBRARIES = libAddinObjects.la

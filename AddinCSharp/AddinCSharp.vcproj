@@ -2,9 +2,10 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="AddinCpp"
-	ProjectGUID="{B1F9CC2E-FDB4-4853-856E-E47A2A7495DF}"
-	RootNamespace="AddinCpp"
+	Name="AddinCSharp"
+	ProjectGUID="{D086C77F-3F5A-4FBE-AF72-D92A12AD097B}"
+	RootNamespace="AddinCSharp"
+	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
 	<Platforms>
@@ -19,10 +20,8 @@
 			Name="Debug|Win32"
 			OutputDirectory=".\build\vc90\$(PlatformName)\$(ConfigurationName)"
 			IntermediateDirectory=".\build\vc90\$(PlatformName)\$(ConfigurationName)"
-			ConfigurationType="4"
-			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
+			ConfigurationType="2"
+			CharacterSet="1"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -41,20 +40,15 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/MP"
 				Optimization="0"
-				EnableIntrinsicFunctions="false"
 				AdditionalIncludeDirectories="..,..\..\..\quantlib\reposit,..\..\..\quantlib\QuantLib"
-				PreprocessorDefinitions="_DEBUG;WIN32;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;ADDINCSHARP_EXPORTS"
+				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
-				DisableLanguageExtensions="false"
-				ForceConformanceInForLoopScope="true"
-				RuntimeTypeInfo="true"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				DebugInformationFormat="3"
-				DisableSpecificWarnings="4819"
+				DebugInformationFormat="4"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -66,11 +60,18 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile=".\lib\AddinCpp-vc90-mt-gd-1_7_0.lib"
+				Name="VCLinkerTool"
+				OutputFile=".\bin\AddinCSharp-vc90-mt-gd-1_7_0.dll"
+				LinkIncremental="2"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -80,6 +81,9 @@
 			/>
 			<Tool
 				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
@@ -89,10 +93,9 @@
 			Name="Release|Win32"
 			OutputDirectory=".\build\vc90\$(PlatformName)\$(ConfigurationName)"
 			IntermediateDirectory=".\build\vc90\$(PlatformName)\$(ConfigurationName)"
-			ConfigurationType="4"
-			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
+			ConfigurationType="2"
+			CharacterSet="1"
+			WholeProgramOptimization="1"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -111,21 +114,15 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/MP"
 				Optimization="2"
-				EnableIntrinsicFunctions="false"
-				WholeProgramOptimization="false"
+				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="..,..\..\..\quantlib\reposit,..\..\..\quantlib\QuantLib"
-				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;"
-				MinimalRebuild="false"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;ADDINCSHARP_EXPORTS"
 				RuntimeLibrary="2"
-				DisableLanguageExtensions="false"
-				ForceConformanceInForLoopScope="true"
-				RuntimeTypeInfo="true"
+				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				DebugInformationFormat="3"
-				DisableSpecificWarnings="4819"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -137,11 +134,20 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile=".\lib\AddinCpp-vc90-mt-1_7_0.lib"
+				Name="VCLinkerTool"
+				OutputFile=".\bin\AddinCSharp-vc90-mt-1_7_0.dll"
+				LinkIncremental="1"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -151,6 +157,9 @@
 			/>
 			<Tool
 				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
@@ -160,10 +169,9 @@
 			Name="Release (static runtime)|Win32"
 			OutputDirectory=".\build\vc90\$(PlatformName)\$(ConfigurationName)"
 			IntermediateDirectory=".\build\vc90\$(PlatformName)\$(ConfigurationName)"
-			ConfigurationType="4"
-			UseOfMFC="0"
-			ATLMinimizesCRunTimeLibraryUsage="false"
-			CharacterSet="2"
+			ConfigurationType="2"
+			CharacterSet="1"
+			WholeProgramOptimization="1"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -182,21 +190,15 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/MP"
 				Optimization="2"
-				EnableIntrinsicFunctions="false"
-				WholeProgramOptimization="false"
+				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="..,..\..\..\quantlib\reposit,..\..\..\quantlib\QuantLib"
-				PreprocessorDefinitions="NDEBUG;WIN32;_LIB;_SCL_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;"
-				MinimalRebuild="false"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;ADDINCSHARP_EXPORTS"
 				RuntimeLibrary="0"
-				DisableLanguageExtensions="false"
-				ForceConformanceInForLoopScope="true"
-				RuntimeTypeInfo="true"
+				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				DebugInformationFormat="3"
-				DisableSpecificWarnings="4819"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -208,11 +210,20 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLibrarianTool"
-				OutputFile=".\lib\AddinCpp-vc90-mt-s-1_7_0.lib"
+				Name="VCLinkerTool"
+				OutputFile=".\bin\AddinCSharp-vc90-mt-s-1_7_0.dll"
+				LinkIncremental="1"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -224,6 +235,9 @@
 				Name="VCFxCopTool"
 			/>
 			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
@@ -231,108 +245,8 @@
 	<References>
 	</References>
 	<Files>
-		<Filter
-			Name="conversions"
-			>
-			<File
-				RelativePath=".\conversions\convert2.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\conversions\convert2.hpp"
-				>
-			</File>
-		</Filter>
-		<File
-			RelativePath=".\add_all.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_exercise.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_exercise.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_instruments.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_instruments.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_payoffs.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_payoffs.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_pricingengines.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_pricingengines.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_processes.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_processes.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_quote.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_quote.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_settings.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_settings.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_termstructures.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_termstructures.hpp"
-			>
-		</File>
 		<File
 			RelativePath=".\add_utilities.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_utilities.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_volatilities.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\add_volatilities.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\init.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\init.hpp"
 			>
 		</File>
 	</Files>

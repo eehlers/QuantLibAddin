@@ -32,21 +32,27 @@ namespace QuantLib {
     
     struct IMM {
         %loop(date, immCode);
-        static Date date(const std::string& immCode,
-                         const Date& referenceDate);
+        static Date date(
+            const std::string& immCode,
+            const Date& referenceDate);
                          
         %loop(code, immDate);
         static std::string code(const Date& immDate);
         
-        static std::string nextCode(const Date& d,
-                                    bool mainCycle);
+        static std::string nextCode(
+            const Date& d,
+            bool mainCycle);
     };
     
     struct ECB {
-        static Date date(const std::string& ecbCode,
-                         const Date& referenceDate);
+        static Date date(
+            const std::string& ecbCode,
+            const Date& referenceDate);
+            
         static std::string code(const Date& ecbDate);
+        
         static Date nextDate(const Date& d);
+        
         static std::string nextCode(const Date& d);
     };
 }

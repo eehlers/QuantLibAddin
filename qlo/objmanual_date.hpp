@@ -11,6 +11,7 @@
 #include <ql/time/frequency.hpp>
 #include <ql/time/imm.hpp>
 #include <ql/time/ecb.hpp>
+#include <ql/time/asx.hpp>
 
 namespace QuantLib {
     class Period;

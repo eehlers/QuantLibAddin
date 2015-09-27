@@ -10,7 +10,17 @@ namespace QuantLibAddin {
 
     std::vector<std::string> IMMNextCodes(
         const QuantLib::Date& RefDate,
-        const std::vector<bool>& MainCycle);
+        const std::vector<bool>& mainCycle);
+        
+    std::vector<QuantLib::Date> ASXNextDates(
+        const QuantLib::Date& d,
+        const std::vector<bool>& mainCycle);
+
+    std::vector<std::string> ASXNextCodes(
+        const QuantLib::Date& d,
+        const std::vector<bool>& mainCycle);
+        
+    std::vector<QuantLib::Date> ECBKnownDates();        
 }
 
 namespace QuantLib {

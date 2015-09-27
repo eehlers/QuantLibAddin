@@ -1,7 +1,6 @@
 
 #include <qlo/objmanual_date.hpp>
 #include <ql/settings.hpp>
-#include <ql/time/asx.hpp>
 
 QuantLib::Period QuantLibAddin::periodFromFrequency(QuantLib::Frequency f) {
     return QuantLib::Period(f);

@@ -172,8 +172,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release (static runtime)|Win32"
-			OutputDirectory="$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory=".\build\vc90\$(PlatformName)\$(ConfigurationName)"
+			IntermediateDirectory=".\build\vc90\$(PlatformName)\$(ConfigurationName)"
 			ConfigurationType="1"
 			UseOfMFC="0"
 			ATLMinimizesCRunTimeLibraryUsage="false"

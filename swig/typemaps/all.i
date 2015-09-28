@@ -4,6 +4,7 @@
 %include valueobjects.i
 %include serialization.i
 %include addincpp.i
+%include addincsharp.i
 %include addinexcel.i
 %include addincountify.i
 

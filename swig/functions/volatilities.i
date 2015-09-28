@@ -13,7 +13,8 @@ namespace QuantLib {
 
     class BlackConstantVol : public BlackVolTermStructure {
       public:
-        %generate(cpp, BlackConstantVol);
+        %generate(c++, BlackConstantVol);
+        %generate(c#, BlackConstantVol);
         %generate(countify, BlackConstantVol);
         BlackConstantVol(const Date& referenceDate,
                          const Calendar& calendar,

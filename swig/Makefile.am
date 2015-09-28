@@ -46,7 +46,7 @@ SWIG_CMD = $(SWIG_DIR)/preinst-swig
 
 SWIG_ARGS = -c++ -reposit -prefix ql
 if BUILD_CPP
-    SWIG_ARGS += -gencpp
+    SWIG_ARGS += -genc++
 endif
 #if BUILD_CALC
 #    SWIG_ARGS += -gencalc

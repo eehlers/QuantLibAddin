@@ -11,7 +11,8 @@ namespace QuantLib {
 
     class EuropeanExercise : public Exercise {
       public:
-        %generate(cpp, EuropeanExercise);
+        %generate(c++, EuropeanExercise);
+        %generate(c#, EuropeanExercise);
         %generate(countify, EuropeanExercise);
         EuropeanExercise(const Date& date);
     };

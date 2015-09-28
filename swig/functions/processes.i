@@ -21,7 +21,8 @@ namespace QuantLib {
 
     class BlackScholesMertonProcess : public GeneralizedBlackScholesProcess {
       public:
-        %generate(cpp, BlackScholesMertonProcess);
+        %generate(c++, BlackScholesMertonProcess);
+        %generate(c#, BlackScholesMertonProcess);
         %generate(countify, BlackScholesMertonProcess);
         BlackScholesMertonProcess(
             const Handle<Quote>& x0,

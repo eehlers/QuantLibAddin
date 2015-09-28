@@ -1,6 +1,7 @@
 
 SWIG_ROOT_DIR=..\..\..\swig
 SWIG_EXE=$(SWIG_ROOT_DIR)\Release\swig.exe
+SWIG_SWG=$(SWIG_ROOT_DIR)\Lib\reposit\reposit.swg
 SWIG_INC=$(SWIG_ROOT_DIR)\Lib
 REPOSIT_INC=$(SWIG_ROOT_DIR)\Lib\reposit
 BUILDFLAG=$(BUILD_DIR)\buildflag
@@ -11,15 +12,14 @@ SWIG_FILE=quantlib.i
 INTERFACE_FILES=functions\*.i typemaps\*.i
 
 # This variable is set in the VC project properties.
-#SWIG_ARGS=-genxll
-#SWIG_ARGS=-gencpp
+#SWIG_ARGS=-genxll -gencpp -gencsh
 
 ALL : $(BUILDFLAG)
 
 $(BUILD_DIR) :
     if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)
 
-$(BUILDFLAG) : $(SWIG_EXE) $(BUILD_DIR) $(SWIG_FILE) $(INTERFACE_FILES)
+$(BUILDFLAG) : $(SWIG_EXE) $(SWIG_SWG) $(BUILD_DIR) $(SWIG_FILE) $(INTERFACE_FILES)
 	$(SWIG_EXE) -I$(SWIG_INC) -I$(REPOSIT_INC) -DSWIG_MSVC -c++ -reposit $(SWIG_ARGS) -prefix ql $(SWIG_FILE)
 	echo flagged > $@
 

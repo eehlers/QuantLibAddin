@@ -11,7 +11,8 @@ namespace QuantLib {
 
     class PlainVanillaPayoff : public StrikedTypePayoff {
       public:
-        %generate(cpp, PlainVanillaPayoff);
+        %generate(c++, PlainVanillaPayoff);
+        %generate(c#, PlainVanillaPayoff);
         %generate(countify, PlainVanillaPayoff);
         PlainVanillaPayoff(Option::Type optionType,
                            Real strike);

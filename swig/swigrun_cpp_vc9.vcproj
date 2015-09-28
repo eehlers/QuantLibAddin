@@ -23,8 +23,8 @@
 			>
 			<Tool
 				Name="VCNMakeTool"
-				BuildCommandLine="NMAKE /f Makefile.vc SWIG_ARGS=-gencpp"
-				ReBuildCommandLine="NMAKE /f Makefile.vc /a SWIG_ARGS=-gencpp"
+				BuildCommandLine="NMAKE /f Makefile.vc SWIG_ARGS=&quot;-genc++ -genc# -gencfy&quot;"
+				ReBuildCommandLine="NMAKE /f Makefile.vc /a SWIG_ARGS=&quot;-genc++ -genc# -gencfy&quot;"
 				CleanCommandLine="NMAKE /f Makefile.vc clean"
 				Output=""
 				PreprocessorDefinitions="WIN32;_DEBUG"
@@ -66,10 +66,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\functions\date2.i"
-					>
-				</File>
-				<File
 					RelativePath=".\functions\daycounters.i"
 					>
 				</File>
@@ -86,10 +82,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\functions\indexes2.i"
-					>
-				</File>
-				<File
 					RelativePath=".\functions\instruments.i"
 					>
 				</File>
@@ -99,6 +91,14 @@
 				</File>
 				<File
 					RelativePath=".\functions\leg.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\math.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\models.i"
 					>
 				</File>
 				<File
@@ -146,6 +146,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\vanillaswaps.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\volatilities.i"
 					>
 				</File>
@@ -154,7 +158,19 @@
 				Name="typemaps"
 				>
 				<File
-					RelativePath=".\typemaps\addinobjects.i"
+					RelativePath=".\typemaps\addincountify.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\addincpp.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\addincsharp.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\addinexcel.i"
 					>
 				</File>
 				<File
@@ -162,15 +178,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\typemaps\cppaddin.i"
-					>
-				</File>
-				<File
-					RelativePath=".\typemaps\exceladdin.i"
-					>
-				</File>
-				<File
 					RelativePath=".\typemaps\apply.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\libraryobjects.i"
 					>
 				</File>
 				<File
@@ -178,7 +190,19 @@
 					>
 				</File>
 				<File
+					RelativePath=".\typemaps\shared.i"
+					>
+				</File>
+				<File
 					RelativePath=".\typemaps\valueobjects.i"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="typedefs"
+				>
+				<File
+					RelativePath=".\typedefs\all.i"
 					>
 				</File>
 			</Filter>

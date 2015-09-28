@@ -25,7 +25,8 @@ namespace QuantLib {
 
     class AnalyticEuropeanEngine : public PricingEngine {
       public:
-        %generate(cpp, AnalyticEuropeanEngine);
+        %generate(c++, AnalyticEuropeanEngine);
+        %generate(c#, AnalyticEuropeanEngine);
         %generate(countify, AnalyticEuropeanEngine);
         AnalyticEuropeanEngine(
             const boost::shared_ptr<GeneralizedBlackScholesProcess>& process);

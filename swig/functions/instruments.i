@@ -24,18 +24,21 @@ namespace QuantLib {
 
     class Instrument {
       public:
-        %generate(cpp, setPricingEngine);
+        %generate(c++, setPricingEngine);
+        %generate(c#, setPricingEngine);
         %generate(countify, setPricingEngine);
         void setPricingEngine(const boost::shared_ptr<PricingEngine>& engine);
 
-        %generate(cpp, NPV);
+        %generate(c++, NPV);
+        %generate(c#, NPV);
         %generate(countify, NPV);
         Real NPV();
     };
 
     class VanillaOption : public Instrument {
       public:
-        %generate(cpp, VanillaOption);
+        %generate(c++, VanillaOption);
+        %generate(c#, VanillaOption);
         %generate(countify, VanillaOption);
         VanillaOption(const boost::shared_ptr<StrikedTypePayoff>& payoff,
                       const boost::shared_ptr<Exercise>& exercise);

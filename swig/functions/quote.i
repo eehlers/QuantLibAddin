@@ -25,7 +25,8 @@ namespace QuantLibAddin {
 
     class SimpleQuote : public Quote {
       public:
-        %generate(cpp, SimpleQuote);
+        %generate(c++, SimpleQuote);
+        %generate(c#, SimpleQuote);
         %generate(countify, SimpleQuote);
         // NB: The parameter below must be called "Value" because there
         // is code which updates a property with that name in the value object.

@@ -11,8 +11,8 @@
 %}
 
 %insert(processes_addin_cpp) %{
-#include "qlo/objmanual_quote.hpp"
-#include "qlo/obj_volatilities.hpp"
+#include <qlo/objmanual_quote.hpp>
+#include <qlo/obj_volatilities.hpp>
 %}
 
 namespace QuantLib {

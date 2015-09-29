@@ -6,7 +6,6 @@
 #include <qlo/objmanual_piecewiseyieldcurve.hpp>
 %}
 
-
 namespace QuantLib {
 
     class BlackVolTermStructure : public TermStructure {};

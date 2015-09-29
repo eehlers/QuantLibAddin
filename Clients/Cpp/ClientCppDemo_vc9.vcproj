@@ -296,7 +296,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\ClientCppDemo-vc90-mt-gd-s.exe"
+				OutputFile=".\bin\ClientCppDemo-vc90-mt-sgd.exe"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="..\..\..\reposit\lib,..\..\..\QuantLib\lib"
 				GenerateDebugInformation="true"

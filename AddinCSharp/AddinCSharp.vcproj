@@ -286,7 +286,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\AddinCSharp-vc90-mt-gd-s-1_7_0.dll"
+				OutputFile=".\bin\AddinCSharp-vc90-mt-sgd-1_7_0.dll"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="2"

@@ -279,7 +279,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile=".\lib\AddinCpp-vc90-mt-gd-s-1_7_0.lib"
+				OutputFile=".\lib\AddinCpp-vc90-mt-sgd-1_7_0.lib"
 			/>
 			<Tool
 				Name="VCALinkTool"

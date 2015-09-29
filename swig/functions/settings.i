@@ -2,6 +2,10 @@
 %group(settings);
 %override;
 
+%insert(settings_addin_cpp) %{
+#include <qlo/objmanual_settings.hpp>
+%}
+
 namespace QuantLibAddin {
 
     %generate(c++, settingsEvaluationDate);

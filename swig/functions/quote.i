@@ -13,6 +13,10 @@
 #include <qlo/objmanual_indexes.hpp>
 %}
 
+%insert(quote_addin_cpp) %{
+#include <qlo/objmanual_indexes.hpp>
+%}
+
 namespace QuantLibAddin {
 
     bool close(double x, double y);

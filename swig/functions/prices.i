@@ -5,6 +5,10 @@
 #include <ql/prices.hpp>
 %}
 
+%insert(prices_addin_cpp) %{
+#include <ql/prices.hpp>
+%}
+
 namespace QuantLib {
 
     double midEquivalent(const double bid,

@@ -12,6 +12,14 @@
 #include <qlo/obj_termstructures.hpp>
 %}
 
+%insert(models_addin_cpp) %{
+#include <qlo/obj_pricingengines.hpp>
+#include <qlo/objmanual_quote.hpp>
+#include <qlo/objmanual_indexes.hpp>
+#include <qlo/obj_termstructures.hpp>
+#include <qlo/obj_math.hpp>
+%}
+
 namespace QuantLib {
 
     class CalibrationHelper {

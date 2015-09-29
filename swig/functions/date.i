@@ -2,6 +2,10 @@
 %group(date);
 %override;
 
+%insert(date_addin_cpp) %{
+#include <qlo/objmanual_date.hpp>
+%}
+
 namespace QuantLibAddin {
 
     std::vector<QuantLib::Date> IMMNextDates(

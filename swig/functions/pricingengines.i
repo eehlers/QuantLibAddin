@@ -9,11 +9,13 @@
 #include <ql/pricingengines/swaption/g2swaptionengine.hpp>
 %}
 
-%insert(pricingengines_cppaddin_cpp) %{
-#include "qlo/obj_processes.hpp"
+%insert(pricingengines_serialization_cpp) %{
+#include <qlo/obj_processes.hpp>
+#include <qlo/obj_termstructures.hpp>
+#include <qlo/obj_models.hpp>
 %}
 
-%insert(pricingengines_serialization_cpp) %{
+%insert(pricingengines_addin_cpp) %{
 #include <qlo/obj_processes.hpp>
 #include <qlo/obj_termstructures.hpp>
 #include <qlo/obj_models.hpp>

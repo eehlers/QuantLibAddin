@@ -2,6 +2,10 @@
 %group(utilities);
 %override;
 
+%insert(utilities_addin_cpp) %{
+#include <qlo/objmanual_utilities.hpp>
+%}
+
 namespace QuantLibAddin {
 
     %generate(c++, version);

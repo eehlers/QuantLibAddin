@@ -7,6 +7,12 @@
 #include <qlo/obj_termstructures.hpp>
 %}
 
+%insert(ratehelpers_addin_cpp) %{
+#include <qlo/objmanual_quote.hpp>
+#include <qlo/objmanual_indexes.hpp>
+#include <qlo/obj_termstructures.hpp>
+%}
+
 namespace QuantLib {
 
     class RateHelper {

@@ -8,16 +8,18 @@
 #include <ql/instruments/swaption.hpp>
 %}
 
-%insert(instruments_cppaddin_cpp) %{
-#include "qlo/obj_pricingengines.hpp"
-#include "qlo/obj_payoffs.hpp"
-#include "qlo/obj_exercise.hpp"
-%}
-
 %insert(instruments_serialization_cpp) %{
 #include <qlo/obj_payoffs.hpp>
-#include "qlo/obj_exercise.hpp"
-#include "qlo/obj_vanillaswaps.hpp"
+#include <qlo/obj_exercise.hpp>
+#include <qlo/obj_vanillaswaps.hpp>
+%}
+
+%insert(instruments_addin_cpp) %{
+#include <qlo/obj_pricingengines.hpp>
+#include <qlo/obj_payoffs.hpp>
+#include <qlo/obj_exercise.hpp>
+#include <qlo/objmanual_leg.hpp>
+#include <qlo/obj_vanillaswaps.hpp>
 %}
 
 namespace QuantLib {

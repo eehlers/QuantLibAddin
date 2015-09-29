@@ -1106,10 +1106,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\qlo\obj_prices.hpp"
-			>
-		</File>
-		<File
 			RelativePath=".\qlo\obj_pricingengines.hpp"
 			>
 		</File>

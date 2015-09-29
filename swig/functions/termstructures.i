@@ -5,6 +5,10 @@
 #include <ql/termstructures/yield/flatforward.hpp>
 %}
 
+%insert(termstructures_addin_cpp) %{
+#include <qlo/objmanual_handles.hpp>
+%}
+
 namespace QuantLib {
 
     class Extrapolator {};

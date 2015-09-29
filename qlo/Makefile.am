@@ -32,7 +32,6 @@ this_include_HEADERS = \
     obj_math.hpp \
     obj_models.hpp \
     obj_payoffs.hpp \
-    obj_prices.hpp \
     obj_pricingengines.hpp \
     obj_processes.hpp \
     obj_schedule.hpp \

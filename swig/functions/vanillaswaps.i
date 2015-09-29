@@ -6,11 +6,6 @@
 #include <qlo/obj_instruments.hpp>
 %}
 
-%insert(vanillaswaps_serialization_cpp) %{
-#include <qlo/obj_schedule.hpp>
-#include <qlo/objmanual_indexes.hpp>
-%}
-
 %insert(vanillaswaps_addin_cpp) %{
 #include <qlo/obj_schedule.hpp>
 #include <qlo/objmanual_indexes.hpp>

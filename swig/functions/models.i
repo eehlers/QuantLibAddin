@@ -7,11 +7,6 @@
 #include <ql/models/shortrate/twofactormodels/g2.hpp>
 %}
 
-%insert(models_serialization_cpp) %{
-#include <qlo/objmanual_indexes.hpp>
-#include <qlo/obj_termstructures.hpp>
-%}
-
 %insert(models_addin_cpp) %{
 #include <qlo/obj_pricingengines.hpp>
 #include <qlo/objmanual_quote.hpp>

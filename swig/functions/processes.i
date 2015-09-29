@@ -5,11 +5,6 @@
 #include <ql/processes/blackscholesprocess.hpp>
 %}
 
-%insert(processes_serialization_cpp) %{
-#include <qlo/obj_termstructures.hpp>
-#include <qlo/obj_volatilities.hpp>
-%}
-
 %insert(processes_addin_cpp) %{
 #include <qlo/objmanual_quote.hpp>
 #include <qlo/obj_volatilities.hpp>

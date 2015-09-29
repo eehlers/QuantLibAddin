@@ -2,10 +2,6 @@
 %group(quote);
 %override;
 
-%insert(quote_serialization_cpp) %{
-#include <qlo/objmanual_indexes.hpp>
-%}
-
 %insert(quote_addin_cpp) %{
 #include <qlo/objmanual_indexes.hpp>
 %}

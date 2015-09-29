@@ -5,10 +5,6 @@
 #include <ql/time/daycounter.hpp>
 %}
 
-%insert(daycounters_addin_cpp) %{
-#include <qlo/obj_daycounters.hpp>
-%}
-
 namespace QuantLib {
 
     class DayCounter {

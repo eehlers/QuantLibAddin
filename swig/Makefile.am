@@ -5,7 +5,6 @@ SWIG_FILES := \
     functions/calendars.i \
     functions/couponvectors.i \
     functions/date.i \
-    functions/date2.i \
     functions/daycounters.i \
     functions/exercise.i \
     functions/handles.i \

@@ -11,6 +11,7 @@
 %typemap(rp_tm_xll_parm) QuantLib::Date "OPER*";
 %typemap(rp_tm_xll_parm) QuantLib::Date const & "OPER*";
 %typemap(rp_tm_xll_parm) QuantLib::Period "char*";
+%typemap(rp_tm_xll_parm) boost::shared_ptr< QuantLibAddin::RateHelper > const & "char*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::YieldTermStructure> const & "OPER*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::Quote> const & "char*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "char*";
@@ -28,19 +29,29 @@
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Date %{
-        $rp_typedef_base $1_name_cnv = reposit::convert2<$rp_typedef_base>(
-            reposit::ConvertOper(*$1_name), "$1_name", $rp_typedef_base());
+        QuantLib::Date $1_name_cnv = reposit::convert2<QuantLib::Date>(
+            reposit::ConvertOper(*$1_name), "$1_name", QuantLib::Date());
 
         reposit::property_t $1_name_cnv2 = reposit::convert2<reposit::property_t>(
             reposit::ConvertOper(*$1_name));
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Date const & %{
-        $rp_typedef_base $1_name_cnv = reposit::convert2<$rp_typedef_base>(
-            reposit::ConvertOper(*$1_name), "$1_name", $rp_typedef_base());
+        QuantLib::Date $1_name_cnv = reposit::convert2<QuantLib::Date>(
+            reposit::ConvertOper(*$1_name), "$1_name", QuantLib::Date());
 
         reposit::property_t $1_name_cnv2 = reposit::convert2<reposit::property_t>(
             reposit::ConvertOper(*$1_name));
+%}
+
+%typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Date> %{
+        std::vector< QuantLib::Date > $1_name_vec =
+            reposit::operToVector< QuantLib::Date >(*$1_name, "$1_name");
+%}
+
+%typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Period> %{
+        std::vector< QuantLib::Period > $1_name_vec =
+            reposit::operToVector< QuantLib::Period >(*$1_name, "$1_name");
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Schedule const & %{
@@ -49,8 +60,8 @@
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Calendar const & %{
-        $rp_typedef_base $1_name_enm =
-            reposit::Create<$rp_typedef_base>()($1_name);
+        QuantLib::Calendar $1_name_enm =
+            reposit::Create<QuantLib::Calendar>()($1_name);
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::OptimizationMethod & %{
@@ -159,10 +170,11 @@
 %typemap(rp_tm_xll_argf) QuantLib::Period "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Period const & "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Schedule const & "*$1_name_cnv";
-%typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLib::CalibrationHelper> > const & "$1_name_vec2";
 %typemap(rp_tm_xll_argf) QuantLib::OptimizationMethod& "*$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::EndCriteria const & "*$1_name_cnv";
+%typemap(rp_tm_xll_argf) boost::shared_ptr<QuantLibAddin::RateHelper> const & "$1_name_obj";
 %typemap(rp_tm_xll_argf) ql_tp_handle "$1_name_handle";
+%typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLib::CalibrationHelper> > const & "$1_name_vec2";
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Date> const & "$1_name_vec2";
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Natural> const & "$1_name_vec2";
 %typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLib::RateHelper> > const & "$1_name_vec2";
@@ -246,7 +258,7 @@
 //%typemap(rp_tm_xll_code) QuantLib::Date "N";
 %typemap(rp_tm_xll_code) QuantLib::Date "P";
 %typemap(rp_tm_xll_code) QuantLib::Date const & "P";
+%typemap(rp_tm_xll_code) boost::shared_ptr<QuantLibAddin::RateHelper> const & "C";
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::YieldTermStructure> const & "P";
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::Quote> const & "C";
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "C";
-

@@ -21,6 +21,12 @@
     valueObject->processPrecedentID($1_name_str);
 %}
 
+%typemap(rp_tm_scr_cnvt) QuantLib::Date const & %{
+    QuantLib::Date $1_name =
+        reposit::convert2<QuantLib::Date>(
+            valueObject->getProperty("$1_name"));
+%}
+
 %typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
     reposit::property_t $1_name_prop =
         valueObject->getProperty("$1_name");

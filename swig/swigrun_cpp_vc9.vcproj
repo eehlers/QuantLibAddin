@@ -23,8 +23,8 @@
 			>
 			<Tool
 				Name="VCNMakeTool"
-				BuildCommandLine="NMAKE /f Makefile.vc SWIG_ARGS=&quot;-genc++ -genc# -gencfy&quot;"
-				ReBuildCommandLine="NMAKE /f Makefile.vc /a SWIG_ARGS=&quot;-genc++ -genc# -gencfy&quot;"
+				BuildCommandLine="NMAKE /f Makefile.vc SWIG_ARGS=&quot;-genc++ -genc# -gencfy&quot; SWIG_BUILD_DIR=&quot;vc90&quot;"
+				ReBuildCommandLine="NMAKE /f Makefile.vc /a SWIG_ARGS=&quot;-genc++ -genc# -gencfy&quot; SWIG_BUILD_DIR=&quot;vc90&quot;"
 				CleanCommandLine="NMAKE /f Makefile.vc clean"
 				Output=""
 				PreprocessorDefinitions="WIN32;_DEBUG"

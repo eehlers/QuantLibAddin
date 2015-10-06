@@ -7,6 +7,7 @@
 %include addincsharp.i
 %include addinexcel.i
 %include addincountify.i
+%include handles.i
 
 // This one must be last.
 %include apply.i

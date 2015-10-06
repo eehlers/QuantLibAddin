@@ -178,6 +178,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\typemaps\handles.i"
+					>
+				</File>
+				<File
 					RelativePath=".\typemaps\libraryobjects.i"
 					>
 				</File>

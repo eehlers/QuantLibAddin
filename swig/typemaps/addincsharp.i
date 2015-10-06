@@ -4,13 +4,11 @@
 //*****************************************************************************
 
 %typemap(rp_tm_csh_parm) QuantLib::Date const & "long";
-%typemap(rp_tm_csh_parm) ql_tp_handle "const char *";
 
 // rp_tm_csh_args - arguments to the underlying Library function (F/C/M)
 %typemap(rp_tm_csh_args) QuantLib::Date const & "$1_name_cnv";
 
 %typemap(rp_tm_csh_clcp) QuantLib::Date const & "int";
-%typemap(rp_tm_csh_clcp) ql_tp_handle "StringBuilder";
 
 // rp_tm_csh_cnvt - Convert inputs from C# Addin api types into underlying Library types (F/C/M)
 %typemap(rp_tm_csh_cnvt) QuantLib::Date const & %{
@@ -38,25 +36,5 @@
         RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::AnalyticEuropeanEngine, QuantLib::PricingEngine)
 %}
 
-// Handles - same as RP_GET_REFERENCE above - for now a separate typemap for each type.
-%typemap(rp_tm_csh_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
-        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::SimpleQuote, QuantLib::Quote)
-        QuantLib::Handle<QuantLib::Quote> $1_name_handle =
-            QuantLib::Handle<QuantLib::Quote>($1_name_get);
-%} 
-
-%typemap(rp_tm_csh_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
-        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
-        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
-            QuantLib::Handle<QuantLib::YieldTermStructure>($1_name_get);
-%} 
-
-%typemap(rp_tm_csh_cnvt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & %{
-        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
-        QuantLib::Handle<QuantLib::BlackVolTermStructure> $1_name_handle =
-            QuantLib::Handle<QuantLib::BlackVolTermStructure>($1_name_get);
-%} 
-
 // rp_tm_csh_args - arguments to the underlying Library function (F/C/M)
 %typemap(rp_tm_csh_args) QuantLib::Date const & "$1_name_cnv";
-%typemap(rp_tm_csh_args) ql_tp_handle "$1_name_handle";

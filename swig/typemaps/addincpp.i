@@ -7,7 +7,6 @@
 
 // rp_tm_cpp_parm - Function input parameter (F/C/M)
 %typemap(rp_tm_cpp_parm) QuantLib::Date const & "const reposit::property_t&";
-%typemap(rp_tm_cpp_parm) ql_tp_handle "const std::string &";
 
 // rp_tm_cpp_cnvt - Convert inputs from C++ Addin api types into underlying Library types (F/C/M)
 %typemap(rp_tm_cpp_cnvt) QuantLib::Date const & %{
@@ -35,25 +34,6 @@
     RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::AnalyticEuropeanEngine, QuantLib::PricingEngine)
 %}
 
-// Handles - same as RP_GET_REFERENCE above - for now a separate typemap for each type.
-%typemap(rp_tm_cpp_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
-    RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::SimpleQuote, QuantLib::Quote)
-    QuantLib::Handle<QuantLib::Quote> $1_name_handle =
-        QuantLib::Handle<QuantLib::Quote>($1_name_get);
-%} 
-
-%typemap(rp_tm_cpp_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
-    RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
-    QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
-        QuantLib::Handle<QuantLib::YieldTermStructure>($1_name_get);
-%} 
-
-%typemap(rp_tm_cpp_cnvt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & %{
-    RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
-    QuantLib::Handle<QuantLib::BlackVolTermStructure> $1_name_handle =
-        QuantLib::Handle<QuantLib::BlackVolTermStructure>($1_name_get);
-%} 
-
 // rp_tm_cpp_rtdc - declare variable to capture return value of called function
 %typemap(rp_tm_cpp_rtdc) QuantLib::Date "QuantLib::Date returnValue =";
 
@@ -62,7 +42,6 @@
 
 // rp_tm_cpp_args - arguments to the underlying Library function (F/C/M)
 %typemap(rp_tm_cpp_args) QuantLib::Date const & "$1_name_cnv";
-%typemap(rp_tm_cpp_args) ql_tp_handle "$1_name_handle";
 
 // rp_tm_cpp_rtmb - return type of a member function (M)
 %typemap(rp_tm_cpp_rtmb) QuantLib::Date "long";

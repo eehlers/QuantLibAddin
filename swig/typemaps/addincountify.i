@@ -21,24 +21,6 @@
             reposit::convert2<QuantLib::Date, reposit::property_t>($1_name);
 %}
 
-%typemap(rp_tm_cfy_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
-        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::SimpleQuote, QuantLib::Quote)
-        QuantLib::Handle<QuantLib::Quote> $1_name_handle =
-            QuantLib::Handle<QuantLib::Quote>($1_name_get);
-%}
-
-%typemap(rp_tm_cfy_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
-        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
-        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
-            QuantLib::Handle<QuantLib::YieldTermStructure>($1_name_get);
-%}
-
-%typemap(rp_tm_cfy_cnvt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & %{
-        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
-        QuantLib::Handle<QuantLib::BlackVolTermStructure> $1_name_handle =
-            QuantLib::Handle<QuantLib::BlackVolTermStructure>($1_name_get);
-%}
-
 // rp_tm_cfy_rtdf - declare variable to capture return value of Library function (FM)
 
 // rp_tm_cfy_rtdm - declare variable to capture return value of Library function (FM)
@@ -46,9 +28,6 @@
 
 // rp_tm_cfy_args - arguments to pass to underlying Library function
 %typemap(rp_tm_cfy_args) QuantLib::Date const & "$1_name_cnv";
-%typemap(rp_tm_cfy_args) const QuantLib::Handle< QuantLib::Quote >& "$1_name_handle";
-%typemap(rp_tm_cfy_args) const QuantLib::Handle<QuantLib::YieldTermStructure>& "$1_name_handle";
-%typemap(rp_tm_cfy_args) const QuantLib::Handle<QuantLib::BlackVolTermStructure>& "$1_name_handle";
 
 // rp_tm_cfy_rtsf - return statement (F)
 

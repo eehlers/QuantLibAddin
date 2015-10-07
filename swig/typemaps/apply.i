@@ -1,11 +1,13 @@
 
-// Some types that require overrides within QuantLib, tell reposit to treat them like strings.
-%apply rp_tp_string { QuantLib::Period const & };
-%apply rp_tp_string { QuantLib::Schedule const & };
+// These are types which require specific typemaps to be defined.  Tell the
+// reposit SWIG module to treat these types as strings, that causes some of the
+// necessary typemaps to be generated, the rest are defined in this project.
+%apply rp_tp_string { QuantLib::Period & };
+%apply rp_tp_string { QuantLib::Schedule & };
 %apply rp_tp_string { QuantLib::OptimizationMethod & };
-%apply rp_tp_string { QuantLib::EndCriteria const & };
+%apply rp_tp_string { QuantLib::EndCriteria & };
 
-// Enuerated types.
+// Enumerated types.
 ENUMERATED_TYPE(QuantLib::Currency)
 ENUMERATED_TYPE(QuantLib::Option::Type)
 ENUMERATED_TYPE(QuantLib::Frequency)
@@ -16,7 +18,7 @@ ENUMERATED_TYPE(QuantLib::DateGeneration::Rule)
 ENUMERATED_TYPE(QuantLibAddin::SwapIndex::FixingType)
 ENUMERATED_TYPE(QuantLib::VanillaSwap::Type)
 
-// Enuerated classes.
+// Enumerated classes.
 ENUMERATED_CLASS(QuantLib::Calendar)
 ENUMERATED_CLASS(QuantLib::DayCounter)
 

@@ -48,6 +48,7 @@ namespace QuantLib {
     
     class Swaption : public /*Option*/Instrument {
       public:
+        %generate(c#, Swaption);
         Swaption(const boost::shared_ptr<VanillaSwap>& swap,
                  const boost::shared_ptr<Exercise>& exercise/*,
                  Settlement::Type delivery = Settlement::Physical*/);

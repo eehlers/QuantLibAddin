@@ -15,6 +15,7 @@ namespace QuantLib {
 
     class VanillaSwap : public /*Swap*/Instrument {
       public:
+        %generate(c#, VanillaSwap);
         VanillaSwap(
             VanillaSwap::Type type,
             Real nominal,
@@ -27,6 +28,7 @@ namespace QuantLib {
             const DayCounter& floatingDayCount/*,
             boost::optional<BusinessDayConvention> paymentConvention =
                                                                  boost::none*/);
+        %generate(c#, fairRate);
         Rate fairRate();                                                                 
     };
 }

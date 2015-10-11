@@ -18,6 +18,6 @@ namespace QuantLibAddin {
     long ObjectCount();
 
     // temporary hack to extract the accrual start dates from the fixed leg of a swap
+    %generate(c#, temp1);
     std::vector<QuantLib::Date> temp1(const std::string &s);
 }
-

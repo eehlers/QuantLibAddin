@@ -9,6 +9,7 @@ namespace QuantLib {
 
     class Schedule {
       public:
+        %generate(c#, Schedule);
         Schedule(
                  Date effectiveDate,
                  const Date& terminationDate,

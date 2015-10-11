@@ -19,7 +19,9 @@ namespace QuantLib {
 
     class CalibrationHelper {
       public:
+        %generate(c#, setPricingEngine);
         void setPricingEngine(const boost::shared_ptr<PricingEngine>& engine);
+        %generate(c#, impliedVolatility);
         Volatility impliedVolatility(Real targetValue,
                              Real accuracy,
                              Size maxEvaluations,
@@ -29,6 +31,7 @@ namespace QuantLib {
 
     class SwaptionHelper : public CalibrationHelper {
       public:
+        %generate(c#, SwaptionHelper);
         SwaptionHelper(const Period& maturity,
                        const Period& length,
                        const Handle<Quote>& volatility,
@@ -42,11 +45,13 @@ namespace QuantLib {
                        const Real strike = Null<Real>(),
                        const Real nominal = 1.0,
                        const Real shift = 0.0*/);
-          Real modelValue();
+        %generate(c#, modelValue);
+        Real modelValue();
     };
 
     class CalibratedModel {
       public:
+        %generate(c#, calibrate);
         virtual void calibrate(
                 const std::vector<boost::shared_ptr<CalibrationHelper> >& x,
                 OptimizationMethod& method,
@@ -62,6 +67,7 @@ namespace QuantLib {
 
     class HullWhite : public /*Vasicek, public TermStructureConsistentModel*/OneFactorAffineModel {
       public:
+        %generate(c#, HullWhite);
         HullWhite(const Handle<YieldTermStructure>& termStructure/*,
                   Real a = 0.1, Real sigma = 0.01*/);
     };
@@ -70,6 +76,7 @@ namespace QuantLib {
                public AffineModel,
                public TermStructureConsistentModel*/ {    
       public:
+        %generate(c#, G2);
         %rename(G2Model) G2;
         G2(const Handle<YieldTermStructure>& termStructure/*,
            Real a = 0.1, Real sigma = 0.01, Real b = 0.1, Real eta = 0.01, Real rho = -0.75*/);

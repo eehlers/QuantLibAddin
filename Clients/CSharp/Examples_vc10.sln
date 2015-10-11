@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquityOption_vc10", "EquityOption\EquityOption_vc10.csproj", "{66FD3C18-46D1-455A-9B2E-E7A244956529}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BermudanSwaption_vc10", "BermudanSwaption\BermudanSwaption_vc10.csproj", "{64822483-B2B0-4EA2-8099-97508853B00C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -19,6 +21,14 @@ Global
 		{66FD3C18-46D1-455A-9B2E-E7A244956529}.Release|x64.Build.0 = Release|x64
 		{66FD3C18-46D1-455A-9B2E-E7A244956529}.Release|x86.ActiveCfg = Release|x86
 		{66FD3C18-46D1-455A-9B2E-E7A244956529}.Release|x86.Build.0 = Release|x86
+		{64822483-B2B0-4EA2-8099-97508853B00C}.Debug|x64.ActiveCfg = Debug|x64
+		{64822483-B2B0-4EA2-8099-97508853B00C}.Debug|x64.Build.0 = Debug|x64
+		{64822483-B2B0-4EA2-8099-97508853B00C}.Debug|x86.ActiveCfg = Debug|x86
+		{64822483-B2B0-4EA2-8099-97508853B00C}.Debug|x86.Build.0 = Debug|x86
+		{64822483-B2B0-4EA2-8099-97508853B00C}.Release|x64.ActiveCfg = Release|x64
+		{64822483-B2B0-4EA2-8099-97508853B00C}.Release|x64.Build.0 = Release|x64
+		{64822483-B2B0-4EA2-8099-97508853B00C}.Release|x86.ActiveCfg = Release|x86
+		{64822483-B2B0-4EA2-8099-97508853B00C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

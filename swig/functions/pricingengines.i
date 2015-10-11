@@ -30,6 +30,7 @@ namespace QuantLib {
 
     class DiscountingSwapEngine : public PricingEngine {
       public:
+        %generate(c#, DiscountingSwapEngine);
         DiscountingSwapEngine(
                const Handle<YieldTermStructure>& discountCurve,
                bool includeSettlementDateFlows,
@@ -39,6 +40,7 @@ namespace QuantLib {
     
     class JamshidianSwaptionEngine : public PricingEngine {
       public:
+        %generate(c#, JamshidianSwaptionEngine);
         JamshidianSwaptionEngine(
                          const boost::shared_ptr<OneFactorAffineModel>& model/*,
                          const Handle<YieldTermStructure>& termStructure =
@@ -47,6 +49,7 @@ namespace QuantLib {
     
     class TreeSwaptionEngine : public PricingEngine {
       public:
+        %generate(c#, TreeSwaptionEngine);
         TreeSwaptionEngine(const boost::shared_ptr<ShortRateModel>& x,
                            Size timeSteps/*,
                            const Handle<YieldTermStructure>& termStructure =
@@ -55,6 +58,7 @@ namespace QuantLib {
     
     class G2SwaptionEngine : public PricingEngine {
       public:
+        %generate(c#, G2SwaptionEngine);
         G2SwaptionEngine(const boost::shared_ptr<G2>& model,
                          Real range,
                          Size intervals);

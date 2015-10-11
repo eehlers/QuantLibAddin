@@ -19,6 +19,7 @@ namespace QuantLib {
 
     class BermudanExercise : public Exercise {
       public:
+        %generate(c#, BermudanExercise);
         BermudanExercise(const std::vector<Date>& dates/*,
                          bool payoffAtExpiry = false*/);
     };    

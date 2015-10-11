@@ -2,4 +2,5 @@
 cp ../../AddinCSharp/bin/AddinCSharp-vc90-mt-s-1_7_0.dll bin
 cp ../../AddinCSharp/bin/AddinCSharp-vc90-x64-mt-s-1_7_0.dll bin
 cp ../../AddinCSharp/Export.cs EquityOption
+cp ../../AddinCSharp/Export.cs BermudanSwaption
 

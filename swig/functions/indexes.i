@@ -52,6 +52,7 @@ namespace QuantLibAddin {
 
     class Euribor : public IborIndex {
         public:
+            %generate(c#, Euribor);
             Euribor(const QuantLib::Period& tenor,
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve);
     };
@@ -96,6 +97,7 @@ namespace QuantLib {
     class InterestRateIndex : public Index {
         public:
             Natural fixingDays();
+            %generate(c#, dayCounter);
             const DayCounter& dayCounter();
             Date valueDate(const Date& fixingDate);
             Period tenor();

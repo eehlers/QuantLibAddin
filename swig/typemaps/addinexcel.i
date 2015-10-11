@@ -190,6 +190,7 @@
         return &ret;
 %}
 
+//FIXME move this in to repost.swg / ENUMERATED_TYPE
 %typemap(rp_tm_xll_rtst) QuantLib::BusinessDayConvention %{
         std::ostringstream os;
         os << returnValue;
@@ -198,6 +199,7 @@
         return ret;
 %}
 
+//FIXME move this in to repost.swg / ENUMERATED_CLASS
 %typemap(rp_tm_xll_rtst) QuantLib::DayCounter const & %{
         std::ostringstream os;
         os << returnValue;

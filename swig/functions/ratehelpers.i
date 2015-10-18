@@ -14,6 +14,7 @@ namespace QuantLib {
       public:
         Date earliestDate();
         Date latestDate();
+        Real impliedQuote();
     };
 }
 

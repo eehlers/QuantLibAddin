@@ -264,3 +264,5 @@
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::YieldTermStructure> const & "P";
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::Quote> const & "C";
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "C";
+
+%typemap(rp_tm_xll_loop) QuantLib::Date const & "$1_name_cnv";

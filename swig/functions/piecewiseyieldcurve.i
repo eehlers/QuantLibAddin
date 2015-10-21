@@ -4,7 +4,7 @@
 
 namespace QuantLibAddin {
 
-    class PiecewiseYieldCurve /*: public YieldTermStructure*/ {
+    class PiecewiseYieldCurve : public YieldTermStructure {
       public:
         PiecewiseYieldCurve(
             QuantLib::Natural nDays,

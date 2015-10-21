@@ -11,7 +11,10 @@
 
 namespace QuantLib {
 
-    class Extrapolator {};
+    class Extrapolator {
+      public:
+        void enableExtrapolation(bool b);
+    };
 
     class TermStructure : public Extrapolator {
       public:

@@ -42,6 +42,7 @@ OBJECT_WRAPPER(QuantLibAddin::CalibrationHelper, QuantLib::CalibrationHelper)
 OBJECT_WRAPPER(QuantLibAddin::SwaptionHelper, QuantLib::SwaptionHelper)
 OBJECT_WRAPPER(QuantLibAddin::CalibratedModel, QuantLib::CalibratedModel)
 OBJECT_WRAPPER(QuantLibAddin::RateHelper, QuantLib::RateHelper)
+OBJECT_WRAPPER(QuantLibAddin::Extrapolator, QuantLib::Extrapolator)
 
 // QuantLib Handles.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)

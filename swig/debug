@@ -1,0 +1,4 @@
+
+export SWIG_LIB=/media/windows/linux/repos/reposit/swig/Lib
+gdb -ex=r --args /media/windows/linux/repos/reposit/swig/swig -c++ -reposit -backwardcompatible -prefix ql -genc++ -genxll quantlib.i
+

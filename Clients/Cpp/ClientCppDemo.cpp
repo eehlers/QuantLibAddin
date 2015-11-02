@@ -60,30 +60,33 @@ int main() {
                   << std::setw(widths[3]) << std::left << "American"
                   << std::endl;
 
-        reposit::property_t trigger;
-        QuantLibAddinCpp::qlEuropeanExercise(trigger, "europeanExercise", true, false, maturity);
+        reposit::property_t Trigger;
+        bool Overwrite = true;
+        bool Permanent = false;
+        QuantLibAddinCpp::qlEuropeanExercise("europeanExercise", maturity, Permanent, Trigger, Overwrite);
 
-        QuantLibAddinCpp::qlSimpleQuote(trigger, "underlying", true, false, underlying);
+        QuantLibAddinCpp::qlSimpleQuote("underlying", underlying, Permanent, Trigger, Overwrite);
 
         // bootstrap the yield/dividend/vol curves
-        QuantLibAddinCpp::qlFlatForward(trigger, "flatTermStructure", true, false, settlementDate, riskFreeRate, dayCounter);
-        QuantLibAddinCpp::qlFlatForward(trigger, "flatDividendTS", true, false, settlementDate, dividendYield, dayCounter);
-        QuantLibAddinCpp::qlBlackConstantVol(trigger, "flatVolTS", true, false, settlementDate, calendar, volatility, dayCounter);
-        QuantLibAddinCpp::qlBlackScholesMertonProcess(trigger, "bsmProcess", true, false, "underlying", "flatDividendTS", "flatTermStructure", "flatVolTS");
+        QuantLibAddinCpp::qlFlatForward("flatTermStructure", settlementDate, riskFreeRate, dayCounter, Permanent, Trigger, Overwrite);
+        QuantLibAddinCpp::qlFlatForward("flatDividendTS", settlementDate, dividendYield, dayCounter, Permanent, Trigger, Overwrite);
+        QuantLibAddinCpp::qlBlackConstantVol("flatVolTS", settlementDate, calendar, volatility, dayCounter, Permanent, Trigger, Overwrite);
+        QuantLibAddinCpp::qlBlackScholesMertonProcess("bsmProcess", "underlying", "flatDividendTS", "flatTermStructure", "flatVolTS",
+            Permanent, Trigger, Overwrite);
 
         // options
-        QuantLibAddinCpp::qlPlainVanillaPayoff(trigger, "payoff", true, false, "PUT", strike);
-        QuantLibAddinCpp::qlVanillaOption(trigger, "europeanOption", true, false, "payoff", "europeanExercise");
+        QuantLibAddinCpp::qlPlainVanillaPayoff("payoff", "PUT", strike, Permanent, Trigger, Overwrite);
+        QuantLibAddinCpp::qlVanillaOption("europeanOption", "payoff", "europeanExercise", Permanent, Trigger, Overwrite);
 
         // Analytic formulas:
 
         // Black-Scholes for European
         method = "Black-Scholes";
-        QuantLibAddinCpp::qlAnalyticEuropeanEngine(trigger, "engine", true, false, "bsmProcess");
-        QuantLibAddinCpp::qlInstrumentSetPricingEngine(trigger, "europeanOption", "engine");
+        QuantLibAddinCpp::qlAnalyticEuropeanEngine("engine", "bsmProcess", Permanent, Trigger, Overwrite);
+        QuantLibAddinCpp::qlInstrumentSetPricingEngine("europeanOption", "engine", Trigger);
         std::cout << std::setw(widths[0]) << std::left << method
                   << std::fixed
-                  << std::setw(widths[1]) << std::left << QuantLibAddinCpp::qlInstrumentNPV(trigger, "europeanOption")
+                  << std::setw(widths[1]) << std::left << QuantLibAddinCpp::qlInstrumentNPV("europeanOption", Trigger)
                   << std::setw(widths[2]) << std::left << "N/A"
                   << std::setw(widths[3]) << std::left << "N/A"
                   << std::endl;

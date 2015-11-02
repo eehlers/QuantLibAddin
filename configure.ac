@@ -138,6 +138,9 @@ AC_CONFIG_FILES([
     qlo/enumerations/constructors/Makefile
     qlo/enumerations/factories/Makefile
     qlo/enumerations/register/Makefile
+    qlo/indexes/Makefile
+    qlo/indexes/ibor/Makefile
+    qlo/indexes/swap/Makefile
     qlo/serialization/create/Makefile
     qlo/serialization/Makefile
     qlo/serialization/register/Makefile

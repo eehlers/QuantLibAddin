@@ -1,7 +1,9 @@
 
 SUBDIRS = \
+    coercions \
     conversions \
     enumerations \
+    indexes \
     serialization \
     valueobjects
 
@@ -9,8 +11,10 @@ AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
 
 this_includedir=${includedir}/${subdir}
 this_include_HEADERS = \
+    auto_link.hpp \
     handle.hpp \
     handleimpl.hpp \
+    index.hpp \
     init.hpp \
     loop.hpp \
     obj_all.hpp \
@@ -18,6 +22,15 @@ this_include_HEADERS = \
     obj_daycounters.hpp \
     obj_exercise.hpp \
     obj_instruments.hpp \
+    obj_math.hpp \
+    obj_models.hpp \
+    obj_payoffs.hpp \
+    obj_pricingengines.hpp \
+    obj_processes.hpp \
+    obj_schedule.hpp \
+    obj_termstructures.hpp \
+    obj_vanillaswaps.hpp \
+    obj_volatilities.hpp \
     objmanual_couponvectors.hpp \
     objmanual_date.hpp \
     objmanual_handles.hpp \
@@ -29,19 +42,11 @@ this_include_HEADERS = \
     objmanual_ratehelpers.hpp \
     objmanual_settings.hpp \
     objmanual_utilities.hpp \
-    obj_math.hpp \
-    obj_models.hpp \
-    obj_payoffs.hpp \
-    obj_pricingengines.hpp \
-    obj_processes.hpp \
-    obj_schedule.hpp \
-    obj_termstructures.hpp \
-    obj_vanillaswaps.hpp \
-    obj_volatilities.hpp \
     qladdindefines.hpp \
     yieldtermstructures.hpp
 
 libAddinObjects_la_SOURCES = \
+    index.cpp \
     init.cpp \
     objmanual_couponvectors.cpp \
     objmanual_date.cpp \
@@ -61,6 +66,7 @@ libAddinObjects_la_LIBADD = \
     enumerations/constructors/libEnumerationConstructors.la \
     enumerations/factories/libEnumerationFactories.la \
     enumerations/register/libEnumerationRegister.la \
+    indexes/libIndexes.la \
     serialization/libSerialization.la \
     valueobjects/libValueObjects.la
 

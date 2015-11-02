@@ -43,7 +43,7 @@ SWIG_SWG = $(SWIG_DIR)/Lib/reposit/reposit.swg
 SWIG_CMD = $(SWIG_DIR)/preinst-swig
 #SWIG_DEBUG = -debug-top 4 -debug-tmsearch
 
-SWIG_ARGS = -c++ -reposit -backwardcompatible -prefix ql
+SWIG_ARGS = -c++ -reposit -legacy -prefix ql
 if BUILD_CPP
     SWIG_ARGS += -genc++
 endif

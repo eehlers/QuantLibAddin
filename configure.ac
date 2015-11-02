@@ -133,6 +133,7 @@ AC_CONFIG_FILES([
     m4/Makefile
     swig/Makefile
     qlo/Makefile
+    qlo/coercions/Makefile
     qlo/conversions/Makefile
     qlo/enumerations/Makefile
     qlo/enumerations/constructors/Makefile

@@ -1,10 +1,14 @@
 
-IDIR=/media/windows/linux/repos/reposit/install
-SWIG_DIR=/media/windows/linux/repos/reposit/swig
+IDIR=/home/countify/install
+SWIG_DIR=/home/countify/projects/swig
+
+#IDIR=/media/windows/linux/repos/reposit/install
+#SWIG_DIR=/media/windows/linux/repos/reposit/swig
 
 #    CXXFLAGS=-gdwarf-2 \
 ./configure \
     --enable-addin-cpp \
+    --enable-addin-cfy \
     CXXFLAGS=-Wno-unused-local-typedefs \
     --prefix=$IDIR \
     --with-boost-include=$IDIR/include \

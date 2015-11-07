@@ -6,7 +6,7 @@ void initializeAddin();
 
 #define COUNTIFY_API __attribute__((visibility("default")))
 
-#define RP_LOG_MESSAGE(function, message) \
+#define CFY_LOG_MESSAGE(function, message) \
 do { \
     std::cout << "REPOSIT - " << function << " - " << message << std::endl; \
 } while (false)

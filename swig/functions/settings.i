@@ -14,6 +14,7 @@ namespace QuantLibAddin {
 
     %generate(c++, settingsSetEvaluationDate);
     %generate(c#, settingsSetEvaluationDate);
+    %generate(countify, settingsSetEvaluationDate);
     void settingsSetEvaluationDate(const QuantLib::Date& evalDate);
 
     std::string dateToString(const QuantLib::Date& d);

@@ -41,9 +41,9 @@ void initializeAddin() {
         // Initialize the Enumeration Registry
         QuantLibAddin::initializeAddin();
 
-//        // Set the evaluation date
-//        QuantLibAddin::settingsSetEvaluationDate(QuantLib::Date(12, QuantLib::May, 2015));
-//
+        // Set the evaluation date
+        QuantLibAddin::settingsSetEvaluationDate(QuantLib::Date(12, QuantLib::May, 2015));
+
 //        // load the euro market
 //        QuantLibAddin::SerializationFactory::instance().loadObject(
 //                "/home/countify/", "data2.xml", false, true);

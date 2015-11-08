@@ -10,6 +10,7 @@ namespace QuantLib {
     class Schedule {
       public:
         %generate(c#, Schedule);
+        %generate(countify, Schedule);
         Schedule(
                  Date effectiveDate,
                  const Date& terminationDate,

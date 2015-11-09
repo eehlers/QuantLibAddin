@@ -42,6 +42,7 @@ namespace QuantLib {
 
     class Swap : public Instrument {
       public:
+        %generate(countify, Swap);
         Swap(const std::vector<Leg>& legs,
             const std::vector<bool>& payer);
     };

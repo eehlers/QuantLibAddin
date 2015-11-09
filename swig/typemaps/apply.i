@@ -71,3 +71,13 @@ QUANTLIB_HANDLE(QuantLibAddin::Quote, QuantLib::Quote)
                 QuantLib::YieldTermStructure>()(
                     $1_nameCoerce, QuantLib::Handle<QuantLib::YieldTermStructure>());
 %}
+
+%typemap(rp_tm_cfy_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
+        RP_GET_OBJECT_DEFAULT($1_name_get, std::string($1_name), reposit::Object)
+        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
+            QuantLibAddin::CoerceHandle<
+                QuantLibAddin::YieldTermStructure,
+                QuantLib::YieldTermStructure>()(
+                    $1_name_get, QuantLib::Handle<QuantLib::YieldTermStructure>());
+%}
+

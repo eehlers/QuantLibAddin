@@ -1,7 +1,7 @@
 
 #SUBDIRS = conversions
 
-AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir} -I/home/countify/sdk/Eric-SDK -I/home/countify/sdk/Eric-SDK/ACE_wrappers -I/home/countify/sdk/Eric-SDK/ACE_wrappers/debian
+AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir} -I/home/countify/sdk/Eric-SDK -I/home/countify/sdk/Eric-SDK/ACE_wrappers -I/home/countify/sdk/Eric-SDK/ACE_wrappers/debian -I/home/countify/sdk/Eric-SDK/FlyLib
 
 this_includedir=${includedir}/${subdir}
 if BUILD_CFY
@@ -11,8 +11,10 @@ endif
 
 if BUILD_CFY
 libCountifyQuantLibAddin_la_SOURCES = \
+    cfy_couponvectors.cpp \
     cfy_exercise.cpp \
     cfy_instruments.cpp \
+    cfy_leg.cpp \
     cfy_payoffs.cpp \
     cfy_pricingengines.cpp \
     cfy_processes.cpp \
@@ -22,7 +24,8 @@ libCountifyQuantLibAddin_la_SOURCES = \
     cfy_termstructures.cpp \
     cfy_utilities.cpp \
     cfy_volatilities.cpp \
-    init.cpp
+    init.cpp \
+    utils.cpp
 endif
 
 if BUILD_CFY

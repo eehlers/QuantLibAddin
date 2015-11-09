@@ -11,6 +11,7 @@ namespace QuantLibAddin {
 
     class IborLeg : public Leg {
       public:
+        %generate(countify, IborLeg);
         IborLeg(
             QuantLib::BusinessDayConvention paymentConvention,
             const std::vector<QuantLib::Real>& nominals,

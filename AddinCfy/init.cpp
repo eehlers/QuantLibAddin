@@ -7,7 +7,6 @@
 #include <qlo/serialization/serializationfactory.hpp>
 #include <qlo/init.hpp>
 #include <qlo/objmanual_settings.hpp>
-#include <iostream>
 
 void initializeAddin() {
 

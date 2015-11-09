@@ -31,6 +31,7 @@ namespace QuantLib {
     class DiscountingSwapEngine : public PricingEngine {
       public:
         %generate(c#, DiscountingSwapEngine);
+        %generate(countify, DiscountingSwapEngine);
         DiscountingSwapEngine(
                const Handle<YieldTermStructure>& discountCurve,
                bool includeSettlementDateFlows,

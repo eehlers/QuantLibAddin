@@ -57,3 +57,77 @@
 %typemap(rp_tm_cfy_mngo) QuantLib::Date "INT64";
 %typemap(rp_tm_cfy_mngo) QuantLib::Date const & "INT64";
 
+%typemap(rp_tm_cfy_parm) std::vector<QuantLib::Real> const & "FLYLIB_OPAQUE $1_name_vec"
+%typemap(rp_tm_cfy_parm) std::vector<QuantLib::Natural> const & "FLYLIB_OPAQUE $1_name_vec"
+%typemap(rp_tm_cfy_parm) std::vector<QuantLib::Rate> const & "FLYLIB_OPAQUE $1_name_vec"
+%typemap(rp_tm_cfy_parm) std::vector<QuantLib::Spread> const & "FLYLIB_OPAQUE $1_name_vec"
+
+%typemap(rp_tm_cfy_cnvt) std::vector<QuantLib::Real> const & %{
+        std::vector<double> $1_name = f1($1_name_vec);
+%}
+%typemap(rp_tm_cfy_cnvt) std::vector<QuantLib::Natural> const & %{
+        std::vector<long> $1_name = f2($1_name_vec);
+        std::vector<QuantLib::Natural> $1_name_vec2 =
+            QuantLibAddin::convertVector<long, QuantLib::Natural>($1_name);
+%}
+%typemap(rp_tm_cfy_cnvt) std::vector<QuantLib::Rate> const & %{
+        std::vector<double> $1_name = f1($1_name_vec);
+%}
+%typemap(rp_tm_cfy_cnvt) std::vector<QuantLib::Spread> const & %{
+        std::vector<double> $1_name = f1($1_name_vec);
+%}
+
+%typemap(rp_tm_cfy_args) std::vector<QuantLib::Real> const & "$1_name";
+%typemap(rp_tm_cfy_args) std::vector<QuantLib::Natural> const & "$1_name_vec2";
+%typemap(rp_tm_cfy_args) std::vector<QuantLib::Rate> const & "$1_name";
+%typemap(rp_tm_cfy_args) std::vector<QuantLib::Spread> const & "$1_name";
+
+%typemap(rp_tm_cfy_mngo) std::vector<QuantLib::Real> const & "CSTR[][]";
+%typemap(rp_tm_cfy_mngo) std::vector<QuantLib::Natural> const & "CSTR[][]";
+%typemap(rp_tm_cfy_mngo) std::vector<QuantLib::Rate> const & "CSTR[][]";
+%typemap(rp_tm_cfy_mngo) std::vector<QuantLib::Spread> const & "CSTR[][]";
+
+%typemap(rp_tm_cfy_parm) std::vector<QuantLib::Date> const & "FLYLIB_OPAQUE $1_name_vec"
+%typemap(rp_tm_cfy_parm) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "FLYLIB_OPAQUE $1_name_vec"
+
+%typemap(rp_tm_cfy_cnvt) std::vector<QuantLib::Date> const & %{
+        std::vector<reposit::property_t> $1_name = f3($1_name_vec);
+        std::vector<QuantLib::Date> $1_name_vec2 = f5($1_name_vec);
+%}
+
+%typemap(rp_tm_cfy_cnvt) std::vector<boost::shared_ptr<QuantLibAddin::Leg>> const & %{
+        std::vector<std::string> $1_name = f4($1_name_vec);
+        std::vector<boost::shared_ptr<QuantLibAddin::Leg> > $1_name_vec2 =
+            reposit::getObjectVector<QuantLibAddin::Leg>($1_name);
+%}
+
+%typemap(rp_tm_cfy_args) std::vector<QuantLib::Date> const & "$1_name_vec2";
+%typemap(rp_tm_cfy_args) std::vector<boost::shared_ptr<QuantLibAddin::Leg>> const & "$1_name_vec2";
+
+%typemap(rp_tm_cfy_mngo) std::vector<QuantLib::Date> const & "CSTR[][]";
+%typemap(rp_tm_cfy_mngo) std::vector<boost::shared_ptr<QuantLibAddin::Leg>> const & "CSTR[][]";
+
+%typemap(rp_tm_cfy_parm) std::vector<bool> const & "FLYLIB_OPAQUE $1_name_vec"
+%typemap(rp_tm_cfy_parm) std::vector<QuantLib::Leg> const & "FLYLIB_OPAQUE $1_name_vec"
+
+%typemap(rp_tm_cfy_cnvt) std::vector<bool> const & %{
+        std::vector<bool> $1_name = f6($1_name_vec);
+%}
+%typemap(rp_tm_cfy_cnvt) std::vector<QuantLib::Leg> const & %{
+        std::vector<std::string> $1_name = f4($1_name_vec);
+        std::vector<boost::shared_ptr<QuantLibAddin::Leg> > $1_name_vec_temp =
+            reposit::getObjectVector<QuantLibAddin::Leg>($1_name);
+        std::vector<QuantLib::Leg> $1_name_vec2($1_name_vec_temp.size());
+        boost::shared_ptr<QuantLib::Leg> qlLeg;
+        for (QuantLib::Size i=0; i<$1_name_vec_temp.size(); ++i) {
+            $1_name_vec_temp[i]->getLibraryObject(qlLeg);
+            $1_name_vec2[i] = *qlLeg;
+        }
+%}
+
+%typemap(rp_tm_cfy_args) std::vector<bool> const & "$1_name";
+%typemap(rp_tm_cfy_args) std::vector<QuantLib::Leg> const & "$1_name_vec2";
+
+%typemap(rp_tm_cfy_mngo) std::vector<bool> const & "CSTR[][]";
+%typemap(rp_tm_cfy_mngo) std::vector<QuantLib::Leg> const & "CSTR[][]";
+

@@ -2,7 +2,6 @@
 IDIR=/media/windows/linux/repos/reposit/install
 SWIG_DIR=/media/windows/linux/repos/reposit/swig
 
-#    CXXFLAGS=-gdwarf-2 \
 ./configure \
     --enable-addin-cpp \
     CXXFLAGS=-Wno-unused-local-typedefs \

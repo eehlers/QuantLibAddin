@@ -1,7 +1,10 @@
 
 #SUBDIRS = conversions
 
-AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir} -I/home/countify/sdk/Eric-SDK -I/home/countify/sdk/Eric-SDK/ACE_wrappers -I/home/countify/sdk/Eric-SDK/ACE_wrappers/debian -I/home/countify/sdk/Eric-SDK/FlyLib
+COUNTIFY_DIR = @countify_dir@
+# FIXME parameterize this
+COUNTIFY_LIB = /home/countify/countify/lib
+AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir} -I$(COUNTIFY_DIR) -I$(COUNTIFY_DIR)/ACE_wrappers -I$(COUNTIFY_DIR)/ACE_wrappers/debian
 
 this_includedir=${includedir}/${subdir}
 if BUILD_CFY
@@ -41,5 +44,5 @@ libCountifyQuantLibAddin_la_LIBADD = \
     ../qlo/libAddinObjects.la
 
 libCountifyQuantLibAddin_la_LDFLAGS = \
-    -lQuantLib -lreposit -lboost_filesystem -lboost_serialization -lboost_system -lboost_regex -L/home/countify/countify/lib -lFlyLib
+    -lQuantLib -lreposit -lboost_filesystem -lboost_serialization -lboost_system -lboost_regex -L$(COUNTIFY_LIB) -lFlyLib
 

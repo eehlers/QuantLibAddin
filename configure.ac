@@ -98,6 +98,19 @@ AC_CHECK_FILE([${swig_path}/preinst-swig], [],
 AC_ARG_VAR(swig_dir, path to SWIG)
 AC_SUBST(swig_dir, [${swig_path}])
 
+# The path to the =countify SDK.  Required if --enable-addin-cfy is specified.
+
+AC_ARG_WITH([countify],
+            AC_HELP_STRING([--with-countify=/path/to/countify],
+                           [Specify the root directory of the =countify SDK]),
+            [countify_path=${withval}])
+if test [ -n "$countify_path" ] ; then
+AC_CHECK_FILE([${countify_path}/FlyLib/FlyLib.h], [],
+            [AC_MSG_ERROR([Unable to locate file FlyLib/FlyLib.h in specified countify directory])])
+AC_ARG_VAR(countify_dir, path to countify)
+AC_SUBST(countify_dir, [${countify_path}])
+fi
+
 # Possibly enable features
 
 AC_ARG_ENABLE([addin-cpp],
@@ -112,7 +125,7 @@ AC_ARG_ENABLE([addin-cpp],
 #                             [qla_build_calc=omitted])
 AC_ARG_ENABLE([addin-cfy],
               AC_HELP_STRING([--enable-addin-cfy],
-                             [build C++ addin and clients [[default=no]]]),
+                             [build =countify addin and clients [[default=no]]]),
                              [qla_build_cfy=$enableval],
                              [qla_build_cfy=omitted])
 AC_ARG_ENABLE([addin-all],
@@ -125,6 +138,12 @@ AM_CONDITIONAL(BUILD_CPP, [test "$qla_build_cpp" = "omitted" \
 #    && test "$qla_build_all" = "yes" || test "$qla_build_calc" = "yes"])
 AM_CONDITIONAL(BUILD_CFY, [test "$qla_build_cfy" = "omitted" \
     && test "$qla_build_all" = "yes" || test "$qla_build_cfy" = "yes"])
+# If =countify output is requested then ensure that the path to the SDK was specified.
+if test "$qla_build_cfy" = "omitted" && test "$qla_build_all" = "yes" || test "$qla_build_cfy" = "yes"; then
+if test [ -z "$countify_path" ] ; then
+AC_MSG_ERROR([Use --with-countify=/path/to/countify to specify the path to the =countify SDK])
+fi
+fi
 
 # Done, output the configured files
 

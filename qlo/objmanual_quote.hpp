@@ -42,7 +42,8 @@ namespace QuantLibAddin {
         SimpleQuote(
             const boost::shared_ptr<reposit::ValueObject>& properties,
             // BEGIN typemap rp_tm_default
-            double Value,
+            QuantLib::Real Value,
+            QuantLib::Real tickValue,
             // END   typemap rp_tm_default
             bool permanent);
         QuantLib::Real setValue(QuantLib::Real value);

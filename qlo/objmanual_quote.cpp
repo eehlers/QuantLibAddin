@@ -32,12 +32,13 @@ QuantLibAddin::close(
 QuantLibAddin::SimpleQuote::SimpleQuote(
     const boost::shared_ptr<reposit::ValueObject>& properties,
     // BEGIN typemap rp_tm_default
-    double value,
+    QuantLib::Real Value,
+    QuantLib::Real tickValue,
     // END   typemap rp_tm_default
     bool permanent)
 : Quote(properties, permanent) {
     libraryObject_ = simpleQuote_ = boost::shared_ptr<QuantLib::SimpleQuote>(
-        new QuantLib::SimpleQuote(value));
+        new QuantLib::SimpleQuote(Value));
 }
 
 // QuantLibAddin::SimpleQuote::setValue() wraps QuantLib::SimpleQuote::setValue(),

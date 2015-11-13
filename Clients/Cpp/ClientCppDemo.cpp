@@ -65,7 +65,7 @@ int main() {
         bool Permanent = false;
         QuantLibAddinCpp::qlEuropeanExercise("europeanExercise", maturity, Permanent, Trigger, Overwrite);
 
-        QuantLibAddinCpp::qlSimpleQuote("underlying", underlying, Permanent, Trigger, Overwrite);
+        QuantLibAddinCpp::qlSimpleQuote("underlying", underlying, 0, Permanent, Trigger, Overwrite);
 
         // bootstrap the yield/dividend/vol curves
         QuantLibAddinCpp::qlFlatForward("flatTermStructure", settlementDate, riskFreeRate, dayCounter, Permanent, Trigger, Overwrite);

@@ -22,8 +22,8 @@ namespace QuantLib {
         Date advance(
             const Date& date,
             const Period& period,
-            BusinessDayConvention convention,
-            bool endOfMonth) const;
+            BusinessDayConvention convention = Following,
+            bool endOfMonth = false) const;
 
         %loop(adjust, date);
         Date adjust(const Date& date,

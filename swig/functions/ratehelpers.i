@@ -15,6 +15,7 @@ namespace QuantLib {
         Date earliestDate();
         Date latestDate();
         Real impliedQuote();
+        Date pillarDate();
     };
 }
 

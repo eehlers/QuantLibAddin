@@ -334,6 +334,7 @@ namespace QuantLibAddin {
             create.registerType("360/360", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
             create.registerType("A/360", new QuantLib::Actual360());
             create.registerType("A/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+            create.registerType("QuantLib::Actual365Fixed()", new QuantLib::Actual365Fixed());
             create.registerType("A/365 (Fixed)", new QuantLib::Actual365Fixed());
             create.registerType("A/365F", new QuantLib::Actual365Fixed());
             create.registerType("Act/360", new QuantLib::Actual360());

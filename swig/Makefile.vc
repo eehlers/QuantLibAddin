@@ -14,7 +14,7 @@ SWIG_FILE=quantlib.i
 INTERFACE_FILES=functions\*.i typemaps\*.i
 
 # This variable is set in the VC project properties.
-#SWIG_ARGS=-genxll -genc++ -genc#
+#SWIG_ARGS=-legacy -genxll -genc++ -genc#
 
 ALL : $(BUILDFLAG)
 

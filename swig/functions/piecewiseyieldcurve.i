@@ -10,7 +10,7 @@ namespace QuantLibAddin {
             QuantLib::Natural nDays,
             const QuantLib::Calendar& calendar,
             const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& qlrhs,
-            const QuantLib::DayCounter& dayCounter,
+            const QuantLib::DayCounter& dayCounter = QuantLib::Actual365Fixed(),
             const std::vector<QuantLib::Handle<QuantLib::Quote> >& jumps,
             const std::vector<QuantLib::Date>& jumpDates,
             QuantLib::Real accuracy,

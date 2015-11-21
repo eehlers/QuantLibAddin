@@ -27,6 +27,7 @@ namespace QuantLib {
       public:
         %generate(c++, discount);
         %generate(countify, discount);
+        %alias(discount, YieldTSDiscount);
         DiscountFactor discount(
             const Date& d,
             bool extrapolate);

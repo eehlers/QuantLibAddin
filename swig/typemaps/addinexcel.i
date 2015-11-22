@@ -13,7 +13,7 @@
 %typemap(rp_tm_xll_parm) QuantLib::Period "char*";
 %typemap(rp_tm_xll_parm) boost::shared_ptr< QuantLibAddin::RateHelper > const & "char*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::YieldTermStructure> const & "OPER*";
-%typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::Quote> const & "char*";
+%typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::Quote> const & "OPER*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "char*";
 
 // rp_tm_xll_cnvt - convert from Excel datatypes to the datatypes of the underlying Library
@@ -28,6 +28,8 @@
         QuantLibAddin::cppToLibrary($1_name, $1_name_cnv);
 %}
 
+// FIXME in the two typemaps below we allow all date arguments to have a default value.
+// This should be done explicitly using rp_tm_xll_cnvt2.
 %typemap(rp_tm_xll_cnvt) QuantLib::Date %{
         QuantLib::Date $1_name_cnv = reposit::convert2<QuantLib::Date>(
             reposit::ConvertOper(*$1_name), "$1_name", QuantLib::Date());
@@ -83,12 +85,6 @@
 
 %typemap(rp_tm_xll_cnvt) boost::shared_ptr<QuantLibAddin::RateHelper> const & qlarh %{
         RP_GET_OBJECT($1_name_obj, $1_name, QuantLibAddin::RateHelper);
-%}
-
-%typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
-        RP_GET_REFERENCE($1_name_get, $1_name, QuantLibAddin::Quote, QuantLib::Quote)
-        QuantLib::Handle<QuantLib::Quote> $1_name_handle =
-            QuantLib::Handle<QuantLib::Quote>($1_name_get);
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
@@ -172,6 +168,7 @@
 %typemap(rp_tm_xll_argf) QuantLib::Schedule const & "*$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::OptimizationMethod& "*$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::EndCriteria const & "*$1_name_cnv";
+//%typemap(rp_tm_xll_argf) QuantLib::Handle<QuantLib::Quote> const & "$1_name_handle";
 %typemap(rp_tm_xll_argf) boost::shared_ptr<QuantLibAddin::RateHelper> const & "$1_name_obj";
 %typemap(rp_tm_xll_argf) ql_tp_handle "$1_name_handle";
 %typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLib::CalibrationHelper> > const & "$1_name_vec2";
@@ -182,6 +179,9 @@
 %typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "$1_name_vec2";
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Leg> const & "$1_name_vec2";
 %typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> > const & "$1_name_vec";
+
+%typemap(rp_tm_xll_argf2) QuantLib::Date "$1_name_cnv";
+%typemap(rp_tm_xll_argf2) QuantLib::Date const & "$1_name_cnv";
 
 // rp_tm_xll_rtst - return statement (F/M)
 %typemap(rp_tm_xll_rtst) QuantLib::Natural %{
@@ -246,7 +246,11 @@
 // rp_tm_xll_argfv - arguments to the Value Object constructor (C)
 %typemap(rp_tm_xll_argfv) QuantLib::Date "$1_name_cnv2";
 %typemap(rp_tm_xll_argfv) QuantLib::Date const & "$1_name_cnv2";
+%typemap(rp_tm_xll_argfv) QuantLib::Handle< QuantLib::Quote > const & "$1_name_cnv";
 %typemap(rp_tm_xll_argfv) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_vo";
+
+%typemap(rp_tm_xll_argfv2) QuantLib::Date "$1_name_cnv2";
+%typemap(rp_tm_xll_argfv2) QuantLib::Date const & "$1_name_cnv2";
 
 // rp_tm_xll_cdrt - code to register the return type with Excel
 %typemap(rp_tm_xll_cdrt) QuantLib::Period "C";
@@ -261,8 +265,8 @@
 %typemap(rp_tm_xll_code) QuantLib::Date "P";
 %typemap(rp_tm_xll_code) QuantLib::Date const & "P";
 %typemap(rp_tm_xll_code) boost::shared_ptr<QuantLibAddin::RateHelper> const & "C";
+%typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::Quote> const & "P";
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::YieldTermStructure> const & "P";
-%typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::Quote> const & "C";
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "C";
 
 %typemap(rp_tm_xll_loop) QuantLib::Date const & "$1_name_cnv";

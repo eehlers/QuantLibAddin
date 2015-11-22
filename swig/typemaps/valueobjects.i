@@ -7,7 +7,7 @@
 %typemap(rp_tm_vob_parm) QuantLib::Date "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) QuantLib::Date const & "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) QuantLib::Period "const std::string&";
-%typemap(rp_tm_vob_parm) QuantLib::Handle< QuantLib::Quote > const & "const std::string &";
+%typemap(rp_tm_vob_parm) QuantLib::Handle< QuantLib::Quote > const & "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "const std::string &";
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Date > const & "const std::vector<reposit::property_t>&";
@@ -20,7 +20,7 @@
 %typemap(rp_tm_vob_mbvr) QuantLib::Date "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) QuantLib::Date const & "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) QuantLib::Period "std::string $1_name_";
-%typemap(rp_tm_vob_mbvr) QuantLib::Handle<QuantLib::Quote > const & "std::string $1_name_";
+%typemap(rp_tm_vob_mbvr) QuantLib::Handle<QuantLib::Quote > const & "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) QuantLib::Handle<QuantLib::YieldTermStructure > const & "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) QuantLib::Handle<QuantLib::BlackVolTermStructure > const & "std::string $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Leg> const & "std::vector<std::string> $1_name_";
@@ -39,7 +39,7 @@
 %typemap(rp_tm_vob_cnvt) QuantLib::Date "value";
 %typemap(rp_tm_vob_cnvt) QuantLib::Date const & "value";
 %typemap(rp_tm_vob_cnvt) QuantLib::Period "reposit::convert2<std::string>(value)";
-%typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::Quote> const & "reposit::convert2<std::string>(value)";
+%typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::Quote> const & "value";
 %typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & "value";
 %typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "reposit::convert2<std::string>(value)";
 %typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Leg> const & "reposit::vector::convert2<std::string>(value, nameUpper)";

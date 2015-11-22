@@ -66,14 +66,16 @@ namespace QuantLibAddin {
 
     class SwapRateHelper : public RateHelper {
       public:
-        //SwapRateHelper(
-        //    const boost::shared_ptr<reposit::ValueObject>& properties,
-        //    const QuantLib::Handle<QuantLib::Quote>& quote,
-        //    const boost::shared_ptr<QuantLib::SwapIndex>& swapIndex,
-        //    const QuantLib::Handle<QuantLib::Quote>& spread,
-        //    const QuantLib::Period& forwardStart,
-        //    const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
-        //    bool permanent);
+        SwapRateHelper(
+            const boost::shared_ptr<reposit::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& quote,
+            const boost::shared_ptr<QuantLib::SwapIndex>& swapIndex,
+            const QuantLib::Handle<QuantLib::Quote>& spread,
+            const QuantLib::Period& forwardStart,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
+            bool permanent);
         SwapRateHelper(
             const boost::shared_ptr<reposit::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::Quote>& quote,
@@ -87,6 +89,8 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::Quote>& spread,
             const QuantLib::Period& forwardStart,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent);
      };
 

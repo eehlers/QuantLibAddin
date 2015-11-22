@@ -470,6 +470,13 @@ namespace QuantLibAddin {
         }
 
         {
+            reposit::Create<QuantLib::Pillar::Choice> create;
+            create.registerType("CustomDate", new QuantLib::Pillar::Choice(QuantLib::Pillar::CustomDate));
+            create.registerType("LastRelevantDate", new QuantLib::Pillar::Choice(QuantLib::Pillar::LastRelevantDate));
+            create.registerType("MaturityDate", new QuantLib::Pillar::Choice(QuantLib::Pillar::MaturityDate));
+        }
+
+        {
             reposit::Create<QuantLib::Position::Type> create;
             create.registerType("Long", new QuantLib::Position::Type(QuantLib::Position::Long));
             create.registerType("Short", new QuantLib::Position::Type(QuantLib::Position::Short));

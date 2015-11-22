@@ -86,7 +86,22 @@ namespace QuantLibAddin {
         FraRateHelper(
             const QuantLib::Handle<QuantLib::Quote>& rate,
             QuantLib::Period periodToStart,
-            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex);
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar);
+        // Overloaded ctors; the directive below causes the second to be called qlSwapRateHelper2().
+        %rename(FraRateHelper2) FraRateHelper;
+        FraRateHelper(
+            const QuantLib::Handle<QuantLib::Quote>& rate,
+            QuantLib::Period periodToStart,
+            QuantLib::Natural lengthInMonths,
+            QuantLib::Natural fixingDays,
+            const QuantLib::Calendar& calendar,
+            QuantLib::BusinessDayConvention convention,
+            bool endOfMonth,
+            const QuantLib::DayCounter& dayCounter,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar);            
     };
 
     class OISRateHelper : public RateHelper {

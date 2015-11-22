@@ -99,11 +99,24 @@ namespace QuantLibAddin {
     public:
         FraRateHelper(
             const boost::shared_ptr<reposit::ValueObject>& properties,
-            // BEGIN typemap rp_tm_default
             QuantLib::Handle< QuantLib::Quote > const &rate,
             QuantLib::Period periodToStart,
             boost::shared_ptr< QuantLib::IborIndex > const &iborIndex,
-            // END   typemap rp_tm_default
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
+            bool permanent);
+        FraRateHelper(
+            const boost::shared_ptr<reposit::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& rate,
+            QuantLib::Period periodToStart,
+            QuantLib::Natural lengthInMonths,
+            QuantLib::Natural fixingDays,
+            const QuantLib::Calendar& calendar,
+            QuantLib::BusinessDayConvention convention,
+            bool endOfMonth,
+            const QuantLib::DayCounter& dayCounter,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent);
     };
 

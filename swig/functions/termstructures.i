@@ -21,6 +21,7 @@ namespace QuantLib {
         %generate(c++, referenceDate);
         %generate(countify, referenceDate);
         Date referenceDate();
+        Date maxDate();
     };
 
     class YieldTermStructure : public TermStructure {

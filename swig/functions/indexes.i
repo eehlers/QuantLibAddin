@@ -105,6 +105,9 @@ namespace QuantLib {
 
     class IborIndex : public InterestRateIndex {
         public:
+            // For purposes of backward compatibility we use the %alias directive to export this function twice,
+            // once under its old name (qlIborIndexBusinessDayConv) and once under its new name (qlIborIndexBusinessDayConvention)
+            %alias(businessDayConvention, IborIndexBusinessDayConv);
             BusinessDayConvention businessDayConvention();
     };
 }

@@ -5819,7 +5819,7 @@
 		<px class_id="3" tracking_level="1" version="0" object_id="_447">
 			<ObjectId>GBP1M</ObjectId>
 			<ClassName>qlRelinkableHandleYieldTermStructure</ClassName>
-			<CurrentLink>_GBP1M#0022</CurrentLink>
+			<CurrentLink>_GBP1M</CurrentLink>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -5831,7 +5831,7 @@
 		<px class_id_reference="3" object_id="_448">
 			<ObjectId>GBP1Y</ObjectId>
 			<ClassName>qlRelinkableHandleYieldTermStructure</ClassName>
-			<CurrentLink>_GBP1Y#0046</CurrentLink>
+			<CurrentLink>_GBP1Y</CurrentLink>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -5843,7 +5843,7 @@
 		<px class_id_reference="3" object_id="_449">
 			<ObjectId>GBP3M</ObjectId>
 			<ClassName>qlRelinkableHandleYieldTermStructure</ClassName>
-			<CurrentLink>_GBP3M#0008</CurrentLink>
+			<CurrentLink>_GBP3M</CurrentLink>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -5855,7 +5855,7 @@
 		<px class_id_reference="3" object_id="_450">
 			<ObjectId>GBP6M</ObjectId>
 			<ClassName>qlRelinkableHandleYieldTermStructure</ClassName>
-			<CurrentLink>_GBP6M#0036</CurrentLink>
+			<CurrentLink>_GBP6M</CurrentLink>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -5867,7 +5867,7 @@
 		<px class_id_reference="3" object_id="_451">
 			<ObjectId>GBPON</ObjectId>
 			<ClassName>qlRelinkableHandleYieldTermStructure</ClassName>
-			<CurrentLink>_GBPON#0000</CurrentLink>
+			<CurrentLink>_GBPON</CurrentLink>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -5879,7 +5879,7 @@
 		<px class_id_reference="3" object_id="_452">
 			<ObjectId>GBPSTD</ObjectId>
 			<ClassName>qlRelinkableHandleYieldTermStructure</ClassName>
-			<CurrentLink>_GBPSTD#0052</CurrentLink>
+			<CurrentLink>_GBPSTD</CurrentLink>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -6161,7 +6161,7 @@
 		<px class_id="32" tracking_level="1" version="0" object_id="_459">
 			<ObjectId>GbpLibor1MLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>GbpLibor1M#0000</index>
+			<index>GbpLibor1M</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -6173,7 +6173,7 @@
 		<px class_id_reference="32" object_id="_460">
 			<ObjectId>GbpLibor1YLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>GbpLibor1Y#0000</index>
+			<index>GbpLibor1Y</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -6185,7 +6185,7 @@
 		<px class_id_reference="32" object_id="_461">
 			<ObjectId>GbpLibor2MLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>GbpLibor2M#0000</index>
+			<index>GbpLibor2M</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -6197,7 +6197,7 @@
 		<px class_id_reference="32" object_id="_462">
 			<ObjectId>GbpLibor3MLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>GbpLibor3M#0000</index>
+			<index>GbpLibor3M</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -6209,7 +6209,7 @@
 		<px class_id_reference="32" object_id="_463">
 			<ObjectId>GbpLibor6MLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>GbpLibor6M#0000</index>
+			<index>GbpLibor6M</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -6221,7 +6221,7 @@
 		<px class_id_reference="32" object_id="_464">
 			<ObjectId>GbpLiborSWLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>GbpLiborSW#0000</index>
+			<index>GbpLiborSW</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -6684,7 +6684,7 @@
 		<px class_id_reference="32" object_id="_490">
 			<ObjectId>EoniaLastFixing_Quote</ObjectId>
 			<ClassName>qlLastFixingQuote</ClassName>
-			<index>Sonia#0000</index>
+			<index>Sonia</index>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -9647,7 +9647,7 @@
 				<which>2</which>
 				<value>GBP10MD_SYNTH1Y_Quote</value>
 			</rate>
-			<iborIndex>xml9#0000</iborIndex>
+			<iborIndex>xml9</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -9663,7 +9663,7 @@
 				<which>2</which>
 				<value>GBP11MD_SYNTH1Y_Quote</value>
 			</rate>
-			<iborIndex>xml10#0000</iborIndex>
+			<iborIndex>xml10</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -9903,7 +9903,7 @@
 				<which>2</which>
 				<value>GBP4MD_SYNTH1Y_Quote</value>
 			</rate>
-			<iborIndex>xml4#0000</iborIndex>
+			<iborIndex>xml4</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -9919,7 +9919,7 @@
 				<which>2</which>
 				<value>GBP4MD_SYNTH6M_Quote</value>
 			</rate>
-			<iborIndex>xml17#0000</iborIndex>
+			<iborIndex>xml17</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -9935,7 +9935,7 @@
 				<which>2</which>
 				<value>GBP5MD_SYNTH1Y_Quote</value>
 			</rate>
-			<iborIndex>xml5#0000</iborIndex>
+			<iborIndex>xml5</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -9951,7 +9951,7 @@
 				<which>2</which>
 				<value>GBP5MD_SYNTH6M_Quote</value>
 			</rate>
-			<iborIndex>xml18#0000</iborIndex>
+			<iborIndex>xml18</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -10015,7 +10015,7 @@
 				<which>2</which>
 				<value>GBP7MD_SYNTH1Y_Quote</value>
 			</rate>
-			<iborIndex>xml6#0000</iborIndex>
+			<iborIndex>xml6</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -10031,7 +10031,7 @@
 				<which>2</which>
 				<value>GBP8MD_SYNTH1Y_Quote</value>
 			</rate>
-			<iborIndex>xml7#0000</iborIndex>
+			<iborIndex>xml7</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -10047,7 +10047,7 @@
 				<which>2</which>
 				<value>GBP9MD_SYNTH1Y_Quote</value>
 			</rate>
-			<iborIndex>xml8#0000</iborIndex>
+			<iborIndex>xml8</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>
@@ -10063,7 +10063,7 @@
 				<which>2</which>
 				<value>GBPOND_Quote</value>
 			</rate>
-			<iborIndex>xml24#0000</iborIndex>
+			<iborIndex>xml24</iborIndex>
 			<Permanent>0</Permanent>
 			<UserProperties>
 				<count>0</count>

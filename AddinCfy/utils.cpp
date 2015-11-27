@@ -4,6 +4,8 @@
 #include "FlyLib/FlyLib_Double.h"
 #include "FlyLib/FlyLib_Multi.h"
 #include <ql/time/date.hpp>
+#include <string>
+#include <algorithm>
 
 std::vector<double> f1(FLYLIB_OPAQUE _in_params) {
   FlyLib_Multi in_params (_in_params);
@@ -111,8 +113,13 @@ if (ncols>1) return ret;
     for (int row = 0; row < nrows; row++) {
       ACE_TString cur_name;
       if (in_params.get_cell (cur_name, row, col) == 0) {
-         long d = FlyLib_Double::to_long (cur_name.c_str ());
-            ret.push_back(d);
+         //long d = FlyLib_Double::to_long (cur_name.c_str ());
+            std::string s(cur_name.c_str());
+            std::transform(s.begin(), s.end(), s.begin(), ::toupper);
+            if ("TRUE" == s || "YES" == s)
+                ret.push_back(true);
+            else
+                ret.push_back(false);
       }
     }
   }

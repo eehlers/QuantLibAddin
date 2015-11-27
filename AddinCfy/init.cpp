@@ -41,7 +41,7 @@ void initializeAddin() {
         QuantLibAddin::initializeAddin();
 
         // Set the evaluation date
-        QuantLibAddin::settingsSetEvaluationDate(QuantLib::Date(25, QuantLib::June, 2015));
+        QuantLibAddin::settingsSetEvaluationDate(QuantLib::Date(6, QuantLib::October, 2015));
 
         // load the euro market
         QuantLibAddin::SerializationFactory::instance().loadObject(

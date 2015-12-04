@@ -165,8 +165,9 @@ AC_CONFIG_FILES([
     qlo/serialization/Makefile
     qlo/serialization/register/Makefile
     qlo/valueobjects/Makefile
-    AddinCpp/Makefile
     AddinCfy/Makefile
+    AddinCpp/Makefile
+    AddinCSharp/Makefile
     Clients/Makefile
     Clients/Cpp/Makefile
     Clients/Countify/Makefile

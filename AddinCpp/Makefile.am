@@ -1,9 +1,12 @@
 
-#SUBDIRS = conversions
-
 AM_CPPFLAGS = -I${top_srcdir} -I${top_builddir}
 
 this_includedir=${includedir}/${subdir}
+
+if BUILD_CPP
+EXTRA_DIST = \
+    AddinCpp_vc9.vcproj
+endif
 
 if BUILD_CPP
 this_include_HEADERS = \

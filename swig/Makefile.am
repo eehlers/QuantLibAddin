@@ -42,6 +42,7 @@ SWIG_FILES := \
 
 EXTRA_DIST = \
     $(SWIG_FILES) \
+    Makefile.vc \
     swigrun_cpp_vc9.vcproj \
     swigrun_xl_vc9.vcproj
 

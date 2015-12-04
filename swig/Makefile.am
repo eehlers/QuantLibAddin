@@ -27,15 +27,23 @@ SWIG_FILES := \
     functions/utilities.i \
     functions/vanillaswaps.i \
     functions/volatilities.i \
+    typedefs/all.i \
     typemaps/addincountify.i \
     typemaps/addincpp.i \
+    typemaps/addincsharp.i \
     typemaps/addinexcel.i \
     typemaps/all.i \
     typemaps/apply.i \
+    typemaps/handles.i \
     typemaps/libraryobjects.i \
     typemaps/serialization.i \
     typemaps/shared.i \
     typemaps/valueobjects.i
+
+EXTRA_DIST = \
+    $(SWIG_FILES) \
+    swigrun_cpp_vc9.vcproj \
+    swigrun_xl_vc9.vcproj
 
 SWIG_DIR = @swig_dir@
 SWIG_BIN = $(SWIG_DIR)/swig

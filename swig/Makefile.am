@@ -62,7 +62,7 @@ endif
 if BUILD_CFY
     SWIG_ARGS += -gencfy
 endif
-SWIG_ARGS += -genxll
+#SWIG_ARGS += -genxll
 SWIG_ARGS += quantlib.i
 
 .PHONY: SWIG

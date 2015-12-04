@@ -3,7 +3,6 @@ IDIR=/home/countify/install
 SWIG_DIR=/home/countify/projects/swig
 CFY_DIR=/home/countify/sdk/Eric-SDK
 
-#    CXXFLAGS="-Wno-unused-local-typedefs -gdwarf-2"
 ./configure \
     CXXFLAGS=-Wno-unused-local-typedefs \
     --prefix=$IDIR \

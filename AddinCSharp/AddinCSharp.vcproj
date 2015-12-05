@@ -64,7 +64,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\AddinCSharp-vc90-mt-gd-1_7_0.dll"
+				OutputFile=".\bin\AddinCSharp-vc90-mt-gd-1_8_0.dll"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -138,7 +138,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\AddinCSharp-vc90-$(PlatformName)-mt-gd-1_7_0.dll"
+				OutputFile=".\bin\AddinCSharp-vc90-$(PlatformName)-mt-gd-1_8_0.dll"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -212,7 +212,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\AddinCSharp-vc90-mt-1_7_0.dll"
+				OutputFile=".\bin\AddinCSharp-vc90-mt-1_8_0.dll"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -289,7 +289,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\AddinCSharp-vc90-$(PlatformName)-mt-1_7_0.dll"
+				OutputFile=".\bin\AddinCSharp-vc90-$(PlatformName)-mt-1_8_0.dll"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -365,7 +365,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\AddinCSharp-vc90-mt-s-1_7_0.dll"
+				OutputFile=".\bin\AddinCSharp-vc90-mt-s-1_8_0.dll"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -442,7 +442,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\AddinCSharp-vc90-$(PlatformName)-mt-s-1_7_0.dll"
+				OutputFile=".\bin\AddinCSharp-vc90-$(PlatformName)-mt-s-1_8_0.dll"
 				LinkIncremental="1"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -517,7 +517,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\AddinCSharp-vc90-mt-sgd-1_7_0.dll"
+				OutputFile=".\bin\AddinCSharp-vc90-mt-sgd-1_8_0.dll"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="2"
@@ -591,7 +591,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile=".\bin\AddinCSharp-vc90-$(PlatformName)-mt-sgd-1_7_0.dll"
+				OutputFile=".\bin\AddinCSharp-vc90-$(PlatformName)-mt-sgd-1_8_0.dll"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				SubSystem="2"

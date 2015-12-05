@@ -28,26 +28,26 @@
 #endif
 
 #include <rp/rpdefines.hpp>
-#if REPOSIT_HEX_VERSION < 0x010700f0
+#if REPOSIT_HEX_VERSION < 0x010800f0
     #error using an old version of reposit, please update.
 #endif
 
 #include <ql/version.hpp>
-#if QL_HEX_VERSION < 0x010700f0
+#if QL_HEX_VERSION < 0x010800f0
     #error using an old version of QuantLib, please update.
 #endif
 
 //! version string
 #ifdef _DEBUG
-    #define QLADDIN_VERSION "1.7.0-debug"
+    #define QLADDIN_VERSION "1.8.0-debug"
 #else
-    #define QLADDIN_VERSION "1.7.0"
+    #define QLADDIN_VERSION "1.8.0"
 #endif
 
 //! version hexadecimal number
-#define QLADDIN_HEX_VERSION 0x010700f0
+#define QLADDIN_HEX_VERSION 0x010800f0
 //! version string for output lib name
-#define QLADDIN_LIB_VERSION "1_7_0"
+#define QLADDIN_LIB_VERSION "1_8_0"
 
 #if defined BOOST_MSVC
 #pragma warning(disable : 4996)     // Using a deprecated function

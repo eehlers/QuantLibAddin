@@ -30,7 +30,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rplib", "..\reposit\rplib_v
 		{FA6EB34E-6BE0-46F5-AA4C-704B49BE63D2} = {FA6EB34E-6BE0-46F5-AA4C-704B49BE63D2}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swig", "..\..\swig\swig_vc9.vcproj", "{1BCA73BB-0CAD-4653-89E0-99C04C989CEC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swig", "..\swig\swig_vc9.vcproj", "{1BCA73BB-0CAD-4653-89E0-99C04C989CEC}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "apr", "..\log4cxx\msvc\apr_vc9.vcproj", "{A5EEE6C6-C626-4F88-B0BD-551BE9C577C5}"
 EndProject

@@ -1,5 +1,5 @@
 
-SWIG_ROOT_DIR=..\..\..\swig
+SWIG_ROOT_DIR=..\..\swig
 # This variable is set in the VC project properties.
 #SWIG_BUILD_DIR=vc90
 SWIG_EXE=$(SWIG_ROOT_DIR)\build\$(SWIG_BUILD_DIR)\Win32\Release\swig.exe

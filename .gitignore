@@ -14,3 +14,8 @@ stamp-h1
 *.suo
 .time-stamp
 build
+*.user
+AddinCSharp/bin/
+AddinCpp/lib/
+lib
+.deps

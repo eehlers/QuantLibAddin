@@ -18,6 +18,7 @@ ENUMERATED_TYPE(QuantLib::DateGeneration::Rule)
 ENUMERATED_TYPE(QuantLibAddin::SwapIndex::FixingType)
 ENUMERATED_TYPE(QuantLib::VanillaSwap::Type)
 ENUMERATED_TYPE(QuantLib::Pillar::Choice)
+ENUMERATED_TYPE(QuantLib::Position::Type)
 
 // Enumerated classes.
 ENUMERATED_CLASS(QuantLib::Calendar)

@@ -23,6 +23,10 @@ namespace QuantLib {
     struct Pillar {
         enum Choice;
     };
+    
+    struct Position {
+        enum Type;
+    };
 
     class Date;
     class DayCounter;

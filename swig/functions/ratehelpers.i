@@ -99,9 +99,9 @@ namespace QuantLibAddin {
             const QuantLib::Calendar& calendar,
             QuantLib::BusinessDayConvention convention,
             bool endOfMonth,
-            const QuantLib::DayCounter& dayCounter,
-            QuantLib::Pillar::Choice pillarChoice,
-            QuantLib::Date customPillar);            
+            const QuantLib::DayCounter& dayCounter/*,
+            QuantLib::Pillar::Choice pillarChoice = Pillar::LastRelevantDate,
+            QuantLib::Date customPillar = Date()*/);            
     };
 
     class OISRateHelper : public RateHelper {

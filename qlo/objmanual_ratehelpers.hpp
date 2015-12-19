@@ -115,8 +115,8 @@ namespace QuantLibAddin {
             QuantLib::BusinessDayConvention convention,
             bool endOfMonth,
             const QuantLib::DayCounter& dayCounter,
-            QuantLib::Pillar::Choice pillarChoice,
-            QuantLib::Date customPillar,
+            //QuantLib::Pillar::Choice pillarChoice,
+            //QuantLib::Date customPillar,
             bool permanent);
     };
 

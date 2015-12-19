@@ -143,13 +143,13 @@ QuantLibAddin::FraRateHelper::FraRateHelper(
             QuantLib::BusinessDayConvention convention,
             bool endOfMonth,
             const QuantLib::DayCounter& dayCounter,
-            QuantLib::Pillar::Choice pillarChoice,
-            QuantLib::Date customPillar,
+            //QuantLib::Pillar::Choice pillarChoice,
+            //QuantLib::Date customPillar,
             bool permanent)
 : RateHelper(properties, permanent) {
     libraryObject_ = boost::shared_ptr<QuantLib::RateHelper>(new
         QuantLib::FraRateHelper(rate, periodToStart, lengthInMonths, fixingDays,
-        calendar, convention, endOfMonth, dayCounter, pillarChoice, customPillar));
+        calendar, convention, endOfMonth, dayCounter/*, pillarChoice, customPillar*/));
     quoteName_ = f(properties->getSystemProperty("Rate"));
 }
 

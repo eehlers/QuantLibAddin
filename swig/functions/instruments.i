@@ -6,6 +6,7 @@
 #include <ql/cashflow.hpp>
 #include <ql/instruments/swap.hpp>
 #include <ql/instruments/swaption.hpp>
+#include <ql/instruments/forwardrateagreement.hpp>
 %}
 
 %insert(instruments_addin_cpp) %{
@@ -14,6 +15,8 @@
 #include <qlo/obj_exercise.hpp>
 #include <qlo/objmanual_leg.hpp>
 #include <qlo/obj_vanillaswaps.hpp>
+#include <qlo/obj_termstructures.hpp>
+#include <qlo/objmanual_indexes.hpp>
 %}
 
 namespace QuantLib {
@@ -54,5 +57,18 @@ namespace QuantLib {
                  const boost::shared_ptr<Exercise>& exercise/*,
                  Settlement::Type delivery = Settlement::Physical*/);
     };
+    
+    class ForwardRateAgreement: public /*Forward*/Instrument {
+      public:
+        ForwardRateAgreement(const Date& valueDate,
+                             const Date& maturityDate,
+                             Position::Type type,
+                             Rate strikeForwardRate,
+                             Real notionalAmount,
+                             const boost::shared_ptr<IborIndex>& index,
+                             const Handle<YieldTermStructure>& discountCurve /*=
+                                                 Handle<YieldTermStructure>()*/);
+    };
+    
 }
 

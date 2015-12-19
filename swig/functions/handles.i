@@ -18,5 +18,14 @@ namespace QuantLibAddin {
         // is code which updates a property with that name in the value object.
         RelinkableHandleYieldTermStructure(const std::string &CurrentLink) {}
     };
+
+    class RelinkableHandleQuote {
+    public:
+        // attach processor RelinkableHandleProcessor to ctor RelinkableHandleQuote.
+        %processor(RelinkableHandleQuote, RelinkableHandleProcessor);
+        // NB: The parameter below must be called "CurrentLink" because there
+        // is code which updates a property with that name in the value object.
+        RelinkableHandleQuote(const std::string &CurrentLink) {}
+    };
 }
 

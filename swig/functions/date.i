@@ -4,6 +4,8 @@
 
 namespace QuantLibAddin {
 
+    QuantLib::Period periodEquivalent(const QuantLib::Period& p);
+
     std::vector<QuantLib::Date> IMMNextDates(
         const QuantLib::Date& d,
         const std::vector<bool>& mainCycle);

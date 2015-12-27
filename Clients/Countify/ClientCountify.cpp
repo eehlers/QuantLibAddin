@@ -3,9 +3,9 @@
 #include <iomanip>
 //#include "AddinCfy/init.hpp"
 
-#include <oh/ohdefines.hpp>
+#include <rp/rpdefines.hpp>
 #if defined BOOST_MSVC
-#include <oh/auto_link.hpp>
+#include <rp/auto_link.hpp>
 #include <ql/auto_link.hpp>
 #endif
 

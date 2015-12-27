@@ -1,2 +1,6 @@
 cfy_*.?pp
 cfy_mongo.txt
+.libs
+*.lo
+*.o
+*.la

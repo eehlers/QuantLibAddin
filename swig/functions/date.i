@@ -57,4 +57,25 @@ namespace QuantLib {
         
         static std::string nextCode(const Date& d);
     };
+
+    struct ASX {
+        %loop(isASXcode, date);
+        static bool isASXdate(const Date& date,
+                              bool mainCycle);
+
+        %loop(isASXcode, code);
+        static bool isASXcode(const std::string& code,
+                              bool mainCycle);
+
+        static std::string code(const Date& asxDate);
+
+        static Date date(const std::string& asxCode,
+                         const Date& referenceDate);
+
+        static Date nextDate(const Date& refDate,
+                             bool mainCycle);
+
+        static std::string nextCode(const Date& refDate,
+                                    bool mainCycle);
+    };
 }

@@ -134,6 +134,18 @@ namespace QuantLibAddin {
                     const QuantLib::Date&,
                     const QuantLib::Date&,
                     const QuantLib::Date&) const;
+
+    // qlASXIsASXcode
+
+    typedef     boost::_bi::bind_t<
+                bool,
+                bool (__cdecl*)(
+                    const std::string&,
+                    bool),
+                boost::_bi::list2<
+                    boost::arg<1>,
+                    boost::_bi::value<bool> > >
+                qlASXisASXcodeBind;
 }
 
 #endif

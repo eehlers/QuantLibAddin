@@ -1,12 +1,9 @@
 
-IDIR=/media/windows/linux/repos/reposit/install
-SWIG_DIR=/media/windows/linux/repos/reposit/swig
-
 ./configure \
     CXXFLAGS=-Wno-unused-local-typedefs \
-    --prefix=$IDIR \
-    --with-boost-include=$IDIR/include \
-    --with-boost-lib=$IDIR/lib \
-    --with-swig=$SWIG_DIR \
-    --enable-addin-cpp
+    --enable-addin-cpp \
+    --prefix=$REPOSIT_DIR/install \
+    --with-boost-include=$REPOSIT_DIR/install/include \
+    --with-boost-lib=$REPOSIT_DIR/install/lib \
+    --with-swig=$REPOSIT_DIR/swig
 

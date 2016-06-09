@@ -41,11 +41,11 @@ void initializeAddin() {
         QuantLibAddin::initializeAddin();
 
         // Set the evaluation date
-        QuantLibAddin::settingsSetEvaluationDate(QuantLib::Date(6, QuantLib::October, 2015));
+        //QuantLibAddin::settingsSetEvaluationDate(QuantLib::Date(6, QuantLib::October, 2015));
 
         // load the euro market
-        QuantLibAddin::SerializationFactory::instance().loadObject(
-                "/home/countify/", "GBP_market.xml", false, true);
+        //QuantLibAddin::SerializationFactory::instance().loadObject(
+        //        "/home/countify/", "GBP_market.xml", false, true);
 
         CFY_LOG_MESSAGE("initializeAddin", "initialization done.\n");
         initializationDone = true;

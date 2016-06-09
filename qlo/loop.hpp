@@ -5,6 +5,13 @@
 #define qla_loop_hpp
 
 #include <boost/bind.hpp>
+#include <boost/config.hpp>
+
+#if defined(BOOST_MSVC)
+#define CDECL __cdecl
+#else
+#define CDECL
+#endif
 
 namespace QuantLibAddin {
 
@@ -12,7 +19,7 @@ namespace QuantLibAddin {
 
     typedef     boost::_bi::bind_t<
                 QuantLib::Date,
-                QuantLib::Date (__cdecl*)(
+                QuantLib::Date (CDECL *)(
                     const std::string&,
                     const QuantLib::Date&),
                 boost::_bi::list2<
@@ -24,7 +31,7 @@ namespace QuantLibAddin {
 
     typedef     boost::_bi::bind_t<
                 std::string,
-                std::string (__cdecl*)(
+                std::string (CDECL *)(
                     const QuantLib::Date&),
                 boost::_bi::list1<
                     boost::arg<1> > >

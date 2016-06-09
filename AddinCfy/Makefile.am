@@ -22,18 +22,25 @@ endif
 
 if BUILD_CFY
 libCountifyQuantLibAddin_la_SOURCES = \
+    cfy_calendars.cpp \
+    cfy_couponvectors.cpp \
+    cfy_date.cpp \
     cfy_exercise.cpp \
+    cfy_handles.cpp \
+    cfy_indexes.cpp \
     cfy_instruments.cpp \
-    cfy_mongo.txt \
+    cfy_leg.cpp \
+    cfymanual_reposit.cpp \
     cfy_payoffs.cpp \
+    cfy_prices.cpp \
     cfy_pricingengines.cpp \
     cfy_processes.cpp \
     cfy_quote.cpp \
+    cfy_schedule.cpp \
     cfy_settings.cpp \
     cfy_termstructures.cpp \
     cfy_utilities.cpp \
     cfy_volatilities.cpp \
-    GBP_market.xml \
     init.cpp \
     utils.cpp
 endif

@@ -27,6 +27,7 @@ namespace QuantLibAddin {
                     QuantLib::Real Value,
                     QuantLib::Real tickValue);
 
+        %generate(countify, setValue);
         QuantLib::Real setValue(QuantLib::Real Value);
     };
 
@@ -39,11 +40,13 @@ namespace QuantLibAddin {
 
     class LastFixingQuote : public Quote {
       public:
+        %generate(countify, LastFixingQuote);
         LastFixingQuote(const boost::shared_ptr<QuantLib::Index>& index);
     };
 
     class FuturesConvAdjustmentQuote : public Quote {
       public:
+        %generate(countify, FuturesConvAdjustmentQuote);
         FuturesConvAdjustmentQuote(const boost::shared_ptr<QuantLib::IborIndex>& index,
                                    const std::string& immCode,
                                    const QuantLib::Handle<QuantLib::Quote>& futuresQuote,
@@ -53,6 +56,7 @@ namespace QuantLibAddin {
 
      class CompositeQuote : public Quote {
       public:
+        %generate(countify, CompositeQuote);
         CompositeQuote(
                     const QuantLib::Handle<QuantLib::Quote>& element1,
                     const QuantLib::Handle<QuantLib::Quote>& element2,

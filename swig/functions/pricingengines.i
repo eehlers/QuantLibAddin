@@ -1,5 +1,6 @@
 
 %group(pricingengines);
+%groupCaption(Pricing Engines);
 
 %insert(pricingengines_library_hpp) %{
 #include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>
@@ -25,7 +26,8 @@ namespace QuantLib {
         %generate(c#, AnalyticEuropeanEngine);
         %generate(countify, AnalyticEuropeanEngine);
         AnalyticEuropeanEngine(
-            const boost::shared_ptr<GeneralizedBlackScholesProcess>& process);
+            const boost::shared_ptr<GeneralizedBlackScholesProcess>& process    //!< process ID
+        );
     };
 
     class DiscountingSwapEngine : public PricingEngine {
@@ -33,36 +35,41 @@ namespace QuantLib {
         %generate(c#, DiscountingSwapEngine);
         %generate(countify, DiscountingSwapEngine);
         DiscountingSwapEngine(
-               const Handle<YieldTermStructure>& discountCurve,
-               bool includeSettlementDateFlows,
-               Date settlementDate,
-               Date npvDate);
+            const Handle<YieldTermStructure>& discountCurve,    //!< discounting yield term structure object ID.
+            bool includeSettlementDateFlows,                    //!< TRUE if cashflows paid at the settlement date must be taken into account.
+            Date settlementDate,                                //!< cashflows before this date are not taken into account. If missing it is assumed equal to the discounting yield term structure's reference date.
+            Date npvDate                                        //!< all cashflows are discounted to this date. If missing it is assumed equal to the discounting yield term structure's reference date.
+        );
     };
     
     class JamshidianSwaptionEngine : public PricingEngine {
       public:
         %generate(c#, JamshidianSwaptionEngine);
         JamshidianSwaptionEngine(
-                         const boost::shared_ptr<OneFactorAffineModel>& model/*,
-                         const Handle<YieldTermStructure>& termStructure =
-                                                 Handle<YieldTermStructure>()*/);
+            const boost::shared_ptr<OneFactorAffineModel>& model    //!< Model object ID.
+            /*,const Handle<YieldTermStructure>& termStructure =
+                Handle<YieldTermStructure>()*/
+        );
     };
     
     class TreeSwaptionEngine : public PricingEngine {
       public:
         %generate(c#, TreeSwaptionEngine);
-        TreeSwaptionEngine(const boost::shared_ptr<ShortRateModel>& x,
-                           Size timeSteps/*,
-                           const Handle<YieldTermStructure>& termStructure =
-                                                 Handle<YieldTermStructure>()*/);    
+        TreeSwaptionEngine(
+            const boost::shared_ptr<ShortRateModel>& x,             //!< Model object ID.
+            Size timeSteps                                          //!< Number of time steps.
+            /*,const Handle<YieldTermStructure>& termStructure =
+                Handle<YieldTermStructure>()*/);    
     };
     
     class G2SwaptionEngine : public PricingEngine {
       public:
         %generate(c#, G2SwaptionEngine);
-        G2SwaptionEngine(const boost::shared_ptr<G2>& model,
-                         Real range,
-                         Size intervals);
+        G2SwaptionEngine(
+            const boost::shared_ptr<G2>& model,                     //!< G2 Model object ID.
+            Real range,                                             //!< Range.
+            Size intervals                                          //!< Intervals.
+        );
     };
     
 }

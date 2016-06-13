@@ -98,6 +98,10 @@ AC_CHECK_FILE([${swig_path}/preinst-swig], [],
 AC_ARG_VAR(swig_dir, path to SWIG)
 AC_SUBST(swig_dir, [${swig_path}])
 
+# Check for tools needed for building documentation
+
+AC_PATH_PROG([DOXYGEN], [doxygen])
+
 # The path to the =countify SDK.  Required if --enable-addin-cfy is specified.
 
 AC_ARG_WITH([countify],
@@ -150,6 +154,7 @@ fi
 AC_CONFIG_FILES([
     Makefile
     m4/Makefile
+    docstrings/Makefile
     swig/Makefile
     qlo/Makefile
     qlo/coercions/Makefile
@@ -171,6 +176,7 @@ AC_CONFIG_FILES([
     Clients/Makefile
     Clients/Cpp/Makefile
     Clients/Countify/Makefile
+    Docs/Makefile
 ])
 
 AC_OUTPUT

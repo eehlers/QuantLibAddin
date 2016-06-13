@@ -8,6 +8,7 @@ namespace QuantLib {
     typedef double Spread;
     typedef double Volatility;
     typedef double DiscountFactor;
+    typedef double Time;
 
     class Option {
         public:

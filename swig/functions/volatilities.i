@@ -1,5 +1,6 @@
 
 %group(volatilities);
+%groupCaption(Volatilities);
 
 %insert(volatilities_library_hpp) %{
 #include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>
@@ -15,10 +16,12 @@ namespace QuantLib {
         %generate(c++, BlackConstantVol);
         %generate(c#, BlackConstantVol);
         %generate(countify, BlackConstantVol);
-        BlackConstantVol(const Date& referenceDate,
-                         const Calendar& calendar,
-                         Volatility volatility,
-                         const DayCounter& dayCounter);
+        BlackConstantVol(
+            const Date& referenceDate,      //!< settlement date.
+            const Calendar& calendar,       //!< holiday calendar (e.g. TARGET).
+            Volatility volatility,          //!< volatility.
+            const DayCounter& dayCounter    //!< DayCounter ID.
+        );
     };
 }
 

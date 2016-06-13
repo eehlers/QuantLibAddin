@@ -1,5 +1,6 @@
 
 %group(utilities);
+%groupCaption(Utilities);
 %override;
 
 %insert(utilities_addin_cpp) %{
@@ -11,6 +12,7 @@ namespace QuantLibAddin {
     %generate(c++, version);
     %generate(c#, version);
     %generate(countify, version);
+    //! returns the version number of QuantLib.
     std::string version();
 
     %generate(c++, ObjectCount);

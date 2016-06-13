@@ -34,11 +34,14 @@ SWIG_FILES := \
     typemaps/addinexcel.i \
     typemaps/all.i \
     typemaps/apply.i \
+    typemaps/doxygen.i \
     typemaps/handles.i \
     typemaps/libraryobjects.i \
     typemaps/serialization.i \
     typemaps/shared.i \
     typemaps/valueobjects.i
+
+DOCSTRINGS_FILE=../docstrings/docstrings.txt
 
 EXTRA_DIST = \
     $(SWIG_FILES) \
@@ -65,10 +68,12 @@ endif
 #SWIG_ARGS += -genxll
 SWIG_ARGS += quantlib.i
 
+all: SWIG
+
 .PHONY: SWIG
 SWIG: .time-stamp
 
-.time-stamp: $(SWIG_FILES) $(SWIG_BIN) $(SWIG_SWG)
+.time-stamp: $(SWIG_FILES) $(SWIG_BIN) $(SWIG_SWG) $(DOCSTRINGS_FILE)
 	$(SWIG_CMD) $(SWIG_DEBUG) $(SWIG_ARGS)
 	touch .time-stamp
 

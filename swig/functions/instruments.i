@@ -1,5 +1,6 @@
 
 %group(instruments);
+%groupCaption(Instruments);
 
 %insert(instruments_library_hpp) %{
 #include <ql/instruments/vanillaoption.hpp>
@@ -26,11 +27,16 @@ namespace QuantLib {
         %generate(c++, setPricingEngine);
         %generate(c#, setPricingEngine);
         %generate(countify, setPricingEngine);
-        void setPricingEngine(const boost::shared_ptr<PricingEngine>& engine);
+        //!< Sets a new pricing engine to the given Instrument object.
+        void setPricingEngine(
+            //!< PricingEngine object ID.
+            const boost::shared_ptr<PricingEngine>& engine
+        );
 
         %generate(c++, NPV);
         %generate(c#, NPV);
         %generate(countify, NPV);
+        //! Returns the NPV for the given Instrument object.
         Real NPV();
     };
 
@@ -39,35 +45,43 @@ namespace QuantLib {
         %generate(c++, VanillaOption);
         %generate(c#, VanillaOption);
         %generate(countify, VanillaOption);
-        VanillaOption(const boost::shared_ptr<StrikedTypePayoff>& payoff,
-                      const boost::shared_ptr<Exercise>& exercise);
+        VanillaOption(
+            const boost::shared_ptr<StrikedTypePayoff>& payoff,     //!< StrikedTypePayoff object ID.
+            const boost::shared_ptr<Exercise>& exercise             //!< Exercise object ID.
+        );
     };
 
     class Swap : public Instrument {
       public:
         %generate(countify, Swap);
-        Swap(const std::vector<Leg>& legs,
-            const std::vector<bool>& payer);
+        Swap(
+            const std::vector<Leg>& legs,       //!< leg object IDs.
+            const std::vector<bool>& payer      //!< TRUE for payed leg.
+        );
     };
     
     class Swaption : public /*Option*/Instrument {
       public:
         %generate(c#, Swaption);
-        Swaption(const boost::shared_ptr<VanillaSwap>& swap,
-                 const boost::shared_ptr<Exercise>& exercise/*,
-                 Settlement::Type delivery = Settlement::Physical*/);
+        Swaption(
+            const boost::shared_ptr<VanillaSwap>& swap,     //!< underlying (vanilla) swap object ID.
+            const boost::shared_ptr<Exercise>& exercise     //!< Exercise object ID.
+            /*,Settlement::Type delivery = Settlement::Physical*/
+        );
     };
     
     class ForwardRateAgreement: public /*Forward*/Instrument {
       public:
-        ForwardRateAgreement(const Date& valueDate,
-                             const Date& maturityDate,
-                             Position::Type type,
-                             Rate strikeForwardRate,
-                             Real notionalAmount,
-                             const boost::shared_ptr<IborIndex>& index,
-                             const Handle<YieldTermStructure>& discountCurve /*=
-                                                 Handle<YieldTermStructure>()*/);
+        ForwardRateAgreement(
+            const Date& valueDate,                              //!< Value date.
+            const Date& maturityDate,                           //!< Maturity date.
+            Position::Type type,                                //!< Instrument position (Long = purchase, Short = sale).
+            Rate strikeForwardRate,                             //!< Strike rate.
+            Real notionalAmount,                                //!< Notional amount.
+            const boost::shared_ptr<IborIndex>& index,          //!< Underlying index object ID.
+            const Handle<YieldTermStructure>& discountCurve     //!< discounting YieldTermStructure object ID.
+            /*,Handle<YieldTermStructure>()*/
+            );
     };
     
 }

@@ -1,5 +1,6 @@
 
 %group(processes);
+%groupCaption(Processes);
 
 %insert(processes_library_hpp) %{
 #include <ql/processes/blackscholesprocess.hpp>

@@ -1,5 +1,5 @@
 
-./configure \
+DOXYGEN=/home/erik/doxygen/doxygen-1.8.7/bin/doxygen ./configure \
     CXXFLAGS=-Wno-unused-local-typedefs \
     --enable-addin-cpp \
     --prefix=$REPOSIT_DIR/install \

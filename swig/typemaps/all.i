@@ -8,6 +8,7 @@
 %include addinexcel.i
 %include addincountify.i
 %include handles.i
+%include doxygen.i
 
 // This one must be last.
 %include apply.i

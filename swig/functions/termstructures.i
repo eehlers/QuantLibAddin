@@ -1,5 +1,6 @@
 
 %group(termstructures);
+%groupCaption(Term Structures);
 
 %insert(termstructures_library_hpp) %{
 #include <ql/termstructures/yield/flatforward.hpp>
@@ -13,14 +14,19 @@ namespace QuantLib {
 
     class Extrapolator {
       public:
-        void enableExtrapolation(bool b);
+        //! Sets the enable extrapolation flag to the given Extrapolator object.
+        void enableExtrapolation(
+            bool b      //!< global extrapolation flag.
+        );
     };
 
     class TermStructure : public Extrapolator {
       public:
         %generate(c++, referenceDate);
         %generate(countify, referenceDate);
+        //! Returns the reference date for the given TermStructure object.
         Date referenceDate();
+        //! Returns the max date for the given TermStructure object.
         Date maxDate();
     };
 
@@ -31,9 +37,11 @@ namespace QuantLib {
         // For purposes of backward compatibility we use the %alias directive to export this function twice,
         // once under its old name (qlYieldTSDiscount) and once under its new name (qlYieldTermStructureDiscount)
         %alias(discount, YieldTSDiscount);
+        //! Returns a discount factor from the given YieldTermStructure object.
         DiscountFactor discount(
-            const Date& d,
-            bool extrapolate);
+            const Date& d,      //!< vector of dates.
+            bool extrapolate    //!< TRUE allows extrapolation.
+        );
     };
 
     class FlatForward : public YieldTermStructure {
@@ -41,9 +49,11 @@ namespace QuantLib {
         %generate(c++, FlatForward);
         %generate(c#, FlatForward);
         %generate(countify, FlatForward);
-        FlatForward(const Date& referenceDate,
-                    Rate forward,
-                    const DayCounter& dayCounter);
+        FlatForward(
+            const Date& referenceDate,
+            Rate forward,
+            const DayCounter& dayCounter
+        );
     };
 }
 

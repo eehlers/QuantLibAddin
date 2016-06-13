@@ -1,0 +1,38 @@
+
+QLA_INPUTS = ..\swig\functions\*.i
+
+# If Python is installed on your machine so that .py files are associated with
+# the Python executable, then the calls below to Python should work OK, even if
+# the PYTHON variable is null.
+#
+# Otherwise, you might need to set the PYTHON variable equal to the location of
+# the Python executable on your machine, e.g:
+#PYTHON=C:\Python27\python.exe
+
+# You might also need to specify your path to doxygen.
+
+DOXYGEN=doxygen.exe
+
+ALL : docstrings.txt
+
+docstrings-ql.txt:
+    $(DOXYGEN) Doxyfile.ql
+    $(PYTHON) docstrings.py xml-ql docstrings-ql.txt
+
+docstrings-qla.txt: $(QLA_INPUTS)
+    $(DOXYGEN) Doxyfile.qla
+    $(PYTHON) docstrings.py xml-qla docstrings-qla.txt
+
+docstrings.txt: docstrings-ql.txt docstrings-qla.txt
+    copy docstrings-ql.txt docstrings.txt
+    echo. >> docstrings.txt
+    type docstrings-qla.txt >> docstrings.txt
+
+CLEAN :
+    -@ if EXIST $(BUILD_DIR)\* del /f /q $(BUILD_DIR)\*
+    -@ if EXIST xml-ql rmdir /s /q xml-ql
+    -@ if EXIST xml-qla rmdir /s /q xml-qla
+    -@ if EXIST docstrings-ql.txt del /f /q docstrings-ql.txt
+    -@ if EXIST docstrings-qla.txt del /f /q docstrings-qla.txt
+    -@ if EXIST docstrings.txt del /f /q docstrings.txt
+

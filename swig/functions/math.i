@@ -1,5 +1,6 @@
 
 %group(math);
+%groupCaption(Math);
 
 %insert(math_library_hpp) %{
 #include <ql/math/optimization/levenbergmarquardt.hpp>
@@ -22,11 +23,13 @@ namespace QuantLib {
     class EndCriteria {
       public:
         %generate(c#, EndCriteria);
-        EndCriteria(Size maxIterations,
-                    Size maxStationaryStateIterations,
-                    Real rootEpsilon,
-                    Real functionEpsilon,
-                    Real gradientNormEpsilon);
+        EndCriteria(
+            Size maxIterations,                     //!< max number of iterations.
+            Size maxStationaryStateIterations,      //!< max number of iterations in a stationary state.
+            Real rootEpsilon,                       //!< tolerance on the root value.
+            Real functionEpsilon,                   //!< tolerance on the function value.
+            Real gradientNormEpsilon                //!< tolerance on the function gradient norm value.
+        );
     };
 }
 

@@ -1,5 +1,6 @@
 
 %group(payoffs);
+%groupCaption(Payoffs);
 
 %insert(payoffs_library_hpp) %{
 #include <ql/instruments/payoffs.hpp>
@@ -14,8 +15,10 @@ namespace QuantLib {
         %generate(c++, PlainVanillaPayoff);
         %generate(c#, PlainVanillaPayoff);
         %generate(countify, PlainVanillaPayoff);
-        PlainVanillaPayoff(Option::Type optionType,
-                           Real strike);
+        PlainVanillaPayoff(
+            Option::Type optionType,    //!< option type.
+            Real strike                 //!< strike.
+        );
     };
 }
 

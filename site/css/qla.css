@@ -1,0 +1,53 @@
+
+.navbar-static-top {
+    background-color: #91d393;
+}
+
+.navbar .nav > li > a {
+color: white;
+}
+
+.navbar .nav > li > a:hover {
+  color: #1D6700 ;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+    line-height: 70px;
+    height: 70px;
+    padding-top: 0;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #91d393;
+}
+
+h1 {
+    color: #1D6700;
+}
+
+h2 {
+    color: #1D6700;
+}
+
+.btn-primary {
+    background: #91d393;
+    border-color: #91d393;
+    color: #ffffff;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #1D6700;
+    border-color: #1D6700;
+}

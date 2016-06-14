@@ -25,7 +25,6 @@ docstrings-qla.txt: $(QLA_INPUTS)
 
 docstrings.txt: docstrings-ql.txt docstrings-qla.txt
     copy docstrings-ql.txt docstrings.txt
-    echo. >> docstrings.txt
     type docstrings-qla.txt >> docstrings.txt
 
 CLEAN :

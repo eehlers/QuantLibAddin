@@ -18,7 +18,7 @@ this_include_HEADERS = \
     vo_piecewiseyieldcurve.hpp \
     vo_pricingengines.hpp \
     vo_processes.hpp \
-    vo_quote.hpp \
+    vo_quotes.hpp \
     vo_ratehelpers.hpp \
     vo_schedule.hpp \
     vo_termstructures.hpp \
@@ -39,7 +39,7 @@ libValueObjects_la_SOURCES = \
     vo_piecewiseyieldcurve.cpp \
     vo_pricingengines.cpp \
     vo_processes.cpp \
-    vo_quote.cpp \
+    vo_quotes.cpp \
     vo_ratehelpers.cpp \
     vo_schedule.cpp \
     vo_termstructures.cpp \

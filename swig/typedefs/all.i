@@ -19,6 +19,7 @@ namespace QuantLib {
     enum BusinessDayConvention;
     enum Compounding;
     enum Frequency;
+    enum SensitivityAnalysis;
 
     struct DateGeneration {
         enum Rule;

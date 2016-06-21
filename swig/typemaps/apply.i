@@ -22,6 +22,7 @@ ENUMERATED_TYPE(QuantLib::VanillaSwap::Type)
 ENUMERATED_TYPE(QuantLib::Pillar::Choice)
 ENUMERATED_TYPE(QuantLib::Position::Type)
 ENUMERATED_TYPE(QuantLib::Duration::Type)
+ENUMERATED_TYPE(QuantLib::SensitivityAnalysis)
 
 // Enumerated classes.
 ENUMERATED_CLASS(QuantLib::Calendar)

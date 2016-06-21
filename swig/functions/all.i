@@ -18,7 +18,7 @@
 %include prices.i
 %include pricingengines.i
 %include processes.i
-%include quote.i
+%include quotes.i
 %include ratehelpers.i
 %include schedule.i
 %include settings.i

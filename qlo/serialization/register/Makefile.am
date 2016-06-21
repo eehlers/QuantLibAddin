@@ -19,7 +19,7 @@ noinst_HEADERS = \
     serialization_piecewiseyieldcurve.hpp \
     serialization_pricingengines.hpp \
     serialization_processes.hpp \
-    serialization_quote.hpp \
+    serialization_quotes.hpp \
     serialization_ratehelpers.hpp \
     serialization_register.hpp \
     serialization_schedule.hpp \
@@ -41,7 +41,7 @@ libRegister_la_SOURCES = \
     serialization_piecewiseyieldcurve.cpp \
     serialization_pricingengines.cpp \
     serialization_processes.cpp \
-    serialization_quote.cpp \
+    serialization_quotes.cpp \
     serialization_ratehelpers.cpp \
     serialization_schedule.cpp \
     serialization_termstructures.cpp \

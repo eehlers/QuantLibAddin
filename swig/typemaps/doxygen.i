@@ -11,7 +11,8 @@
 %typemap(rp_tm_dox_rtdc) std::vector<QuantLib::Real> "vector<double> returnValue";
 %typemap(rp_tm_dox_rtdc) std::vector<QuantLib::Real> & "vector<double> returnValue";
 %typemap(rp_tm_dox_rtdc) std::vector<QuantLib::Date> "vector<long> returnValue";
-%typemap(rp_tm_dox_rtdc) std::vector< std::vector< reposit::property_t > > "vector<vector<any> > returnValue";
+%typemap(rp_tm_dox_rtdc) std::vector< std::vector< QuantLib::Real > > "vector<vector<double> > returnValue";
+
 
 %typemap(rp_tm_dox_mbvr) QuantLib::Date "long $1_name";
 %typemap(rp_tm_dox_mbvr) QuantLib::Date & "long $1_name";
@@ -32,4 +33,4 @@
 %typemap(rp_tm_dox_mbvr) std::vector< boost::shared_ptr< QuantLibAddin::Bond > > & "vector<string> $1_name";
 %typemap(rp_tm_dox_mbvr) std::vector< boost::shared_ptr< QuantLibAddin::Leg > > & "vector<string> $1_name";
 %typemap(rp_tm_dox_mbvr) std::vector< boost::shared_ptr< QuantLib::InterestRate > > & "vector<string> $1_name";
-
+%typemap(rp_tm_dox_mbvr) std::vector< std::vector< QuantLib::Handle< QuantLib::Quote > > > const & "vector<vector<string>> $1_name";

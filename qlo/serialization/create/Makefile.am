@@ -19,7 +19,7 @@ include_HEADERS = \
     create_piecewiseyieldcurve.hpp \
     create_pricingengines.hpp \
     create_processes.hpp \
-    create_quote.hpp \
+    create_quotes.hpp \
     create_ratehelpers.hpp \
     create_schedule.hpp \
     create_termstructures.hpp \
@@ -40,7 +40,7 @@ libCreate_la_SOURCES = \
     create_piecewiseyieldcurve.cpp \
     create_pricingengines.cpp \
     create_processes.cpp \
-    create_quote.cpp \
+    create_quotes.cpp \
     create_ratehelpers.cpp \
     create_schedule.cpp \
     create_termstructures.cpp \

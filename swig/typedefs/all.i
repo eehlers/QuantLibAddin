@@ -2,6 +2,7 @@
 namespace QuantLib {
 
     typedef int Natural;
+    typedef long BigInteger;
     typedef std::size_t Size;
     typedef double Real;
     typedef double Rate;
@@ -16,6 +17,7 @@ namespace QuantLib {
     };
 
     enum BusinessDayConvention;
+    enum Compounding;
     enum Frequency;
 
     struct DateGeneration {
@@ -24,8 +26,12 @@ namespace QuantLib {
     struct Pillar {
         enum Choice;
     };
-    
+
     struct Position {
+        enum Type;
+    };
+    
+    struct Duration {
         enum Type;
     };
 
@@ -33,6 +39,7 @@ namespace QuantLib {
     class DayCounter;
     class Period;
     class Quote;
+    class Calendar;
 
     class OneFactorAffineModel;
     class ShortRateModel;
@@ -47,3 +54,6 @@ namespace QuantLib {
     template <class T> class Handle;
 }
 
+namespace QuantLibAddin {
+    class Bond;
+}

@@ -25,7 +25,7 @@ namespace QuantLib {
                  const Date& nextToLastDate                         //!< stub date, if there an irregular final period.
         );
         //! returns the dates for the given Schedule object.
-         std::vector<Date> dates();
+        std::vector<Date> dates();
      };
 }
 

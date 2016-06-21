@@ -14,6 +14,7 @@
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Leg> const & "const std::vector<std::string>&";
 %typemap(rp_tm_vob_parm) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "const std::vector<std::string>&";
 %typemap(rp_tm_vob_parm) std::vector<boost::shared_ptr<QuantLib::RateHelper > > const & "const std::vector<std::string>&";
+%typemap(rp_tm_vob_parm) std::vector< boost::shared_ptr< QuantLib::InterestRate > > const & "const std::vector<std::string>&";
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Handle<QuantLib::Quote > > const & "const std::vector<reposit::property_t>&";
 
 // rp_tm_vob_mbvr - Value Object class member variables
@@ -27,6 +28,7 @@
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Date > const & "std::vector<reposit::property_t> $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "std::vector<std::string> $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<boost::shared_ptr<QuantLib::RateHelper > > const & "std::vector<std::string> $1_name_";
+%typemap(rp_tm_vob_mbvr) std::vector< boost::shared_ptr< QuantLib::InterestRate > > const & "std::vector<std::string> $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Handle<QuantLib::Quote > > const & "std::vector<reposit::property_t> $1_name_";
 
 // rp_tm_vob_srmv - code to serialize a Value Object member variable
@@ -46,5 +48,6 @@
 %typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Date> const & "reposit::vector::convert2<reposit::property_t>(value, nameUpper)";
 %typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "reposit::vector::convert2<std::string>(value, nameUpper)";
 %typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLib::RateHelper> > const & "reposit::vector::convert2<std::string>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector< boost::shared_ptr< QuantLib::InterestRate > > const & "reposit::vector::convert2<std::string>(value, nameUpper)";
 %typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & "reposit::vector::convert2<reposit::property_t>(value, nameUpper)";
 

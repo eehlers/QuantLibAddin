@@ -6,9 +6,11 @@
 %apply rp_tp_string { QuantLib::Schedule & };
 %apply rp_tp_string { QuantLib::OptimizationMethod & };
 %apply rp_tp_string { QuantLib::EndCriteria & };
+%apply rp_tp_string { QuantLib::Leg & };
 
 // Enumerated types.
 ENUMERATED_TYPE(QuantLib::Currency)
+ENUMERATED_TYPE(QuantLib::Compounding)
 ENUMERATED_TYPE(QuantLib::Option::Type)
 ENUMERATED_TYPE(QuantLib::Frequency)
 ENUMERATED_TYPE(QuantLib::BusinessDayConvention)
@@ -19,6 +21,7 @@ ENUMERATED_TYPE(QuantLibAddin::SwapIndex::FixingType)
 ENUMERATED_TYPE(QuantLib::VanillaSwap::Type)
 ENUMERATED_TYPE(QuantLib::Pillar::Choice)
 ENUMERATED_TYPE(QuantLib::Position::Type)
+ENUMERATED_TYPE(QuantLib::Duration::Type)
 
 // Enumerated classes.
 ENUMERATED_CLASS(QuantLib::Calendar)
@@ -45,6 +48,7 @@ OBJECT_WRAPPER(QuantLibAddin::SwaptionHelper, QuantLib::SwaptionHelper)
 OBJECT_WRAPPER(QuantLibAddin::CalibratedModel, QuantLib::CalibratedModel)
 OBJECT_WRAPPER(QuantLibAddin::RateHelper, QuantLib::RateHelper)
 OBJECT_WRAPPER(QuantLibAddin::Extrapolator, QuantLib::Extrapolator)
+OBJECT_WRAPPER(QuantLibAddin::FloatingRateCouponPricer, QuantLib::FloatingRateCouponPricer)
 
 // QuantLib Handles.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)

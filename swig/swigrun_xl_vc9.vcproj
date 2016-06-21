@@ -54,6 +54,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\assetswap.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\bonds.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\calendars.i"
 					>
 				</File>
@@ -175,6 +183,10 @@
 				</File>
 				<File
 					RelativePath=".\typemaps\apply.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\doxygen.i"
 					>
 				</File>
 				<File

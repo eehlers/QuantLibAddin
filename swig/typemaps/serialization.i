@@ -12,6 +12,12 @@
     QuantLibAddin::cppToLibrary($1_name_str, $1_name);
 %}
 
+%typemap(rp_tm_scr_cnvt) QuantLib::Date const & %{
+    QuantLib::Date $1_name =
+        reposit::convert2<QuantLib::Date>(
+            valueObject->getProperty("$1_name"));
+%}
+
 %typemap(rp_tm_scr_cnvt) QuantLib::Schedule const & %{
     std::string $1_name_str =
         reposit::convert2<std::string>(valueObject->getProperty("$1_name"));
@@ -21,10 +27,13 @@
     valueObject->processPrecedentID($1_name_str);
 %}
 
-%typemap(rp_tm_scr_cnvt) QuantLib::Date const & %{
-    QuantLib::Date $1_name =
-        reposit::convert2<QuantLib::Date>(
-            valueObject->getProperty("$1_name"));
+%typemap(rp_tm_scr_cnvt) QuantLib::Leg const & %{
+    std::string $1_name_str =
+        reposit::convert2<std::string>(valueObject->getProperty("$1_name"));
+    RP_GET_REFERENCE($1_name_obj, $1_name_str,
+        QuantLibAddin::Leg, QuantLib::Leg)
+    const QuantLib::Leg &$1_name = *$1_name_obj;
+    valueObject->processPrecedentID($1_name_str);
 %}
 
 %typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
@@ -103,6 +112,16 @@
         valueObject->processPrecedentID(*i);
     std::vector<boost::shared_ptr<QuantLib::RateHelper> > $1_name =
         reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);
+%}
+
+%typemap(rp_tm_scr_cnvt) std::vector<boost::shared_ptr<QuantLib::InterestRate> > const & %{
+    std::vector<std::string> $1_name_vec =
+        reposit::vector::convert2<std::string>(valueObject->getProperty("$1_name"), "$1_name");
+    for (std::vector<std::string>::const_iterator i = $1_name_vec.begin();
+            i != $1_name_vec.end(); ++i)
+        valueObject->processPrecedentID(*i);
+    std::vector<boost::shared_ptr<QuantLib::InterestRate> > $1_name =
+        reposit::getLibraryObjectVector<QuantLibAddin::InterestRate, QuantLib::InterestRate>($1_name_vec);
 %}
 
 %typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & %{

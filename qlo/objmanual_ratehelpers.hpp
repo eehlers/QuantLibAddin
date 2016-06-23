@@ -1,16 +1,60 @@
+/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
-#ifndef obj_ratehelpers_hpp
-#define obj_ratehelpers_hpp
+/*
+ Copyright (C) 2005, 2006, 2007 Eric Ehlers
+ Copyright (C) 2005 Aurelien Chanudet
+ Copyright (C) 2005 Plamen Neykov
+ Copyright (C) 2006, 2007, 2008, 2009, 2012, 2015 Ferdinando Ametrano
+ Copyright (C) 2007 Marco Bianchetti
+ Copyright (C) 2015 Maddalena Zanzi
 
-#include <string>
+ This file is part of QuantLib, a free-software/open-source library
+ for financial quantitative analysts and developers - http://quantlib.org/
+
+ QuantLib is free software: you can redistribute it and/or modify it
+ under the terms of the QuantLib license.  You should have received a
+ copy of the license along with this program; if not, please email
+ <quantlib-dev@lists.sf.net>. The license is also available online at
+ <http://quantlib.org/license.shtml>.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the license for more details.
+*/
+
+#ifndef qla_ratehelpers_hpp
+#define qla_ratehelpers_hpp
+
 #include <rp/libraryobject.hpp>
-#include <rp/valueobject.hpp>
-//#include <boost/shared_ptr.hpp>
-//#include <ql/quotes/simplequote.hpp>
-//#include <ql/quotes/lastfixingquote.hpp>
-//#include <ql/quotes/futuresconvadjustmentquote.hpp>
-//#include <ql/math/comparison.hpp>
-#include <ql/termstructures/yield/oisratehelper.hpp>
+
+#include <ql/types.hpp>
+#include <ql/time/businessdayconvention.hpp>
+#include <ql/time/frequency.hpp>
+#include <ql/instruments/futures.hpp>
+#include <ql/termstructures/bootstraphelper.hpp>
+
+namespace QuantLib {
+    class YieldTermStructure;
+
+    template<class TS>
+    class BootstrapHelper;
+
+    typedef BootstrapHelper<YieldTermStructure> RateHelper;
+
+    class Quote;
+    class Period;
+    class Calendar;
+    class DayCounter;
+    class IborIndex;
+    class OvernightIndex;
+    class SwapIndex;
+    class Schedule;
+    class Date;
+    class Bond;
+    template <class T>
+    class Handle;
+
+}
 
 namespace QuantLibAddin {
 
@@ -23,8 +67,9 @@ namespace QuantLibAddin {
         };
         std::string quoteName() { return quoteName_; }
         QuantLib::Real quoteValue();
-        QuantLib::Date earliestDate();
-        QuantLib::Date latestDate();
+        bool quoteIsValid();
+        //QuantLib::Date earliestDate();
+        //QuantLib::Date latestDate();
       protected:
         RP_LIB_CTOR(RateHelper, QuantLib::RateHelper);
         std::string quoteName_;
@@ -49,18 +94,36 @@ namespace QuantLibAddin {
             bool permanent);
     };
 
-    class FuturesRateHelper : 
-        public RateHelper {
-    public:
+    class FuturesRateHelper : public RateHelper {
+      public:
         FuturesRateHelper(
             const boost::shared_ptr<reposit::ValueObject>& properties,
-            // BEGIN typemap rp_tm_default
-            QuantLib::Handle< QuantLib::Quote > const &price,
+            const QuantLib::Handle<QuantLib::Quote>& price,
             QuantLib::Futures::Type type,
-            QuantLib::Date const &immDate,
-            boost::shared_ptr< QuantLib::IborIndex > const &iborIndex,
-            QuantLib::Handle< QuantLib::Quote > const &convAdj,
-            // END   typemap rp_tm_default
+            const QuantLib::Date& immDate,
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
+            const QuantLib::Handle<QuantLib::Quote>& convAdj,
+            bool permanent);
+        FuturesRateHelper(
+            const boost::shared_ptr<reposit::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& price,
+            QuantLib::Futures::Type type,
+            const QuantLib::Date& immDate,
+            QuantLib::Natural lengthInMonths,
+            const QuantLib::Calendar& calendar,
+            QuantLib::BusinessDayConvention convention,
+            bool endOfMonth,
+            const QuantLib::DayCounter& dayCounter,
+            const QuantLib::Handle<QuantLib::Quote>& convAdj,
+            bool permanent);
+        FuturesRateHelper(
+            const boost::shared_ptr<reposit::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& price,
+            QuantLib::Futures::Type type,
+            const QuantLib::Date& immDate,
+            const QuantLib::Date& endDate,
+            const QuantLib::DayCounter& dayCounter,
+            const QuantLib::Handle<QuantLib::Quote>& convAdj,
             bool permanent);
     };
 
@@ -94,14 +157,13 @@ namespace QuantLibAddin {
             bool permanent);
      };
 
-    class FraRateHelper : 
-        public RateHelper {
-    public:
+    class FraRateHelper : public RateHelper {
+      public:
         FraRateHelper(
             const boost::shared_ptr<reposit::ValueObject>& properties,
-            QuantLib::Handle< QuantLib::Quote > const &rate,
+            const QuantLib::Handle<QuantLib::Quote>& rate,
             QuantLib::Period periodToStart,
-            boost::shared_ptr< QuantLib::IborIndex > const &iborIndex,
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
             QuantLib::Pillar::Choice pillarChoice,
             QuantLib::Date customPillar,
             bool permanent);
@@ -115,40 +177,84 @@ namespace QuantLibAddin {
             QuantLib::BusinessDayConvention convention,
             bool endOfMonth,
             const QuantLib::DayCounter& dayCounter,
-            //QuantLib::Pillar::Choice pillarChoice,
-            //QuantLib::Date customPillar,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent);
     };
 
-    class OISRateHelper : 
-        public RateHelper {
-    public:
+    class OISRateHelper : public RateHelper {
+      public:
         OISRateHelper(
             const boost::shared_ptr<reposit::ValueObject>& properties,
-            // BEGIN typemap rp_tm_default
             QuantLib::Natural settlementDays,
-            QuantLib::Period const &tenor,
-            QuantLib::Handle< QuantLib::Quote > const &fixedRate,
-            boost::shared_ptr< QuantLib::OvernightIndex > const &overnightIndex,
-            QuantLib::Handle< QuantLib::YieldTermStructure > const &discount,
-            // END   typemap rp_tm_default
+            const QuantLib::Period& tenor, // swap maturity
+            const QuantLib::Handle<QuantLib::Quote>& fixedRate,
+            const boost::shared_ptr<QuantLib::OvernightIndex>& overnightIndex,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
             bool permanent);
     };
 
-    class DatedOISRateHelper : 
-        public RateHelper {
-    public:
+    class DatedOISRateHelper : public RateHelper {
+      public:
         DatedOISRateHelper(
             const boost::shared_ptr<reposit::ValueObject>& properties,
-            // BEGIN typemap rp_tm_default
-            QuantLib::Date const &startDate,
-            QuantLib::Date const &endDate,
-            QuantLib::Handle< QuantLib::Quote > const &fixedRate,
-            boost::shared_ptr< QuantLib::OvernightIndex > const &overnightIndex,
-            QuantLib::Handle< QuantLib::YieldTermStructure > const &discount,
-            // END   typemap rp_tm_default
+            const QuantLib::Date& startDate,
+            const QuantLib::Date& endDate,
+            const QuantLib::Handle<QuantLib::Quote>& fixedRate,
+            const boost::shared_ptr<QuantLib::OvernightIndex>& overnightIndex,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
             bool permanent);
     };
+
+    class BondHelper : public RateHelper {
+      public:
+        BondHelper(
+            const boost::shared_ptr<reposit::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& price,
+            const boost::shared_ptr<QuantLib::Bond>& bond,
+            const bool useCleanPrice,
+            bool permanent);
+    };
+
+    class FixedRateBondHelper : public BondHelper {
+      public:
+        FixedRateBondHelper(
+            const boost::shared_ptr<reposit::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& price,
+            QuantLib::Natural settlementDays,
+            QuantLib::Real faceAmount,
+            const boost::shared_ptr<QuantLib::Schedule>& schedule,
+            const std::vector<QuantLib::Rate>& coupons,
+            const QuantLib::DayCounter& accrualDayCounter,
+            QuantLib::BusinessDayConvention paymentConvention,
+            QuantLib::Real redemption,
+            const QuantLib::Date& issueDate,
+            const QuantLib::Calendar& paymentCalendar,
+            const QuantLib::Period& exCouponPeriod,
+            const QuantLib::Calendar& exCouponCalendar,
+            const QuantLib::BusinessDayConvention exCouponConvention,
+            bool exCouponEndOfMonth,
+            const bool useCleanPrice,
+            bool permanent);
+    };
+
+    class FxSwapRateHelper : public RateHelper {
+    public:
+        FxSwapRateHelper(
+         const boost::shared_ptr<reposit::ValueObject>& properties,
+         const QuantLib::Handle<QuantLib::Quote>& fwdPoint,
+         const QuantLib::Handle<QuantLib::Quote>& spotFx,
+         const QuantLib::Period& tenor,
+         QuantLib::Natural fixingDays,
+         const QuantLib::Calendar& calendar,
+         QuantLib::BusinessDayConvention convention,
+         bool endOfMonth,
+         bool isFxBaseCurrencyCollateralCurrency,
+         const QuantLib::Handle<QuantLib::YieldTermStructure>& collateralCurve,
+         bool permanent);
+
+    };
+
 
 
     // Processes the set of curve bootstrapping instruments
@@ -163,11 +269,9 @@ namespace QuantLibAddin {
         const std::vector<QuantLib::Natural>& minDistance);
 
     // Returns the rate, if any, associated to the given rate helper
-    // FIXME I think this could be implemented as a member function of QuantLibAddin::RateHelper
     QuantLib::Real rateHelperRate(
         const boost::shared_ptr<QuantLibAddin::RateHelper>& qlarh);
 
-} // namespace QuantLibAddin
+}
 
 #endif
-

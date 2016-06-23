@@ -7,6 +7,7 @@
 %typemap(rp_tm_csh_clcp) QuantLib::Handle<T_LIB> const & "StringBuilder";
 %typemap(rp_tm_csh_args) QuantLib::Handle<T_LIB> const & "$1_name_handle";
 %typemap(rp_tm_xll_argf) QuantLib::Handle<T_LIB> const & "$1_name_handle";
+%typemap(rp_tm_xll_argf2) QuantLib::Handle<T_LIB> const & "$1_name_handle";
 
 %typemap(rp_tm_cfy_cnvt) QuantLib::Handle<T_LIB> const & %{
         RP_GET_REFERENCE($1_name_get, $1_name, T_ADDIN, T_LIB)

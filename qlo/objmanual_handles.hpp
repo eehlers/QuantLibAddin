@@ -5,7 +5,7 @@
 #include <qlo/handleimpl.hpp>
 #include <rp/libraryobject.hpp>
 #include <qlo/obj_termstructures.hpp>
-#include <qlo/objmanual_quote.hpp>
+#include <qlo/objmanual_quotes.hpp>
 #include <qlo/conversions/coercetermstructure.hpp>
 
 namespace QuantLibAddin {

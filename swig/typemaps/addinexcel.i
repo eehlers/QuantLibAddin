@@ -17,6 +17,7 @@
 %typemap(rp_tm_xll_parm) QuantLib::YieldTermStructure const & "char*";
 %typemap(rp_tm_xll_parm) boost::shared_ptr<QuantLibAddin::RateHelper> const & "char*";
 %typemap(rp_tm_xll_parm) boost::shared_ptr<QuantLib::YieldTermStructure> const & "char*";
+//%typemap(rp_tm_xll_parm) boost::shared_ptr<QuantLib::Bond> const & "char*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::YieldTermStructure> const & "OPER*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::Quote> const & "OPER*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::SimpleQuote> const & "char*";
@@ -144,7 +145,20 @@
             QuantLibAddin::CoerceHandle<
                 QuantLibAddin::YieldTermStructure,
                 QuantLib::YieldTermStructure>()(
+                    //$1_nameCoerce);
                     $1_nameCoerce, QuantLib::Handle<QuantLib::YieldTermStructure>());
+%}
+
+%typemap(rp_tm_xll_cnvt2) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
+        std::string $1_name_vo = reposit::convert2<std::string>(
+            reposit::ConvertOper(*$1_name), "$1_name", "");
+
+        RP_GET_OBJECT_DEFAULT($1_nameCoerce, $1_name_vo, reposit::Object)
+        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
+            QuantLibAddin::CoerceHandle<
+                QuantLibAddin::YieldTermStructure,
+                QuantLib::YieldTermStructure>()(
+                    $1_nameCoerce, $rp_value);
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & %{
@@ -333,6 +347,13 @@
         return ret;
 %}
 
+%typemap(rp_tm_xll_rtst) QuantLib::Period & %{
+        std::string str = QuantLibAddin::libraryToScalar(returnValue);
+        static char ret[XL_MAX_STR_LEN];
+        reposit::stringToChar(str, ret);
+        return ret;
+%}
+
 %typemap(rp_tm_xll_rtst) QuantLib::Date %{
         static long returnValueXL;
         returnValueXL = static_cast<long>(QuantLibAddin::libraryToScalar(returnValue));
@@ -367,6 +388,7 @@
 
 %typemap(rp_tm_xll_argfv2) QuantLib::Date "$1_name_cnv2";
 %typemap(rp_tm_xll_argfv2) QuantLib::Date const & "$1_name_cnv2";
+%typemap(rp_tm_xll_argfv2) QuantLib::Handle< QuantLib::YieldTermStructure > const & "$1_name_vo";
 
 // rp_tm_xll_cdrt - code to register the return type with Excel
 %typemap(rp_tm_xll_cdrt) QuantLib::Period "C";

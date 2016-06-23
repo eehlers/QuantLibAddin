@@ -7,7 +7,7 @@
 %}
 
 %insert(processes_addin_cpp) %{
-#include <qlo/objmanual_quote.hpp>
+#include <qlo/objmanual_quotes.hpp>
 #include <qlo/obj_volatilities.hpp>
 %}
 

@@ -17,7 +17,7 @@
 #include <qlo/objmanual_leg.hpp>
 #include <qlo/obj_vanillaswaps.hpp>
 #include <qlo/obj_termstructures.hpp>
-#include <qlo/objmanual_indexes.hpp>
+#include <qlo/indexes/iborindex.hpp>
 %}
 
 namespace QuantLib {

@@ -146,6 +146,114 @@ namespace QuantLibAddin {
                     boost::arg<1>,
                     boost::_bi::value<bool> > >
                 qlASXisASXcodeBind;
+
+    // qlIndexAddFixings2
+
+    /*typedef     boost::_bi::bind_t<
+                void,
+                boost::_mfi::mf2<
+                    void,
+                    QuantLib::Index,
+                    const QuantLib::TimeSeriesDef&,
+                    bool>,
+                boost::_bi::list3<
+                    boost::_bi::value<boost::shared_ptr<QuantLib::Index> >,
+                    boost::arg<1>,
+                    boost::_bi::value<bool> > >
+                qlIndexAddFixings2Bind;
+
+    typedef     void 
+                (QuantLib::Index::* qlIndexAddFixings2Signature)(
+                    const QuantLib::TimeSeriesDef&,
+                    bool);*/
+
+    // qlIndexFixing
+
+    typedef     boost::_bi::bind_t<
+                QuantLib::Real,
+                boost::_mfi::cmf2<
+                    QuantLib::Real,
+                    QuantLib::Index,
+                    const QuantLib::Date&,
+                    bool>,
+                boost::_bi::list3<
+                    boost::_bi::value<boost::shared_ptr<QuantLib::Index> >,
+                    boost::arg<1>,
+                    boost::_bi::value<bool> > >
+                qlIndexFixingBind;
+
+    typedef     QuantLib::Real 
+                (QuantLib::Index::* qlIndexFixingSignature)(
+                    const QuantLib::Date&,
+                    bool) const;
+
+    // qlIndexIsValidFixingDate
+
+    typedef     boost::_bi::bind_t<
+                bool,
+                boost::_mfi::cmf1<
+                    bool,
+                    QuantLib::Index,
+                    const QuantLib::Date&>,
+                boost::_bi::list2<
+                    boost::_bi::value<boost::shared_ptr<QuantLib::Index> >,
+                    boost::arg<1> > >
+                qlIndexIsValidFixingDateBind;
+
+    typedef     bool 
+                (QuantLib::Index::* qlIndexIsValidFixingDateSignature)(
+                    const QuantLib::Date&) const;
+
+    // qlInterestRateIndexFixingDate
+
+    typedef     boost::_bi::bind_t<
+                QuantLib::Date,
+                boost::_mfi::cmf1<
+                    QuantLib::Date,
+                    QuantLib::InterestRateIndex,
+                    const QuantLib::Date&>,
+                boost::_bi::list2<
+                    boost::_bi::value<boost::shared_ptr<QuantLib::InterestRateIndex> >,
+                    boost::arg<1> > >
+                qlInterestRateIndexFixingDateBind;
+
+    typedef     QuantLib::Date 
+                (QuantLib::InterestRateIndex::* qlInterestRateIndexFixingDateSignature)(
+                    const QuantLib::Date&) const;
+
+    // qlInterestRateIndexMaturity
+
+    typedef     boost::_bi::bind_t<
+                QuantLib::Date,
+                boost::_mfi::cmf1<
+                    QuantLib::Date,
+                    QuantLib::InterestRateIndex,
+                    const QuantLib::Date&>,
+                boost::_bi::list2<
+                    boost::_bi::value<boost::shared_ptr<QuantLib::InterestRateIndex> >,
+                    boost::arg<1> > >
+                qlInterestRateIndexMaturityBind;
+
+    typedef     QuantLib::Date 
+                (QuantLib::InterestRateIndex::* qlInterestRateIndexMaturitySignature)(
+                    const QuantLib::Date&) const;
+
+    // qlInterestRateIndexValueDate
+
+    typedef     boost::_bi::bind_t<
+                QuantLib::Date,
+                boost::_mfi::cmf1<
+                    QuantLib::Date,
+                    QuantLib::InterestRateIndex,
+                    const QuantLib::Date&>,
+                boost::_bi::list2<
+                    boost::_bi::value<boost::shared_ptr<QuantLib::InterestRateIndex> >,
+                    boost::arg<1> > >
+                qlInterestRateIndexValueDateBind;
+
+    typedef     QuantLib::Date 
+                (QuantLib::InterestRateIndex::* qlInterestRateIndexValueDateSignature)(
+                    const QuantLib::Date&) const;
 }
 
 #endif

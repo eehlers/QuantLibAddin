@@ -2,8 +2,8 @@
 
 /*
  Copyright (C) 2006, 2007, 2009 Ferdinando Ametrano
- Copyright (C) 2005, 2015 Eric Ehlers
  Copyright (C) 2006 Katiuscia Manzoni
+ Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
 
  This file is part of QuantLib, a free-software/open-source library
@@ -42,60 +42,57 @@ namespace QuantLib {
 
 namespace QuantLibAddin {
 
-    RP_OBJ_CLASS(IborIndex, InterestRateIndex);
-    RP_OBJ_CLASS(OvernightIndex, IborIndex);
+    class IborIndex : public InterestRateIndex {
+      public:
+        IborIndex(const boost::shared_ptr<reposit::ValueObject>& properties,
+                  const std::string& familyName,
+                  const QuantLib::Period& p,
+                  const QuantLib::Natural fixingDays,
+                  const QuantLib::Currency& crr,
+                  const QuantLib::Calendar& calendar,
+                  QuantLib::BusinessDayConvention fltBDC,
+                  bool endOfMonth,
+                  const QuantLib::DayCounter& fltDayCounter,
+                  const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+                  bool permanent);
+      protected:
+        RP_OBJ_CTOR(IborIndex, InterestRateIndex);
+    };
 
-    //class IborIndex : public InterestRateIndex {
-    //  public:
-    //    IborIndex(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-    //              const std::string& familyName,
-    //              const QuantLib::Period& p,
-    //              const QuantLib::Natural fixingDays,
-    //              const QuantLib::Currency& crr,
-    //              const QuantLib::Calendar& calendar,
-    //              QuantLib::BusinessDayConvention fltBDC,
-    //              bool endOfMonth,
-    //              const QuantLib::DayCounter& fltDayCounter,
-    //              const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
-    //              bool permanent);
-    //  protected:
-    //    OH_OBJ_CTOR(IborIndex, InterestRateIndex);
-    //};
+    class OvernightIndex : public IborIndex {
+      public:
+        OvernightIndex(
+            const boost::shared_ptr<reposit::ValueObject>& properties,
+            const std::string& familyName,
+            const QuantLib::Natural fixingDays,
+            const QuantLib::Currency& crr,
+            const QuantLib::Calendar& calendar,
+            const QuantLib::DayCounter& fltDayCounter,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+            bool permanent);
+      protected:
+        RP_OBJ_CTOR(OvernightIndex, IborIndex);
+    };
 
-    //class OvernightIndex : public IborIndex {
-    //  public:
-    //    OvernightIndex(
-    //        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-    //        const std::string& familyName,
-    //        const QuantLib::Natural fixingDays,
-    //        const QuantLib::Currency& crr,
-    //        const QuantLib::Calendar& calendar,
-    //        const QuantLib::DayCounter& fltDayCounter,
-    //        const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
-    //        bool permanent);
-    //  protected:
-    //    OH_OBJ_CTOR(OvernightIndex, IborIndex);
-    //};
+    class ProxyIbor : public IborIndex {
+      public:
+        ProxyIbor(const boost::shared_ptr<reposit::ValueObject>& prop,
+                  const std::string& familyName,
+                  const QuantLib::Period& tenor,
+                  QuantLib::Natural settlementDays,
+                  const QuantLib::Currency& currency,
+                  const QuantLib::Calendar& fixingCalendar,
+                  QuantLib::BusinessDayConvention convention,
+                  bool endOfMonth,
+                  const QuantLib::DayCounter& dayCounter,
+                  const QuantLib::Handle<QuantLib::Quote>& gearing,
+                  const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
+                  const QuantLib::Handle<QuantLib::Quote>& spread,
+                  bool permanent);
+      protected:
+        RP_OBJ_CTOR(ProxyIbor, IborIndex);
+    };
 
-    //class ProxyIbor : public IborIndex {
-    //  public:
-    //    ProxyIbor(const boost::shared_ptr<ObjectHandler::ValueObject>& prop,
-    //              const std::string& familyName,
-    //              const QuantLib::Period& tenor,
-    //              QuantLib::Natural settlementDays,
-    //              const QuantLib::Currency& currency,
-    //              const QuantLib::Calendar& fixingCalendar,
-    //              QuantLib::BusinessDayConvention convention,
-    //              bool endOfMonth,
-    //              const QuantLib::DayCounter& dayCounter,
-    //              const QuantLib::Handle<QuantLib::Quote>& gearing,
-    //              const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
-    //              const QuantLib::Handle<QuantLib::Quote>& spread,
-    //              bool permanent);
-    //  protected:
-    //    OH_OBJ_CTOR(ProxyIbor, IborIndex);
-    //};
 }
 
 #endif
-

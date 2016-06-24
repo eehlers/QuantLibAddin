@@ -2,8 +2,8 @@
 
 /*
  Copyright (C) 2006, 2007, 2008, 2009 Ferdinando Ametrano
- Copyright (C) 2005, 2015 Eric Ehlers
  Copyright (C) 2006 Katiuscia Manzoni
+ Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
 
  This file is part of QuantLib, a free-software/open-source library
@@ -20,9 +20,9 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-//#if defined(HAVE_CONFIG_H)
-//    #include <qlo/config.hpp>
-//#endif
+#if defined(HAVE_CONFIG_H)
+    #include <qlo/config.hpp>
+#endif
 
 #include <ql/termstructures/yieldtermstructure.hpp>
 #include <qlo/indexes/swap/liborswap.hpp>
@@ -33,84 +33,87 @@
 #include <ql/indexes/swap/jpyliborswap.hpp>
 #include <ql/indexes/swap/usdliborswap.hpp>
 
-QuantLibAddin::LiborSwap::LiborSwap(
-        const boost::shared_ptr<reposit::ValueObject>& properties,
-        const QuantLib::Currency& currency,
-        SwapIndex::FixingType fixingType,
-        const QuantLib::Period& p,
-        const QuantLib::Handle<QuantLib::YieldTermStructure>& f,
-        const QuantLib::Handle<QuantLib::YieldTermStructure>& d,
-        bool permanent) : SwapIndex(properties, permanent)
-{
-    switch (currency.numericCode()) {
-      case 978: // EUR
-        switch (fixingType) {
-          case IsdaFixA:
-            libraryObject_ = boost::shared_ptr<QuantLib::EurLiborSwapIsdaFixA>(new
-                QuantLib::EurLiborSwapIsdaFixA(p, f, d));
-            break;
-          case IsdaFixB:
-            libraryObject_ = boost::shared_ptr<QuantLib::EurLiborSwapIsdaFixB>(new
-                QuantLib::EurLiborSwapIsdaFixB(p, f, d));
-            break;
-          case IfrFix:
-            libraryObject_ = boost::shared_ptr<QuantLib::EurLiborSwapIfrFix>(new
-                QuantLib::EurLiborSwapIfrFix(p, f, d));
-            break;
-          default:
-              QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
-        }
-        break;
-      case 840: // USD
-        switch (fixingType) {
-          case IsdaFixAm:
-            libraryObject_ = boost::shared_ptr<QuantLib::UsdLiborSwapIsdaFixAm>(new
-                QuantLib::UsdLiborSwapIsdaFixAm(p, f, d));
-            break;
-          case IsdaFixPm:
-            libraryObject_ = boost::shared_ptr<QuantLib::UsdLiborSwapIsdaFixPm>(new
-                QuantLib::UsdLiborSwapIsdaFixPm(p, f, d));
-            break;
-          default:
-              QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
-        }
-        break;
-      case 826: // GBP
-        switch (fixingType) {
-          case Isda:
-            libraryObject_ = boost::shared_ptr<QuantLib::GbpLiborSwapIsdaFix>(new
-                QuantLib::GbpLiborSwapIsdaFix(p, f, d));
-            break;
-          default:
-              QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
-        }
-        break;
-      case 756: // CHF
-        switch (fixingType) {
-          case Isda:
-            libraryObject_ = boost::shared_ptr<QuantLib::ChfLiborSwapIsdaFix>(new
-                QuantLib::ChfLiborSwapIsdaFix(p, f, d));
-            break;
-          default:
-              QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
-        }
-        break;
-      case 392: // JPY
-        switch (fixingType) {
-          case IsdaFixAm:
-            libraryObject_ = boost::shared_ptr<QuantLib::JpyLiborSwapIsdaFixAm>(new
-                QuantLib::JpyLiborSwapIsdaFixAm(p, f, d));
-            break;
-          case IsdaFixPm:
-            libraryObject_ = boost::shared_ptr<QuantLib::JpyLiborSwapIsdaFixPm>(new
-                QuantLib::JpyLiborSwapIsdaFixPm(p, f, d));
-            break;
-          default:
-              QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
-        }
-        break;
-      default:
-          QL_FAIL("Unhandled currency " << currency);
-    }
-}
+namespace QuantLibAddin {
 
+    LiborSwap::LiborSwap(
+            const boost::shared_ptr<reposit::ValueObject>& properties,
+            const QuantLib::Currency& currency,
+            SwapIndex::FixingType fixingType,
+            const QuantLib::Period& p,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& f,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& d,
+            bool permanent) : SwapIndex(properties, permanent)
+    {
+        switch (currency.numericCode()) {
+          case 978: // EUR
+            switch (fixingType) {
+              case IsdaFixA:
+                libraryObject_ = boost::shared_ptr<QuantLib::EurLiborSwapIsdaFixA>(new
+                    QuantLib::EurLiborSwapIsdaFixA(p, f, d));
+                break;
+              case IsdaFixB:
+                libraryObject_ = boost::shared_ptr<QuantLib::EurLiborSwapIsdaFixB>(new
+                    QuantLib::EurLiborSwapIsdaFixB(p, f, d));
+                break;
+              case IfrFix:
+                libraryObject_ = boost::shared_ptr<QuantLib::EurLiborSwapIfrFix>(new
+                    QuantLib::EurLiborSwapIfrFix(p, f, d));
+                break;
+              default:
+                  QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
+            }
+            break;
+          case 840: // USD
+            switch (fixingType) {
+              case IsdaFixAm:
+                libraryObject_ = boost::shared_ptr<QuantLib::UsdLiborSwapIsdaFixAm>(new
+                    QuantLib::UsdLiborSwapIsdaFixAm(p, f, d));
+                break;
+              case IsdaFixPm:
+                libraryObject_ = boost::shared_ptr<QuantLib::UsdLiborSwapIsdaFixPm>(new
+                    QuantLib::UsdLiborSwapIsdaFixPm(p, f, d));
+                break;
+              default:
+                  QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
+            }
+            break;
+          case 826: // GBP
+            switch (fixingType) {
+              case Isda:
+                libraryObject_ = boost::shared_ptr<QuantLib::GbpLiborSwapIsdaFix>(new
+                    QuantLib::GbpLiborSwapIsdaFix(p, f, d));
+                break;
+              default:
+                  QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
+            }
+            break;
+          case 756: // CHF
+            switch (fixingType) {
+              case Isda:
+                libraryObject_ = boost::shared_ptr<QuantLib::ChfLiborSwapIsdaFix>(new
+                    QuantLib::ChfLiborSwapIsdaFix(p, f, d));
+                break;
+              default:
+                  QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
+            }
+            break;
+          case 392: // JPY
+            switch (fixingType) {
+              case IsdaFixAm:
+                libraryObject_ = boost::shared_ptr<QuantLib::JpyLiborSwapIsdaFixAm>(new
+                    QuantLib::JpyLiborSwapIsdaFixAm(p, f, d));
+                break;
+              case IsdaFixPm:
+                libraryObject_ = boost::shared_ptr<QuantLib::JpyLiborSwapIsdaFixPm>(new
+                    QuantLib::JpyLiborSwapIsdaFixPm(p, f, d));
+                break;
+              default:
+                  QL_FAIL(currency << " Libor Swap " << fixingType << " is not defined");
+            }
+            break;
+          default:
+              QL_FAIL("Unhandled currency " << currency);
+        }
+    }
+
+}

@@ -25,7 +25,7 @@
 #include <qlo/conversions/varianttodate.hpp>
 //#include <qlo/extrapolator.hpp>
 //#include <qlo/baseinstruments.hpp>
-//#include <qlo/index.hpp>
+//#include <qlo/objmanual_indexes.hpp>
 
 namespace QuantLibAddin {
 

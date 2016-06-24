@@ -41,6 +41,7 @@ namespace QuantLib {
     class Period;
     class Quote;
     class Calendar;
+    class Currency;
 
     class OneFactorAffineModel;
     class ShortRateModel;
@@ -52,6 +53,7 @@ namespace QuantLib {
     class YieldTermStructure;
     class GeneralizedBlackScholesProcess;
 
+    template <class T> class TimeSeries;
     template <class T> class Handle;
 }
 

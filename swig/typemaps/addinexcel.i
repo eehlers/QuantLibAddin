@@ -6,8 +6,7 @@
 // rp_tm_xll_rtft - function return type (F/M)
 %typemap(rp_tm_xll_rtft) QuantLib::Date "long*";
 %typemap(rp_tm_xll_rtft) QuantLib::Period "char*";
-//%typemap(rp_tm_xll_rtft) Calendar  & "char*";
-//%typemap(rp_tm_xll_rtft) std::vector< QuantLib::Real > const & "OPER*";
+%typemap(rp_tm_xll_rtft) QuantLib::Currency const & "char*";
 
 // rp_tm_xll_parm - function parameters (F/C/M)
 %typemap(rp_tm_xll_parm) QuantLib::Date "OPER*";
@@ -22,6 +21,7 @@
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::Quote> const & "OPER*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::SimpleQuote> const & "char*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "char*";
+%typemap(rp_tm_xll_parm) QuantLib::TimeSeries<QuantLib::Real> const & "OPER*";
 
 // rp_tm_xll_cnvt - convert from Excel datatypes to the datatypes of the underlying Library
 
@@ -332,6 +332,14 @@
         return ret;
 %}
 
+%typemap(rp_tm_xll_rtst) QuantLib::Currency & %{
+        std::ostringstream os;
+        os << returnValue;
+        static char ret[XL_MAX_STR_LEN];
+        reposit::stringToChar(os.str(), ret);
+        return ret;
+%}
+
 %typemap(rp_tm_xll_rtst) QuantLib::Calendar const & %{
         std::ostringstream os;
         os << returnValue;
@@ -415,6 +423,10 @@
 
 %typemap(rp_tm_xll_rtdc) QuantLib::Calendar const & %{
         QuantLib::Calendar returnValue =
+%}
+
+%typemap(rp_tm_xll_rtdc) QuantLib::Currency const & %{
+        QuantLib::Currency returnValue =
 %}
 
 %typemap(rp_tm_xxx_rp_get) QuantLib::Quote %{

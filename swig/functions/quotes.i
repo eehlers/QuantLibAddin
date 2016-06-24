@@ -6,7 +6,6 @@
 
 %insert(quotes_addin_cpp) %{
 #include <qlo/obj_instruments.hpp>
-#include <qlo/objmanual_indexes.hpp>
 #include <qlo/indexes/iborindex.hpp>
 #include <qlo/indexes/swapindex.hpp>
 #include <qlo/conversions/coercequote.hpp>

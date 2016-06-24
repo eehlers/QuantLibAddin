@@ -1,7 +1,7 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2006, 2007, 2008, 2009 Ferdinando Ametrano
+ Copyright (C) 2006, 2007 Ferdinando Ametrano
  Copyright (C) 2006 Katiuscia Manzoni
  Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
@@ -20,25 +20,22 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#ifndef qla_liborswap_hpp
-#define qla_liborswap_hpp
+#if defined(HAVE_CONFIG_H)
+    #include <qlo/config.hpp>
+#endif
 
-#include <qlo/indexes/swapindex.hpp>
+#include <qlo/indexes/bmaindex.hpp>
+#include <ql/indexes/bmaindex.hpp>
 
 namespace QuantLibAddin {
 
-    class LiborSwap : public SwapIndex {
-      public:
-        LiborSwap(
-            const boost::shared_ptr<reposit::ValueObject>& properties,
-            const QuantLib::Currency& currency,
-            SwapIndex::FixingType fixingType,
-            const QuantLib::Period& p,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& f,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& d,
-            bool permanent);
-    };
+    BMAIndex::BMAIndex(
+                 const boost::shared_ptr<reposit::ValueObject>& properties,
+                 const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+                 bool permanent) : InterestRateIndex(properties, permanent)
+    {
+        libraryObject_ = boost::shared_ptr<QuantLib::BMAIndex>(new
+            QuantLib::BMAIndex(hYTS));
+    }
 
 }
-
-#endif

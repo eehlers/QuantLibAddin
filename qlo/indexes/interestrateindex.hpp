@@ -2,8 +2,8 @@
 
 /*
  Copyright (C) 2006, 2007 Ferdinando Ametrano
- Copyright (C) 2005, 2015 Eric Ehlers
  Copyright (C) 2006 Katiuscia Manzoni
+ Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
 
  This file is part of QuantLib, a free-software/open-source library
@@ -23,24 +23,12 @@
 #ifndef qla_interestrateindex_hpp
 #define qla_interestrateindex_hpp
 
-#include <qlo/index.hpp>
+#include <qlo/objmanual_indexes.hpp>
 
 namespace QuantLibAddin {
 
     RP_OBJ_CLASS(InterestRateIndex, Index);
 
-    //class InterestRateIndex : public Index {
-    //    public:
-    //        QuantLib::Natural fixingDays() { return libraryObject_->fixingDays(); }
-    //        const QuantLib::DayCounter& dayCounter() { return libraryObject_->dayCounter(); }
-    //        QuantLib::Date valueDate(const QuantLib::Date& fixingDate) { return libraryObject_->valueDate(fixingDate); }
-    //        QuantLib::Period tenor() { return libraryObject_->tenor(); }
-    //    protected:
-    //        InterestRateIndex(
-    //            const boost::shared_ptr<reposit::ValueObject>& properties,
-    //            bool permanent) : Index(properties, permanent) {}
-    //};
 }
 
 #endif
-

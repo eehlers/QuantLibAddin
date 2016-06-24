@@ -20,7 +20,11 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#include <qlo/index.hpp>
+#if defined(HAVE_CONFIG_H)
+    #include <qlo/config.hpp>
+#endif
+
+#include <qlo/objmanual_indexes.hpp>
 
 #include <ql/timeseries.hpp>
 #include <ql/index.hpp>

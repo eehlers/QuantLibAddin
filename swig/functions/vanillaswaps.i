@@ -9,7 +9,7 @@
 
 %insert(vanillaswaps_addin_cpp) %{
 #include <qlo/obj_schedule.hpp>
-#include <qlo/objmanual_indexes.hpp>
+#include <qlo/indexes/iborindex.hpp>
 %}
 
 namespace QuantLib {

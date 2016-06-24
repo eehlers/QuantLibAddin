@@ -14,7 +14,6 @@ this_include_HEADERS = \
     auto_link.hpp \
     handle.hpp \
     handleimpl.hpp \
-    index.hpp \
     init.hpp \
     loop.hpp \
     obj_all.hpp \
@@ -46,10 +45,10 @@ this_include_HEADERS = \
     yieldtermstructures.hpp
 
 libAddinObjects_la_SOURCES = \
-    index.cpp \
     init.cpp \
     objmanual_couponvectors.cpp \
     objmanual_date.cpp \
+    objmanual_indexes.cpp \
     objmanual_interpolation.cpp \
     objmanual_leg.cpp \
     objmanual_piecewiseyieldcurve.cpp \

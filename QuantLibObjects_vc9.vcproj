@@ -1282,6 +1282,14 @@
 			Name="indexes"
 			>
 			<File
+				RelativePath=".\qlo\indexes\bmaindex.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\indexes\bmaindex.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\indexes\iborindex.cpp"
 				>
 			</File>
@@ -1368,14 +1376,6 @@
 		</File>
 		<File
 			RelativePath=".\qlo\handleimpl.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\index.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\index.hpp"
 			>
 		</File>
 		<File
@@ -1472,6 +1472,10 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_handles.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_indexes.cpp"
 			>
 		</File>
 		<File

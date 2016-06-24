@@ -20,27 +20,29 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#ifndef qla_index_hpp
-#define qla_index_hpp
+#ifndef qla_bmaindex_hpp
+#define qla_bmaindex_hpp
 
-#include <rp/libraryobject.hpp>
-
-#include <ql/types.hpp>
+#include <qlo/indexes/interestrateindex.hpp>
 
 namespace QuantLib {
-    class Date;
-    class Index;
+    class YieldTermStructure;
+
+    template <class T>
+    class Handle;
 }
 
 namespace QuantLibAddin {
 
-    class Index : public reposit::LibraryObject<QuantLib::Index> {
+    class BMAIndex : public InterestRateIndex {
       public:
-        RP_LIB_CTOR(Index, QuantLib::Index);
-        void addFixings(const std::vector<QuantLib::Date>& dates,
-                        const std::vector<QuantLib::Real>& values,
-                        bool forceOverwrite, bool updateValuObject = true);
+        BMAIndex(const boost::shared_ptr<reposit::ValueObject>& properties,
+                 const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+                 bool permanent);
+      protected:
+        RP_OBJ_CTOR(BMAIndex, InterestRateIndex);
     };
+
 }
 
 #endif

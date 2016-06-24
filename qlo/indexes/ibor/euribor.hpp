@@ -2,8 +2,8 @@
 
 /*
  Copyright (C) 2006, 2007 Ferdinando Ametrano
- Copyright (C) 2005, 2015 Eric Ehlers
  Copyright (C) 2006 Katiuscia Manzoni
+ Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
 
  This file is part of QuantLib, a free-software/open-source library
@@ -27,37 +27,29 @@
 
 namespace QuantLibAddin {
 
-    class Euribor : 
-        public IborIndex {
-    public:
-        Euribor(
-            const boost::shared_ptr<reposit::ValueObject>& properties,
-            // BEGIN typemap rp_tm_default
-            QuantLib::Period const &tenor,
-            QuantLib::Handle< QuantLib::YieldTermStructure > const &YieldCurve,
-            // END   typemap rp_tm_default
-            bool permanent);
+    class Euribor : public IborIndex {
+      public:
+        Euribor(const boost::shared_ptr<reposit::ValueObject>& properties,
+                const std::string& p,
+                const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+                bool permanent);
     };
 
-    //class Euribor365 : public IborIndex {
-    //  public:
-    //    Euribor365(const boost::shared_ptr<reposit::ValueObject>& properties,
-    //               const std::string& p,
-    //               const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
-    //               bool permanent);
-    //};
-
-    class Eonia : 
-        public OvernightIndex {
-    public:
-        Eonia(
-            const boost::shared_ptr<reposit::ValueObject>& properties,
-            // BEGIN typemap rp_tm_default
-            QuantLib::Handle< QuantLib::YieldTermStructure > const &YieldCurve,
-            // END   typemap rp_tm_default
-            bool permanent);
+    class Euribor365 : public IborIndex {
+      public:
+        Euribor365(const boost::shared_ptr<reposit::ValueObject>& properties,
+                   const std::string& p,
+                   const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+                   bool permanent);
     };
+
+    class Eonia : public OvernightIndex {
+      public:
+        Eonia(const boost::shared_ptr<reposit::ValueObject>& properties,
+              const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+              bool permanent);
+    };
+
 }
 
 #endif
-

@@ -19,7 +19,7 @@ namespace QuantLib {
             const Date& EndDate,            //!< end date.
             const Date& refPeriodStart,     //!< start date for reference period.
             const Date& refPeriodEnd        //!< end date for reference period.
-        );
+        ) const;
     };
 }
 

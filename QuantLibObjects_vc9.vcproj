@@ -1358,6 +1358,26 @@
 				</File>
 			</Filter>
 		</Filter>
+		<Filter
+			Name="loop"
+			>
+			<File
+				RelativePath=".\qlo\loop\loop_calendars.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\loop\loop_date.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\loop\loop_daycounters.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\loop\loop_indexes.hpp"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\qlo\auto_link.hpp"
 			>
@@ -1384,10 +1404,6 @@
 		</File>
 		<File
 			RelativePath=".\qlo\init.hpp"
-			>
-		</File>
-		<File
-			RelativePath=".\qlo\loop.hpp"
 			>
 		</File>
 		<File

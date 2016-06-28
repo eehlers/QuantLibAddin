@@ -34,13 +34,13 @@ namespace QuantLib {
             %loop(isValidFixingDate, FixingDate);
             bool isValidFixingDate(
                 const Date& FixingDate                  //!< fixing date(s).
-            );
+            ) const;
             //! Returns the fixing for the given Index object. The fixing is retrieved from the time series if available, otherways it is forecasted.
             %loop(fixing, FixingDate);
             double fixing(
                 const Date& FixingDate,                 //!< fixing date(s).
                 bool ForecastToday=false                //!< If set to TRUE it forces the forecasting of today's fixing even if the actual fixing is already available in the time series.
-            );
+            ) const;
             ////! Adds fixings for the given Index object.
             //%rename(addFixings2) addFixings;
             //%loop(addFixings, TimeSeriesID);
@@ -69,18 +69,18 @@ namespace QuantLib {
             %loop(valueDate, FixingDate);
             Date valueDate(
                 const Date& FixingDate                  //!< fixing date(s).
-            );
+            ) const;
             //! Returns the fixing date for the given value date for the given InterestRateIndex object.
             %loop(fixingDate, ValueDate);
             Date fixingDate(
                 const Date& ValueDate                   //!< value date.
-            );
+            ) const;
             //! Returns the maturity date for the given value date for the given InterestRateIndex object.
             %rename(maturity) maturityDate;
             %loop(maturity, ValueDate);
             Date maturityDate(
                 const Date& ValueDate                   //!< value date.
-            );
+            ) const;
     };
 
     class IborIndex : public InterestRateIndex {

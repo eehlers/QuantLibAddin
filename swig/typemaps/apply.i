@@ -51,6 +51,7 @@ OBJECT_WRAPPER(QuantLibAddin::RateHelper, QuantLib::RateHelper)
 OBJECT_WRAPPER(QuantLibAddin::Extrapolator, QuantLib::Extrapolator)
 OBJECT_WRAPPER(QuantLibAddin::FloatingRateCouponPricer, QuantLib::FloatingRateCouponPricer)
 OBJECT_WRAPPER(QuantLibAddin::Bond, QuantLib::Bond)
+OBJECT_WRAPPER(QuantLibAddin::TimeSeriesDef, QuantLib::TimeSeriesDef)
 
 // QuantLib Handles.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)

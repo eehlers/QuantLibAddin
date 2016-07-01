@@ -24,6 +24,7 @@ noinst_HEADERS = \
     serialization_register.hpp \
     serialization_schedule.hpp \
     serialization_termstructures.hpp \
+    serialization_timeseries.hpp \
     serialization_vanillaswaps.hpp \
     serialization_volatilities.hpp
 
@@ -45,6 +46,7 @@ libRegister_la_SOURCES = \
     serialization_ratehelpers.cpp \
     serialization_schedule.cpp \
     serialization_termstructures.cpp \
+    serialization_timeseries.cpp \
     serialization_vanillaswaps.cpp \
     serialization_volatilities.cpp
 

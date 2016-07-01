@@ -150,6 +150,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\timeseries.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\utilities.i"
 					>
 				</File>

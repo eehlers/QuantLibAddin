@@ -40,6 +40,7 @@ this_include_HEADERS = \
     objmanual_quotes.hpp \
     objmanual_ratehelpers.hpp \
     objmanual_settings.hpp \
+    objmanual_timeseries.hpp \
     objmanual_utilities.hpp \
     qladdindefines.hpp \
     yieldtermstructures.hpp
@@ -55,6 +56,7 @@ libAddinObjects_la_SOURCES = \
     objmanual_quotes.cpp \
     objmanual_ratehelpers.cpp \
     objmanual_settings.cpp \
+    objmanual_timeseries.cpp \
     objmanual_utilities.cpp \
     yieldtermstructures.cpp
 

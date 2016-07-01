@@ -306,6 +306,12 @@
         return &ret;
 %}
 
+%typemap(rp_tm_xll_rtst) QuantLib::Size %{
+        static long ret;
+        ret = returnValue;
+        return &ret;
+%}
+
 //FIXME move this in to repost.swg / ENUMERATED_TYPE
 %typemap(rp_tm_xll_rtst) QuantLib::BusinessDayConvention %{
         std::ostringstream os;

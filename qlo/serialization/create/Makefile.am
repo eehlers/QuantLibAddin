@@ -23,6 +23,7 @@ include_HEADERS = \
     create_ratehelpers.hpp \
     create_schedule.hpp \
     create_termstructures.hpp \
+    create_timeseries.hpp \
     create_vanillaswaps.hpp \
     create_volatilities.hpp
 
@@ -44,6 +45,7 @@ libCreate_la_SOURCES = \
     create_ratehelpers.cpp \
     create_schedule.cpp \
     create_termstructures.cpp \
+    create_timeseries.cpp \
     create_vanillaswaps.cpp \
     create_volatilities.cpp
 

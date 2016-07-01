@@ -22,6 +22,7 @@ this_include_HEADERS = \
     vo_ratehelpers.hpp \
     vo_schedule.hpp \
     vo_termstructures.hpp \
+    vo_timeseries.hpp \
     vo_vanillaswaps.hpp \
     vo_volatilities.hpp
 
@@ -43,6 +44,7 @@ libValueObjects_la_SOURCES = \
     vo_ratehelpers.cpp \
     vo_schedule.cpp \
     vo_termstructures.cpp \
+    vo_timeseries.cpp \
     vo_vanillaswaps.cpp \
     vo_volatilities.cpp
 

@@ -925,6 +925,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_timeseries.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_timeseries.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_vanillaswaps.cpp"
 					>
 				</File>
@@ -1097,6 +1105,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_timeseries.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_timeseries.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_vanillaswaps.cpp"
 					>
 				</File>
@@ -1259,6 +1275,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_termstructures.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_timeseries.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_timeseries.hpp"
 				>
 			</File>
 			<File
@@ -1544,6 +1568,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_settings.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_timeseries.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_timeseries.hpp"
 			>
 		</File>
 		<File

@@ -142,6 +142,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\timeseries.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\utilities.i"
 					>
 				</File>
@@ -179,6 +183,10 @@
 				</File>
 				<File
 					RelativePath=".\typemaps\apply.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\doxygen.i"
 					>
 				</File>
 				<File

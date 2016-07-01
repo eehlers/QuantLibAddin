@@ -21,18 +21,18 @@
 #ifndef qla_convert_timeseries_hpp
 #define qla_convert_timeseries_hpp
 
-//#include <rp/property.hpp>
-//#include <ql/timeseries.hpp>
-//#include <qlo/timeseries.hpp>
-//
-//namespace reposit {
-//
-//    class ConvertOper;
-//
-//    template<> QuantLib::TimeSeriesDef convert2<QuantLib::TimeSeriesDef, property_t>(const property_t& c);
-//
-//    template<> QuantLib::TimeSeriesDef convert2<QuantLib::TimeSeriesDef, ConvertOper>(const ConvertOper& c);
-//
-//}
+#include <rp/property.hpp>
+#include <ql/timeseries.hpp>
+#include <qlo/objmanual_timeseries.hpp>
+
+namespace reposit {
+
+    class ConvertOper;
+
+    template<> QuantLib::TimeSeriesDef convert2<QuantLib::TimeSeriesDef, property_t>(const property_t& c);
+
+    template<> QuantLib::TimeSeriesDef convert2<QuantLib::TimeSeriesDef, ConvertOper>(const ConvertOper& c);
+
+}
 
 #endif

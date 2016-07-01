@@ -3,6 +3,7 @@
 // rp_tm_dox_* - typemaps for the Doxygen Addin
 //*****************************************************************************
 
+// rp_tm_dox_rtdc - Return type
 %typemap(rp_tm_dox_rtdc) QuantLib::Natural "long returnValue";
 %typemap(rp_tm_dox_rtdc) QuantLib::Real "double returnValue";
 %typemap(rp_tm_dox_rtdc) QuantLib::Volatility "double returnValue";
@@ -13,7 +14,7 @@
 %typemap(rp_tm_dox_rtdc) std::vector<QuantLib::Date> "vector<long> returnValue";
 %typemap(rp_tm_dox_rtdc) std::vector< std::vector< QuantLib::Real > > "vector<vector<double> > returnValue";
 
-
+// rp_tm_dox_mbvr - Member variable
 %typemap(rp_tm_dox_mbvr) QuantLib::Date "long $1_name";
 %typemap(rp_tm_dox_mbvr) QuantLib::Date & "long $1_name";
 %typemap(rp_tm_dox_mbvr) QuantLib::Natural "long $1_name";
@@ -34,3 +35,4 @@
 %typemap(rp_tm_dox_mbvr) std::vector< boost::shared_ptr< QuantLibAddin::Leg > > & "vector<string> $1_name";
 %typemap(rp_tm_dox_mbvr) std::vector< boost::shared_ptr< QuantLib::InterestRate > > & "vector<string> $1_name";
 %typemap(rp_tm_dox_mbvr) std::vector< std::vector< QuantLib::Handle< QuantLib::Quote > > > const & "vector<vector<string>> $1_name";
+%typemap(rp_tm_dox_mbvr) std::vector< QuantLib::TimeSeries< QuantLib::Real > > "vector<string> $1_name";

@@ -28,7 +28,7 @@
 #include <ql/interestrate.hpp>
 #include <ql/timeseries.hpp>
 
-//#include <qlo/timeseries.hpp>
+#include <qlo/objmanual_timeseries.hpp>
 
 #include <rp/reposit.hpp>
 #include <qlo/conversions/coercehandle.hpp>
@@ -162,10 +162,10 @@ namespace reposit {
         return convertQuoteHandle(c);
     }
 
-    //template<> 
-    //QuantLib::TimeSeriesDef convert2<QuantLib::TimeSeriesDef, property_t>(const property_t& c) {
-    //    return convertTimeSeriesDef(c);
-    //}
+    template<>
+    QuantLib::TimeSeriesDef convert2<QuantLib::TimeSeriesDef, property_t>(const property_t& c) {
+        return convertTimeSeriesDef(c);
+    }
 
     /*
     template<> 

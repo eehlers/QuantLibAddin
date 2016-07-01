@@ -106,16 +106,16 @@ namespace reposit {
             RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
     }
     
-    //template<class container_t>
-    //QuantLib::TimeSeriesDef convertTimeSeriesDef(const container_t& c) {
-    //    if(c.type() == typeid(std::string)) {
-    //        std::string s = c.operator std::string();
-    //        RP_GET_UNDERLYING(temp, s, QuantLibAddin::TimeSeriesDef, QuantLib::TimeSeriesDef)
-    //        return temp;
-    //    } else {
-    //        RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::TimeSeriesDef'");
-    //    }
-    //}
+    template<class container_t>
+    QuantLib::TimeSeriesDef convertTimeSeriesDef(const container_t& c) {
+        if(c.type() == typeid(std::string)) {
+            std::string s = c.operator std::string();
+            RP_GET_UNDERLYING(temp, s, QuantLibAddin::TimeSeriesDef, QuantLib::TimeSeriesDef)
+            return temp;
+        } else {
+            RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::TimeSeriesDef'");
+        }
+    }
 
 }
 

@@ -35,18 +35,18 @@ namespace QuantLibAddin {
         public:
             %rename(TimeSeries) TimeSeriesDef;
             TimeSeriesDef(
-                const std::vector<QuantLib::Date> &Dates,   //!< dates.
-                const std::vector<QuantLib::Real> &Values   //!< values.
+                const std::vector<QuantLib::Date> &Dates,           //!< dates.
+                const std::vector<QuantLib::Real> &Values           //!< values.
             );
-            %rename(TimeSeriesFromIndex) TimeSeries;
+            %rename(TimeSeriesFromIndex) TimeSeriesDef;
             TimeSeriesDef(
-                QuantLib::Index Index                       //!< Index object ID.
+                const boost::shared_ptr<QuantLib::Index>& Index     //!< Index object ID.
             );
             //! Returns returns the data corresponding to the given dates.
             %rename(value) subscriptWrapper;
-            %loop(value, Dates);
+            %loop(subscriptWrapper, Dates);
             QuantLib::Real subscriptWrapper(
-                const QuantLib::Date &Dates                           //!< fixing date(s).
+                const QuantLib::Date &Dates                         //!< fixing date(s).
             );
     };
 }

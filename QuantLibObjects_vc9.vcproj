@@ -1401,6 +1401,10 @@
 				RelativePath=".\qlo\loop\loop_indexes.hpp"
 				>
 			</File>
+			<File
+				RelativePath=".\qlo\loop\loop_timeseries.hpp"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\qlo\auto_link.hpp"

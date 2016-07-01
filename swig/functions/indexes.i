@@ -41,13 +41,13 @@ namespace QuantLib {
                 const Date& FixingDate,                 //!< fixing date(s).
                 bool ForecastToday=false                //!< If set to TRUE it forces the forecasting of today's fixing even if the actual fixing is already available in the time series.
             ) const;
-            ////! Adds fixings for the given Index object.
-            //%rename(addFixings2) addFixings;
-            //%loop(addFixings, TimeSeriesID);
-            //void addFixings(
-            //    const TimeSeries<Real>& TimeSeriesID,   //!< TimeSeries object ID.
-            //    bool ForceOverwrite=false               //!< Set to TRUE to force overwriting of existing fixings, if any.
-            //);
+            //! Adds fixings for the given Index object.
+            %rename(addFixings2) addFixings;
+            %loop(addFixings, TimeSeriesID);
+            void addFixings(
+                const TimeSeries<Real>& TimeSeriesID,   //!< TimeSeries object ID.
+                bool ForceOverwrite=false               //!< Set to TRUE to force overwriting of existing fixings, if any.
+            );
             //!< Clear all fixings for the given Index object.
             void clearFixings();
     };

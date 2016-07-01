@@ -38,7 +38,7 @@ namespace QuantLib {
         Date adjust(
             const Date& date,                   //!< date to be adjusted.
             BusinessDayConvention convention    //!< rolling convention.
-            );
+            ) const;
     };
 }
 

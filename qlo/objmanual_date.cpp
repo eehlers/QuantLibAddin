@@ -2,12 +2,16 @@
 #include <qlo/objmanual_date.hpp>
 #include <ql/settings.hpp>
 
-QuantLib::Period QuantLibAddin::periodFromFrequency(QuantLib::Frequency f) {
+QuantLib::Period QuantLibAddin::periodFromFrequency(const QuantLib::Frequency &f) {
     return QuantLib::Period(f);
 }
 
 QuantLib::Frequency QuantLibAddin::frequencyFromPeriod(const QuantLib::Period& p) {
     return p.frequency();
+}
+
+bool QuantLibAddin::periodLessThan(const QuantLib::Period &Period1, const QuantLib::Period &Period2) {
+    return Period1 < Period2;
 }
 
 QuantLib::Period QuantLibAddin::periodEquivalent(const QuantLib::Period& p) {

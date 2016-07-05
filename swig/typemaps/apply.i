@@ -23,6 +23,8 @@ ENUMERATED_TYPE(QuantLib::Pillar::Choice)
 ENUMERATED_TYPE(QuantLib::Position::Type)
 ENUMERATED_TYPE(QuantLib::Duration::Type)
 ENUMERATED_TYPE(QuantLib::SensitivityAnalysis)
+ENUMERATED_TYPE(QuantLib::Weekday)
+ENUMERATED_TYPE(QuantLib::Month)
 
 // Enumerated classes.
 ENUMERATED_CLASS(QuantLib::Calendar)

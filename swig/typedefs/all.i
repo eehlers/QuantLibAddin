@@ -2,8 +2,11 @@
 namespace QuantLib {
 
     typedef int Natural;
-    typedef long BigInteger;
+    typedef int Integer;
+    typedef int Day;
+    typedef int Year;
     typedef std::size_t Size;
+    typedef long BigInteger;
     typedef double Real;
     typedef double Rate;
     typedef double Spread;
@@ -20,6 +23,8 @@ namespace QuantLib {
     enum Compounding;
     enum Frequency;
     enum SensitivityAnalysis;
+    enum Month;
+    enum Weekday;
 
     struct DateGeneration {
         enum Rule;

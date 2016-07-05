@@ -3,3 +3,4 @@
 // rp_tm_lib_* - typemaps for Library Objects
 //*****************************************************************************
 
+%typemap(rp_tm_xll_lppm) QuantLib::Year "long";

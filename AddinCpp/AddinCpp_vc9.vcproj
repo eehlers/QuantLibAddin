@@ -635,11 +635,11 @@
 			>
 		</File>
 		<File
-			RelativePath=".\add_quote.cpp"
+			RelativePath=".\add_quotes.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\add_quote.hpp"
+			RelativePath=".\add_quotes.hpp"
 			>
 		</File>
 		<File

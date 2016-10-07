@@ -20,6 +20,8 @@ namespace QuantLibAddin {
         );
         //! Retrieve Data for the given PiecewiseYieldCurve&lt;Traits, Interpolator&gt;.
         std::vector<QuantLib::Real> data();
+        //! Retrieve list of Dates for the given PiecewiseYieldCurve&lt;Traits, Interpolator&gt;.
+        std::vector<QuantLib::Date> dates();        
     };
 }
 

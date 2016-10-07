@@ -1402,6 +1402,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\loop\loop_termstructures.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\loop\loop_timeseries.hpp"
 				>
 			</File>

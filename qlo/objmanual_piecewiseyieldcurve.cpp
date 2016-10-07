@@ -226,9 +226,9 @@ Call::callerFactory().getCaller(pair_)->FUNC(libraryObject_.get())
 //	return CALL(times);
 //}
 //
-//const std::vector<QuantLib::Date>& PiecewiseYieldCurve::dates() const {
-//    return CALL(dates);
-//}
+const std::vector<QuantLib::Date>& PiecewiseYieldCurve::dates() const {
+    return CALL(dates);
+}
 
 const std::vector<QuantLib::Real>& PiecewiseYieldCurve::data() const {
     return CALL(data);

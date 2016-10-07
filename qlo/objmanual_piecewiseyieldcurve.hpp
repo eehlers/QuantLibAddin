@@ -37,7 +37,7 @@ namespace QuantLibAddin {
 
  //       const std::vector<QuantLib::Time>& times() const;
 
- //       const std::vector<QuantLib::Date>& dates() const;
+        const std::vector<QuantLib::Date>& dates() const;
 
         const std::vector<QuantLib::Real>& data() const;
 

@@ -101,3 +101,4 @@ QUANTLIB_HANDLE(QuantLibAddin::Quote, QuantLib::Quote)
                     $1_name_get, QuantLib::Handle<QuantLib::YieldTermStructure>());
 %}
 
+%typemap(rp_tm_lib_loop) QuantLib::YieldTermStructure "boost::shared_ptr<QuantLib::YieldTermStructure>";

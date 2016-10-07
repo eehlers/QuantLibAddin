@@ -7,6 +7,7 @@
 %typemap(rp_tm_xll_rtft) QuantLib::Date "long*";
 %typemap(rp_tm_xll_rtft) QuantLib::Period "char*";
 %typemap(rp_tm_xll_rtft) QuantLib::Currency const & "char*";
+%typemap(rp_tm_xll_rtft) QuantLib::InterestRate "double*";
 
 // rp_tm_xll_parm - function parameters (F/C/M)
 %typemap(rp_tm_xll_parm) QuantLib::Date "OPER*";
@@ -312,48 +313,6 @@
         return &ret;
 %}
 
-//FIXME move this in to repost.swg / ENUMERATED_TYPE
-%typemap(rp_tm_xll_rtst) QuantLib::BusinessDayConvention %{
-        std::ostringstream os;
-        os << returnValue;
-        static char ret[XL_MAX_STR_LEN];
-        reposit::stringToChar(os.str(), ret);
-        return ret;
-%}
-
-//FIXME move this in to repost.swg / ENUMERATED_CLASS
-%typemap(rp_tm_xll_rtst) QuantLib::DayCounter const & %{
-        std::ostringstream os;
-        os << returnValue;
-        static char ret[XL_MAX_STR_LEN];
-        reposit::stringToChar(os.str(), ret);
-        return ret;
-%}
-
-%typemap(rp_tm_xll_rtst) QuantLib::Calendar %{
-        std::ostringstream os;
-        os << returnValue;
-        static char ret[XL_MAX_STR_LEN];
-        reposit::stringToChar(os.str(), ret);
-        return ret;
-%}
-
-%typemap(rp_tm_xll_rtst) QuantLib::Currency & %{
-        std::ostringstream os;
-        os << returnValue;
-        static char ret[XL_MAX_STR_LEN];
-        reposit::stringToChar(os.str(), ret);
-        return ret;
-%}
-
-%typemap(rp_tm_xll_rtst) QuantLib::Calendar const & %{
-        std::ostringstream os;
-        os << returnValue;
-        static char ret[XL_MAX_STR_LEN];
-        reposit::stringToChar(os.str(), ret);
-        return ret;
-%}
-
 %typemap(rp_tm_xll_rtst) QuantLib::Period %{
         std::string str = QuantLibAddin::libraryToScalar(returnValue);
         static char ret[XL_MAX_STR_LEN];
@@ -410,6 +369,7 @@
 %typemap(rp_tm_xll_cdrt) QuantLib::Handle<QuantLib::YieldTermStructure> const & "P";
 %typemap(rp_tm_xll_cdrt) QuantLib::Handle<QuantLib::Quote> const & "C";
 %typemap(rp_tm_xll_cdrt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "C";
+%typemap(rp_tm_xll_cdrt) QuantLib::InterestRate "E";
 
 // rp_tm_xll_code - code to register the parameter with Excel
 %typemap(rp_tm_xll_code) QuantLib::Period "C";

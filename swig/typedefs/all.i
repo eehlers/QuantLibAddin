@@ -57,6 +57,7 @@ namespace QuantLib {
     class Leg;
     class YieldTermStructure;
     class GeneralizedBlackScholesProcess;
+    class InterestRate;
 
     template <class T> class TimeSeries;
     template <class T> class Handle;

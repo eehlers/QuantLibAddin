@@ -340,6 +340,13 @@
         return &xRet;
 %}
 
+%typemap(rp_tm_xll_rtst) std::vector<QuantLib::Date> & %{
+        std::vector<long> returnValVec = QuantLibAddin::libraryToVector(returnValue);
+        static OPER xRet;
+        reposit::vectorToOper(returnValVec, xRet);
+        return &xRet;
+%}
+
 %typemap(rp_tm_xll_rtst) std::vector<QuantLib::Real> %{
         std::vector<double> returnValVec = QuantLibAddin::libraryToVector(returnValue);
         static OPER xRet;

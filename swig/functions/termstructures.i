@@ -1,6 +1,9 @@
 
 %group(termstructures);
 %groupCaption(Term Structures);
+// FIXME the only class that requires a manual override is InterpolatedYieldCurve.
+// So move that into a different file and generate the rest of this file automatically.
+%override;
 
 %insert(termstructures_library_hpp) %{
 #include <ql/termstructures/yield/flatforward.hpp>
@@ -148,31 +151,31 @@ namespace QuantLib {
     };
 }
 
-//namespace QuantLibAddin {
-//
-//    class InterpolatedYieldCurve : public YieldTermStructure {
-//      public:
-//        InterpolatedYieldCurve(
-//            const std::vector<QuantLib::Date>& dates,                   //!< vector of dates, the first one being the one at which discount factor = 1.0
-//            const std::vector<QuantLib::Real>& data,                    //!< data vector. Each element should be of the type selected by TraitsID
-//            const QuantLib::Calendar& calendar,                         //!< holiday calendar (e.g. TARGET) to advance from global EvaluationDate.
-//            const QuantLib::DayCounter& dayCounter/* = Actual365Fixed*/,//!< DayCounter ID.
-//            const std::vector<QuantLib::Handle<QuantLib::Quote> >& jumps,//!< Jump quotes vector.
-//            const std::vector<QuantLib::Date>& jumpDates,               //!< Jump dates vector.
-//            const std::string& traitsID = "Discount",                   //!< Discount, ZeroYield, or ForwardRate.
-//            const std::string& interpolatorID = "MonotonicLogCubicNaturalSpline",//!< BackwardFlat, ForwardFlat, Linear, LogLinear, LogParabolic, KrugerLogCubic, etc.
-//            const QuantLib::MixedInterpolation::Behavior behavior = QuantLib::ShareRanges,  //!< ShareRanges to join two different interpolations over all the pillars, SplitRanges otherwise.
-//            const Size n = 1                                            //!< Number of pillar from which change the interpolation ID.
-//        );
-//        //! Retrieve list of Times for the given InterpolatedYieldCurve.
-//        const std::vector<QuantLib::Time>& times() const;
-//        //! Retrieve list of Dates for the given InterpolatedYieldCurve.
-//        const std::vector<QuantLib::Date>& dates() const;
-//        //! Retrieve Data for the given InterpolatedYieldCurve.
-//        const std::vector<QuantLib::Real>& data() const;
-//        //! Retrieve list of jump times for the given InterpolatedYieldCurve.
-//        const std::vector<QuantLib::Time>& jumpTimes() const;
-//        //! Retrieve list of jump dates for the given InterpolatedYieldCurve.
-//        const std::vector<QuantLib::Date>& jumpDates() const;
-//    };
-//}
+namespace QuantLibAddin {
+
+    class InterpolatedYieldCurve : public YieldTermStructure {
+      public:
+        InterpolatedYieldCurve(
+            const std::vector<QuantLib::Date>& dates,                   //!< vector of dates, the first one being the one at which discount factor = 1.0
+            const std::vector<QuantLib::Real>& data,                    //!< data vector. Each element should be of the type selected by TraitsID
+            const QuantLib::Calendar& calendar,                         //!< holiday calendar (e.g. TARGET) to advance from global EvaluationDate.
+            const QuantLib::DayCounter& dayCounter/* = Actual365Fixed*/,//!< DayCounter ID.
+            const std::vector<QuantLib::Handle<QuantLib::Quote> >& jumps,//!< Jump quotes vector.
+            const std::vector<QuantLib::Date>& jumpDates,               //!< Jump dates vector.
+            const std::string& traitsID = "Discount",                   //!< Discount, ZeroYield, or ForwardRate.
+            const std::string& interpolatorID = "MonotonicLogCubicNaturalSpline",//!< BackwardFlat, ForwardFlat, Linear, LogLinear, LogParabolic, KrugerLogCubic, etc.
+            const QuantLib::MixedInterpolation::Behavior behavior = QuantLib::ShareRanges,  //!< ShareRanges to join two different interpolations over all the pillars, SplitRanges otherwise.
+            const QuantLib::Size n = 1                                  //!< Number of pillar from which change the interpolation ID.
+        );
+        //! Retrieve list of Times for the given InterpolatedYieldCurve.
+        const std::vector<QuantLib::Time>& times() const;
+        //! Retrieve list of Dates for the given InterpolatedYieldCurve.
+        const std::vector<QuantLib::Date>& dates() const;
+        //! Retrieve Data for the given InterpolatedYieldCurve.
+        const std::vector<QuantLib::Real>& data() const;
+        //! Retrieve list of jump times for the given InterpolatedYieldCurve.
+        const std::vector<QuantLib::Time>& jumpTimes() const;
+        //! Retrieve list of jump dates for the given InterpolatedYieldCurve.
+        const std::vector<QuantLib::Date>& jumpDates() const;
+    };
+}

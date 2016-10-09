@@ -1483,10 +1483,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\qlo\obj_termstructures.hpp"
-			>
-		</File>
-		<File
 			RelativePath=".\qlo\obj_vanillaswaps.hpp"
 			>
 		</File>
@@ -1576,6 +1572,10 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_settings.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_termstructures.hpp"
 			>
 		</File>
 		<File

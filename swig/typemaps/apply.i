@@ -63,6 +63,7 @@ OBJECT_WRAPPER(QuantLibAddin::FlatForward, QuantLib::FlatForward)
 OBJECT_WRAPPER(QuantLibAddin::ForwardSpreadedTermStructure, QuantLib::ForwardSpreadedTermStructure)
 OBJECT_WRAPPER(QuantLibAddin::ImpliedTermStructure, QuantLib::ImpliedTermStructure)
 OBJECT_WRAPPER(QuantLibAddin::TermStructure, QuantLib::TermStructure)
+OBJECT_WRAPPER(QuantLibAddin::InterpolatedYieldCurve, QuantLib::InterpolatedYieldCurve)
 
 // QuantLib Handles.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)

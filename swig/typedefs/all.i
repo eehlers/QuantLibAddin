@@ -41,6 +41,10 @@ namespace QuantLib {
         enum Type;
     };
 
+    struct MixedInterpolation {
+        enum Behavior;
+    };
+
     class Date;
     class DayCounter;
     class Period;

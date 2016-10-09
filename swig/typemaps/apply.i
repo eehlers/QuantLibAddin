@@ -25,6 +25,7 @@ ENUMERATED_TYPE(QuantLib::Duration::Type)
 ENUMERATED_TYPE(QuantLib::SensitivityAnalysis)
 ENUMERATED_TYPE(QuantLib::Weekday)
 ENUMERATED_TYPE(QuantLib::Month)
+ENUMERATED_TYPE(QuantLib::MixedInterpolation::Behavior)
 
 // Enumerated classes.
 ENUMERATED_CLASS(QuantLib::Calendar)
@@ -54,6 +55,14 @@ OBJECT_WRAPPER(QuantLibAddin::Extrapolator, QuantLib::Extrapolator)
 OBJECT_WRAPPER(QuantLibAddin::FloatingRateCouponPricer, QuantLib::FloatingRateCouponPricer)
 OBJECT_WRAPPER(QuantLibAddin::Bond, QuantLib::Bond)
 OBJECT_WRAPPER(QuantLibAddin::TimeSeriesDef, QuantLib::TimeSeriesDef)
+
+OBJECT_WRAPPER(QuantLibAddin::DiscountCurve, QuantLib::DiscountCurve)
+OBJECT_WRAPPER(QuantLibAddin::ZeroCurve, QuantLib::ZeroCurve)
+OBJECT_WRAPPER(QuantLibAddin::ForwardCurve, QuantLib::ForwardCurve)
+OBJECT_WRAPPER(QuantLibAddin::FlatForward, QuantLib::FlatForward)
+OBJECT_WRAPPER(QuantLibAddin::ForwardSpreadedTermStructure, QuantLib::ForwardSpreadedTermStructure)
+OBJECT_WRAPPER(QuantLibAddin::ImpliedTermStructure, QuantLib::ImpliedTermStructure)
+OBJECT_WRAPPER(QuantLibAddin::TermStructure, QuantLib::TermStructure)
 
 // QuantLib Handles.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)

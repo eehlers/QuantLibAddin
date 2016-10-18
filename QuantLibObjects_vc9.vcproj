@@ -1499,10 +1499,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\qlo\obj_assetswap.hpp"
-			>
-		</File>
-		<File
 			RelativePath=".\qlo\obj_calendars.hpp"
 			>
 		</File>
@@ -1548,6 +1544,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_volatilities.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_assetswap.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_assetswap.hpp"
 			>
 		</File>
 		<File

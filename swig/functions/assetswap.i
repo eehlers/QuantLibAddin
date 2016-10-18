@@ -2,7 +2,7 @@
 %group(assetswap);
 %groupCaption(Asset Swap);
 // The only class that requires a manual override is QuantLibAddin::AssetSwap...
-//%override;
+%override;
 
 %insert(assetswap_library_hpp) %{
 #include <ql/instruments/assetswap.hpp>
@@ -17,33 +17,8 @@
 
 namespace QuantLib {
 
-    class AssetSwap : public /*Swap*/Instrument {
+    class AssetSwap : public Swap {
       public:
-        AssetSwap(
-            bool payBondCoupon/*=false*/,                           //!< TRUE to pay the bond's coupons and receive floating.
-            const boost::shared_ptr<Bond>& bond,                    //!< underlying bond object ID.
-            Real bondCleanPrice,                                    //!< market price of the underlying bond.
-            const boost::shared_ptr<IborIndex>& iborIndex,          //!< floating leg IborIndex object ID.
-            Spread spread/*=0.0*/,                                  //!< Floating leg spread.
-            const Schedule& floatSchedule/* = Schedule()*/,         //!< floating leg schedule object ID.
-            const DayCounter& floatingDayCount = DayCounter(),      //!< floating day counter (e.g. Actual/360).
-            bool parAssetSwap = true                                //!< TRUE for par asset swap, FALSE for market asset swap.
-        );
-
-        // Overloaded ctors; the directive below causes the second to be called qlAssetSwap2().
-        %alias(AssetSwap2, AssetSwap);
-        AssetSwap(
-            bool parAssetSwap/*=true*/,                             //!< TRUE for par asset swap, FALSE for market asset swap.
-            const boost::shared_ptr<Bond>& bond,                    //!< underlying bond object ID.
-            Real bondCleanPrice,                                    //!< market price of the underlying bond.
-            Real nonParRepayment,                                   //!< non par repayment on deal maturity date.
-            Real gearing/*=1.0*/,                                   //!< gearing.
-            const boost::shared_ptr<IborIndex>& iborIndex,          //!< floating leg IborIndex object ID.
-            Spread spread = 0.0,                                    //!< Floating leg spread.
-            const DayCounter& floatingDayCount = DayCounter(),      //!< floating day counter (e.g. Actual/360).
-            Date dealMaturity = Date(),                             //!< deal maturity (bond maturity if missing).
-            bool payBondCoupon = false                              //!< TRUE to pay the bond's coupons and receive floating.
-        );
         //! the fair rate of the asset swap, i.e. the asset swap spread.
         Spread fairSpread() const;
         //! the BPS of the floating leg.
@@ -66,12 +41,37 @@ namespace QuantLib {
     };
 }
 
-//namespace QuantLibAddin {
-//    class AssetSwap : public Swap {
-//      public:
-//        std::vector<std::vector<reposit::property_t> > floatingLegAnalysis(
-//            const QuantLib::Date& d);
-//        std::vector<std::vector<reposit::property_t> > bondLegAnalysis(
-//            const QuantLib::Date& d);
-//      };
-//}
+namespace QuantLibAddin {
+    class AssetSwap : public Swap {
+      public:
+        AssetSwap(
+            bool payBondCoupon/*=false*/,                           //!< TRUE to pay the bond's coupons and receive floating.
+            const boost::shared_ptr<QuantLib::Bond>& bond,                    //!< underlying bond object ID.
+            QuantLib::Real bondCleanPrice,                                    //!< market price of the underlying bond.
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,          //!< floating leg IborIndex object ID.
+            QuantLib::Spread spread/*=0.0*/,                                  //!< Floating leg spread.
+            const boost::shared_ptr<QuantLib::Schedule>& floatSchedule/* = QuantLib::Schedule()*/,         //!< floating leg schedule object ID.
+            const QuantLib::DayCounter& floatingDayCount = QuantLib::DayCounter(),      //!< floating day counter (e.g. Actual/360).
+            bool parAssetSwap = true                                //!< TRUE for par asset swap, FALSE for market asset swap.
+        );
+
+        // Overloaded ctors; the directive below causes the second to be called qlAssetSwap2().
+        %alias(AssetSwap2, AssetSwap);
+        AssetSwap(
+            bool parAssetSwap/*=true*/,                             //!< TRUE for par asset swap, FALSE for market asset swap.
+            const boost::shared_ptr<QuantLib::Bond>& bond,                    //!< underlying bond object ID.
+            QuantLib::Real bondCleanPrice,                                    //!< market price of the underlying bond.
+            QuantLib::Real nonParRepayment,                                   //!< non par repayment on deal maturity date.
+            QuantLib::Real gearing/*=1.0*/,                                   //!< gearing.
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,          //!< floating leg IborIndex object ID.
+            QuantLib::Spread spread = 0.0,                                    //!< Floating leg spread.
+            const QuantLib::DayCounter& floatingDayCount = QuantLib::DayCounter(),      //!< floating day counter (e.g. Actual/360).
+            const QuantLib::Date& dealMaturity = QuantLib::Date(),                      //!< deal maturity (bond maturity if missing).
+            bool payBondCoupon = false                              //!< TRUE to pay the bond's coupons and receive floating.
+        );      
+        std::vector<std::vector<reposit::property_t> > floatingLegAnalysis(
+            const QuantLib::Date& d);
+        std::vector<std::vector<reposit::property_t> > bondLegAnalysis(
+            const QuantLib::Date& d);
+      };
+}

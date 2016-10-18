@@ -1,4 +1,3 @@
-/* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
  Copyright (C) 2006 Chiara Fornarola
@@ -28,7 +27,7 @@
 namespace QuantLibAddin {
 
     AssetSwap::AssetSwap(
-                const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                const boost::shared_ptr<reposit::ValueObject>& properties,
                 bool payFixedRate,
                 const boost::shared_ptr<QuantLib::Bond>& bond,
                 const QuantLib::Real bondCleanPrice,
@@ -67,7 +66,7 @@ namespace QuantLibAddin {
     }
 
     AssetSwap::AssetSwap(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<reposit::ValueObject>& properties,
             bool parAssetSwap,
             const boost::shared_ptr<QuantLib::Bond>& bond,
             QuantLib::Real bondCleanPrice,

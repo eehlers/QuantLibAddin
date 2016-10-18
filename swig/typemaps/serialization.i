@@ -69,6 +69,18 @@
                 $1_name_coerce, QuantLib::Handle<QuantLib::BlackVolTermStructure>());
 %}
 
+%typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::SwaptionVolatilityStructure> const & %{
+    std::string $1_name_str =
+        reposit::convert2<std::string>(valueObject->getProperty("$1_name"));
+    valueObject->processPrecedentID($1_name_str);
+    RP_GET_OBJECT_DEFAULT($1_name_coerce, $1_name_str, reposit::Object)
+    QuantLib::Handle<QuantLib::SwaptionVolatilityStructure> $1_name =
+        QuantLibAddin::CoerceHandle<
+            QuantLibAddin::SwaptionVolatilityStructure,
+            QuantLib::SwaptionVolatilityStructure>()(
+                $1_name_coerce, QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>());
+%}
+
 %typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Natural> const & %{
    std::vector<long> $1_name_vec =
         reposit::vector::convert2<long>(valueObject->getProperty("$1_name"), "$1_name");

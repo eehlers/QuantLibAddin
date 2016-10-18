@@ -12,7 +12,7 @@
 
 %insert(pricingengines_addin_cpp) %{
 #include <qlo/obj_processes.hpp>
-#include <qlo/obj_termstructures.hpp>
+#include <qlo/objmanual_termstructures.hpp>
 #include <qlo/obj_models.hpp>
 %}
 

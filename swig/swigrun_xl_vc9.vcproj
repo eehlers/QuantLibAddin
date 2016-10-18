@@ -146,6 +146,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\swap.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\termstructures.i"
 					>
 				</File>

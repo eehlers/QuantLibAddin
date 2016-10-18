@@ -10,7 +10,7 @@
 #include <qlo/indexes/swap/euriborswap.hpp>
 #include <qlo/indexes/swap/isdafixaswap.hpp>
 #include <qlo/indexes/swap/liborswap.hpp>
-#include <qlo/obj_termstructures.hpp>
+#include <qlo/objmanual_termstructures.hpp>
 #include <ql/indexes/iborindex.hpp>
 #include <ql/termstructures/yieldtermstructure.hpp>
 #include <ql/experimental/coupons/proxyibor.hpp>

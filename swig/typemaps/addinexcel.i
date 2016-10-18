@@ -22,6 +22,7 @@
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::Quote> const & "OPER*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::SimpleQuote> const & "char*";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "char*";
+%typemap(rp_tm_xll_parm) QuantLib::Handle<QuantLib::SwaptionVolatilityStructure> const & "char*";
 %typemap(rp_tm_xll_parm) QuantLib::TimeSeries<QuantLib::Real> const & "OPER*";
 
 // rp_tm_xll_cnvt - convert from Excel datatypes to the datatypes of the underlying Library
@@ -391,6 +392,7 @@
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::SimpleQuote> const & "C";
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::YieldTermStructure> const & "P";
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "C";
+%typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::SwaptionVolatilityStructure> const & "C";
 
 %typemap(rp_tm_xll_loop) QuantLib::Date const & "$1_name_cnv";
 

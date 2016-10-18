@@ -45,6 +45,10 @@ namespace QuantLib {
         enum Behavior;
     };
 
+    struct GFunctionFactory {
+        enum YieldCurveModel;
+    };
+
     class Date;
     class DayCounter;
     class Period;

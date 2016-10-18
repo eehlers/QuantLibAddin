@@ -10,6 +10,7 @@
 %typemap(rp_tm_vob_parm) QuantLib::Handle< QuantLib::Quote > const & "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) QuantLib::Handle< QuantLib::YieldTermStructure > const & "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) QuantLib::Handle< QuantLib::BlackVolTermStructure > const & "const std::string &";
+%typemap(rp_tm_vob_parm) QuantLib::Handle< QuantLib::SwaptionVolatilityStructure > const & "const std::string &";
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Date > const & "const std::vector<reposit::property_t>&";
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Leg> const & "const std::vector<std::string>&";
 %typemap(rp_tm_vob_parm) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "const std::vector<std::string>&";
@@ -24,6 +25,7 @@
 %typemap(rp_tm_vob_mbvr) QuantLib::Handle<QuantLib::Quote > const & "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) QuantLib::Handle<QuantLib::YieldTermStructure > const & "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) QuantLib::Handle<QuantLib::BlackVolTermStructure > const & "std::string $1_name_";
+%typemap(rp_tm_vob_mbvr) QuantLib::Handle<QuantLib::SwaptionVolatilityStructure > const & "std::string $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Leg> const & "std::vector<std::string> $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Date > const & "std::vector<reposit::property_t> $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "std::vector<std::string> $1_name_";
@@ -44,6 +46,7 @@
 %typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::Quote> const & "value";
 %typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & "value";
 %typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "reposit::convert2<std::string>(value)";
+%typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::SwaptionVolatilityStructure> const & "reposit::convert2<std::string>(value)";
 %typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Leg> const & "reposit::vector::convert2<std::string>(value, nameUpper)";
 %typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Date> const & "reposit::vector::convert2<reposit::property_t>(value, nameUpper)";
 %typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "reposit::vector::convert2<std::string>(value, nameUpper)";

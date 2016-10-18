@@ -22,6 +22,7 @@
 %include ratehelpers.i
 %include schedule.i
 %include settings.i
+%include swap.i
 %include termstructures.i
 %include timeseries.i
 %include utilities.i

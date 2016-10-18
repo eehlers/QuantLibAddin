@@ -6,13 +6,14 @@
 %insert(couponvectors_addin_cpp) %{
 #include <qlo/obj_schedule.hpp>
 #include <qlo/indexes/iborindex.hpp>
+#include <qlo/objmanual_termstructures.hpp>
+#include <qlo/conundrumpricer.hpp>
 %}
 
 namespace QuantLibAddin {
 
     class IborLeg : public Leg {
       public:
-        %generate(countify, IborLeg);
         IborLeg(
             QuantLib::BusinessDayConvention paymentConvention,      //!< payment business day convention.
             const std::vector<QuantLib::Real>& nominals,            //!< Nominal amount vector.
@@ -27,5 +28,15 @@ namespace QuantLibAddin {
             const std::vector<QuantLib::Rate>& caps                 //!< cap strikes.
             );
     };
+    
+    class CmsCouponPricer : public FloatingRateCouponPricer {
+      public:
+        CmsCouponPricer(
+            const QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>& vol,
+            const std::string& typeOfCmsCouponPricer,
+            QuantLib::GFunctionFactory::YieldCurveModel modelOfYieldCurve,
+            const QuantLib::Handle<QuantLib::Quote>& meanReversion
+        );
+    };    
 }
 

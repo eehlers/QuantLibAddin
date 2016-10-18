@@ -11,7 +11,7 @@
 %insert(models_addin_cpp) %{
 #include <qlo/obj_pricingengines.hpp>
 #include <qlo/objmanual_quotes.hpp>
-#include <qlo/obj_termstructures.hpp>
+#include <qlo/objmanual_termstructures.hpp>
 #include <qlo/obj_math.hpp>
 #include <qlo/indexes/iborindex.hpp>
 %}

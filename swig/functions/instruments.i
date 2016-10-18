@@ -16,7 +16,7 @@
 #include <qlo/obj_exercise.hpp>
 #include <qlo/objmanual_leg.hpp>
 #include <qlo/obj_vanillaswaps.hpp>
-#include <qlo/obj_termstructures.hpp>
+#include <qlo/objmanual_termstructures.hpp>
 #include <qlo/indexes/iborindex.hpp>
 %}
 
@@ -50,15 +50,6 @@ namespace QuantLib {
             const boost::shared_ptr<Exercise>& exercise             //!< Exercise object ID.
         );
     };
-
-    class Swap : public Instrument {
-      public:
-        %generate(countify, Swap);
-        Swap(
-            const std::vector<Leg>& legs,       //!< leg object IDs.
-            const std::vector<bool>& payer      //!< TRUE for payed leg.
-        );
-    };
     
     class Swaption : public /*Option*/Instrument {
       public:
@@ -83,6 +74,5 @@ namespace QuantLib {
             /*,Handle<YieldTermStructure>()*/
             );
     };
-    
 }
 

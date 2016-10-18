@@ -6,7 +6,7 @@
 %insert(ratehelpers_addin_cpp) %{
 #include <qlo/objmanual_quotes.hpp>
 #include <qlo/objmanual_bonds.hpp>
-#include <qlo/obj_termstructures.hpp>
+#include <qlo/objmanual_termstructures.hpp>
 #include <qlo/obj_schedule.hpp>
 #include <qlo/indexes/iborindex.hpp>
 #include <qlo/indexes/swapindex.hpp>

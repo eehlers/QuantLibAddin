@@ -925,6 +925,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_swap.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_swap.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_termstructures.cpp"
 					>
 				</File>
@@ -1113,6 +1121,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_swap.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_swap.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_termstructures.cpp"
 					>
 				</File>
@@ -1294,6 +1310,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_swap.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_swap.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_termstructures.cpp"
 				>
 			</File>
@@ -1436,6 +1460,14 @@
 		</Filter>
 		<File
 			RelativePath=".\qlo\auto_link.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\conundrumpricer.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\conundrumpricer.hpp"
 			>
 		</File>
 		<File
@@ -1600,6 +1632,14 @@
 		</File>
 		<File
 			RelativePath=".\qlo\objmanual_settings.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_swap.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\objmanual_swap.hpp"
 			>
 		</File>
 		<File

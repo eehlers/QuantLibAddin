@@ -62,6 +62,9 @@ namespace QuantLib {
     class YieldTermStructure;
     class GeneralizedBlackScholesProcess;
     class InterestRate;
+    class IborIndex;
+    class Bond;
+    class Schedule;
 
     template <class T> class TimeSeries;
     template <class T> class Handle;

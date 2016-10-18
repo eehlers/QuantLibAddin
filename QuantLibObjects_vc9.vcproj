@@ -781,6 +781,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_assetswap.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_assetswap.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_bonds.cpp"
 					>
 				</File>
@@ -954,6 +962,14 @@
 				>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_all.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_assetswap.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_assetswap.hpp"
 					>
 				</File>
 				<File
@@ -1133,6 +1149,14 @@
 		<Filter
 			Name="valueobjects"
 			>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_assetswap.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_assetswap.hpp"
+				>
+			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_bonds.cpp"
 				>
@@ -1440,6 +1464,10 @@
 		</File>
 		<File
 			RelativePath=".\qlo\obj_all.hpp"
+			>
+		</File>
+		<File
+			RelativePath=".\qlo\obj_assetswap.hpp"
 			>
 		</File>
 		<File

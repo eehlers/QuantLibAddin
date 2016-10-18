@@ -1,5 +1,5 @@
 
-//%include assetswap.i
+%include assetswap.i
 %include bonds.i
 %include calendars.i
 %include couponvectors.i

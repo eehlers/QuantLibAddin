@@ -21,7 +21,7 @@
 #ifndef qla_convert_quotehandle_hpp
 #define qla_convert_quotehandle_hpp
 
-//#include <qlo/objects/quote.hpp>
+//#include <qlo/objects/objmanual_quotes.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <rp/conversions/convert2.hpp>
 

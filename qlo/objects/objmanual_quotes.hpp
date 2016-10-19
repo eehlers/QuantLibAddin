@@ -23,11 +23,12 @@
 #ifndef qla_quotes_hpp
 #define qla_quotes_hpp
 
-#include <qlo/objects/quote.hpp>
-
+#include <ql/quote.hpp>
 #include <ql/option.hpp>
 #include <ql/types.hpp>
 #include <ql/experimental/risk/sensitivityanalysis.hpp>
+
+#include <rp/libraryobject.hpp>
 
 namespace QuantLib {
     class Index;
@@ -44,6 +45,8 @@ namespace QuantLib {
 }
 
 namespace QuantLibAddin {
+
+    RP_LIB_CLASS(Quote, QuantLib::Quote);
 
     class SimpleQuote : public Quote {
       public:

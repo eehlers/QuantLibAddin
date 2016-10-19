@@ -1561,10 +1561,6 @@
 				RelativePath=".\qlo\objects\objmanual_utilities.hpp"
 				>
 			</File>
-			<File
-				RelativePath=".\qlo\objects\quote.hpp"
-				>
-			</File>
 			<Filter
 				Name="cashflows"
 				>

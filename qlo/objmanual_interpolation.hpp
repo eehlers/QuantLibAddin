@@ -22,7 +22,7 @@
 #define qla_interpolation_hpp
 
 //#include <qlo/extrapolator.hpp>
-#include <qlo/obj_termstructures.hpp>
+#include <qlo/objmanual_termstructures.hpp>
 
 #include <ql/math/interpolations/mixedinterpolation.hpp>
 #include <ql/math/interpolations/cubicinterpolation.hpp>

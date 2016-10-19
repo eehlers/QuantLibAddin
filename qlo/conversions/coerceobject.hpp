@@ -22,8 +22,8 @@
 
 #include <rp/conversions/coerce.hpp>
 #include <rp/exception.hpp>
-#include <qlo/handle.hpp>
-#include <qlo/handleimpl.hpp>
+#include <qlo/objects/handle.hpp>
+#include <qlo/objects/handleimpl.hpp>
 #include <qlo/conversions/coerceobject.hpp>
 
 namespace QuantLibAddin {

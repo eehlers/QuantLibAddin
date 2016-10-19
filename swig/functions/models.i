@@ -9,11 +9,11 @@
 %}
 
 %insert(models_addin_cpp) %{
-#include <qlo/obj_pricingengines.hpp>
-#include <qlo/objmanual_quotes.hpp>
-#include <qlo/objmanual_termstructures.hpp>
-#include <qlo/obj_math.hpp>
-#include <qlo/indexes/iborindex.hpp>
+#include <qlo/objects/obj_pricingengines.hpp>
+#include <qlo/objects/objmanual_quotes.hpp>
+#include <qlo/objects/objmanual_termstructures.hpp>
+#include <qlo/objects/obj_math.hpp>
+#include <qlo/objects/indexes/iborindex.hpp>
 %}
 
 namespace QuantLib {

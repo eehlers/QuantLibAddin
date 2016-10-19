@@ -25,7 +25,7 @@
 
 #include <qlo/enumerations/constructors/enumeratedpairs.hpp>
 #include <qlo/conversions/conversions.hpp>
-//#include <qlo/yieldtermstructures.hpp>
+//#include <qlo/objects/termstructures/yieldtermstructures.hpp>
 #include <ql/termstructures/yield/piecewiseyieldcurve.hpp>
 #include <ql/math/interpolations/forwardflatinterpolation.hpp>
 #include <ql/math/interpolations/backwardflatinterpolation.hpp>

@@ -4,12 +4,12 @@
 %override;
 
 %insert(ratehelpers_addin_cpp) %{
-#include <qlo/objmanual_quotes.hpp>
-#include <qlo/objmanual_bonds.hpp>
-#include <qlo/objmanual_termstructures.hpp>
-#include <qlo/obj_schedule.hpp>
-#include <qlo/indexes/iborindex.hpp>
-#include <qlo/indexes/swapindex.hpp>
+#include <qlo/objects/objmanual_quotes.hpp>
+#include <qlo/objects/objmanual_bonds.hpp>
+#include <qlo/objects/objmanual_termstructures.hpp>
+#include <qlo/objects/obj_schedule.hpp>
+#include <qlo/objects/indexes/iborindex.hpp>
+#include <qlo/objects/indexes/swapindex.hpp>
 %}
 
 namespace QuantLib {

@@ -4,8 +4,8 @@
 %override;
 
 %insert(timeseries_addin_cpp) %{
-#include <qlo/objmanual_timeseries.hpp>
-#include <qlo/objmanual_indexes.hpp>
+#include <qlo/objects/objmanual_timeseries.hpp>
+#include <qlo/objects/objmanual_indexes.hpp>
 %}
 
 namespace QuantLib {

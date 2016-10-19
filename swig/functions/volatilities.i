@@ -4,7 +4,7 @@
 
 %insert(volatilities_library_hpp) %{
 #include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>
-#include <qlo/objmanual_piecewiseyieldcurve.hpp>
+#include <qlo/objects/objmanual_piecewiseyieldcurve.hpp>
 %}
 
 namespace QuantLib {

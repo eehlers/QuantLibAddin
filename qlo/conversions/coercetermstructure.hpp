@@ -23,11 +23,11 @@
 #include <rp/conversions/coerce.hpp>
 #include <rp/exception.hpp>
 
-#include <qlo/handle.hpp>
+#include <qlo/objects/handle.hpp>
 #include <qlo/conversions/coerceobject.hpp>
 #include <qlo/conversions/coercelibrarydifferent.hpp>
 
-#include <qlo/yieldtermstructures.hpp>
+#include <qlo/objects/termstructures/yieldtermstructures.hpp>
 //#include <qlo/defaulttermstructures.hpp>
 //#include <qlo/swaptionvolstructure.hpp>
 

@@ -4,13 +4,13 @@
 %override;
 
 %insert(indexes_addin_cpp) %{
-#include <qlo/indexes/bmaindex.hpp>
-#include <qlo/indexes/ibor/euribor.hpp>
-#include <qlo/indexes/ibor/libor.hpp>
-#include <qlo/indexes/swap/euriborswap.hpp>
-#include <qlo/indexes/swap/isdafixaswap.hpp>
-#include <qlo/indexes/swap/liborswap.hpp>
-#include <qlo/objmanual_termstructures.hpp>
+#include <qlo/objects/indexes/bmaindex.hpp>
+#include <qlo/objects/indexes/ibor/euribor.hpp>
+#include <qlo/objects/indexes/ibor/libor.hpp>
+#include <qlo/objects/indexes/swap/euriborswap.hpp>
+#include <qlo/objects/indexes/swap/isdafixaswap.hpp>
+#include <qlo/objects/indexes/swap/liborswap.hpp>
+#include <qlo/objects/objmanual_termstructures.hpp>
 #include <ql/indexes/iborindex.hpp>
 #include <ql/termstructures/yieldtermstructure.hpp>
 #include <ql/experimental/coupons/proxyibor.hpp>

@@ -28,7 +28,7 @@
 #include <ql/interestrate.hpp>
 #include <ql/timeseries.hpp>
 
-#include <qlo/objmanual_timeseries.hpp>
+#include <qlo/objects/objmanual_timeseries.hpp>
 
 #include <rp/reposit.hpp>
 #include <qlo/conversions/coercehandle.hpp>

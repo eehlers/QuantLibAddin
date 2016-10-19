@@ -4,7 +4,5 @@ Debug
 .libs
 *.lo
 *.o
-obj_*.?pp
-objmanual_*.?pp.template
 Release
 *.user

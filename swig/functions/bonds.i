@@ -5,12 +5,12 @@
 %override;
 
 %insert(bonds_addin_cpp) %{
-#include <qlo/obj_schedule.hpp>
-#include <qlo/objmanual_termstructures.hpp>
-#include <qlo/objmanual_leg.hpp>
-#include <qlo/objmanual_couponvectors.hpp>
-#include <qlo/indexes/iborindex.hpp>
-#include <qlo/indexes/swapindex.hpp>
+#include <qlo/objects/obj_schedule.hpp>
+#include <qlo/objects/objmanual_termstructures.hpp>
+#include <qlo/objects/objmanual_leg.hpp>
+#include <qlo/objects/objmanual_couponvectors.hpp>
+#include <qlo/objects/indexes/iborindex.hpp>
+#include <qlo/objects/indexes/swapindex.hpp>
 #include <ql/pricingengines/bond/bondfunctions.hpp>
 %}
 

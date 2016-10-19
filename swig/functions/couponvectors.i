@@ -4,10 +4,10 @@
 %override;
 
 %insert(couponvectors_addin_cpp) %{
-#include <qlo/obj_schedule.hpp>
-#include <qlo/indexes/iborindex.hpp>
-#include <qlo/objmanual_termstructures.hpp>
-#include <qlo/conundrumpricer.hpp>
+#include <qlo/objects/obj_schedule.hpp>
+#include <qlo/objects/indexes/iborindex.hpp>
+#include <qlo/objects/objmanual_termstructures.hpp>
+#include <qlo/objects/cashflows/conundrumpricer.hpp>
 %}
 
 namespace QuantLibAddin {

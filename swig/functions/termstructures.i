@@ -16,7 +16,7 @@
 %}
 
 %insert(termstructures_addin_cpp) %{
-#include <qlo/objmanual_handles.hpp>
+#include <qlo/objects/objmanual_handles.hpp>
 %}
 
 namespace QuantLib {

@@ -18,14 +18,14 @@
 */
 
 #include <qlo/serialization/processor.hpp>
-#include <qlo/handle.hpp>
+#include <qlo/objects/handle.hpp>
 //#include <qlo/pricingengines.hpp>
 //#include <qlo/leg.hpp>
 //#include <qlo/couponvectors.hpp>
 #include <qlo/conversions/varianttodate.hpp>
 //#include <qlo/extrapolator.hpp>
 //#include <qlo/baseinstruments.hpp>
-//#include <qlo/objmanual_indexes.hpp>
+//#include <qlo/objects/objmanual_indexes.hpp>
 
 namespace QuantLibAddin {
 

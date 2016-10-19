@@ -11,9 +11,9 @@
 %}
 
 %insert(pricingengines_addin_cpp) %{
-#include <qlo/obj_processes.hpp>
-#include <qlo/objmanual_termstructures.hpp>
-#include <qlo/obj_models.hpp>
+#include <qlo/objects/obj_processes.hpp>
+#include <qlo/objects/objmanual_termstructures.hpp>
+#include <qlo/objects/obj_models.hpp>
 %}
 
 namespace QuantLib {

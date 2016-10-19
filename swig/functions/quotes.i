@@ -5,9 +5,9 @@
 %override;
 
 %insert(quotes_addin_cpp) %{
-#include <qlo/obj_instruments.hpp>
-#include <qlo/indexes/iborindex.hpp>
-#include <qlo/indexes/swapindex.hpp>
+#include <qlo/objects/obj_instruments.hpp>
+#include <qlo/objects/indexes/iborindex.hpp>
+#include <qlo/objects/indexes/swapindex.hpp>
 #include <qlo/conversions/coercequote.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <ql/quotes/derivedquote.hpp>

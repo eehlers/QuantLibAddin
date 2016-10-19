@@ -10,19 +10,19 @@
 //#include <ql/instruments/swap.hpp>
 //#include <ql/instruments/swaption.hpp>
 //#include <ql/instruments/forwardrateagreement.hpp>
-#include <qlo/obj_instruments.hpp>
+#include <qlo/objects/obj_instruments.hpp>
 %}
 
 %insert(swap_addin_cpp) %{
-#include <qlo/objmanual_leg.hpp>
-#include <qlo/indexes/swapindex.hpp>
-#include <qlo/indexes/iborindex.hpp>
-#include <qlo/conundrumpricer.hpp>
-//#include <qlo/obj_pricingengines.hpp>
-//#include <qlo/obj_payoffs.hpp>
-//#include <qlo/obj_exercise.hpp>
-//#include <qlo/obj_vanillaswaps.hpp>
-//#include <qlo/objmanual_termstructures.hpp>
+#include <qlo/objects/objmanual_leg.hpp>
+#include <qlo/objects/indexes/swapindex.hpp>
+#include <qlo/objects/indexes/iborindex.hpp>
+#include <qlo/objects/cashflows/conundrumpricer.hpp>
+//#include <qlo/objects/obj_pricingengines.hpp>
+//#include <qlo/objects/obj_payoffs.hpp>
+//#include <qlo/objects/obj_exercise.hpp>
+//#include <qlo/objects/obj_vanillaswaps.hpp>
+//#include <qlo/objects/objmanual_termstructures.hpp>
 %}
 
 namespace QuantLib {

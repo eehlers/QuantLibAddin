@@ -4,7 +4,7 @@
 %override;
 
 %insert(settings_addin_cpp) %{
-#include <qlo/objmanual_settings.hpp>
+#include <qlo/objects/objmanual_settings.hpp>
 %}
 
 namespace QuantLibAddin {

@@ -11,13 +11,13 @@
 %}
 
 %insert(instruments_addin_cpp) %{
-#include <qlo/obj_pricingengines.hpp>
-#include <qlo/obj_payoffs.hpp>
-#include <qlo/obj_exercise.hpp>
-#include <qlo/objmanual_leg.hpp>
-#include <qlo/obj_vanillaswaps.hpp>
-#include <qlo/objmanual_termstructures.hpp>
-#include <qlo/indexes/iborindex.hpp>
+#include <qlo/objects/obj_pricingengines.hpp>
+#include <qlo/objects/obj_payoffs.hpp>
+#include <qlo/objects/obj_exercise.hpp>
+#include <qlo/objects/objmanual_leg.hpp>
+#include <qlo/objects/obj_vanillaswaps.hpp>
+#include <qlo/objects/objmanual_termstructures.hpp>
+#include <qlo/objects/indexes/iborindex.hpp>
 %}
 
 namespace QuantLib {

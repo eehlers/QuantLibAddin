@@ -22,7 +22,7 @@
 
 #include <rp/conversions/coerce.hpp>
 #include <rp/exception.hpp>
-#include <qlo/handle.hpp>
+#include <qlo/objects/handle.hpp>
 #include <qlo/conversions/coercelibrarysame.hpp>
 
 namespace QuantLibAddin {

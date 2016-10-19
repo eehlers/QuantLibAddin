@@ -37,10 +37,10 @@
 //#include <qlo/interpolation.hpp>
 //#include <qlo/interpolation2D.hpp>
 //#include <qlo/ratehelpers.hpp>
-#include <qlo/objmanual_ratehelpers.hpp>
+#include <qlo/objects/objmanual_ratehelpers.hpp>
 //#include <qlo/piecewiseyieldcurve.hpp>
-#include <qlo/yieldtermstructures.hpp>
-#include <qlo/indexes/swapindex.hpp>
+#include <qlo/objects/termstructures/yieldtermstructures.hpp>
+#include <qlo/objects/indexes/swapindex.hpp>
 
 #include <ql/cashflows/cashflows.hpp>
 #include <ql/cashflows/conundrumpricer.hpp>

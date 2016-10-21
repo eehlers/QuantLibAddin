@@ -20,6 +20,14 @@
                 QuantLib::YieldTermStructure>()(
                     yyy);
 %}
+%typemap(rp_tm_xxx_rp_get) QuantLib::DefaultProbabilityTermStructure %{
+        RP_GET_OBJECT(yyy, objectID, reposit::Object)
+        boost::shared_ptr<QuantLib::DefaultProbabilityTermStructure> xxx =
+            QuantLibAddin::CoerceTermStructure<
+                QuantLibAddin::DefaultProbabilityTermStructure,
+                QuantLib::DefaultProbabilityTermStructure>()(
+                    yyy);
+%}
 
 %typemap(rp_tm_xxx_loop) QuantLib::Date "$1_name_cnv";
 %typemap(rp_tm_xxx_loop) QuantLib::Date const & "$1_name_cnv";

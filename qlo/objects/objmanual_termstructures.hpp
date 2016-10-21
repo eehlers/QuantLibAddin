@@ -29,8 +29,8 @@ namespace QuantLibAddin {
 
     RP_OBJ_CLASS(TermStructure, Extrapolator);
     RP_OBJ_CLASS(YieldTermStructure, TermStructure);
-    //RP_OBJ_CLASS(DefaultProbabilityTermStructure, TermStructure);
-    //RP_OBJ_CLASS(CorrelationTermStructure, TermStructure);
+    RP_OBJ_CLASS(DefaultProbabilityTermStructure, TermStructure);
+    RP_OBJ_CLASS(CorrelationTermStructure, TermStructure);
     //RP_OBJ_CLASS(InflationTermStructure, TermStructure);
     RP_OBJ_CLASS(VolatilityTermStructure, TermStructure);
     //RP_OBJ_CLASS(BlackAtmVolCurve, VolatilityTermStructure);

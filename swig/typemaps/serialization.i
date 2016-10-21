@@ -81,11 +81,30 @@
                 $1_name_coerce, QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>());
 %}
 
+%typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::DefaultProbabilityTermStructure> const & %{
+    std::string $1_name_str =
+        reposit::convert2<std::string>(valueObject->getProperty("$1_name"));
+    valueObject->processPrecedentID($1_name_str);
+    RP_GET_OBJECT_DEFAULT($1_name_coerce, $1_name_str, reposit::Object)
+    QuantLib::Handle<QuantLib::DefaultProbabilityTermStructure> $1_name =
+        QuantLibAddin::CoerceHandle<
+            QuantLibAddin::DefaultProbabilityTermStructure,
+            QuantLib::DefaultProbabilityTermStructure>()(
+                $1_name_coerce, QuantLib::Handle<QuantLib::DefaultProbabilityTermStructure>());
+%}
+
 %typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Natural> const & %{
    std::vector<long> $1_name_vec =
         reposit::vector::convert2<long>(valueObject->getProperty("$1_name"), "$1_name");
    std::vector<QuantLib::Natural> $1_name =
         QuantLibAddin::convertVector<long, QuantLib::Natural>($1_name_vec);
+%}
+
+%typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Integer> const & %{
+   std::vector<long> $1_name_vec =
+        reposit::vector::convert2<long>(valueObject->getProperty("$1_name"), "$1_name");
+   std::vector<QuantLib::Integer> $1_name =
+        QuantLibAddin::convertVector<long, QuantLib::Integer>($1_name_vec);
 %}
 
 %typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Real> const & %{
@@ -116,6 +135,13 @@
         reposit::vector::convert2<QuantLib::Date>($1_name_vec, "$1_name");
 %}
 
+%typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Period> const & %{
+    std::vector<reposit::property_t> $1_name_vec =
+        reposit::vector::convert2<reposit::property_t>(valueObject->getProperty("$1_name"), "$1_name");
+    std::vector<QuantLib::Period> $1_name =
+        reposit::vector::convert2<QuantLib::Period>($1_name_vec, "$1_name");
+%}
+
 %typemap(rp_tm_scr_cnvt) std::vector<boost::shared_ptr<QuantLib::RateHelper> > const & %{
     std::vector<std::string> $1_name_vec =
         reposit::vector::convert2<std::string>(valueObject->getProperty("$1_name"), "$1_name");
@@ -136,12 +162,40 @@
         reposit::getLibraryObjectVector<QuantLibAddin::InterestRate, QuantLib::InterestRate>($1_name_vec);
 %}
 
+%typemap(rp_tm_scr_cnvt) std::vector<boost::shared_ptr<QuantLib::Issuer> > const & %{
+    std::vector<std::string> $1_name_vec =
+        reposit::vector::convert2<std::string>(valueObject->getProperty("$1_name"), "$1_name");
+    for (std::vector<std::string>::const_iterator i = $1_name_vec.begin();
+            i != $1_name_vec.end(); ++i)
+        valueObject->processPrecedentID(*i);
+    std::vector<boost::shared_ptr<QuantLib::Issuer> > $1_name =
+        reposit::getLibraryObjectVector<QuantLibAddin::Issuer, QuantLib::Issuer>($1_name_vec);
+%}
+
+%typemap(rp_tm_scr_cnvt) std::vector<boost::shared_ptr<QuantLib::DefaultProbabilityHelper> > const & %{
+    std::vector<std::string> $1_name_vec =
+        reposit::vector::convert2<std::string>(valueObject->getProperty("$1_name"), "$1_name");
+    for (std::vector<std::string>::const_iterator i = $1_name_vec.begin();
+            i != $1_name_vec.end(); ++i)
+        valueObject->processPrecedentID(*i);
+    std::vector<boost::shared_ptr<QuantLib::DefaultProbabilityHelper> > $1_name =
+        reposit::getLibraryObjectVector<QuantLibAddin::DefaultProbabilityHelper, QuantLib::DefaultProbabilityHelper>($1_name_vec);
+%}
+
 %typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & %{
     std::vector<reposit::property_t> $1_name_vec =
         reposit::vector::convert2<reposit::property_t>(valueObject->getProperty("$1_name"), "$1_name");
     valueObject->processVariant($1_name_vec);
     std::vector<QuantLib::Handle<QuantLib::Quote> > $1_name =
         reposit::vector::convert2<QuantLib::Handle<QuantLib::Quote> >($1_name_vec, "$1_name");
+%}
+
+%typemap(rp_tm_scr_cnvt) std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > const & %{
+    std::vector<std::vector<reposit::property_t> > $1_name_vec =
+        reposit::matrix::convert2<reposit::property_t>(valueObject->getProperty("$1_name"), "$1_name");
+    valueObject->processVariant($1_name_vec);
+    std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > $1_name =
+        reposit::matrix::convert2<QuantLib::Handle<QuantLib::Quote> >($1_name_vec, "$1_name");
 %}
 
 %typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Leg> const & %{

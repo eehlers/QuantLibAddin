@@ -1,15 +1,20 @@
 
 %include assetswap.i
+%include basketlossmodels.i
 %include bonds.i
 %include calendars.i
 %include couponvectors.i
+%include credit.i
 %include date.i
 %include daycounters.i
+%include defaultbasket.i
+%include defaulttermstructures.i
 %include exercise.i
 %include handles.i
 %include indexes.i
 %include instruments.i
 %include interpolation.i
+%include latentmodels.i
 %include leg.i
 %include math.i
 %include models.i

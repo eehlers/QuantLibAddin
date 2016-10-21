@@ -12,7 +12,7 @@
     rp_doc_str="../docstrings/docstrings.txt"
 ) QuantLibAddin
 
-%include typemaps/all.i
 %include typedefs/all.i
+%include typemaps/all.i
 %include functions/all.i
 

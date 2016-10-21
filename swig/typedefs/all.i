@@ -1,7 +1,7 @@
 
 namespace QuantLib {
 
-    typedef int Natural;
+    typedef unsigned int Natural;
     typedef int Integer;
     typedef int Day;
     typedef int Year;
@@ -13,6 +13,7 @@ namespace QuantLib {
     typedef double Volatility;
     typedef double DiscountFactor;
     typedef double Time;
+    typedef double Probability;
 
     class Option {
         public:
@@ -25,6 +26,7 @@ namespace QuantLib {
     enum SensitivityAnalysis;
     enum Month;
     enum Weekday;
+    enum Seniority;
 
     struct DateGeneration {
         enum Rule;
@@ -49,6 +51,10 @@ namespace QuantLib {
         enum YieldCurveModel;
     };
 
+    struct Protection {
+        enum Side;
+    };
+
     class Date;
     class DayCounter;
     class Period;
@@ -56,19 +62,21 @@ namespace QuantLib {
     class Calendar;
     class Currency;
 
-    class OneFactorAffineModel;
-    class ShortRateModel;
-    class G2;
-    class PricingEngine;
-    class StrikedTypePayoff;
-    class VanillaSwap;
-    class Leg;
+    //class OneFactorAffineModel;
+    //class ShortRateModel;
+    //class G2;
+    //class PricingEngine;
+    //class StrikedTypePayoff;
+    //class VanillaSwap;
+    //class Leg;
     class YieldTermStructure;
-    class GeneralizedBlackScholesProcess;
-    class InterestRate;
-    class IborIndex;
-    class Bond;
-    class Schedule;
+    //class GeneralizedBlackScholesProcess;
+    //class InterestRate;
+    //class IborIndex;
+    //class Bond;
+    //class Schedule;
+    //class CorrelationTermStructure;
+    //class BaseModel;
 
     template <class T> class TimeSeries;
     template <class T> class Handle;

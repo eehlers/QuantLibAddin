@@ -33,17 +33,17 @@ namespace QuantLibAddin {
     //    void postProcess() const {}
     //};
 
-    class RelinkableHandleProcessor : public reposit::Processor {
+    //class RelinkableHandleProcessor : public reposit::Processor {
 
-        std::string process(const reposit::SerializationFactory& factory,
-            const boost::shared_ptr<reposit::ValueObject> &valueObject,
-            bool overwriteExisting) const;
+    //    std::string process(const reposit::SerializationFactory& factory,
+    //        const boost::shared_ptr<reposit::ValueObject> &valueObject,
+    //        bool overwriteExisting) const;
 
-        void postProcess() const;
+    //    void postProcess() const;
 
-    private:
-        mutable reposit::HandlesList handles;
-    };
+    //private:
+    //    mutable reposit::HandlesList handles;
+    //};
 
     //class LegProcessor : public reposit::Processor {
 

@@ -22,15 +22,10 @@
 //#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
 //    #include <qlo/config.hpp>
 //#endif
-//#include <qlo/utilities.hpp>
 #include <qlo/objects/objmanual_utilities.hpp>
 //#include <qlo/qladdindefines.hpp>
 #include <ql/version.hpp>
 #include <rp/repository.hpp>
-#include <qlo/serialization/serializationfactory.hpp>
-
-#include <qlo/objects/obj_vanillaswaps.hpp>//DELETEME
-#include <ql/cashflows/coupon.hpp>//DELETEME
 
 //#if defined BOOST_MSVC       // Microsoft Visual C++
 //#  define BOOST_LIB_DIAGNOSTIC
@@ -59,19 +54,3 @@ std::string QuantLibAddin::version() {
 //            return VERSION_STRING;
 //    }
 
-long QuantLibAddin::ObjectCount() {
-    return reposit::Repository::instance().objectCount();
-}
-
-std::vector<QuantLib::Date> QuantLibAddin::temp1(const std::string &objectID) {
-    RP_GET_REFERENCE(swap, objectID, QuantLibAddin::VanillaSwap, QuantLib::VanillaSwap);
-    std::vector<QuantLib::Date> ret;
-    const std::vector<boost::shared_ptr<QuantLib::CashFlow> >& leg =
-        swap->fixedLeg();
-    for (unsigned int i=0; i<leg.size(); i++) {
-        boost::shared_ptr<QuantLib::Coupon> coupon =
-            boost::dynamic_pointer_cast<QuantLib::Coupon>(leg[i]);
-        ret.push_back(coupon->accrualStartDate());
-    }
-    return ret;
-}

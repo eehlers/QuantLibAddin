@@ -31,30 +31,30 @@ namespace QuantLibAddin {
 
         registerCreators();
 
-        reposit::ProcessorPtr relinkableHandleProcessor(
-            new RelinkableHandleProcessor());
-        reposit::ProcessorFactory::instance().storeProcessor(
-            "RelinkableHandleProcessor", relinkableHandleProcessor);
+        //reposit::ProcessorPtr relinkableHandleProcessor(
+        //    new RelinkableHandleProcessor());
+        //reposit::ProcessorFactory::instance().storeProcessor(
+        //    "RelinkableHandleProcessor", relinkableHandleProcessor);
 
-  //      reposit::ProcessorPtr instrumentProcessor(
-  //          new InstrumentProcessor());
-  //      reposit::ProcessorFactory::instance().storeProcessor(
-		//	"InstrumentProcessor", instrumentProcessor);
+        //reposit::ProcessorPtr instrumentProcessor(
+        //    new InstrumentProcessor());
+        //reposit::ProcessorFactory::instance().storeProcessor(
+        //    "InstrumentProcessor", instrumentProcessor);
 
-  //      reposit::ProcessorPtr legProcessor(
-  //          new LegProcessor());
-  //      reposit::ProcessorFactory::instance().storeProcessor(
-		//	"LegProcessor", legProcessor);
+        //reposit::ProcessorPtr legProcessor(
+        //    new LegProcessor());
+        //reposit::ProcessorFactory::instance().storeProcessor(
+        //    "LegProcessor", legProcessor);
 
-  //      reposit::ProcessorPtr indexProcessor(
-  //          new IndexProcessor());
-  //      reposit::ProcessorFactory::instance().storeProcessor(
-		//	"IndexProcessor", indexProcessor);
+        //reposit::ProcessorPtr indexProcessor(
+        //    new IndexProcessor());
+        //reposit::ProcessorFactory::instance().storeProcessor(
+        //    "IndexProcessor", indexProcessor);
 
-  //      reposit::ProcessorPtr extrapolatorProcessor(
-  //          new ExtrapolatorProcessor());
-  //      reposit::ProcessorFactory::instance().storeProcessor(
-		//	"ExtrapolatorProcessor", extrapolatorProcessor);
+        //reposit::ProcessorPtr extrapolatorProcessor(
+        //    new ExtrapolatorProcessor());
+        //reposit::ProcessorFactory::instance().storeProcessor(
+        //    "ExtrapolatorProcessor", extrapolatorProcessor);
     }
 
     void SerializationFactory::register_out(boost::archive::xml_oarchive &ar,

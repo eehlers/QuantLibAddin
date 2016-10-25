@@ -37,7 +37,7 @@
 //    //    boost::shared_ptr<Instrument> instrument =
 //    //        boost::dynamic_pointer_cast<Instrument>(object.second);
 //    //    if (instrument && valueObject->hasProperty("EngineID")) {
-//    //        std::string pricingEngineID = reposit::convert2<std::string>(
+//    //        std::string pricingEngineID = reposit::convert<std::string>(
 //    //            valueObject->getProperty("EngineID"), "EngineID");
 //    //        RP_GET_OBJECT(pricingEngineObjPtr, pricingEngineID, QuantLibAddin::PricingEngine)
 //    //        instrument->setPricingEngine(pricingEngineObjPtr);
@@ -79,7 +79,7 @@
 //    //    if (inst && valueObject->hasProperty("UserLegIDs")) {
 //    //        std::vector<boost::shared_ptr<QuantLibAddin::FloatingRateCouponPricer> > legs2;
 //    //        std::vector<std::string> legs =
-//    //            reposit::vector::convert2<std::string>(valueObject->getProperty("UserLegIDs"), "UserLegIDs");
+//    //            reposit::vector::convert<std::string>(valueObject->getProperty("UserLegIDs"), "UserLegIDs");
 //    //        for (std::vector<std::string>::const_iterator i = legs.begin(); i!= legs.end(); ++i) {
 //    //            RP_GET_OBJECT(leg, *i, QuantLibAddin::FloatingRateCouponPricer)
 //    //            legs2.push_back(leg);
@@ -101,9 +101,9 @@
 //    //            reposit::property_t dates = valueObject->getProperty("IndexFixingDates");
 //    //            reposit::property_t fixings = valueObject->getProperty("IndexFixingRates");
 //    //            std::vector<QuantLib::Date> vct_dates =
-//    //                reposit::vector::convert2<QuantLib::Date>(dates, "IndexFixingDates");
+//    //                reposit::vector::convert<QuantLib::Date>(dates, "IndexFixingDates");
 //    //            std::vector<QuantLib::Rate> vct_fixings =
-//    //                reposit::vector::convert2<QuantLib::Rate>(fixings, "IndexFixingRates");
+//    //                reposit::vector::convert<QuantLib::Rate>(fixings, "IndexFixingRates");
 //    //            index->addFixings(vct_dates, vct_fixings, true, false);
 //    //        }
 //    //        catch(const std::exception& ) {}
@@ -120,7 +120,7 @@
 //    //    boost::shared_ptr<Extrapolator> extrapolator =
 //    //        boost::dynamic_pointer_cast<Extrapolator>(object.second);
 //    //    if (extrapolator && valueObject->hasProperty("UserExtrapolation")) {
-//    //        bool extrapolation = reposit::convert2<bool>(
+//    //        bool extrapolation = reposit::convert<bool>(
 //    //            valueObject->getProperty("UserExtrapolation"), "UserExtrapolation");
 //    //        extrapolator->enableExtrapolation(extrapolation);
 //    //    }

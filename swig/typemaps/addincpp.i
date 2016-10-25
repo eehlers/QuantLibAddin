@@ -11,7 +11,7 @@
 // rp_tm_cpp_cnvt - Convert inputs from C++ Addin api types into underlying Library types (F/C/M)
 %typemap(rp_tm_cpp_cnvt) QuantLib::Date const & %{
     QuantLib::Date $1_name_cnv =
-        reposit::convert2<QuantLib::Date, reposit::property_t>($1_name);
+        reposit::convert<QuantLib::Date, reposit::property_t>($1_name);
 %}
 
 // We would like to define one typemap to handle every occurrence of

@@ -388,23 +388,23 @@ namespace QuantLibAddin {
         //    create.registerType("ZeroGradientNorm", new QuantLib::EndCriteria::Type(QuantLib::EndCriteria::ZeroGradientNorm));
         //}
 
-        //{
-        //    reposit::Create<QuantLib::Frequency> create;
-        //    create.registerType("Annual", new QuantLib::Frequency(QuantLib::Annual));
-        //    create.registerType("Bimonthly", new QuantLib::Frequency(QuantLib::Bimonthly));
-        //    create.registerType("Biweekly", new QuantLib::Frequency(QuantLib::Biweekly));
-        //    create.registerType("Daily", new QuantLib::Frequency(QuantLib::Daily));
-        //    create.registerType("EveryFourthMonth", new QuantLib::Frequency(QuantLib::EveryFourthMonth));
-        //    create.registerType("EveryFourthWeek", new QuantLib::Frequency(QuantLib::EveryFourthWeek));
-        //    create.registerType("Frequency", new QuantLib::Frequency(QuantLib::NoFrequency));
-        //    create.registerType("Monthly", new QuantLib::Frequency(QuantLib::Monthly));
-        //    create.registerType("NoFrequency", new QuantLib::Frequency(QuantLib::NoFrequency));
-        //    create.registerType("Once", new QuantLib::Frequency(QuantLib::Once));
-        //    create.registerType("OtherFrequency", new QuantLib::Frequency(QuantLib::OtherFrequency));
-        //    create.registerType("Quarterly", new QuantLib::Frequency(QuantLib::Quarterly));
-        //    create.registerType("Semiannual", new QuantLib::Frequency(QuantLib::Semiannual));
-        //    create.registerType("Weekly", new QuantLib::Frequency(QuantLib::Weekly));
-        //}
+        {
+            reposit::Create<QuantLib::Frequency> create;
+            create.registerType("Annual", new QuantLib::Frequency(QuantLib::Annual));
+            create.registerType("Bimonthly", new QuantLib::Frequency(QuantLib::Bimonthly));
+            create.registerType("Biweekly", new QuantLib::Frequency(QuantLib::Biweekly));
+            create.registerType("Daily", new QuantLib::Frequency(QuantLib::Daily));
+            create.registerType("EveryFourthMonth", new QuantLib::Frequency(QuantLib::EveryFourthMonth));
+            create.registerType("EveryFourthWeek", new QuantLib::Frequency(QuantLib::EveryFourthWeek));
+            create.registerType("Frequency", new QuantLib::Frequency(QuantLib::NoFrequency));
+            create.registerType("Monthly", new QuantLib::Frequency(QuantLib::Monthly));
+            create.registerType("NoFrequency", new QuantLib::Frequency(QuantLib::NoFrequency));
+            create.registerType("Once", new QuantLib::Frequency(QuantLib::Once));
+            create.registerType("OtherFrequency", new QuantLib::Frequency(QuantLib::OtherFrequency));
+            create.registerType("Quarterly", new QuantLib::Frequency(QuantLib::Quarterly));
+            create.registerType("Semiannual", new QuantLib::Frequency(QuantLib::Semiannual));
+            create.registerType("Weekly", new QuantLib::Frequency(QuantLib::Weekly));
+        }
 
         //{
         //    reposit::Create<QuantLib::Futures::Type> create;
@@ -420,44 +420,44 @@ namespace QuantLibAddin {
         //    create.registerType("Standard", new QuantLib::GFunctionFactory::YieldCurveModel(QuantLib::GFunctionFactory::Standard));
         //}
 
-        //{
-        //    reposit::Create<QuantLib::Month> create;
-        //    create.registerType("1", new QuantLib::Month(QuantLib::January));
-        //    create.registerType("10", new QuantLib::Month(QuantLib::October));
-        //    create.registerType("11", new QuantLib::Month(QuantLib::November));
-        //    create.registerType("12", new QuantLib::Month(QuantLib::December));
-        //    create.registerType("2", new QuantLib::Month(QuantLib::February));
-        //    create.registerType("3", new QuantLib::Month(QuantLib::March));
-        //    create.registerType("4", new QuantLib::Month(QuantLib::April));
-        //    create.registerType("5", new QuantLib::Month(QuantLib::May));
-        //    create.registerType("6", new QuantLib::Month(QuantLib::June));
-        //    create.registerType("7", new QuantLib::Month(QuantLib::July));
-        //    create.registerType("8", new QuantLib::Month(QuantLib::August));
-        //    create.registerType("9", new QuantLib::Month(QuantLib::September));
-        //    create.registerType("Apr", new QuantLib::Month(QuantLib::Apr));
-        //    create.registerType("April", new QuantLib::Month(QuantLib::April));
-        //    create.registerType("Aug", new QuantLib::Month(QuantLib::Aug));
-        //    create.registerType("August", new QuantLib::Month(QuantLib::August));
-        //    create.registerType("Dec", new QuantLib::Month(QuantLib::Dec));
-        //    create.registerType("December", new QuantLib::Month(QuantLib::December));
-        //    create.registerType("Feb", new QuantLib::Month(QuantLib::Feb));
-        //    create.registerType("February", new QuantLib::Month(QuantLib::February));
-        //    create.registerType("Jan", new QuantLib::Month(QuantLib::Jan));
-        //    create.registerType("January", new QuantLib::Month(QuantLib::January));
-        //    create.registerType("Jul", new QuantLib::Month(QuantLib::Jul));
-        //    create.registerType("July", new QuantLib::Month(QuantLib::July));
-        //    create.registerType("Jun", new QuantLib::Month(QuantLib::Jun));
-        //    create.registerType("June", new QuantLib::Month(QuantLib::June));
-        //    create.registerType("Mar", new QuantLib::Month(QuantLib::Mar));
-        //    create.registerType("March", new QuantLib::Month(QuantLib::March));
-        //    create.registerType("May", new QuantLib::Month(QuantLib::May));
-        //    create.registerType("Nov", new QuantLib::Month(QuantLib::Nov));
-        //    create.registerType("November", new QuantLib::Month(QuantLib::November));
-        //    create.registerType("Oct", new QuantLib::Month(QuantLib::Oct));
-        //    create.registerType("October", new QuantLib::Month(QuantLib::October));
-        //    create.registerType("Sep", new QuantLib::Month(QuantLib::Sep));
-        //    create.registerType("September", new QuantLib::Month(QuantLib::September));
-        //}
+        {
+            reposit::Create<QuantLib::Month> create;
+            create.registerType("1", new QuantLib::Month(QuantLib::January));
+            create.registerType("10", new QuantLib::Month(QuantLib::October));
+            create.registerType("11", new QuantLib::Month(QuantLib::November));
+            create.registerType("12", new QuantLib::Month(QuantLib::December));
+            create.registerType("2", new QuantLib::Month(QuantLib::February));
+            create.registerType("3", new QuantLib::Month(QuantLib::March));
+            create.registerType("4", new QuantLib::Month(QuantLib::April));
+            create.registerType("5", new QuantLib::Month(QuantLib::May));
+            create.registerType("6", new QuantLib::Month(QuantLib::June));
+            create.registerType("7", new QuantLib::Month(QuantLib::July));
+            create.registerType("8", new QuantLib::Month(QuantLib::August));
+            create.registerType("9", new QuantLib::Month(QuantLib::September));
+            create.registerType("Apr", new QuantLib::Month(QuantLib::Apr));
+            create.registerType("April", new QuantLib::Month(QuantLib::April));
+            create.registerType("Aug", new QuantLib::Month(QuantLib::Aug));
+            create.registerType("August", new QuantLib::Month(QuantLib::August));
+            create.registerType("Dec", new QuantLib::Month(QuantLib::Dec));
+            create.registerType("December", new QuantLib::Month(QuantLib::December));
+            create.registerType("Feb", new QuantLib::Month(QuantLib::Feb));
+            create.registerType("February", new QuantLib::Month(QuantLib::February));
+            create.registerType("Jan", new QuantLib::Month(QuantLib::Jan));
+            create.registerType("January", new QuantLib::Month(QuantLib::January));
+            create.registerType("Jul", new QuantLib::Month(QuantLib::Jul));
+            create.registerType("July", new QuantLib::Month(QuantLib::July));
+            create.registerType("Jun", new QuantLib::Month(QuantLib::Jun));
+            create.registerType("June", new QuantLib::Month(QuantLib::June));
+            create.registerType("Mar", new QuantLib::Month(QuantLib::Mar));
+            create.registerType("March", new QuantLib::Month(QuantLib::March));
+            create.registerType("May", new QuantLib::Month(QuantLib::May));
+            create.registerType("Nov", new QuantLib::Month(QuantLib::Nov));
+            create.registerType("November", new QuantLib::Month(QuantLib::November));
+            create.registerType("Oct", new QuantLib::Month(QuantLib::Oct));
+            create.registerType("October", new QuantLib::Month(QuantLib::October));
+            create.registerType("Sep", new QuantLib::Month(QuantLib::Sep));
+            create.registerType("September", new QuantLib::Month(QuantLib::September));
+        }
 
         //{
         //    reposit::Create<QuantLib::Option::Type> create;
@@ -555,23 +555,23 @@ namespace QuantLibAddin {
         //    create.registerType("Receiver", new QuantLib::VanillaSwap::Type(QuantLib::VanillaSwap::Receiver));
         //}
 
-        //{
-        //    reposit::Create<QuantLib::Weekday> create;
-        //    create.registerType("Fri", new QuantLib::Weekday(QuantLib::Fri));
-        //    create.registerType("Friday", new QuantLib::Weekday(QuantLib::Friday));
-        //    create.registerType("Mon", new QuantLib::Weekday(QuantLib::Mon));
-        //    create.registerType("Monday", new QuantLib::Weekday(QuantLib::Monday));
-        //    create.registerType("Sat", new QuantLib::Weekday(QuantLib::Sat));
-        //    create.registerType("Saturday", new QuantLib::Weekday(QuantLib::Saturday));
-        //    create.registerType("Sun", new QuantLib::Weekday(QuantLib::Sun));
-        //    create.registerType("Sunday", new QuantLib::Weekday(QuantLib::Sunday));
-        //    create.registerType("Thu", new QuantLib::Weekday(QuantLib::Thu));
-        //    create.registerType("Thursday", new QuantLib::Weekday(QuantLib::Thursday));
-        //    create.registerType("Tue", new QuantLib::Weekday(QuantLib::Tue));
-        //    create.registerType("Tuesday", new QuantLib::Weekday(QuantLib::Tuesday));
-        //    create.registerType("Wed", new QuantLib::Weekday(QuantLib::Wed));
-        //    create.registerType("Wednesday", new QuantLib::Weekday(QuantLib::Wednesday));
-        //}
+        {
+            reposit::Create<QuantLib::Weekday> create;
+            create.registerType("Fri", new QuantLib::Weekday(QuantLib::Fri));
+            create.registerType("Friday", new QuantLib::Weekday(QuantLib::Friday));
+            create.registerType("Mon", new QuantLib::Weekday(QuantLib::Mon));
+            create.registerType("Monday", new QuantLib::Weekday(QuantLib::Monday));
+            create.registerType("Sat", new QuantLib::Weekday(QuantLib::Sat));
+            create.registerType("Saturday", new QuantLib::Weekday(QuantLib::Saturday));
+            create.registerType("Sun", new QuantLib::Weekday(QuantLib::Sun));
+            create.registerType("Sunday", new QuantLib::Weekday(QuantLib::Sunday));
+            create.registerType("Thu", new QuantLib::Weekday(QuantLib::Thu));
+            create.registerType("Thursday", new QuantLib::Weekday(QuantLib::Thursday));
+            create.registerType("Tue", new QuantLib::Weekday(QuantLib::Tue));
+            create.registerType("Tuesday", new QuantLib::Weekday(QuantLib::Tuesday));
+            create.registerType("Wed", new QuantLib::Weekday(QuantLib::Wed));
+            create.registerType("Wednesday", new QuantLib::Weekday(QuantLib::Wednesday));
+        }
 
         //{
         //    reposit::Create<QuantLibAddin::InterpolatedYieldCurve::Interpolator> create;

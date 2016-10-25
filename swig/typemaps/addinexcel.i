@@ -43,35 +43,35 @@
 // FIXME in the two typemaps below we allow all date arguments to have a default value.
 // This should be done explicitly using rp_tm_xll_cnvt2.
 %typemap(rp_tm_xll_cnvt) QuantLib::Date %{
-        QuantLib::Date $1_name_cnv = reposit::convert2<QuantLib::Date>(
+        QuantLib::Date $1_name_cnv = reposit::convert<QuantLib::Date>(
             reposit::ConvertOper(*$1_name), "$1_name", QuantLib::Date());
 
-        reposit::property_t $1_name_cnv2 = reposit::convert2<reposit::property_t>(
+        reposit::property_t $1_name_cnv2 = reposit::convert<reposit::property_t>(
             reposit::ConvertOper(*$1_name));
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Date const & %{
-        QuantLib::Date $1_name_cnv = reposit::convert2<QuantLib::Date>(
+        QuantLib::Date $1_name_cnv = reposit::convert<QuantLib::Date>(
             reposit::ConvertOper(*$1_name), "$1_name", QuantLib::Date());
 
-        reposit::property_t $1_name_cnv2 = reposit::convert2<reposit::property_t>(
+        reposit::property_t $1_name_cnv2 = reposit::convert<reposit::property_t>(
             reposit::ConvertOper(*$1_name));
 %}
 
 // here is the correct typemap for when a default value is specified in the swig iface file.
 %typemap(rp_tm_xll_cnvt2) QuantLib::Date %{
-        QuantLib::Date $1_name_cnv = reposit::convert2<QuantLib::Date>(
+        QuantLib::Date $1_name_cnv = reposit::convert<QuantLib::Date>(
             reposit::ConvertOper(*$1_name), "$1_name", QuantLib::Date());
 
-        reposit::property_t $1_name_cnv2 = reposit::convert2<reposit::property_t>(
+        reposit::property_t $1_name_cnv2 = reposit::convert<reposit::property_t>(
             reposit::ConvertOper(*$1_name));
 %}
 
 %typemap(rp_tm_xll_cnvt2) QuantLib::Date & %{
-        QuantLib::Date $1_name_cnv = reposit::convert2<QuantLib::Date>(
+        QuantLib::Date $1_name_cnv = reposit::convert<QuantLib::Date>(
             reposit::ConvertOper(*$1_name), "$1_name", QuantLib::Date());
 
-        reposit::property_t $1_name_cnv2 = reposit::convert2<reposit::property_t>(
+        reposit::property_t $1_name_cnv2 = reposit::convert<reposit::property_t>(
             reposit::ConvertOper(*$1_name));
 %}
 
@@ -150,7 +150,7 @@
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
-        std::string $1_name_vo = reposit::convert2<std::string>(
+        std::string $1_name_vo = reposit::convert<std::string>(
             reposit::ConvertOper(*$1_name), "$1_name", "");
 
         RP_GET_OBJECT_DEFAULT($1_nameCoerce, $1_name_vo, reposit::Object)
@@ -163,7 +163,7 @@
 %}
 
 %typemap(rp_tm_xll_cnvt2) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
-        std::string $1_name_vo = reposit::convert2<std::string>(
+        std::string $1_name_vo = reposit::convert<std::string>(
             reposit::ConvertOper(*$1_name), "$1_name", "");
 
         RP_GET_OBJECT_DEFAULT($1_nameCoerce, $1_name_vo, reposit::Object)

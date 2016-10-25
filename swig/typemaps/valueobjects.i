@@ -52,20 +52,20 @@
 // rp_tm_vob_cnvt - in ValueObject::setSystemProperty, convert value from property_t to native type (C)
 %typemap(rp_tm_vob_cnvt) QuantLib::Date "value";
 %typemap(rp_tm_vob_cnvt) QuantLib::Date const & "value";
-%typemap(rp_tm_vob_cnvt) QuantLib::Period "reposit::convert2<std::string>(value)";
+%typemap(rp_tm_vob_cnvt) QuantLib::Period "reposit::convert<std::string>(value)";
 %typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::Quote> const & "value";
 %typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & "value";
-%typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "reposit::convert2<std::string>(value)";
-%typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::SwaptionVolatilityStructure> const & "reposit::convert2<std::string>(value)";
-%typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::DefaultProbabilityTermStructure> const & "reposit::convert2<std::string>(value)";
-%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Leg> const & "reposit::vector::convert2<std::string>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Date> const & "reposit::vector::convert2<reposit::property_t>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Period> const & "reposit::vector::convert2<reposit::property_t>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "reposit::vector::convert2<std::string>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLib::RateHelper> > const & "reposit::vector::convert2<std::string>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLib::DefaultProbabilityHelper> > const & "reposit::vector::convert2<std::string>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector< boost::shared_ptr< QuantLib::InterestRate > > const & "reposit::vector::convert2<std::string>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector< boost::shared_ptr< QuantLib::Issuer > > const & "reposit::vector::convert2<std::string>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & "reposit::vector::convert2<reposit::property_t>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > const & "reposit::matrix::convert2<reposit::property_t>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::BlackVolTermStructure> const & "reposit::convert<std::string>(value)";
+%typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::SwaptionVolatilityStructure> const & "reposit::convert<std::string>(value)";
+%typemap(rp_tm_vob_cnvt) QuantLib::Handle<QuantLib::DefaultProbabilityTermStructure> const & "reposit::convert<std::string>(value)";
+%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Leg> const & "reposit::vector::convert<std::string>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Date> const & "reposit::vector::convert<reposit::property_t>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Period> const & "reposit::vector::convert<reposit::property_t>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLibAddin::Leg> > const & "reposit::vector::convert<std::string>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLib::RateHelper> > const & "reposit::vector::convert<std::string>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLib::DefaultProbabilityHelper> > const & "reposit::vector::convert<std::string>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector< boost::shared_ptr< QuantLib::InterestRate > > const & "reposit::vector::convert<std::string>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector< boost::shared_ptr< QuantLib::Issuer > > const & "reposit::vector::convert<std::string>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & "reposit::vector::convert<reposit::property_t>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > const & "reposit::matrix::convert<reposit::property_t>(value, nameUpper)";
 

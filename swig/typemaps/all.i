@@ -1,14 +1,13 @@
 
-%include shared.i
-%include libraryobjects.i
-%include valueobjects.i
-%include serialization.i
-%include addincpp.i
-%include addincsharp.i
-%include addinexcel.i
-%include addincountify.i
-%include handles.i
-%include doxygen.i
+//%include addincpp.i
+//%include addinexcel.i
+%include date.i
+//%include doxygen.i
+//%include handles.i
+//%include libraryobjects.i
+//%include serialization.i
+//%include shared.i
+//%include valueobjects.i
 
 // This one must be last.
 %include apply.i

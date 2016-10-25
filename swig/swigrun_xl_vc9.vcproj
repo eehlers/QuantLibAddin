@@ -194,10 +194,6 @@
 				Name="typemaps"
 				>
 				<File
-					RelativePath=".\typemaps\addincountify.i"
-					>
-				</File>
-				<File
 					RelativePath=".\typemaps\addincpp.i"
 					>
 				</File>
@@ -211,6 +207,10 @@
 				</File>
 				<File
 					RelativePath=".\typemaps\apply.i"
+					>
+				</File>
+				<File
+					RelativePath=".\typemaps\date.i"
 					>
 				</File>
 				<File

@@ -614,15 +614,19 @@
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\conversions\conversion_tmpl.hpp"
-				>
-			</File>
-			<File
 				RelativePath=".\qlo\conversions\conversions.cpp"
 				>
 			</File>
 			<File
 				RelativePath=".\qlo\conversions\conversions.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\convert.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\convert_tmpl.hpp"
 				>
 			</File>
 			<File
@@ -839,6 +843,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_all.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_date.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_date.hpp"
 				>
 			</File>
 			<File

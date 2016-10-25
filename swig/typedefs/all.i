@@ -62,21 +62,7 @@ namespace QuantLib {
     class Calendar;
     class Currency;
 
-    //class OneFactorAffineModel;
-    //class ShortRateModel;
-    //class G2;
-    //class PricingEngine;
-    //class StrikedTypePayoff;
-    //class VanillaSwap;
-    //class Leg;
     class YieldTermStructure;
-    //class GeneralizedBlackScholesProcess;
-    //class InterestRate;
-    //class IborIndex;
-    //class Bond;
-    //class Schedule;
-    //class CorrelationTermStructure;
-    //class BaseModel;
 
     template <class T> class TimeSeries;
     template <class T> class Handle;

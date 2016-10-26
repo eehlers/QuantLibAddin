@@ -29,12 +29,7 @@
 //#include <qlo/conversions/coerceobject.hpp>
 ////#include <qlo/conversions/coercequote.hpp>
 ////#include <qlo/conversions/coercetermstructure.hpp>
-#include <qlo/conversions/varianttodate.hpp>
-#include <qlo/conversions/varianttoperiod.hpp>
-#include <qlo/conversions/varianttoquote.hpp>
-#include <qlo/conversions/varianttoquotehandle.hpp>
-#include <qlo/conversions/varianttosize.hpp>
-#include <qlo/conversions/varianttotimeseries.hpp>
+#include <qlo/conversions/convert.hpp>
 
 #endif
 

@@ -2,6 +2,7 @@
 
 /*
  Copyright (C) 2007 Eric Ehlers
+ Copyright (C) 2008 Ferdinando Ametrano
  Copyright (C) 2008 Plamen Neykov
 
  This file is part of QuantLib, a free-software/open-source library
@@ -18,16 +19,33 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#ifndef qla_convert_quote_hpp
-#define qla_convert_quote_hpp
+#ifndef qlo_convert_date_hpp
+#define qlo_convert_date_hpp
 
-#include <ql/quote.hpp>
-#include <ql/quotes/simplequote.hpp>
+#include <rp/conversions/convert.hpp>
+
+namespace QuantLib {
+    typedef std::size_t Size;
+    class Date;
+    class Period;
+};
 
 namespace reposit {
 
+    template<> QuantLib::Date convert<QuantLib::Date, property_t>(const property_t& p);
+
+    template<> QuantLib::Size convert<QuantLib::Size, property_t>(const property_t& p);
+
+    template<>
+    QuantLib::Period convert<QuantLib::Period, property_t>(const property_t& p);
+
     //template<>
     //boost::shared_ptr<QuantLib::Quote> convert<boost::shared_ptr<QuantLib::Quote>, property_t>(const property_t& c);
+
+    //template<>
+    //QuantLib::Handle<QuantLib::Quote> convert<QuantLib::Handle<QuantLib::Quote>, property_t>(const property_t& c);
+
+    //template<> QuantLib::TimeSeriesDef convert<QuantLib::TimeSeriesDef, property_t>(const property_t& c);
 }
 
 #endif

@@ -21,23 +21,7 @@
 //#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
 //    #include <qlo/config.hpp>
 //#endif
-#include <qlo/conversions/conversions.hpp>
-#include <ql/utilities/dataparsers.hpp>
-#include <ql/time/date.hpp>
-#include <ql/time/period.hpp>
-#include <ql/interestrate.hpp>
-#include <ql/timeseries.hpp>
-
-//#include <qlo/objects/objmanual_timeseries.hpp>
-
-#include <rp/reposit.hpp>
-#include <qlo/conversions/coercehandle.hpp>
-#include <qlo/conversions/coerceobject.hpp>
-#include <qlo/conversions/varianttoquotehandle.hpp>
-#include <qlo/conversions/varianttodate.hpp>
-#include <qlo/conversions/varianttoquote.hpp>
-#include <qlo/conversions/varianttoperiod.hpp>
-#include <qlo/conversions/varianttosize.hpp>
+#include <qlo/conversions/convert.hpp>
 #include <qlo/conversions/convert_tmpl.hpp>
 
 namespace reposit {
@@ -47,15 +31,15 @@ namespace reposit {
         return convertDate(c);
     }
 
+    template<> 
+    QuantLib::Size convert<QuantLib::Size, property_t>(const property_t& p) { 
+        return convertSize(p); 
+    }
+
     template<>
     QuantLib::Period convert<QuantLib::Period, property_t>(const property_t& c) {
         return convertPeriod(c);
     }
-
-    //template<> 
-    //QuantLib::Size convert<QuantLib::Size, property_t>(const property_t& p) { 
-    //    return convertSize(p); 
-    //}
 
     //template<>
     //boost::shared_ptr<QuantLib::Quote> convert<boost::shared_ptr<QuantLib::Quote>, property_t>(const property_t& c) {

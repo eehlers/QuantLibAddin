@@ -626,31 +626,11 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\conversions\convert.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\conversions\convert_tmpl.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\conversions\varianttodate.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\conversions\varianttoperiod.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\conversions\varianttoquote.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\conversions\varianttoquotehandle.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\conversions\varianttosize.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\qlo\conversions\varianttotimeseries.hpp"
 				>
 			</File>
 		</Filter>

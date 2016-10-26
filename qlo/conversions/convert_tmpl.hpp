@@ -19,15 +19,20 @@
 */
 
 /*! \file
-    \brief template conversion functions for QuantLib data types - used to convert from property_t or OPER to an C++ data type
-    Not to be included directly by client code - instead the template functions in rp/Conversions/convert.hpp should be used.
+    \brief template conversion functions for QuantLib data types - used to convert from property_t or OPER to a C++ data type
+    This header should not be #included by client/addin code.
+    It should only be #included by convert.cpp.
+    Client/addin code should #include convert.hpp.
 */
 
-#ifndef qlo_conversions_conversion_tmpl_hpp
-#define qlo_conversions_conversion_tmpl_hpp
+#ifndef qlo_conversions_convert_tmpl_hpp
+#define qlo_conversions_convert_tmpl_hpp
 
-#include <ql/quotes/simplequote.hpp>
-//#include <qlo/objects/objmanual_quotes.hpp>
+#include <boost/lexical_cast.hpp>
+#include <ql/utilities/dataparsers.hpp>
+#include <ql/time/period.hpp>
+#include <ql/time/imm.hpp>
+#include <ql/settings.hpp>
 
 namespace reposit {
 
@@ -62,10 +67,10 @@ namespace reposit {
         }
     }
 
-    //template <class container_t>
-    //QuantLib::Size convertSize(const container_t& c) {
-    //    return c.operator long();
-    //}
+    template <class container_t>
+    QuantLib::Size convertSize(const container_t& c) {
+        return c.operator long();
+    }
     
     template<class container_t>
     QuantLib::Period convertPeriod(const container_t& c) {

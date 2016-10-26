@@ -156,3 +156,4 @@
 
 // rp_tm_xll_loop - arguments to boost::bind object for a looping function (F/M)
 
+%typemap(rp_tm_xll_loop) QuantLib::Date const & "$1_name_cnv";

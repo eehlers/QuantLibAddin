@@ -2,7 +2,7 @@
 //%include assetswap.i
 //%include basketlossmodels.i
 //%include bonds.i
-//%include calendars.i
+%include calendars.i
 //%include couponvectors.i
 //%include credit.i
 %include date.i

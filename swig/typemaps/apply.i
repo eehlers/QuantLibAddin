@@ -13,7 +13,7 @@
 //ENUMERATED_TYPE(QuantLib::Compounding)
 //ENUMERATED_TYPE(QuantLib::Option::Type)
 ENUMERATED_TYPE(QuantLib::Frequency)
-//ENUMERATED_TYPE(QuantLib::BusinessDayConvention)
+ENUMERATED_TYPE(QuantLib::BusinessDayConvention)
 //ENUMERATED_TYPE(QuantLib::Futures::Type)
 //ENUMERATED_TYPE(QuantLib::DateGeneration::Rule)
 //ENUMERATED_TYPE(QuantLib::VanillaSwap::Type)
@@ -30,11 +30,11 @@ ENUMERATED_TYPE(QuantLib::Month)
 //
 //ENUMERATED_TYPE(QuantLibAddin::RateHelper::DepoInclusionCriteria)
 //ENUMERATED_TYPE(QuantLibAddin::SwapIndex::FixingType)
-//
-//// Enumerated classes.
-//ENUMERATED_CLASS(QuantLib::Calendar)
+
+// Enumerated classes.
+ENUMERATED_CLASS(QuantLib::Calendar)
 //ENUMERATED_CLASS(QuantLib::DayCounter)
-//
+
 //%define QL_OBJECT_WRAPPER(T...)
 //namespace QuantLib {
 //    class T;

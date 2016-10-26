@@ -826,6 +826,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\objects\obj_calendars.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\objects\objmanual_date.cpp"
 				>
 			</File>

@@ -33,7 +33,7 @@ namespace QuantLib {
         ) const;
 
         //! returns the last business day in the given calendar of the month to which the given date belongs.
-        %loop(endOfMonth, date);
+        %loop(endOfMonth, Date);
         Date endOfMonth(
             const Date& Date                //!< date.
         ) const;
@@ -49,7 +49,7 @@ namespace QuantLib {
         );
 
         //! returns the holidays in a period between two dates according to a given holiday calendar.
-        std::vector<Date> holidayList(
+        static std::vector<Date> holidayList(
             const Calendar& Calendar,       //!< Calendar to use for holiday determination.
             const Date& FromDate,           //!< first date of the period.
             const Date& ToDate,             //!< last date of the period.
@@ -57,7 +57,7 @@ namespace QuantLib {
         );
 
         //! Adjusts a non-business day to the appropriate near business day according to a given calendar with respect to the given convention.
-        %loop(adjust, date);
+        %loop(adjust, Date);
         Date adjust(
             const Date& Date,               //!< date to be adjusted.
             BusinessDayConvention BusinessDayConvention=QuantLib::BusinessDayConvention(QuantLib::Following)    //!< rolling convention.
@@ -71,6 +71,15 @@ namespace QuantLib {
             BusinessDayConvention BusinessDayConvention=QuantLib::BusinessDayConvention(QuantLib::Following),   //!< rolling convention.
             bool EndOfMonth=false           //!< flag to enforce end of month convention.
             ) const;
+
+        //! Returns the number of business days between two dates.
+        %loop(businessDaysBetween, FirstDate);
+        BigInteger businessDaysBetween(
+            const Date& FirstDate,          //!< first date of the period.
+            const Date& LastDate,           //!< last date of the period.
+            bool IncludeFirst = false,      //!< include the first date when counting business days.
+            bool IncludeLast = false        //!< include the last date when counting business days.
+        ) const;
     };
 }
 

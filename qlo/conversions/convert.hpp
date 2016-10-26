@@ -23,11 +23,17 @@
 #define qlo_convert_date_hpp
 
 #include <rp/conversions/convert.hpp>
+#include <ql/types.hpp>
+#include <map>
 
 namespace QuantLib {
-    typedef std::size_t Size;
     class Date;
     class Period;
+
+    template<class T, class Container>
+    class TimeSeries;
+
+    typedef TimeSeries<QuantLib::Real, std::map<QuantLib::Date, QuantLib::Real> > TimeSeriesDef;
 };
 
 namespace reposit {
@@ -45,7 +51,7 @@ namespace reposit {
     //template<>
     //QuantLib::Handle<QuantLib::Quote> convert<QuantLib::Handle<QuantLib::Quote>, property_t>(const property_t& c);
 
-    //template<> QuantLib::TimeSeriesDef convert<QuantLib::TimeSeriesDef, property_t>(const property_t& c);
+    template<> QuantLib::TimeSeriesDef convert<QuantLib::TimeSeriesDef, property_t>(const property_t& c);
 }
 
 #endif

@@ -764,6 +764,14 @@
 					RelativePath=".\qlo\serialization\create\create_all.hpp"
 					>
 				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_timeseries.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_timeseries.hpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="register"
@@ -772,11 +780,27 @@
 					RelativePath=".\qlo\serialization\register\serialization_all.hpp"
 					>
 				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_timeseries.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_timeseries.hpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
 			Name="valueobjects"
 			>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_timeseries.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_timeseries.hpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="loop"
@@ -835,6 +859,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\objmanual_date.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_timeseries.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_timeseries.hpp"
 				>
 			</File>
 			<File

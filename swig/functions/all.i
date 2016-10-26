@@ -29,7 +29,7 @@
 //%include settings.i
 //%include swap.i
 //%include termstructures.i
-//%include timeseries.i
+%include timeseries.i
 %include utilities.i
 //%include vanillaswaps.i
 //%include volatilities.i

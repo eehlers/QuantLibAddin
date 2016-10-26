@@ -51,8 +51,8 @@ namespace reposit {
     //    return convertQuoteHandle(c);
     //}
 
-    //template<>
-    //QuantLib::TimeSeriesDef convert<QuantLib::TimeSeriesDef, property_t>(const property_t& c) {
-    //    return convertTimeSeriesDef(c);
-    //}
+    template<>
+    QuantLib::TimeSeriesDef convert<QuantLib::TimeSeriesDef, property_t>(const property_t& c) {
+        return convertTimeSeriesDef(c);
+    }
 }

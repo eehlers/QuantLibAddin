@@ -23,9 +23,13 @@
 
 // rp_tm_vob_parm - Value Object constructor parameters (C)
 
+%typemap(rp_tm_vob_parm) std::vector<QuantLib::Date > & "const std::vector<reposit::property_t>&";
+
 // HPP
 
 // rp_tm_vob_mbvr - Value Object class member variables (C)
+
+%typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Date > & "std::vector<reposit::property_t> $1_name_";
 
 // rp_tm_vob_srmv - code to serialize a Value Object member variable (C)
 
@@ -37,6 +41,8 @@
 
 // rp_tm_vob_cnvt - in ValueObject::setSystemProperty, convert value from property_t to native type (C)
 
+%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Date> & "reposit::vector::convert<reposit::property_t>(value, nameUpper)";
+
 //*****************************************************************************
 // rp_tm_scr_* - typemaps for Serialization - Create
 //*****************************************************************************
@@ -46,6 +52,20 @@
 // CPP
 
 // rp_tm_scr_cnvt - convert types from the Value Object to the corresponding Library Object (C)
+
+%typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Real> const & %{
+   std::vector<double> $1_name_vec =
+        reposit::vector::convert<double>(valueObject->getProperty("$1_name"), "$1_name");
+   std::vector<QuantLib::Real> $1_name =
+        QuantLibAddin::convertVector<double, QuantLib::Real>($1_name_vec);
+%}
+
+%typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Date> & %{
+    std::vector<reposit::property_t> $1_name_vec =
+        reposit::vector::convert<reposit::property_t>(valueObject->getProperty("$1_name"), "$1_name");
+    std::vector<QuantLib::Date> $1_name =
+        reposit::vector::convert<QuantLib::Date>($1_name_vec, "$1_name");
+%}
 
 //*****************************************************************************
 // rp_tm_cpp_* - typemaps for the C++ Addin
@@ -111,12 +131,20 @@
         //    reposit::ConvertOper(*$1_name));
 %}
 
+%typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Date> & %{
+        std::vector<reposit::property_t> $1_name_vec =
+            reposit::operToVector<reposit::property_t>(*$1_name, "$1_name");
+        std::vector<QuantLib::Date> $1_name_vec2 =
+            reposit::operToVector<QuantLib::Date>(*$1_name, "$1_name");
+%}
+
 // rp_tm_xll_argfv - arguments to the Value Object constructor (C)
 
 %typemap(rp_tm_xll_argf) QuantLib::Period "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Period & "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Date "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Date & "$1_name_cnv";
+%typemap(rp_tm_xll_argf) std::vector<QuantLib::Date> & "$1_name_vec2";
 
 // rp_tm_xll_argf - arguments to the underlying Library function (F/C/M)
 
@@ -135,6 +163,13 @@
         static long returnValueXL;
         returnValueXL = static_cast<long>(QuantLibAddin::libraryToScalar(returnValue));
         return &returnValueXL;
+%}
+
+%typemap(rp_tm_xll_rtst) std::vector<QuantLib::Real> %{
+        std::vector<double> returnValVec = QuantLibAddin::libraryToVector(returnValue);
+        static OPER xRet;
+        reposit::vectorToOper(returnValVec, xRet);
+        return &xRet;
 %}
 
 %typemap(rp_tm_xll_rtst) std::vector<QuantLib::Date> %{

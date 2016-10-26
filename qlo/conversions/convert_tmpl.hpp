@@ -33,6 +33,11 @@
 #include <ql/time/period.hpp>
 #include <ql/time/imm.hpp>
 #include <ql/settings.hpp>
+#include <ql/timeseries.hpp>
+#include <ql/index.hpp>
+#include <qlo/objects/objmanual_timeseries.hpp>
+#include <rp/repository.hpp>
+#include <rp/rpdefines.hpp>
 
 namespace reposit {
 
@@ -110,17 +115,17 @@ namespace reposit {
     //    else
     //        RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
     //}
-    
-    //template<class container_t>
-    //QuantLib::TimeSeriesDef convertTimeSeriesDef(const container_t& c) {
-    //    if(c.type() == typeid(std::string)) {
-    //        std::string s = c.operator std::string();
-    //        RP_GET_UNDERLYING(temp, s, QuantLibAddin::TimeSeriesDef, QuantLib::TimeSeriesDef)
-    //        return temp;
-    //    } else {
-    //        RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::TimeSeriesDef'");
-    //    }
-    //}
+
+    template<class container_t>
+    QuantLib::TimeSeriesDef convertTimeSeriesDef(const container_t& c) {
+        if(c.type() == typeid(std::string)) {
+            std::string s = c.operator std::string();
+            RP_GET_UNDERLYING(temp, s, QuantLibAddin::TimeSeriesDef, QuantLib::TimeSeriesDef)
+            return temp;
+        } else {
+            RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::TimeSeriesDef'");
+        }
+    }
 }
 
 #endif

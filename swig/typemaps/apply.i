@@ -35,13 +35,13 @@ ENUMERATED_TYPE(QuantLib::Month)
 ENUMERATED_CLASS(QuantLib::Calendar)
 //ENUMERATED_CLASS(QuantLib::DayCounter)
 
-//%define QL_OBJECT_WRAPPER(T...)
-//namespace QuantLib {
-//    class T;
-//}
-//OBJECT_WRAPPER(QuantLibAddin::T, QuantLib::T)
-//%enddef
-//
+%define QL_OBJECT_WRAPPER(T...)
+namespace QuantLib {
+    class T;
+}
+OBJECT_WRAPPER(QuantLibAddin::T, QuantLib::T)
+%enddef
+
 //// Data types of objects passed as function parameters to be retrieved from the repository
 //QL_OBJECT_WRAPPER(Index)
 //QL_OBJECT_WRAPPER(IborIndex)
@@ -65,7 +65,7 @@ ENUMERATED_CLASS(QuantLib::Calendar)
 //QL_OBJECT_WRAPPER(Extrapolator)
 //QL_OBJECT_WRAPPER(FloatingRateCouponPricer)
 //QL_OBJECT_WRAPPER(Bond)
-//QL_OBJECT_WRAPPER(TimeSeriesDef)
+QL_OBJECT_WRAPPER(TimeSeriesDef)
 //QL_OBJECT_WRAPPER(DiscountCurve)
 //QL_OBJECT_WRAPPER(ZeroCurve)
 //QL_OBJECT_WRAPPER(ForwardCurve)
@@ -84,7 +84,7 @@ ENUMERATED_CLASS(QuantLib::Calendar)
 //QL_OBJECT_WRAPPER(DefaultProbabilityHelper)
 //QL_OBJECT_WRAPPER(DefaultEventSet)
 //QL_OBJECT_WRAPPER(CreditDefaultSwap)
-//
+
 //// QuantLib Handles.
 //QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
 //QUANTLIB_HANDLE(QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)

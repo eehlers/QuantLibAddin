@@ -11,7 +11,7 @@
 //%include defaulttermstructures.i
 //%include exercise.i
 //%include handles.i
-//%include indexes.i
+%include indexes.i
 //%include instruments.i
 //%include interpolation.i
 //%include latentmodels.i

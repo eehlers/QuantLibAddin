@@ -23,11 +23,11 @@
 #include <rp/conversions/coerce.hpp>
 #include <rp/conversions/getobjectvector.hpp>
 #include <qlo/conversions/conversions.hpp>
-//#include <qlo/conversions/coercehandle.hpp>
+#include <qlo/conversions/coercehandle.hpp>
 //#include <qlo/conversions/coercelibrarydifferent.hpp>
-//#include <qlo/conversions/coercelibrarysame.hpp>
-//#include <qlo/conversions/coerceobject.hpp>
-////#include <qlo/conversions/coercequote.hpp>
+#include <qlo/conversions/coercelibrarysame.hpp>
+#include <qlo/conversions/coerceobject.hpp>
+#include <qlo/conversions/coercequote.hpp>
 ////#include <qlo/conversions/coercetermstructure.hpp>
 #include <qlo/conversions/convert.hpp>
 

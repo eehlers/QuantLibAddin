@@ -236,81 +236,81 @@ namespace QuantLibAddin {
         //    create.registerType("Spline", new QuantLib::CubicInterpolation::DerivativeApprox(QuantLib::CubicInterpolation::Spline));
         //}
 
-        //{
-        //    reposit::Create<QuantLib::Currency> create;
-        //    create.registerType("ARS", new QuantLib::ARSCurrency());
-        //    create.registerType("ATS", new QuantLib::ATSCurrency());
-        //    create.registerType("AUD", new QuantLib::AUDCurrency());
-        //    create.registerType("BDT", new QuantLib::BDTCurrency());
-        //    create.registerType("BEF", new QuantLib::BEFCurrency());
-        //    create.registerType("BGL", new QuantLib::BGLCurrency());
-        //    create.registerType("BRL", new QuantLib::BRLCurrency());
-        //    create.registerType("BYR", new QuantLib::BYRCurrency());
-        //    create.registerType("CAD", new QuantLib::CADCurrency());
-        //    create.registerType("CHF", new QuantLib::CHFCurrency());
-        //    create.registerType("CLP", new QuantLib::CLPCurrency());
-        //    create.registerType("CNY", new QuantLib::CNYCurrency());
-        //    create.registerType("COP", new QuantLib::COPCurrency());
-        //    create.registerType("CYP", new QuantLib::CYPCurrency());
-        //    create.registerType("CZK", new QuantLib::CZKCurrency());
-        //    create.registerType("Currency", new QuantLib::Currency());
-        //    create.registerType("DEM", new QuantLib::DEMCurrency());
-        //    create.registerType("DKK", new QuantLib::DKKCurrency());
-        //    create.registerType("EEK", new QuantLib::EEKCurrency());
-        //    create.registerType("ESP", new QuantLib::ESPCurrency());
-        //    create.registerType("EUR", new QuantLib::EURCurrency());
-        //    create.registerType("FIM", new QuantLib::FIMCurrency());
-        //    create.registerType("FRF", new QuantLib::FRFCurrency());
-        //    create.registerType("GBP", new QuantLib::GBPCurrency());
-        //    create.registerType("GRD", new QuantLib::GRDCurrency());
-        //    create.registerType("HKD", new QuantLib::HKDCurrency());
-        //    create.registerType("HUF", new QuantLib::HUFCurrency());
-        //    create.registerType("IDR", new QuantLib::IDRCurrency());
-        //    create.registerType("IEP", new QuantLib::IEPCurrency());
-        //    create.registerType("ILS", new QuantLib::ILSCurrency());
-        //    create.registerType("INR", new QuantLib::INRCurrency());
-        //    create.registerType("IQD", new QuantLib::IQDCurrency());
-        //    create.registerType("IRR", new QuantLib::IRRCurrency());
-        //    create.registerType("ISK", new QuantLib::ISKCurrency());
-        //    create.registerType("ITL", new QuantLib::ITLCurrency());
-        //    create.registerType("JPY", new QuantLib::JPYCurrency());
-        //    create.registerType("KRW", new QuantLib::KRWCurrency());
-        //    create.registerType("KWD", new QuantLib::KWDCurrency());
-        //    create.registerType("LTL", new QuantLib::LTLCurrency());
-        //    create.registerType("LUF", new QuantLib::LUFCurrency());
-        //    create.registerType("LVL", new QuantLib::LVLCurrency());
-        //    create.registerType("MTL", new QuantLib::MTLCurrency());
-        //    create.registerType("MXN", new QuantLib::MXNCurrency());
-        //    create.registerType("MYR", new QuantLib::MYRCurrency());
-        //    create.registerType("NLG", new QuantLib::NLGCurrency());
-        //    create.registerType("NOK", new QuantLib::NOKCurrency());
-        //    create.registerType("NPR", new QuantLib::NPRCurrency());
-        //    create.registerType("NZD", new QuantLib::NZDCurrency());
-        //    create.registerType("NoCurrency", new QuantLib::Currency());
-        //    create.registerType("PEH", new QuantLib::PEHCurrency());
-        //    create.registerType("PEI", new QuantLib::PEICurrency());
-        //    create.registerType("PEN", new QuantLib::PENCurrency());
-        //    create.registerType("PKR", new QuantLib::PKRCurrency());
-        //    create.registerType("PLN", new QuantLib::PLNCurrency());
-        //    create.registerType("PTE", new QuantLib::PTECurrency());
-        //    create.registerType("ROL", new QuantLib::ROLCurrency());
-        //    create.registerType("RON", new QuantLib::RONCurrency());
-        //    create.registerType("RUB", new QuantLib::RUBCurrency());
-        //    create.registerType("SAR", new QuantLib::SARCurrency());
-        //    create.registerType("SEK", new QuantLib::SEKCurrency());
-        //    create.registerType("SGD", new QuantLib::SGDCurrency());
-        //    create.registerType("SIT", new QuantLib::SITCurrency());
-        //    create.registerType("SKK", new QuantLib::SKKCurrency());
-        //    create.registerType("THB", new QuantLib::THBCurrency());
-        //    create.registerType("TRL", new QuantLib::TRLCurrency());
-        //    create.registerType("TRY", new QuantLib::TRYCurrency());
-        //    create.registerType("TTD", new QuantLib::TTDCurrency());
-        //    create.registerType("TWD", new QuantLib::TWDCurrency());
-        //    create.registerType("USD", new QuantLib::USDCurrency());
-        //    create.registerType("VEB", new QuantLib::VEBCurrency());
-        //    create.registerType("VND", new QuantLib::VNDCurrency());
-        //    create.registerType("ZAR", new QuantLib::ZARCurrency());
-        //}
+        {
+            reposit::Create<QuantLib::Currency> create;
+            create.registerType("ARS", new QuantLib::ARSCurrency());
+            create.registerType("ATS", new QuantLib::ATSCurrency());
+            create.registerType("AUD", new QuantLib::AUDCurrency());
+            create.registerType("BDT", new QuantLib::BDTCurrency());
+            create.registerType("BEF", new QuantLib::BEFCurrency());
+            create.registerType("BGL", new QuantLib::BGLCurrency());
+            create.registerType("BRL", new QuantLib::BRLCurrency());
+            create.registerType("BYR", new QuantLib::BYRCurrency());
+            create.registerType("CAD", new QuantLib::CADCurrency());
+            create.registerType("CHF", new QuantLib::CHFCurrency());
+            create.registerType("CLP", new QuantLib::CLPCurrency());
+            create.registerType("CNY", new QuantLib::CNYCurrency());
+            create.registerType("COP", new QuantLib::COPCurrency());
+            create.registerType("CYP", new QuantLib::CYPCurrency());
+            create.registerType("CZK", new QuantLib::CZKCurrency());
+            create.registerType("Currency", new QuantLib::Currency());
+            create.registerType("DEM", new QuantLib::DEMCurrency());
+            create.registerType("DKK", new QuantLib::DKKCurrency());
+            create.registerType("EEK", new QuantLib::EEKCurrency());
+            create.registerType("ESP", new QuantLib::ESPCurrency());
+            create.registerType("EUR", new QuantLib::EURCurrency());
+            create.registerType("FIM", new QuantLib::FIMCurrency());
+            create.registerType("FRF", new QuantLib::FRFCurrency());
+            create.registerType("GBP", new QuantLib::GBPCurrency());
+            create.registerType("GRD", new QuantLib::GRDCurrency());
+            create.registerType("HKD", new QuantLib::HKDCurrency());
+            create.registerType("HUF", new QuantLib::HUFCurrency());
+            create.registerType("IDR", new QuantLib::IDRCurrency());
+            create.registerType("IEP", new QuantLib::IEPCurrency());
+            create.registerType("ILS", new QuantLib::ILSCurrency());
+            create.registerType("INR", new QuantLib::INRCurrency());
+            create.registerType("IQD", new QuantLib::IQDCurrency());
+            create.registerType("IRR", new QuantLib::IRRCurrency());
+            create.registerType("ISK", new QuantLib::ISKCurrency());
+            create.registerType("ITL", new QuantLib::ITLCurrency());
+            create.registerType("JPY", new QuantLib::JPYCurrency());
+            create.registerType("KRW", new QuantLib::KRWCurrency());
+            create.registerType("KWD", new QuantLib::KWDCurrency());
+            create.registerType("LTL", new QuantLib::LTLCurrency());
+            create.registerType("LUF", new QuantLib::LUFCurrency());
+            create.registerType("LVL", new QuantLib::LVLCurrency());
+            create.registerType("MTL", new QuantLib::MTLCurrency());
+            create.registerType("MXN", new QuantLib::MXNCurrency());
+            create.registerType("MYR", new QuantLib::MYRCurrency());
+            create.registerType("NLG", new QuantLib::NLGCurrency());
+            create.registerType("NOK", new QuantLib::NOKCurrency());
+            create.registerType("NPR", new QuantLib::NPRCurrency());
+            create.registerType("NZD", new QuantLib::NZDCurrency());
+            create.registerType("NoCurrency", new QuantLib::Currency());
+            create.registerType("PEH", new QuantLib::PEHCurrency());
+            create.registerType("PEI", new QuantLib::PEICurrency());
+            create.registerType("PEN", new QuantLib::PENCurrency());
+            create.registerType("PKR", new QuantLib::PKRCurrency());
+            create.registerType("PLN", new QuantLib::PLNCurrency());
+            create.registerType("PTE", new QuantLib::PTECurrency());
+            create.registerType("ROL", new QuantLib::ROLCurrency());
+            create.registerType("RON", new QuantLib::RONCurrency());
+            create.registerType("RUB", new QuantLib::RUBCurrency());
+            create.registerType("SAR", new QuantLib::SARCurrency());
+            create.registerType("SEK", new QuantLib::SEKCurrency());
+            create.registerType("SGD", new QuantLib::SGDCurrency());
+            create.registerType("SIT", new QuantLib::SITCurrency());
+            create.registerType("SKK", new QuantLib::SKKCurrency());
+            create.registerType("THB", new QuantLib::THBCurrency());
+            create.registerType("TRL", new QuantLib::TRLCurrency());
+            create.registerType("TRY", new QuantLib::TRYCurrency());
+            create.registerType("TTD", new QuantLib::TTDCurrency());
+            create.registerType("TWD", new QuantLib::TWDCurrency());
+            create.registerType("USD", new QuantLib::USDCurrency());
+            create.registerType("VEB", new QuantLib::VEBCurrency());
+            create.registerType("VND", new QuantLib::VNDCurrency());
+            create.registerType("ZAR", new QuantLib::ZARCurrency());
+        }
 
         //{
         //    reposit::Create<QuantLib::DateGeneration::Rule> create;
@@ -324,53 +324,53 @@ namespace QuantLibAddin {
         //    create.registerType("Zero", new QuantLib::DateGeneration::Rule(QuantLib::DateGeneration::Zero));
         //}
 
-        //{
-        //    reposit::Create<QuantLib::DayCounter> create;
-        //    create.registerType("1/1", new QuantLib::OneDayCounter());
-        //    create.registerType("30/360", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
-        //    create.registerType("30/360 (Bond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
-        //    create.registerType("30/360 (Eurobond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        //    create.registerType("30/360 (Italian)", new QuantLib::Thirty360(QuantLib::Thirty360::Italian));
-        //    create.registerType("30E/360", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        //    create.registerType("30E/360 (Eurobond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        //    create.registerType("360/360", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
-        //    create.registerType("A/360", new QuantLib::Actual360());
-        //    create.registerType("A/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        //    create.registerType("QuantLib::Actual365Fixed()", new QuantLib::Actual365Fixed());
-        //    create.registerType("A/365 (Fixed)", new QuantLib::Actual365Fixed());
-        //    create.registerType("A/365F", new QuantLib::Actual365Fixed());
-        //    create.registerType("Act/360", new QuantLib::Actual360());
-        //    create.registerType("Act/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        //    create.registerType("Act/365 (Fixed)", new QuantLib::Actual365Fixed());
-        //    create.registerType("Act/365 (NL)", new QuantLib::Actual365NoLeap());
-        //    create.registerType("Act/Act", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        //    create.registerType("Actual/360", new QuantLib::Actual360());
-        //    create.registerType("Actual/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        //    create.registerType("Actual/365 (Fixed)", new QuantLib::Actual365Fixed());
-        //    create.registerType("Actual/365 (JGB)", new QuantLib::Actual365NoLeap());
-        //    create.registerType("Actual/365 (No Leap)", new QuantLib::Actual365NoLeap());
-        //    create.registerType("Actual/Actual", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        //    create.registerType("Actual/Actual (AFB)", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
-        //    create.registerType("Actual/Actual (Bond)", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
-        //    create.registerType("Actual/Actual (Euro)", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
-        //    create.registerType("Actual/Actual (ISDA)", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        //    create.registerType("Actual/Actual (ISMA)", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
-        //    create.registerType("Bond Basis", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
-        //    create.registerType("Business252", new QuantLib::Business252());
-        //    create.registerType("DayCounter", new QuantLib::DayCounter());
-        //    create.registerType("Eurobond Basis", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        //    create.registerType("LIN 30/360", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
-        //    create.registerType("LIN ACT/360", new QuantLib::Actual360());
-        //    create.registerType("LIN ACT/365", new QuantLib::Actual365Fixed());
-        //    create.registerType("LIN ACT/ACT", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
-        //    create.registerType("LIN ACTACT ISDA", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
-        //    create.registerType("LIN ACTACT ISMA", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
-        //    create.registerType("NL/365", new QuantLib::Actual365NoLeap());
-        //    create.registerType("NoDayCounter", new QuantLib::DayCounter());
-        //    create.registerType("Simple", new QuantLib::SimpleDayCounter());
-        //    // FIXME autogenerated code retrieves enum default value by name, this temorary hack makes it work.
-        //    create.registerType("Actual365Fixed", new QuantLib::Actual365Fixed());
-        //}
+        {
+            reposit::Create<QuantLib::DayCounter> create;
+            create.registerType("1/1", new QuantLib::OneDayCounter());
+            create.registerType("30/360", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
+            create.registerType("30/360 (Bond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
+            create.registerType("30/360 (Eurobond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+            create.registerType("30/360 (Italian)", new QuantLib::Thirty360(QuantLib::Thirty360::Italian));
+            create.registerType("30E/360", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+            create.registerType("30E/360 (Eurobond Basis)", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+            create.registerType("360/360", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
+            create.registerType("A/360", new QuantLib::Actual360());
+            create.registerType("A/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+            create.registerType("QuantLib::Actual365Fixed()", new QuantLib::Actual365Fixed());
+            create.registerType("A/365 (Fixed)", new QuantLib::Actual365Fixed());
+            create.registerType("A/365F", new QuantLib::Actual365Fixed());
+            create.registerType("Act/360", new QuantLib::Actual360());
+            create.registerType("Act/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+            create.registerType("Act/365 (Fixed)", new QuantLib::Actual365Fixed());
+            create.registerType("Act/365 (NL)", new QuantLib::Actual365NoLeap());
+            create.registerType("Act/Act", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+            create.registerType("Actual/360", new QuantLib::Actual360());
+            create.registerType("Actual/365", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+            create.registerType("Actual/365 (Fixed)", new QuantLib::Actual365Fixed());
+            create.registerType("Actual/365 (JGB)", new QuantLib::Actual365NoLeap());
+            create.registerType("Actual/365 (No Leap)", new QuantLib::Actual365NoLeap());
+            create.registerType("Actual/Actual", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+            create.registerType("Actual/Actual (AFB)", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
+            create.registerType("Actual/Actual (Bond)", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
+            create.registerType("Actual/Actual (Euro)", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
+            create.registerType("Actual/Actual (ISDA)", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+            create.registerType("Actual/Actual (ISMA)", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
+            create.registerType("Bond Basis", new QuantLib::Thirty360(QuantLib::Thirty360::BondBasis));
+            create.registerType("Business252", new QuantLib::Business252());
+            create.registerType("DayCounter", new QuantLib::DayCounter());
+            create.registerType("Eurobond Basis", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+            create.registerType("LIN 30/360", new QuantLib::Thirty360(QuantLib::Thirty360::EurobondBasis));
+            create.registerType("LIN ACT/360", new QuantLib::Actual360());
+            create.registerType("LIN ACT/365", new QuantLib::Actual365Fixed());
+            create.registerType("LIN ACT/ACT", new QuantLib::ActualActual(QuantLib::ActualActual::AFB));
+            create.registerType("LIN ACTACT ISDA", new QuantLib::ActualActual(QuantLib::ActualActual::ISDA));
+            create.registerType("LIN ACTACT ISMA", new QuantLib::ActualActual(QuantLib::ActualActual::ISMA));
+            create.registerType("NL/365", new QuantLib::Actual365NoLeap());
+            create.registerType("NoDayCounter", new QuantLib::DayCounter());
+            create.registerType("Simple", new QuantLib::SimpleDayCounter());
+            // FIXME autogenerated code retrieves enum default value by name, this temorary hack makes it work.
+            create.registerType("Actual365Fixed", new QuantLib::Actual365Fixed());
+        }
 
         //{
         //    reposit::Create<QuantLib::Duration::Type> create;
@@ -610,16 +610,15 @@ namespace QuantLibAddin {
         //    create.registerType("DeposBeforeFirstFuturesStartDatePlusOne", new QuantLibAddin::RateHelper::DepoInclusionCriteria(QuantLibAddin::RateHelper::DeposBeforeFirstFuturesStartDatePlusOne));
         //}
 
-        //{
-        //    reposit::Create<QuantLibAddin::SwapIndex::FixingType> create;
-        //    create.registerType("IfrFix", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IfrFix));
-        //    create.registerType("Isda", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::Isda));
-        //    create.registerType("IsdaFixA", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixA));
-        //    create.registerType("IsdaFixAm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixAm));
-        //    create.registerType("IsdaFixB", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixB));
-        //    create.registerType("IsdaFixPm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixPm));
-        //}
-
+        {
+            reposit::Create<QuantLibAddin::SwapIndex::FixingType> create;
+            create.registerType("IfrFix", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IfrFix));
+            create.registerType("Isda", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::Isda));
+            create.registerType("IsdaFixA", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixA));
+            create.registerType("IsdaFixAm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixAm));
+            create.registerType("IsdaFixB", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixB));
+            create.registerType("IsdaFixPm", new QuantLibAddin::SwapIndex::FixingType(QuantLibAddin::SwapIndex::IsdaFixPm));
+        }
     }
 
     void unregisterEnumeratedTypes() {

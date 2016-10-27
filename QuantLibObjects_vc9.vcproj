@@ -765,6 +765,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_indexes.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_indexes.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_timeseries.cpp"
 					>
 				</File>
@@ -781,6 +789,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_indexes.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_indexes.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_timeseries.cpp"
 					>
 				</File>
@@ -793,6 +809,14 @@
 		<Filter
 			Name="valueobjects"
 			>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_indexes.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_indexes.hpp"
+				>
+			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_timeseries.cpp"
 				>
@@ -859,6 +883,26 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\objmanual_date.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_indexes.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_indexes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_quotes.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_quotes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_termstructures.hpp"
 				>
 			</File>
 			<File

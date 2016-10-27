@@ -1,7 +1,7 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2006, 2007, 2008, 2009 Ferdinando Ametrano
+ Copyright (C) 2006, 2007 Ferdinando Ametrano
  Copyright (C) 2006 Katiuscia Manzoni
  Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
@@ -20,27 +20,27 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#if defined(HAVE_CONFIG_H)
-    #include <qlo/config.hpp>
-#endif
-#include <qlo/objects/indexes/swap/isdafixaswap.hpp>
+#ifndef qla_index_hpp
+#define qla_index_hpp
 
-#include <ql/termstructures/yieldtermstructure.hpp>
-#include <ql/indexes/swap/euriborswap.hpp>
+#include <rp/libraryobject.hpp>
+
+#include <ql/types.hpp>
+
+namespace QuantLib {
+    class Date;
+    class Index;
+}
 
 namespace QuantLibAddin {
 
-   EuriborSwapIsdaFixA::EuriborSwapIsdaFixA(
-            const boost::shared_ptr<reposit::ValueObject>& properties,
-            const QuantLib::Period& p,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& f,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& d,
-            bool permanent)
-    : SwapIndex(properties, permanent)
-    {
-        libraryObject_ = boost::shared_ptr<QuantLib::EuriborSwapIsdaFixA>(new
-            QuantLib::EuriborSwapIsdaFixA(p, f, d));
-    }
-
+    class Index : public reposit::LibraryObject<QuantLib::Index> {
+      public:
+        RP_LIB_CTOR(Index, QuantLib::Index);
+        void addFixings(const std::vector<QuantLib::Date>& dates,
+                        const std::vector<QuantLib::Real>& values,
+                        bool forceOverwrite, bool updateValuObject = true);
+    };
 }
 
+#endif

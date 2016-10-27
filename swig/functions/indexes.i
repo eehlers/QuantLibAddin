@@ -28,19 +28,23 @@ namespace QuantLib {
         public:
             //! Returns the name for the given Index object.
             std::string name();
+
             //! Returns the calendar (e.g. TARGET) for the given Index object.
             Calendar fixingCalendar();
+
             //! Returns TRUE if the fixing date is a valid one for the given Index object.
             %loop(isValidFixingDate, FixingDate);
             bool isValidFixingDate(
                 const Date& FixingDate                  //!< fixing date(s).
             ) const;
+
             //! Returns the fixing for the given Index object. The fixing is retrieved from the time series if available, otherways it is forecasted.
             %loop(fixing, FixingDate);
             double fixing(
                 const Date& FixingDate,                 //!< fixing date(s).
                 bool ForecastToday=false                //!< If set to TRUE it forces the forecasting of today's fixing even if the actual fixing is already available in the time series.
             ) const;
+
             //! Adds fixings for the given Index object.
             %rename(addFixings2) addFixings;
             %loop(addFixings, TimeSeriesID);
@@ -48,6 +52,7 @@ namespace QuantLib {
                 const TimeSeries<Real>& TimeSeriesID,   //!< TimeSeries object ID.
                 bool ForceOverwrite=false               //!< Set to TRUE to force overwriting of existing fixings, if any.
             );
+
             //!< Clear all fixings for the given Index object.
             void clearFixings();
     };
@@ -56,25 +61,31 @@ namespace QuantLib {
         public:
             //! Returns the family name (e.g. EURIBOR) for the given InterestRateIndex object.
             std::string familyName();
+
             //! Returns the tenor (i.e. length, e.g. 6M, 10Y) for the given InterestRateIndex object.
             Period tenor();
+
             //! Returns the fixing days (e.g. 2) for the given InterestRateIndex object.
             Natural fixingDays();
+
             //! Returns the currency (e.g. EUR) for the given InterestRateIndex object.
             const Currency& currency();
+
             //! Returns the DayCounter (e.g. Actual/360) for the given InterestRateIndex object.
-            %generate(c#, dayCounter);
             const DayCounter& dayCounter();
+
             //! Returns the value date for the given fixing date for the given InterestRateIndex object.
             %loop(valueDate, FixingDate);
             Date valueDate(
                 const Date& FixingDate                  //!< fixing date(s).
             ) const;
+
             //! Returns the fixing date for the given value date for the given InterestRateIndex object.
             %loop(fixingDate, ValueDate);
             Date fixingDate(
                 const Date& ValueDate                   //!< value date.
             ) const;
+
             //! Returns the maturity date for the given value date for the given InterestRateIndex object.
             %rename(maturity) maturityDate;
             %loop(maturity, ValueDate);
@@ -86,8 +97,9 @@ namespace QuantLib {
     class IborIndex : public InterestRateIndex {
         public:
             //!< Returns the business day convention (e.g. Modified Following) for the given IborIndex object.
-            %rename(IborIndexBusinessDayConv) businessDayConvention;
+            %rename2(businessDayConvention, IborIndexBusinessDayConv);
             BusinessDayConvention businessDayConvention();        
+
             //! Returns TRUE if the given IborIndex object follows the 'end of month' convention.
             bool endOfMonth();
     };
@@ -96,6 +108,7 @@ namespace QuantLib {
         public:
             //! Returns the fixed leg tenor (e.g. 1Y) for the given SwapIndex object.
             Period fixedLegTenor();
+
             //! Returns the business day convention (e.g. Modified Following) for the given SwapIndex object.
             %rename(fixedLegBDC) fixedLegConvention;
             BusinessDayConvention fixedLegConvention();

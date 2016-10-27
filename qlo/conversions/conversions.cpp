@@ -119,5 +119,5 @@ namespace QuantLibAddin {
         }
         return vv;
     }
-
 }
+

@@ -34,8 +34,11 @@
 #include <ql/time/imm.hpp>
 #include <ql/settings.hpp>
 #include <ql/timeseries.hpp>
+#include <ql/quotes/simplequote.hpp>
 #include <ql/index.hpp>
 #include <qlo/objects/objmanual_timeseries.hpp>
+#include <qlo/objects/objmanual_quotes.hpp>
+#include <qlo/conversions/all.hpp>
 #include <rp/repository.hpp>
 #include <rp/rpdefines.hpp>
 
@@ -82,39 +85,39 @@ namespace reposit {
         return QuantLib::PeriodParser::parse(c.operator std::string());
     }
 
-    //template<class container_t>
-    //boost::shared_ptr<QuantLib::Quote> convertQuote(const container_t& c) {
-    //    if(c.type() == typeid(double))
-    //        return boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(c.operator double()));
-    //    else if(c.type() == typeid(std::string)) {
-    //        std::string s = c.operator std::string();
-    //        double d;
-    //        if (is_numeric(s, d))
-    //            return boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(d));
-    //        RP_GET_OBJECT(temp, s, reposit::Object)
-    //        return QuantLibAddin::CoerceObject<QuantLibAddin::Quote, QuantLib::Quote, QuantLib::Quote>()(temp);
-    //    } else {
-    //        RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
-    //    }
-    //}
+    template<class container_t>
+    boost::shared_ptr<QuantLib::Quote> convertQuote(const container_t& c) {
+        if(c.type() == typeid(double))
+            return boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(c.operator double()));
+        else if(c.type() == typeid(std::string)) {
+            std::string s = c.operator std::string();
+            double d;
+            if (is_numeric(s, d))
+                return boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(d));
+            RP_GET_OBJECT(temp, s, reposit::Object)
+            return QuantLibAddin::CoerceObject<QuantLibAddin::Quote, QuantLib::Quote, QuantLib::Quote>()(temp);
+        } else {
+            RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
+        }
+    }
 
-    //template<class container_t>
-    //QuantLib::Handle<QuantLib::Quote> convertQuoteHandle(const container_t& c) {
-    //    if(c.type() == typeid(long))
-    //        return QuantLib::Handle<QuantLib::Quote>(boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(c.operator long())));
-    //    else if(c.type() == typeid(double))
-    //        return QuantLib::Handle<QuantLib::Quote>(boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(c.operator double())));
-    //    else if(c.type() == typeid(std::string)) {
-    //        std::string s = c.operator std::string();
-    //        double d;
-    //        if (is_numeric(s, d))
-    //            return QuantLib::Handle<QuantLib::Quote>(boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(d)));
-    //        RP_GET_OBJECT(object, s, reposit::Object)
-    //        return QuantLibAddin::CoerceHandle<QuantLibAddin::Quote, QuantLib::Quote>()(object);
-    //    }
-    //    else
-    //        RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
-    //}
+    template<class container_t>
+    QuantLib::Handle<QuantLib::Quote> convertQuoteHandle(const container_t& c) {
+        if(c.type() == typeid(long))
+            return QuantLib::Handle<QuantLib::Quote>(boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(c.operator long())));
+        else if(c.type() == typeid(double))
+            return QuantLib::Handle<QuantLib::Quote>(boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(c.operator double())));
+        else if(c.type() == typeid(std::string)) {
+            std::string s = c.operator std::string();
+            double d;
+            if (is_numeric(s, d))
+                return QuantLib::Handle<QuantLib::Quote>(boost::shared_ptr<QuantLib::Quote>(new QuantLib::SimpleQuote(d)));
+            RP_GET_OBJECT(object, s, reposit::Object)
+            return QuantLibAddin::CoerceHandle<QuantLibAddin::Quote, QuantLib::Quote>()(object);
+        }
+        else
+            RP_FAIL("unable to convert type '" << c.type().name() << "' to type 'QuantLib::Quote'");
+    }
 
     template<class container_t>
     QuantLib::TimeSeriesDef convertTimeSeriesDef(const container_t& c) {

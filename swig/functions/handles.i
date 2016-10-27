@@ -15,7 +15,6 @@ namespace QuantLibAddin {
 
     class RelinkableHandleYieldTermStructure {
     public:
-        %generate(c#, RelinkableHandleYieldTermStructure);
         // attach processor RelinkableHandleProcessor to ctor RelinkableHandleYieldTermStructure.
         %processor(RelinkableHandleYieldTermStructure, RelinkableHandleProcessor);
         // NB: The parameter below must be called "CurrentLink" because there

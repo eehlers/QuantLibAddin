@@ -29,6 +29,8 @@
 namespace QuantLib {
     class Date;
     class Period;
+    class Quote;
+    template <class T> class Handle;
 
     template<class T, class Container>
     class TimeSeries;
@@ -45,11 +47,11 @@ namespace reposit {
     template<>
     QuantLib::Period convert<QuantLib::Period, property_t>(const property_t& p);
 
-    //template<>
-    //boost::shared_ptr<QuantLib::Quote> convert<boost::shared_ptr<QuantLib::Quote>, property_t>(const property_t& c);
+    template<>
+    boost::shared_ptr<QuantLib::Quote> convert<boost::shared_ptr<QuantLib::Quote>, property_t>(const property_t& c);
 
-    //template<>
-    //QuantLib::Handle<QuantLib::Quote> convert<QuantLib::Handle<QuantLib::Quote>, property_t>(const property_t& c);
+    template<>
+    QuantLib::Handle<QuantLib::Quote> convert<QuantLib::Handle<QuantLib::Quote>, property_t>(const property_t& c);
 
     template<> QuantLib::TimeSeriesDef convert<QuantLib::TimeSeriesDef, property_t>(const property_t& c);
 }

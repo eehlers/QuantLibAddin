@@ -194,14 +194,6 @@
 				Name="typemaps"
 				>
 				<File
-					RelativePath=".\typemaps\addincpp.i"
-					>
-				</File>
-				<File
-					RelativePath=".\typemaps\addinexcel.i"
-					>
-				</File>
-				<File
 					RelativePath=".\typemaps\all.i"
 					>
 				</File>
@@ -210,31 +202,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\typemaps\date.i"
-					>
-				</File>
-				<File
-					RelativePath=".\typemaps\doxygen.i"
-					>
-				</File>
-				<File
-					RelativePath=".\typemaps\handles.i"
-					>
-				</File>
-				<File
-					RelativePath=".\typemaps\libraryobjects.i"
-					>
-				</File>
-				<File
-					RelativePath=".\typemaps\serialization.i"
-					>
-				</File>
-				<File
-					RelativePath=".\typemaps\shared.i"
-					>
-				</File>
-				<File
-					RelativePath=".\typemaps\valueobjects.i"
+					RelativePath=".\typemaps\ql_typemaps.i"
 					>
 				</File>
 			</Filter>

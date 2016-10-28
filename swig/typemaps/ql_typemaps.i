@@ -76,7 +76,7 @@
 %typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::Quote> & %{
     reposit::property_t $1_name_prop =
         valueObject->getProperty("$1_name");
-    valueObject->processVariant($1_name_prop);
+    valueObject->processPrecedentID($1_name_prop);
     QuantLib::Handle<QuantLib::Quote> $1_name =
         reposit::convert<QuantLib::Handle<QuantLib::Quote> >(
             $1_name_prop, "$1_name");
@@ -125,11 +125,8 @@
 // rp_tm_xll_rtft - function return type (F/M)
 
 %typemap(rp_tm_xll_rtft) QuantLib::Date "long*";
-//%typemap(rp_tm_xll_rtft) QuantLib::Period "char*";
 
 // rp_tm_xll_parm - function parameters (F/C/M)
-
-//%typemap(rp_tm_xll_parm) QuantLib::Period & "char*";
 
 // rp_tm_xll_cnvt - convert from Excel datatypes to the datatypes of the underlying Library
 
@@ -225,14 +222,12 @@
 
 // rp_tm_xll_cdrt - code to register the return type with Excel
 
-//%typemap(rp_tm_xll_cdrt) QuantLib::Period "C";
 %typemap(rp_tm_xll_cdrt) QuantLib::Date "N";
 
 // rp_tm_xll_code - code to register the parameter with Excel
 
 %typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::Quote> & "P";
 
-//%typemap(rp_tm_xll_code) QuantLib::Period & "C";
 %typemap(rp_tm_xll_code) QuantLib::Date & "P";
 
 // rp_tm_xll_loop - arguments to boost::bind object for a looping function (F/M)

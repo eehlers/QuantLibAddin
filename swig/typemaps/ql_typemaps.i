@@ -56,8 +56,7 @@
 %typemap(rp_tm_scr_cnvt) QuantLib::Period & %{
     std::string $1_name_str =
         reposit::convert<std::string>(valueObject->getProperty("$1_name"));
-    QuantLib::Period $1_name;
-    QuantLibAddin::cppToLibrary($1_name_str, $1_name);
+    QuantLib::Period $1_name = QuantLibAddin::Get<std::string, QuantLib::Period>()($1_name_str);
 %}
 
 %typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Real> & %{
@@ -82,6 +81,7 @@
         reposit::convert<QuantLib::Handle<QuantLib::Quote> >(
             $1_name_prop, "$1_name");
 %}
+
 %typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
     std::string $1_name_str =
         reposit::convert<std::string>(valueObject->getProperty("$1_name"));
@@ -138,8 +138,7 @@
 // rp_tm_xll_cnvt - convert from Excel datatypes to the datatypes of the underlying Library
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Period & %{
-        QuantLib::Period $1_name_cnv;
-        QuantLibAddin::cppToLibrary($1_name, $1_name_cnv);
+        QuantLib::Period $1_name_cnv = QuantLibAddin::Get<std::string, QuantLib::Period>()($1_name);
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Date & %{
@@ -158,7 +157,7 @@
         //    reposit::ConvertOper(*$1_name));
 %}
 
-%typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
+%typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
         std::string $1_name_vo = reposit::convert<std::string>(
             reposit::ConvertOper(*$1_name), "$1_name", "");
 
@@ -171,7 +170,7 @@
                     $1_nameCoerce, QuantLib::Handle<QuantLib::YieldTermStructure>());
 %}
 
-%typemap(rp_tm_xll_cnvt2) QuantLib::Handle<QuantLib::YieldTermStructure> const & %{
+%typemap(rp_tm_xll_cnvt2) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
         std::string $1_name_vo = reposit::convert<std::string>(
             reposit::ConvertOper(*$1_name), "$1_name", "");
 
@@ -183,7 +182,7 @@
                     $1_nameCoerce, $rp_value);
 %}
 
-%typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::Quote> const & %{
+%typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::Quote> & %{
         reposit::property_t $1_name_cnv = reposit::convert<reposit::property_t>(
             reposit::ConvertOper(*$1_name));
         QuantLib::Handle<QuantLib::Quote> $1_name_handle = 

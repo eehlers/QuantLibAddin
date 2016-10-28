@@ -43,7 +43,7 @@ namespace QuantLibAddin {
     std::vector<std::string> libraryToVector(const std::vector<QuantLib::Period>&);
     std::vector<double> libraryToVector(const std::vector<QuantLib::Real>&);
 
-    void cppToLibrary(const std::string &in, QuantLib::Period &ret);
+    //void cppToLibrary(const std::string &in, QuantLib::Period &ret);
     void cppToLibrary(const long &in, QuantLib::Size &ret);
 
     // Function below required on 64-bit systems but on 32-bit systems it
@@ -59,7 +59,6 @@ namespace QuantLibAddin {
 
     QuantLib::Matrix vvToQlMatrix(const std::vector<std::vector<double> > &vv);
     std::vector<std::vector<double> > qlMatrixToVv(const QuantLib::Matrix &m);
-
 }
 
 #endif

@@ -1,7 +1,7 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2006, 2007 Eric Ehlers
+ Copyright (C) 2016 Eric Ehlers
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -17,20 +17,28 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#ifndef qlo_conversions_all_hpp
-#define qlo_conversions_all_hpp
+#ifndef qlo_temp_hpp
+#define qlo_temp_hpp
 
-#include <rp/conversions/coerce.hpp>
-#include <rp/conversions/getobjectvector.hpp>
-#include <qlo/conversions/conversions.hpp>
-#include <qlo/conversions/coercehandle.hpp>
-//#include <qlo/conversions/coercelibrarydifferent.hpp>
-#include <qlo/conversions/coercelibrarysame.hpp>
-#include <qlo/conversions/coerceobject.hpp>
-#include <qlo/conversions/coercequote.hpp>
-////#include <qlo/conversions/coercetermstructure.hpp>
-#include <qlo/conversions/convert.hpp>
-#include <qlo/conversions/get.hpp>
+#include <string>
+
+namespace QuantLib {
+    class Period;
+}
+
+namespace QuantLibAddin {
+
+    template <class In, class Out>
+    class Get {
+    public:
+        Out operator()(const In&);
+    };
+
+    template<> class Get<std::string, QuantLib::Period> {
+    public:
+        QuantLib::Period operator()(const std::string&);
+    };
+}
 
 #endif
 

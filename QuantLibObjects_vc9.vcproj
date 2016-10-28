@@ -633,6 +633,14 @@
 				RelativePath=".\qlo\conversions\convert_tmpl.hpp"
 				>
 			</File>
+			<File
+				RelativePath=".\qlo\conversions\get.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\conversions\get.hpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="enumerations"

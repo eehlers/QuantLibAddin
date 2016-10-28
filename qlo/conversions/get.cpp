@@ -20,11 +20,12 @@
 //#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
 //    #include <qlo/config.hpp>
 //#endif
-#include <qlo/conversions/get.hpp>
-#include <qlo/conversions/coercehandle.hpp>
+#include <qlo/conversions/all.hpp>
 #include <qlo/objects/objmanual_termstructures.hpp>
+#include <qlo/objects/objmanual_quotes.hpp>
 #include <ql/utilities/dataparsers.hpp>
 #include <ql/time/period.hpp>
+#include <ql/quotes/all.hpp>
 #include <boost/algorithm/string/case_conv.hpp>
 
 QuantLib::Period QuantLibAddin::Get<std::string, QuantLib::Period>::operator()(const std::string &in) {
@@ -43,17 +44,34 @@ QuantLib::Period QuantLibAddin::Get<std::string, QuantLib::Period>::operator()(c
     }
     return ret;
 }
+template <class QuantLibAddinQuote, class QuantLibQuote>
+boost::shared_ptr<QuantLibQuote> getQuote(const std::string &in) {
+    RP_GET_OBJECT(objectId, in, reposit::Object)
+    return QuantLibAddin::CoerceQuote<QuantLibAddinQuote, QuantLibQuote>()(objectId);
+}
 
-//QuantLib::Handle<QuantLib::Quote> QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::Quote> >::operator()(const std::string &in) {
-//}
+boost::shared_ptr<QuantLib::SimpleQuote>
+QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::SimpleQuote> >::operator()(const std::string &in) {
+    return getQuote<QuantLibAddin::SimpleQuote, QuantLib::SimpleQuote>(in);
+}
+
+boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote>
+QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote> >::operator()(const std::string &in) {
+    return getQuote<QuantLibAddin::FuturesConvAdjustmentQuote, QuantLib::FuturesConvAdjustmentQuote>(in);
+}
+
+boost::shared_ptr<QuantLib::LastFixingQuote>
+QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::LastFixingQuote> >::operator()(const std::string &in) {
+    return getQuote<QuantLibAddin::LastFixingQuote, QuantLib::LastFixingQuote>(in);
+}
 
 QuantLib::Handle<QuantLib::YieldTermStructure>
 QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >::operator()(
     const std::string &in,
     const QuantLib::Handle<QuantLib::YieldTermStructure> &defaultValue) {
-    RP_GET_OBJECT_DEFAULT(x, in, reposit::Object)
+    RP_GET_OBJECT_DEFAULT(objectId, in, reposit::Object)
     return QuantLibAddin::CoerceHandle<
         QuantLibAddin::YieldTermStructure,
         QuantLib::YieldTermStructure>()(
-            x, defaultValue);
+            objectId, defaultValue);
 }

@@ -10,30 +10,18 @@
 %}
 
 %typemap(rp_tm_xxx_rp_get) QuantLib::SimpleQuote %{
-        RP_GET_OBJECT(xxx2, objectID, reposit::Object)
         boost::shared_ptr<QuantLib::SimpleQuote> xxx =
-            QuantLibAddin::CoerceQuote<
-                QuantLibAddin::SimpleQuote,
-                QuantLib::SimpleQuote>()(
-                    xxx2);
+            QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::SimpleQuote> >()(objectID);
 %}
 
 %typemap(rp_tm_xxx_rp_get) QuantLib::FuturesConvAdjustmentQuote %{
-        RP_GET_OBJECT(xxx2, objectID, reposit::Object)
         boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote> xxx =
-            QuantLibAddin::CoerceQuote<
-                QuantLibAddin::FuturesConvAdjustmentQuote,
-                QuantLib::FuturesConvAdjustmentQuote>()(
-                    xxx2);
+            QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote> >()(objectID);
 %}
 
 %typemap(rp_tm_xxx_rp_get) QuantLib::LastFixingQuote %{
-        RP_GET_OBJECT(xxx2, objectID, reposit::Object)
         boost::shared_ptr<QuantLib::LastFixingQuote> xxx =
-            QuantLibAddin::CoerceQuote<
-                QuantLibAddin::LastFixingQuote,
-                QuantLib::LastFixingQuote>()(
-                    xxx2);
+            QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::LastFixingQuote> >()(objectID);
 %}
 
 //*****************************************************************************

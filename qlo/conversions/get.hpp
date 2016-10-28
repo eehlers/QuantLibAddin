@@ -24,7 +24,11 @@
 
 namespace QuantLib {
     class Period;
+    class Quote;
+    class YieldTermStructure;
 }
+
+#include <ql/handle.hpp>
 
 namespace QuantLibAddin {
 
@@ -37,6 +41,18 @@ namespace QuantLibAddin {
     template<> class Get<std::string, QuantLib::Period> {
     public:
         QuantLib::Period operator()(const std::string&);
+    };
+
+    //template<> class Get<std::string, QuantLib::Handle<QuantLib::Quote> > {
+    //public:
+    //    QuantLib::Handle<QuantLib::Quote> operator()(const std::string&);
+    //};
+
+    template<> class Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> > {
+    public:
+        QuantLib::Handle<QuantLib::YieldTermStructure> operator()(
+            const std::string&,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& = QuantLib::Handle<QuantLib::YieldTermStructure>());
     };
 }
 

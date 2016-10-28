@@ -21,6 +21,8 @@
 //    #include <qlo/config.hpp>
 //#endif
 #include <qlo/conversions/get.hpp>
+#include <qlo/conversions/coercehandle.hpp>
+#include <qlo/objects/objmanual_termstructures.hpp>
 #include <ql/utilities/dataparsers.hpp>
 #include <ql/time/period.hpp>
 #include <boost/algorithm/string/case_conv.hpp>
@@ -40,4 +42,18 @@ QuantLib::Period QuantLibAddin::Get<std::string, QuantLib::Period>::operator()(c
         ret.normalize();
     }
     return ret;
+}
+
+//QuantLib::Handle<QuantLib::Quote> QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::Quote> >::operator()(const std::string &in) {
+//}
+
+QuantLib::Handle<QuantLib::YieldTermStructure>
+QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >::operator()(
+    const std::string &in,
+    const QuantLib::Handle<QuantLib::YieldTermStructure> &defaultValue) {
+    RP_GET_OBJECT_DEFAULT(x, in, reposit::Object)
+    return QuantLibAddin::CoerceHandle<
+        QuantLibAddin::YieldTermStructure,
+        QuantLib::YieldTermStructure>()(
+            x, defaultValue);
 }

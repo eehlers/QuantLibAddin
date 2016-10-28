@@ -88,9 +88,9 @@ namespace QuantLibAddin {
     //    }
     //}
 
-    void cppToLibrary(const long &in, QuantLib::Size &ret) {
-        ret = QuantLib::Size(in);
-    }
+    //void cppToLibrary(const long &in, QuantLib::Size &ret) {
+    //    ret = QuantLib::Size(in);
+    //}
 
 #if defined(RP_64_BIT)
     void cppToLibrary(const long &in, QuantLib::Natural &ret) {

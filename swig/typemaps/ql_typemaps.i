@@ -86,12 +86,8 @@
     std::string $1_name_str =
         reposit::convert<std::string>(valueObject->getProperty("$1_name"));
     valueObject->processPrecedentID($1_name_str);
-    RP_GET_OBJECT_DEFAULT($1_name_coerce, $1_name_str, reposit::Object)
     QuantLib::Handle<QuantLib::YieldTermStructure> $1_name =
-        QuantLibAddin::CoerceHandle<
-            QuantLibAddin::YieldTermStructure,
-            QuantLib::YieldTermStructure>()(
-                $1_name_coerce, QuantLib::Handle<QuantLib::YieldTermStructure>());
+        QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >()($1_name_str);
 %}
 
 //*****************************************************************************
@@ -160,26 +156,15 @@
 %typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
         std::string $1_name_vo = reposit::convert<std::string>(
             reposit::ConvertOper(*$1_name), "$1_name", "");
-
-        RP_GET_OBJECT_DEFAULT($1_nameCoerce, $1_name_vo, reposit::Object)
-        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
-            QuantLibAddin::CoerceHandle<
-                QuantLibAddin::YieldTermStructure,
-                QuantLib::YieldTermStructure>()(
-                    //$1_nameCoerce);
-                    $1_nameCoerce, QuantLib::Handle<QuantLib::YieldTermStructure>());
+        QuantLib::Handle<QuantLib::YieldTermStructure> $1_nameCoerce =
+            QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >()($1_name_vo);
 %}
 
 %typemap(rp_tm_xll_cnvt2) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
         std::string $1_name_vo = reposit::convert<std::string>(
             reposit::ConvertOper(*$1_name), "$1_name", "");
-
-        RP_GET_OBJECT_DEFAULT($1_nameCoerce, $1_name_vo, reposit::Object)
         QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
-            QuantLibAddin::CoerceHandle<
-                QuantLibAddin::YieldTermStructure,
-                QuantLib::YieldTermStructure>()(
-                    $1_nameCoerce, $rp_value);
+            QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >()($1_name_vo, $rp_value);
 %}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::Quote> & %{

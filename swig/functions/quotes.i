@@ -5,7 +5,7 @@
 %override;
 
 %insert(quotes_addin_cpp) %{
-#include <qlo/objects/obj_instruments.hpp>
+//#include <qlo/objects/obj_instruments.hpp>
 #include <qlo/objects/indexes/iborindex.hpp>
 #include <qlo/objects/indexes/swapindex.hpp>
 #include <qlo/conversions/coercequote.hpp>
@@ -64,20 +64,17 @@ namespace QuantLibAddin {
 
     class SimpleQuote : public Quote {
       public:
-        %generate(c++, SimpleQuote);
-        %generate(c#, SimpleQuote);
-        %generate(countify, SimpleQuote);
         // NB: The first parameter below must be called "Value" because there
         // is code which updates a property with that name in the value object.
         SimpleQuote(
             QuantLib::Real Value/*=QuantLib::Null<QuantLib::Real>()*/,  //!< quote.
-            QuantLib::Real tickValue                                    //!< tick value used for sensitivity analysis.
+            QuantLib::Real TickValue                                    //!< tick value used for sensitivity analysis.
         );
         //! returns the tick value of the given SimpleQuote object.
         QuantLib::Real tickValue() const;
         //! sets the tick value of the given SimpleQuote object.
         void setTickValue(
-            QuantLib::Real tickValue                                    //!< the new tick value.
+            QuantLib::Real Value                                        //!< the new tick value.
         );
 
         //! sets a new value to the given SimpleQuote object and returns the difference with the previous value.
@@ -150,36 +147,36 @@ namespace QuantLibAddin {
     class LastFixingQuote : public Quote {
       public:
         LastFixingQuote(
-            const boost::shared_ptr<QuantLib::Index>& index             //!< Index object ID.
+            const boost::shared_ptr<QuantLib::Index>& Index             //!< Index object ID.
         );
     };
     
     //! delta NPV bucket sensitivity analysis for a (single/vector/matrix) SimpleQuote.
-    std::vector<std::vector<QuantLib::Real> >
-    bucketAnalysis(
-        const std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > &SimpleQuote,                   //!< simple quotes.
-        const std::vector<boost::shared_ptr<QuantLib::Instrument> > &Instruments,                           //!< instruments.
-        const std::vector<QuantLib::Real>& Quantities,                                                      //!< quantities.
-        QuantLib::Real Shift=0.0001,                                                                        //!< shift.
-        QuantLib::SensitivityAnalysis sensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
-    );
+    //std::vector<std::vector<QuantLib::Real> >
+    //bucketAnalysis(
+    //    const std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > &SimpleQuote,                   //!< simple quotes.
+    //    const std::vector<boost::shared_ptr<QuantLib::Instrument> > &Instruments,                           //!< instruments.
+    //    const std::vector<QuantLib::Real>& Quantities,                                                      //!< quantities.
+    //    QuantLib::Real Shift=0.0001,                                                                        //!< shift.
+    //    QuantLib::SensitivityAnalysis SensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
+    //);
     
     //! Parameters' bucket analysis delta for a single SimpleQuote.
-    inline std::vector<QuantLib::Real>
-    bucketAnalysisDelta(
-        const QuantLib::Handle<QuantLib::SimpleQuote>& SimpleQuote,                                         //!< simple quote.
-        const std::vector<QuantLib::Handle<QuantLib::Quote> >& Parameters,                                  //!< parameters vector.
-        QuantLib::Real Shift=0.0001,                                                                        //!< shift.
-        QuantLib::SensitivityAnalysis sensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
-    );
+    //inline std::vector<QuantLib::Real>
+    //bucketAnalysisDelta(
+    //    const QuantLib::Handle<QuantLib::SimpleQuote>& SimpleQuote,                                         //!< simple quote.
+    //    const std::vector<QuantLib::Handle<QuantLib::Quote> >& Parameters,                                  //!< parameters vector.
+    //    QuantLib::Real Shift=0.0001,                                                                        //!< shift.
+    //    QuantLib::SensitivityAnalysis SensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
+    //);
     
     //! Parameters' bucket analysis delta for a SimpleQuote vector.
-    std::vector<std::vector<QuantLib::Real> >
-    bucketAnalysisDelta2(
-        const std::vector<QuantLib::Handle<QuantLib::Quote> >& SimpleQuote,                                 //!< simple quote.
-        const std::vector<QuantLib::Handle<QuantLib::Quote> >& Parameters,                                  //!< parameters vector.
-        QuantLib::Real Shift=0.0001,                                                                        //!< shift.
-        QuantLib::SensitivityAnalysis sensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
-    );
+    //std::vector<std::vector<QuantLib::Real> >
+    //bucketAnalysisDelta2(
+    //    const std::vector<QuantLib::Handle<QuantLib::Quote> >& SimpleQuote,                                 //!< simple quote.
+    //    const std::vector<QuantLib::Handle<QuantLib::Quote> >& Parameters,                                  //!< parameters vector.
+    //    QuantLib::Real Shift=0.0001,                                                                        //!< shift.
+    //    QuantLib::SensitivityAnalysis SensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
+    //);
 }
 

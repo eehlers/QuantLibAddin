@@ -24,7 +24,7 @@
 #include <rp/conversions/getobjectvector.hpp>
 #include <qlo/conversions/conversions.hpp>
 #include <qlo/conversions/coercehandle.hpp>
-//#include <qlo/conversions/coercelibrarydifferent.hpp>
+#include <qlo/conversions/coercelibrarydifferent.hpp>
 #include <qlo/conversions/coercelibrarysame.hpp>
 #include <qlo/conversions/coerceobject.hpp>
 #include <qlo/conversions/coercequote.hpp>

@@ -781,6 +781,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_quotes.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_quotes.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_timeseries.cpp"
 					>
 				</File>
@@ -805,6 +813,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_quotes.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_quotes.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_timeseries.cpp"
 					>
 				</File>
@@ -823,6 +839,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_indexes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_quotes.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_quotes.hpp"
 				>
 			</File>
 			<File

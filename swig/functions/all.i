@@ -6,7 +6,7 @@
 //%include couponvectors.i
 //%include credit.i
 %include date.i
-//%include daycounters.i
+%include daycounters.i
 //%include defaultbasket.i
 //%include defaulttermstructures.i
 //%include exercise.i

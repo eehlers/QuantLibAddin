@@ -84,6 +84,21 @@ QL_OBJECT_WRAPPER(TimeSeriesDef)
 //QL_OBJECT_WRAPPER(DefaultEventSet)
 //QL_OBJECT_WRAPPER(CreditDefaultSwap)
 
+%typemap(rp_tm_xxx_rp_get) QuantLib::Quote %{
+        RP_GET_REFERENCE(xxx, objectID, QuantLibAddin::Quote, QuantLib::Quote);
+%}
+
+%define QUANTLIB_GET_QUOTE(T_ADDIN,T_LIB...)
+%typemap(rp_tm_xxx_rp_get) T_LIB %{
+        boost::shared_ptr<T_LIB> xxx =
+            QuantLibAddin::getQuote<T_ADDIN, T_LIB>(objectID);
+%}
+%enddef
+
+QUANTLIB_GET_QUOTE(QuantLibAddin::SimpleQuote, QuantLib::SimpleQuote)
+QUANTLIB_GET_QUOTE(QuantLibAddin::FuturesConvAdjustmentQuote, QuantLib::FuturesConvAdjustmentQuote)
+QUANTLIB_GET_QUOTE(QuantLibAddin::LastFixingQuote, QuantLib::LastFixingQuote)
+
 %define QUANTLIB_HANDLE(T_ADDIN,T_LIB...)
 
 %typemap(rp_tm_xll_argf) QuantLib::Handle<T_LIB> & "$1_name_handle";
@@ -104,6 +119,13 @@ QL_OBJECT_WRAPPER(TimeSeriesDef)
 QUANTLIB_HANDLE(T_ADDIN,T_LIB)
 %typemap(rp_tm_vob_parm) QuantLib::Handle<T_LIB> & "const reposit::property_t&";
 %typemap(rp_tm_vob_mbvr) QuantLib::Handle<T_LIB> & "reposit::property_t $1_name_";
+%enddef
+
+%define QUANTLIB_QUOTE(T_ADDIN,T_LIB...)
+%typemap(rp_tm_xxx_rp_get) QuantLib::SimpleQuote %{
+        boost::shared_ptr<QuantLib::SimpleQuote> xxx =
+            QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::SimpleQuote> >()(objectID);
+%}
 %enddef
 
 //// QuantLib Handles.

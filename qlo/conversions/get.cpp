@@ -44,26 +44,21 @@ QuantLib::Period QuantLibAddin::Get<std::string, QuantLib::Period>::operator()(c
     }
     return ret;
 }
+
 template <class QuantLibAddinQuote, class QuantLibQuote>
-boost::shared_ptr<QuantLibQuote> getQuote(const std::string &in) {
+boost::shared_ptr<QuantLibQuote> QuantLibAddin::getQuote(const std::string &in) {
     RP_GET_OBJECT(objectId, in, reposit::Object)
     return QuantLibAddin::CoerceQuote<QuantLibAddinQuote, QuantLibQuote>()(objectId);
 }
 
-boost::shared_ptr<QuantLib::SimpleQuote>
-QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::SimpleQuote> >::operator()(const std::string &in) {
-    return getQuote<QuantLibAddin::SimpleQuote, QuantLib::SimpleQuote>(in);
-}
+template boost::shared_ptr<QuantLib::SimpleQuote>
+QuantLibAddin::getQuote<QuantLibAddin::SimpleQuote, QuantLib::SimpleQuote>(const std::string &);
 
-boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote>
-QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote> >::operator()(const std::string &in) {
-    return getQuote<QuantLibAddin::FuturesConvAdjustmentQuote, QuantLib::FuturesConvAdjustmentQuote>(in);
-}
+template boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote>
+QuantLibAddin::getQuote<QuantLibAddin::FuturesConvAdjustmentQuote, QuantLib::FuturesConvAdjustmentQuote>(const std::string &);
 
-boost::shared_ptr<QuantLib::LastFixingQuote>
-QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::LastFixingQuote> >::operator()(const std::string &in) {
-    return getQuote<QuantLibAddin::LastFixingQuote, QuantLib::LastFixingQuote>(in);
-}
+template boost::shared_ptr<QuantLib::LastFixingQuote>
+QuantLibAddin::getQuote<QuantLibAddin::LastFixingQuote, QuantLib::LastFixingQuote>(const std::string &);
 
 QuantLib::Handle<QuantLib::YieldTermStructure>
 QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >::operator()(

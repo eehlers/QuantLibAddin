@@ -46,20 +46,8 @@ namespace QuantLibAddin {
         QuantLib::Period operator()(const std::string&);
     };
 
-    template<> class Get<std::string, boost::shared_ptr<QuantLib::SimpleQuote> > {
-    public:
-        boost::shared_ptr<QuantLib::SimpleQuote> operator()(const std::string&);
-    };
-
-    template<> class Get<std::string, boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote> > {
-    public:
-        boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote> operator()(const std::string&);
-    };
-
-    template<> class Get<std::string, boost::shared_ptr<QuantLib::LastFixingQuote> > {
-    public:
-        boost::shared_ptr<QuantLib::LastFixingQuote> operator()(const std::string&);
-    };
+    template <class QuantLibAddinQuote, class QuantLibQuote>
+    boost::shared_ptr<QuantLibQuote> getQuote(const std::string &in);
 
     template<> class Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> > {
     public:

@@ -5,25 +5,6 @@
 
 // rp_tm_xxx_rp_get:  Retrieve an object from the repository.
 
-%typemap(rp_tm_xxx_rp_get) QuantLib::Quote %{
-        RP_GET_REFERENCE(xxx, objectID, QuantLibAddin::Quote, QuantLib::Quote);
-%}
-
-%typemap(rp_tm_xxx_rp_get) QuantLib::SimpleQuote %{
-        boost::shared_ptr<QuantLib::SimpleQuote> xxx =
-            QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::SimpleQuote> >()(objectID);
-%}
-
-%typemap(rp_tm_xxx_rp_get) QuantLib::FuturesConvAdjustmentQuote %{
-        boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote> xxx =
-            QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote> >()(objectID);
-%}
-
-%typemap(rp_tm_xxx_rp_get) QuantLib::LastFixingQuote %{
-        boost::shared_ptr<QuantLib::LastFixingQuote> xxx =
-            QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::LastFixingQuote> >()(objectID);
-%}
-
 //*****************************************************************************
 // rp_tm_lib_* - typemaps for Library Objects
 //*****************************************************************************

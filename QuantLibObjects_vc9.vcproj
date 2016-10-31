@@ -773,6 +773,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_handles.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_handles.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_indexes.cpp"
 					>
 				</File>
@@ -805,6 +813,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_handles.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_handles.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_indexes.cpp"
 					>
 				</File>
@@ -833,6 +849,14 @@
 		<Filter
 			Name="valueobjects"
 			>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_handles.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_handles.hpp"
+				>
+			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_indexes.cpp"
 				>

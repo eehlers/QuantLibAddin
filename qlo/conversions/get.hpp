@@ -24,10 +24,6 @@
 
 namespace QuantLib {
     class Period;
-    class Quote;
-    class SimpleQuote;
-    class FuturesConvAdjustmentQuote;
-    class LastFixingQuote;
     class YieldTermStructure;
 }
 
@@ -49,12 +45,17 @@ namespace QuantLibAddin {
     template <class QuantLibAddinQuote, class QuantLibQuote>
     boost::shared_ptr<QuantLibQuote> getQuote(const std::string &in);
 
-    template<> class Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> > {
-    public:
-        QuantLib::Handle<QuantLib::YieldTermStructure> operator()(
-            const std::string&,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& = QuantLib::Handle<QuantLib::YieldTermStructure>());
-    };
+    template <class QuantLibAddinYts, class QuantLibYts>
+    boost::shared_ptr<QuantLibYts> getYieldTermStructure(const std::string &in);
+
+    QuantLib::Handle<QuantLib::YieldTermStructure> getYieldTermStructureHandle(
+        const std::string &in
+    );
+
+    QuantLib::Handle<QuantLib::YieldTermStructure> getYieldTermStructureHandle(
+        const std::string &in,
+        const QuantLib::Handle<QuantLib::YieldTermStructure> &defaultValue
+    );
 }
 
 #endif

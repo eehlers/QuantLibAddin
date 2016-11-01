@@ -32,6 +32,7 @@
 
 %typemap(rp_tm_vob_parm) QuantLib::Date & "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Date > & "const std::vector<reposit::property_t>&";
+%typemap(rp_tm_vob_parm) std::vector<QuantLib::Handle<QuantLib::Quote > > & "const std::vector<reposit::property_t>&";
 
 // HPP
 
@@ -39,6 +40,7 @@
 
 %typemap(rp_tm_vob_mbvr) QuantLib::Date & "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Date > & "std::vector<reposit::property_t> $1_name_";
+%typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Handle<QuantLib::Quote > > & "std::vector<reposit::property_t> $1_name_";
 
 // rp_tm_vob_srmv - code to serialize a Value Object member variable (C)
 
@@ -52,6 +54,7 @@
 
 %typemap(rp_tm_vob_cnvt) QuantLib::Date & "value";
 %typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Date> & "reposit::vector::convert<reposit::property_t>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & "reposit::vector::convert<reposit::property_t>(value, nameUpper)";
 
 //*****************************************************************************
 // rp_tm_scr_* - typemaps for Serialization - Create
@@ -102,8 +105,15 @@
     std::string $1_name_str =
         reposit::convert<std::string>(valueObject->getProperty("$1_name"));
     valueObject->processPrecedentID($1_name_str);
-    QuantLib::Handle<QuantLib::YieldTermStructure> $1_name =
-        QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >()($1_name_str);
+    QuantLib::Handle<QuantLib::YieldTermStructure> $1_name = QuantLibAddin::getYieldTermStructureHandle($1_name_str);
+%}
+
+%typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & %{
+    std::vector<reposit::property_t> $1_name_vec =
+        reposit::vector::convert<reposit::property_t>(valueObject->getProperty("$1_name"), "$1_name");
+    valueObject->processPrecedentID($1_name_vec);
+    std::vector<QuantLib::Handle<QuantLib::Quote> > $1_name =
+        reposit::vector::convert<QuantLib::Handle<QuantLib::Quote> >($1_name_vec, "$1_name");
 %}
 
 //*****************************************************************************
@@ -166,26 +176,9 @@
             reposit::ConvertOper(*$1_name));
 %}
 
-%typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
-        std::string $1_name_vo = reposit::convert<std::string>(
-            reposit::ConvertOper(*$1_name), "$1_name", "");
-        QuantLib::Handle<QuantLib::YieldTermStructure> $1_nameCoerce =
-            QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >()($1_name_vo);
-%}
-
-%typemap(rp_tm_xll_cnvt2) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
-        std::string $1_name_vo = reposit::convert<std::string>(
-            reposit::ConvertOper(*$1_name), "$1_name", "");
-        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle =
-            QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >()($1_name_vo, $rp_value);
-%}
-
-%typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::Quote> & %{
-        reposit::property_t $1_name_cnv = reposit::convert<reposit::property_t>(
-            reposit::ConvertOper(*$1_name));
-        QuantLib::Handle<QuantLib::Quote> $1_name_handle = 
-            reposit::convert<QuantLib::Handle<QuantLib::Quote> >(
-                reposit::ConvertOper(*$1_name), "$1_name");
+%typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Date> %{
+        std::vector<QuantLib::Date> $1_name_vec =
+            reposit::operToVector<QuantLib::Date>(*$1_name, "$1_name");
 %}
 
 %typemap(rp_tm_xll_cnvt) std::vector<QuantLib::Date> & %{
@@ -252,14 +245,18 @@
         return &xRet;
 %}
 
+%typemap(rp_tm_xll_rtst) std::vector<QuantLib::Date> & %{
+        std::vector<long> returnValVec = QuantLibAddin::libraryToVector(returnValue);
+        static OPER xRet;
+        reposit::vectorToOper(returnValVec, xRet);
+        return &xRet;
+%}
+
 // rp_tm_xll_cdrt - code to register the return type with Excel
 
 %typemap(rp_tm_xll_cdrt) QuantLib::Date "N";
 
 // rp_tm_xll_code - code to register the parameter with Excel
-
-%typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::Quote> & "P";
-%typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::SimpleQuote> const & "C";
 
 %typemap(rp_tm_xll_code) QuantLib::Date & "P";
 

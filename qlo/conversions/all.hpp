@@ -28,7 +28,7 @@
 #include <qlo/conversions/coercelibrarysame.hpp>
 #include <qlo/conversions/coerceobject.hpp>
 #include <qlo/conversions/coercequote.hpp>
-////#include <qlo/conversions/coercetermstructure.hpp>
+#include <qlo/conversions/coercetermstructure.hpp>
 #include <qlo/conversions/convert.hpp>
 #include <qlo/conversions/get.hpp>
 

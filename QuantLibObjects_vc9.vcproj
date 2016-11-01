@@ -797,6 +797,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_termstructures.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_termstructures.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_timeseries.cpp"
 					>
 				</File>
@@ -837,6 +845,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_termstructures.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_termstructures.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_timeseries.cpp"
 					>
 				</File>
@@ -871,6 +887,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_quotes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_termstructures.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_termstructures.hpp"
 				>
 			</File>
 			<File

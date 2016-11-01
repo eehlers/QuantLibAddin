@@ -18,9 +18,6 @@
 #include <ql/termstructures/interpolatedcurve.hpp>
 //#include <qlo/objects/termstructures/yieldtermstructures.hpp>
 
-// FIXME get rid of this:
-using namespace QuantLib;
-
 namespace QuantLibAddin {
 
     // BEGIN typemap rp_tm_lib_cls

@@ -28,6 +28,15 @@
 #include <ql/quotes/all.hpp>
 #include <boost/algorithm/string/case_conv.hpp>
 
+namespace QuantLib {
+    class Quote;
+    class SimpleQuote;
+    class FuturesConvAdjustmentQuote;
+    class LastFixingQuote;
+    class TermStructure;
+    class DefaultProbabilityTermStructure;
+}
+
 QuantLib::Period QuantLibAddin::Get<std::string, QuantLib::Period>::operator()(const std::string &in) {
     // This was the functionality in the old build:
     //ret = QuantLib::PeriodParser::parse(in);
@@ -60,13 +69,41 @@ QuantLibAddin::getQuote<QuantLibAddin::FuturesConvAdjustmentQuote, QuantLib::Fut
 template boost::shared_ptr<QuantLib::LastFixingQuote>
 QuantLibAddin::getQuote<QuantLibAddin::LastFixingQuote, QuantLib::LastFixingQuote>(const std::string &);
 
-QuantLib::Handle<QuantLib::YieldTermStructure>
-QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >::operator()(
+template <class QuantLibAddinYts, class QuantLibYts>
+boost::shared_ptr<QuantLibYts> QuantLibAddin::getYieldTermStructure(const std::string &in) {
+    RP_GET_OBJECT(objectID, in, reposit::Object)
+    return QuantLibAddin::CoerceTermStructure<QuantLibAddinYts, QuantLibYts>()(objectID);
+}
+
+template boost::shared_ptr<QuantLib::TermStructure>
+QuantLibAddin::getYieldTermStructure<QuantLibAddin::TermStructure, QuantLib::TermStructure>(const std::string&);
+
+template boost::shared_ptr<QuantLib::YieldTermStructure>
+QuantLibAddin::getYieldTermStructure<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure>(const std::string&);
+
+template boost::shared_ptr<QuantLib::DefaultProbabilityTermStructure>
+QuantLibAddin::getYieldTermStructure<QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure>(const std::string&);
+
+//QuantLib::Handle<QuantLib::YieldTermStructure>
+//QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >::operator()(
+//    const std::string &in,
+//    const QuantLib::Handle<QuantLib::YieldTermStructure> &defaultValue) {
+//    RP_GET_OBJECT_DEFAULT(objectId, in, reposit::Object)
+//    return QuantLibAddin::CoerceHandle<
+//        QuantLibAddin::YieldTermStructure,
+//        QuantLib::YieldTermStructure>()(
+//            objectId, defaultValue);
+//}
+
+QuantLib::Handle<QuantLib::YieldTermStructure> QuantLibAddin::getYieldTermStructureHandle(
+    const std::string &in) {
+    RP_GET_OBJECT(objectId, in, reposit::Object)
+    return QuantLibAddin::CoerceHandle<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure>()(objectId);            
+}
+
+QuantLib::Handle<QuantLib::YieldTermStructure> QuantLibAddin::getYieldTermStructureHandle(
     const std::string &in,
     const QuantLib::Handle<QuantLib::YieldTermStructure> &defaultValue) {
     RP_GET_OBJECT_DEFAULT(objectId, in, reposit::Object)
-    return QuantLibAddin::CoerceHandle<
-        QuantLibAddin::YieldTermStructure,
-        QuantLib::YieldTermStructure>()(
-            objectId, defaultValue);
+    return QuantLibAddin::CoerceHandle<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure>()(objectId, defaultValue);            
 }

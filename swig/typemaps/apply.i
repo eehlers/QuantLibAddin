@@ -35,9 +35,18 @@ ENUMERATED_CLASS(QuantLib::Calendar)
 ENUMERATED_CLASS(QuantLib::DayCounter)
 
 %define QL_OBJECT_WRAPPER(T...)
+
 namespace QuantLib {
     class T;
 }
+
+%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLib::T> > & %{
+        std::vector<std::string> $1_name_vec =
+            reposit::operToVector<std::string>(*$1_name, "$1_name");
+        std::vector<boost::shared_ptr<QuantLib::T> > $1_name_vec2 =
+            reposit::getLibraryObjectVector<QuantLibAddin::T, QuantLib::T>($1_name_vec);
+%}
+
 OBJECT_WRAPPER(QuantLibAddin::T, QuantLib::T)
 %enddef
 
@@ -63,7 +72,7 @@ QL_OBJECT_WRAPPER(ForwardSpreadedTermStructure)
 //QL_OBJECT_WRAPPER(G2)
 //QL_OBJECT_WRAPPER(GeneralizedBlackScholesProcess)
 QL_OBJECT_WRAPPER(ImpliedTermStructure)
-//QL_OBJECT_WRAPPER(Instrument)
+QL_OBJECT_WRAPPER(Instrument)
 //QL_OBJECT_WRAPPER(InterpolatedYieldCurve)
 //QL_OBJECT_WRAPPER(Issuer)
 //QL_OBJECT_WRAPPER(OneFactorAffineModel)

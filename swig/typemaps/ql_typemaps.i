@@ -242,20 +242,6 @@
             reposit::getObjectVector<QuantLibAddin::RateHelper>(z);
 %}
 
-%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLib::RateHelper> > & %{
-        std::vector<std::string> $1_name_vec =
-            reposit::operToVector<std::string>(*$1_name, "$1_name");
-        std::vector<boost::shared_ptr<QuantLib::RateHelper> > $1_name_vec2 =
-            reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);
-%}
-
-%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLib::Instrument> > & %{
-        std::vector<std::string> $1_name_vec =
-            reposit::operToVector<std::string>(*$1_name, "$1_name");
-        std::vector<boost::shared_ptr<QuantLib::Instrument> > $1_name_vec2 =
-            reposit::getLibraryObjectVector<QuantLibAddin::Instrument, QuantLib::Instrument>($1_name_vec);
-%}
-
 %typemap(rp_tm_xll_cnvt) std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > & %{
         std::vector<std::vector<reposit::property_t> > $1_name_vec =
             reposit::operToMatrix<reposit::property_t>(*$1_name, "$1_name");

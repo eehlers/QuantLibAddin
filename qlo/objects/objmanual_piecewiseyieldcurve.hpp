@@ -23,6 +23,7 @@
 #define qla_piecewiseyieldcurve_hpp
 
 #include <qlo/objects/termstructures/yieldtermstructures.hpp>
+#include <qlo/objects/objmanual_ratehelpers.hpp>
 
 namespace QuantLibAddin {
 

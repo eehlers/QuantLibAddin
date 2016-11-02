@@ -33,6 +33,7 @@
 %typemap(rp_tm_vob_parm) QuantLib::Date "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) QuantLib::Date & "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Date > & "const std::vector<reposit::property_t>&";
+%typemap(rp_tm_vob_parm) std::vector<boost::shared_ptr<QuantLib::RateHelper > > & "const std::vector<std::string>&";
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Handle<QuantLib::Quote > > & "const std::vector<reposit::property_t>&";
 
 // HPP
@@ -42,6 +43,7 @@
 %typemap(rp_tm_vob_mbvr) QuantLib::Date "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) QuantLib::Date & "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Date > & "std::vector<reposit::property_t> $1_name_";
+%typemap(rp_tm_vob_mbvr) std::vector<boost::shared_ptr<QuantLib::RateHelper > > & "std::vector<std::string> $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Handle<QuantLib::Quote > > & "std::vector<reposit::property_t> $1_name_";
 
 // rp_tm_vob_srmv - code to serialize a Value Object member variable (C)
@@ -57,7 +59,8 @@
 %typemap(rp_tm_vob_cnvt) QuantLib::Date "value";
 %typemap(rp_tm_vob_cnvt) QuantLib::Date & "value";
 %typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Date> & "reposit::vector::convert<reposit::property_t>(value, nameUpper)";
-%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & "reposit::vector::convert<reposit::property_t>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<boost::shared_ptr<QuantLib::RateHelper> > & "reposit::vector::convert<std::string>(value, nameUpper)";
+%typemap(rp_tm_vob_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > & "reposit::vector::convert<reposit::property_t>(value, nameUpper)";
 
 //*****************************************************************************
 // rp_tm_scr_* - typemaps for Serialization - Create
@@ -101,6 +104,16 @@
         reposit::vector::convert<QuantLib::Date>($1_name_vec, "$1_name");
 %}
 
+%typemap(rp_tm_scr_cnvt) std::vector<boost::shared_ptr<QuantLib::RateHelper> > & %{
+    std::vector<std::string> $1_name_vec =
+        reposit::vector::convert<std::string>(valueObject->getProperty("$1_name"), "$1_name");
+    for (std::vector<std::string>::const_iterator i = $1_name_vec.begin();
+            i != $1_name_vec.end(); ++i)
+        valueObject->processPrecedentID(*i);
+    std::vector<boost::shared_ptr<QuantLib::RateHelper> > $1_name =
+        reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);
+%}
+
 %typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::Quote> & %{
     reposit::property_t $1_name_prop =
         valueObject->getProperty("$1_name");
@@ -117,7 +130,7 @@
     QuantLib::Handle<QuantLib::YieldTermStructure> $1_name = QuantLibAddin::getYieldTermStructureHandle($1_name_str);
 %}
 
-%typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > const & %{
+%typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > & %{
     std::vector<reposit::property_t> $1_name_vec =
         reposit::vector::convert<reposit::property_t>(valueObject->getProperty("$1_name"), "$1_name");
     valueObject->processPrecedentID($1_name_vec);
@@ -222,14 +235,21 @@
             reposit::operToVector<QuantLib::Date>(*$1_name, "$1_name");
 %}
 
-%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> > const & %{
+%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> > & %{
         std::vector<std::string> z =
             reposit::operToVector<std::string>(*$1_name, "$1_name");
         std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> > $1_name_vec =
             reposit::getObjectVector<QuantLibAddin::RateHelper>(z);
 %}
 
-%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLib::Instrument> > const & %{
+%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLib::RateHelper> > & %{
+        std::vector<std::string> $1_name_vec =
+            reposit::operToVector<std::string>(*$1_name, "$1_name");
+        std::vector<boost::shared_ptr<QuantLib::RateHelper> > $1_name_vec2 =
+            reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);
+%}
+
+%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLib::Instrument> > & %{
         std::vector<std::string> $1_name_vec =
             reposit::operToVector<std::string>(*$1_name, "$1_name");
         std::vector<boost::shared_ptr<QuantLib::Instrument> > $1_name_vec2 =
@@ -259,6 +279,7 @@
 %typemap(rp_tm_xll_argf) QuantLib::Date & "$1_name_cnv";
 %typemap(rp_tm_xll_argf) boost::shared_ptr<QuantLibAddin::RateHelper> & "$1_name_obj";
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Date> & "$1_name_vec2";
+%typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLib::RateHelper> > const & "$1_name_vec2";
 
 // rp_tm_xll_rtdc - declare variable to capture return value of Library function (F/M)
 
@@ -312,7 +333,7 @@
 // rp_tm_xll_code - code to register the parameter with Excel
 
 %typemap(rp_tm_xll_code) QuantLib::Date & "P";
-%typemap(rp_tm_xll_code) boost::shared_ptr<QuantLibAddin::RateHelper> const & "C";
+%typemap(rp_tm_xll_code) boost::shared_ptr<QuantLibAddin::RateHelper> & "C";
 
 // rp_tm_xll_loop - arguments to boost::bind object for a looping function (F/M)
 

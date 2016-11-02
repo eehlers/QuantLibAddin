@@ -797,6 +797,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_ratehelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_ratehelpers.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_termstructures.cpp"
 					>
 				</File>
@@ -845,6 +853,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_ratehelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_ratehelpers.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_termstructures.cpp"
 					>
 				</File>
@@ -887,6 +903,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_quotes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_ratehelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_ratehelpers.hpp"
 				>
 			</File>
 			<File
@@ -979,6 +1003,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\objmanual_quotes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_ratehelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_ratehelpers.hpp"
 				>
 			</File>
 			<File
@@ -1104,6 +1136,14 @@
 			<Filter
 				Name="termstructures"
 				>
+				<File
+					RelativePath=".\qlo\objects\termstructures\piecewiseyieldcurve.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\termstructures\piecewiseyieldcurve.hpp"
+					>
+				</File>
 				<File
 					RelativePath=".\qlo\objects\termstructures\yieldtermstructures.cpp"
 					>

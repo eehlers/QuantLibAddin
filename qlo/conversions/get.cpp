@@ -37,7 +37,7 @@ namespace QuantLib {
     class DefaultProbabilityTermStructure;
 }
 
-QuantLib::Period QuantLibAddin::Get<std::string, QuantLib::Period>::operator()(const std::string &in) {
+QuantLib::Period QuantLibAddin::getPeriod(const std::string &in) {
     // This was the functionality in the old build:
     //ret = QuantLib::PeriodParser::parse(in);
     //ret.normalize();

@@ -31,16 +31,7 @@ namespace QuantLib {
 
 namespace QuantLibAddin {
 
-    template <class In, class Out>
-    class Get {
-    public:
-        Out operator()(const In&);
-    };
-
-    template<> class Get<std::string, QuantLib::Period> {
-    public:
-        QuantLib::Period operator()(const std::string&);
-    };
+    QuantLib::Period getPeriod(const std::string &in);
 
     template <class QuantLibAddinQuote, class QuantLibQuote>
     boost::shared_ptr<QuantLibQuote> getQuote(const std::string &in);

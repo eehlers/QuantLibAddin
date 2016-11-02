@@ -10,9 +10,9 @@
 //// Enumerated types.
 //ENUMERATED_TYPE(QuantLib::DateGeneration::Rule)
 //ENUMERATED_TYPE(QuantLib::Duration::Type)
-//ENUMERATED_TYPE(QuantLib::Futures::Type)
+ENUMERATED_TYPE(QuantLib::Futures::Type)
 //ENUMERATED_TYPE(QuantLib::GFunctionFactory::YieldCurveModel)
-//ENUMERATED_TYPE(QuantLib::Pillar::Choice)
+ENUMERATED_TYPE(QuantLib::Pillar::Choice)
 //ENUMERATED_TYPE(QuantLib::Position::Type)
 //ENUMERATED_TYPE(QuantLib::Protection::Side)
 //ENUMERATED_TYPE(QuantLib::Seniority)
@@ -27,7 +27,7 @@ ENUMERATED_TYPE(QuantLib::Option::Type)
 ENUMERATED_TYPE(QuantLib::SensitivityAnalysis)
 ENUMERATED_TYPE(QuantLib::Weekday)
 
-//ENUMERATED_TYPE(QuantLibAddin::RateHelper::DepoInclusionCriteria)
+ENUMERATED_TYPE(QuantLibAddin::RateHelper::DepoInclusionCriteria)
 ENUMERATED_TYPE(QuantLibAddin::SwapIndex::FixingType)
 
 // Enumerated classes.
@@ -44,7 +44,7 @@ OBJECT_WRAPPER(QuantLibAddin::T, QuantLib::T)
 //// Data types of objects passed as function parameters to be retrieved from the repository
 //QL_OBJECT_WRAPPER(BaseModel)
 //QL_OBJECT_WRAPPER(Basket)
-//QL_OBJECT_WRAPPER(Bond)
+QL_OBJECT_WRAPPER(Bond)
 //QL_OBJECT_WRAPPER(CalibratedModel)
 //QL_OBJECT_WRAPPER(CalibrationHelper)
 //QL_OBJECT_WRAPPER(CmsCouponPricer)
@@ -68,8 +68,8 @@ QL_OBJECT_WRAPPER(ImpliedTermStructure)
 //QL_OBJECT_WRAPPER(Issuer)
 //QL_OBJECT_WRAPPER(OneFactorAffineModel)
 //QL_OBJECT_WRAPPER(PricingEngine)
-//QL_OBJECT_WRAPPER(RateHelper)
-//QL_OBJECT_WRAPPER(Schedule)
+QL_OBJECT_WRAPPER(RateHelper)
+QL_OBJECT_WRAPPER(Schedule)
 //QL_OBJECT_WRAPPER(ShortRateModel)
 //QL_OBJECT_WRAPPER(StrikedTypePayoff)
 //QL_OBJECT_WRAPPER(SwaptionHelper)
@@ -85,9 +85,18 @@ QL_OBJECT_WRAPPER(TermStructure)
 QL_OBJECT_WRAPPER(YieldTermStructure)
 QL_OBJECT_WRAPPER(TimeSeriesDef)
 
-%typemap(rp_tm_xxx_rp_get) QuantLib::Quote %{
-        RP_GET_REFERENCE(xxx, objectID, QuantLibAddin::Quote, QuantLib::Quote);
+// ctor in QLA namespace, member function in QL namespace
+
+%define QLA_GET_OBJECT(T_ADDIN,T_LIB...)
+%typemap(rp_tm_xxx_rp_get) T_LIB %{
+        RP_GET_REFERENCE(xxx, objectID, T_ADDIN, T_LIB);
 %}
+%enddef
+
+QLA_GET_OBJECT(QuantLibAddin::Quote, QuantLib::Quote)
+QLA_GET_OBJECT(QuantLibAddin::SwapRateHelper, QuantLib::SwapRateHelper)
+QLA_GET_OBJECT(QuantLibAddin::FxSwapRateHelper, QuantLib::FxSwapRateHelper)
+QLA_GET_OBJECT(QuantLibAddin::FuturesRateHelper, QuantLib::FuturesRateHelper)
 
 %define QUANTLIB_GET_QUOTE(T_ADDIN,T_LIB...)
 %typemap(rp_tm_xxx_rp_get) T_LIB %{

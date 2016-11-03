@@ -25,7 +25,7 @@
 //%include processes.i
 %include quotes.i
 %include ratehelpers.i
-//%include schedule.i
+%include schedule.i
 //%include settings.i
 //%include swap.i
 %include termstructures.i

@@ -173,6 +173,7 @@
 // rp_tm_xll_rtft - function return type (F/M)
 
 %typemap(rp_tm_xll_rtft) QuantLib::Date "long*";
+%typemap(rp_tm_xll_rtft) QuantLib::Date & "long*";
 
 // rp_tm_xll_parm - function parameters (F/C/M)
 
@@ -291,6 +292,12 @@
         return &returnValueXL;
 %}
 
+%typemap(rp_tm_xll_rtst) QuantLib::Date & %{
+        static long returnValueXL;
+        returnValueXL = static_cast<long>(QuantLibAddin::libraryToScalar(returnValue));
+        return &returnValueXL;
+%}
+
 %typemap(rp_tm_xll_rtst) std::vector<QuantLib::Real> %{
         std::vector<double> returnValVec = QuantLibAddin::libraryToVector(returnValue);
         static OPER xRet;
@@ -315,6 +322,7 @@
 // rp_tm_xll_cdrt - code to register the return type with Excel
 
 %typemap(rp_tm_xll_cdrt) QuantLib::Date "N";
+%typemap(rp_tm_xll_cdrt) QuantLib::Date & "N";
 
 // rp_tm_xll_code - code to register the parameter with Excel
 

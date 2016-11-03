@@ -8,7 +8,7 @@
 //%apply rp_tp_string { QuantLib::Leg & };
 
 //// Enumerated types.
-//ENUMERATED_TYPE(QuantLib::DateGeneration::Rule)
+ENUMERATED_TYPE(QuantLib::DateGeneration::Rule)
 //ENUMERATED_TYPE(QuantLib::Duration::Type)
 ENUMERATED_TYPE(QuantLib::Futures::Type)
 //ENUMERATED_TYPE(QuantLib::GFunctionFactory::YieldCurveModel)

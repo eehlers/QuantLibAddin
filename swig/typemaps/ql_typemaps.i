@@ -137,15 +137,6 @@
         reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);
 %}
 
-%typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::Quote> & %{
-    reposit::property_t $1_name_prop =
-        valueObject->getProperty("$1_name");
-    valueObject->processPrecedentID($1_name_prop);
-    QuantLib::Handle<QuantLib::Quote> $1_name =
-        reposit::convert<QuantLib::Handle<QuantLib::Quote> >(
-            $1_name_prop, "$1_name");
-%}
-
 %typemap(rp_tm_scr_cnvt) std::vector<QuantLib::Handle<QuantLib::Quote> > & %{
     std::vector<reposit::property_t> $1_name_vec =
         reposit::vector::convert<reposit::property_t>(valueObject->getProperty("$1_name"), "$1_name");

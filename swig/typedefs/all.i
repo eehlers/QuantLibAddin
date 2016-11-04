@@ -62,6 +62,9 @@ namespace QuantLib {
     class Calendar;
     class Currency;
     class InterestRate;
+    class Matrix;
+    // DELETEME - temp fix for bonds which depend on instruments which is not yet implemented.
+    class Instrument;
 
     class YieldTermStructure;
 

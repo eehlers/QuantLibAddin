@@ -96,16 +96,24 @@ QL_OBJECT_WRAPPER(TimeSeriesDef)
 
 // ctor in QLA namespace, member function in QL namespace
 
-%define QLA_GET_OBJECT(T_ADDIN,T_LIB...)
-%typemap(rp_tm_xxx_rp_get) T_LIB %{
-        RP_GET_REFERENCE(xxx, objectID, T_ADDIN, T_LIB);
+%define QLA_GET_OBJECT(T...)
+%typemap(rp_tm_xxx_rp_get) QuantLib::T %{
+        RP_GET_REFERENCE(xxx, objectID, QuantLibAddin::T, QuantLib::T);
 %}
 %enddef
 
-QLA_GET_OBJECT(QuantLibAddin::Quote, QuantLib::Quote)
-QLA_GET_OBJECT(QuantLibAddin::SwapRateHelper, QuantLib::SwapRateHelper)
-QLA_GET_OBJECT(QuantLibAddin::FxSwapRateHelper, QuantLib::FxSwapRateHelper)
-QLA_GET_OBJECT(QuantLibAddin::FuturesRateHelper, QuantLib::FuturesRateHelper)
+QLA_GET_OBJECT(Quote)
+QLA_GET_OBJECT(SwapRateHelper)
+QLA_GET_OBJECT(FxSwapRateHelper)
+QLA_GET_OBJECT(FuturesRateHelper)
+QLA_GET_OBJECT(BlackVolTermStructure)
+QLA_GET_OBJECT(BlackConstantVol)
+QLA_GET_OBJECT(BlackVarianceSurface)
+QLA_GET_OBJECT(BlackAtmVolCurve)
+QLA_GET_OBJECT(AbcdAtmVolCurve)
+QLA_GET_OBJECT(SabrVolSurface)
+QLA_GET_OBJECT(VolatilityTermStructure)
+QLA_GET_OBJECT(SabrVolSurface)
 
 %define QUANTLIB_GET_QUOTE(T_ADDIN,T_LIB...)
 %typemap(rp_tm_xxx_rp_get) T_LIB %{
@@ -131,21 +139,47 @@ QUANTLIB_GET_YTS(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::Defau
 
 %define QUANTLIB_HANDLE(T_ADDIN,T_LIB...)
 
+%typemap(rp_tm_scr_cnvt) QuantLib::Handle<T_LIB> & %{
+    std::string $1_name_str =
+        reposit::convert<std::string>(valueObject->getProperty("$1_name"));
+    valueObject->processPrecedentID($1_name_str);
+    QuantLib::Handle<T_LIB> $1_name = QuantLibAddin::getHandle<T_ADDIN, T_LIB>($1_name_str);
+%}
+
+%typemap(rp_tm_xll_cnvt) QuantLib::Handle<T_LIB> & %{
+        QuantLib::Handle<T_LIB> $1_name_handle =
+            QuantLibAddin::getHandle<T_ADDIN, T_LIB>($1_name);
+%}
+
+%typemap(rp_tm_xll_cnvt2) QuantLib::Handle<T_LIB> & %{
+        std::string $1_name_str = reposit::convert<std::string>(
+            reposit::ConvertOper(*$1_name), "$1_name", "");
+        QuantLib::Handle<T_LIB> $1_name_handle =
+            QuantLibAddin::getHandle<T_ADDIN, T_LIB>($1_name_str, $rp_value);
+%}
+
+%typemap(rp_tm_xll_argfv) QuantLib::Handle<T_LIB> & "$1_name";
+%typemap(rp_tm_xll_argfv2) QuantLib::Handle<T_LIB> & "$1_name_str";
 %typemap(rp_tm_xll_argf) QuantLib::Handle<T_LIB> & "$1_name_handle";
 %typemap(rp_tm_xll_argf2) QuantLib::Handle<T_LIB> & "$1_name_handle";
-%typemap(rp_tm_xll_argfv) QuantLib::Handle<T_LIB> & "$1_name_vo";
-%typemap(rp_tm_xll_argfv2) QuantLib::Handle<T_LIB> & "$1_name_vo";
-%typemap(rp_tm_xll_cnvt) QuantLib::Handle<T_LIB> & %{
-        RP_GET_REFERENCE($1_name_get, $1_name, T_ADDIN, T_LIB)
-        QuantLib::Handle<T_LIB> $1_name_handle =
-            QuantLib::Handle<T_LIB>($1_name_get);
-%}
 %typemap(rp_tm_vob_parm) QuantLib::Handle<T_LIB> & "const std::string &";
 %typemap(rp_tm_vob_mbvr) QuantLib::Handle<T_LIB> & "std::string $1_name_";
 %typemap(rp_tm_vob_cnvt) QuantLib::Handle<T_LIB> & "reposit::convert<std::string>(value)";
 
 %typemap(rp_tm_xll_code) QuantLib::Handle<T_LIB> & "C";
 %typemap(rp_tm_xll_parm) QuantLib::Handle<T_LIB> & "char*";
+
+%typemap(rp_tm_xll_rtft) QuantLib::Handle<T_LIB> & "char*";
+
+%typemap(rp_tm_xll_rtdc) QuantLib::Handle<T_LIB> & "std::string returnValue =";
+
+%typemap(rp_tm_xll_rtst) QuantLib::Handle<T_LIB> & %{
+        static char ret[XL_MAX_STR_LEN];
+        reposit::stringToChar(returnValue, ret);
+        return ret;
+%}
+
+%typemap(rp_tm_xll_cdrt) QuantLib::Handle<T_LIB> & "C";
 
 %enddef
 
@@ -169,10 +203,11 @@ QUANTLIB_HANDLE(T_ADDIN,T_LIB)
 
 //// QuantLib Handles.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
-//QUANTLIB_HANDLE(QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
+QUANTLIB_HANDLE(QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
 QUANTLIB_HANDLE_COERCEABLE(QuantLibAddin::Quote, QuantLib::Quote)
 QUANTLIB_HANDLE(QuantLibAddin::SimpleQuote, QuantLib::SimpleQuote)
 QUANTLIB_HANDLE(QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure)
+QUANTLIB_HANDLE(QuantLibAddin::BlackAtmVolCurve, QuantLib::BlackAtmVolCurve)
 //QUANTLIB_HANDLE(QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure)
 //QUANTLIB_HANDLE(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure)
 
@@ -180,8 +215,17 @@ QUANTLIB_HANDLE(QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure)
 
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Handle<QuantLib::Quote> > & "$1_name_vec2";
 
-%typemap(rp_tm_xll_argfv) QuantLib::Handle<QuantLib::YieldTermStructure> & "$1_name";
+//%typemap(rp_tm_xll_argfv) QuantLib::Handle<QuantLib::YieldTermStructure> & "$1_name";
 %typemap(rp_tm_xll_argfv) QuantLib::Handle< QuantLib::Quote > & "$1_name_cnv";
+
+%typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::Quote> & %{
+    reposit::property_t $1_name_prop =
+        valueObject->getProperty("$1_name");
+    valueObject->processPrecedentID($1_name_prop);
+    QuantLib::Handle<QuantLib::Quote> $1_name =
+        reposit::convert<QuantLib::Handle<QuantLib::Quote> >(
+            $1_name_prop, "$1_name");
+%}
 
 %typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::Quote> & %{
         reposit::property_t $1_name_cnv = reposit::convert<reposit::property_t>(
@@ -198,12 +242,12 @@ QUANTLIB_HANDLE(QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure)
             reposit::operToVector<QuantLib::Handle<QuantLib::Quote> >(*$1_name, "$1_name");
 %}
 
-%typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
-        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle = QuantLibAddin::getYieldTermStructureHandle($1_name);
-%}
+//%typemap(rp_tm_xll_cnvt) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
+//        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle = QuantLibAddin::getYieldTermStructureHandle($1_name);
+//%}
 
-%typemap(rp_tm_xll_cnvt2) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
-        std::string $1_name_vo = reposit::convert<std::string>(
-            reposit::ConvertOper(*$1_name), "$1_name", "");
-        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle = QuantLibAddin::getYieldTermStructureHandle($1_name_vo, $rp_value);
-%}
+//%typemap(rp_tm_xll_cnvt2) QuantLib::Handle<QuantLib::YieldTermStructure> & %{
+//        std::string $1_name_vo = reposit::convert<std::string>(
+//            reposit::ConvertOper(*$1_name), "$1_name", "");
+//        QuantLib::Handle<QuantLib::YieldTermStructure> $1_name_handle = QuantLibAddin::getYieldTermStructureHandle($1_name_vo, $rp_value);
+//%}

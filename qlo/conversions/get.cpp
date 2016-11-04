@@ -26,6 +26,8 @@
 #include <ql/utilities/dataparsers.hpp>
 #include <ql/time/period.hpp>
 #include <ql/quotes/all.hpp>
+#include <ql/experimental/volatility/blackatmvolcurve.hpp>
+#include <ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp>
 #include <boost/algorithm/string/case_conv.hpp>
 
 namespace QuantLib {
@@ -84,26 +86,26 @@ QuantLibAddin::getYieldTermStructure<QuantLibAddin::YieldTermStructure, QuantLib
 template boost::shared_ptr<QuantLib::DefaultProbabilityTermStructure>
 QuantLibAddin::getYieldTermStructure<QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure>(const std::string&);
 
-//QuantLib::Handle<QuantLib::YieldTermStructure>
-//QuantLibAddin::Get<std::string, QuantLib::Handle<QuantLib::YieldTermStructure> >::operator()(
-//    const std::string &in,
-//    const QuantLib::Handle<QuantLib::YieldTermStructure> &defaultValue) {
-//    RP_GET_OBJECT_DEFAULT(objectId, in, reposit::Object)
-//    return QuantLibAddin::CoerceHandle<
-//        QuantLibAddin::YieldTermStructure,
-//        QuantLib::YieldTermStructure>()(
-//            objectId, defaultValue);
-//}
-
-QuantLib::Handle<QuantLib::YieldTermStructure> QuantLibAddin::getYieldTermStructureHandle(
+template <class QuantLibAddinHandle, class QuantLibHandle>
+QuantLib::Handle<QuantLibHandle> QuantLibAddin::getHandle(
     const std::string &in) {
     RP_GET_OBJECT(objectId, in, reposit::Object)
-    return QuantLibAddin::CoerceHandle<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure>()(objectId);            
+    return QuantLibAddin::CoerceHandle<QuantLibAddinHandle, QuantLibHandle>()(objectId);            
 }
 
-QuantLib::Handle<QuantLib::YieldTermStructure> QuantLibAddin::getYieldTermStructureHandle(
+template QuantLib::Handle<QuantLib::YieldTermStructure>
+QuantLibAddin::getHandle<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure>(const std::string&);
+
+template QuantLib::Handle<QuantLib::BlackAtmVolCurve>
+QuantLibAddin::getHandle<QuantLibAddin::BlackAtmVolCurve, QuantLib::BlackAtmVolCurve>(const std::string&);
+
+template <class QuantLibAddinHandle, class QuantLibHandle>
+QuantLib::Handle<QuantLibHandle> QuantLibAddin::getHandle(
     const std::string &in,
-    const QuantLib::Handle<QuantLib::YieldTermStructure> &defaultValue) {
+    const QuantLib::Handle<QuantLibHandle> &defaultValue) {
     RP_GET_OBJECT_DEFAULT(objectId, in, reposit::Object)
-    return QuantLibAddin::CoerceHandle<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure>()(objectId, defaultValue);            
+    return QuantLibAddin::CoerceHandle<QuantLibAddinHandle, QuantLibHandle>()(objectId, defaultValue);            
 }
+
+template QuantLib::Handle<QuantLib::YieldTermStructure>
+QuantLibAddin::getHandle<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure>(const std::string&, const QuantLib::Handle<QuantLib::YieldTermStructure>&);

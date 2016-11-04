@@ -836,6 +836,14 @@
 					RelativePath=".\qlo\serialization\create\create_timeseries.hpp"
 					>
 				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_volatilities.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_volatilities.hpp"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="register"
@@ -908,6 +916,14 @@
 					RelativePath=".\qlo\serialization\register\serialization_timeseries.hpp"
 					>
 				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_volatilities.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_volatilities.hpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
@@ -975,6 +991,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_timeseries.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_volatilities.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_volatilities.hpp"
 				>
 			</File>
 		</Filter>
@@ -1078,6 +1102,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\objects\objmanual_settings.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_settings.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\objects\objmanual_termstructures.hpp"
 				>
 			</File>
@@ -1095,6 +1127,10 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\objmanual_utilities.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_volatilities.hpp"
 				>
 			</File>
 			<Filter
@@ -1270,6 +1306,58 @@
 				</File>
 				<File
 					RelativePath=".\qlo\objects\instruments\creditdefaultswap.hpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="volatilities"
+				>
+				<File
+					RelativePath=".\qlo\objects\volatilities\capletvolstructure.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\capletvolstructure.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\cmsmarket.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\cmsmarket.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\cmsmarketcalibration.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\cmsmarketcalibration.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\smilesection.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\smilesection.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\swaptionvolstructure.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\swaptionvolstructure.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\volatilities.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\volatilities\volatilities.hpp"
 					>
 				</File>
 			</Filter>

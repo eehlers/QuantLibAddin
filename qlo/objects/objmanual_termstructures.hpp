@@ -17,28 +17,38 @@
 #include <ql/termstructures/yield/forwardcurve.hpp>
 #include <ql/termstructures/interpolatedcurve.hpp>
 //#include <qlo/objects/termstructures/yieldtermstructures.hpp>
+//#include <qlo/extrapolator.hpp>
+
+namespace QuantLib {
+    class OptionletVolatilityStructure;
+    class CapFloorTermVolatilityStructure;
+    class SwaptionVolatilityStructure;
+    class DefaultProbabilityTermStructure;
+    class InflationTermStructure;
+    class VolatilityTermStructure;
+    class YieldTermStructure;
+}
 
 namespace QuantLibAddin {
 
-    // BEGIN typemap rp_tm_lib_cls
+    // FIXME move this into extrapolator.hpp
     RP_LIB_CLASS(Extrapolator, QuantLib::Extrapolator);
-    // END   typemap rp_tm_lib_cls
 
     RP_OBJ_CLASS(TermStructure, Extrapolator);
     RP_OBJ_CLASS(YieldTermStructure, TermStructure);
     RP_OBJ_CLASS(DefaultProbabilityTermStructure, TermStructure);
     RP_OBJ_CLASS(CorrelationTermStructure, TermStructure);
-    //RP_OBJ_CLASS(InflationTermStructure, TermStructure);
+    RP_OBJ_CLASS(InflationTermStructure, TermStructure);
     RP_OBJ_CLASS(VolatilityTermStructure, TermStructure);
-    //RP_OBJ_CLASS(BlackAtmVolCurve, VolatilityTermStructure);
-    //RP_OBJ_CLASS(BlackVolSurface, BlackAtmVolCurve);
-    //RP_OBJ_CLASS(InterestRateVolSurface, BlackVolSurface);
-    //RP_OBJ_CLASS(BlackVolTermStructure, VolatilityTermStructure);
+    RP_OBJ_CLASS(BlackAtmVolCurve, VolatilityTermStructure);
+    RP_OBJ_CLASS(BlackVolSurface, BlackAtmVolCurve);
+    RP_OBJ_CLASS(InterestRateVolSurface, BlackVolSurface);
+    RP_OBJ_CLASS(BlackVolTermStructure, VolatilityTermStructure);
     RP_OBJ_CLASS(SwaptionVolatilityStructure, VolatilityTermStructure);
-    //RP_OBJ_CLASS(SwaptionVolatilityDiscrete, SwaptionVolatilityStructure);
-    //RP_OBJ_CLASS(SwaptionVolatilityCube, SwaptionVolatilityDiscrete);
-    //RP_OBJ_CLASS(OptionletVolatilityStructure, VolatilityTermStructure);
-    //RP_OBJ_CLASS(CapFloorTermVolatilityStructure, VolatilityTermStructure);
+    RP_OBJ_CLASS(SwaptionVolatilityDiscrete, SwaptionVolatilityStructure);
+    RP_OBJ_CLASS(SwaptionVolatilityCube, SwaptionVolatilityDiscrete);
+    RP_OBJ_CLASS(OptionletVolatilityStructure, VolatilityTermStructure);
+    RP_OBJ_CLASS(CapFloorTermVolatilityStructure, VolatilityTermStructure);
 
     class DiscountCurve : 
         public YieldTermStructure {

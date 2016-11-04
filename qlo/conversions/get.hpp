@@ -24,7 +24,6 @@
 
 namespace QuantLib {
     class Period;
-    class YieldTermStructure;
 }
 
 #include <ql/handle.hpp>
@@ -39,13 +38,15 @@ namespace QuantLibAddin {
     template <class QuantLibAddinYts, class QuantLibYts>
     boost::shared_ptr<QuantLibYts> getYieldTermStructure(const std::string &in);
 
-    QuantLib::Handle<QuantLib::YieldTermStructure> getYieldTermStructureHandle(
+    template <class QuantLibAddinHandle, class QuantLibHandle>
+    QuantLib::Handle<QuantLibHandle> getHandle(
         const std::string &in
     );
 
-    QuantLib::Handle<QuantLib::YieldTermStructure> getYieldTermStructureHandle(
+    template <class QuantLibAddinHandle, class QuantLibHandle>
+    QuantLib::Handle<QuantLibHandle> getHandle(
         const std::string &in,
-        const QuantLib::Handle<QuantLib::YieldTermStructure> &defaultValue
+        const QuantLib::Handle<QuantLibHandle> &defaultValue
     );
 }
 

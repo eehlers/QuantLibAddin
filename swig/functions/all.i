@@ -26,11 +26,12 @@
 %include quotes.i
 %include ratehelpers.i
 %include schedule.i
-//%include settings.i
+// incomplete
+%include settings.i
 //%include swap.i
 %include termstructures.i
 %include timeseries.i
 %include utilities.i
 //%include vanillaswaps.i
-//%include volatilities.i
+%include volatilities.i
 

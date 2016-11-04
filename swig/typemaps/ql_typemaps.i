@@ -289,14 +289,14 @@
             reposit::operToMatrix<QuantLib::Handle<QuantLib::Quote> >(*$1_name, "$1_name");
 %}
 
-// rp_tm_xll_argfv - arguments to the Value Object constructor (C)
+// rp_tm_xll_argv - arguments to the Value Object constructor (C)
 
-%typemap(rp_tm_xll_argfv) QuantLib::Date "$1_name_cnv2";
-%typemap(rp_tm_xll_argfv) QuantLib::Date & "$1_name_cnv2";
-%typemap(rp_tm_xll_argfv) QuantLib::Matrix & "$1_name_vec";
+%typemap(rp_tm_xll_argv) QuantLib::Date "$1_name_cnv2";
+%typemap(rp_tm_xll_argv) QuantLib::Date & "$1_name_cnv2";
+%typemap(rp_tm_xll_argv) QuantLib::Matrix & "$1_name_vec";
 
-%typemap(rp_tm_xll_argfv2) QuantLib::Date "$1_name_cnv2";
-%typemap(rp_tm_xll_argfv2) QuantLib::Date & "$1_name_cnv2";
+%typemap(rp_tm_xll_argv2) QuantLib::Date "$1_name_cnv2";
+%typemap(rp_tm_xll_argv2) QuantLib::Date & "$1_name_cnv2";
 
 // rp_tm_xll_argf - arguments to the underlying Library function (F/C/M)
 

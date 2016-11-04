@@ -158,8 +158,8 @@ QUANTLIB_GET_YTS(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::Defau
             QuantLibAddin::getHandle<T_ADDIN, T_LIB>($1_name_str, $rp_value);
 %}
 
-%typemap(rp_tm_xll_argfv) QuantLib::Handle<T_LIB> & "$1_name";
-%typemap(rp_tm_xll_argfv2) QuantLib::Handle<T_LIB> & "$1_name_str";
+%typemap(rp_tm_xll_argv) QuantLib::Handle<T_LIB> & "$1_name";
+%typemap(rp_tm_xll_argv2) QuantLib::Handle<T_LIB> & "$1_name_str";
 %typemap(rp_tm_xll_argf) QuantLib::Handle<T_LIB> & "$1_name_handle";
 %typemap(rp_tm_xll_argf2) QuantLib::Handle<T_LIB> & "$1_name_handle";
 %typemap(rp_tm_vob_parm) QuantLib::Handle<T_LIB> & "const std::string &";
@@ -215,8 +215,8 @@ QUANTLIB_HANDLE(QuantLibAddin::BlackAtmVolCurve, QuantLib::BlackAtmVolCurve)
 
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Handle<QuantLib::Quote> > & "$1_name_vec2";
 
-//%typemap(rp_tm_xll_argfv) QuantLib::Handle<QuantLib::YieldTermStructure> & "$1_name";
-%typemap(rp_tm_xll_argfv) QuantLib::Handle< QuantLib::Quote > & "$1_name_cnv";
+//%typemap(rp_tm_xll_argv) QuantLib::Handle<QuantLib::YieldTermStructure> & "$1_name";
+%typemap(rp_tm_xll_argv) QuantLib::Handle< QuantLib::Quote > & "$1_name_cnv";
 
 %typemap(rp_tm_scr_cnvt) QuantLib::Handle<QuantLib::Quote> & %{
     reposit::property_t $1_name_prop =

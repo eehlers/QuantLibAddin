@@ -194,13 +194,6 @@ QUANTLIB_HANDLE(T_ADDIN,T_LIB)
 
 %enddef
 
-%define QUANTLIB_QUOTE(T_ADDIN,T_LIB...)
-%typemap(rp_tm_xxx_rp_get) QuantLib::SimpleQuote %{
-        boost::shared_ptr<QuantLib::SimpleQuote> xxx =
-            QuantLibAddin::Get<std::string, boost::shared_ptr<QuantLib::SimpleQuote> >()(objectID);
-%}
-%enddef
-
 //// QuantLib Handles.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)

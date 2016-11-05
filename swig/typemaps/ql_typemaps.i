@@ -269,27 +269,18 @@
 %}
 %typemap(rp_tm_xll_rtst) QuantLib::Date & = QuantLib::Date;
 
-%typemap(rp_tm_xll_rtst) std::vector<QuantLib::Real> %{
-        std::vector<double> returnValVec = QuantLibAddin::libraryToVector(returnValue);
+%define QL_VEC_RET(T_QL,T_CPP...)
+%typemap(rp_tm_xll_rtst) std::vector<T_QL> %{
+        std::vector<T_CPP> returnValVec = QuantLibAddin::libraryToVector(returnValue);
         static OPER xRet;
         reposit::vectorToOper(returnValVec, xRet);
         return &xRet;
 %}
+%typemap(rp_tm_xll_rtst) std::vector<T_QL> & = std::vector<T_QL>;
+%enddef
 
-%typemap(rp_tm_xll_rtst) std::vector<QuantLib::Date> %{
-        std::vector<long> returnValVec = QuantLibAddin::libraryToVector(returnValue);
-        static OPER xRet;
-        reposit::vectorToOper(returnValVec, xRet);
-        return &xRet;
-%}
-%typemap(rp_tm_xll_rtst) std::vector<QuantLib::Date> & = std::vector<QuantLib::Date>;
-
-%typemap(rp_tm_xll_rtst) std::vector<QuantLib::Period> & %{
-        std::vector<std::string> returnValVec = QuantLibAddin::libraryToVector(returnValue);
-        static OPER xRet;
-        reposit::vectorToOper(returnValVec, xRet);
-        return &xRet;
-%}
+QL_VEC_RET(QuantLib::Date, long)
+QL_VEC_RET(QuantLib::Period, std::string)
 
 // rp_tm_xll_cdrt - code to register the return type with Excel
 

@@ -9,6 +9,6 @@ SET SWIG_LIB_DIR=..\..\swig\Lib
 SET REPOSIT_INC_DIR=..\..\swig\Lib\reposit
 
 @REM %SWIG_EXE% -help
-%SWIG_EXE% -I%SWIG_LIB_DIR% -I%REPOSIT_INC_DIR% -DSWIG_MSVC -legacy -c++ -reposit -genxll -prefix ql quantlib.i > debug.txt 2>&1
-@REM %SWIG_EXE% -debug-top 4 -debug-tmsearch -I%SWIG_LIB_DIR% -I%REPOSIT_INC_DIR% -DSWIG_MSVC -legacy -c++ -reposit -genxll -prefix ql quantlib.i > debug.txt
+@REM %SWIG_EXE% -I%SWIG_LIB_DIR% -I%REPOSIT_INC_DIR% -DSWIG_MSVC -legacy -c++ -reposit -genxll -prefix ql quantlib.i > debug.txt 2>&1
+%SWIG_EXE% -debug-top 4 -debug-tmsearch -I%SWIG_LIB_DIR% -I%REPOSIT_INC_DIR% -DSWIG_MSVC -legacy -c++ -reposit -genxll -prefix ql quantlib.i > debug.txt 2>&1
 

@@ -1,38 +1,43 @@
-//
-//// These are types which require specific typemaps to be defined.  Tell the
-//// reposit SWIG module to treat these types as strings, that causes some of the
-//// necessary typemaps to be generated, the rest are defined in this project.
-//%apply rp_tp_string { QuantLib::Schedule & };
-//%apply rp_tp_string { QuantLib::OptimizationMethod & };
-//%apply rp_tp_string { QuantLib::EndCriteria & };
-//%apply rp_tp_string { QuantLib::Leg & };
 
-//// Enumerated types.
-ENUMERATED_TYPE(QuantLib::DateGeneration::Rule)
-//ENUMERATED_TYPE(QuantLib::Duration::Type)
-ENUMERATED_TYPE(QuantLib::Futures::Type)
-//ENUMERATED_TYPE(QuantLib::GFunctionFactory::YieldCurveModel)
-ENUMERATED_TYPE(QuantLib::Pillar::Choice)
-//ENUMERATED_TYPE(QuantLib::Position::Type)
-//ENUMERATED_TYPE(QuantLib::Protection::Side)
-//ENUMERATED_TYPE(QuantLib::Seniority)
-//ENUMERATED_TYPE(QuantLib::VanillaSwap::Type)
-ENUMERATED_TYPE(QuantLib::BusinessDayConvention)
-ENUMERATED_TYPE(QuantLib::Compounding)
-ENUMERATED_TYPE(QuantLib::Currency)
-ENUMERATED_TYPE(QuantLib::Frequency)
-ENUMERATED_TYPE(QuantLib::MixedInterpolation::Behavior)
-ENUMERATED_TYPE(QuantLib::Month)
-ENUMERATED_TYPE(QuantLib::Option::Type)
-ENUMERATED_TYPE(QuantLib::SensitivityAnalysis)
-ENUMERATED_TYPE(QuantLib::Weekday)
+// Enumerated types.
 
-ENUMERATED_TYPE(QuantLibAddin::RateHelper::DepoInclusionCriteria)
-ENUMERATED_TYPE(QuantLibAddin::SwapIndex::FixingType)
+%define QL_ENUMERATED_TYPE(T...)
+ENUMERATED_TYPE(QuantLib, T)
+%enddef
+
+%define QL_ENUMERATED_TYPE_STRUCT(S,T...)
+ENUMERATED_TYPE_STRUCT(QuantLib, S, T)
+%enddef
+
+QL_ENUMERATED_TYPE(BusinessDayConvention)
+QL_ENUMERATED_TYPE(Compounding)
+QL_ENUMERATED_TYPE(Currency)
+QL_ENUMERATED_TYPE(Frequency)
+QL_ENUMERATED_TYPE(Month)
+QL_ENUMERATED_TYPE(Seniority)
+QL_ENUMERATED_TYPE(SensitivityAnalysis)
+QL_ENUMERATED_TYPE(Weekday)
+
+QL_ENUMERATED_TYPE_STRUCT(DateGeneration, Rule)
+QL_ENUMERATED_TYPE_STRUCT(Duration, Type)
+QL_ENUMERATED_TYPE_STRUCT(Futures, Type)
+QL_ENUMERATED_TYPE_STRUCT(GFunctionFactory, YieldCurveModel)
+QL_ENUMERATED_TYPE_STRUCT(MixedInterpolation, Behavior)
+QL_ENUMERATED_TYPE_STRUCT(Option, Type)
+QL_ENUMERATED_TYPE_STRUCT(Pillar, Choice)
+QL_ENUMERATED_TYPE_STRUCT(Position, Type)
+QL_ENUMERATED_TYPE_STRUCT(Protection, Side)
+QL_ENUMERATED_TYPE_STRUCT(VanillaSwap, Type)
+
+ENUMERATED_TYPE_IMPL(QuantLibAddin::RateHelper::DepoInclusionCriteria)
+ENUMERATED_TYPE_IMPL(QuantLibAddin::SwapIndex::FixingType)
 
 // Enumerated classes.
-ENUMERATED_CLASS(QuantLib::Calendar)
-ENUMERATED_CLASS(QuantLib::DayCounter)
+
+ENUMERATED_CLASS(QuantLib, Calendar)
+ENUMERATED_CLASS(QuantLib, DayCounter)
+
+// Objects.
 
 %define QL_OBJECT_WRAPPER(T...)
 
@@ -180,8 +185,7 @@ QUANTLIB_GET_YTS(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::Defau
 
 %enddef
 
-
-//// QuantLib Handles.
+// QuantLib Handles.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::SimpleQuote, QuantLib::SimpleQuote)

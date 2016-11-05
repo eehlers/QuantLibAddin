@@ -14,52 +14,10 @@ namespace QuantLib {
     typedef double DiscountFactor;
     typedef double Time;
     typedef double Probability;
-
-    class Option {
-        public:
-            enum Type;
-    };
-
-    enum BusinessDayConvention;
-    enum Compounding;
-    enum Frequency;
-    enum SensitivityAnalysis;
-    enum Month;
-    enum Weekday;
-    enum Seniority;
-
-    struct DateGeneration {
-        enum Rule;
-    };
-    struct Pillar {
-        enum Choice;
-    };
-
-    struct Position {
-        enum Type;
-    };
-    
-    struct Duration {
-        enum Type;
-    };
-
-    struct MixedInterpolation {
-        enum Behavior;
-    };
-
-    struct GFunctionFactory {
-        enum YieldCurveModel;
-    };
-
-    struct Protection {
-        enum Side;
-    };
     
     class Date;
-    class DayCounter;
     class Period;
     class Quote;
-    class Calendar;
     class Currency;
     class InterestRate;
     class Matrix;

@@ -2,12 +2,33 @@
 %group(quotes);
 %groupCaption(Quotes);
 %groupFunctionWizard(QuantLib - Financial);
-%override;
+
+%insert(quotes_library_hpp) %{
+#include <ql/quote.hpp>
+#include <ql/option.hpp>
+#include <ql/types.hpp>
+#include <ql/experimental/risk/sensitivityanalysis.hpp>
+
+#include <rp/libraryobject.hpp>
+
+namespace QuantLib {
+    class Index;
+    class IborIndex;
+    class SwapIndex;
+    class Quote;
+    class SimpleQuote;
+    class Date;
+    class CapsStripper2;
+    class Period;
+
+    template <class T>
+    class Handle;
+}
+%}
 
 %insert(quotes_addin_cpp) %{
 //#include <qlo/objects/obj_instruments.hpp>
-#include <qlo/objects/indexes/iborindex.hpp>
-#include <qlo/objects/indexes/swapindex.hpp>
+#include <qlo/objects/obj_indexes.hpp>
 #include <qlo/conversions/coercequote.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <ql/quotes/derivedquote.hpp>
@@ -29,12 +50,14 @@ namespace QuantLib {
         bool isValid();
     };
 
+    %noctor(SimpleQuote);
     class SimpleQuote : public Quote {
       public:
         //! resets the given SimpleQuote object to the uninitialized state.
         void reset();
     };
     
+    %noctor(FuturesConvAdjustmentQuote);
     class FuturesConvAdjustmentQuote : public Quote/*,
                                        public Observer*/ {
       public:
@@ -50,6 +73,7 @@ namespace QuantLib {
     
 
     //! Quote adapter for the last fixing available of a given Index
+    %noctor(LastFixingQuote);
     class LastFixingQuote : public Quote/*,
                             public Observer*/ {
       public:
@@ -81,6 +105,10 @@ namespace QuantLibAddin {
         QuantLib::Real setValue(
             QuantLib::Real Value=QuantLib::Null<QuantLib::Real>()       //!< the new value.
         );
+%insert(rp_class) %{
+      private:
+        boost::shared_ptr<QuantLib::SimpleQuote> simpleQuote_;
+%}
     };
 
     class ForwardValueQuote : public Quote {

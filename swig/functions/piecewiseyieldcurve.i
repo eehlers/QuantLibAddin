@@ -1,7 +1,11 @@
 
 %group(piecewiseyieldcurve);
 %groupCaption(Piecewise Yield Curve);
-%override;
+
+%insert(piecewiseyieldcurve_library_hpp) %{
+#include <qlo/objects/obj_termstructures.hpp>
+#include <qlo/objects/obj_ratehelpers.hpp>
+%}
 
 namespace QuantLibAddin {
 
@@ -39,16 +43,23 @@ namespace QuantLibAddin {
         const std::vector<QuantLib::Time>& times() const;
 
         //! Retrieve Data for the given PiecewiseYieldCurve&lt;Traits, Interpolator&gt;.
-        std::vector<QuantLib::Real> data() const;
+        const std::vector<QuantLib::Real>& data() const;
 
         //! Retrieve list of Dates for the given PiecewiseYieldCurve&lt;Traits, Interpolator&gt;.
-        std::vector<QuantLib::Date> dates() const;        
+        const std::vector<QuantLib::Date>& dates() const;
 
         //! Retrieve list of jump times for the given PiecewiseYieldCurve&lt;Traits, Interpolator&gt;.
         const std::vector<QuantLib::Time>& jumpTimes() const;
 
         //! Retrieve list of jump dates for the given PiecewiseYieldCurve&lt;Traits, Interpolator&gt;.
         const std::vector<QuantLib::Date>& jumpDates() const;
+%insert(rp_class) %{
+        InterpolatedYieldCurvePair interpolatedYieldCurvePair() const {
+            return pair_;
+        }
+        private:
+		InterpolatedYieldCurvePair pair_;
+%}
     };
 }
 

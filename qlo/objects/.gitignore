@@ -1,2 +1,3 @@
 obj_*.?pp
+!obj_*_hw.cpp
 objmanual_*.?pp.template

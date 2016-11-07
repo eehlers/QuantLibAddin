@@ -1,19 +1,91 @@
 
 %group(ratehelpers);
 %groupCaption(Rate Helpers);
-%override;
+
+%insert(ratehelpers_library_hpp) %{
+#include <ql/types.hpp>
+#include <ql/time/businessdayconvention.hpp>
+#include <ql/time/frequency.hpp>
+#include <ql/instruments/futures.hpp>
+#include <ql/termstructures/bootstraphelper.hpp>
+
+namespace QuantLib {
+    class YieldTermStructure;
+
+    template<class TS>
+    class BootstrapHelper;
+
+    typedef BootstrapHelper<YieldTermStructure> RateHelper;
+
+    class Quote;
+    class Period;
+    class Calendar;
+    class DayCounter;
+    class IborIndex;
+    class OvernightIndex;
+    class SwapIndex;
+    class Schedule;
+    class Date;
+    class Bond;
+    template <class T>
+    class Handle;
+}
+%}
 
 %insert(ratehelpers_addin_cpp) %{
-#include <qlo/objects/objmanual_quotes.hpp>
+#include <qlo/objects/obj_quotes.hpp>
 //#include <qlo/objects/objmanual_bonds.hpp>
-#include <qlo/objects/objmanual_termstructures.hpp>
+#include <qlo/objects/obj_termstructures.hpp>
 //#include <qlo/objects/obj_schedule.hpp>
-#include <qlo/objects/indexes/iborindex.hpp>
-#include <qlo/objects/indexes/swapindex.hpp>
+#include <qlo/objects/obj_indexes.hpp>
 %}
+
+namespace QuantLibAddin {
+
+    %noctor(RateHelper);
+    class RateHelper {
+      public:
+
+        //! returns the objectID of the Quote wrapped in the given RateHelper object.
+        std::string quoteName();
+
+        //! returns the value of the Quote wrapped in the given RateHelper object.
+        QuantLib::Real quoteValue();
+
+        //! returns the isValid boolean of the Quote wrapped in the given RateHelper object.
+        bool quoteIsValid();
+%insert(rp_class) %{
+        enum DepoInclusionCriteria {AllDepos,
+                                    DeposBeforeFirstFuturesStartDate,
+                                    DeposBeforeFirstFuturesStartDatePlusOne,
+                                    DeposBeforeFirstFuturesExpiryDate
+        };
+
+      protected:
+        RP_LIB_CTOR(RateHelper, QuantLib::RateHelper);
+        std::string quoteName_;
+%}
+    };
+       
+    std::vector<std::string> rateHelperSelection(
+        const std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> >& RateHelpers,                                                  //!< vector of RateHelper IDs.
+        const std::vector<QuantLib::Natural>& Priority,                                                                                 //!< vector of priority integers (higher number for higher priority).
+        QuantLib::Natural NImmFutures,                                                                                                  //!< max number of IMM (March, June, September, December) Futures to be included.
+        QuantLib::Natural NSerialFutures,                                                                                               //!< max number of Serial (January, February, April, May, July, August, October, November) Futures to be included.
+        QuantLib::Natural FutureRollDays/*=2*/,                                                                                         //!< discard the front Futures the given number of (positive) days before its expiry (e.g zero implies the use of the front Futures during its expiry day).
+        RateHelper::DepoInclusionCriteria DepoInclusion/*=RateHelper::DepoInclusionCriteria(RateHelper::AllDepos)*/,                    //!< Depo inclusion criteria.
+        const std::vector<QuantLib::Natural>& MinDistance/*=1?*/                                                                        //!< minimum distance in (positive) days from near instruments.
+    );
+
+    QuantLib::Real rateHelperRate(
+        //! returns the rate (if any) associated to a rate helper.
+        const boost::shared_ptr<QuantLibAddin::RateHelper>& RateHelper                                                                  //!< RateHelper ID.
+    );
+}
 
 namespace QuantLib {
 
+    %noctor(RateHelper);
     class RateHelper {
       public:
 
@@ -38,69 +110,31 @@ namespace QuantLib {
         //! returns the error between the curve implied quote and the value of the Quote wrapped in the given RateHelper object.
         Real quoteError();        
     };
-    
-    class FuturesRateHelper : public RateHelper {
+
+    class DepositRateHelper : public RateHelper {
       public:
 
-        //! returns the convexity adjustment for the given FuturesRateHelper object.
-        Real convexityAdjustment() const;
-    };
-    
-    class SwapRateHelper : public /*RelativeDateRateHelper*/RateHelper {
-      public:
-        //!< returns the spread for the given SwapRateHelper object.
-        Spread spread() const;
-        //!< returns the forward start period for the given SwapRateHelper object.
-        const Period& forwardStart() const;
-    };
+        DepositRateHelper(
+            const QuantLib::Handle<QuantLib::Quote>& Rate,                                                                              //!< deposit quote.
+            const boost::shared_ptr<QuantLib::IborIndex>& IborIndex                                                                     //!< IborIndex object ID.
+        );
 
-    class FxSwapRateHelper : public RateHelper {
-      public:
-
-        //! returns the fx spot quote value for the given FxSwapRateHelper object.
-        %rename(spotValue) spot;
-        Real spot();
-
-        //! returns the tenor for the given FxSwapRateHelper object.
-        Period tenor();
-
-        //! returns the number of fixing days for the given FxSwapRateHelper object.
-        Natural fixingDays();
-
-        //! returns the calendar for the given FxSwapRateHelper object.
-        Calendar calendar();
-
-        //! returns the business day convention for the given FxSwapRateHelper object.
-        %rename(BDC) businessDayConvention;
-        BusinessDayConvention businessDayConvention();
-
-        //! returns the end of month flag for the given FxSwapRateHelper object.
-        %rename(EOM) endOfMonth;
-        bool endOfMonth();
-
-        //! returns TRUE if the base currency of the fx currency pair is the one used as collateral, FALSE otherwise.
-        %rename(isBaseCurrencyCollateralCurrency) isFxBaseCurrencyCollateralCurrency;
-        bool isFxBaseCurrencyCollateralCurrency();
-    };
-}
-
-namespace QuantLibAddin {
-
-    class RateHelper {
-      public:
-
-        //! returns the objectID of the Quote wrapped in the given RateHelper object.
-        std::string quoteName();
-
-        //! returns the value of the Quote wrapped in the given RateHelper object.
-        QuantLib::Real quoteValue();
-
-        //! returns the isValid boolean of the Quote wrapped in the given RateHelper object.
-        bool quoteIsValid();
+        // Overloaded ctors; the directive below causes the second to be called qlDepositRateHelper2().
+        %rename(DepositRateHelper2) DepositRateHelper;
+        DepositRateHelper(
+            const QuantLib::Handle<QuantLib::Quote>& Rate,                                                                              //!< deposit quote.
+            const QuantLib::Period& Tenor,                                                                                              //!< deposit length (e.g. 3M for three months).
+            QuantLib::Natural FixingDays,                                                                                               //!< fixing days (e.g. 2).
+            const QuantLib::Calendar& Calendar,                                                                                         //!< holiday calendar (e.g. TARGET).
+            QuantLib::BusinessDayConvention Convention,                                                                                 //!< business day convention (e.g. Modified Following).
+            bool EndOfMonth,                                                                                                            //!< End of Month rule (TRUE for end of month to end of month termination date, FALSE otherwise).
+            const QuantLib::DayCounter& DayCounter                                                                                      //!< DayCounter ID.
+        );
     };
 
     class FuturesRateHelper : public RateHelper {
       public:
+
         FuturesRateHelper(
             const QuantLib::Handle<QuantLib::Quote>& Price,                                                                             //!< price quote.
             QuantLib::Futures::Type FuturesType/*=QuantLib::Futures::Type(QuantLib::Futures::IMM)*/,                                    //!< Futures type.
@@ -133,27 +167,9 @@ namespace QuantLibAddin {
             const QuantLib::DayCounter& DayCounter/*=QuantLib::Actual360()*/,                                                           //!< DayCounter ID.
             const QuantLib::Handle<QuantLib::Quote>& ConvexityAdjQuote                                                                  //!< convexity adjustment quote (i.e. Forward rate = Futures rate - convexity adjustment).
         );
-    };
 
-    class DepositRateHelper : public RateHelper {
-      public:
-
-        DepositRateHelper(
-            const QuantLib::Handle<QuantLib::Quote>& Rate,                                                                              //!< deposit quote.
-            const boost::shared_ptr<QuantLib::IborIndex>& IborIndex                                                                     //!< IborIndex object ID.
-        );
-
-        // Overloaded ctors; the directive below causes the second to be called qlDepositRateHelper2().
-        %rename(DepositRateHelper2) DepositRateHelper;
-        DepositRateHelper(
-            const QuantLib::Handle<QuantLib::Quote>& Rate,                                                                              //!< deposit quote.
-            const QuantLib::Period& Tenor,                                                                                              //!< deposit length (e.g. 3M for three months).
-            QuantLib::Natural FixingDays,                                                                                               //!< fixing days (e.g. 2).
-            const QuantLib::Calendar& Calendar,                                                                                         //!< holiday calendar (e.g. TARGET).
-            QuantLib::BusinessDayConvention Convention,                                                                                 //!< business day convention (e.g. Modified Following).
-            bool EndOfMonth,                                                                                                            //!< End of Month rule (TRUE for end of month to end of month termination date, FALSE otherwise).
-            const QuantLib::DayCounter& DayCounter                                                                                      //!< DayCounter ID.
-        );
+        //! returns the convexity adjustment for the given FuturesRateHelper object.
+        Real convexityAdjustment() const;
     };
 
     class SwapRateHelper : public RateHelper {
@@ -186,6 +202,12 @@ namespace QuantLibAddin {
             QuantLib::Pillar::Choice PillarDate=QuantLib::Pillar::Choice(QuantLib::Pillar::MaturityDate),                               //!< Pillar date can be: MaturityDate, LastRelevantDate or CustomDate.
             QuantLib::Date CustomPillarDate=QuantLib::Date()                                                                            //!< Custom Pillar Date.
         );
+
+        //!< returns the spread for the given SwapRateHelper object.
+        Spread spread() const;
+
+        //!< returns the forward start period for the given SwapRateHelper object.
+        const Period& forwardStart() const;
      };
 
     class FraRateHelper : public RateHelper {
@@ -271,6 +293,7 @@ namespace QuantLibAddin {
 
     class FxSwapRateHelper : public RateHelper {
       public:
+
         FxSwapRateHelper(
             const QuantLib::Handle<QuantLib::Quote>& FwdPoint,                                                                          //!< forward point quote.
             const QuantLib::Handle<QuantLib::Quote>& SpotFx,                                                                            //!< fx spot quote.
@@ -282,21 +305,30 @@ namespace QuantLibAddin {
             bool IsFxBaseCurrencyCollateralCurrency,                                                                                    //!< TRUE if the base currency of the fx currency pair is the one used as collateral, FALSE otherwise.
             const QuantLib::Handle<QuantLib::YieldTermStructure>& CollateralCurve                                                       //!< collateral YieldTermStructure object ID.
         );
+
+        //! returns the fx spot quote value for the given FxSwapRateHelper object.
+        %rename(spotValue) spot;
+        Real spot();
+
+        //! returns the tenor for the given FxSwapRateHelper object.
+        Period tenor();
+
+        //! returns the number of fixing days for the given FxSwapRateHelper object.
+        Natural fixingDays();
+
+        //! returns the calendar for the given FxSwapRateHelper object.
+        Calendar calendar();
+
+        //! returns the business day convention for the given FxSwapRateHelper object.
+        %rename(BDC) businessDayConvention;
+        BusinessDayConvention businessDayConvention();
+
+        //! returns the end of month flag for the given FxSwapRateHelper object.
+        %rename(EOM) endOfMonth;
+        bool endOfMonth();
+
+        //! returns TRUE if the base currency of the fx currency pair is the one used as collateral, FALSE otherwise.
+        %rename(isBaseCurrencyCollateralCurrency) isFxBaseCurrencyCollateralCurrency;
+        bool isFxBaseCurrencyCollateralCurrency();
     };
-                 
-    std::vector<std::string> rateHelperSelection(
-        const std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> >& RateHelpers,                                                  //!< vector of RateHelper IDs.
-        const std::vector<QuantLib::Natural>& Priority,                                                                                 //!< vector of priority integers (higher number for higher priority).
-        QuantLib::Natural NImmFutures,                                                                                                  //!< max number of IMM (March, June, September, December) Futures to be included.
-        QuantLib::Natural NSerialFutures,                                                                                               //!< max number of Serial (January, February, April, May, July, August, October, November) Futures to be included.
-        QuantLib::Natural FutureRollDays/*=2*/,                                                                                         //!< discard the front Futures the given number of (positive) days before its expiry (e.g zero implies the use of the front Futures during its expiry day).
-        RateHelper::DepoInclusionCriteria DepoInclusion/*=RateHelper::DepoInclusionCriteria(RateHelper::AllDepos)*/,                    //!< Depo inclusion criteria.
-        const std::vector<QuantLib::Natural>& MinDistance/*=1?*/                                                                        //!< minimum distance in (positive) days from near instruments.
-    );
-
-    QuantLib::Real rateHelperRate(
-        //! returns the rate (if any) associated to a rate helper.
-        const boost::shared_ptr<QuantLibAddin::RateHelper>& RateHelper                                                                  //!< RateHelper ID.
-    );
 }
-

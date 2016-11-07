@@ -1,10 +1,9 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2006, 2007, 2008, 2009 Ferdinando Ametrano
- Copyright (C) 2006 Katiuscia Manzoni
- Copyright (C) 2005 Eric Ehlers
+ Copyright (C) 2007 Ferdinando Ametrano
  Copyright (C) 2005 Plamen Neykov
+ Copyright (C) 2005 Eric Ehlers
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -20,27 +19,13 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#if defined(HAVE_CONFIG_H)
+#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
     #include <qlo/config.hpp>
 #endif
-#include <qlo/objects/indexes/swap/isdafixaswap.hpp>
 
-#include <ql/termstructures/yieldtermstructure.hpp>
-#include <ql/indexes/swap/euriborswap.hpp>
+#include <qlo/objects/obj_volatilities.hpp>
 
-namespace QuantLibAddin {
-
-   EuriborSwapIsdaFixA::EuriborSwapIsdaFixA(
-            const boost::shared_ptr<reposit::ValueObject>& properties,
-            const QuantLib::Period& p,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& f,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& d,
-            bool permanent)
-    : SwapIndex(properties, permanent)
-    {
-        libraryObject_ = boost::shared_ptr<QuantLib::EuriborSwapIsdaFixA>(new
-            QuantLib::EuriborSwapIsdaFixA(p, f, d));
-    }
-
+std::string QuantLibAddin::SabrVolSurface::atmCurve() {
+    return reposit::convert<std::string>(propertyValue("BLACKATMVOLCURVE"));
 }
 

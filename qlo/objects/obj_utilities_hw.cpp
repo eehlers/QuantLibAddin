@@ -22,7 +22,7 @@
 //#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
 //    #include <qlo/config.hpp>
 //#endif
-#include <qlo/objects/objmanual_utilities.hpp>
+#include <qlo/objects/obj_utilities.hpp>
 //#include <qlo/qladdindefines.hpp>
 #include <ql/version.hpp>
 #include <rp/repository.hpp>

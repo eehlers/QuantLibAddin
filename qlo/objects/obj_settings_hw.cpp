@@ -17,7 +17,7 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-#include <qlo/objects/objmanual_settings.hpp>
+#include <qlo/objects/obj_settings.hpp>
 #include <ql/settings.hpp>
 #include <sstream>
 
@@ -32,11 +32,11 @@ namespace QuantLibAddin {
         QuantLib::Settings::instance().evaluationDate() = evalDate;
     }
 
-    std::string dateToString(const QuantLib::Date& d) {
-        std::ostringstream ret;
-        ret << d;
-        return ret.str();
-    }
+    //std::string dateToString(const QuantLib::Date& d) {
+    //    std::ostringstream ret;
+    //    ret << d;
+    //    return ret.str();
+    //}
 
     //void qlSettingsSetEnforceTodaysHistoricFixings(bool b) {
     //    QuantLib::Settings::instance().enforcesTodaysHistoricFixings() = b;

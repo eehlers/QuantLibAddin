@@ -1054,83 +1054,115 @@
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_date.cpp"
+				RelativePath=".\qlo\objects\obj_date.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_date.hpp"
+				RelativePath=".\qlo\objects\obj_date.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_indexes.cpp"
+				RelativePath=".\qlo\objects\obj_daycounters.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_indexes.hpp"
+				RelativePath=".\qlo\objects\obj_indexes.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_piecewiseyieldcurve.cpp"
+				RelativePath=".\qlo\objects\obj_indexes.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_piecewiseyieldcurve.hpp"
+				RelativePath=".\qlo\objects\obj_indexes_hw.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_quotes.cpp"
+				RelativePath=".\qlo\objects\obj_piecewiseyieldcurve.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_quotes.hpp"
+				RelativePath=".\qlo\objects\obj_piecewiseyieldcurve_hw.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_ratehelpers.cpp"
+				RelativePath=".\qlo\objects\obj_quotes.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_ratehelpers.hpp"
+				RelativePath=".\qlo\objects\obj_quotes_hw.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_schedule.cpp"
+				RelativePath=".\qlo\objects\obj_ratehelpers.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_schedule.hpp"
+				RelativePath=".\qlo\objects\obj_ratehelpers_hw.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_settings.cpp"
+				RelativePath=".\qlo\objects\obj_schedule.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_settings.hpp"
+				RelativePath=".\qlo\objects\obj_schedule.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_termstructures.hpp"
+				RelativePath=".\qlo\objects\obj_schedule_hw.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_timeseries.cpp"
+				RelativePath=".\qlo\objects\obj_settings.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_timeseries.hpp"
+				RelativePath=".\qlo\objects\obj_settings_hw.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_utilities.cpp"
+				RelativePath=".\qlo\objects\obj_termstructures.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_utilities.hpp"
+				RelativePath=".\qlo\objects\obj_termstructures.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\objmanual_volatilities.hpp"
+				RelativePath=".\qlo\objects\obj_termstructures_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_timeseries.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_timeseries_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_utilities.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_utilities_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_volatilities.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_volatilities.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_volatilities_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_handles.hpp"
 				>
 			</File>
 			<Filter
@@ -1157,31 +1189,7 @@
 				Name="indexes"
 				>
 				<File
-					RelativePath=".\qlo\objects\indexes\bmaindex.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\indexes\bmaindex.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\indexes\iborindex.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\indexes\iborindex.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\indexes\interestrateindex.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\objects\indexes\swapindex.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\indexes\swapindex.hpp"
 					>
 				</File>
 				<Filter
@@ -1192,15 +1200,7 @@
 						>
 					</File>
 					<File
-						RelativePath=".\qlo\objects\indexes\ibor\euribor.hpp"
-						>
-					</File>
-					<File
 						RelativePath=".\qlo\objects\indexes\ibor\libor.cpp"
-						>
-					</File>
-					<File
-						RelativePath=".\qlo\objects\indexes\ibor\libor.hpp"
 						>
 					</File>
 				</Filter>
@@ -1212,38 +1212,10 @@
 						>
 					</File>
 					<File
-						RelativePath=".\qlo\objects\indexes\swap\euriborswap.hpp"
-						>
-					</File>
-					<File
-						RelativePath=".\qlo\objects\indexes\swap\isdafixaswap.cpp"
-						>
-					</File>
-					<File
-						RelativePath=".\qlo\objects\indexes\swap\isdafixaswap.hpp"
-						>
-					</File>
-					<File
 						RelativePath=".\qlo\objects\indexes\swap\liborswap.cpp"
 						>
 					</File>
-					<File
-						RelativePath=".\qlo\objects\indexes\swap\liborswap.hpp"
-						>
-					</File>
 				</Filter>
-			</Filter>
-			<Filter
-				Name="termstructures"
-				>
-				<File
-					RelativePath=".\qlo\objects\termstructures\yieldtermstructures.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\termstructures\yieldtermstructures.hpp"
-					>
-				</File>
 			</Filter>
 			<Filter
 				Name="credit"
@@ -1306,58 +1278,6 @@
 				</File>
 				<File
 					RelativePath=".\qlo\objects\instruments\creditdefaultswap.hpp"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="volatilities"
-				>
-				<File
-					RelativePath=".\qlo\objects\volatilities\capletvolstructure.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\capletvolstructure.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\cmsmarket.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\cmsmarket.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\cmsmarketcalibration.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\cmsmarketcalibration.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\smilesection.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\smilesection.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\swaptionvolstructure.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\swaptionvolstructure.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\volatilities.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\volatilities\volatilities.hpp"
 					>
 				</File>
 			</Filter>

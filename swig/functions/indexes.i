@@ -1,31 +1,68 @@
 
 %group(indexes);
 %groupCaption(Indexes);
-%override;
+
+%insert(indexes_library_hpp) %{
+#include <ql/types.hpp>
+#include <ql/time/businessdayconvention.hpp>
+
+namespace QuantLib {
+    class Date;
+    class Index;
+    class Period;
+    class Currency;
+    class Calendar;
+    class DayCounter;
+    class YieldTermStructure;
+    class IborIndex;
+    class Quote;
+
+    template <class T>
+    class Handle;
+}
+%}
 
 %insert(indexes_addin_cpp) %{
-#include <qlo/objects/indexes/bmaindex.hpp>
-#include <qlo/objects/indexes/ibor/euribor.hpp>
-#include <qlo/objects/indexes/ibor/libor.hpp>
-#include <qlo/objects/indexes/swap/euriborswap.hpp>
-#include <qlo/objects/indexes/swap/isdafixaswap.hpp>
-#include <qlo/objects/indexes/swap/liborswap.hpp>
-#include <qlo/objects/objmanual_termstructures.hpp>
+#include <qlo/objects/obj_termstructures.hpp>
 #include <ql/indexes/iborindex.hpp>
+#include <ql/indexes/ibor/eonia.hpp>
+#include <ql/indexes/ibor/sonia.hpp>
+#include <ql/indexes/swapindex.hpp>
+#include <ql/indexes/swap/euriborswap.hpp>
+#include <ql/indexes/bmaindex.hpp>
 #include <ql/termstructures/yieldtermstructure.hpp>
 #include <ql/experimental/coupons/proxyibor.hpp>
 %}
 
-// For most of the QuantLib index classes, we have handwritten code in the
-// QuantLibAddin layer to provide custom behavior.
+%insert(rp_header) %{
+    std::ostream& operator<<(std::ostream& out,
+                             SwapIndex::FixingType t);
+%}
 
-// In the QuantLib namespace we define member functions which are invoked
-// directly on the underlying QuantLib objects.
+namespace QuantLibAddin {
+
+    %noctor(Index);
+    class Index {
+        public:
+
+            //! Adds fixings for the given Index object.
+            void addFixings(
+                const std::vector<QuantLib::Date>& FixingDates,                                                                     //!< fixing dates.
+                const std::vector<QuantLib::Real>& FixingValues,                                                                    //!< fixing values.
+                bool ForceOverwrite=false                                                                                           //!< Set to TRUE to force overwriting of existing fixings, if any.
+            );
+%insert(rp_class) %{
+            RP_LIB_CTOR(Index, QuantLib::Index);
+%}
+    };
+}
 
 namespace QuantLib {
 
+    %noctor(Index);
     class Index {
         public:
+
             //! Returns the name for the given Index object.
             std::string name();
 
@@ -59,6 +96,7 @@ namespace QuantLib {
 
     class InterestRateIndex : public Index {
         public:
+
             //! Returns the family name (e.g. EURIBOR) for the given InterestRateIndex object.
             std::string familyName();
 
@@ -96,44 +134,7 @@ namespace QuantLib {
 
     class IborIndex : public InterestRateIndex {
         public:
-            //!< Returns the business day convention (e.g. Modified Following) for the given IborIndex object.
-            %rename2(businessDayConvention, IborIndexBusinessDayConv);
-            BusinessDayConvention businessDayConvention();        
 
-            //! Returns TRUE if the given IborIndex object follows the 'end of month' convention.
-            bool endOfMonth();
-    };
-    
-    class SwapIndex : public InterestRateIndex {
-        public:
-            //! Returns the fixed leg tenor (e.g. 1Y) for the given SwapIndex object.
-            Period fixedLegTenor();
-
-            //! Returns the business day convention (e.g. Modified Following) for the given SwapIndex object.
-            %rename(fixedLegBDC) fixedLegConvention;
-            BusinessDayConvention fixedLegConvention();
-    };
-}
-
-// In the QuantLibAddin namespace we define all of the constructors and 
-// member functions of the QuantLibAddin wrapper classes.
-
-namespace QuantLibAddin {
-
-    class Index {
-        public:
-            //! Adds fixings for the given Index object.
-            void addFixings(
-                const std::vector<QuantLib::Date>& FixingDates,                                                                     //!< fixing dates.
-                const std::vector<QuantLib::Real>& FixingValues,                                                                    //!< fixing values.
-                bool ForceOverwrite=false                                                                                           //!< Set to TRUE to force overwriting of existing fixings, if any.
-            );
-    };
-
-    class InterestRateIndex : public Index {};
-
-    class IborIndex : public InterestRateIndex {
-        public:
             %processor(IborIndex, IndexProcessor);
             IborIndex(
                 const std::string& FamilyName,                                                                                      //!< index family name.
@@ -146,10 +147,22 @@ namespace QuantLibAddin {
                 const QuantLib::DayCounter& DayCounter,                                                                             //!< DayCounter ID.
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& FwdCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()     //!< forwarding YieldTermStructure object ID.
             );
+
+            //!< Returns the business day convention (e.g. Modified Following) for the given IborIndex object.
+            %rename2(businessDayConvention, IborIndexBusinessDayConv);
+            BusinessDayConvention businessDayConvention();        
+
+            //! Returns TRUE if the given IborIndex object follows the 'end of month' convention.
+            bool endOfMonth();
+%insert(rp_class) %{
+      protected:
+        RP_OBJ_CTOR(IborIndex, InterestRateIndex);
+%}
     };
 
     class OvernightIndex : public IborIndex {
         public:
+
             %processor(OvernightIndex, IndexProcessor);
             OvernightIndex(
                 const std::string& FamilyName,                                                                                      //!< index family name.
@@ -159,12 +172,17 @@ namespace QuantLibAddin {
                 const QuantLib::DayCounter& DayCounter,                                                                             //!< DayCounter ID.
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()   //!< forecasting YieldTermStructure object ID.
             );
+%insert(rp_class) %{
+      protected:
+        RP_OBJ_CTOR(OvernightIndex, IborIndex);
+%}
     };
 
     class Euribor : public IborIndex {
         public:
+
             %processor(Euribor, IndexProcessor);
-            %generate(c#, Euribor);
+            %override2(Euribor);
             Euribor(
                 const std::string& Tenor,                                                                                           //!< index tenor: SW (1W), 2W, 3W, 1M, 2M, 3M, 4M, 5M, 6M, 7M, 8M, 9M, 10M, 11M, 12M (1Y).
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()   //!< forecasting YieldTermStructure object ID.
@@ -173,7 +191,9 @@ namespace QuantLibAddin {
 
     class Euribor365 : public IborIndex {
         public:
+
             %processor(Euribor365, IndexProcessor);
+            %override2(Euribor365);
             Euribor365(
                 const std::string& Tenor,                                                                                           //!< index tenor: SW (1W), 2W, 3W, 1M, 2M, 3M, 4M, 5M, 6M, 7M, 8M, 9M, 10M, 11M, 12M (1Y).
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()   //!< forecasting YieldTermStructure object ID.
@@ -182,6 +202,7 @@ namespace QuantLibAddin {
 
     class Eonia : public OvernightIndex {
         public:
+
             Eonia(
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()   //!< forecasting YieldTermStructure object ID.
             );
@@ -189,7 +210,9 @@ namespace QuantLibAddin {
 
     class Libor : public IborIndex {
         public:
+
             %processor(Libor, IndexProcessor);
+            %override2(Libor);
             Libor(
                 const QuantLib::Currency& Currency,                                                                                 //!< Libor index currency.
                 const std::string& Tenor,                                                                                           //!< index tenor: SW (1W), 2W, 3W, 1M, 2M, 3M, 4M, 5M, 6M, 7M, 8M, 9M, 10M, 11M, 12M (1Y).
@@ -199,6 +222,7 @@ namespace QuantLibAddin {
 
     class Sonia : public OvernightIndex {
         public:
+
             Sonia(
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()   //!< forecasting YieldTermStructure object ID.
             );
@@ -206,6 +230,7 @@ namespace QuantLibAddin {
 
     class SwapIndex : public InterestRateIndex {
         public:
+
             %processor(SwapIndex, IndexProcessor);
             SwapIndex(
                 const std::string& FamilyName,                                                                                      //!< index name.
@@ -219,13 +244,33 @@ namespace QuantLibAddin {
                 const boost::shared_ptr<QuantLib::IborIndex>& IborIndex,                                                            //!< swap's floating ibor index object ID.
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& DiscCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()    //!< discounting YieldTermStructure object ID.
             );
+
+            //! Returns the fixed leg tenor (e.g. 1Y) for the given SwapIndex object.
+            Period fixedLegTenor();
+
+            //! Returns the business day convention (e.g. Modified Following) for the given SwapIndex object.
+            %rename(fixedLegBDC) fixedLegConvention;
+            BusinessDayConvention fixedLegConvention();
+%insert(rp_class) %{
+            enum FixingType {Isda,
+                         IsdaFixA,
+                         IsdaFixB,
+                         IsdaFixAm,
+                         IsdaFixPm,
+                         IfrFix
+            };
+      protected:
+        RP_OBJ_CTOR(SwapIndex, InterestRateIndex);
+%}
     };
 
     class EuriborSwap : public SwapIndex {
         public:
+
             %processor(EuriborSwap, IndexProcessor);
+            %override2(EuriborSwap);
             EuriborSwap(
-                SwapIndex::FixingType FixingType/*=Default?*/,                                                                      //!< Swap index fixing type (e.g. IsdaFixA, IsdaFixB, IfrFix, IsdaFixAm, IsdaFixPm).
+                QuantLibAddin::SwapIndex::FixingType FixingType/*=Default?*/,                                                                      //!< Swap index fixing type (e.g. IsdaFixA, IsdaFixB, IfrFix, IsdaFixAm, IsdaFixPm).
                 const QuantLib::Period& Tenor,                                                                                      //!< index tenor (e.g. 1Y for one year).
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& FwdCurve=QuantLib::Handle<QuantLib::YieldTermStructure>(),    //!< forwarding YieldTermStructure object ID.
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& DiscCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()    //!< discounting YieldTermStructure object ID.
@@ -234,10 +279,12 @@ namespace QuantLibAddin {
 
     class LiborSwap : public SwapIndex {
         public:
+
             %processor(LiborSwap, IndexProcessor);
+            %override2(LiborSwap);
             LiborSwap(
                 const QuantLib::Currency& currency,                                                                                 //!< Libor swap index currency.
-                SwapIndex::FixingType FixingType/*=Default?*/,                                                                      //!< Swap index fixing type (e.g. IsdaFixA, IsdaFixB, IfrFix, IsdaFixAm, IsdaFixPm).
+                QuantLibAddin::SwapIndex::FixingType FixingType/*=Default?*/,                                                                      //!< Swap index fixing type (e.g. IsdaFixA, IsdaFixB, IfrFix, IsdaFixAm, IsdaFixPm).
                 const QuantLib::Period& Tenor,                                                                                      //!< index tenor (e.g. 1Y for one year).
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& FwdCurve=QuantLib::Handle<QuantLib::YieldTermStructure>(),    //!< forwarding YieldTermStructure object ID.
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& DiscCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()    //!< discounting YieldTermStructure object ID.
@@ -246,6 +293,7 @@ namespace QuantLibAddin {
 
     class EuriborSwapIsdaFixA : public SwapIndex {
       public:
+
             EuriborSwapIsdaFixA(
                 const QuantLib::Period& Tenor,                                                                                      //!< index tenor (e.g. 1Y for one year)
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& FwdCurve=QuantLib::Handle<QuantLib::YieldTermStructure>(),    //!< forwarding YieldTermStructure object ID.
@@ -255,6 +303,7 @@ namespace QuantLibAddin {
 
     class BMAIndex : public InterestRateIndex {
         public:
+
             BMAIndex(
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()   //!< forecasting YieldTermStructure object ID.
             );
@@ -262,6 +311,7 @@ namespace QuantLibAddin {
 
     class ProxyIbor : public IborIndex {
         public:
+
             %processor(ProxyIbor, IndexProcessor);
             ProxyIbor(
                 const std::string& FamilyName,                                                                                      //!< index family name.

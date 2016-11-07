@@ -24,10 +24,10 @@
     #include <qlo/config.hpp>
 #endif
 
-#include <qlo/objects/indexes/ibor/euribor.hpp>
+#include <qlo/objects/obj_indexes.hpp>
 
 #include <ql/indexes/ibor/euribor.hpp>
-#include <ql/indexes/ibor/eonia.hpp>
+#include <ql/indexes/ibor/eonia.hpp>//deleteme
 #include <ql/utilities/dataparsers.hpp>
 
 #include <boost/algorithm/string/case_conv.hpp>
@@ -72,14 +72,5 @@ namespace QuantLibAddin {
                 QuantLib::Euribor365(pp, h));
         }
     }
-
-    Eonia::Eonia(const shared_ptr<ValueObject>& properties,
-                 const QuantLib::Handle<QuantLib::YieldTermStructure>& h,
-                 bool permanent)
-    : OvernightIndex(properties, permanent)
-    {
-        libraryObject_ = shared_ptr<QuantLib::Eonia>(new QuantLib::Eonia(h));
-    }
-
 }
 

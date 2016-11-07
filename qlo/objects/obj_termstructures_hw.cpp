@@ -25,7 +25,7 @@
 //    #include <qlo/config.hpp>
 //#endif
 
-#include <qlo/objects/termstructures/yieldtermstructures.hpp>
+#include <qlo/objects/obj_termstructures.hpp>
 
 #include <ql/time/date.hpp>
 #include <ql/termstructures/yield/discountcurve.hpp>
@@ -53,77 +53,12 @@ using QuantLib::InterpolatedForwardCurve;
 
 namespace QuantLibAddin {
 
-    //DiscountCurve::DiscountCurve(
-    //    const shared_ptr<ValueObject>& prop,
-    //    const std::vector<QuantLib::Date>& dates,
-    //    const std::vector<QuantLib::DiscountFactor>& dfs,
-    //    const QuantLib::DayCounter& dayCounter,
-    //    bool perm) : YieldTermStructure(prop, perm)
-    //{
-    //    QL_REQUIRE(!dates.empty(), "no input dates given");
-    //    libraryObject_ = shared_ptr<QuantLib::Extrapolator>(new
-    //        QuantLib::DiscountCurve(dates, dfs, dayCounter));
-    //}
+    //// A pair indicating a combination of Traits / Interpolator.
+    //typedef std::pair<InterpolatedYieldCurve::Traits, InterpolatedYieldCurve::Interpolator> InterpolatedYieldCurvePair;
 
-    //ZeroCurve::ZeroCurve(const shared_ptr<ValueObject>& prop,
-    //                     const std::vector<QuantLib::Date>& dates,
-    //                     const std::vector<QuantLib::Rate>& zeroRates,
-    //                     const QuantLib::DayCounter& dayCounter,
-    //                     bool perm) : YieldTermStructure(prop, perm)
-    //{
-    //    QL_REQUIRE(!dates.empty(), "no input dates given");
-    //    libraryObject_ = shared_ptr<QuantLib::Extrapolator>(new
-    //        QuantLib::ZeroCurve(dates, zeroRates, dayCounter));
-    //}
-
-    //ForwardCurve::ForwardCurve(const shared_ptr<ValueObject>& prop,
-    //                           const std::vector<QuantLib::Date>& dates,
-    //                           const std::vector<QuantLib::Rate>& fwdRates,
-    //                           const QuantLib::DayCounter& dayCounter,
-    //                           bool perm) : YieldTermStructure(prop, perm)
-    //{
-    //    QL_REQUIRE(!dates.empty(), "no input dates given");
-    //    libraryObject_ = shared_ptr<QuantLib::Extrapolator>(new
-    //        QuantLib::ForwardCurve(dates, fwdRates, dayCounter));
-    //}
-
-    //FlatForward::FlatForward(const shared_ptr<ValueObject>& prop,
-    //                         QuantLib::Natural nDays,
-    //                         const QuantLib::Calendar& calendar,
-    //                         const QuantLib::Handle<QuantLib::Quote>& forward,
-    //                         const QuantLib::DayCounter& dayCounter,
-    //                         QuantLib::Compounding compounding,
-    //                         QuantLib::Frequency frequency,
-    //                         bool perm)
-    //: YieldTermStructure(prop, perm)
-    //{
-    //    libraryObject_ = shared_ptr<QuantLib::Extrapolator>(new
-    //        QuantLib::FlatForward(nDays, calendar, forward, dayCounter,
-    //                              compounding, frequency));
-    //}
-
-    //ForwardSpreadedTermStructure::ForwardSpreadedTermStructure(
-    //        const shared_ptr<ValueObject>& prop,
-    //        const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
-    //        const QuantLib::Handle<QuantLib::Quote>& spread,
-    //        bool perm) : YieldTermStructure(prop, perm) {
-
-    //    libraryObject_ = shared_ptr<QuantLib::Extrapolator>(new
-    //        QuantLib::ForwardSpreadedTermStructure(hYTS, spread));
-    //}
-
-
-    //ImpliedTermStructure::ImpliedTermStructure(
-    //        const shared_ptr<ValueObject>& prop,
-    //        const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
-    //        const QuantLib::Date& referenceDate,
-    //        bool perm)
-    //: YieldTermStructure(prop, perm)
-    //{
-    //    libraryObject_ = shared_ptr<QuantLib::Extrapolator>(new
-    //        QuantLib::ImpliedTermStructure(hYTS, referenceDate));
-    //}
-
+    //// Stream operator to write a InterpolatedYieldCurvePair to a stream - for logging / error handling.
+    //std::ostream &operator<<(std::ostream &out,
+    //                         InterpolatedYieldCurvePair tokenPair);
 
     InterpolatedYieldCurve::InterpolatedYieldCurve(
             const shared_ptr<ValueObject>& prop,

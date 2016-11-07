@@ -1,10 +1,13 @@
 
 %group(settings);
 %groupCaption(Settings);
-%override;
+
+%insert(settings_library_hpp) %{
+#include <ql/time/date.hpp>
+%}
 
 %insert(settings_addin_cpp) %{
-#include <qlo/objects/objmanual_settings.hpp>
+#include <qlo/objects/obj_settings.hpp>
 %}
 
 namespace QuantLibAddin {

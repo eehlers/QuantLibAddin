@@ -1,19 +1,38 @@
 
 %group(volatilities);
 %groupCaption(Volatilities);
-%override;
+
+%insert(volatilities_library_hpp) %{
+#include <qlo/objects/obj_termstructures.hpp>
+#include <ql/time/businessdayconvention.hpp>
+#include <ql/types.hpp>
+
+namespace QuantLib {
+    class BlackAtmVolCurve;
+    class BlackVolTermStructure;
+    class Calendar;
+    class Date;
+    class DayCounter;
+    class InterestRateIndex;
+    class Matrix;
+    class Period;
+    class SabrVolSurface;
+}
+%}
 
 %insert(volatilities_addin_cpp) %{
-#include <qlo/objects/indexes/interestrateindex.hpp>
+#include <qlo/objects/obj_indexes.hpp>
 #include <ql/experimental/volatility/blackatmvolcurve.hpp>
 #include <ql/experimental/volatility/abcdatmvolcurve.hpp>
 #include <ql/experimental/volatility/sabrvolsurface.hpp>
 #include <ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp>
-
+#include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>
+#include <ql/termstructures/volatility/equityfx/blackvariancesurface.hpp>
 %}
 
 namespace QuantLib {
 
+    %noctor(BlackVolTermStructure);
     class BlackVolTermStructure : public VolatilityTermStructure {
       public:
 
@@ -52,10 +71,10 @@ namespace QuantLib {
       public:
 
         BlackConstantVol(
-            const Date& SettlementDate,                                     //!< Settlement date.
-            const Calendar& Calendar,                                       //!< Holiday calendar (e.g. TARGET).
-            Volatility Volatility,                                          //!< Volatility.
-            const DayCounter& DayCounter=QuantLib::Actual365Fixed()         //!< DayCounter ID.
+            const QuantLib::Date& SettlementDate,                                     //!< Settlement date.
+            const QuantLib::Calendar& Calendar,                                       //!< Holiday calendar (e.g. TARGET).
+            QuantLib::Volatility Volatility,                                          //!< Volatility.
+            const QuantLib::DayCounter& DayCounter=QuantLib::Actual365Fixed()         //!< DayCounter ID.
         );
     };
 
@@ -63,15 +82,16 @@ namespace QuantLib {
       public:
 
         BlackVarianceSurface(
-            const Date& SettlementDate,                                     //!< Settlement date.
-            const Calendar& Calendar,                                       //!< Holiday calendar (e.g. TARGET).
-            const std::vector<Date>& Dates,                                 //!< Dates.
-            const std::vector<Rate>& Strikes,                               //!< Strikes.
-            const Matrix& Volatilities,                                     //!< Volatilities.
-            const DayCounter& DayCounter=QuantLib::Actual365Fixed()         //!< DayCounter ID.
+            const QuantLib::Date& SettlementDate,                                     //!< Settlement date.
+            const QuantLib::Calendar& Calendar,                                       //!< Holiday calendar (e.g. TARGET).
+            const std::vector<QuantLib::Date>& Dates,                                 //!< Dates.
+            const std::vector<QuantLib::Rate>& Strikes,                               //!< Strikes.
+            const QuantLib::Matrix& Volatilities,                                     //!< Volatilities.
+            const QuantLib::DayCounter& DayCounter=QuantLib::Actual365Fixed()         //!< DayCounter ID.
         );
     };
 
+    %noctor(BlackAtmVolCurve);
     class BlackAtmVolCurve : public VolatilityTermStructure {
       public:
 
@@ -119,14 +139,14 @@ namespace QuantLib {
     class AbcdAtmVolCurve: public BlackAtmVolCurve {
     public:
 
-      AbcdAtmVolCurve(
-            Natural SettlementDays,                                         //!< Settlement days.
-            const Calendar& Calendar,                                       //!< Holiday calendar (e.g. TARGET).
-            const std::vector<Period>& OptionTenors,                        //!< Options tenors.
-            const std::vector<Handle<Quote> > & VolatilitiesQuotes,         //!< Volatilities quotes.
+        AbcdAtmVolCurve(
+            QuantLib::Natural SettlementDays,                                         //!< Settlement days.
+            const QuantLib::Calendar& Calendar,                                       //!< Holiday calendar (e.g. TARGET).
+            const std::vector<QuantLib::Period>& OptionTenors,                        //!< Options tenors.
+            const std::vector<QuantLib::Handle<Quote> > & VolatilitiesQuotes,         //!< Volatilities quotes.
             const std::vector<bool> InclusionInInterpolation,               //!< Inclusion flags. If omitted, all volatilities are interpolated.
-            BusinessDayConvention Convention,                               //!< Business day convention (e.g. Following).
-            const DayCounter& DayCounter=QuantLib::Actual365Fixed()         //!< DayCounter ID.
+            QuantLib::BusinessDayConvention Convention,                               //!< Business day convention (e.g. Following).
+            const QuantLib::DayCounter& DayCounter=QuantLib::Actual365Fixed()         //!< DayCounter ID.
         );
 
         //! Returns the options tenors of the atm volatility curve.
@@ -172,23 +192,26 @@ namespace QuantLib {
       public:
 
         SabrVolSurface(
-            const boost::shared_ptr<InterestRateIndex>& InterestRateIndex,      //!< Interest rate index object ID.
-            const Handle<BlackAtmVolCurve>& BlackAtmVolCurve,                   //!< The atm volatility curve.
-            const std::vector<Period>& OptionTenors,                            //!< Options tenors.
-            const std::vector<Spread>& AtmRateSpreads,                          //!< Spreads.
-            const std::vector<std::vector<Handle<Quote> > >& VolatilitiesQuotes //!< Volatilities quotes.
+            const boost::shared_ptr<QuantLib::InterestRateIndex>& InterestRateIndex,//!< Interest rate index object ID.
+            const QuantLib::Handle<QuantLib::BlackAtmVolCurve>& BlackAtmVolCurve,   //!< The atm volatility curve.
+            const std::vector<QuantLib::Period>& OptionTenors,                      //!< Options tenors.
+            const std::vector<QuantLib::Spread>& AtmRateSpreads,                    //!< Spreads.
+            const std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > >& VolatilitiesQuotes //!< Volatilities quotes.
         );
 
         //! Returns the volatilities spread at a given date.
         std::vector<Volatility> volatilitySpreads(
-            const Date &OptionDate                                              //!< The date at which the volatility is evaluated.
+            const Date &OptionDate                                                  //!< The date at which the volatility is evaluated.
         ) const;
 
         //! Returns the volatilities spread at a given date.
         %rename(volatilitySpreads2) volatilitySpreads;
         std::vector<Volatility> volatilitySpreads(
-            const Period &OptionTenor                                           //!< The tenor at which the volatility is evaluated.
+            const Period &OptionTenor                                               //!< The tenor at which the volatility is evaluated.
         ) const;
+%insert(rp_class) %{
+        std::string atmCurve();
+%}
     };
 
     class VolatilityTermStructure : public TermStructure {
@@ -223,12 +246,13 @@ namespace QuantLib {
 
 namespace QuantLibAddin {
 
+    %noexport(SabrVolSurface);
+    %noctor(SabrVolSurface);
     class SabrVolSurface : public InterestRateVolSurface {
       public:
 
         //! Returns the Atm volatility curve.
-        %rename2(atmCurve, atmCurve);
-        const Handle<BlackAtmVolCurve>& atmCurve() const;
+        const QuantLib::Handle<QuantLib::BlackAtmVolCurve>& atmCurve() const;
     };
 }
 

@@ -27,9 +27,7 @@
 #include <qlo/conversions/coerceobject.hpp>
 #include <qlo/conversions/coercelibrarydifferent.hpp>
 
-#include <qlo/objects/termstructures/yieldtermstructures.hpp>
-//#include <qlo/defaulttermstructures.hpp>
-//#include <qlo/swaptionvolstructure.hpp>
+#include <qlo/objects/obj_termstructures.hpp>
 
 #include <ql/termstructures/yieldtermstructure.hpp>
 #include <ql/termstructures/defaulttermstructure.hpp>

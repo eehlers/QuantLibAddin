@@ -26,7 +26,7 @@
 #include <qlo/config.hpp>
 #endif
 
-#include <qlo/objects/objmanual_ratehelpers.hpp>
+#include <qlo/objects/obj_ratehelpers.hpp>
 
 #include <ql/indexes/iborindex.hpp>
 #include <ql/indexes/swapindex.hpp>
@@ -57,11 +57,15 @@ namespace QuantLibAddin {
         }
     }
 
-    QuantLib::Real QuantLibAddin::RateHelper::quoteValue() {
+    std::string RateHelper::quoteName() {
+        return quoteName_;
+    }
+
+    QuantLib::Real RateHelper::quoteValue() {
         return libraryObject_->quote()->value();
     }
 
-    bool QuantLibAddin::RateHelper::quoteIsValid() {
+    bool RateHelper::quoteIsValid() {
         return libraryObject_->quote()->isValid();
     }
 
@@ -293,58 +297,58 @@ namespace QuantLibAddin {
         quoteName_ = f(properties->getSystemProperty("FixedRate"));
     }
 
-    BondHelper::BondHelper(
-            const shared_ptr<ValueObject>& properties,
-            const QuantLib::Handle<QuantLib::Quote>& price,
-            const shared_ptr<QuantLib::Bond>& bond,
-            const bool useCleanPrice,
-            bool permanent)
-    : RateHelper(properties, permanent) {
-        libraryObject_ = shared_ptr<QuantLib::BondHelper>(new
-            QuantLib::BondHelper(price, bond, useCleanPrice));
-        quoteName_ = f(properties->getSystemProperty("Price"));
-    }
+    //BondHelper::BondHelper(
+    //        const shared_ptr<ValueObject>& properties,
+    //        const QuantLib::Handle<QuantLib::Quote>& price,
+    //        const shared_ptr<QuantLib::Bond>& bond,
+    //        const bool useCleanPrice,
+    //        bool permanent)
+    //: RateHelper(properties, permanent) {
+    //    libraryObject_ = shared_ptr<QuantLib::BondHelper>(new
+    //        QuantLib::BondHelper(price, bond, useCleanPrice));
+    //    quoteName_ = f(properties->getSystemProperty("Price"));
+    //}
 
-    FixedRateBondHelper::FixedRateBondHelper(
-            const shared_ptr<ValueObject>& properties,
-            const QuantLib::Handle<QuantLib::Quote>& price,
-            QuantLib::Natural settlementDays,
-            QuantLib::Real faceAmount,
-            const shared_ptr<QuantLib::Schedule>& schedule,
-            const std::vector<QuantLib::Rate>& coupons,
-            const QuantLib::DayCounter& paymentDayCounter,
-            QuantLib::BusinessDayConvention paymentConvention,
-            QuantLib::Real redemption,
-            const QuantLib::Date& issueDate,
-            const QuantLib::Calendar& paymentCalendar,
-            const QuantLib::Period& exCouponPeriod,
-            const QuantLib::Calendar& exCouponCalendar,
-            const QuantLib::BusinessDayConvention exCouponConvention,
-            bool exCouponEndOfMonth,
-            const bool useCleanPrice,
-            bool permanent)
-    : BondHelper(properties, price, shared_ptr<QuantLib::Bond>(new
-        QuantLib::FixedRateBond(settlementDays, faceAmount, *schedule,
-                      coupons, paymentDayCounter, paymentConvention,
-                      redemption, issueDate)), useCleanPrice, permanent) {
-        libraryObject_ = shared_ptr<QuantLib::FixedRateBondHelper>(new
-            QuantLib::FixedRateBondHelper(price,
-                                          settlementDays,
-                                          faceAmount,
-                                          *schedule,
-                                          coupons,
-                                          paymentDayCounter,
-                                          paymentConvention,
-                                          redemption,
-                                          issueDate,
-                                          paymentCalendar,
-                                          exCouponPeriod,
-                                          exCouponCalendar,
-                                          exCouponConvention,
-                                          exCouponEndOfMonth,
-                                          useCleanPrice));
-        quoteName_ = f(properties->getSystemProperty("Price"));
-    }
+    //FixedRateBondHelper::FixedRateBondHelper(
+    //        const shared_ptr<ValueObject>& properties,
+    //        const QuantLib::Handle<QuantLib::Quote>& price,
+    //        QuantLib::Natural settlementDays,
+    //        QuantLib::Real faceAmount,
+    //        const shared_ptr<QuantLib::Schedule>& schedule,
+    //        const std::vector<QuantLib::Rate>& coupons,
+    //        const QuantLib::DayCounter& paymentDayCounter,
+    //        QuantLib::BusinessDayConvention paymentConvention,
+    //        QuantLib::Real redemption,
+    //        const QuantLib::Date& issueDate,
+    //        const QuantLib::Calendar& paymentCalendar,
+    //        const QuantLib::Period& exCouponPeriod,
+    //        const QuantLib::Calendar& exCouponCalendar,
+    //        const QuantLib::BusinessDayConvention exCouponConvention,
+    //        bool exCouponEndOfMonth,
+    //        const bool useCleanPrice,
+    //        bool permanent)
+    //: BondHelper(properties, price, shared_ptr<QuantLib::Bond>(new
+    //    QuantLib::FixedRateBond(settlementDays, faceAmount, *schedule,
+    //                  coupons, paymentDayCounter, paymentConvention,
+    //                  redemption, issueDate)), useCleanPrice, permanent) {
+    //    libraryObject_ = shared_ptr<QuantLib::FixedRateBondHelper>(new
+    //        QuantLib::FixedRateBondHelper(price,
+    //                                      settlementDays,
+    //                                      faceAmount,
+    //                                      *schedule,
+    //                                      coupons,
+    //                                      paymentDayCounter,
+    //                                      paymentConvention,
+    //                                      redemption,
+    //                                      issueDate,
+    //                                      paymentCalendar,
+    //                                      exCouponPeriod,
+    //                                      exCouponCalendar,
+    //                                      exCouponConvention,
+    //                                      exCouponEndOfMonth,
+    //                                      useCleanPrice));
+    //    quoteName_ = f(properties->getSystemProperty("Price"));
+    //}
 
     FxSwapRateHelper::FxSwapRateHelper(
         const shared_ptr<ValueObject>& properties,

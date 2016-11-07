@@ -21,8 +21,8 @@
 //    #include <qlo/config.hpp>
 //#endif
 #include <qlo/conversions/all.hpp>
-#include <qlo/objects/objmanual_termstructures.hpp>
-#include <qlo/objects/objmanual_quotes.hpp>
+#include <qlo/objects/obj_termstructures.hpp>
+#include <qlo/objects/obj_quotes.hpp>
 #include <ql/utilities/dataparsers.hpp>
 #include <ql/time/period.hpp>
 #include <ql/quotes/all.hpp>

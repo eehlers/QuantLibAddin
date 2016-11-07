@@ -1,5 +1,5 @@
 
-#include <qlo/objects/objmanual_date.hpp>
+#include <qlo/objects/obj_date.hpp>
 #include <ql/settings.hpp>
 
 QuantLib::Period QuantLibAddin::periodFromFrequency(const QuantLib::Frequency &f) {

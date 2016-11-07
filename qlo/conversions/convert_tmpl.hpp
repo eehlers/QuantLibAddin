@@ -36,8 +36,8 @@
 #include <ql/timeseries.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <ql/index.hpp>
-#include <qlo/objects/objmanual_timeseries.hpp>
-#include <qlo/objects/objmanual_quotes.hpp>
+#include <qlo/objects/obj_timeseries.hpp>
+#include <qlo/objects/obj_quotes.hpp>
 #include <qlo/conversions/all.hpp>
 #include <rp/repository.hpp>
 #include <rp/rpdefines.hpp>

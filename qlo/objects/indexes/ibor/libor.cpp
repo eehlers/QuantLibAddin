@@ -24,12 +24,12 @@
     #include <qlo/config.hpp>
 #endif
 
-#include <qlo/objects/indexes/ibor/libor.hpp>
+#include <qlo/objects/obj_indexes.hpp>
 
 #include <ql/indexes/ibor/eurlibor.hpp>
 #include <ql/indexes/ibor/usdlibor.hpp>
 #include <ql/indexes/ibor/gbplibor.hpp>
-#include <ql/indexes/ibor/sonia.hpp>
+#include <ql/indexes/ibor/sonia.hpp>//deleteme
 #include <ql/indexes/ibor/chflibor.hpp>
 #include <ql/indexes/ibor/jpylibor.hpp>
 
@@ -163,15 +163,5 @@ namespace QuantLibAddin {
               QL_FAIL("Unhandled currency " << currency);
         }
     }
-
-    Sonia::Sonia(const shared_ptr<ValueObject>& properties,
-                 const QuantLib::Handle<QuantLib::YieldTermStructure>& h,
-                 bool permanent)
-    : OvernightIndex(properties, permanent)
-    {
-        libraryObject_ = shared_ptr<QuantLib::Sonia>(new
-            QuantLib::Sonia(h));
-    }
-
 }
 

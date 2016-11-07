@@ -54,27 +54,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\functions\assetswap.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\basketlossmodels.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\bonds.i"
-					>
-				</File>
-				<File
 					RelativePath=".\functions\calendars.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\couponvectors.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\credit.i"
 					>
 				</File>
 				<File
@@ -86,18 +66,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\functions\defaultbasket.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\defaulttermstructures.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\exercise.i"
-					>
-				</File>
-				<File
 					RelativePath=".\functions\handles.i"
 					>
 				</File>
@@ -106,47 +74,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\functions\instruments.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\interpolation.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\latentmodels.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\leg.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\math.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\models.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\payoffs.i"
-					>
-				</File>
-				<File
 					RelativePath=".\functions\piecewiseyieldcurve.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\prices.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\pricingengines.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\processes.i"
 					>
 				</File>
 				<File
@@ -166,10 +94,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\functions\swap.i"
-					>
-				</File>
-				<File
 					RelativePath=".\functions\termstructures.i"
 					>
 				</File>
@@ -179,10 +103,6 @@
 				</File>
 				<File
 					RelativePath=".\functions\utilities.i"
-					>
-				</File>
-				<File
-					RelativePath=".\functions\vanillaswaps.i"
 					>
 				</File>
 				<File

@@ -24,32 +24,10 @@
     #include <qlo/config.hpp>
 #endif
 
-#include <qlo/objects/indexes/swapindex.hpp>
+#include <qlo/objects/obj_indexes.hpp>
 #include <ql/indexes/swapindex.hpp>
 
 namespace QuantLibAddin {
-
-    SwapIndex::SwapIndex(const boost::shared_ptr<reposit::ValueObject>& properties,
-                         const std::string& familyName,
-                         const QuantLib::Period& p,
-                         QuantLib::Natural fixingDays,
-                         QuantLib::Currency& crr,
-                         const QuantLib::Calendar& calendar,
-                         const QuantLib::Period& fixedLegTenor,
-                         QuantLib::BusinessDayConvention fixedLegBDC,
-                         const QuantLib::DayCounter& fixedLegDayCounter,
-                         const boost::shared_ptr<QuantLib::IborIndex>& index,
-                         const QuantLib::Handle<QuantLib::YieldTermStructure>& disc,
-                         bool permanent)
-    : InterestRateIndex(properties, permanent)
-    {
-        libraryObject_ = boost::shared_ptr<QuantLib::SwapIndex>(new
-            QuantLib::SwapIndex(familyName, p,
-                                fixingDays, crr, calendar, 
-                                fixedLegTenor, fixedLegBDC,
-                                fixedLegDayCounter, index,
-                                disc));
-    }
 
     std::ostream& operator<<(std::ostream& out,
                              SwapIndex::FixingType t) {

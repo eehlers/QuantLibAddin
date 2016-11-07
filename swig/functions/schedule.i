@@ -1,9 +1,20 @@
 
 %group(schedule);
 %groupCaption(Schedule);
-%override;
 
 %insert(schedule_library_hpp) %{
+#include <ql/time/dategenerationrule.hpp>
+
+namespace QuantLib {
+    class Schedule;
+    class Date;
+    class Period;
+    class Calendar;
+    enum BusinessDayConvention;
+}
+%}
+
+%insert(schedule_addin_cpp) %{
 #include <ql/time/schedule.hpp>
 %}
 
@@ -11,8 +22,9 @@ namespace QuantLib {
 
     class Schedule {
       public:
+
         Schedule(
-                 const Date &EffectiveDate/*=QuantLib::Date()*/,    //!< effective date.
+                 const Date &EffectiveDate/*=Date()*/,              //!< effective date.
                  const Date &TerminationDate,                       //!< termination date.
                  const Period &Tenor,                               //!< tenor (e.g. 2D for two days , 3W for three weeks, 6M for six months, 1Y for one year).
                  const Calendar &Calendar=QuantLib::NullCalendar(), //!< holiday calendar (e.g. TARGET).
@@ -20,19 +32,20 @@ namespace QuantLib {
                  BusinessDayConvention TermDateConv=QuantLib::BusinessDayConvention(QuantLib::Unadjusted),//!< termination date business day convention.
                  DateGeneration::Rule GenRule=QuantLib::DateGeneration::Rule(QuantLib::DateGeneration::Backward),//!< Date generation rule (Backward, Forward, ThirdWednesday, Twentieth, TwentiethIMM, Zero).
                  bool EndOfMonth=false,                             //!< end of month convention. Ignored for Tenor below 1M.
-                 const Date& FirstDate=QuantLib::Date(),            //!< stub date, if there is an irregular starting period.
-                 const Date& NextToLastDate=QuantLib::Date()        //!< stub date, if there an irregular final period.
+                 const Date& FirstDate=Date(),                      //!< stub date, if there is an irregular starting period.
+                 const Date& NextToLastDate=Date()                  //!< stub date, if there an irregular final period.
         );
         
         %rename(ScheduleFromDateVector) Schedule;
         Schedule(
-            const std::vector<QuantLib::Date>& EffectiveDate/*=std::vector<QuantLib::Date>()*/ //!< Date vector.
+            const std::vector<Date>& EffectiveDate/*=std::vector<Date>()*/ //!< Date vector.
         );
 
         %rename(ScheduleTruncated) Schedule;
+        %override2(Schedule);
         Schedule(
-            const boost::shared_ptr<QuantLib::Schedule>& OriginalSchedule,//!< Original schedule object ID.
-            const QuantLib::Date& TruncationDate                    //!< Truncation date.
+            const boost::shared_ptr<Schedule>& OriginalSchedule,    //!< Original schedule object ID.
+            const Date& TruncationDate                              //!< Truncation date.
         );
 
         //! Returns the number of dates in the given Schedule object.
@@ -40,12 +53,12 @@ namespace QuantLib {
 
         //! Returns the highest date in the given Schedule object preceding the input reference date.
         Date previousDate(
-            const Date& RefDate=QuantLib::Date()                    //!< Reference date.
+            const Date& RefDate=Date()                              //!< Reference date.
         ) const;
 
         //! Returns the lowest date in the given Schedule object following the input reference date.
         Date nextDate(
-            const Date& RefDate=QuantLib::Date()                    //!< Reference date.
+            const Date& RefDate=Date()                              //!< Reference date.
         ) const;
 
         //! Returns the dates for the given Schedule object.

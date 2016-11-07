@@ -1,18 +1,43 @@
 
 %group(timeseries);
 %groupCaption(TimeSeries);
-%override;
 
-%insert(timeseries_addin_cpp) %{
-#include <qlo/objects/objmanual_timeseries.hpp>
-//#include <qlo/objects/objmanual_indexes.hpp>
+%insert(timeseries_library_hpp) %{
+#include <ql/types.hpp>
+#include <map>
+
+namespace QuantLib {
+    class Date;
+    class Index;
+
+    template<class T, class Container>
+    class TimeSeries;
+
+    typedef TimeSeries<QuantLib::Real, std::map<QuantLib::Date, QuantLib::Real> > TimeSeriesDef;
+}
 %}
+
+//%insert(timeseries_addin_cpp) %{
+//#include <qlo/objects/objmanual_timeseries.hpp>
+//#include <qlo/objects/objmanual_indexes.hpp>
+//%}
 
 namespace QuantLib {
 
     %rename(TimeSeries) TimeSeriesDef;
     class TimeSeriesDef {
         public:
+
+            %rename(TimeSeries) TimeSeriesDef;
+            TimeSeriesDef(
+                const std::vector<QuantLib::Date> &Dates,           //!< dates.
+                const std::vector<QuantLib::Real> &Values           //!< values.
+            );
+
+            //%rename(TimeSeriesFromIndex) TimeSeriesDef;
+            //TimeSeriesDef(
+            //    const boost::shared_ptr<QuantLib::Index>& Index     //!< Index object ID.
+            //);
 
             //! Returns the first date for which a historical datum exists.
             Date firstDate();
@@ -31,25 +56,19 @@ namespace QuantLib {
 
             //! Returns the historical data.
             std::vector<Real> values();
+%insert(rp_class) %{
+        QuantLib::Real subscriptWrapper(const QuantLib::Date& d);
+%}
     };
 }
 
 namespace QuantLibAddin {
 
     %rename(TimeSeries) TimeSeriesDef;
+    %noexport(TimeSeriesDef);
+    %noctor(TimeSeriesDef);
     class TimeSeriesDef {
         public:
-
-            %rename(TimeSeries) TimeSeriesDef;
-            TimeSeriesDef(
-                const std::vector<QuantLib::Date> &Dates,           //!< dates.
-                const std::vector<QuantLib::Real> &Values           //!< values.
-            );
-
-            //%rename(TimeSeriesFromIndex) TimeSeriesDef;
-            //TimeSeriesDef(
-            //    const boost::shared_ptr<QuantLib::Index>& Index     //!< Index object ID.
-            //);
 
             //! Returns returns the data corresponding to the given dates.
             %rename(value) subscriptWrapper;

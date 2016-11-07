@@ -21,7 +21,7 @@
     #include <qlo/config.hpp>
 #endif
 
-#include <qlo/objects/objmanual_timeseries.hpp>
+#include <qlo/objects/obj_timeseries.hpp>
 
 #include <ql/timeseries.hpp>
 #include <ql/index.hpp>
@@ -62,14 +62,14 @@ namespace QuantLibAddin {
                                     v.begin()));
     }
 
-   TimeSeriesDef::TimeSeriesDef(const shared_ptr<ValueObject>& prop,
-                                const boost::shared_ptr<QuantLib::Index>& index,
-                                bool perm)
-    : LibraryObject<QuantLib::TimeSeriesDef>(prop, perm)
-    {
-        libraryObject_ = shared_ptr<QuantLib::TimeSeriesDef>(new
-            QuantLib::TimeSeriesDef(index->timeSeries()));
-    }
+   //TimeSeriesDef::TimeSeriesDef(const shared_ptr<ValueObject>& prop,
+   //                             const boost::shared_ptr<QuantLib::Index>& index,
+   //                             bool perm)
+   // : LibraryObject<QuantLib::TimeSeriesDef>(prop, perm)
+   // {
+   //     libraryObject_ = shared_ptr<QuantLib::TimeSeriesDef>(new
+   //         QuantLib::TimeSeriesDef(index->timeSeries()));
+   // }
 
     QuantLib::Real TimeSeriesDef::subscriptWrapper(const QuantLib::Date& d) {
         return libraryObject_->operator[](d);

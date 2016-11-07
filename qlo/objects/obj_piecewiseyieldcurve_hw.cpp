@@ -23,7 +23,7 @@
 #include <qlo/config.hpp>
 #endif
 
-#include <qlo/objects/objmanual_piecewiseyieldcurve.hpp>
+#include <qlo/objects/obj_piecewiseyieldcurve.hpp>
 #include <qlo/enumerations/factories/termstructuresfactory.hpp>
 
 #include <ql/termstructures/yield/piecewiseyieldcurve.hpp>

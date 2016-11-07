@@ -24,7 +24,7 @@
     #include <qlo/config.hpp>
 #endif
 
-#include <qlo/objects/indexes/swap/euriborswap.hpp>
+#include <qlo/objects/obj_indexes.hpp>
 
 #include <ql/indexes/swap/euriborswap.hpp>
 

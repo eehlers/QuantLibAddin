@@ -24,14 +24,14 @@
     #include <qlo/config.hpp>
 #endif
 
-#include <qlo/objects/objmanual_indexes.hpp>
+#include <qlo/objects/obj_indexes.hpp>
 
 #include <ql/timeseries.hpp>
 #include <ql/index.hpp>
 
 void QuantLibAddin::Index::addFixings(const std::vector<QuantLib::Date>& dates,
                        const std::vector<QuantLib::Real>& values,
-                       bool forceOverwrite, bool updateValuObject) {
+                       bool forceOverwrite/*, bool updateValuObject*/) {
     QL_REQUIRE(dates.size()==values.size(),
                "size mismatch between dates (" << dates.size() <<
                ") and values (" << values.size() << ")");
@@ -47,7 +47,7 @@ void QuantLibAddin::Index::addFixings(const std::vector<QuantLib::Date>& dates,
     libraryObject_->addFixings(d.begin(), d.end(),
                                v.begin(), forceOverwrite);
 
-    if (updateValuObject) {
+    //if (updateValuObject) {
         std::vector<long> fixingDates;
         std::vector<QuantLib::Real> fixingRates;
         const QuantLib::TimeSeries<QuantLib::Real>& history = libraryObject_->timeSeries();
@@ -59,5 +59,5 @@ void QuantLibAddin::Index::addFixings(const std::vector<QuantLib::Date>& dates,
         boost::shared_ptr<reposit::ValueObject> inst_properties = properties();
         inst_properties->setProperty("IndexFixingDates", fixingDates);
         inst_properties->setProperty("IndexFixingRates", fixingRates);
-    }
+    //}
 }

@@ -3,12 +3,12 @@
 %groupCaption(Coupon Vectors);
 %override;
 
-%insert(couponvectors_addin_cpp) %{
-#include <qlo/objects/obj_schedule.hpp>
-#include <qlo/objects/indexes/iborindex.hpp>
-#include <qlo/objects/objmanual_termstructures.hpp>
-#include <qlo/objects/cashflows/conundrumpricer.hpp>
-%}
+//%insert(couponvectors_addin_cpp) %{
+//#include <qlo/objects/obj_schedule.hpp>
+//#include <qlo/objects/indexes/iborindex.hpp>
+//#include <qlo/objects/objmanual_termstructures.hpp>
+//#include <qlo/objects/cashflows/conundrumpricer.hpp>
+//%}
 
 namespace QuantLibAddin {
 

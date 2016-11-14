@@ -2,15 +2,15 @@
 %group(vanillaswaps);
 %groupCaption(Vanilla Swaps);
 
-%insert(vanillaswaps_library_hpp) %{
-#include <ql/instruments/vanillaswap.hpp>
-#include <qlo/objects/obj_instruments.hpp>
-%}
-
-%insert(vanillaswaps_addin_cpp) %{
-#include <qlo/objects/obj_schedule.hpp>
-#include <qlo/objects/indexes/iborindex.hpp>
-%}
+//%insert(vanillaswaps_library_hpp) %{
+//#include <ql/instruments/vanillaswap.hpp>
+//#include <qlo/objects/obj_instruments.hpp>
+//%}
+//
+//%insert(vanillaswaps_addin_cpp) %{
+//#include <qlo/objects/obj_schedule.hpp>
+//#include <qlo/objects/indexes/iborindex.hpp>
+//%}
 
 namespace QuantLib {
 

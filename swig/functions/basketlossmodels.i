@@ -4,14 +4,14 @@
 
 %override;
 
-%insert(basketlossmodels_addin_cpp) %{
-#include <ql/experimental/credit/gaussianlhplossmodel.hpp>
-#include <ql/experimental/credit/binomiallossmodel.hpp>
-#include <ql/experimental/credit/inhomogeneouspooldef.hpp>
-#include <ql/experimental/credit/correlationstructure.hpp>
-#include <qlo/objects/credit/basketlossmodels.hpp>
-#include <qlo/objects/credit/defaulttermstructures.hpp>
-%}
+//%insert(basketlossmodels_addin_cpp) %{
+//#include <ql/experimental/credit/gaussianlhplossmodel.hpp>
+//#include <ql/experimental/credit/binomiallossmodel.hpp>
+//#include <ql/experimental/credit/inhomogeneouspooldef.hpp>
+//#include <ql/experimental/credit/correlationstructure.hpp>
+//#include <qlo/objects/credit/basketlossmodels.hpp>
+//#include <qlo/objects/credit/defaulttermstructures.hpp>
+//%}
 
 namespace QuantLib {
 

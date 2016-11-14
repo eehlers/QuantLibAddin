@@ -1,8 +1,7 @@
 
-%group(date);
-%groupCaption(Date);
+%group(Date);
 
-%insert(date_library_hpp) %{
+%insert(obj_hpp) %{
 #include <vector>
 #include <ql/time/date.hpp>
 #include <ql/time/frequency.hpp>
@@ -271,3 +270,4 @@ namespace QuantLibAddin {
     //! returns all the known ECB maintenance period start dates.
     std::vector<QuantLib::Date> ECBKnownDates();
 }
+

@@ -1,1 +1,2 @@
 loop_*.hpp
+!loop_timeseries.hpp

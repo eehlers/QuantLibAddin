@@ -1,8 +1,7 @@
 
-%group(piecewiseyieldcurve);
-%groupCaption(Piecewise Yield Curve);
+%group(Piecewise Yield Curve);
 
-%insert(piecewiseyieldcurve_library_hpp) %{
+%insert(obj_hpp) %{
 #include <qlo/objects/obj_termstructures.hpp>
 #include <qlo/objects/obj_ratehelpers.hpp>
 %}

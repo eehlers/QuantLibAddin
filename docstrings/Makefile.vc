@@ -16,16 +16,16 @@ DOXYGEN=doxygen.exe
 ALL : docstrings.txt
 
 docstrings-ql.txt:
-    $(DOXYGEN) Doxyfile.ql
-    $(PYTHON) docstrings.py xml-ql docstrings-ql.txt
+#    $(DOXYGEN) Doxyfile.ql
+#    $(PYTHON) docstrings.py xml-ql docstrings-ql.txt
 
 docstrings-qla.txt: $(QLA_INPUTS)
-    $(DOXYGEN) Doxyfile.qla
-    $(PYTHON) docstrings.py xml-qla docstrings-qla.txt
+#    $(DOXYGEN) Doxyfile.qla
+#    $(PYTHON) docstrings.py xml-qla docstrings-qla.txt
 
 docstrings.txt: docstrings-ql.txt docstrings-qla.txt
-    copy docstrings-ql.txt docstrings.txt
-    type docstrings-qla.txt >> docstrings.txt
+#    copy docstrings-ql.txt docstrings.txt
+#    type docstrings-qla.txt >> docstrings.txt
 
 CLEAN :
     -@ if EXIST $(BUILD_DIR)\* del /f /q $(BUILD_DIR)\*

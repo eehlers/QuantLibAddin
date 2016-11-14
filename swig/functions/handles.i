@@ -1,7 +1,6 @@
 
-%group(handles);
-%groupCaption(Handles);
 %override;
+%group(Handles);
 
 namespace QuantLibAddin {
 

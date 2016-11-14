@@ -4,15 +4,15 @@
 %groupFunctionWizard(QuantLib - Financial);
 %override;
 
-%insert(bonds_addin_cpp) %{
-#include <qlo/objects/obj_schedule.hpp>
-#include <qlo/objects/objmanual_termstructures.hpp>
-#include <qlo/objects/objmanual_leg.hpp>
-#include <qlo/objects/objmanual_couponvectors.hpp>
-#include <qlo/objects/indexes/iborindex.hpp>
-#include <qlo/objects/indexes/swapindex.hpp>
-#include <ql/pricingengines/bond/bondfunctions.hpp>
-%}
+//%insert(bonds_addin_cpp) %{
+//#include <qlo/objects/obj_schedule.hpp>
+//#include <qlo/objects/objmanual_termstructures.hpp>
+//#include <qlo/objects/objmanual_leg.hpp>
+//#include <qlo/objects/objmanual_couponvectors.hpp>
+//#include <qlo/objects/indexes/iborindex.hpp>
+//#include <qlo/objects/indexes/swapindex.hpp>
+//#include <ql/pricingengines/bond/bondfunctions.hpp>
+//%}
 
 namespace QuantLib {
 

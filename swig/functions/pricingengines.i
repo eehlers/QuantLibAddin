@@ -2,19 +2,19 @@
 %group(pricingengines);
 %groupCaption(Pricing Engines);
 
-%insert(pricingengines_library_hpp) %{
-#include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>
-#include <ql/pricingengines/swap/discountingswapengine.hpp>
-#include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
-#include <ql/pricingengines/swaption/treeswaptionengine.hpp>
-#include <ql/pricingengines/swaption/g2swaptionengine.hpp>
-%}
-
-%insert(pricingengines_addin_cpp) %{
-#include <qlo/objects/obj_processes.hpp>
-#include <qlo/objects/objmanual_termstructures.hpp>
-#include <qlo/objects/obj_models.hpp>
-%}
+//%insert(pricingengines_library_hpp) %{
+//#include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>
+//#include <ql/pricingengines/swap/discountingswapengine.hpp>
+//#include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
+//#include <ql/pricingengines/swaption/treeswaptionengine.hpp>
+//#include <ql/pricingengines/swaption/g2swaptionengine.hpp>
+//%}
+//
+//%insert(pricingengines_addin_cpp) %{
+//#include <qlo/objects/obj_processes.hpp>
+//#include <qlo/objects/objmanual_termstructures.hpp>
+//#include <qlo/objects/obj_models.hpp>
+//%}
 
 namespace QuantLib {
 

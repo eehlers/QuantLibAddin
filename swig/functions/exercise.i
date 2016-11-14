@@ -2,9 +2,9 @@
 %group(exercise);
 %groupCaption(Exercise);
 
-%insert(exercise_library_hpp) %{
-#include <ql/exercise.hpp>
-%}
+//%insert(exercise_library_hpp) %{
+//#include <ql/exercise.hpp>
+//%}
 
 namespace QuantLib {
 

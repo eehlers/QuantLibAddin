@@ -1,8 +1,7 @@
 
-%group(termstructures);
-%groupCaption(Term Structures);
+%group(Term Structures);
 
-%insert(termstructures_library_hpp) %{
+%insert(obj_hpp) %{
 #include <ql/termstructures/yield/flatforward.hpp>
 #include <ql/termstructures/yield/discountcurve.hpp>
 #include <ql/termstructures/yield/zerocurve.hpp>
@@ -22,11 +21,11 @@ namespace QuantLib {
 }
 %}
 
-%insert(termstructures_addin_cpp) %{
+%insert(obj_cpp) %{
 #include <qlo/objects/objmanual_handles.hpp>
 %}
 
-%insert(rp_header) %{
+%insert(rp_namespace) %{
     // A pair indicating a combination of Traits / Interpolator.
     typedef std::pair<InterpolatedYieldCurve::Traits, InterpolatedYieldCurve::Interpolator> InterpolatedYieldCurvePair;
 

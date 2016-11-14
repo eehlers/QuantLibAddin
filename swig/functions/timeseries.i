@@ -1,8 +1,7 @@
 
-%group(timeseries);
-%groupCaption(TimeSeries);
+%group(TimeSeries);
 
-%insert(timeseries_library_hpp) %{
+%insert(obj_hpp) %{
 #include <ql/types.hpp>
 #include <map>
 
@@ -16,11 +15,6 @@ namespace QuantLib {
     typedef TimeSeries<QuantLib::Real, std::map<QuantLib::Date, QuantLib::Real> > TimeSeriesDef;
 }
 %}
-
-//%insert(timeseries_addin_cpp) %{
-//#include <qlo/objects/objmanual_timeseries.hpp>
-//#include <qlo/objects/objmanual_indexes.hpp>
-//%}
 
 namespace QuantLib {
 

@@ -1,8 +1,7 @@
 
-%group(volatilities);
-%groupCaption(Volatilities);
+%group(Volatilities);
 
-%insert(volatilities_library_hpp) %{
+%insert(obj_hpp) %{
 #include <qlo/objects/obj_termstructures.hpp>
 #include <ql/time/businessdayconvention.hpp>
 #include <ql/types.hpp>
@@ -20,7 +19,7 @@ namespace QuantLib {
 }
 %}
 
-%insert(volatilities_addin_cpp) %{
+%insert(obj_cpp) %{
 #include <qlo/objects/obj_indexes.hpp>
 #include <ql/experimental/volatility/blackatmvolcurve.hpp>
 #include <ql/experimental/volatility/abcdatmvolcurve.hpp>

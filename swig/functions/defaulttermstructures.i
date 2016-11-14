@@ -4,9 +4,9 @@
 
 %override;
 
-%insert(defaulttermstructures_addin_cpp) %{
-#include <qlo/conversions/coercetermstructure.hpp>
-%}
+//%insert(defaulttermstructures_addin_cpp) %{
+//#include <qlo/conversions/coercetermstructure.hpp>
+//%}
 
 namespace QuantLibAddin {
 

@@ -4,12 +4,12 @@
 
 %override;
 
-%insert(defaultbasket_addin_cpp) %{
-#include <ql/experimental/credit/basket.hpp>
-#include <qlo/objects/credit/credit.hpp>
-#include <qlo/objects/credit/defaultbasket.hpp>
-#include <qlo/objects/credit/basketlossmodels.hpp>
-%}
+//%insert(defaultbasket_addin_cpp) %{
+//#include <ql/experimental/credit/basket.hpp>
+//#include <qlo/objects/credit/credit.hpp>
+//#include <qlo/objects/credit/defaultbasket.hpp>
+//#include <qlo/objects/credit/basketlossmodels.hpp>
+//%}
 
 namespace QuantLib {
 

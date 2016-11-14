@@ -1,8 +1,7 @@
 
-%group(utilities);
-%groupCaption(Utilities);
+%group(Utilities);
 
-%insert(utilities_addin_cpp) %{
+%insert(obj_cpp) %{
 #include <qlo/objects/obj_utilities.hpp>
 %}
 

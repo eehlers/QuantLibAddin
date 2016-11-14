@@ -2,9 +2,9 @@
 %group(payoffs);
 %groupCaption(Payoffs);
 
-%insert(payoffs_library_hpp) %{
-#include <ql/instruments/payoffs.hpp>
-%}
+//%insert(payoffs_library_hpp) %{
+//#include <ql/instruments/payoffs.hpp>
+//%}
 
 namespace QuantLib {
 

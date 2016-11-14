@@ -2,19 +2,19 @@
 %group(models);
 %groupCaption(Models);
 
-%insert(models_library_hpp) %{
-#include <ql/models/shortrate/calibrationhelpers/swaptionhelper.hpp>
-#include <ql/models/shortrate/onefactormodels/hullwhite.hpp>
-#include <ql/models/shortrate/twofactormodels/g2.hpp>
-%}
-
-%insert(models_addin_cpp) %{
-#include <qlo/objects/obj_pricingengines.hpp>
-#include <qlo/objects/objmanual_quotes.hpp>
-#include <qlo/objects/objmanual_termstructures.hpp>
-#include <qlo/objects/obj_math.hpp>
-#include <qlo/objects/indexes/iborindex.hpp>
-%}
+//%insert(models_library_hpp) %{
+//#include <ql/models/shortrate/calibrationhelpers/swaptionhelper.hpp>
+//#include <ql/models/shortrate/onefactormodels/hullwhite.hpp>
+//#include <ql/models/shortrate/twofactormodels/g2.hpp>
+//%}
+//
+//%insert(models_addin_cpp) %{
+//#include <qlo/objects/obj_pricingengines.hpp>
+//#include <qlo/objects/objmanual_quotes.hpp>
+//#include <qlo/objects/objmanual_termstructures.hpp>
+//#include <qlo/objects/obj_math.hpp>
+//#include <qlo/objects/indexes/iborindex.hpp>
+//%}
 
 namespace QuantLib {
 

@@ -4,12 +4,12 @@
 
 %override;
 
-%insert(latentmodels_addin_cpp) %{
-#include <ql/experimental/credit/basket.hpp>
-    
-#include <qlo/objects/credit/defaultbasket.hpp>
-#include <qlo/objects/credit/credit.hpp>
-%}
+//%insert(latentmodels_addin_cpp) %{
+//#include <ql/experimental/credit/basket.hpp>
+//    
+//#include <qlo/objects/credit/defaultbasket.hpp>
+//#include <qlo/objects/credit/credit.hpp>
+//%}
 
 namespace QuantLib {
 

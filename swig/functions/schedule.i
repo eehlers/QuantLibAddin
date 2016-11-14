@@ -1,8 +1,7 @@
 
-%group(schedule);
-%groupCaption(Schedule);
+%group(Schedule);
 
-%insert(schedule_library_hpp) %{
+%insert(obj_hpp) %{
 #include <ql/time/dategenerationrule.hpp>
 
 namespace QuantLib {
@@ -14,7 +13,7 @@ namespace QuantLib {
 }
 %}
 
-%insert(schedule_addin_cpp) %{
+%insert(obj_cpp) %{
 #include <ql/time/schedule.hpp>
 %}
 

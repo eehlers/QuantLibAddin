@@ -2,14 +2,14 @@
 %group(processes);
 %groupCaption(Processes);
 
-%insert(processes_library_hpp) %{
-#include <ql/processes/blackscholesprocess.hpp>
-%}
-
-%insert(processes_addin_cpp) %{
-#include <qlo/objects/objmanual_quotes.hpp>
-#include <qlo/objects/obj_volatilities.hpp>
-%}
+//%insert(processes_library_hpp) %{
+//#include <ql/processes/blackscholesprocess.hpp>
+//%}
+//
+//%insert(processes_addin_cpp) %{
+//#include <qlo/objects/objmanual_quotes.hpp>
+//#include <qlo/objects/obj_volatilities.hpp>
+//%}
 
 namespace QuantLib {
 

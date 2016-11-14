@@ -1054,11 +1054,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\obj_date.cpp"
+				RelativePath=".\qlo\objects\obj_date.hpp"
 				>
 			</File>
 			<File
-				RelativePath=".\qlo\objects\obj_date.hpp"
+				RelativePath=".\qlo\objects\obj_date_hw.cpp"
 				>
 			</File>
 			<File

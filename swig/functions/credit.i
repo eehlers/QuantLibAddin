@@ -4,25 +4,25 @@
 
 %override;
 
-%insert(credit_addin_cpp) %{
-#include <qlo/objects/credit/credit.hpp>
-#include <qlo/objects/instruments/creditdefaultswap.hpp>
-#include <qlo/objects/instruments/cdsoption.hpp>
-#include <qlo/objects/obj_pricingengines.hpp>
-#include <qlo/objects/obj_schedule.hpp>
-#include <qlo/objects/objmanual_termstructures.hpp>
-#include <qlo/conversions/coercetermstructure.hpp>
-#include <qlo/objects/objmanual_ratehelpers.hpp>
-#include <qlo/objects/credit/defaultbasket.hpp>
-#include <qlo/objects/credit/credit.hpp>
-#include <qlo/objects/obj_exercise.hpp>
-
-#include <ql/termstructures/yieldtermstructure.hpp>
-#include <ql/termstructures/defaulttermstructure.hpp>
-#include <ql/time/daycounter.hpp>
-#include <ql/experimental/credit/basket.hpp>
-#include <ql/experimental/credit/cdsoption.hpp>
-%}
+//%insert(credit_addin_cpp) %{
+//#include <qlo/objects/credit/credit.hpp>
+//#include <qlo/objects/instruments/creditdefaultswap.hpp>
+//#include <qlo/objects/instruments/cdsoption.hpp>
+//#include <qlo/objects/obj_pricingengines.hpp>
+//#include <qlo/objects/obj_schedule.hpp>
+//#include <qlo/objects/objmanual_termstructures.hpp>
+//#include <qlo/conversions/coercetermstructure.hpp>
+//#include <qlo/objects/objmanual_ratehelpers.hpp>
+//#include <qlo/objects/credit/defaultbasket.hpp>
+//#include <qlo/objects/credit/credit.hpp>
+//#include <qlo/objects/obj_exercise.hpp>
+//
+//#include <ql/termstructures/yieldtermstructure.hpp>
+//#include <ql/termstructures/defaulttermstructure.hpp>
+//#include <ql/time/daycounter.hpp>
+//#include <ql/experimental/credit/basket.hpp>
+//#include <ql/experimental/credit/cdsoption.hpp>
+//%}
 
 namespace QuantLibAddin {
 

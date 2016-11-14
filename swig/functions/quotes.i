@@ -1,9 +1,7 @@
 
-%group(quotes);
-%groupCaption(Quotes);
-%groupFunctionWizard(QuantLib - Financial);
+%group(Quotes);
 
-%insert(quotes_library_hpp) %{
+%insert(obj_hpp) %{
 #include <ql/quote.hpp>
 #include <ql/option.hpp>
 #include <ql/types.hpp>
@@ -26,7 +24,7 @@ namespace QuantLib {
 }
 %}
 
-%insert(quotes_addin_cpp) %{
+%insert(obj_cpp) %{
 //#include <qlo/objects/obj_instruments.hpp>
 #include <qlo/objects/obj_indexes.hpp>
 #include <qlo/conversions/coercequote.hpp>

@@ -1,8 +1,7 @@
 
-%group(ratehelpers);
-%groupCaption(Rate Helpers);
+%group(Rate Helpers);
 
-%insert(ratehelpers_library_hpp) %{
+%insert(obj_hpp) %{
 #include <ql/types.hpp>
 #include <ql/time/businessdayconvention.hpp>
 #include <ql/time/frequency.hpp>
@@ -32,7 +31,7 @@ namespace QuantLib {
 }
 %}
 
-%insert(ratehelpers_addin_cpp) %{
+%insert(obj_cpp) %{
 #include <qlo/objects/obj_quotes.hpp>
 //#include <qlo/objects/objmanual_bonds.hpp>
 #include <qlo/objects/obj_termstructures.hpp>
@@ -40,52 +39,9 @@ namespace QuantLib {
 #include <qlo/objects/obj_indexes.hpp>
 %}
 
-namespace QuantLibAddin {
-
-    %noctor(RateHelper);
-    class RateHelper {
-      public:
-
-        //! returns the objectID of the Quote wrapped in the given RateHelper object.
-        std::string quoteName();
-
-        //! returns the value of the Quote wrapped in the given RateHelper object.
-        QuantLib::Real quoteValue();
-
-        //! returns the isValid boolean of the Quote wrapped in the given RateHelper object.
-        bool quoteIsValid();
-%insert(rp_class) %{
-        enum DepoInclusionCriteria {AllDepos,
-                                    DeposBeforeFirstFuturesStartDate,
-                                    DeposBeforeFirstFuturesStartDatePlusOne,
-                                    DeposBeforeFirstFuturesExpiryDate
-        };
-
-      protected:
-        RP_LIB_CTOR(RateHelper, QuantLib::RateHelper);
-        std::string quoteName_;
-%}
-    };
-       
-    std::vector<std::string> rateHelperSelection(
-        const std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> >& RateHelpers,                                                  //!< vector of RateHelper IDs.
-        const std::vector<QuantLib::Natural>& Priority,                                                                                 //!< vector of priority integers (higher number for higher priority).
-        QuantLib::Natural NImmFutures,                                                                                                  //!< max number of IMM (March, June, September, December) Futures to be included.
-        QuantLib::Natural NSerialFutures,                                                                                               //!< max number of Serial (January, February, April, May, July, August, October, November) Futures to be included.
-        QuantLib::Natural FutureRollDays/*=2*/,                                                                                         //!< discard the front Futures the given number of (positive) days before its expiry (e.g zero implies the use of the front Futures during its expiry day).
-        RateHelper::DepoInclusionCriteria DepoInclusion/*=RateHelper::DepoInclusionCriteria(RateHelper::AllDepos)*/,                    //!< Depo inclusion criteria.
-        const std::vector<QuantLib::Natural>& MinDistance/*=1?*/                                                                        //!< minimum distance in (positive) days from near instruments.
-    );
-
-    QuantLib::Real rateHelperRate(
-        //! returns the rate (if any) associated to a rate helper.
-        const boost::shared_ptr<QuantLibAddin::RateHelper>& RateHelper                                                                  //!< RateHelper ID.
-    );
-}
-
 namespace QuantLib {
 
-    %noctor(RateHelper);
+    %explicit_class(RateHelper);
     class RateHelper {
       public:
 
@@ -109,6 +65,38 @@ namespace QuantLib {
 
         //! returns the error between the curve implied quote and the value of the Quote wrapped in the given RateHelper object.
         Real quoteError();        
+%insert(rp_class) %{
+        //****MEMBER*****
+        std::string
+        quoteName(
+            // BEGIN typemap rp_tm_default
+            // END   typemap rp_tm_default
+        );
+
+        //****MEMBER*****
+        QuantLib::Real
+        quoteValue(
+            // BEGIN typemap rp_tm_default
+            // END   typemap rp_tm_default
+        );
+
+        //****MEMBER*****
+        bool
+        quoteIsValid(
+            // BEGIN typemap rp_tm_default
+            // END   typemap rp_tm_default
+        );
+
+        enum DepoInclusionCriteria {AllDepos,
+                                    DeposBeforeFirstFuturesStartDate,
+                                    DeposBeforeFirstFuturesStartDatePlusOne,
+                                    DeposBeforeFirstFuturesExpiryDate
+        };
+
+      protected:
+        RP_LIB_CTOR(RateHelper, QuantLib::RateHelper);
+        std::string quoteName_;
+%}
     };
 
     class DepositRateHelper : public RateHelper {
@@ -331,4 +319,37 @@ namespace QuantLib {
         %rename(isBaseCurrencyCollateralCurrency) isFxBaseCurrencyCollateralCurrency;
         bool isFxBaseCurrencyCollateralCurrency();
     };
+}
+
+namespace QuantLibAddin {
+
+    %noctor(RateHelper);
+    %noexport(RateHelper);
+    class RateHelper {
+      public:
+
+        //! returns the objectID of the Quote wrapped in the given RateHelper object.
+        std::string quoteName();
+
+        //! returns the value of the Quote wrapped in the given RateHelper object.
+        QuantLib::Real quoteValue();
+
+        //! returns the isValid boolean of the Quote wrapped in the given RateHelper object.
+        bool quoteIsValid();
+    };
+       
+    std::vector<std::string> rateHelperSelection(
+        const std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> >& RateHelpers,                                                  //!< vector of RateHelper IDs.
+        const std::vector<QuantLib::Natural>& Priority,                                                                                 //!< vector of priority integers (higher number for higher priority).
+        QuantLib::Natural NImmFutures,                                                                                                  //!< max number of IMM (March, June, September, December) Futures to be included.
+        QuantLib::Natural NSerialFutures,                                                                                               //!< max number of Serial (January, February, April, May, July, August, October, November) Futures to be included.
+        QuantLib::Natural FutureRollDays/*=2*/,                                                                                         //!< discard the front Futures the given number of (positive) days before its expiry (e.g zero implies the use of the front Futures during its expiry day).
+        RateHelper::DepoInclusionCriteria DepoInclusion/*=RateHelper::DepoInclusionCriteria(RateHelper::AllDepos)*/,                    //!< Depo inclusion criteria.
+        const std::vector<QuantLib::Natural>& MinDistance/*=1?*/                                                                        //!< minimum distance in (positive) days from near instruments.
+    );
+
+    QuantLib::Real rateHelperRate(
+        //! returns the rate (if any) associated to a rate helper.
+        const boost::shared_ptr<QuantLibAddin::RateHelper>& RateHelper                                                                  //!< RateHelper ID.
+    );
 }

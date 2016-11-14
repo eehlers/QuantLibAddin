@@ -1,8 +1,7 @@
 
-%group(daycounters);
-%groupCaption(Day Counters);
+%group(Day Counters);
 
-%insert(daycounters_library_hpp) %{
+%insert(obj_hpp) %{
 #include <ql/time/daycounter.hpp>
 %}
 

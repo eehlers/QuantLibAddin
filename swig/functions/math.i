@@ -2,10 +2,10 @@
 %group(math);
 %groupCaption(Math);
 
-%insert(math_library_hpp) %{
-#include <ql/math/optimization/levenbergmarquardt.hpp>
-#include <ql/math/optimization/endcriteria.hpp>
-%}
+//%insert(math_library_hpp) %{
+//#include <ql/math/optimization/levenbergmarquardt.hpp>
+//#include <ql/math/optimization/endcriteria.hpp>
+//%}
 
 namespace QuantLib {
 

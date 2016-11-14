@@ -2,13 +2,13 @@
 %group(prices);
 %groupCaption(Prices);
 
-%insert(prices_library_hpp) %{
-#include <ql/prices.hpp>
-%}
-
-%insert(prices_addin_cpp) %{
-#include <ql/prices.hpp>
-%}
+//%insert(prices_library_hpp) %{
+//#include <ql/prices.hpp>
+//%}
+//
+//%insert(prices_addin_cpp) %{
+//#include <ql/prices.hpp>
+//%}
 
 namespace QuantLib {
 

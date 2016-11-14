@@ -1,12 +1,11 @@
 
-%group(settings);
-%groupCaption(Settings);
+%group(Settings);
 
-%insert(settings_library_hpp) %{
+%insert(obj_hpp) %{
 #include <ql/time/date.hpp>
 %}
 
-%insert(settings_addin_cpp) %{
+%insert(obj_cpp) %{
 #include <qlo/objects/obj_settings.hpp>
 %}
 

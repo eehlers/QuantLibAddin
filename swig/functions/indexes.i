@@ -1,8 +1,7 @@
 
-%group(indexes);
-%groupCaption(Indexes);
+%group(Indexes);
 
-%insert(indexes_library_hpp) %{
+%insert(obj_hpp) %{
 #include <ql/types.hpp>
 #include <ql/time/businessdayconvention.hpp>
 
@@ -22,7 +21,7 @@ namespace QuantLib {
 }
 %}
 
-%insert(indexes_addin_cpp) %{
+%insert(obj_cpp) %{
 #include <qlo/objects/obj_termstructures.hpp>
 #include <ql/indexes/iborindex.hpp>
 #include <ql/indexes/ibor/eonia.hpp>
@@ -34,32 +33,14 @@ namespace QuantLib {
 #include <ql/experimental/coupons/proxyibor.hpp>
 %}
 
-%insert(rp_header) %{
+%insert(rp_namespace) %{
     std::ostream& operator<<(std::ostream& out,
                              SwapIndex::FixingType t);
 %}
 
-namespace QuantLibAddin {
-
-    %noctor(Index);
-    class Index {
-        public:
-
-            //! Adds fixings for the given Index object.
-            void addFixings(
-                const std::vector<QuantLib::Date>& FixingDates,                                                                     //!< fixing dates.
-                const std::vector<QuantLib::Real>& FixingValues,                                                                    //!< fixing values.
-                bool ForceOverwrite=false                                                                                           //!< Set to TRUE to force overwriting of existing fixings, if any.
-            );
-%insert(rp_class) %{
-            RP_LIB_CTOR(Index, QuantLib::Index);
-%}
-    };
-}
-
 namespace QuantLib {
 
-    %noctor(Index);
+    %explicit_class(Index);
     class Index {
         public:
 
@@ -92,6 +73,20 @@ namespace QuantLib {
 
             //!< Clear all fixings for the given Index object.
             void clearFixings();
+
+%insert(rp_class) %{
+        //****MEMBER*****
+        void
+        addFixings(
+            // BEGIN typemap rp_tm_default
+            std::vector< QuantLib::Date > const &FixingDates,
+            std::vector< QuantLib::Real > const &FixingValues,
+            bool ForceOverwrite
+            // END   typemap rp_tm_default
+        );
+
+            RP_LIB_CTOR(Index, QuantLib::Index);
+%}
     };
 
     class InterestRateIndex : public Index {
@@ -327,4 +322,20 @@ namespace QuantLib {
                 const QuantLib::Handle<QuantLib::Quote>& Spread                                                                     //!< floating rate spread.
             );
     };    
+}
+
+namespace QuantLibAddin {
+
+    %noctor(Index);
+    %noexport(Index);
+    class Index {
+        public:
+
+            //! Adds fixings for the given Index object.
+            void addFixings(
+                const std::vector<QuantLib::Date>& FixingDates,                                                                     //!< fixing dates.
+                const std::vector<QuantLib::Real>& FixingValues,                                                                    //!< fixing values.
+                bool ForceOverwrite=false                                                                                           //!< Set to TRUE to force overwriting of existing fixings, if any.
+            );
+    };
 }

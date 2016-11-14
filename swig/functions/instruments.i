@@ -2,23 +2,23 @@
 %group(instruments);
 %groupCaption(Instruments);
 
-%insert(instruments_library_hpp) %{
-#include <ql/instruments/vanillaoption.hpp>
-#include <ql/cashflow.hpp>
-#include <ql/instruments/swap.hpp>
-#include <ql/instruments/swaption.hpp>
-#include <ql/instruments/forwardrateagreement.hpp>
-%}
-
-%insert(instruments_addin_cpp) %{
-#include <qlo/objects/obj_pricingengines.hpp>
-#include <qlo/objects/obj_payoffs.hpp>
-#include <qlo/objects/obj_exercise.hpp>
-#include <qlo/objects/objmanual_leg.hpp>
-#include <qlo/objects/obj_vanillaswaps.hpp>
-#include <qlo/objects/objmanual_termstructures.hpp>
-#include <qlo/objects/indexes/iborindex.hpp>
-%}
+//%insert(instruments_library_hpp) %{
+//#include <ql/instruments/vanillaoption.hpp>
+//#include <ql/cashflow.hpp>
+//#include <ql/instruments/swap.hpp>
+//#include <ql/instruments/swaption.hpp>
+//#include <ql/instruments/forwardrateagreement.hpp>
+//%}
+//
+//%insert(instruments_addin_cpp) %{
+//#include <qlo/objects/obj_pricingengines.hpp>
+//#include <qlo/objects/obj_payoffs.hpp>
+//#include <qlo/objects/obj_exercise.hpp>
+//#include <qlo/objects/objmanual_leg.hpp>
+//#include <qlo/objects/obj_vanillaswaps.hpp>
+//#include <qlo/objects/objmanual_termstructures.hpp>
+//#include <qlo/objects/indexes/iborindex.hpp>
+//%}
 
 namespace QuantLib {
 

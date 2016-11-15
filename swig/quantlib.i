@@ -10,8 +10,7 @@
     rp_doc_str="../docstrings/docstrings.txt"
 ) QuantLibAddin
 
-// FIXME try %import instead of %include for the first two
-%include typedefs/all.i
-%include typemaps/all.i
+%import typedefs/all.i
+%import typemaps/all.i
 %include functions/all.i
 

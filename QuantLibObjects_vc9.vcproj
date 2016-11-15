@@ -789,6 +789,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_math.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_math.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_piecewiseyieldcurve.cpp"
 					>
 				</File>
@@ -869,6 +877,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_math.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_math.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_piecewiseyieldcurve.cpp"
 					>
 				</File>
@@ -943,6 +959,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_indexes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_math.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_math.hpp"
 				>
 			</File>
 			<File
@@ -1075,6 +1099,18 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_indexes_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_math.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_math.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_math_hw.cpp"
 				>
 			</File>
 			<File

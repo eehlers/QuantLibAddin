@@ -16,7 +16,7 @@
 //%include interpolation.i
 //%include latentmodels.i
 //%include leg.i
-//%include math.i
+%include math.i
 //%include models.i
 //%include payoffs.i
 %include piecewiseyieldcurve.i

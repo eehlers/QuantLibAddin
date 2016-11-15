@@ -74,6 +74,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\math.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\piecewiseyieldcurve.i"
 					>
 				</File>

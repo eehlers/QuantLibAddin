@@ -28,6 +28,7 @@ QL_ENUMERATED_TYPE_STRUCT(Pillar, Choice)
 QL_ENUMERATED_TYPE_STRUCT(Position, Type)
 QL_ENUMERATED_TYPE_STRUCT(Protection, Side)
 QL_ENUMERATED_TYPE_STRUCT(VanillaSwap, Type)
+QL_ENUMERATED_TYPE_STRUCT(SalvagingAlgorithm, Type)
 
 ENUMERATED_TYPE_IMPL(QuantLibAddin::RateHelper::DepoInclusionCriteria)
 ENUMERATED_TYPE_IMPL(QuantLibAddin::SwapIndex::FixingType)
@@ -98,6 +99,8 @@ QL_OBJECT_WRAPPER(SwapIndex)
 QL_OBJECT_WRAPPER(TermStructure)
 QL_OBJECT_WRAPPER(YieldTermStructure)
 QL_OBJECT_WRAPPER(TimeSeriesDef)
+QL_OBJECT_WRAPPER(SymmetricSchurDecomposition)
+QL_OBJECT_WRAPPER(CovarianceDecomposition)
 
 // ctor in QLA namespace, member function in QL namespace
 

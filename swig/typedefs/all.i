@@ -7,6 +7,7 @@ namespace QuantLib {
     typedef int Year;
     typedef std::size_t Size;
     typedef long BigInteger;
+    typedef long BigNatural;
     typedef double Real;
     typedef double Rate;
     typedef double Spread;
@@ -23,11 +24,12 @@ namespace QuantLib {
     class Matrix;
     // DELETEME - temp fix for bonds which depend on instruments which is not yet implemented.
     class Instrument;
-
+    class Array;
     class YieldTermStructure;
 
     template <class T> class TimeSeries;
     template <class T> class Handle;
+    template <class T> class Disposable;
 }
 
 namespace QuantLibAddin {

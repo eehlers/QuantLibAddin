@@ -162,6 +162,10 @@
 
 %typemap(rp_tm_xll_rtft) QuantLib::Date "long*";
 %typemap(rp_tm_xll_rtft) QuantLib::Date & "long*";
+%typemap(rp_tm_xll_rtft) QuantLib::Disposable< QuantLib::Matrix > "OPER*";
+%typemap(rp_tm_xll_rtft) QuantLib::Array & "OPER*";
+%typemap(rp_tm_xll_rtft) QuantLib::Matrix "OPER*";
+%typemap(rp_tm_xll_rtft) QuantLib::Matrix & "OPER*";
 
 // rp_tm_xll_parm - function parameters (F/C/M)
 
@@ -252,7 +256,25 @@
 
 // rp_tm_xll_rtdc - declare variable to capture return value of Library function (F/M)
 
+%typemap(rp_tm_xll_rtdc) QuantLib::Array & "QuantLib::Array returnValue =";
+%typemap(rp_tm_xll_rtdc) QuantLib::Matrix & "QuantLib::Matrix returnValue =";
+%typemap(rp_tm_xll_rtdc) QuantLib::Disposable<QuantLib::Matrix> "QuantLib::Matrix returnValue =";
+
 // rp_tm_xll_rtst - return statement (F/M)
+
+%typemap(rp_tm_xll_rtst) QuantLib::Array & %{
+        static OPER xRet;
+        reposit::vectorToOper(returnValue, xRet);
+        return &xRet;
+%}
+
+%typemap(rp_tm_xll_rtst) QuantLib::Matrix %{
+        static OPER xRet;
+        reposit::matrixToOper(returnValue, xRet);
+        return &xRet;
+%}
+%typemap(rp_tm_xll_rtst) QuantLib::Matrix & = QuantLib::Matrix;
+%typemap(rp_tm_xll_rtst) QuantLib::Disposable<QuantLib::Matrix> = QuantLib::Matrix;
 
 %typemap(rp_tm_xll_rtst) QuantLib::Period %{
         std::string str = QuantLibAddin::libraryToScalar(returnValue);
@@ -286,6 +308,10 @@ QL_VEC_RET(QuantLib::Period, std::string)
 
 %typemap(rp_tm_xll_cdrt) QuantLib::Date "N";
 %typemap(rp_tm_xll_cdrt) QuantLib::Date & "N";
+%typemap(rp_tm_xll_cdrt) QuantLib::Disposable< QuantLib::Matrix > "P";
+%typemap(rp_tm_xll_cdrt) QuantLib::Array & "P";
+%typemap(rp_tm_xll_cdrt) QuantLib::Matrix & "P";
+%typemap(rp_tm_xll_cdrt) QuantLib::Matrix "P";
 
 // rp_tm_xll_code - code to register the parameter with Excel
 

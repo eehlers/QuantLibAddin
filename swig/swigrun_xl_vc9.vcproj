@@ -98,6 +98,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\shortratemodels.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\termstructures.i"
 					>
 				</File>

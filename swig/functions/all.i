@@ -28,6 +28,7 @@
 %include schedule.i
 // incomplete
 %include settings.i
+%include shortratemodels.i
 //%include swap.i
 %include termstructures.i
 %include timeseries.i

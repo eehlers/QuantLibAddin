@@ -829,6 +829,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_shortratemodels.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_shortratemodels.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_termstructures.cpp"
 					>
 				</File>
@@ -917,6 +925,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_shortratemodels.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_shortratemodels.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_termstructures.cpp"
 					>
 				</File>
@@ -999,6 +1015,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_schedule.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_shortratemodels.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_shortratemodels.hpp"
 				>
 			</File>
 			<File
@@ -1155,6 +1179,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_settings_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_shortratemodels.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_shortratemodels.hpp"
 				>
 			</File>
 			<File

@@ -797,6 +797,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_payoffs.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_payoffs.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_piecewiseyieldcurve.cpp"
 					>
 				</File>
@@ -901,6 +909,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_payoffs.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_payoffs.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_piecewiseyieldcurve.cpp"
 					>
 				</File>
@@ -999,6 +1015,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_math.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_payoffs.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_payoffs.hpp"
 				>
 			</File>
 			<File
@@ -1159,6 +1183,18 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_math_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_payoffs.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_payoffs.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_payoffs_hw.cpp"
 				>
 			</File>
 			<File

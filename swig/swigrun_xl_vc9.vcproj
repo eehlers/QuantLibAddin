@@ -78,6 +78,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\payoffs.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\piecewiseyieldcurve.i"
 					>
 				</File>

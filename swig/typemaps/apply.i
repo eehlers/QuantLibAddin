@@ -104,6 +104,9 @@ QL_OBJECT_WRAPPER(TimeSeriesDef)
 QL_OBJECT_WRAPPER(SymmetricSchurDecomposition)
 QL_OBJECT_WRAPPER(CovarianceDecomposition)
 QL_OBJECT_WRAPPER(BlackVolTermStructure)
+QL_OBJECT_WRAPPER(Payoff)
+QL_OBJECT_WRAPPER(TypePayoff)
+QL_OBJECT_WRAPPER(StrikedTypePayoff)
 
 // ctor in QLA namespace, member function in QL namespace
 

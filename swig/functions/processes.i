@@ -1,30 +1,33 @@
 
-%group(processes);
-%groupCaption(Processes);
+%group(Processes);
 
-//%insert(processes_library_hpp) %{
-//#include <ql/processes/blackscholesprocess.hpp>
-//%}
-//
-//%insert(processes_addin_cpp) %{
-//#include <qlo/objects/objmanual_quotes.hpp>
-//#include <qlo/objects/obj_volatilities.hpp>
-//%}
+%insert(obj_hpp) %{
+#include <ql/types.hpp>
+#include <ql/processes/blackscholesprocess.hpp>
+#include <ql/termstructures/volatility/equityfx/blackconstantvol.hpp>
+#include <ql/termstructures/volatility/equityfx/blackvariancesurface.hpp>
+
+namespace QuantLib {
+    class GeneralizedBlackScholesProcess;
+    class BlackVolTermStructure;
+    class DayCounter;
+    class Date;
+}
+%}
 
 namespace QuantLib {
 
-    class GeneralizedBlackScholesProcess {};
-
-    class BlackScholesMertonProcess : public GeneralizedBlackScholesProcess {
+    class GeneralizedBlackScholesProcess /*: public StochasticProcess1D*/ {
       public:
-        %generate(c++, BlackScholesMertonProcess);
-        %generate(c#, BlackScholesMertonProcess);
-        %generate(countify, BlackScholesMertonProcess);
-        BlackScholesMertonProcess(
-            const Handle<Quote>& x0,
-            const Handle<YieldTermStructure>& dividendTS,
-            const Handle<YieldTermStructure>& riskFreeTS,
-            const Handle<BlackVolTermStructure>& blackVolTS);
+
+        GeneralizedBlackScholesProcess(
+            const boost::shared_ptr<QuantLib::BlackVolTermStructure>& BlackVolID,   //!< Black Vol Term Structure.
+            QuantLib::Real Underlying,                                              //!< Underlying.
+            const QuantLib::DayCounter& DayCounter/*=Actual/365 (Fixed)*/,          //!< DayCounter ID.
+            const QuantLib::Date& SettlementDate,                                   //!< Settlement date.
+            QuantLib::Real RiskFreeRate,                                            //!< Risk free rate.
+            QuantLib::Spread DividendYield                                          //!< Dividend yield.
+        );
     };
 }
 

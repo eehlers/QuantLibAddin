@@ -805,6 +805,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_processes.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_processes.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_quotes.cpp"
 					>
 				</File>
@@ -901,6 +909,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_processes.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_processes.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_quotes.cpp"
 					>
 				</File>
@@ -991,6 +1007,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_piecewiseyieldcurve.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_processes.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_processes.hpp"
 				>
 			</File>
 			<File
@@ -1143,6 +1167,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_piecewiseyieldcurve_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_processes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_processes_hw.cpp"
 				>
 			</File>
 			<File

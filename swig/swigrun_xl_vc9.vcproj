@@ -82,6 +82,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\processes.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\quotes.i"
 					>
 				</File>

@@ -108,6 +108,9 @@ QL_OBJECT_WRAPPER(Payoff)
 QL_OBJECT_WRAPPER(TypePayoff)
 QL_OBJECT_WRAPPER(StrikedTypePayoff)
 
+QL_OBJECT_WRAPPER(LineSearch)
+QL_OBJECT_WRAPPER(EndCriteria)
+
 // ctor in QLA namespace, member function in QL namespace
 
 %define QLA_GET_OBJECT(T...)

@@ -18,6 +18,7 @@
 //%include leg.i
 %include math.i
 //%include models.i
+%include optimization.i
 %include payoffs.i
 %include piecewiseyieldcurve.i
 //%include prices.i
@@ -30,6 +31,7 @@
 %include settings.i
 %include shortratemodels.i
 //%include swap.i
+//%include swaptionvolstructure.i
 %include termstructures.i
 %include timeseries.i
 %include utilities.i

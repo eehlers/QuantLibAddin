@@ -13,7 +13,7 @@
 namespace QuantLib {
     class OptionletVolatilityStructure;
     class CapFloorTermVolatilityStructure;
-    class SwaptionVolatilityStructure;
+    //class SwaptionVolatilityStructure;
     class DefaultProbabilityTermStructure;
     class InflationTermStructure;
     class VolatilityTermStructure;
@@ -186,9 +186,9 @@ namespace QuantLibAddin {
     class BlackVolSurface : public BlackAtmVolCurve {};
     class InterestRateVolSurface : public BlackVolSurface {};
     class BlackVolTermStructure : public VolatilityTermStructure {};
-    class SwaptionVolatilityStructure : public VolatilityTermStructure {};
-    class SwaptionVolatilityDiscrete : public SwaptionVolatilityStructure {};
-    class SwaptionVolatilityCube : public SwaptionVolatilityDiscrete {};
+    //class SwaptionVolatilityStructure : public VolatilityTermStructure {};
+    //class SwaptionVolatilityDiscrete : public SwaptionVolatilityStructure {};
+    //class SwaptionVolatilityCube : public SwaptionVolatilityDiscrete {};
     class OptionletVolatilityStructure : public VolatilityTermStructure {};
     class CapFloorTermVolatilityStructure : public VolatilityTermStructure {};
 

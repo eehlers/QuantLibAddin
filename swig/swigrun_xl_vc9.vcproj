@@ -78,11 +78,19 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\optimization.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\payoffs.i"
 					>
 				</File>
 				<File
 					RelativePath=".\functions\piecewiseyieldcurve.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\pricingengines.i"
 					>
 				</File>
 				<File
@@ -107,6 +115,10 @@
 				</File>
 				<File
 					RelativePath=".\functions\shortratemodels.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\swaptionvolstructure.i"
 					>
 				</File>
 				<File

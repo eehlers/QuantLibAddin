@@ -33,5 +33,16 @@ namespace QuantLibAddin {
             const std::string &CurrentLink  //!< Quote object ID. If omitted, nothing is linked by the RelinkableHandle.
         ) {}
     };
+
+//    class RelinkableHandleSwaptionVolatilityStructure {
+//    public:
+//        // attach processor RelinkableHandleProcessor to ctor RelinkableHandleSwaptionVolatilityStructure.
+//        %processor(RelinkableHandleSwaptionVolatilityStructure, RelinkableHandleProcessor);
+//        // NB: The parameter below must be called "CurrentLink" because there
+//        // is code which updates a property with that name in the value object.
+//        RelinkableHandleSwaptionVolatilityStructure(
+//            const std::string &CurrentLink  //!< SwaptionVolatilityStructure object ID. If omitted, nothing is linked by the RelinkableHandle.
+//        ) {}
+//    };
 }
 

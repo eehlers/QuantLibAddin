@@ -797,6 +797,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_optimization.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_optimization.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_payoffs.cpp"
 					>
 				</File>
@@ -909,6 +917,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_optimization.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_optimization.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_payoffs.cpp"
 					>
 				</File>
@@ -1015,6 +1031,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_math.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_optimization.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_optimization.hpp"
 				>
 			</File>
 			<File
@@ -1183,6 +1207,18 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_math_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_optimization.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_optimization.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_optimization_hw.cpp"
 				>
 			</File>
 			<File

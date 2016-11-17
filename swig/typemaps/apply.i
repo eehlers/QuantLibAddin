@@ -17,6 +17,7 @@ QL_ENUMERATED_TYPE(Month)
 QL_ENUMERATED_TYPE(Seniority)
 QL_ENUMERATED_TYPE(SensitivityAnalysis)
 QL_ENUMERATED_TYPE(Weekday)
+QL_ENUMERATED_TYPE(VolatilityType)
 
 QL_ENUMERATED_TYPE_STRUCT(DateGeneration, Rule)
 QL_ENUMERATED_TYPE_STRUCT(Duration, Type)
@@ -30,6 +31,7 @@ QL_ENUMERATED_TYPE_STRUCT(Protection, Side)
 QL_ENUMERATED_TYPE_STRUCT(VanillaSwap, Type)
 QL_ENUMERATED_TYPE_STRUCT(SalvagingAlgorithm, Type)
 
+ENUMERATED_TYPE_IMPL(QuantLib::EndCriteria::Type)
 ENUMERATED_TYPE_IMPL(QuantLibAddin::RateHelper::DepoInclusionCriteria)
 ENUMERATED_TYPE_IMPL(QuantLibAddin::SwapIndex::FixingType)
 
@@ -110,6 +112,8 @@ QL_OBJECT_WRAPPER(StrikedTypePayoff)
 
 QL_OBJECT_WRAPPER(LineSearch)
 QL_OBJECT_WRAPPER(EndCriteria)
+QL_OBJECT_WRAPPER(OptimizationMethod)
+QL_OBJECT_WRAPPER(SmileSection)
 
 // ctor in QLA namespace, member function in QL namespace
 
@@ -205,6 +209,7 @@ QUANTLIB_HANDLE(QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::BlackAtmVolCurve, QuantLib::BlackAtmVolCurve)
 //QUANTLIB_HANDLE(QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure)
 //QUANTLIB_HANDLE(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure)
+QUANTLIB_HANDLE(QuantLibAddin::SabrVolSurface, QuantLib::SabrVolSurface)
 
 // Handle<Quote> - Call the macro to set the default typemaps, then override most of them.
 

@@ -30,6 +30,7 @@
 // incomplete
 %include settings.i
 %include shortratemodels.i
+%include smilesection.i
 //%include swap.i
 //%include swaptionvolstructure.i
 %include termstructures.i

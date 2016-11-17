@@ -861,6 +861,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_smilesection.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_smilesection.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_termstructures.cpp"
 					>
 				</File>
@@ -981,6 +989,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_smilesection.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_smilesection.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_termstructures.cpp"
 					>
 				</File>
@@ -1095,6 +1111,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_shortratemodels.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_smilesection.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_smilesection.hpp"
 				>
 			</File>
 			<File
@@ -1291,6 +1315,18 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_shortratemodels.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_smilesection.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_smilesection.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_smilesection_hw.cpp"
 				>
 			</File>
 			<File

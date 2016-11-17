@@ -118,6 +118,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\smilesection.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\swaptionvolstructure.i"
 					>
 				</File>

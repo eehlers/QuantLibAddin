@@ -20,13 +20,16 @@
 //#if defined(HAVE_CONFIG_H)     // Dynamically created by configure
 //    #include <qlo/config.hpp>
 //#endif
+
 #include <qlo/conversions/all.hpp>
 #include <qlo/objects/obj_termstructures.hpp>
 #include <qlo/objects/obj_quotes.hpp>
+#include <qlo/objects/obj_volatilities.hpp>
 #include <ql/utilities/dataparsers.hpp>
 #include <ql/time/period.hpp>
 #include <ql/quotes/all.hpp>
 #include <ql/experimental/volatility/blackatmvolcurve.hpp>
+#include <ql/experimental/volatility/sabrvolsurface.hpp>
 #include <ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp>
 #include <boost/algorithm/string/case_conv.hpp>
 
@@ -98,6 +101,9 @@ QuantLibAddin::getHandle<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermS
 
 template QuantLib::Handle<QuantLib::BlackAtmVolCurve>
 QuantLibAddin::getHandle<QuantLibAddin::BlackAtmVolCurve, QuantLib::BlackAtmVolCurve>(const std::string&);
+
+template QuantLib::Handle<QuantLib::SabrVolSurface>
+QuantLibAddin::getHandle<QuantLibAddin::SabrVolSurface, QuantLib::SabrVolSurface>(const std::string&);
 
 template <class QuantLibAddinHandle, class QuantLibHandle>
 QuantLib::Handle<QuantLibHandle> QuantLibAddin::getHandle(

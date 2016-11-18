@@ -829,6 +829,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_pricingengines.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_pricingengines.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_processes.cpp"
 					>
 				</File>
@@ -973,6 +981,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_pricingengines.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_pricingengines.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_processes.cpp"
 					>
 				</File>
@@ -1111,6 +1127,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_piecewiseyieldcurve.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_pricingengines.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_pricingengines.hpp"
 				>
 			</File>
 			<File
@@ -1323,6 +1347,18 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_piecewiseyieldcurve_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_pricingengines.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_pricingengines.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_pricingengines_hw.cpp"
 				>
 			</File>
 			<File

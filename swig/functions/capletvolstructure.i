@@ -180,6 +180,7 @@ namespace QuantLib {
 
     class StrippedOptionlet : public StrippedOptionletBase {
       public:
+
         StrippedOptionlet(
             Natural SettlementDays/*=0*/,                               //!< Number of settlement days.
             const Calendar& Calendar,                                   //!< Holiday calendar (e.g. TARGET) used for calculating the exercise dates from the expiries.

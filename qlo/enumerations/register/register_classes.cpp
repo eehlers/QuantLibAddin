@@ -42,37 +42,37 @@
 namespace QuantLibAddin {
 
     void registerEnumeratedClasses() {
-    
-        //{
-        //    reposit::Create<reposit::PricingEngineConstructor1> create;
-        //    create.registerType("AB", reinterpret_cast<void*>(AB_Engine));
-        //    create.registerType("AC", reinterpret_cast<void*>(AC_Engine));
-        //    create.registerType("ACGAPA", reinterpret_cast<void*>(ACGAPA_Engine));
-        //    create.registerType("ADA", reinterpret_cast<void*>(ADA_Engine));
-        //    create.registerType("ADE", reinterpret_cast<void*>(ADE_Engine));
-        //    create.registerType("ADGAPA", reinterpret_cast<void*>(ADGAPA_Engine));
-        //    create.registerType("AE", reinterpret_cast<void*>(AE_Engine));
-        //    create.registerType("AP", reinterpret_cast<void*>(AP_Engine));
-        //    create.registerType("BAWA", reinterpret_cast<void*>(BAWA_Engine));
-        //    create.registerType("BSA", reinterpret_cast<void*>(BSA_Engine));
-        //    create.registerType("I", reinterpret_cast<void*>(I_Engine));
-        //    create.registerType("PE", reinterpret_cast<void*>(PE_Engine));
-        //    create.registerType("SE", reinterpret_cast<void*>(SE_Engine));
-        //}
 
-        //{
-        //    reposit::Create<reposit::PricingEngineConstructor2> create;
-        //    create.registerType("AEQPB", reinterpret_cast<void*>(AEQPB_Engine));
-        //    create.registerType("CRR", reinterpret_cast<void*>(CRR_Engine));
-        //    create.registerType("FDA", reinterpret_cast<void*>(FDA_Engine));
-        //    create.registerType("FDB", reinterpret_cast<void*>(FDB_Engine));
-        //    create.registerType("FDE", reinterpret_cast<void*>(FDE_Engine));
-        //    create.registerType("JOSHI", reinterpret_cast<void*>(JOSHI_Engine));
-        //    create.registerType("JR", reinterpret_cast<void*>(JR_Engine));
-        //    create.registerType("LR", reinterpret_cast<void*>(LR_Engine));
-        //    create.registerType("TIAN", reinterpret_cast<void*>(TIAN_Engine));
-        //    create.registerType("TRI", reinterpret_cast<void*>(TRI_Engine));
-        //}
+        {
+            reposit::Create<reposit::PricingEngineConstructor1> create;
+            create.registerType("AB", reinterpret_cast<void*>(AB_Engine));
+            create.registerType("AC", reinterpret_cast<void*>(AC_Engine));
+            create.registerType("ACGAPA", reinterpret_cast<void*>(ACGAPA_Engine));
+            create.registerType("ADA", reinterpret_cast<void*>(ADA_Engine));
+            create.registerType("ADE", reinterpret_cast<void*>(ADE_Engine));
+            create.registerType("ADGAPA", reinterpret_cast<void*>(ADGAPA_Engine));
+            create.registerType("AE", reinterpret_cast<void*>(AE_Engine));
+            create.registerType("AP", reinterpret_cast<void*>(AP_Engine));
+            create.registerType("BAWA", reinterpret_cast<void*>(BAWA_Engine));
+            create.registerType("BSA", reinterpret_cast<void*>(BSA_Engine));
+            create.registerType("I", reinterpret_cast<void*>(I_Engine));
+            create.registerType("PE", reinterpret_cast<void*>(PE_Engine));
+            create.registerType("SE", reinterpret_cast<void*>(SE_Engine));
+        }
+
+        {
+            reposit::Create<reposit::PricingEngineConstructor2> create;
+            create.registerType("AEQPB", reinterpret_cast<void*>(AEQPB_Engine));
+            create.registerType("CRR", reinterpret_cast<void*>(CRR_Engine));
+            create.registerType("FDA", reinterpret_cast<void*>(FDA_Engine));
+            create.registerType("FDB", reinterpret_cast<void*>(FDB_Engine));
+            create.registerType("FDE", reinterpret_cast<void*>(FDE_Engine));
+            create.registerType("JOSHI", reinterpret_cast<void*>(JOSHI_Engine));
+            create.registerType("JR", reinterpret_cast<void*>(JR_Engine));
+            create.registerType("LR", reinterpret_cast<void*>(LR_Engine));
+            create.registerType("TIAN", reinterpret_cast<void*>(TIAN_Engine));
+            create.registerType("TRI", reinterpret_cast<void*>(TRI_Engine));
+        }
 
         {
             reposit::Create<boost::shared_ptr<QuantLib::CmsCouponPricer> > create;

@@ -122,6 +122,12 @@ QL_OBJECT_WRAPPER(OptionletVolatilityStructure)
 QL_OBJECT_WRAPPER(CapFloorTermVolatilityStructure)
 QL_OBJECT_WRAPPER(CapFloorTermVolCurve)
 QL_OBJECT_WRAPPER(OptionletStripper)
+QL_OBJECT_WRAPPER(PlainVanillaPayoff)
+QL_OBJECT_WRAPPER(GeneralizedBlackScholesProcess)
+QL_OBJECT_WRAPPER(AffineModel)
+QL_OBJECT_WRAPPER(OneFactorAffineModel)
+QL_OBJECT_WRAPPER(BlackCalculator)
+QL_OBJECT_WRAPPER(BlackScholesCalculator)
 
 // ctor in QLA namespace, member function in QL namespace
 

@@ -10,9 +10,10 @@
 
 namespace QuantLib {
 
-    class ShortRateModel /*: public CalibratedModel*/ {};
-    class OneFactorAffineModel : public ShortRateModel {};
-    class TwoFactorModel : public ShortRateModel {};
+    class AffineModel {};
+    //class ShortRateModel : public CalibratedModel {};
+    class OneFactorAffineModel : public AffineModel {};
+    //class TwoFactorModel : public ShortRateModel {};
 
     class Vasicek : public OneFactorAffineModel {
       public:
@@ -35,9 +36,14 @@ namespace QuantLib {
 
         //! Returns the volatility sigma, with dr(t) = a(b-r(t))dt + sigma dW(t)..
         Real sigma() const;
+
+%insert(rp_class) %{
+      protected:
+        RP_OBJ_CTOR(Vasicek, OneFactorAffineModel);
+%}
     };
 
-    class HullWhite : public /*Vasicek, public TermStructureConsistentModel*/OneFactorAffineModel {
+    class HullWhite : public Vasicek/*, public TermStructureConsistentModel*/ {
       public:
 
         HullWhite(
@@ -57,8 +63,8 @@ namespace QuantLib {
         );
     };
 
-    class G2 : public TwoFactorModel/*,
-               public AffineModel,
+    class G2 : /*public TwoFactorModel,*/
+               public AffineModel/*,
                public TermStructureConsistentModel*/ {
       public:
         %rename(ModelG2) G2;

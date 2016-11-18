@@ -6,6 +6,10 @@
 #include <ql/instruments/stickyratchet.hpp>
 %}
 
+%insert(rp_namespace) %{
+    RP_OBJ_CLASS(PlainVanillaPayoff, StrikedTypePayoff);
+%}
+
 namespace QuantLib {
 
     class Payoff /*: std::unary_function<Real,Real>*/ {
@@ -49,8 +53,12 @@ namespace QuantLib {
 
 %insert(rp_class) %{
         QuantLib::Real thirdParameter() const;
+      protected:
+        RP_OBJ_CTOR(StrikedTypePayoff, TypePayoff);
 %}
     };
+
+    //class PlainVanillaPayoff : public StrikedTypePayoff {};
 
     class DoubleStickyRatchetPayoff : public Payoff {
       public:

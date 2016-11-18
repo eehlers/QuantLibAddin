@@ -869,6 +869,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_swaptionvolstructure.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_swaptionvolstructure.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_termstructures.cpp"
 					>
 				</File>
@@ -997,6 +1005,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_swaptionvolstructure.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_swaptionvolstructure.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_termstructures.cpp"
 					>
 				</File>
@@ -1119,6 +1135,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_smilesection.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_swaptionvolstructure.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_swaptionvolstructure.hpp"
 				>
 			</File>
 			<File
@@ -1327,6 +1351,18 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_smilesection_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_swaptionvolstructure.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_swaptionvolstructure.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_swaptionvolstructure_hw.cpp"
 				>
 			</File>
 			<File

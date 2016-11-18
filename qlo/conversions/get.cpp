@@ -25,12 +25,15 @@
 #include <qlo/objects/obj_termstructures.hpp>
 #include <qlo/objects/obj_quotes.hpp>
 #include <qlo/objects/obj_volatilities.hpp>
+#include <qlo/objects/obj_swaptionvolstructure.hpp>
+
 #include <ql/utilities/dataparsers.hpp>
 #include <ql/time/period.hpp>
 #include <ql/quotes/all.hpp>
 #include <ql/experimental/volatility/blackatmvolcurve.hpp>
 #include <ql/experimental/volatility/sabrvolsurface.hpp>
 #include <ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp>
+
 #include <boost/algorithm/string/case_conv.hpp>
 
 namespace QuantLib {
@@ -89,6 +92,9 @@ QuantLibAddin::getYieldTermStructure<QuantLibAddin::YieldTermStructure, QuantLib
 template boost::shared_ptr<QuantLib::DefaultProbabilityTermStructure>
 QuantLibAddin::getYieldTermStructure<QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure>(const std::string&);
 
+template boost::shared_ptr<QuantLib::SwaptionVolatilityStructure>
+QuantLibAddin::getYieldTermStructure<QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>(const std::string&);
+
 template <class QuantLibAddinHandle, class QuantLibHandle>
 QuantLib::Handle<QuantLibHandle> QuantLibAddin::getHandle(
     const std::string &in) {
@@ -104,6 +110,9 @@ QuantLibAddin::getHandle<QuantLibAddin::BlackAtmVolCurve, QuantLib::BlackAtmVolC
 
 template QuantLib::Handle<QuantLib::SabrVolSurface>
 QuantLibAddin::getHandle<QuantLibAddin::SabrVolSurface, QuantLib::SabrVolSurface>(const std::string&);
+
+template QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>
+QuantLibAddin::getHandle<QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>(const std::string&);
 
 template <class QuantLibAddinHandle, class QuantLibHandle>
 QuantLib::Handle<QuantLibHandle> QuantLibAddin::getHandle(

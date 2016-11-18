@@ -325,3 +325,4 @@ QL_VEC_RET(QuantLib::Period, std::string)
 // rp_tm_xll_loop - arguments to boost::bind object for a looping function (F/M)
 
 %typemap(rp_tm_xll_loop) QuantLib::Date & "$1_name_cnv";
+%typemap(rp_tm_xll_loop) QuantLib::Period & "$1_name_cnv";

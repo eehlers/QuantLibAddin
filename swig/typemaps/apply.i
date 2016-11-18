@@ -114,6 +114,8 @@ QL_OBJECT_WRAPPER(LineSearch)
 QL_OBJECT_WRAPPER(EndCriteria)
 QL_OBJECT_WRAPPER(OptimizationMethod)
 QL_OBJECT_WRAPPER(SmileSection)
+QL_OBJECT_WRAPPER(SwaptionVolatilityCube)
+QL_OBJECT_WRAPPER(SwaptionVolatilityStructure)
 
 // ctor in QLA namespace, member function in QL namespace
 
@@ -154,9 +156,12 @@ QUANTLIB_GET_QUOTE(QuantLibAddin::LastFixingQuote, QuantLib::LastFixingQuote)
 %}
 %enddef
 
+// If you add a new item to the list below, then you also need to edit file qlo/conversions/get.cpp
+// and add an explicit instantiation of template getYieldTermStructure.
 QUANTLIB_GET_YTS(QuantLibAddin::TermStructure, QuantLib::TermStructure)
 QUANTLIB_GET_YTS(QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure)
 QUANTLIB_GET_YTS(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure)
+QUANTLIB_GET_YTS(QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure)
 
 %define QUANTLIB_HANDLE(T_ADDIN,T_LIB...)
 
@@ -202,12 +207,14 @@ QUANTLIB_GET_YTS(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::Defau
 %enddef
 
 // QuantLib Handles.
+// If you add a new item to the list below, then you also need to edit file qlo/conversions/get.cpp
+// and add an explicit instantiation of template getHandle.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::SimpleQuote, QuantLib::SimpleQuote)
 QUANTLIB_HANDLE(QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::BlackAtmVolCurve, QuantLib::BlackAtmVolCurve)
-//QUANTLIB_HANDLE(QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure)
+QUANTLIB_HANDLE(QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure)
 //QUANTLIB_HANDLE(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::SabrVolSurface, QuantLib::SabrVolSurface)
 

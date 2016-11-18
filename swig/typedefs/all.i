@@ -27,6 +27,7 @@ namespace QuantLib {
     class Array;
     class YieldTermStructure;
 
+    template <class T> class Null;
     template <class T> class TimeSeries;
     template <class T> class Handle;
     template <class T> class Disposable;

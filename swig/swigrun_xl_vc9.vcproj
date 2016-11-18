@@ -58,6 +58,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\capletvolstructure.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\date.i"
 					>
 				</File>

@@ -189,8 +189,8 @@ namespace QuantLibAddin {
     //class SwaptionVolatilityStructure : public VolatilityTermStructure {};
     //class SwaptionVolatilityDiscrete : public SwaptionVolatilityStructure {};
     //class SwaptionVolatilityCube : public SwaptionVolatilityDiscrete {};
-    class OptionletVolatilityStructure : public VolatilityTermStructure {};
-    class CapFloorTermVolatilityStructure : public VolatilityTermStructure {};
+    //class OptionletVolatilityStructure : public VolatilityTermStructure {};
+    //class CapFloorTermVolatilityStructure : public VolatilityTermStructure {};
 
     class InterpolatedYieldCurve : public YieldTermStructure {
       public:

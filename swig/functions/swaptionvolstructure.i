@@ -110,6 +110,7 @@ namespace QuantLib {
 
     class ConstantSwaptionVolatility : public SwaptionVolatilityStructure {
       public:
+
         ConstantSwaptionVolatility(
             Natural NDays,                                              //!< Number of days to advance from EvaluationDate: it fixes the date at which the variance = 0.0.
             const Calendar& Calendar,                                   //!< Holiday calendar (e.g. TARGET) used for calculating the exercise dates from the expiries.
@@ -123,6 +124,7 @@ namespace QuantLib {
 
     class SpreadedSwaptionVolatility : public SwaptionVolatilityStructure {
       public:
+
         SpreadedSwaptionVolatility(
             const Handle<SwaptionVolatilityStructure>& BaseVolStructure,//!< Base SwaptionVolatilityStructure object ID.
             const Handle<Quote>& Spread                                 //!< Spread.
@@ -189,6 +191,7 @@ namespace QuantLib {
 
     class SwaptionVolCube2 : public SwaptionVolatilityCube {
       public:
+
         SwaptionVolCube2(
             const Handle<SwaptionVolatilityStructure>& AtmVolStructure,     //!< At-the-money volatility structure.
             const std::vector<Period>& OptionTenor,                         //!< Smile cube's expiries as periods.

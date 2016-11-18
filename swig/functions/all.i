@@ -3,6 +3,7 @@
 //%include basketlossmodels.i
 //%include bonds.i
 %include calendars.i
+%include capletvolstructure.i
 //%include couponvectors.i
 //%include credit.i
 %include date.i

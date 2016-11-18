@@ -1,4 +1,7 @@
 
+// FIXME Relocate these relinkable handle classes to their respective function groups.
+// For an example, see class RelinkableHandleOptionletVolatilityStructure in group capletvolstructure.
+
 %override;
 %group(Handles);
 

@@ -90,7 +90,6 @@ QL_OBJECT_WRAPPER(Instrument)
 QL_OBJECT_WRAPPER(RateHelper)
 QL_OBJECT_WRAPPER(Schedule)
 //QL_OBJECT_WRAPPER(ShortRateModel)
-//QL_OBJECT_WRAPPER(StrikedTypePayoff)
 //QL_OBJECT_WRAPPER(SwaptionHelper)
 //QL_OBJECT_WRAPPER(VanillaSwap)
 QL_OBJECT_WRAPPER(ZeroCurve)
@@ -109,13 +108,20 @@ QL_OBJECT_WRAPPER(BlackVolTermStructure)
 QL_OBJECT_WRAPPER(Payoff)
 QL_OBJECT_WRAPPER(TypePayoff)
 QL_OBJECT_WRAPPER(StrikedTypePayoff)
-
 QL_OBJECT_WRAPPER(LineSearch)
 QL_OBJECT_WRAPPER(EndCriteria)
 QL_OBJECT_WRAPPER(OptimizationMethod)
 QL_OBJECT_WRAPPER(SmileSection)
 QL_OBJECT_WRAPPER(SwaptionVolatilityCube)
 QL_OBJECT_WRAPPER(SwaptionVolatilityStructure)
+QL_OBJECT_WRAPPER(StrippedOptionletBase)
+QL_OBJECT_WRAPPER(OptionletStripper1)
+QL_OBJECT_WRAPPER(SwaptionVolatilityStructure)
+QL_OBJECT_WRAPPER(CapFloorTermVolSurface)
+QL_OBJECT_WRAPPER(OptionletVolatilityStructure)
+QL_OBJECT_WRAPPER(CapFloorTermVolatilityStructure)
+QL_OBJECT_WRAPPER(CapFloorTermVolCurve)
+QL_OBJECT_WRAPPER(OptionletStripper)
 
 // ctor in QLA namespace, member function in QL namespace
 
@@ -156,12 +162,14 @@ QUANTLIB_GET_QUOTE(QuantLibAddin::LastFixingQuote, QuantLib::LastFixingQuote)
 %}
 %enddef
 
-// If you add a new item to the list below, then you also need to edit file qlo/conversions/get.cpp
+// NB: If you add a new item to the list below, then you also need to edit file qlo/conversions/get.cpp
 // and add an explicit instantiation of template getYieldTermStructure.
 QUANTLIB_GET_YTS(QuantLibAddin::TermStructure, QuantLib::TermStructure)
 QUANTLIB_GET_YTS(QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure)
 QUANTLIB_GET_YTS(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure)
 QUANTLIB_GET_YTS(QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure)
+QUANTLIB_GET_YTS(QuantLibAddin::OptionletVolatilityStructure, QuantLib::OptionletVolatilityStructure)
+QUANTLIB_GET_YTS(QuantLibAddin::CapFloorTermVolatilityStructure, QuantLib::CapFloorTermVolatilityStructure)
 
 %define QUANTLIB_HANDLE(T_ADDIN,T_LIB...)
 
@@ -207,7 +215,7 @@ QUANTLIB_GET_YTS(QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionV
 %enddef
 
 // QuantLib Handles.
-// If you add a new item to the list below, then you also need to edit file qlo/conversions/get.cpp
+// NB: If you add a new item to the list below, then you also need to edit file qlo/conversions/get.cpp
 // and add an explicit instantiation of template getHandle.
 QUANTLIB_HANDLE(QuantLibAddin::FlatForward, QuantLib::YieldTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::BlackConstantVol, QuantLib::BlackVolTermStructure)
@@ -217,6 +225,8 @@ QUANTLIB_HANDLE(QuantLibAddin::BlackAtmVolCurve, QuantLib::BlackAtmVolCurve)
 QUANTLIB_HANDLE(QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure)
 //QUANTLIB_HANDLE(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::SabrVolSurface, QuantLib::SabrVolSurface)
+QUANTLIB_HANDLE(QuantLibAddin::OptionletVolatilityStructure, QuantLib::OptionletVolatilityStructure)
+QUANTLIB_HANDLE(QuantLibAddin::CapFloorTermVolCurve, QuantLib::CapFloorTermVolCurve)
 
 // Handle<Quote> - Call the macro to set the default typemaps, then override most of them.
 

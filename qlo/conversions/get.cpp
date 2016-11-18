@@ -26,6 +26,7 @@
 #include <qlo/objects/obj_quotes.hpp>
 #include <qlo/objects/obj_volatilities.hpp>
 #include <qlo/objects/obj_swaptionvolstructure.hpp>
+#include <qlo/objects/obj_capletvolstructure.hpp>
 
 #include <ql/utilities/dataparsers.hpp>
 #include <ql/time/period.hpp>
@@ -33,6 +34,8 @@
 #include <ql/experimental/volatility/blackatmvolcurve.hpp>
 #include <ql/experimental/volatility/sabrvolsurface.hpp>
 #include <ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp>
+#include <ql/termstructures/volatility/optionlet/optionletvolatilitystructure.hpp>
+#include <ql/termstructures/volatility/capfloor/capfloortermvolcurve.hpp>
 
 #include <boost/algorithm/string/case_conv.hpp>
 
@@ -95,6 +98,12 @@ QuantLibAddin::getYieldTermStructure<QuantLibAddin::DefaultProbabilityTermStruct
 template boost::shared_ptr<QuantLib::SwaptionVolatilityStructure>
 QuantLibAddin::getYieldTermStructure<QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>(const std::string&);
 
+template boost::shared_ptr<QuantLib::OptionletVolatilityStructure>
+QuantLibAddin::getYieldTermStructure<QuantLibAddin::OptionletVolatilityStructure, QuantLib::OptionletVolatilityStructure>(const std::string&);
+
+template boost::shared_ptr<QuantLib::CapFloorTermVolatilityStructure>
+QuantLibAddin::getYieldTermStructure<QuantLibAddin::CapFloorTermVolatilityStructure, QuantLib::CapFloorTermVolatilityStructure>(const std::string&);
+
 template <class QuantLibAddinHandle, class QuantLibHandle>
 QuantLib::Handle<QuantLibHandle> QuantLibAddin::getHandle(
     const std::string &in) {
@@ -113,6 +122,12 @@ QuantLibAddin::getHandle<QuantLibAddin::SabrVolSurface, QuantLib::SabrVolSurface
 
 template QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>
 QuantLibAddin::getHandle<QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>(const std::string&);
+
+template QuantLib::Handle<QuantLib::OptionletVolatilityStructure>
+QuantLibAddin::getHandle<QuantLibAddin::OptionletVolatilityStructure, QuantLib::OptionletVolatilityStructure>(const std::string&);
+
+template QuantLib::Handle<QuantLib::CapFloorTermVolCurve>
+QuantLibAddin::getHandle<QuantLibAddin::CapFloorTermVolCurve, QuantLib::CapFloorTermVolCurve>(const std::string&);
 
 template <class QuantLibAddinHandle, class QuantLibHandle>
 QuantLib::Handle<QuantLibHandle> QuantLibAddin::getHandle(

@@ -10,7 +10,7 @@
 %include daycounters.i
 //%include defaultbasket.i
 //%include defaulttermstructures.i
-//%include exercise.i
+%include exercise.i
 %include handles.i
 %include indexes.i
 //%include instruments.i

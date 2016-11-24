@@ -1,32 +1,47 @@
 
-%group(exercise);
-%groupCaption(Exercise);
+%group(Exercise);
 
-//%insert(exercise_library_hpp) %{
-//#include <ql/exercise.hpp>
-//%}
+%insert(obj_hpp) %{
+#include <ql/exercise.hpp>
+%}
 
 namespace QuantLib {
 
-    class Exercise {};
-
-    class EuropeanExercise : public Exercise {
+    class Exercise {
       public:
-        %generate(c++, EuropeanExercise);
-        %generate(c#, EuropeanExercise);
-        %generate(countify, EuropeanExercise);
-        EuropeanExercise(
-            const Date& date    //!< expiry date.
+
+        //! Returns all exercise dates.
+        const std::vector<Date>& dates() const;
+
+        //! Returns last exercise date.
+        Date lastDate() const;
+    };
+
+    class AmericanExercise : public /*EarlyExercise*/Exercise {
+      public:
+
+        AmericanExercise(
+            const Date& EarliestDate,   //!< Earliest exercise date.
+            const Date& LatestDate,     //!< Latest exercise date.
+            bool PayoffAtExpiry = false //!< Payoff at expiry.
         );
     };
 
-    class BermudanExercise : public Exercise {
+    class EuropeanExercise : public Exercise {
       public:
-        %generate(c#, BermudanExercise);
-        BermudanExercise(
-            const std::vector<Date>& dates   //!< dates.
-            /*,bool payoffAtExpiry = false*/
+
+        EuropeanExercise(
+            const Date& ExpiryDate            //!< Expiry date.
         );
-    };    
+    };
+
+    class BermudanExercise : public /*EarlyExercise*/Exercise {
+      public:
+
+        BermudanExercise(
+            const std::vector<Date>& Dates,     //!< Dates.
+            bool PayoffAtExpiry = false         //!< Payoff at expiry.
+        );
+    };
 }
 

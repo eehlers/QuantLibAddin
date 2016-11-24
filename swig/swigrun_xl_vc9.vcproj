@@ -70,6 +70,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\exercise.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\handles.i"
 					>
 				</File>

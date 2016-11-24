@@ -781,6 +781,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_exercise.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_exercise.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_handles.cpp"
 					>
 				</File>
@@ -933,6 +941,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_exercise.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_exercise.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_handles.cpp"
 					>
 				</File>
@@ -1079,6 +1095,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_capletvolstructure.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_exercise.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_exercise.hpp"
 				>
 			</File>
 			<File
@@ -1291,6 +1315,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_daycounters.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_exercise.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_exercise.hpp"
 				>
 			</File>
 			<File

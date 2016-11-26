@@ -16,7 +16,7 @@
 //%include instruments.i
 //%include interpolation.i
 //%include latentmodels.i
-//%include leg.i
+%include leg.i
 %include math.i
 //%include models.i
 %include optimization.i

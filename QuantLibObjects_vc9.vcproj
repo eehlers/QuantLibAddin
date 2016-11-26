@@ -805,6 +805,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_leg.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_leg.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_math.cpp"
 					>
 				</File>
@@ -965,6 +973,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_leg.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_leg.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_math.cpp"
 					>
 				</File>
@@ -1119,6 +1135,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_indexes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_leg.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_leg.hpp"
 				>
 			</File>
 			<File
@@ -1335,6 +1359,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_indexes_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_leg.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_leg_hw.cpp"
 				>
 			</File>
 			<File

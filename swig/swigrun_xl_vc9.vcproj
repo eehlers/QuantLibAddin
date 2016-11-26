@@ -82,6 +82,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\leg.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\math.i"
 					>
 				</File>

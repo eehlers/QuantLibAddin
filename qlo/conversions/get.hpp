@@ -32,6 +32,15 @@ namespace QuantLibAddin {
 
     QuantLib::Period getPeriod(const std::string &in);
 
+    // FIXME this generic behavior should be implemented in the reposit project/namespace.
+    template <class QuantLibAddinObject, class QuantLibObject>
+    struct GetObject {
+        static boost::shared_ptr<QuantLibObject> f(const std::string &in) {
+            RP_GET_REFERENCE(ret, in, QuantLibAddinObject, QuantLibObject);
+            return ret;
+        }
+    };
+
     template <class QuantLibAddinQuote, class QuantLibQuote>
     boost::shared_ptr<QuantLibQuote> getQuote(const std::string &in);
 

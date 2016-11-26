@@ -116,16 +116,6 @@
         reposit::vector::convert<QuantLib::Period>($1_name_vec, "$1_name");
 %}
 
-%typemap(rp_tm_scr_cnvt) std::vector<boost::shared_ptr<QuantLib::RateHelper> > & %{
-    std::vector<std::string> $1_name_vec =
-        reposit::vector::convert<std::string>(valueObject->getProperty("$1_name"), "$1_name");
-    for (std::vector<std::string>::const_iterator i = $1_name_vec.begin();
-            i != $1_name_vec.end(); ++i)
-        valueObject->processPrecedentID(*i);
-    std::vector<boost::shared_ptr<QuantLib::RateHelper> > $1_name =
-        reposit::getLibraryObjectVector<QuantLibAddin::RateHelper, QuantLib::RateHelper>($1_name_vec);
-%}
-
 //*****************************************************************************
 // rp_tm_cpp_* - typemaps for the C++ Addin
 //*****************************************************************************
@@ -166,6 +156,7 @@
 %typemap(rp_tm_xll_rtft) QuantLib::Array & "OPER*";
 %typemap(rp_tm_xll_rtft) QuantLib::Matrix "OPER*";
 %typemap(rp_tm_xll_rtft) QuantLib::Matrix & "OPER*";
+%typemap(rp_tm_xll_rtft) QuantLib::InterestRate "double*";
 
 // rp_tm_xll_parm - function parameters (F/C/M)
 
@@ -226,13 +217,6 @@
             reposit::operToVector<QuantLib::Period>(*$1_name, "$1_name");
 %}
 
-%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> > & %{
-        std::vector<std::string> z =
-            reposit::operToVector<std::string>(*$1_name, "$1_name");
-        std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> > $1_name_vec =
-            reposit::getObjectVector<QuantLibAddin::RateHelper>(z);
-%}
-
 // rp_tm_xll_argv - arguments to the Value Object constructor (C)
 
 %typemap(rp_tm_xll_argv) QuantLib::Date "$1_name_cnv2";
@@ -252,13 +236,19 @@
 %typemap(rp_tm_xll_argf) boost::shared_ptr<QuantLibAddin::RateHelper> & "$1_name_obj";
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Date> & "$1_name_vec2";
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Period> & "$1_name_vec2";
-%typemap(rp_tm_xll_argf) std::vector<boost::shared_ptr<QuantLib::RateHelper> > const & "$1_name_vec2";
 
 // rp_tm_xll_rtdc - declare variable to capture return value of Library function (F/M)
 
 %typemap(rp_tm_xll_rtdc) QuantLib::Array & "QuantLib::Array returnValue =";
 %typemap(rp_tm_xll_rtdc) QuantLib::Matrix & "QuantLib::Matrix returnValue =";
 %typemap(rp_tm_xll_rtdc) QuantLib::Disposable<QuantLib::Matrix> "QuantLib::Matrix returnValue =";
+%typemap(rp_tm_xll_rtdc) QuantLib::InterestRate "double returnValue =";
+
+%typemap(rp_tm_xll_rtst) QuantLib::InterestRate %{
+        static double ret;
+        ret = returnValue;
+        return &ret;
+%}
 
 // rp_tm_xll_rtst - return statement (F/M)
 
@@ -310,8 +300,9 @@ QL_VEC_RET(QuantLib::Period, std::string)
 %typemap(rp_tm_xll_cdrt) QuantLib::Date & "N";
 %typemap(rp_tm_xll_cdrt) QuantLib::Disposable< QuantLib::Matrix > "P";
 %typemap(rp_tm_xll_cdrt) QuantLib::Array & "P";
-%typemap(rp_tm_xll_cdrt) QuantLib::Matrix & "P";
 %typemap(rp_tm_xll_cdrt) QuantLib::Matrix "P";
+%typemap(rp_tm_xll_cdrt) QuantLib::Matrix & "P";
+%typemap(rp_tm_xll_cdrt) QuantLib::InterestRate "E";
 
 // rp_tm_xll_code - code to register the parameter with Excel
 

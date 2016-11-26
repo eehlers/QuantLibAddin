@@ -47,12 +47,11 @@ ENUMERATED_CLASS(QuantLib, DayCounter)
 namespace QuantLib {
     class T;
 }
-
-%typemap(rp_tm_xll_cnvt) std::vector<boost::shared_ptr<QuantLib::T> > & %{
-        std::vector<std::string> $1_name_vec =
-            reposit::operToVector<std::string>(*$1_name, "$1_name");
-        std::vector<boost::shared_ptr<QuantLib::T> > $1_name_vec2 =
-            reposit::getLibraryObjectVector<QuantLibAddin::T, QuantLib::T>($1_name_vec);
+// FIXME - Move this into reposit swig module.
+%typemap(rp_tm_xll_cnvt) QuantLib::T & %{
+        boost::shared_ptr<QuantLib::T> $1_name_temp =
+            QuantLibAddin::GetObject<QuantLibAddin::T, QuantLib::T>::f($1_name);
+        const QuantLib::T &$1_name_obj = *($1_name_temp.get());
 %}
 
 OBJECT_WRAPPER(QuantLibAddin::T, QuantLib::T)
@@ -130,6 +129,18 @@ QL_OBJECT_WRAPPER(TypePayoff)
 QL_OBJECT_WRAPPER(Vasicek)
 QL_OBJECT_WRAPPER(YieldTermStructure)
 QL_OBJECT_WRAPPER(ZeroCurve)
+
+QL_OBJECT_WRAPPER(Leg)
+QL_OBJECT_WRAPPER(MultiPhaseLeg)
+QL_OBJECT_WRAPPER(InterestRate)
+
+// This functionality is copied directly from the old build - see function qlLegNPV().
+// It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?
+%typemap(rp_tm_xll_cnvt) QuantLib::DiscountCurve & %{
+        boost::shared_ptr<QuantLib::YieldTermStructure> $1_name_temp =
+            QuantLibAddin::GetObject<QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure>::f($1_name);
+        const QuantLib::YieldTermStructure &$1_name_obj = *($1_name_temp.get());
+%}
 
 // ctor in QLA namespace, member function in QL namespace
 

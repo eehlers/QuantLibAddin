@@ -75,14 +75,10 @@ namespace QuantLib {
             void clearFixings();
 
 %insert(rp_class) %{
-        //****MEMBER*****
-        void
-        addFixings(
-            // BEGIN typemap rp_tm_default
+        void addFixings(
             std::vector< QuantLib::Date > const &FixingDates,
             std::vector< QuantLib::Real > const &FixingValues,
             bool ForceOverwrite
-            // END   typemap rp_tm_default
         );
 
             RP_LIB_CTOR(Index, QuantLib::Index);

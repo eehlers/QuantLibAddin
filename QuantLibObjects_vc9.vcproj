@@ -781,6 +781,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_couponvectors.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_couponvectors.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_exercise.cpp"
 					>
 				</File>
@@ -949,6 +957,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_couponvectors.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_couponvectors.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_exercise.cpp"
 					>
 				</File>
@@ -1111,6 +1127,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_capletvolstructure.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_couponvectors.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_couponvectors.hpp"
 				>
 			</File>
 			<File
@@ -1327,6 +1351,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_capletvolstructure_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_couponvectors.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_couponvectors_hw.cpp"
 				>
 			</File>
 			<File

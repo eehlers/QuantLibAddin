@@ -236,6 +236,8 @@
 %typemap(rp_tm_xll_argf) boost::shared_ptr<QuantLibAddin::RateHelper> & "$1_name_obj";
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Date> & "$1_name_vec2";
 %typemap(rp_tm_xll_argf) std::vector<QuantLib::Period> & "$1_name_vec2";
+%typemap(rp_tm_xll_argf) std::vector<QuantLib::Handle<QuantLib::Quote> >& "$1_name_vec";
+%typemap(rp_tm_xll_argf) std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > & "$1_name_vec";
 
 // rp_tm_xll_rtdc - declare variable to capture return value of Library function (F/M)
 

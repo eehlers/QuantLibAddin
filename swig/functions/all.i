@@ -4,7 +4,7 @@
 //%include bonds.i
 %include calendars.i
 %include capletvolstructure.i
-//%include couponvectors.i
+%include couponvectors.i
 //%include credit.i
 %include date.i
 %include daycounters.i
@@ -16,7 +16,7 @@
 //%include instruments.i
 //%include interpolation.i
 //%include latentmodels.i
-%include leg.i
+%include leg.i                  // depends on couponvectors, swap, capfloor
 %include math.i
 //%include models.i
 %include optimization.i
@@ -25,11 +25,10 @@
 //%include prices.i
 %include pricingengines.i
 %include processes.i
-%include quotes.i
+%include quotes.i               // depends on instruments
 %include ratehelpers.i
 %include schedule.i
-// incomplete
-%include settings.i
+%include settings.i             // incomplete
 %include shortratemodels.i
 %include smilesection.i
 //%include swap.i

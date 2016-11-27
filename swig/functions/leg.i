@@ -13,8 +13,6 @@ namespace QuantLib {
 }
 
 namespace QuantLibAddin {
-    // FIXME this belongs in couponvectors which is not yet implemented.
-    RP_LIB_CLASS(FloatingRateCouponPricer, QuantLib::FloatingRateCouponPricer);
     class FloatingRateCouponPricer;
 }
 %}

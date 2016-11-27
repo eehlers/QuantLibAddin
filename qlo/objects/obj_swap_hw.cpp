@@ -12,8 +12,7 @@ QuantLibAddin::Swap::Swap(
             std::vector< QuantLib::Leg > const &legs,
             std::vector< bool > const &payer,
             // END   typemap rp_tm_default
-    bool permanent)
-: reposit::LibraryObject<QuantLib::Swap>(properties, permanent) {
+    bool permanent) : Instrument(properties, permanent) {
     libraryObject_ = boost::shared_ptr<QuantLib::Swap>(new QuantLib::Swap(
                 // BEGIN typemap rp_tm_default
                 legs,
@@ -33,8 +32,7 @@ QuantLibAddin::Swap::Swap(
             QuantLib::Period const &ForwardStart,
             boost::shared_ptr< QuantLib::CmsCouponPricer > const &Pricer,
             // END   typemap rp_tm_default
-    bool permanent)
-: reposit::LibraryObject<QuantLib::Swap>(properties, permanent) {
+    bool permanent) : Instrument(properties, permanent) {
         libraryObject_ = QuantLib::MakeCms(SwapTenor, SwapIndex,
                                            IborIndex, IborSpread,
                                            ForwardStart)

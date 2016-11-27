@@ -36,6 +36,6 @@
 %include termstructures.i
 %include timeseries.i
 %include utilities.i
-//%include vanillaswaps.i
+%include vanillaswap.i
 %include volatilities.i
 

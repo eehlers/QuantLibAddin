@@ -7,6 +7,14 @@
 namespace QuantLib {
     class CmsCouponPricer;
 }
+
+// DELETEME
+namespace QuantLibAddin {
+    class Instrument : public reposit::LibraryObject<QuantLib::Instrument> {
+      protected:
+        RP_LIB_CTOR(Instrument, QuantLib::Instrument)
+    };
+}
 %}
 
 %insert(obj_cpp) %{
@@ -22,9 +30,9 @@ namespace QuantLib {
 
 namespace QuantLib {
 
-    //class Instrument{};
+    class Instrument;
 
-    class Swap /*: public Instrument*/ {
+    class Swap : public Instrument {
       public:
 
         Swap(
@@ -64,8 +72,8 @@ namespace QuantLib {
             const QuantLib::Date& AfterDate=QuantLib::Date()
         );
 
-      //protected:
-      //  RP_OBJ_CTOR(Swap, Instrument);
+      protected:
+        RP_OBJ_CTOR(Swap, Instrument);
 %}
     };
 }

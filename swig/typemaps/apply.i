@@ -82,8 +82,6 @@ OBJECT_WRAPPER(QuantLibAddin::T, QuantLib::T)
 //QL_OBJECT_WRAPPER(InterpolatedYieldCurve)
 //QL_OBJECT_WRAPPER(Issuer)
 //QL_OBJECT_WRAPPER(OneFactorAffineModel)
-//QL_OBJECT_WRAPPER(PricingEngine)
-//QL_OBJECT_WRAPPER(ShortRateModel)
 //QL_OBJECT_WRAPPER(SwaptionHelper)
 //QL_OBJECT_WRAPPER(VanillaSwap)
 
@@ -153,6 +151,8 @@ QL_OBJECT_WRAPPER(CmsCouponPricer)
 QL_OBJECT_WRAPPER(NumericHaganPricer)
 QL_OBJECT_WRAPPER(VanillaSwap)
 QL_OBJECT_WRAPPER(Swap)
+QL_OBJECT_WRAPPER(PricingEngine)
+QL_OBJECT_WRAPPER(SwapRateHelper)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

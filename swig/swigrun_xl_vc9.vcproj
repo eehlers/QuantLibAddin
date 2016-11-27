@@ -158,7 +158,7 @@
 					>
 				</File>
 				<File
-					RelativePath=".\functions\vanillaswaps.i"
+					RelativePath=".\functions\vanillaswap.i"
 					>
 				</File>
 				<File

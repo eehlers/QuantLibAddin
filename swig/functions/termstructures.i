@@ -95,7 +95,7 @@ namespace QuantLib {
             bool AllowExtrapolation = false                                     //!< TRUE allows extrapolation.
         ) const;
         
-        // FIXME SWIG does not generate this overload.
+        // FIXME this overload does not get generated.
         //! Returns the forward interest rate from the given YieldTermStructure object.
         //%alias(forwardRate, YieldTSForwardRate2);
         //%loop(forwardRate, Date);

@@ -138,6 +138,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\swap.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\swaptionvolstructure.i"
 					>
 				</File>
@@ -151,6 +155,10 @@
 				</File>
 				<File
 					RelativePath=".\functions\utilities.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\vanillaswaps.i"
 					>
 				</File>
 				<File

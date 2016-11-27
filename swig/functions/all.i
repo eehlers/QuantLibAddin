@@ -31,7 +31,7 @@
 %include settings.i             // incomplete
 %include shortratemodels.i
 %include smilesection.i
-//%include swap.i
+%include swap.i
 %include swaptionvolstructure.i
 %include termstructures.i
 %include timeseries.i

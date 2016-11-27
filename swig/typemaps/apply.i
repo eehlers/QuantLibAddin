@@ -28,9 +28,15 @@ QL_ENUMERATED_TYPE_STRUCT(Option, Type)
 QL_ENUMERATED_TYPE_STRUCT(Pillar, Choice)
 QL_ENUMERATED_TYPE_STRUCT(Position, Type)
 QL_ENUMERATED_TYPE_STRUCT(Protection, Side)
-QL_ENUMERATED_TYPE_STRUCT(VanillaSwap, Type)
 QL_ENUMERATED_TYPE_STRUCT(SalvagingAlgorithm, Type)
 QL_ENUMERATED_TYPE_STRUCT(Replication, Type)
+
+// We can't use the directive below, because it would declare VanillaSwap, but we have also
+// declared VanillaSwap elsewhere as a full-fledged class, which would result in an illegal redefinition:
+//QL_ENUMERATED_TYPE_STRUCT(VanillaSwap, Type)
+// Instead we bypass QL_ENUMERATED_TYPE_STRUCT() and call directly into reposit's ENUMERATED_TYPE_IMPL(),
+// this avoids the redefinition:
+ENUMERATED_TYPE_IMPL(QuantLib::VanillaSwap::Type)
 
 ENUMERATED_TYPE_IMPL(QuantLib::EndCriteria::Type)
 ENUMERATED_TYPE_IMPL(QuantLibAddin::RateHelper::DepoInclusionCriteria)
@@ -145,6 +151,8 @@ QL_OBJECT_WRAPPER(CmsZeroLeg)
 QL_OBJECT_WRAPPER(IborCouponPricer)
 QL_OBJECT_WRAPPER(CmsCouponPricer)
 QL_OBJECT_WRAPPER(NumericHaganPricer)
+QL_OBJECT_WRAPPER(VanillaSwap)
+QL_OBJECT_WRAPPER(Swap)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

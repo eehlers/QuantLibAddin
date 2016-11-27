@@ -2,18 +2,11 @@
 %group(Swap);
 
 %insert(obj_hpp) %{
+#include <qlo/objects/obj_instruments.hpp>
 #include <qlo/objects/obj_couponvectors.hpp>
 
 namespace QuantLib {
     class CmsCouponPricer;
-}
-
-// DELETEME
-namespace QuantLibAddin {
-    class Instrument : public reposit::LibraryObject<QuantLib::Instrument> {
-      protected:
-        RP_LIB_CTOR(Instrument, QuantLib::Instrument)
-    };
 }
 %}
 
@@ -21,7 +14,6 @@ namespace QuantLibAddin {
 #include <qlo/objects/obj_swap.hpp>
 #include <qlo/objects/obj_indexes.hpp>
 #include <qlo/objects/obj_termstructures.hpp>
-#include <qlo/objects/obj_couponvectors.hpp>
 #include <ql/instruments/swap.hpp>
 #include <ql/indexes/iborindex.hpp>
 #include <ql/indexes/swapindex.hpp>
@@ -29,8 +21,6 @@ namespace QuantLibAddin {
 %}
 
 namespace QuantLib {
-
-    class Instrument;
 
     class Swap : public Instrument {
       public:

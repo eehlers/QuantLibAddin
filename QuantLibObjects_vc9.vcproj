@@ -1442,6 +1442,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\objects\obj_instruments.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_instruments_hw.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\objects\obj_leg.hpp"
 				>
 			</File>

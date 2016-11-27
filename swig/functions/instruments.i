@@ -1,78 +1,56 @@
 
-%group(instruments);
-%groupCaption(Instruments);
+%group(Instruments);
 
-//%insert(instruments_library_hpp) %{
-//#include <ql/instruments/vanillaoption.hpp>
-//#include <ql/cashflow.hpp>
-//#include <ql/instruments/swap.hpp>
-//#include <ql/instruments/swaption.hpp>
-//#include <ql/instruments/forwardrateagreement.hpp>
-//%}
-//
-//%insert(instruments_addin_cpp) %{
-//#include <qlo/objects/obj_pricingengines.hpp>
-//#include <qlo/objects/obj_payoffs.hpp>
-//#include <qlo/objects/obj_exercise.hpp>
-//#include <qlo/objects/objmanual_leg.hpp>
-//#include <qlo/objects/obj_vanillaswaps.hpp>
-//#include <qlo/objects/objmanual_termstructures.hpp>
-//#include <qlo/objects/indexes/iborindex.hpp>
-//%}
+%insert(obj_hpp) %{
+#include <ql/types.hpp>
+
+namespace QuantLib {
+    class Instrument;
+}
+%}
+
+%insert(obj_cpp) %{
+#include <qlo/objects/obj_pricingengines.hpp>
+%}
 
 namespace QuantLib {
 
+    //class Foo {};
+    
+    %explicit_class(Instrument);
     class Instrument {
       public:
-        %generate(c++, setPricingEngine);
-        %generate(c#, setPricingEngine);
-        %generate(countify, setPricingEngine);
-        //!< Sets a new pricing engine to the given Instrument object.
-        void setPricingEngine(
-            //!< PricingEngine object ID.
-            const boost::shared_ptr<PricingEngine>& engine
-        );
 
-        %generate(c++, NPV);
-        %generate(c#, NPV);
-        %generate(countify, NPV);
         //! Returns the NPV for the given Instrument object.
         Real NPV();
-    };
 
-    class VanillaOption : public Instrument {
-      public:
-        %generate(c++, VanillaOption);
-        %generate(c#, VanillaOption);
-        %generate(countify, VanillaOption);
-        VanillaOption(
-            const boost::shared_ptr<StrikedTypePayoff>& payoff,     //!< StrikedTypePayoff object ID.
-            const boost::shared_ptr<Exercise>& exercise             //!< Exercise object ID.
+        //! Returns the NPV error estimation (for e.g. Monte Carlo simulation) for the given Instrument object.
+        Real errorEstimate() const;
+
+        //! Returns the date to which the net present value refers.
+        const Date& valuationDate() const;
+
+        //! Returns TRUE if the given Instrument object is expired.
+        virtual bool isExpired() const;
+
+        //! Sets a new pricing engine to the given Instrument object.
+        void setPricingEngine(
+            const boost::shared_ptr<PricingEngine>& PricingEngine      //!< PricingEngine object ID.
         );
-    };
-    
-    class Swaption : public /*Option*/Instrument {
-      public:
-        %generate(c#, Swaption);
-        Swaption(
-            const boost::shared_ptr<VanillaSwap>& swap,     //!< underlying (vanilla) swap object ID.
-            const boost::shared_ptr<Exercise>& exercise     //!< Exercise object ID.
-            /*,Settlement::Type delivery = Settlement::Physical*/
-        );
-    };
-    
-    class ForwardRateAgreement: public /*Forward*/Instrument {
-      public:
-        ForwardRateAgreement(
-            const Date& valueDate,                              //!< Value date.
-            const Date& maturityDate,                           //!< Maturity date.
-            Position::Type type,                                //!< Instrument position (Long = purchase, Short = sale).
-            Rate strikeForwardRate,                             //!< Strike rate.
-            Real notionalAmount,                                //!< Notional amount.
-            const boost::shared_ptr<IborIndex>& index,          //!< Underlying index object ID.
-            const Handle<YieldTermStructure>& discountCurve     //!< discounting YieldTermStructure object ID.
-            /*,Handle<YieldTermStructure>()*/
-            );
+%insert(rp_class) %{
+        QuantLib::Real results(const std::string& tag) const;
+      protected:
+        RP_LIB_CTOR(Instrument, QuantLib::Instrument)
+%}
     };
 }
 
+namespace QuantLibAddin {
+
+    %noctor(Instrument);
+    %noexport(Instrument);
+    class Instrument {
+      public:
+        QuantLib::Real results(const std::string& tag) const;
+    };
+}

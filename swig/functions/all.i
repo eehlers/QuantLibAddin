@@ -13,7 +13,7 @@
 %include exercise.i
 %include handles.i
 %include indexes.i
-//%include instruments.i
+%include instruments.i
 //%include interpolation.i
 //%include latentmodels.i
 %include leg.i                  // depends on couponvectors, swap, capfloor

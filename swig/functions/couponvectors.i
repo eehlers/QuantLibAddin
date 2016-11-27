@@ -5,8 +5,8 @@
 #include <qlo/objects/obj_leg.hpp>
 
 #include <ql/time/businessdayconvention.hpp>
-#include <ql/cashflows/replication.hpp>
 #include <ql/cashflows/conundrumpricer.hpp>
+#include <ql/cashflows/replication.hpp>
 
 namespace QuantLib {
     class Schedule;

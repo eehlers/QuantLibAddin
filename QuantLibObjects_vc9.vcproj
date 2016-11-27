@@ -1653,14 +1653,6 @@
 				Name="cashflows"
 				>
 				<File
-					RelativePath=".\qlo\objects\cashflows\conundrumpricer.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\cashflows\conundrumpricer.hpp"
-					>
-				</File>
-				<File
 					RelativePath=".\qlo\objects\cashflows\flowanalysis.cpp"
 					>
 				</File>

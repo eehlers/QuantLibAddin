@@ -329,14 +329,14 @@ namespace QuantLib {
     class PricingEngine {
       public:
 
-        %override2(PricingEngine);
+        %noimpl(PricingEngine);
         PricingEngine(
             const std::string& EngineID,                                                    //!< Engine type.
             const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& ProcessID    //!< GeneralizedBlackScholesProcess object ID.
         );
 
         %rename(BinomialPricingEngine) PricingEngine;
-        %override2(PricingEngine);
+        %noimpl(PricingEngine);
         PricingEngine(
             const std::string& EngineID,                                                    //!< Engine type.
             const boost::shared_ptr<QuantLib::GeneralizedBlackScholesProcess>& ProcessID,   //!< GeneralizedBlackScholesProcess object ID.
@@ -369,7 +369,7 @@ namespace QuantLib {
         );
 
         %rename(BlackSwaptionEngine2) BlackSwaptionEngine;
-        %override2(BlackSwaptionEngine);
+        %noimpl(BlackSwaptionEngine);
         BlackSwaptionEngine(
             const QuantLib::Handle<QuantLib::YieldTermStructure> &YieldCurve,       //!< Discounting yield term structure object ID.
             const QuantLib::Handle<QuantLib::Quote>& Vol,                           //!< Swaption Black volatility.
@@ -388,7 +388,7 @@ namespace QuantLib {
         );
 
         %rename(BlackCapFloorEngine2) BlackCapFloorEngine;
-        %override2(BlackCapFloorEngine);
+        %noimpl(BlackCapFloorEngine);
         BlackCapFloorEngine(
             const QuantLib::Handle<QuantLib::YieldTermStructure> &YieldCurve,       //!< Discounting yield term structure object ID.
             const QuantLib::Handle<QuantLib::Quote>& Vol,                           //!< Swaption Black volatility.
@@ -424,7 +424,7 @@ namespace QuantLib {
     class BondEngine : public PricingEngine {
       public:
 
-        %override2(BondEngine);
+        %noimpl(BondEngine);
         BondEngine(
             const QuantLib::Handle<QuantLib::YieldTermStructure> &YieldCurve        //!< Discounting yield term structure object ID.
         );

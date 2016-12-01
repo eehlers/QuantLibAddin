@@ -40,7 +40,7 @@ namespace QuantLib {
 
 namespace QuantLib {
 
-    %explicit_class(Index);
+    %noctor(Index);
     class Index {
         public:
 
@@ -64,6 +64,15 @@ namespace QuantLib {
             ) const;
 
             //! Adds fixings for the given Index object.
+            %wrap(addFixings);
+            void addFixings(
+                const std::vector<Date>& FixingDates,   //!< fixing dates.
+                const std::vector<Real>& FixingValues,  //!< fixing values.
+                bool ForceOverwrite=false               //!< Set to TRUE to force overwriting of existing fixings, if any.
+            );
+
+            //! Adds fixings for the given Index object.
+            %nowrap(addFixings);
             %rename(addFixings2) addFixings;
             %loop(addFixings, TimeSeriesID);
             void addFixings(
@@ -73,14 +82,7 @@ namespace QuantLib {
 
             //!< Clear all fixings for the given Index object.
             void clearFixings();
-
 %insert(rp_class) %{
-        void addFixings(
-            std::vector< QuantLib::Date > const &FixingDates,
-            std::vector< QuantLib::Real > const &FixingValues,
-            bool ForceOverwrite
-        );
-
             RP_LIB_CTOR(Index, QuantLib::Index);
 %}
     };
@@ -173,7 +175,7 @@ namespace QuantLib {
         public:
 
             %processor(Euribor, IndexProcessor);
-            %override2(Euribor);
+            %noimpl(Euribor);
             Euribor(
                 const std::string& Tenor,                                                                                           //!< index tenor: SW (1W), 2W, 3W, 1M, 2M, 3M, 4M, 5M, 6M, 7M, 8M, 9M, 10M, 11M, 12M (1Y).
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()   //!< forecasting YieldTermStructure object ID.
@@ -184,7 +186,7 @@ namespace QuantLib {
         public:
 
             %processor(Euribor365, IndexProcessor);
-            %override2(Euribor365);
+            %noimpl(Euribor365);
             Euribor365(
                 const std::string& Tenor,                                                                                           //!< index tenor: SW (1W), 2W, 3W, 1M, 2M, 3M, 4M, 5M, 6M, 7M, 8M, 9M, 10M, 11M, 12M (1Y).
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& YieldCurve=QuantLib::Handle<QuantLib::YieldTermStructure>()   //!< forecasting YieldTermStructure object ID.
@@ -203,7 +205,7 @@ namespace QuantLib {
         public:
 
             %processor(Libor, IndexProcessor);
-            %override2(Libor);
+            %noimpl(Libor);
             Libor(
                 const QuantLib::Currency& Currency,                                                                                 //!< Libor index currency.
                 const std::string& Tenor,                                                                                           //!< index tenor: SW (1W), 2W, 3W, 1M, 2M, 3M, 4M, 5M, 6M, 7M, 8M, 9M, 10M, 11M, 12M (1Y).
@@ -259,7 +261,7 @@ namespace QuantLib {
         public:
 
             %processor(EuriborSwap, IndexProcessor);
-            %override2(EuriborSwap);
+            %noimpl(EuriborSwap);
             EuriborSwap(
                 QuantLibAddin::SwapIndex::FixingType FixingType/*=Default?*/,                                                                      //!< Swap index fixing type (e.g. IsdaFixA, IsdaFixB, IfrFix, IsdaFixAm, IsdaFixPm).
                 const QuantLib::Period& Tenor,                                                                                      //!< index tenor (e.g. 1Y for one year).
@@ -272,7 +274,7 @@ namespace QuantLib {
         public:
 
             %processor(LiborSwap, IndexProcessor);
-            %override2(LiborSwap);
+            %noimpl(LiborSwap);
             LiborSwap(
                 const QuantLib::Currency& currency,                                                                                 //!< Libor swap index currency.
                 QuantLibAddin::SwapIndex::FixingType FixingType/*=Default?*/,                                                                      //!< Swap index fixing type (e.g. IsdaFixA, IsdaFixB, IfrFix, IsdaFixAm, IsdaFixPm).
@@ -318,20 +320,4 @@ namespace QuantLib {
                 const QuantLib::Handle<QuantLib::Quote>& Spread                                                                     //!< floating rate spread.
             );
     };    
-}
-
-namespace QuantLibAddin {
-
-    %noctor(Index);
-    %noexport(Index);
-    class Index {
-        public:
-
-            //! Adds fixings for the given Index object.
-            void addFixings(
-                const std::vector<QuantLib::Date>& FixingDates,                                                                     //!< fixing dates.
-                const std::vector<QuantLib::Real>& FixingValues,                                                                    //!< fixing values.
-                bool ForceOverwrite=false                                                                                           //!< Set to TRUE to force overwriting of existing fixings, if any.
-            );
-    };
 }

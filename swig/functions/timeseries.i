@@ -50,25 +50,15 @@ namespace QuantLib {
 
             //! Returns the historical data.
             std::vector<Real> values();
-%insert(rp_class) %{
-        QuantLib::Real subscriptWrapper(const QuantLib::Date& d);
-%}
-    };
-}
-
-namespace QuantLibAddin {
-
-    %rename(TimeSeries) TimeSeriesDef;
-    %noexport(TimeSeriesDef);
-    %noctor(TimeSeriesDef);
-    class TimeSeriesDef {
-        public:
 
             //! Returns returns the data corresponding to the given dates.
+            %wrap(subscriptWrapper);
             %rename(value) subscriptWrapper;
-            %loop(subscriptWrapper, Dates);
+            // FIXME %loop() + %wrap() + %rename() [of the class] does not work.
+            //%loop(subscriptWrapper, Dates);
             QuantLib::Real subscriptWrapper(
                 const QuantLib::Date &Dates                         //!< fixing date(s).
             );
     };
 }
+

@@ -194,7 +194,7 @@ namespace QuantLibAddin {
 
     class InterpolatedYieldCurve : public YieldTermStructure {
       public:
-        %override2(InterpolatedYieldCurve);
+        %noimpl(InterpolatedYieldCurve);
         InterpolatedYieldCurve(
             const std::vector<QuantLib::Date>& Dates,                           //!< vector of dates, the first one being the one at which discount factor = 1.0
             const std::vector<QuantLib::Real>& Data,                            //!< data vector. Each element should be of the type selected by TraitsID

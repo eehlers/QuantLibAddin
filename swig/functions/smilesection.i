@@ -94,7 +94,7 @@ namespace QuantLib {
         );
 
         %rename(SabrInterpolatedSmileSection1) SabrInterpolatedSmileSection;
-        %override2(SabrInterpolatedSmileSection);
+        %noimpl(SabrInterpolatedSmileSection);
         SabrInterpolatedSmileSection(
             const QuantLib::Date& OptionDate,                       //!< Smile's expiry as Date.
             const QuantLib::Handle<QuantLib::Quote>& ForwardRate,   //!< ATM forward rate quote.
@@ -142,7 +142,7 @@ namespace QuantLib {
     class SabrSmileSection : public SmileSection {
       public:
 
-        %override2(SabrSmileSection);
+        %noimpl(SabrSmileSection);
         SabrSmileSection(
             const QuantLib::Time OptionTime,                                //!< Smile's expiry as time.
             const std::vector<QuantLib::Rate>& Strikes,                     //!< Strikes.
@@ -165,7 +165,7 @@ namespace QuantLib {
     class InterpolatedSmileSection : public SmileSection {
       public:
 
-        %override2(InterpolatedSmileSection);
+        %noimpl(InterpolatedSmileSection);
         InterpolatedSmileSection(
             const QuantLib::Date& OptionDate,                               //!< Smile's expiry as date.
             const std::vector<QuantLib::Rate>& Strikes,                     //!< Strikes.
@@ -179,7 +179,7 @@ namespace QuantLib {
     
     class SmileSectionFromSabrVolSurface : public SmileSection {
     public:
-        %override2(SmileSectionFromSabrVolSurface);
+        %noimpl(SmileSectionFromSabrVolSurface);
         SmileSectionFromSabrVolSurface(
             const QuantLib::Handle<QuantLib::SabrVolSurface>& SabrVolSurface,   //!< SabrVolSurface object ID.
             const QuantLib::Time& OptionTime                                    //!< Smile's expiry as date.

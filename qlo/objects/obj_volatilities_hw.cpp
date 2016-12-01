@@ -25,7 +25,7 @@
 
 #include <qlo/objects/obj_volatilities.hpp>
 
-std::string QuantLibAddin::SabrVolSurface::atmCurve() {
+std::string QuantLibAddin::SabrVolSurface::atmCurve() const {
     return reposit::convert<std::string>(propertyValue("BLACKATMVOLCURVE"));
 }
 

@@ -41,7 +41,7 @@ namespace QuantLib {
 
 namespace QuantLib {
 
-    %explicit_class(RateHelper);
+    %noctor(RateHelper);
     class RateHelper {
       public:
 
@@ -64,29 +64,21 @@ namespace QuantLib {
         Real impliedQuote();
 
         //! returns the error between the curve implied quote and the value of the Quote wrapped in the given RateHelper object.
-        Real quoteError();        
+        Real quoteError();
+
+        //! returns the objectID of the Quote wrapped in the given RateHelper object.
+        %wrap(quoteName);
+        std::string quoteName();
+
+        //! returns the value of the Quote wrapped in the given RateHelper object.
+        %wrap(quoteValue);
+        Real quoteValue();
+
+        //! returns the isValid boolean of the Quote wrapped in the given RateHelper object.
+        %wrap(quoteIsValid);
+        bool quoteIsValid();
+
 %insert(rp_class) %{
-        //****MEMBER*****
-        std::string
-        quoteName(
-            // BEGIN typemap rp_tm_default
-            // END   typemap rp_tm_default
-        );
-
-        //****MEMBER*****
-        QuantLib::Real
-        quoteValue(
-            // BEGIN typemap rp_tm_default
-            // END   typemap rp_tm_default
-        );
-
-        //****MEMBER*****
-        bool
-        quoteIsValid(
-            // BEGIN typemap rp_tm_default
-            // END   typemap rp_tm_default
-        );
-
         enum DepoInclusionCriteria {AllDepos,
                                     DeposBeforeFirstFuturesStartDate,
                                     DeposBeforeFirstFuturesStartDatePlusOne,
@@ -322,21 +314,6 @@ namespace QuantLib {
 }
 
 namespace QuantLibAddin {
-
-    %noctor(RateHelper);
-    %noexport(RateHelper);
-    class RateHelper {
-      public:
-
-        //! returns the objectID of the Quote wrapped in the given RateHelper object.
-        std::string quoteName();
-
-        //! returns the value of the Quote wrapped in the given RateHelper object.
-        QuantLib::Real quoteValue();
-
-        //! returns the isValid boolean of the Quote wrapped in the given RateHelper object.
-        bool quoteIsValid();
-    };
        
     std::vector<std::string> rateHelperSelection(
         const std::vector<boost::shared_ptr<QuantLibAddin::RateHelper> >& RateHelpers,                                                  //!< vector of RateHelper IDs.

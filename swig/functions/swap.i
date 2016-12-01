@@ -56,29 +56,16 @@ namespace QuantLib {
         //! Returns the maturity (i.e. last payment) date for the given Swap object.
         Date maturityDate() const;
 
-%insert(rp_class) %{
+        //! Returns the cash flow analysis of the i-th leg for the given Swap object.
+        %wrap(legAnalysis);
         std::vector<std::vector<reposit::property_t> > legAnalysis(
-            QuantLib::Size LegNumber,
-            const QuantLib::Date& AfterDate=QuantLib::Date()
+            QuantLib::Size LegNumber,                                           //!< Zero based leg number (e.g. use 0 for the first leg, 1 for the second leg, etc.).
+            const QuantLib::Date& AfterDate=QuantLib::Date()                    //!< Shows only cashflows after given date
         );
-
+%insert(rp_class) %{
       protected:
         RP_OBJ_CTOR(Swap, Instrument);
 %}
     };
 }
     
-namespace QuantLibAddin {
-
-    %noctor(Swap);
-    %noexport(Swap);
-    class Swap /*: public Instrument*/ {
-      public:
-
-        //! Returns the cash flow analysis of the i-th leg for the given Swap object.
-        std::vector<std::vector<reposit::property_t> > legAnalysis(
-            QuantLib::Size LegNumber,                                           //!< Zero based leg number (e.g. use 0 for the first leg, 1 for the second leg, etc.).
-            const QuantLib::Date& AfterDate=QuantLib::Date()                    //!< Shows only cashflows after given date
-        );
-    };
-}

@@ -211,7 +211,7 @@ namespace QuantLib {
     class OptionletStripper1 : public OptionletStripper {
       public:
 
-        %override2(OptionletStripper1);
+        %noimpl(OptionletStripper1);
         OptionletStripper1(
             const boost::shared_ptr< CapFloorTermVolSurface > &TermVolSurface,  //!< CapFloorTermVolSurface object ID.
             const boost::shared_ptr< IborIndex > &IborIndex,                    //!< Cap index object ID.

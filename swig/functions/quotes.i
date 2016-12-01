@@ -15,6 +15,8 @@ namespace QuantLib {
     class SwapIndex;
     class Quote;
     class SimpleQuote;
+    class FuturesConvAdjustmentQuote;
+    class LastFixingQuote;
     class Date;
     class CapsStripper2;
     class Period;
@@ -47,37 +49,6 @@ namespace QuantLib {
         //! Returns TRUE if the given Quote object has a valid value.
         bool isValid();
     };
-
-    %noctor(SimpleQuote);
-    class SimpleQuote : public Quote {
-      public:
-        //! resets the given SimpleQuote object to the uninitialized state.
-        void reset();
-    };
-    
-    %noctor(FuturesConvAdjustmentQuote);
-    class FuturesConvAdjustmentQuote : public Quote/*,
-                                       public Observer*/ {
-      public:
-        //! Return the value of futures underlying.
-        Real futuresValue() const;
-        //! Return the value of HW volatility.
-        Real volatility() const;
-        //! Return the value of HW mean reversion.
-        Real meanReversion() const;
-        //! Return the IMM date of futures.
-        Date immDate() const;
-    };
-    
-
-    //! Quote adapter for the last fixing available of a given Index
-    %noctor(LastFixingQuote);
-    class LastFixingQuote : public Quote/*,
-                            public Observer*/ {
-      public:
-        //! Return the date of the last fixing
-        Date referenceDate() const; 
-    };    
 }
 
 namespace QuantLibAddin {
@@ -103,6 +74,9 @@ namespace QuantLibAddin {
         QuantLib::Real setValue(
             QuantLib::Real Value=QuantLib::Null<QuantLib::Real>()       //!< the new value.
         );
+
+        //! resets the given SimpleQuote object to an uninitialized state.
+        void reset();
 %insert(rp_class) %{
       private:
         boost::shared_ptr<QuantLib::SimpleQuote> simpleQuote_;
@@ -159,6 +133,22 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::Quote>& Volatility,        //!< HullWhite volatility.
             const QuantLib::Handle<QuantLib::Quote>& MeanReversion      //!< HullWhite mean reversion.
         );
+
+        //! Return the value of futures underlying.
+        QuantLib::Real futuresValue() const;
+
+        //! Return the value of HW volatility.
+        QuantLib::Real volatility() const;
+
+        //! Return the value of HW mean reversion.
+        QuantLib::Real meanReversion() const;
+
+        //! Return the IMM date of futures.
+        QuantLib::Date immDate() const;
+%insert(rp_class) %{
+      private:
+        boost::shared_ptr<QuantLib::FuturesConvAdjustmentQuote> futuresConvAdjustmentQuote_;
+%}
     };
 
     class CompositeQuote : public Quote {
@@ -175,6 +165,13 @@ namespace QuantLibAddin {
         LastFixingQuote(
             const boost::shared_ptr<QuantLib::Index>& Index             //!< Index object ID.
         );
+
+        //! Return the date of the last fixing
+        QuantLib::Date referenceDate() const; 
+%insert(rp_class) %{
+      private:
+        boost::shared_ptr<QuantLib::LastFixingQuote> lastFixingQuote_;
+%}
     };
     
     //! delta NPV bucket sensitivity analysis for a (single/vector/matrix) SimpleQuote.

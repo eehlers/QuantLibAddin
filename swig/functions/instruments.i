@@ -14,10 +14,8 @@ namespace QuantLib {
 %}
 
 namespace QuantLib {
-
-    //class Foo {};
     
-    %explicit_class(Instrument);
+    %noctor(Instrument);
     class Instrument {
       public:
 
@@ -35,22 +33,18 @@ namespace QuantLib {
 
         //! Sets a new pricing engine to the given Instrument object.
         void setPricingEngine(
-            const boost::shared_ptr<PricingEngine>& PricingEngine      //!< PricingEngine object ID.
+            const boost::shared_ptr<PricingEngine>& PricingEngine   //!< PricingEngine object ID.
         );
+
+        //! Returns the required result (if available) for the given Instrument object.
+        %wrap(results);
+        Real results(
+            const std::string& ResultType                           //!< Result type (e.g. 'vega').
+        ) const;
 %insert(rp_class) %{
-        QuantLib::Real results(const std::string& tag) const;
       protected:
         RP_LIB_CTOR(Instrument, QuantLib::Instrument)
 %}
     };
 }
 
-namespace QuantLibAddin {
-
-    %noctor(Instrument);
-    %noexport(Instrument);
-    class Instrument {
-      public:
-        QuantLib::Real results(const std::string& tag) const;
-    };
-}

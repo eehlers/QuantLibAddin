@@ -47,36 +47,36 @@ namespace QuantLib {
 
         %rename(MakeVanillaSwap) VanillaSwap;
         VanillaSwap(
-            QuantLib::Natural SettlDays/*=2*/,                                                            //!< Number of days to spot date.
-            const QuantLib::Period& SwapTenor,                                                            //!< Swap tenor period (e.g. 5Y).
-            const boost::shared_ptr<QuantLib::IborIndex>& IborIndex,                                      //!< Floating IborIndex object ID.
-            QuantLib::Rate FixedRate/*QuantLib::Null<QuantLib::Rate>()*/,                                 //!< The fixed leg rate. If missing atm rate is used.
-            const QuantLib::Period& ForwardStart,                                                         //!< Forward start period (from spot date).
-            const QuantLib::DayCounter& FixDayCounter/*=DayCounter*/,                                     //!< Fixed leg day counter.
-            QuantLib::Spread Spread/*=0*/,                                                                //!< Floating leg spread.
-            const boost::shared_ptr<QuantLib::PricingEngine>& PricingEngineID                             //!< DiscountSwapEngine object ID.
+            QuantLib::Natural SettlDays/*=2*/,                                                              //!< Number of days to spot date.
+            const QuantLib::Period& SwapTenor,                                                              //!< Swap tenor period (e.g. 5Y).
+            const boost::shared_ptr<QuantLib::IborIndex>& IborIndex,                                        //!< Floating IborIndex object ID.
+            QuantLib::Rate FixedRate/*QuantLib::Null<QuantLib::Rate>()*/,                                   //!< The fixed leg rate. If missing atm rate is used.
+            const QuantLib::Period& ForwardStart,                                                           //!< Forward start period (from spot date).
+            const QuantLib::DayCounter& FixDayCounter/*=DayCounter*/,                                       //!< Fixed leg day counter.
+            QuantLib::Spread Spread/*=0*/,                                                                  //!< Floating leg spread.
+            const boost::shared_ptr<QuantLib::PricingEngine>& PricingEngineID                               //!< DiscountSwapEngine object ID.
         );
 
         %rename(MakeIMMSwap) VanillaSwap;
         VanillaSwap(
-            const QuantLib::Period& SwapTenor,                                                            //!< Swap tenor period (e.g. 2Y).
-            const boost::shared_ptr<QuantLib::IborIndex>& IborIndex,                                      //!< Floating IborIndex object ID.
-            QuantLib::Rate FixedRate/*QuantLib::Null<QuantLib::Rate>()*/,                                 //!< The fixed leg rate. If missing atm rate is used.
-            const QuantLib::Date& FirstImmDate/*=QuantLib::Date()*/,                                      //!< First (IMM) date.
-            const QuantLib::DayCounter& FixDayCounter/*=30/360 (Bond Basis)*/,                            //!< Fixed leg day counter.
-            QuantLib::Spread Spread/*=0*/,                                                                //!< Floating leg spread.
-            const boost::shared_ptr<QuantLib::PricingEngine>& PricingEngineID                             //!< DiscountSwapEngine object ID.
+            const QuantLib::Period& SwapTenor,                                                              //!< Swap tenor period (e.g. 2Y).
+            const boost::shared_ptr<QuantLib::IborIndex>& IborIndex,                                        //!< Floating IborIndex object ID.
+            QuantLib::Rate FixedRate/*QuantLib::Null<QuantLib::Rate>()*/,                                   //!< The fixed leg rate. If missing atm rate is used.
+            const QuantLib::Date& FirstImmDate/*=QuantLib::Date()*/,                                        //!< First (IMM) date.
+            const QuantLib::DayCounter& FixDayCounter/*=30/360 (Bond Basis)*/,                              //!< Fixed leg day counter.
+            QuantLib::Spread Spread/*=0*/,                                                                  //!< Floating leg spread.
+            const boost::shared_ptr<QuantLib::PricingEngine>& PricingEngineID                               //!< DiscountSwapEngine object ID.
         );
 
         %rename(VanillaSwapFromSwapIndex) VanillaSwap;
         VanillaSwap(
-            const boost::shared_ptr<QuantLib::SwapIndex>& SwapIndex,                                      //!< SwapIndex object ID.
-            const QuantLib::Date& FixingDate                                                              //!< Fixing date.
+            const boost::shared_ptr<QuantLib::SwapIndex>& SwapIndex,                                        //!< SwapIndex object ID.
+            const QuantLib::Date& FixingDate                                                                //!< Fixing date.
         );
 
         %rename(VanillaSwapFromSwapRateHelper) VanillaSwap;
         VanillaSwap(
-            const boost::shared_ptr<QuantLib::SwapRateHelper>& SwapRateHelper                             //!< SwapRateHelper object ID.
+            const boost::shared_ptr<QuantLib::SwapRateHelper>& SwapRateHelper                               //!< SwapRateHelper object ID.
         );
 
         //! Returns the BPS of the fixed rate leg for the given VanillaSwap object.
@@ -118,33 +118,17 @@ namespace QuantLib {
         //! Returns the payment business day convention for the given VanillaSwap object.
         BusinessDayConvention paymentConvention() const;
 
-%insert(rp_class) %{
-        std::vector<std::vector<reposit::property_t> > fixedLegAnalysis(
-            const QuantLib::Date& AfterDate=QuantLib::Date()
-        );
-
-        std::vector<std::vector<reposit::property_t> > floatingLegAnalysis(
-            const QuantLib::Date& AfterDate=QuantLib::Date()
-        );
-%}
-    };
-}
-
-namespace QuantLibAddin {
-
-    %noctor(VanillaSwap);
-    %noexport(VanillaSwap);
-    class VanillaSwap : public Swap {
-      public:
-
         //! Returns the fixed rate leg cash flow analysis of the given VanillaSwap object.
+        %wrap(fixedLegAnalysis);
         std::vector<std::vector<reposit::property_t> > fixedLegAnalysis(
             const QuantLib::Date& AfterDate=QuantLib::Date()                                                //!< Shows only cashflows after given date.
         );
 
         //! Returns the floating rate leg cash flow analysis.
+        %wrap(floatingLegAnalysis);
         std::vector<std::vector<reposit::property_t> > floatingLegAnalysis(
             const QuantLib::Date& AfterDate=QuantLib::Date()                                                //!< Shows only cashflows after given date.
         );
     };
 }
+

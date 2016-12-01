@@ -41,7 +41,7 @@ namespace QuantLib {
         );
 
         %rename(ScheduleTruncated) Schedule;
-        %override2(Schedule);
+        %noimpl(Schedule);
         Schedule(
             const boost::shared_ptr<Schedule>& OriginalSchedule,    //!< Original schedule object ID.
             const Date& TruncationDate                              //!< Truncation date.

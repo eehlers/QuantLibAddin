@@ -39,7 +39,7 @@ namespace QuantLib {
     class StrikedTypePayoff : public TypePayoff {
       public:
 
-        %override2(StrikedTypePayoff);
+        %noimpl(StrikedTypePayoff);
         StrikedTypePayoff(
               const std::string& PayoffID,                                          //!< Payoff ID (e.g. Vanilla, PercentageStrike, AssetOrNothing, CashOrNothing, Gap, SuperShare).
               const QuantLib::Option::Type& OptionType,                             //!< Option type.
@@ -51,8 +51,12 @@ namespace QuantLib {
         %rename2(strike, PayoffStrike);
         QuantLib::Real strike() const;
 
-%insert(rp_class) %{
+        //! Returns the third parameter of a StrikedType payoff.
+        %wrap(thirdParameter);
+        %rename2(thirdParameter, PayoffThirdParameter);
         QuantLib::Real thirdParameter() const;
+
+%insert(rp_class) %{
       protected:
         RP_OBJ_CTOR(StrikedTypePayoff, TypePayoff);
 %}
@@ -171,15 +175,3 @@ namespace QuantLib {
     };
 }
 
-namespace QuantLibAddin {
-
-    %noctor(StrikedTypePayoff);
-    %noexport(StrikedTypePayoff);
-    class StrikedTypePayoff : public TypePayoff {
-      public:
-
-        //! Returns the third parameter of a StrikedType payoff.
-        %rename2(thirdParameter, PayoffThirdParameter);
-        QuantLib::Real thirdParameter() const;
-    };
-}

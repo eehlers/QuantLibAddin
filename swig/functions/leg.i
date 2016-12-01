@@ -20,7 +20,6 @@ namespace QuantLibAddin {
 namespace QuantLib {
 
     %noctor(CashFlows);
-    %noexport(CashFlows);
     class CashFlows {
       public:
 
@@ -351,16 +350,20 @@ namespace QuantLib {
 //            QuantLib::Size LegNumber    //!< Zero based leg number (e.g. use 0 for the first leg, 1 for the second leg, etc.).
 //        );
 
-%insert(rp_class) %{
 // FIXME this depends on couponvectors which is not yet implemented.
+//        //! Set the coupon pricer at the given Leg object.
+//        %wrap(setCouponPricers);
 //        void setCouponPricers(
 //            const std::vector<boost::shared_ptr<QuantLibAddin::FloatingRateCouponPricer> > &FloatingRateCouponPricer //!< FloatingRate coupon pricer object ID.
 //        );
 
+        //! Returns the flow analysis for the given Leg object.
+        %wrap(flowAnalysis);
         std::vector<std::vector<reposit::property_t> > flowAnalysis(
-            const QuantLib::Date& AfterDate=QuantLib::Date()     //!< Shows only cashflows after given date.
+            const QuantLib::Date& AfterDate=Date()     //!< Shows only cashflows after given date.
         ) const;
 
+%insert(rp_class) %{
         RP_LIB_CTOR(Leg, QuantLib::Leg);
 %}
     };
@@ -435,22 +438,3 @@ namespace QuantLib {
     };
 }
 
-namespace QuantLibAddin {
-
-    %noctor(Leg);
-    %noexport(Leg);
-    class Leg {
-      public:
-
-// FIXME this depends on couponvectors which is not yet implemented.
-//        //! Set the coupon pricer at the given Leg object.
-//        void setCouponPricers(
-//            const std::vector<boost::shared_ptr<QuantLibAddin::FloatingRateCouponPricer> > &FloatingRateCouponPricer //!< FloatingRate coupon pricer object ID.
-//        );
-
-        //! Returns the flow analysis for the given Leg object.
-        std::vector<std::vector<reposit::property_t> > flowAnalysis(
-            const QuantLib::Date& AfterDate=Date()     //!< Shows only cashflows after given date.
-        ) const;
-    };
-}

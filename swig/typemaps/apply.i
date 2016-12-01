@@ -5,10 +5,6 @@
 ENUMERATED_TYPE(QuantLib, T)
 %enddef
 
-%define QL_ENUMERATED_TYPE_STRUCT(S,T...)
-ENUMERATED_TYPE_STRUCT(QuantLib, S, T)
-%enddef
-
 QL_ENUMERATED_TYPE(BusinessDayConvention)
 QL_ENUMERATED_TYPE(Compounding)
 QL_ENUMERATED_TYPE(Currency)
@@ -18,6 +14,10 @@ QL_ENUMERATED_TYPE(Seniority)
 QL_ENUMERATED_TYPE(SensitivityAnalysis)
 QL_ENUMERATED_TYPE(Weekday)
 QL_ENUMERATED_TYPE(VolatilityType)
+
+%define QL_ENUMERATED_TYPE_STRUCT(S,T...)
+ENUMERATED_TYPE_STRUCT(QuantLib, S, T)
+%enddef
 
 QL_ENUMERATED_TYPE_STRUCT(DateGeneration, Rule)
 QL_ENUMERATED_TYPE_STRUCT(Duration, Type)
@@ -39,7 +39,7 @@ QL_ENUMERATED_TYPE_STRUCT(Replication, Type)
 ENUMERATED_TYPE_IMPL(QuantLib::VanillaSwap::Type)
 
 ENUMERATED_TYPE_IMPL(QuantLib::EndCriteria::Type)
-ENUMERATED_TYPE_IMPL(QuantLibAddin::RateHelper::DepoInclusionCriteria)
+ENUMERATED_TYPE_STRUCT(QuantLibAddin, RateHelper, DepoInclusionCriteria)
 ENUMERATED_TYPE_IMPL(QuantLibAddin::SwapIndex::FixingType)
 
 // Enumerated classes.
@@ -153,6 +153,9 @@ QL_OBJECT_WRAPPER(VanillaSwap)
 QL_OBJECT_WRAPPER(Swap)
 QL_OBJECT_WRAPPER(PricingEngine)
 QL_OBJECT_WRAPPER(SwapRateHelper)
+QL_OBJECT_WRAPPER(SwaptionVolatilityMatrix)
+QL_OBJECT_WRAPPER(SwaptionVolCube1)
+QL_OBJECT_WRAPPER(SabrVolSurface)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

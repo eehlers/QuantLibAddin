@@ -31,7 +31,6 @@ namespace QuantLib {
 
 namespace QuantLib {
 
-    //%noctor(SwaptionVolatilityStructure);
     class SwaptionVolatilityStructure : public VolatilityTermStructure {
       public:
 
@@ -163,10 +162,14 @@ namespace QuantLib {
             //const std::vector<std::vector<Real> >& shifts
             //    = std::vector<std::vector<Real> >()
         );
-%insert(rp_class) %{
-        std::vector<long> locate(const QuantLib::Date& d,
-                                 const QuantLib::Period& p);
-%}
+
+        //! Returns the vector of underlying swap tenors for the given SwaptionVolatilityDiscrete object.
+        %wrap(locate);
+        %rename2(locate, SwaptionVTSMatrixLocate);
+        std::vector<long> locate(
+            const QuantLib::Date& OptionDate,       //!< Swaption expiry date.
+            const QuantLib::Period& SwapTenor       //!< Underlying swap length as period (e.g. 5Y).
+        );
     };
 
     class SwaptionVolatilityCube : public SwaptionVolatilityDiscrete {
@@ -207,7 +210,7 @@ namespace QuantLib {
     class SwaptionVolCube1 : public SwaptionVolatilityCube {
       public:
 
-        %override2(SwaptionVolCube1);
+        %noimpl(SwaptionVolCube1);
         SwaptionVolCube1(
             const Handle<SwaptionVolatilityStructure>& AtmVolStructure,     //!< At-the-money volatility structure.
             const std::vector<Period>& OptionTenor,                         //!< Smile cube's expiries as periods.
@@ -225,63 +228,41 @@ namespace QuantLib {
             const boost::shared_ptr<OptimizationMethod>& OptMethod = boost::shared_ptr<OptimizationMethod>()    //!< Optmization method object ID.
         );
 
-%insert(rp_class) %{
-        std::vector<std::vector<reposit::property_t> > getSparseSabrParameters();
-        std::vector<std::vector<reposit::property_t> > getDenseSabrParameters();
-        std::vector<std::vector<reposit::property_t> > getMarketVolCube();
-        std::vector<std::vector<reposit::property_t> > getVolCubeAtmCalibrated();
-%}
-    };
-}
-
-namespace QuantLibAddin {
-        
-    %noctor(SwaptionVolatilityMatrix);
-    %noexport(SwaptionVolatilityMatrix);
-    class SwaptionVolatilityMatrix /*: public SwaptionVolatilityDiscrete*/ {
-      public:
-
-        //! Returns the vector of underlying swap tenors for the given SwaptionVolatilityDiscrete object.
-        %rename2(locate, SwaptionVTSMatrixLocate);
-        std::vector<long> locate(
-            const QuantLib::Date& OptionDate,       //!< Swaption expiry date.
-            const QuantLib::Period& SwapTenor       //!< Underlying swap length as period (e.g. 5Y).
-        );
-    };
-    
-    %noctor(SwaptionVolCube1);
-    %noexport(SwaptionVolCube1);
-    class SwaptionVolCube1 /*: public SwaptionVolatilityCube*/ {
-      public:
-
         //! Returns results of Sabr calibration for the given SwaptionVolCube1 object.
+        %wrap(getSparseSabrParameters);
         %rename2(getSparseSabrParameters, SparseSabrParameters);
         std::vector<std::vector<reposit::property_t> > getSparseSabrParameters();
 
         //! Returns results of Sabr calibration for the given SwaptionVolCube1 object.
+        %wrap(getDenseSabrParameters);
         %rename2(getDenseSabrParameters, DenseSabrParameters);
         std::vector<std::vector<reposit::property_t> > getDenseSabrParameters();
 
         //! Returns the market volatility cube for the given SwaptionVolCube1 object.
+        %wrap(getMarketVolCube);
         %rename2(getMarketVolCube, MarketVolCube);
         std::vector<std::vector<reposit::property_t> > getMarketVolCube();
 
         //! Returns the volatility cube calibrated to ATM matrix for the given SwaptionVolCube1 object.
+        %wrap(getVolCubeAtmCalibrated);
         %rename2(VolCubeAtmCalibrated, getVolCubeAtmCalibrated);
         std::vector<std::vector<reposit::property_t> > getVolCubeAtmCalibrated();
     };
+}
+
+namespace QuantLibAddin {
 
     class SmileSectionByCube : public SmileSection {
       public:
 
-        %override2(SmileSectionByCube);
+        %noimpl(SmileSectionByCube);
         SmileSectionByCube(
             const boost::shared_ptr<QuantLib::SwaptionVolatilityCube>& VolCube, //!< Swaption volatility cube object ID.
             const QuantLib::Period& OptionTenor,                                //!< Smile's expiry as period.
             const QuantLib::Period& SwapTenor                                   //!< Smile's underlying swap length.
         );
 
-        %override2(SmileSectionByCube);
+        %noimpl(SmileSectionByCube);
         %rename(SmileSectionByCube2) SmileSectionByCube;
         SmileSectionByCube(
             const boost::shared_ptr<QuantLib::SwaptionVolatilityCube>& VolCube, //!< Swaption volatility cube object ID.

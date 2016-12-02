@@ -1,7 +1,7 @@
 
 //%include assetswap.i          // depends on bonds
 %include basketlossmodels.i
-//%include bonds.i
+%include bonds.i
 %include calendars.i
 %include capletvolstructure.i
 %include couponvectors.i

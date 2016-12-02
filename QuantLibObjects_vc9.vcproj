@@ -781,6 +781,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_bonds.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_bonds.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_capletvolstructure.cpp"
 					>
 				</File>
@@ -981,6 +989,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_bonds.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_bonds.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_capletvolstructure.cpp"
 					>
 				</File>
@@ -1175,6 +1191,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_basketlossmodels.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_bonds.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_bonds.hpp"
 				>
 			</File>
 			<File
@@ -1423,6 +1447,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_basketlossmodels_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_bonds.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_bonds_hw.cpp"
 				>
 			</File>
 			<File

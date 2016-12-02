@@ -62,6 +62,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\bonds.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\calendars.i"
 					>
 				</File>

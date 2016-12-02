@@ -1,8 +1,8 @@
 
-%group(assetswap);
+%group(Asset Swap);
 %groupCaption(Asset Swap);
 // The only class that requires a manual override is QuantLibAddin::AssetSwap...
-%override;
+//%override;
 
 //%insert(assetswap_library_hpp) %{
 //#include <ql/instruments/assetswap.hpp>

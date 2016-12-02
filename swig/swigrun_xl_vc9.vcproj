@@ -54,6 +54,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\assetswap.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\basketlossmodels.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\calendars.i"
 					>
 				</File>

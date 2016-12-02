@@ -315,6 +315,14 @@ QL_VEC_RET(QuantLib::Period, std::string)
 %typemap(rp_tm_xll_code) QuantLib::YieldTermStructure & "P";
 %typemap(rp_tm_xll_code) boost::shared_ptr<QuantLibAddin::RateHelper> & "C";
 
+%typemap(rp_tm_xll_code) std::vector<QuantLib::Date> "P";
+%typemap(rp_tm_xll_code) std::vector<QuantLib::Date> & "P";
+%typemap(rp_tm_xll_code) std::vector<QuantLib::Period> "P";
+%typemap(rp_tm_xll_code) std::vector<QuantLib::Period> & "P";
+%typemap(rp_tm_xll_code) std::vector<QuantLib::TimeSeries<QuantLib::Real > > "P";
+%typemap(rp_tm_xll_code) std::vector<QuantLib::Handle<QuantLib::Quote> > const & "P";
+%typemap(rp_tm_xll_code) std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > & "P";
+
 // rp_tm_xll_loop - arguments to boost::bind object for a looping function (F/M)
 
 %typemap(rp_tm_xll_loop) QuantLib::Date & "$1_name_cnv";

@@ -773,6 +773,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_basketlossmodels.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_basketlossmodels.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_capletvolstructure.cpp"
 					>
 				</File>
@@ -965,6 +973,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_basketlossmodels.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_basketlossmodels.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_capletvolstructure.cpp"
 					>
 				</File>
@@ -1153,6 +1169,14 @@
 		<Filter
 			Name="valueobjects"
 			>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_basketlossmodels.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_basketlossmodels.hpp"
+				>
+			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_capletvolstructure.cpp"
 				>
@@ -1391,6 +1415,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_all.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_basketlossmodels.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_basketlossmodels_hw.cpp"
 				>
 			</File>
 			<File

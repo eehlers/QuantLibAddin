@@ -83,15 +83,14 @@ namespace QuantLib {
             bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
         ) const;
 
-// FIXME this overload does not get generated.
-//        //! Returns volatility from the given OptionletVolatilityStructure object.
-//        %loop(volatility, Strike);
-//        %rename2(volatility, OptionletVTSVolatility2);
-//        Volatility volatility(
-//            const Period& OptionTenor,      //!< Caplet/floorlet option tenor.
-//            Rate Strike,                    //!< Caplet/floorlet strike.
-//            bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
-//        ) const;
+        //! Returns volatility from the given OptionletVolatilityStructure object.
+        %loop(volatility, Strike);
+        %rename2(volatility, OptionletVTSVolatility2);
+        Volatility volatility(
+            const Period& OptionTenor,      //!< Caplet/floorlet option tenor.
+            Rate Strike,                    //!< Caplet/floorlet strike.
+            bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
+        ) const;
 
         //! Returns the black variance corresponding to a given strike for a given exercise date.
         %loop(blackVariance, OptionDate);
@@ -102,15 +101,14 @@ namespace QuantLib {
             bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
         ) const;
 
-// FIXME this overload does not get generated.
-//        //! Returns the black variance corresponding to a given strike for a given exercise date.
-//        %loop(blackVariance, OptionTenor);
-//        %rename2(blackVariance, OptionletVTSBlackVariance2);
-//        Real blackVariance(
-//            const Period& OptionTenor,      //!< Cap/floor option tenor.
-//            Rate Strike,                    //!< Cap/floor strike.
-//            bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
-//        ) const;
+        //! Returns the black variance corresponding to a given strike for a given exercise date.
+        %loop(blackVariance, OptionTenor);
+        %rename2(blackVariance, OptionletVTSBlackVariance2);
+        Real blackVariance(
+            const Period& OptionTenor,      //!< Cap/floor option tenor.
+            Rate Strike,                    //!< Cap/floor strike.
+            bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
+        ) const;
     };
 
     class ConstantOptionletVolatility : public OptionletVolatilityStructure {
@@ -248,15 +246,14 @@ namespace QuantLib {
         ) const;
 
 
-// FIXME this overload does not get generated.
-//        //! Returns volatility from the given OptionletVolatilityStructure object.
-//        %loop(volatility, Strike);
-//        %rename2(volatility, CapFloorTermVTSVolatility2);
-//        Volatility volatility(
-//            const Period& OptionTenor,          //!< Caplet/floorlet option tenor.
-//            Rate Strike,                        //!< Caplet/floorlet strike.
-//            bool AllowExtrapolation = false     //!< Extrapolation Flag (TRUE allows extrapolation).
-//        ) const;
+        //! Returns volatility from the given OptionletVolatilityStructure object.
+        %loop(volatility, Strike);
+        %rename2(volatility, CapFloorTermVTSVolatility2);
+        Volatility volatility(
+            const Period& OptionTenor,          //!< Caplet/floorlet option tenor.
+            Rate Strike,                        //!< Caplet/floorlet strike.
+            bool AllowExtrapolation = false     //!< Extrapolation Flag (TRUE allows extrapolation).
+        ) const;
     };
 
     class CapFloorTermVolCurve : /*public LazyObject,*/ public CapFloorTermVolatilityStructure/*, private boost::noncopyable*/ {

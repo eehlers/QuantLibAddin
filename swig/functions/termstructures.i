@@ -84,7 +84,8 @@ namespace QuantLib {
         ) const;
 
         //! Returns the forward interest rate from the given YieldTermStructure object.
-        %alias(forwardRate, YieldTSForwardRate);
+        //%alias(forwardRate, YieldTSForwardRate);  // alias currently doesn't work with overloaded functions, use rename2 instead.
+        %rename2(forwardRate, YieldTSForwardRate);
         %loop(forwardRate, D2);
         InterestRate forwardRate(
             const Date& D1,                                                     //!< first date.
@@ -95,18 +96,18 @@ namespace QuantLib {
             bool AllowExtrapolation = false                                     //!< TRUE allows extrapolation.
         ) const;
         
-        // FIXME this overload does not get generated.
         //! Returns the forward interest rate from the given YieldTermStructure object.
-        //%alias(forwardRate, YieldTSForwardRate2);
-        //%loop(forwardRate, Date);
-        //InterestRate forwardRate(
-        //    const Date& Date,                                                   //!< first date.
-        //    const Period& Period,                                               //!< Period (e.g. '7D', '3M', '1Y', etc).
-        //    const DayCounter& ResultDayCounter,                                 //!< result DayCounter.
-        //    Compounding Compounding=QuantLib::Compounding(QuantLib::Simple),    //!< Interest rate compounding rule (Simple:1+rt, Compounded:(1+r)^t, Continuous:e^{rt}).
-        //    Frequency Frequency = QuantLib::Frequency(QuantLib::Annual),        //!< frequency (e.g. Annual, Semiannual, Every4Month, Quarterly, Bimonthly, Monthly).
-        //    bool AllowExtrapolation = false                                     //!< TRUE allows extrapolation.
-        //) const;
+        //%alias(forwardRate, YieldTSForwardRate2); // alias currently doesn't work with overloaded functions, use rename2 instead.
+        %rename2(forwardRate, YieldTSForwardRate2);
+        %loop(forwardRate, Date);
+        InterestRate forwardRate(
+            const Date& Date,                                                   //!< first date.
+            const Period& Period,                                               //!< Period (e.g. '7D', '3M', '1Y', etc).
+            const DayCounter& ResultDayCounter,                                 //!< result DayCounter.
+            Compounding Compounding=QuantLib::Compounding(QuantLib::Simple),    //!< Interest rate compounding rule (Simple:1+rt, Compounded:(1+r)^t, Continuous:e^{rt}).
+            Frequency Frequency = QuantLib::Frequency(QuantLib::Annual),        //!< frequency (e.g. Annual, Semiannual, Every4Month, Quarterly, Bimonthly, Monthly).
+            bool AllowExtrapolation = false                                     //!< TRUE allows extrapolation.
+        ) const;
         
         //! Returns the zero interest rate from the given YieldTermStructure object.
         %alias(zeroRate, YieldTSZeroRate);
@@ -261,3 +262,4 @@ namespace QuantLibAddin {
 %}
     };
 }
+

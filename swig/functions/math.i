@@ -108,3 +108,4 @@ namespace QuantLibAddin {
         double Tolerance=1.0e12                     //!< Numerical tolerance for non symmetric matrix.
     );
 }
+

@@ -202,29 +202,29 @@ namespace QuantLib {
             Real NPV = Null<Real>()         //!< 
         );
 
-// FIXME this overload does not get generated.
-//        //! Returns the net present value for the given Leg object.
-//        %rename2(npv, LegNPVFromYield);
-//        static Real npv(
-//            const Leg& ObjectId,            //!< ID of existing QuantLib::Leg object.
-//            Rate Yield,                     //!< Yield (a.k.a. IRR).
-//            const DayCounter& DayCounter=QuantLib::ActualActual(QuantLib::ActualActual::ISDA),//!< DayCounter ID.
-//            Compounding Compounding=QuantLib::Compounding(QuantLib::Compounded),//!< Interest rate coumpounding rule (Simple:1+rt, Compounded:(1+r)^t, Continuous:e^{rt}).
-//            Frequency Frequency=QuantLib::Frequency(QuantLib::Annual),//!< Frequency (e.g. Annual, Semiannual, Every4Month, Quarterly, Bimonthly, Monthly).
-//            bool IncludeSettlDate=true,     //!< TRUE if cashflows paid at the settlement date must be taken into account.
-//            Date SettlementDate=Date(),     //!< Cashflows before this date are not taken into account. If missing the current EvaluationDate is used.
-//            Date NpvDate=Date()             //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
-//        );
-
-        //! Returns the basis point sensitivity for the given Leg object.
-        %rename2(bps, LegBPSFromYield);
-        static Real bps(
+        //! Returns the net present value for the given Leg object.
+        %rename2(npv, LegNPVFromYield);
+        static Real npv(
             const Leg& ObjectId,            //!< ID of existing QuantLib::Leg object.
-            const /*Interest*/Rate& Yield,  //!< Yield (a.k.a. IRR).
+            Rate Yield,                     //!< Yield (a.k.a. IRR).
+            const DayCounter& DayCounter=QuantLib::ActualActual(QuantLib::ActualActual::ISDA),//!< DayCounter ID.
+            Compounding Compounding=QuantLib::Compounding(QuantLib::Compounded),//!< Interest rate coumpounding rule (Simple:1+rt, Compounded:(1+r)^t, Continuous:e^{rt}).
+            Frequency Frequency=QuantLib::Frequency(QuantLib::Annual),//!< Frequency (e.g. Annual, Semiannual, Every4Month, Quarterly, Bimonthly, Monthly).
             bool IncludeSettlDate=true,     //!< TRUE if cashflows paid at the settlement date must be taken into account.
             Date SettlementDate=Date(),     //!< Cashflows before this date are not taken into account. If missing the current EvaluationDate is used.
             Date NpvDate=Date()             //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
         );
+
+// FIXME need to add the correct typemaps for type InterestRate
+//        //! Returns the basis point sensitivity for the given Leg object.
+//        %rename2(bps, LegBPSFromYield);
+//        static Real bps(
+//            const Leg& ObjectId,            //!< ID of existing QuantLib::Leg object.
+//            const /*Interest*/Rate& Yield,  //!< Yield (a.k.a. IRR).
+//            bool IncludeSettlDate=true,     //!< TRUE if cashflows paid at the settlement date must be taken into account.
+//            Date SettlementDate=Date(),     //!< Cashflows before this date are not taken into account. If missing the current EvaluationDate is used.
+//            Date NpvDate=Date()             //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
+//        );
 
         //! Returns the Internal rate of return for the given Leg object.
         %rename2(yield, LegYield);
@@ -295,20 +295,19 @@ namespace QuantLib {
             Date NpvDate=Date()             //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
         );
 
-// FIXME this overload does not get generated.
-//        //! Returns the net present value for the given Leg object.
-//        %rename2(npv, LegNPVFromZSpread);
-//        static Real npv(
-//            const Leg& ObjectId,            //!< ID of existing QuantLib::Leg object.
-//            const boost::shared_ptr<YieldTermStructure>& DiscountCurve,//!< Discounting YieldTermStructure object ID.
-//            Spread ZSpread,                 //!< Z-spread.
-//            const DayCounter& DayCounter=QuantLib::Actual365Fixed(),//!< DayCounter ID.
-//            Compounding Compounding=QuantLib::Compounding(QuantLib::Compounded),//!< Interest rate coumpounding rule (Simple:1+rt, Compounded:(1+r)^t, Continuous:e^{rt}).
-//            Frequency Frequency=QuantLib::Frequency(QuantLib::Annual),//!< Frequency (e.g. Annual, Semiannual, Every4Month, Quarterly, Bimonthly, Monthly).
-//            bool IncludeSettlDate=true,     //!< TRUE if cashflows paid at the settlement date must be taken into account.
-//            Date SettlementDate=Date(),     //!< Cashflows before this date are not taken into account. If missing the current EvaluationDate is used.
-//            Date NpvDate=Date()             //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
-//        );
+        //! Returns the net present value for the given Leg object.
+        %rename2(npv, LegNPVFromZSpread);
+        static Real npv(
+            const Leg& ObjectId,            //!< ID of existing QuantLib::Leg object.
+            const boost::shared_ptr<YieldTermStructure>& DiscountCurve,//!< Discounting YieldTermStructure object ID.
+            Spread ZSpread,                 //!< Z-spread.
+            const DayCounter& DayCounter=QuantLib::Actual365Fixed(),//!< DayCounter ID.
+            Compounding Compounding=QuantLib::Compounding(QuantLib::Compounded),//!< Interest rate coumpounding rule (Simple:1+rt, Compounded:(1+r)^t, Continuous:e^{rt}).
+            Frequency Frequency=QuantLib::Frequency(QuantLib::Annual),//!< Frequency (e.g. Annual, Semiannual, Every4Month, Quarterly, Bimonthly, Monthly).
+            bool IncludeSettlDate=true,     //!< TRUE if cashflows paid at the settlement date must be taken into account.
+            Date SettlementDate=Date(),     //!< Cashflows before this date are not taken into account. If missing the current EvaluationDate is used.
+            Date NpvDate=Date()             //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
+        );
 
         //! Returns the z-spread for the given Leg object.
         %rename2(zSpread, LegZSpread);

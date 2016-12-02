@@ -10,3 +10,4 @@ namespace QuantLibAddin {
     //! returns the version number of QuantLib.
     std::string version();
 }
+

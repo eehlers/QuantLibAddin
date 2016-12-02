@@ -44,16 +44,15 @@ namespace QuantLib {
             bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
         ) const;
 
-// FIXME this overload does not get generated.
-//        //! Returns volatility from the given SwaptionVolatilityStructure object.
-//        %loop(volatility, Strike);
-//        %rename2(volatility, SwaptionVTSVolatility2);
-//        Volatility volatility(
-//            const Period& OptionTenor,      //!< Swaption option tenor.
-//            const Period& SwapTenor,        //!< Underlying swap length as period (e.g. 5Y).
-//            Rate Strike,                    //!< Swaption strike.
-//            bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
-//        ) const;
+        //! Returns volatility from the given SwaptionVolatilityStructure object.
+        %loop(volatility, Strike);
+        %rename2(volatility, SwaptionVTSVolatility2);
+        Volatility volatility(
+            const Period& OptionTenor,      //!< Swaption option tenor.
+            const Period& SwapTenor,        //!< Underlying swap length as period (e.g. 5Y).
+            Rate Strike,                    //!< Swaption strike.
+            bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
+        ) const;
 
         //! Returns variance from the given SwaptionVolatilityStructure object.
         %loop(blackVariance, OptionDate);
@@ -65,16 +64,15 @@ namespace QuantLib {
             bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
         ) const;
 
-// FIXME this overload does not get generated.
-//        //! Returns variance from the given SwaptionVolatilityStructure object.
-//        %loop(blackVariance, OptionTenor);
-//        %rename2(blackVariance, SwaptionVTSBlackVariance2);
-//        Real blackVariance(
-//            const Period& OptionTenor,      //!< Swaption option tenor.
-//            const Period& SwapTenor,        //!< Underlying swap length as period (e.g. 5Y).
-//            Rate Strike,                    //!< Swaption strike.
-//            bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
-//        ) const;
+        //! Returns variance from the given SwaptionVolatilityStructure object.
+        %loop(blackVariance, OptionTenor);
+        %rename2(blackVariance, SwaptionVTSBlackVariance2);
+        Real blackVariance(
+            const Period& OptionTenor,      //!< Swaption option tenor.
+            const Period& SwapTenor,        //!< Underlying swap length as period (e.g. 5Y).
+            Rate Strike,                    //!< Swaption strike.
+            bool AllowExtrapolation = false //!< Extrapolation Flag (TRUE allows extrapolation).
+        ) const;
 
         //! Returns the max swap tenor (i.e. length) for which the given SwaptionVolatilityStructure object can return vols.
         %rename2(maxSwapTenor, SwaptionVTSMaxSwapTenor);
@@ -92,19 +90,18 @@ namespace QuantLib {
         ) const;
 
         //! Returns the swap length corresponding to a given swap tenor for the given SwaptionVolatilityStructure object.
+        %rename2(swapLength, SwaptionVTSSwapLength2);
+        Time swapLength(
+            const Date& SwapStart,          //!< Swap start date.
+            const Date& SwapEnd             //!< Swap end date.
+        ) const;
+
+        //! Returns the swap length corresponding to a given swap tenor for the given SwaptionVolatilityStructure object.
         %loop(swapLength, SwapTenor);
         %rename2(swapLength, SwaptionVTSSwapLength);
         Time swapLength(
             const Period& SwapTenor         //!< Swap tenor.
         ) const;
-
-// FIXME this overload does not get generated.
-//        //! Returns the swap length corresponding to a given swap tenor for the given SwaptionVolatilityStructure object.
-//        %rename2(swapLength, SwaptionVTSSwapLength2);
-//        Time swapLength(
-//            const Date& SwapStart,  //!< Swap start date.
-//            const Date& SwapEnd     //!< Swap end date.
-//        ) const;
     };
 
     class ConstantSwaptionVolatility : public SwaptionVolatilityStructure {
@@ -189,7 +186,7 @@ namespace QuantLib {
         Rate atmStrike(
             const Period& OptionTenor,                                      //!< Swaption's option tenor.
             const Period& SwapTenor                                         //!< Underlying swap length as period (e.g. 5Y).
-        );
+        ) const;
     };
 
     class SwaptionVolCube2 : public SwaptionVolatilityCube {

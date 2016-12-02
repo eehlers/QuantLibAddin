@@ -50,13 +50,14 @@ namespace QuantLib {
             const QuantLib::DayCounter& DayCounter                                                              //!< Payment DayCounter ID.
         );
 
-// FIXME this overload does not get generated.
-//        FixedRateLeg(
-//            BusinessDayConvention PaymentBDC/*=QuantLib::BusinessDayConvention(QuantLib::Following)*/,        //!< Payment business day convention.
-//            const std::vector<QuantLib::Real>& Nominals,                                                      //!< Nominal amount vector.
-//            const boost::shared_ptr<QuantLib::Schedule>& ScheduleID,                                          //!< Schedule object ID.
-//            const std::vector<boost::shared_ptr<QuantLib::InterestRate> >& Coupons                            //!< Coupon InterestRate IDs.
-//        );
+        // FIXME need some more typemaps for type InterestRate.
+        //%rename(FixedRateLeg2) FixedRateLeg;
+        //FixedRateLeg(
+        //    BusinessDayConvention PaymentBDC/*=QuantLib::BusinessDayConvention(QuantLib::Following)*/,          //!< Payment business day convention.
+        //    const std::vector<QuantLib::Real>& Nominals,                                                        //!< Nominal amount vector.
+        //    const boost::shared_ptr<QuantLib::Schedule>& ScheduleID,                                            //!< Schedule object ID.
+        //    const std::vector<boost::shared_ptr<QuantLib::InterestRate> >& Coupons                              //!< Coupon InterestRate IDs.
+        //);
     };
 
     class IborLeg : public Leg {
@@ -67,7 +68,6 @@ namespace QuantLib {
             const std::vector<QuantLib::Real>& Nominals,                                                        //!< Nominal amount vector.
             const boost::shared_ptr<QuantLib::Schedule>& ScheduleID,                                            //!< Schedule object ID.
             const std::vector<QuantLib::Natural>& FixingDays/*=std::vector<QuantLib::Natural>()*/,              //!< Fixing days (e.g. 2).
-            //const std::vector<unsigned int>& FixingDays/*=std::vector<QuantLib::Natural>()*/,              //!< Fixing days (e.g. 2).
             bool isInArrears/*=false*/,                                                                         //!< TRUE if the fixing is in arrears.
             const QuantLib::DayCounter& DayCounter,                                                             //!< Payment DayCounter ID.
             const std::vector<QuantLib::Rate>& Floors/*=std::vector<QuantLib::Rate>()*/,                        //!< Floor strikes.

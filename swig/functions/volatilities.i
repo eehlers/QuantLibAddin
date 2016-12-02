@@ -178,13 +178,14 @@ namespace QuantLib {
         //! Returns the d coefficient in the abcd vol parametrization.
         Real d() const;
 
-        //! Returns the k adjustments factors needed to match the input Black vols.
-        std::vector<Real> k() const;
-
         //! Returns the k adjustments factors needed to match the input Black vols at a given time.
         Real k(
             Time Time   //!< Time.
         ) const;
+
+        //! Returns the k adjustments factors needed to match the input Black vols.
+        %rename(KatOptionTenors) k;
+        std::vector<Real> k() const;
     };
 
     class SabrVolSurface : public InterestRateVolSurface {

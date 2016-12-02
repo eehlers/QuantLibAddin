@@ -56,8 +56,8 @@ namespace QuantLibAddin {
         InterpolatedYieldCurvePair interpolatedYieldCurvePair() const {
             return pair_;
         }
-        private:
-		InterpolatedYieldCurvePair pair_;
+      private:
+        InterpolatedYieldCurvePair pair_;
 %}
     };
 }

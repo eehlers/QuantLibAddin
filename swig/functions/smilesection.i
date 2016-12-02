@@ -186,3 +186,4 @@ namespace QuantLib {
         );
     };
 }
+

@@ -330,3 +330,4 @@ namespace QuantLibAddin {
         const boost::shared_ptr<QuantLibAddin::RateHelper>& RateHelper                                                                  //!< RateHelper ID.
     );
 }
+

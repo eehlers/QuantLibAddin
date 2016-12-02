@@ -125,3 +125,4 @@ namespace QuantLibAddin {
         QuantLib::Real Seconds      //!< Number of seconds.
     );
 }
+

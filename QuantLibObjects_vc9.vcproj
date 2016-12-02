@@ -1346,6 +1346,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\loop\loop_capletvolstructure.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\loop\loop_date.hpp"
 				>
 			</File>
@@ -1359,6 +1363,10 @@
 			</File>
 			<File
 				RelativePath=".\qlo\loop\loop_indexes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\loop\loop_swaptionvolstructure.hpp"
 				>
 			</File>
 			<File

@@ -67,6 +67,7 @@ OBJECT_WRAPPER(QuantLibAddin::T, QuantLib::T)
 // Data types of objects passed as function parameters to be retrieved from the repository
 
 QL_OBJECT_WRAPPER(AffineModel)
+QL_OBJECT_WRAPPER(AssetSwap)
 QL_OBJECT_WRAPPER(BlackCalculator)
 QL_OBJECT_WRAPPER(BlackScholesCalculator)
 QL_OBJECT_WRAPPER(BlackVolTermStructure)

@@ -1,20 +1,30 @@
 
-%group(defaultbasket);
-%groupCaption(Default Basket);
+%group(Default Basket);
 
-%override;
+%insert(obj_hpp) %{
+#include <ql/types.hpp>
+#include <ql/time/date.hpp>
 
-//%insert(defaultbasket_addin_cpp) %{
-//#include <ql/experimental/credit/basket.hpp>
-//#include <qlo/objects/credit/credit.hpp>
-//#include <qlo/objects/credit/defaultbasket.hpp>
-//#include <qlo/objects/credit/basketlossmodels.hpp>
-//%}
+namespace QuantLib {
+    class Basket;
+    class Issuer;
+}
+%}
+
+%insert(obj_cpp) %{
+#include <qlo/objects/obj_credit.hpp>
+#include <qlo/objects/obj_basketlossmodels.hpp>
+#include <ql/currencies/europe.hpp>
+#include <ql/experimental/credit/basket.hpp>
+#include <boost/make_shared.hpp>
+%}
 
 namespace QuantLib {
 
+    %rename(CreditBasket) Basket;
     class Basket {
     public:
+
         %rename(CreditBasket) Basket;
         Basket(
             const std::vector<std::string>& IssuerNames,                            //!< Array containing the issuer names in the basket
@@ -26,64 +36,73 @@ namespace QuantLib {
             bool Amortizing                                                         //!< Whether is Quarterly amortizing.
         );
 
-        // FIXME check if a rename would suffice here instead of a rename2?
-        %rename2(setLossModel, CreditBasketSetLossModel);
         //! Assigns a Default Loss Model to a given basket. Subsequent basket computations will use that model.
         void setLossModel(
             const boost::shared_ptr<DefaultLossModel>& DefaultLossModel             //!< Loss Model.
         );
-        %rename2(size, CreditBasketSize);
+
         //! Number of counterparties at inception.
         Size size() const;
-        %rename2(remainingNotional, CreditBasketLiveNotional);
+
         //! Non defaulted portfolio outstanding notional.
+        %rename(liveNotional) remainingNotional;
         Real remainingNotional() const;
-        %rename2(cumulatedLoss, CreditBasketLoss);
+
         //! Losses from default events.
+        %rename(loss) cumulatedLoss;
         Real cumulatedLoss() const;
-        %rename2(remainingAttachmentAmount, CrediBasketAttachLive);
+
         //! Remaining attach amount.
+        %rename(attachLive) remainingAttachmentAmount;
         Real remainingAttachmentAmount() const;
-        %rename2(remainingDetachmentAmount, CrediBasketDetachLive);
+
         //! Remaining detach amount.
+        %rename(detachLive) remainingDetachmentAmount;
         Real remainingDetachmentAmount() const;
+
         //! Basket expected tranche according to the basket loss model.
+        %rename2(expectedTrancheLoss, expectedTrancheLoss);
         Real expectedTrancheLoss(
             const Date& DateForLoss=QuantLib::Date()                                //!< Computes the expected loss on this date.
         ) const;
-        %rename2(percentile, CreditBasketPercentile);
+
         //! Basket loss percentile amount (tranched).
         Real percentile(
             const Date& DateForLoss/*=QuantLib::Date()*/,                           //!< Computes the loss percentile on this date.
             Probability PercentileValue                                             //!< Percentile requested.
         );
-        %rename2(expectedShortfall, CreditBasketESF);
+
         //! Basket loss expected shortfall amount (tranched).
+        %rename(ESF) expectedShortfall;
         Real expectedShortfall(
             const Date& DateForLoss/*=QuantLib::Date()*/,                           //!< Computes the loss percentile on this date.
             Probability PercentileValue                                             //!< Percentile requested.
         );
-        %rename2(probsBeingNthEvent, CreditBasketNthEventP);
+
         //! Probability of each basket name to default in the given order.
+        %rename(nthEventP) probsBeingNthEvent;
         std::vector<Probability> probsBeingNthEvent(
             Size EventOrder,                                                        //!< The order of default for which the probability is returned.
             const Date& DateForLoss=QuantLib::Date()                                //!< Computes the probabilities on this date.
         );
-        %rename2(probOverLoss, CreditBasketProbLoss);
+
         //! Probability of basket losses to be over a value at a given date.
+        %rename(probLoss) probOverLoss;
         Probability probOverLoss(
             const Date& DateForLoss/*=QuantLib::Date()*/,                           //!< Computes the probabilities on this date.
             Real LossFractionValue                                                  //!< Value of losses as a fraction of initial tanche amount.
         );
-        %rename2(splitVaRLevel, CreditBasketSplitLoss);
+
         //! Splits a loss amount by counterparty contribution.
+        %rename(splitLoss) splitVaRLevel;
         //Disposable<std::vector<Real> > splitVaRLevel(
         std::vector<Real> splitVaRLevel(
             const Date& DateForLoss/*=QuantLib::Date()*/,                           //!< Computes the probabilities on this date.
             Real LossValue                                                          //!< Value of losses in absolute amount.
         );
-        %rename2(defaultCorrelation, CreditBasketDefaulCorrel);
+
         //! Default correlation between two basket issuers.
+        %rename(defaulCorrel) defaultCorrelation;
         Real defaultCorrelation(
             const Date& DateForLoss/*=QuantLib::Date()*/,                           //!< Computes the probabilities on this date.
             Size IndexIssuer1,                                                      //!< First name.

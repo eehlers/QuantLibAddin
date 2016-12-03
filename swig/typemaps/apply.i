@@ -141,6 +141,15 @@ QL_OBJECT_WRAPPER(Vasicek)
 QL_OBJECT_WRAPPER(YieldTermStructure)
 QL_OBJECT_WRAPPER(ZeroCurve)
 
+QL_OBJECT_WRAPPER(PiecewiseHazardRateCurve)
+QL_OBJECT_WRAPPER(BaseCorrelationTermStructure)
+QL_OBJECT_WRAPPER(DefaultProbabilityHelper)
+QL_OBJECT_WRAPPER(DefaultProbabilityTermStructure)
+QL_OBJECT_WRAPPER(DefaultEventSet)
+QL_OBJECT_WRAPPER(Basket)
+QL_OBJECT_WRAPPER(CreditDefaultSwap)
+QL_OBJECT_WRAPPER(Issuer)
+
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?
 %typemap(rp_tm_xll_cnvt) QuantLib::DiscountCurve & %{
@@ -249,7 +258,7 @@ QUANTLIB_HANDLE(QuantLibAddin::SimpleQuote, QuantLib::SimpleQuote)
 QUANTLIB_HANDLE(QuantLibAddin::YieldTermStructure, QuantLib::YieldTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::BlackAtmVolCurve, QuantLib::BlackAtmVolCurve)
 QUANTLIB_HANDLE(QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure)
-//QUANTLIB_HANDLE(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure)
+QUANTLIB_HANDLE(QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure)
 QUANTLIB_HANDLE(QuantLibAddin::SabrVolSurface, QuantLib::SabrVolSurface)
 QUANTLIB_HANDLE(QuantLibAddin::OptionletVolatilityStructure, QuantLib::OptionletVolatilityStructure)
 QUANTLIB_HANDLE(QuantLibAddin::CapFloorTermVolCurve, QuantLib::CapFloorTermVolCurve)

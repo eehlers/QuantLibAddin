@@ -7,6 +7,7 @@
 #include <qlo/objects/obj_quotes.hpp>
 #include <qlo/objects/obj_termstructures.hpp>
 #include <qlo/objects/obj_swaptionvolstructure.hpp>
+#include <qlo/objects/obj_defaulttermstructures.hpp>
 #include <qlo/conversions/coercetermstructure.hpp>
 
 namespace QuantLibAddin {
@@ -30,6 +31,13 @@ namespace QuantLibAddin {
         RelinkableHandleSwaptionVolatilityStructure(const boost::shared_ptr<reposit::ValueObject> &properties,
             const std::string &linkTo,
             bool permanent) : RelinkableHandleImpl<QuantLibAddin::SwaptionVolatilityStructure, QuantLib::SwaptionVolatilityStructure>(properties, linkTo, permanent) {}
+    };
+
+    class RelinkableHandleDefaultProbabilityTermStructure : public RelinkableHandleImpl<QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure>{
+    public:
+        RelinkableHandleDefaultProbabilityTermStructure(const boost::shared_ptr<reposit::ValueObject> &properties,
+            const std::string &linkTo,
+            bool permanent) : RelinkableHandleImpl<QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure>(properties, linkTo, permanent) {}
     };
 } // namespace QuantLibAddin
 

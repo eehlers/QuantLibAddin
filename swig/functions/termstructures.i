@@ -179,8 +179,8 @@ namespace QuantLib {
 
 namespace QuantLibAddin {
 
-    class DefaultProbabilityTermStructure : public TermStructure {};
-    class CorrelationTermStructure : public TermStructure {};
+    //class DefaultProbabilityTermStructure : public TermStructure {};
+    //class CorrelationTermStructure : public TermStructure {};
     class InflationTermStructure : public TermStructure {};
     class VolatilityTermStructure : public TermStructure {};
     class BlackAtmVolCurve : public VolatilityTermStructure {};

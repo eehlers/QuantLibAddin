@@ -813,6 +813,30 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_credit.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_credit.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_defaultbasket.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_defaultbasket.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_defaulttermstructures.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_defaulttermstructures.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_exercise.cpp"
 					>
 				</File>
@@ -834,6 +858,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\create\create_indexes.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_latentmodels.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_latentmodels.hpp"
 					>
 				</File>
 				<File
@@ -1029,6 +1061,30 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_credit.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_credit.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_defaultbasket.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_defaultbasket.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_defaulttermstructures.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_defaulttermstructures.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_exercise.cpp"
 					>
 				</File>
@@ -1050,6 +1106,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_indexes.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_latentmodels.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_latentmodels.hpp"
 					>
 				</File>
 				<File
@@ -1242,6 +1306,30 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_credit.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_credit.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_defaultbasket.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_defaultbasket.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_defaulttermstructures.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_defaulttermstructures.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_exercise.cpp"
 				>
 			</File>
@@ -1263,6 +1351,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_indexes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_latentmodels.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_latentmodels.hpp"
 				>
 			</File>
 			<File
@@ -1514,6 +1610,18 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\objects\obj_credit.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_credit.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_credit_hw.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\objects\obj_date.hpp"
 				>
 			</File>
@@ -1523,6 +1631,26 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_daycounters.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_defaultbasket.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_defaultbasket_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_defaulttermstructures.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_defaulttermstructures.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_defaulttermstructures_hw.cpp"
 				>
 			</File>
 			<File
@@ -1551,6 +1679,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\objects\obj_instruments_hw.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_latentmodels.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_latentmodels_hw.cpp"
 				>
 			</File>
 			<File

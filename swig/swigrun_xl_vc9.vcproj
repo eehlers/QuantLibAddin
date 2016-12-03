@@ -78,11 +78,23 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\credit.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\date.i"
 					>
 				</File>
 				<File
 					RelativePath=".\functions\daycounters.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\defaultbasket.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\defaulttermstructures.i"
 					>
 				</File>
 				<File
@@ -99,6 +111,10 @@
 				</File>
 				<File
 					RelativePath=".\functions\instruments.i"
+					>
+				</File>
+				<File
+					RelativePath=".\functions\latentmodels.i"
 					>
 				</File>
 				<File

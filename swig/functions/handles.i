@@ -23,7 +23,7 @@ namespace QuantLibAddin {
         // is code which updates a property with that name in the value object.
         RelinkableHandleYieldTermStructure(
             const std::string &CurrentLink  //!< YieldTermStructure object ID. If omitted, nothing is linked by the RelinkableHandle.
-        ) {}
+        );
     };
 
     class RelinkableHandleQuote {
@@ -34,7 +34,7 @@ namespace QuantLibAddin {
         // is code which updates a property with that name in the value object.
         RelinkableHandleQuote(
             const std::string &CurrentLink  //!< Quote object ID. If omitted, nothing is linked by the RelinkableHandle.
-        ) {}
+        );
     };
 
     class RelinkableHandleSwaptionVolatilityStructure {
@@ -45,7 +45,16 @@ namespace QuantLibAddin {
         // is code which updates a property with that name in the value object.
         RelinkableHandleSwaptionVolatilityStructure(
             const std::string &CurrentLink  //!< SwaptionVolatilityStructure object ID. If omitted, nothing is linked by the RelinkableHandle.
-        ) {}
+        );
+    };
+
+    class RelinkableHandleDefaultProbabilityTermStructure {
+      public:
+
+        %processor(RelinkableHandleDefaultProbabilityTermStructure, RelinkableHandleProcessor);
+        RelinkableHandleDefaultProbabilityTermStructure(
+            const std::string &CurrentLink                                  //!< DefaultProbabilityTermStructure object ID. If omitted, nothing is linked by the RelinkableHandle.
+        );
     };
 }
 

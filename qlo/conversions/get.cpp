@@ -27,6 +27,7 @@
 #include <qlo/objects/obj_volatilities.hpp>
 #include <qlo/objects/obj_swaptionvolstructure.hpp>
 #include <qlo/objects/obj_capletvolstructure.hpp>
+#include <qlo/objects/obj_defaulttermstructures.hpp>
 #include <qlo/objects/obj_leg.hpp>
 
 #include <ql/utilities/dataparsers.hpp>
@@ -140,6 +141,9 @@ QuantLibAddin::getHandle<QuantLibAddin::OptionletVolatilityStructure, QuantLib::
 
 template QuantLib::Handle<QuantLib::CapFloorTermVolCurve>
 QuantLibAddin::getHandle<QuantLibAddin::CapFloorTermVolCurve, QuantLib::CapFloorTermVolCurve>(const std::string&);
+
+template QuantLib::Handle<QuantLib::DefaultProbabilityTermStructure>
+QuantLibAddin::getHandle<QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure>(const std::string&);
 
 template <class QuantLibAddinHandle, class QuantLibHandle>
 QuantLib::Handle<QuantLibHandle> QuantLibAddin::getHandle(

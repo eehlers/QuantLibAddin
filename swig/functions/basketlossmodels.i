@@ -11,7 +11,7 @@ namespace QuantLib {
 %}
 
 %insert(obj_cpp) %{
-#include <qlo/objects/obj_termstructures.hpp>
+#include <qlo/objects/obj_credit.hpp>
 #include <ql/experimental/credit/correlationstructure.hpp>
 %}
 
@@ -23,7 +23,7 @@ namespace QuantLib {
     public:
         GaussianLHPLossModel(
             Real Correlation,                                   //!< Gaussian model single correlation.
-            const std::vector<Real>& RecoveryRates               //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates              //!< Recovery rates of each live name in the portfolio.
         );
     };
 
@@ -31,7 +31,7 @@ namespace QuantLib {
     public:
         IHGaussPoolLossModel(
             const Real Correlation,                             //!< Model single correlation.
-            const std::vector<Real>& RecoveryRates,              //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates,             //!< Recovery rates of each live name in the portfolio.
             const Size NumBuckets                               //!< Number of distribution loss buckets.
         );
     };
@@ -40,7 +40,7 @@ namespace QuantLib {
     public:
         IHStudentPoolLossModel(
             const Real Correlation,                             //!< Model single correlation.
-            const std::vector<Real>& RecoveryRates,              //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates,             //!< Recovery rates of each live name in the portfolio.
             const std::vector<Real>& Ttraits,                   //!< T orders on each factor.
             const Size NumBuckets                               //!< Number of distribution loss buckets.
         );
@@ -51,7 +51,7 @@ namespace QuantLib {
         %rename(GBinomialLossmodel) GaussianBinomialLossModel;
         GaussianBinomialLossModel(
             const std::vector<std::vector<Real> >& Factors,     //!< Systemic model factors.
-            const std::vector<Real>& RecoveryRates               //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates              //!< Recovery rates of each live name in the portfolio.
         );
     };
 
@@ -59,7 +59,7 @@ namespace QuantLib {
     public:
         TBinomialLossModel(
             const std::vector<std::vector<Real> >& Factors,     //!< Systemic model factors.
-            const std::vector<Real>& RecoveryRates,              //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates,             //!< Recovery rates of each live name in the portfolio.
             const std::vector<Real>& Ttraits                    //!< T orders on each factor.
         );
     };
@@ -79,7 +79,7 @@ namespace QuantLib {
         %rename(GMCLossModel) GaussianRandomDefaultLM;
         GaussianRandomDefaultLM(
             const std::vector<std::vector<Real> >& Factors,     //!< Systemic model factors.
-            const std::vector<Real>& RecoveryRates,              //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates,             //!< Recovery rates of each live name in the portfolio.
             const Size NumSimulations                           //!< MC simulations.
         );
     };
@@ -89,7 +89,7 @@ namespace QuantLib {
         %rename(GRandomRRMCLossModel) GaussianRandomLossLM;
         GaussianRandomLossLM(
             const std::vector<std::vector<Real> >& Factors,     //!< Systemic model factors.
-            const std::vector<Real>& RecoveryRates,              //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates,             //!< Recovery rates of each live name in the portfolio.
             const Real ModelA,                                  //!< Recovery deviation parameter.
             const Size NumSimulations                           //!< MC simulations.
         );
@@ -100,7 +100,7 @@ namespace QuantLib {
         %rename(TMCLossModel) TRandomDefaultLM;
         TRandomDefaultLM(
             const std::vector<std::vector<Real> >& Factors,     //!< Systemic model factors.
-            const std::vector<Real>& RecoveryRates,              //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates,             //!< Recovery rates of each live name in the portfolio.
             const std::vector<Real>& Ttraits,                   //!< T orders on each factor.
             const Size NumSimulations                           //!< MC simulations.
         );
@@ -111,7 +111,7 @@ namespace QuantLib {
         %rename(TRandomRRMCLossModel) TRandomLossLM;
         TRandomLossLM(
             const std::vector<std::vector<Real> >& Factors,     //!< Systemic model factors.
-            const std::vector<Real>& RecoveryRates,              //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates,             //!< Recovery rates of each live name in the portfolio.
             const std::vector<Real>& Ttraits,                   //!< T orders on each factor.
             const Real ModelA,                                  //!< Recovery deviation parameter.
             const Size NumSimulations                           //!< MC simulations.
@@ -123,7 +123,7 @@ namespace QuantLib {
         %rename(GSaddlePointLossModel) SaddlePointLossModel;
         SaddlePointLossModel(
             const std::vector<std::vector<Real> >& Factors,     //!< Systemic model factors.
-            const std::vector<Real>& RecoveryRates               //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates              //!< Recovery rates of each live name in the portfolio.
         );
     };
 
@@ -131,7 +131,7 @@ namespace QuantLib {
     public:
         TSaddlePointLossModel(
             const std::vector<std::vector<Real> >& Factors,     //!< Systemic model factors.
-            const std::vector<Real>& RecoveryRates,              //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates,             //!< Recovery rates of each live name in the portfolio.
             const std::vector<Real>& Ttraits                    //!< T orders on each factor.
         );
     };
@@ -141,7 +141,7 @@ namespace QuantLib {
         %rename(GRecursiveLossmodel) RecursiveGaussLossModel;
         RecursiveGaussLossModel(
             const std::vector<std::vector<Real> >& Factors,     //!< Systemic model factors.
-            const std::vector<Real>& RecoveryRates               //!< Recovery rates of each live name in the portfolio.
+            const std::vector<Real>& RecoveryRates              //!< Recovery rates of each live name in the portfolio.
         );
     };
 }

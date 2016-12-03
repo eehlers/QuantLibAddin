@@ -5,17 +5,17 @@
 %include calendars.i
 %include capletvolstructure.i
 %include couponvectors.i
-//%include credit.i
+%include credit.i
 %include date.i
 %include daycounters.i
-//%include defaultbasket.i
-//%include defaulttermstructures.i
+%include defaultbasket.i
+%include defaulttermstructures.i
 %include exercise.i
 %include handles.i
 %include indexes.i
 %include instruments.i
 //%include interpolation.i
-//%include latentmodels.i
+%include latentmodels.i
 %include leg.i                  // depends on couponvectors, swap, capfloor
 %include math.i
 //%include models.i

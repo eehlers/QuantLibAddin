@@ -1,29 +1,24 @@
 
-%group(prices);
-%groupCaption(Prices);
+%group(Prices);
 
-//%insert(prices_library_hpp) %{
-//#include <ql/prices.hpp>
-//%}
-//
-//%insert(prices_addin_cpp) %{
-//#include <ql/prices.hpp>
-//%}
+%insert(obj_cpp) %{
+#include <ql/prices.hpp>
+%}
 
 namespace QuantLib {
 
-    //! returns the mid price if available, or a suitable substitute otherwise.
+    //! Returns the mid price if available, or a suitable substitute otherwise.
     double midEquivalent(
-        const double bid,   //!< bid price.
-        const double ask,   //!< ask price.
-        const double last,  //!< last price.
-        const double close  //!< close price.
+        const double Bid=0.0,       //!< Bid price.
+        const double Ask=0.0,       //!< Ask price.
+        const double Last=0.0,      //!< Last price.
+        const double Close=0.0      //!< Close price.
     );
 
-    //! returns the mid price only if both bid and ask are available.
+    //! Returns the mid price only if both bid and ask are available.
     double midSafe(
-        const double bid,   //!< bid price.
-        const double ask    //!< ask price.
+        const double Bid=0.0,       //!< Bid price.
+        const double Ask=0.0        //!< Ask price.
     );
 }
 

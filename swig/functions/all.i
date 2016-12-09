@@ -18,11 +18,10 @@
 %include latentmodels.i
 %include leg.i                  // depends on couponvectors, swap, capfloor
 %include math.i
-//%include models.i
 %include optimization.i
 %include payoffs.i
 %include piecewiseyieldcurve.i
-//%include prices.i
+%include prices.i
 %include pricingengines.i
 %include processes.i
 %include quotes.i               // depends on instruments

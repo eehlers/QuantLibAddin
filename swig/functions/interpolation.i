@@ -1,5 +1,9 @@
 
+// We have to use the manual override flag for the object wrapper source code,
+// because class Interpolation implements multiple inheritance, which is not supported.
+// That seems to be the only unsupported feature in this file.
 %override;
+
 %group(Interpolation);
 
 %insert(obj_cpp) %{
@@ -9,7 +13,7 @@
 namespace QuantLib {
 
     %noctor(Interpolation);
-    class Interpolation : public Extrapolator {
+    class Interpolation : public Extrapolator/*, public QuantLib::LazyObject*/ {
       public:
 
         //! Returns interpolated values using the given Interpolation object.

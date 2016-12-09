@@ -142,6 +142,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\prices.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\pricingengines.i"
 					>
 				</File>

@@ -114,6 +114,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\functions\interpolation.i"
+					>
+				</File>
+				<File
 					RelativePath=".\functions\latentmodels.i"
 					>
 				</File>

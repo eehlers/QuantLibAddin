@@ -32,6 +32,7 @@
 
 %typemap(rp_tm_vob_parm) QuantLib::Date "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) QuantLib::Date & "const reposit::property_t&";
+%typemap(rp_tm_vob_parm) QuantLib::Handle<QuantLib::Quote> & "const reposit::property_t&";
 %typemap(rp_tm_vob_parm) QuantLib::Matrix & "const std::vector<std::vector<double> >&";
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Date> & "const std::vector<reposit::property_t>&";
 %typemap(rp_tm_vob_parm) std::vector<QuantLib::Period> & "const std::vector<reposit::property_t>&";
@@ -43,6 +44,7 @@
 
 %typemap(rp_tm_vob_mbvr) QuantLib::Date "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) QuantLib::Date & "reposit::property_t $1_name_";
+%typemap(rp_tm_vob_mbvr) QuantLib::Handle<QuantLib::Quote> & "reposit::property_t $1_name_";
 %typemap(rp_tm_vob_mbvr) QuantLib::Matrix & "std::vector<std::vector <double> > $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Date> & "std::vector<reposit::property_t> $1_name_";
 %typemap(rp_tm_vob_mbvr) std::vector<QuantLib::Period> & "std::vector<reposit::property_t> $1_name_";
@@ -320,7 +322,8 @@ QL_VEC_RET(QuantLib::Period, std::string)
 %typemap(rp_tm_xll_code) std::vector<QuantLib::Period> "P";
 %typemap(rp_tm_xll_code) std::vector<QuantLib::Period> & "P";
 %typemap(rp_tm_xll_code) std::vector<QuantLib::TimeSeries<QuantLib::Real > > "P";
-%typemap(rp_tm_xll_code) std::vector<QuantLib::Handle<QuantLib::Quote> > const & "P";
+%typemap(rp_tm_xll_code) QuantLib::Handle<QuantLib::Quote> "P";
+%typemap(rp_tm_xll_code) std::vector<QuantLib::Handle<QuantLib::Quote> > & "P";
 %typemap(rp_tm_xll_code) std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > & "P";
 
 // rp_tm_xll_loop - arguments to boost::bind object for a looping function (F/M)

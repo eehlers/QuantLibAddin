@@ -39,8 +39,10 @@ QL_ENUMERATED_TYPE_STRUCT(Replication, Type)
 ENUMERATED_TYPE_IMPL(QuantLib::VanillaSwap::Type)
 
 ENUMERATED_TYPE_IMPL(QuantLib::EndCriteria::Type)
-ENUMERATED_TYPE_STRUCT(QuantLibAddin, RateHelper, DepoInclusionCriteria)
+ENUMERATED_TYPE_IMPL(QuantLib::CubicInterpolation::BoundaryCondition)
+ENUMERATED_TYPE_IMPL(QuantLib::CubicInterpolation::DerivativeApprox)
 ENUMERATED_TYPE_IMPL(QuantLibAddin::SwapIndex::FixingType)
+ENUMERATED_TYPE_STRUCT(QuantLibAddin, RateHelper, DepoInclusionCriteria)
 
 // Enumerated classes.
 
@@ -148,6 +150,13 @@ QL_OBJECT_WRAPPER(DefaultProbabilityTermStructure)
 QL_OBJECT_WRAPPER(DefaultEventSet)
 QL_OBJECT_WRAPPER(Basket)
 QL_OBJECT_WRAPPER(CreditDefaultSwap)
+QL_OBJECT_WRAPPER(Interpolation)
+QL_OBJECT_WRAPPER(GenericInterp)
+QL_OBJECT_WRAPPER(MixedLinearCubicInterpolation)
+QL_OBJECT_WRAPPER(CubicInterpolation)
+QL_OBJECT_WRAPPER(AbcdInterpolation)
+QL_OBJECT_WRAPPER(SABRInterpolation)
+QL_OBJECT_WRAPPER(Interpolation2D)
 QL_OBJECT_WRAPPER(Issuer)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().

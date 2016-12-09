@@ -861,6 +861,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_interpolation.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_interpolation.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\create\create_latentmodels.cpp"
 					>
 				</File>
@@ -1109,6 +1117,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\register\serialization_interpolation.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_interpolation.hpp"
+					>
+				</File>
+				<File
 					RelativePath=".\qlo\serialization\register\serialization_latentmodels.cpp"
 					>
 				</File>
@@ -1354,6 +1370,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_interpolation.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_interpolation.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\valueobjects\vo_latentmodels.cpp"
 				>
 			</File>
@@ -1531,6 +1555,10 @@
 			</File>
 			<File
 				RelativePath=".\qlo\loop\loop_indexes.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\loop\loop_interpolation.hpp"
 				>
 			</File>
 			<File
@@ -1889,6 +1917,10 @@
 				RelativePath=".\qlo\objects\objmanual_handles.hpp"
 				>
 			</File>
+			<File
+				RelativePath=".\qlo\objects\objmanual_interpolation.hpp"
+				>
+			</File>
 			<Filter
 				Name="cashflows"
 				>
@@ -1994,6 +2026,26 @@
 				</File>
 				<File
 					RelativePath=".\qlo\objects\instruments\creditdefaultswap.hpp"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="math"
+				>
+				<File
+					RelativePath=".\qlo\objects\math\interpolation.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\math\interpolation.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\math\interpolation2D.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\objects\math\interpolation2D.hpp"
 					>
 				</File>
 			</Filter>

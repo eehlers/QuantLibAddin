@@ -162,8 +162,9 @@
 
 // rp_tm_xll_parm - function parameters (F/C/M)
 
-%typemap(rp_tm_xll_parm) boost::shared_ptr<QuantLibAddin::RateHelper> & "char*";
+%typemap(rp_tm_xll_parm) QuantLib::InterestRate & "double*";
 %typemap(rp_tm_xll_parm) QuantLib::Matrix & "FP*";
+%typemap(rp_tm_xll_parm) boost::shared_ptr<QuantLibAddin::RateHelper> & "char*";
 
 // rp_tm_xll_cnvt - convert from Excel datatypes to the datatypes of the underlying Library
 
@@ -230,6 +231,7 @@
 
 // rp_tm_xll_argf - arguments to the underlying Library function (F/C/M)
 
+%typemap(rp_tm_xll_argf) QuantLib::InterestRate & "*$1_name";
 %typemap(rp_tm_xll_argf) QuantLib::Period "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Period & "$1_name_cnv";
 %typemap(rp_tm_xll_argf) QuantLib::Date "$1_name_cnv";
@@ -310,6 +312,7 @@ QL_VEC_RET(QuantLib::Period, std::string)
 
 // rp_tm_xll_code - code to register the parameter with Excel
 
+%typemap(rp_tm_xll_code) QuantLib::InterestRate & "E";
 %typemap(rp_tm_xll_code) QuantLib::Date "P";
 %typemap(rp_tm_xll_code) QuantLib::Date & "P";
 %typemap(rp_tm_xll_code) QuantLib::Bond & "C";

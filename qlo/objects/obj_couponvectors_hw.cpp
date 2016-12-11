@@ -46,28 +46,27 @@ QuantLibAddin::FixedRateLeg::FixedRateLeg(
                             .withPaymentAdjustment(PaymentBDC)));
 }
 
-//QuantLibAddin::FixedRateLeg::FixedRateLeg(
-//    const boost::shared_ptr<reposit::ValueObject>& properties,
-//            // BEGIN typemap rp_tm_default
-//            QuantLib::BusinessDayConvention PaymentBDC,
-//            std::vector< QuantLib::Real > const &Nominals,
-//            boost::shared_ptr< QuantLib::Schedule > const &ScheduleID,
-//            std::vector< QuantLib::Rate > const &Coupons,
-//            QuantLib::DayCounter const &DayCounter,
-//            // END   typemap rp_tm_default
-//    bool permanent)
-//: Leg(properties, permanent) {
-//		vector<QuantLib::InterestRate> coupons(couponRates.size());
-//
-//        for (QuantLib::Size i=0; i<couponRates.size(); ++i)
-//			coupons[i] = *couponRates[i];
-//
-//        libraryObject_ = boost::shared_ptr<QuantLib::Leg>(new
-//    		QuantLib::Leg(QuantLib::FixedRateLeg(*schedule)
-//                                    .withNotionals(nominals)
-//                                    .withCouponRates(coupons)
-//                                    .withPaymentAdjustment(paymentConvention)));
-//}
+QuantLibAddin::FixedRateLeg::FixedRateLeg(
+    const boost::shared_ptr<reposit::ValueObject>& properties,
+            // BEGIN typemap rp_tm_default
+            QuantLib::BusinessDayConvention PaymentBDC,
+            std::vector< QuantLib::Real > const &Nominals,
+            boost::shared_ptr< QuantLib::Schedule > const &ScheduleID,
+            std::vector< boost::shared_ptr< QuantLib::InterestRate > > const &Coupons,
+            // END   typemap rp_tm_default
+    bool permanent)
+: Leg(properties, permanent) {
+		std::vector<QuantLib::InterestRate> coupons(Coupons.size());
+
+        for (QuantLib::Size i=0; i<Coupons.size(); ++i)
+			coupons[i] = *Coupons[i];
+
+        libraryObject_ = boost::shared_ptr<QuantLib::Leg>(new
+    		QuantLib::Leg(QuantLib::FixedRateLeg(*ScheduleID)
+                                    .withNotionals(Nominals)
+                                    .withCouponRates(coupons)
+                                    .withPaymentAdjustment(PaymentBDC)));
+}
 
 QuantLibAddin::IborLeg::IborLeg(
     const boost::shared_ptr<reposit::ValueObject>& properties,

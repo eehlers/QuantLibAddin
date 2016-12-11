@@ -50,14 +50,13 @@ namespace QuantLib {
             const QuantLib::DayCounter& DayCounter                                                              //!< Payment DayCounter ID.
         );
 
-        // FIXME need some more typemaps for type InterestRate.
-        //%rename(FixedRateLeg2) FixedRateLeg;
-        //FixedRateLeg(
-        //    BusinessDayConvention PaymentBDC/*=QuantLib::BusinessDayConvention(QuantLib::Following)*/,          //!< Payment business day convention.
-        //    const std::vector<QuantLib::Real>& Nominals,                                                        //!< Nominal amount vector.
-        //    const boost::shared_ptr<QuantLib::Schedule>& ScheduleID,                                            //!< Schedule object ID.
-        //    const std::vector<boost::shared_ptr<QuantLib::InterestRate> >& Coupons                              //!< Coupon InterestRate IDs.
-        //);
+        %rename(FixedRateLeg2) FixedRateLeg;
+        FixedRateLeg(
+            BusinessDayConvention PaymentBDC/*=QuantLib::BusinessDayConvention(QuantLib::Following)*/,          //!< Payment business day convention.
+            const std::vector<Real>& Nominals,                                                                  //!< Nominal amount vector.
+            const boost::shared_ptr<Schedule>& ScheduleID,                                                      //!< Schedule object ID.
+            const std::vector<boost::shared_ptr<InterestRate> >& Coupons                                        //!< Coupon InterestRate IDs.
+        );
     };
 
     class IborLeg : public Leg {

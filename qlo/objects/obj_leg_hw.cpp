@@ -3,6 +3,7 @@
 
 
 #include <qlo/objects/obj_leg.hpp>
+#include <qlo/objects/obj_couponvectors.hpp>
 #include <qlo/objects/cashflows/flowanalysis.hpp>
 #include <qlo/enumerations/factories/iborcouponpricersfactory.hpp>
 //#include <qlo/couponvectors.hpp>
@@ -44,22 +45,32 @@ QuantLibAddin::Leg::Leg(
         QuantLib::earlier_than<boost::shared_ptr<QuantLib::CashFlow> >());
 }
 
-//void QuantLibAddin::Leg::setCouponPricers(
-//            const std::vector<boost::shared_ptr<FloatingRateCouponPricer> >& pricers) {
-//    std::vector<std::string> ids;
-//    std::vector<boost::shared_ptr<QuantLib::FloatingRateCouponPricer> > ql_pricers;
-//    std::vector<boost::shared_ptr<FloatingRateCouponPricer> >::const_iterator i;
-//    for (i = pricers.begin(); i != pricers.end(); ++i) {
-//        ids.push_back((*i)->properties()->objectId());
-//        boost::shared_ptr<QuantLib::FloatingRateCouponPricer> p;
-//        (*i)->getLibraryObject(p);
-//        ql_pricers.push_back(p);
-//    }
-//    QuantLib::setCouponPricers(*libraryObject_, ql_pricers);
-//
-//    boost::shared_ptr<reposit::ValueObject> inst_properties = properties();
-//    inst_properties->setProperty("UserLegIDs", ids);
-//}
+QuantLibAddin::Leg::Leg(const boost::shared_ptr<reposit::ValueObject>& prop,
+         const boost::shared_ptr<QuantLib::Swap>& swap,
+         QuantLib::Size i,
+         bool permanent)
+: reposit::LibraryObject<QuantLib::Leg>(prop, permanent)
+{
+    libraryObject_ = boost::shared_ptr<QuantLib::Leg>(new QuantLib::Leg());
+    *libraryObject_ = swap->leg(i);
+}
+
+void QuantLibAddin::Leg::setCouponPricers(
+            const std::vector<boost::shared_ptr<FloatingRateCouponPricer> >& pricers) {
+    std::vector<std::string> ids;
+    std::vector<boost::shared_ptr<QuantLib::FloatingRateCouponPricer> > ql_pricers;
+    std::vector<boost::shared_ptr<FloatingRateCouponPricer> >::const_iterator i;
+    for (i = pricers.begin(); i != pricers.end(); ++i) {
+        ids.push_back((*i)->properties()->objectId());
+        boost::shared_ptr<QuantLib::FloatingRateCouponPricer> p;
+        (*i)->getLibraryObject(p);
+        ql_pricers.push_back(p);
+    }
+    QuantLib::setCouponPricers(*libraryObject_, ql_pricers);
+
+    boost::shared_ptr<reposit::ValueObject> inst_properties = properties();
+    inst_properties->setProperty("UserLegIDs", ids);
+}
 
 std::vector<std::vector<reposit::property_t> >
 QuantLibAddin::Leg::flowAnalysis(const QuantLib::Date& d) const {

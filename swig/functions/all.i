@@ -1,7 +1,7 @@
 
 %include assetswap.i
 %include basketlossmodels.i
-%include bonds.i                // depends on interestrate
+%include bonds.i
 %include calendars.i
 %include capletvolstructure.i
 %include couponvectors.i
@@ -16,7 +16,7 @@
 %include instruments.i
 %include interpolation.i
 %include latentmodels.i
-%include leg.i                  // depends on couponvectors, swap, capfloor
+%include leg.i                  // depends on capfloor
 %include math.i
 %include optimization.i
 %include payoffs.i

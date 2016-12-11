@@ -17,6 +17,10 @@ namespace QuantLibAddin {
 }
 %}
 
+%insert(obj_cpp) %{
+#include <qlo/objects/obj_swap.hpp>
+%}
+
 namespace QuantLib {
 
     %noctor(CashFlows);
@@ -181,7 +185,7 @@ namespace QuantLib {
             Date NpvDate=Date()             //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
         );
 
-        //! Returns the net present value for the given Leg object.
+        //! Returns the basis point sensitivity for the given Leg object.
         %rename2(bps, LegBPS);
         static Real bps(
             const Leg& ObjectId,            //!< ID of existing QuantLib::Leg object.
@@ -215,16 +219,18 @@ namespace QuantLib {
             Date NpvDate=Date()             //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
         );
 
-// FIXME need to add the correct typemaps for type InterestRate
-//        //! Returns the basis point sensitivity for the given Leg object.
-//        %rename2(bps, LegBPSFromYield);
-//        static Real bps(
-//            const Leg& ObjectId,            //!< ID of existing QuantLib::Leg object.
-//            const /*Interest*/Rate& Yield,  //!< Yield (a.k.a. IRR).
-//            bool IncludeSettlDate=true,     //!< TRUE if cashflows paid at the settlement date must be taken into account.
-//            Date SettlementDate=Date(),     //!< Cashflows before this date are not taken into account. If missing the current EvaluationDate is used.
-//            Date NpvDate=Date()             //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
-//        );
+        //! Returns the basis point sensitivity for the given Leg object.
+        %rename2(bps, LegBPSFromYield);
+        static Real bps(
+            const Leg& ObjectId,            //!< ID of existing QuantLib::Leg object.
+            Rate Yield,                     //!< Yield (a.k.a. IRR).
+            const DayCounter& DayCounter=QuantLib::ActualActual(QuantLib::ActualActual::ISDA),//!< Yield DayCounter ID.
+            Compounding Compounding=QuantLib::Compounding(QuantLib::Compounded),//!< Interest rate coumpounding rule (Simple:1+rt, Compounded:(1+r)^t, Continuous:e^{rt}).
+            Frequency Frequency=QuantLib::Frequency(QuantLib::Annual),//!< Frequency (e.g. Annual, Semiannual, Every4Month, Quarterly, Bimonthly, Monthly).
+            bool IncludeSettlDate=true,     //!< TRUE if cashflows paid at the settlement date must be taken into account.
+            Date SettlementDate = Date(),   //!< Cashflows before this date are not taken into account. If missing the current EvaluationDate is used.
+            Date NpvDate = Date()           //!< All cashflows are discounted to this date. If missing it is assumed equal to the settlement date.
+        );
 
         //! Returns the Internal rate of return for the given Leg object.
         %rename2(yield, LegYield);
@@ -331,35 +337,33 @@ namespace QuantLib {
       public:
 
         Leg(
-            const std::vector<QuantLib::Real>& Amounts, //!< List of cash to be received/paid.
-            const std::vector<QuantLib::Date>& Dates,   //!< Payment dates corresponding to amounts.
+            const std::vector<Real>& Amounts,           //!< List of cash to be received/paid.
+            const std::vector<Date>& Dates,             //!< Payment dates corresponding to amounts.
             bool ToBeSorted=true                        //!< TRUE if the CashFlows must be sorted by ascending dates.
         );
 
 // FIXME this depends on CapFloor which is not yet implemented.
 //        %rename(LegFromCapFloor) Leg;
 //        Leg(
-//            const boost::shared_ptr<QuantLib::CapFloor>& CapFloor   //!< CapFloor object ID.
+//            const boost::shared_ptr<CapFloor>& CapFloor   //!< CapFloor object ID.
 //        );
 
-// FIXME this depends on Swap which is not yet implemented.
-//        %rename(LegFromSwap) Leg;
-//        Leg(
-//            const boost::shared_ptr<QuantLib::Swap>& Swap,  //!< Swap object ID.
-//            QuantLib::Size LegNumber    //!< Zero based leg number (e.g. use 0 for the first leg, 1 for the second leg, etc.).
-//        );
+        %rename(LegFromSwap) Leg;
+        Leg(
+            const boost::shared_ptr<Swap>& Swap,            //!< Swap object ID.
+            Size LegNumber                                  //!< Zero based leg number (e.g. use 0 for the first leg, 1 for the second leg, etc.).
+        );
 
-// FIXME this depends on couponvectors which is not yet implemented.
-//        //! Set the coupon pricer at the given Leg object.
-//        %wrap(setCouponPricers);
-//        void setCouponPricers(
-//            const std::vector<boost::shared_ptr<QuantLibAddin::FloatingRateCouponPricer> > &FloatingRateCouponPricer //!< FloatingRate coupon pricer object ID.
-//        );
+        //! Set the coupon pricer at the given Leg object.
+        %wrap(setCouponPricers);
+        void setCouponPricers(
+            const std::vector<boost::shared_ptr<QuantLibAddin::FloatingRateCouponPricer> > &FloatingRateCouponPricer //!< FloatingRate coupon pricer object ID.
+        );
 
         //! Returns the flow analysis for the given Leg object.
         %wrap(flowAnalysis);
         std::vector<std::vector<reposit::property_t> > flowAnalysis(
-            const QuantLib::Date& AfterDate=Date()     //!< Shows only cashflows after given date.
+            const Date& AfterDate=Date()                    //!< Shows only cashflows after given date.
         ) const;
 
 %insert(rp_class) %{
@@ -380,7 +384,7 @@ namespace QuantLib {
       public:
 
         InterestRate(
-            QuantLib::Rate Rate,               //!< Rate.
+            Rate Rate,                                          //!< Rate.
             const DayCounter& DayCounter=QuantLib::Actual365Fixed(),//!< DayCounter ID.
             Compounding Compounding=QuantLib::Compounding(QuantLib::Simple),//!< Interest rate coumpounding rule (Simple:1+rt, Compounded:(1+r)^t, Continuous:e^{rt}).
             Frequency Frequency=QuantLib::Frequency(QuantLib::Annual)//!< Frequency (e.g. Annual, Semiannual, Every4Month, Quarterly, Bimonthly, Monthly).

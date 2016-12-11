@@ -145,6 +145,9 @@ QuantLibAddin::getHandle<QuantLibAddin::CapFloorTermVolCurve, QuantLib::CapFloor
 template QuantLib::Handle<QuantLib::DefaultProbabilityTermStructure>
 QuantLibAddin::getHandle<QuantLibAddin::DefaultProbabilityTermStructure, QuantLib::DefaultProbabilityTermStructure>(const std::string&);
 
+template QuantLib::Handle<QuantLib::SimpleQuote>
+QuantLibAddin::getHandle<QuantLibAddin::SimpleQuote, QuantLib::SimpleQuote>(const std::string&);
+
 template <class QuantLibAddinHandle, class QuantLibHandle>
 QuantLib::Handle<QuantLibHandle> QuantLibAddin::getHandle(
     const std::string &in,

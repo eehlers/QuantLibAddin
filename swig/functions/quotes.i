@@ -27,7 +27,7 @@ namespace QuantLib {
 %}
 
 %insert(obj_cpp) %{
-//#include <qlo/objects/obj_instruments.hpp>
+#include <qlo/objects/obj_instruments.hpp>
 #include <qlo/objects/obj_indexes.hpp>
 #include <qlo/conversions/coercequote.hpp>
 #include <ql/quotes/simplequote.hpp>
@@ -57,25 +57,28 @@ namespace QuantLibAddin {
 
     class SimpleQuote : public Quote {
       public:
+
         // NB: The first parameter below must be called "Value" because there
         // is code which updates a property with that name in the value object.
         SimpleQuote(
-            QuantLib::Real Value/*=QuantLib::Null<QuantLib::Real>()*/,  //!< quote.
-            QuantLib::Real TickValue                                    //!< tick value used for sensitivity analysis.
+            QuantLib::Real Value/*=QuantLib::Null<QuantLib::Real>()*/,  //!< Quote.
+            QuantLib::Real TickValue                                    //!< Tick value used for sensitivity analysis.
         );
-        //! returns the tick value of the given SimpleQuote object.
+
+        //! Returns the tick value of the given SimpleQuote object.
         QuantLib::Real tickValue() const;
-        //! sets the tick value of the given SimpleQuote object.
+
+        //! Sets the tick value of the given SimpleQuote object.
         void setTickValue(
-            QuantLib::Real Value                                        //!< the new tick value.
+            QuantLib::Real Value                                        //!< The new tick value.
         );
 
-        //! sets a new value to the given SimpleQuote object and returns the difference with the previous value.
+        //! Sets a new value to the given SimpleQuote object and returns the difference with the previous value.
         QuantLib::Real setValue(
-            QuantLib::Real Value=QuantLib::Null<QuantLib::Real>()       //!< the new value.
+            QuantLib::Real Value=QuantLib::Null<QuantLib::Real>()       //!< The new value.
         );
 
-        //! resets the given SimpleQuote object to an uninitialized state.
+        //! Resets the given SimpleQuote object to an uninitialized state.
         void reset();
 %insert(rp_class) %{
       private:
@@ -85,51 +88,65 @@ namespace QuantLibAddin {
 
     class ForwardValueQuote : public Quote {
       public:
+
         ForwardValueQuote(
-            const boost::shared_ptr<QuantLib::IborIndex> &iborIndex,    //!< floating IborIndex object ID.
+            const boost::shared_ptr<QuantLib::IborIndex> &iborIndex,    //!< Floating IborIndex object ID.
             const QuantLib::Date& FixingDate                            //!< Fixing Date.
         );
     };
 
     class ForwardSwapQuote : public Quote {
       public:
+
         ForwardSwapQuote(
-            const boost::shared_ptr<QuantLib::SwapIndex>& SwapIndex,    //!< floating SwapIndex object ID.
-            const QuantLib::Handle<QuantLib::Quote>& Spread,            //!< floating leg spread.
-            const QuantLib::Period& ForwardStart                        //!< forward start period.
+            const boost::shared_ptr<QuantLib::SwapIndex>& SwapIndex,    //!< Floating SwapIndex object ID.
+            const QuantLib::Handle<QuantLib::Quote>& Spread,            //!< Floating leg spread.
+            const QuantLib::Period& ForwardStart                        //!< Forward start period.
         );
     };
 
     class ImpliedStdDevQuote : public Quote {
       public:
+
         ImpliedStdDevQuote(
-            QuantLib::Option::Type OptionType,                          //!< option type (i.e. Call or Put).
-            const QuantLib::Handle<QuantLib::Quote>& AtmForwardValue,   //!< underlying asset at-the-money forward value.
-            const QuantLib::Handle<QuantLib::Quote>& OptionPrice,       //!< option price.
-            QuantLib::Real Strike,                                      //!< option strike.
-            QuantLib::Real Guess=QuantLib::Null<QuantLib::Real>(),      //!< implied volatility guess.
-            QuantLib::Real Accuracy=1e-6                                //!< standard deviation accuracy.
+            QuantLib::Option::Type OptionType,                          //!< Option type (i.e. Call or Put).
+            const QuantLib::Handle<QuantLib::Quote>& AtmForwardValue,   //!< Underlying asset at-the-money forward value.
+            const QuantLib::Handle<QuantLib::Quote>& OptionPrice,       //!< Option price.
+            QuantLib::Real Strike,                                      //!< Option strike.
+            QuantLib::Real Guess=QuantLib::Null<QuantLib::Real>(),      //!< Implied volatility guess.
+            QuantLib::Real Accuracy=1e-6                                //!< Standard deviation accuracy.
         );
     };
 
     class EurodollarFuturesImpliedStdDevQuote : public Quote {
       public:
+
         EurodollarFuturesImpliedStdDevQuote(
-            const QuantLib::Handle<QuantLib::Quote>& AtmForwardValue,   //!< underlying asset at-the-money forward value.
-            const QuantLib::Handle<QuantLib::Quote>& CallPrice,         //!< call option price.
-            const QuantLib::Handle<QuantLib::Quote>& PutPrice,          //!< put option price.
-            QuantLib::Real Strike,                                      //!< option strike.
-            QuantLib::Real Guess=QuantLib::Null<QuantLib::Real>(),      //!< implied volatility guess.
-            QuantLib::Real Accuracy=1e-6                                //!< standard deviation accuracy.
+            const QuantLib::Handle<QuantLib::Quote>& AtmForwardValue,   //!< Underlying asset at-the-money forward value.
+            const QuantLib::Handle<QuantLib::Quote>& CallPrice,         //!< Call option price.
+            const QuantLib::Handle<QuantLib::Quote>& PutPrice,          //!< Put option price.
+            QuantLib::Real Strike,                                      //!< Option strike.
+            QuantLib::Real Guess=QuantLib::Null<QuantLib::Real>(),      //!< Implied volatility guess.
+            QuantLib::Real Accuracy=1e-6                                //!< Standard deviation accuracy.
+        );
+    };
+
+    class CompositeQuote : public Quote {
+      public:
+
+        CompositeQuote(
+            const QuantLib::Handle<QuantLib::Quote>& Element1,          //!< The first, i.e. x, value in the f(x,y) expression.
+            const QuantLib::Handle<QuantLib::Quote>& Element2,          //!< The second, i.e. y, value in the f(x,y) expression.
+            const std::string& Operator                                 //!< The operator to be applied, e.g. ""+"" or ""-"".
         );
     };
 
     class FuturesConvAdjustmentQuote : public Quote {
       public:
         FuturesConvAdjustmentQuote(
-            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,    //!< floating IborIndex object ID.
-            const std::string& ImmCode,                                 //!< futures IMM code (e.g. H9).
-            const QuantLib::Handle<QuantLib::Quote>& FuturesQuote,      //!< futures quote.
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,    //!< Floating IborIndex object ID.
+            const std::string& ImmCode,                                 //!< Futures IMM code (e.g. H9).
+            const QuantLib::Handle<QuantLib::Quote>& FuturesQuote,      //!< Futures quote.
             const QuantLib::Handle<QuantLib::Quote>& Volatility,        //!< HullWhite volatility.
             const QuantLib::Handle<QuantLib::Quote>& MeanReversion      //!< HullWhite mean reversion.
         );
@@ -151,15 +168,6 @@ namespace QuantLibAddin {
 %}
     };
 
-    class CompositeQuote : public Quote {
-      public:
-        CompositeQuote(
-            const QuantLib::Handle<QuantLib::Quote>& Element1,          //!< the first, i.e. x, value in the f(x,y) expression.
-            const QuantLib::Handle<QuantLib::Quote>& Element2,          //!< the second, i.e. y, value in the f(x,y) expression.
-            const std::string& Operator                                 //!< the operator to be applied, e.g. ""+"" or ""-"".
-        );
-    };
-
     class LastFixingQuote : public Quote {
       public:
         LastFixingQuote(
@@ -174,32 +182,32 @@ namespace QuantLibAddin {
 %}
     };
     
-    //! delta NPV bucket sensitivity analysis for a (single/vector/matrix) SimpleQuote.
-    //std::vector<std::vector<QuantLib::Real> >
-    //bucketAnalysis(
-    //    const std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > &SimpleQuote,                   //!< simple quotes.
-    //    const std::vector<boost::shared_ptr<QuantLib::Instrument> > &Instruments,                           //!< instruments.
-    //    const std::vector<QuantLib::Real>& Quantities,                                                      //!< quantities.
-    //    QuantLib::Real Shift=0.0001,                                                                        //!< shift.
-    //    QuantLib::SensitivityAnalysis SensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
-    //);
+    //! Delta NPV bucket sensitivity analysis for a (single/vector/matrix) SimpleQuote.
+    std::vector<std::vector<QuantLib::Real> >
+    bucketAnalysis(
+        const std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > > &SimpleQuote,                   //!< Simple quotes.
+        const std::vector<boost::shared_ptr<QuantLib::Instrument> > &Instruments,                           //!< Instruments.
+        const std::vector<QuantLib::Real>& Quantities,                                                      //!< Quantities.
+        QuantLib::Real Shift=0.0001,                                                                        //!< Shift.
+        QuantLib::SensitivityAnalysis SensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
+    );
     
     //! Parameters' bucket analysis delta for a single SimpleQuote.
-    //inline std::vector<QuantLib::Real>
-    //bucketAnalysisDelta(
-    //    const QuantLib::Handle<QuantLib::SimpleQuote>& SimpleQuote,                                         //!< simple quote.
-    //    const std::vector<QuantLib::Handle<QuantLib::Quote> >& Parameters,                                  //!< parameters vector.
-    //    QuantLib::Real Shift=0.0001,                                                                        //!< shift.
-    //    QuantLib::SensitivityAnalysis SensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
-    //);
+    inline std::vector<QuantLib::Real>
+    bucketAnalysisDelta(
+        const QuantLib::Handle<QuantLib::SimpleQuote>& SimpleQuote,                                         //!< Simple quote.
+        const std::vector<QuantLib::Handle<QuantLib::Quote> >& Parameters,                                  //!< Parameters vector.
+        QuantLib::Real Shift=0.0001,                                                                        //!< Shift.
+        QuantLib::SensitivityAnalysis SensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
+    );
     
     //! Parameters' bucket analysis delta for a SimpleQuote vector.
-    //std::vector<std::vector<QuantLib::Real> >
-    //bucketAnalysisDelta2(
-    //    const std::vector<QuantLib::Handle<QuantLib::Quote> >& SimpleQuote,                                 //!< simple quote.
-    //    const std::vector<QuantLib::Handle<QuantLib::Quote> >& Parameters,                                  //!< parameters vector.
-    //    QuantLib::Real Shift=0.0001,                                                                        //!< shift.
-    //    QuantLib::SensitivityAnalysis SensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
-    //);
+    std::vector<std::vector<QuantLib::Real> >
+    bucketAnalysisDelta2(
+        const std::vector<QuantLib::Handle<QuantLib::Quote> >& SimpleQuote,                                 //!< Simple quote.
+        const std::vector<QuantLib::Handle<QuantLib::Quote> >& Parameters,                                  //!< Parameters vector.
+        QuantLib::Real Shift=0.0001,                                                                        //!< Shift.
+        QuantLib::SensitivityAnalysis SensitivityAnalysis=QuantLib::SensitivityAnalysis(QuantLib::Centered) //!< SensitivityAnalysis type.
+    );
 }
 

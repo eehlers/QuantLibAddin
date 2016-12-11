@@ -24,10 +24,10 @@
 %include prices.i
 %include pricingengines.i
 %include processes.i
-%include quotes.i               // depends on instruments
+%include quotes.i
 %include ratehelpers.i
 %include schedule.i
-%include settings.i             // incomplete
+%include settings.i
 %include shortratemodels.i
 %include smilesection.i
 %include swap.i

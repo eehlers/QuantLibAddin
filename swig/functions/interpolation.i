@@ -1,19 +1,52 @@
 
-// We have to use the manual override flag for the object wrapper source code,
-// because class Interpolation implements multiple inheritance, which is not supported.
-// That seems to be the only unsupported feature in this file.
-%override;
-
 %group(Interpolation);
+
+%insert(obj_hpp) %{
+#include <qlo/objects/obj_termstructures.hpp>
+
+#include <ql/math/interpolations/mixedinterpolation.hpp>
+#include <ql/math/interpolations/cubicinterpolation.hpp>
+#include <ql/math/interpolations/sabrinterpolation.hpp>
+#include <ql/math/interpolations/abcdinterpolation.hpp>
+
+#include <ql/patterns/lazyobject.hpp>
+#include <ql/quote.hpp>
+#include <ql/types.hpp>
+
+namespace QuantLib {
+    class Extrapolator;
+    class EndCriteria;
+    class OptimizationMethod;
+
+    template<class T>
+    class Handle;
+
+    class Quote;
+}
+%}
 
 %insert(obj_cpp) %{
 #include <qlo/objects/obj_optimization.hpp>
+
+#include <qlo/enumerations/factories/interpolationsfactory.hpp>
+
+#include <ql/math/interpolations/linearinterpolation.hpp>
+#include <ql/math/interpolations/backwardflatinterpolation.hpp>
+#include <ql/math/interpolations/forwardflatinterpolation.hpp>
+
+// fix for gcc
+#ifdef __GNUC__
+namespace QuantLib {
+    const Size QuantLib::Cubic::requiredPoints;
+    const Size QuantLib::Linear::requiredPoints;
+};
+#endif
 %}
 
 namespace QuantLib {
 
     %noctor(Interpolation);
-    class Interpolation : public Extrapolator/*, public QuantLib::LazyObject*/ {
+    class Interpolation : public Extrapolator, public QuantLib::LazyObject {
       public:
 
         //! Returns interpolated values using the given Interpolation object.
@@ -31,7 +64,7 @@ namespace QuantLib {
         Real derivative(
             Real XValues,                   //!< X values.
             bool AllowExtrapolation=false   //!< Allow extrapolation flag.
-        );
+        ) const;
 
         //! Returns the second derivative function values using the given Interpolation object.
         %wrap(secondDerivative);
@@ -39,7 +72,7 @@ namespace QuantLib {
         Real secondDerivative(
             Real XValues,                   //!< X values.
             bool AllowExtrapolation=false   //!< Allow extrapolation flag.
-        );
+        ) const;
 
         //! Returns the primitive function values using the given Interpolation object.
         %wrap(primitive);
@@ -47,7 +80,7 @@ namespace QuantLib {
         Real primitive(
             Real XValues,                   //!< X values.
             bool AllowExtrapolation=false   //!< Allow extrapolation flag.
-        );
+        ) const;
 
         //! Returns TRUE if the input value is in the allowed interpolation range for the given Interpolation object.
         %loop(isInRange, XValues);
@@ -60,19 +93,19 @@ namespace QuantLib {
 
         //! Returns the maximum value of the x array for the given Interpolation object.
         Real xMax() const;
-
 %insert(rp_class) %{
       protected:
         Interpolation(
             const boost::shared_ptr<reposit::ValueObject>&,
-            const std::vector<Real>& x,
-            const std::vector<Handle<Quote> >& yh,
+            const std::vector<QuantLib::Real>& x,
+            const std::vector<QuantLib::Handle<QuantLib::Quote> >& yh,
             bool permanent);
-        Size n_;
-        std::vector<Real> x_;
-        std::vector<Handle<Quote> > yh_;
-        mutable std::vector<Real> y_;
-        boost::shared_ptr<Interpolation> qlInterpolation_;
+        QuantLib::Size n_;
+        std::vector<QuantLib::Real> x_;
+        std::vector<QuantLib::Handle<QuantLib::Quote> > yh_;
+        mutable std::vector<QuantLib::Real> y_;
+        boost::shared_ptr<QuantLib::Interpolation> qlInterpolation_;
+        void performCalculations() const;
 %}
     };
 
@@ -101,7 +134,7 @@ namespace QuantLib {
         );
 %insert(rp_class) %{
       protected:
-        boost::shared_ptr<MixedLinearCubicInterpolation> qlMixedLinearCubicInterpolation_;
+        boost::shared_ptr<QuantLib::MixedLinearCubicInterpolation> qlMixedLinearCubicInterpolation_;
 %}
     };
 
@@ -139,7 +172,7 @@ namespace QuantLib {
         const std::vector<bool>& monotonicityAdjustments() const;
 %insert(rp_class) %{
       protected:
-        boost::shared_ptr<CubicInterpolation> qlCubicInterpolation_;
+        boost::shared_ptr<QuantLib::CubicInterpolation> qlCubicInterpolation_;
 %}
     };
 
@@ -190,7 +223,7 @@ namespace QuantLib {
         EndCriteria::Type endCriteria() const;
 %insert(rp_class) %{
       protected:
-        boost::shared_ptr<AbcdInterpolation> qlAbcdInterpolation_;
+        boost::shared_ptr<QuantLib::AbcdInterpolation> qlAbcdInterpolation_;
 %}
     };
 
@@ -255,9 +288,10 @@ namespace QuantLib {
 
 %insert(rp_class) %{
       protected:
-        Handle<Quote> forwardh_;
-        mutable Real forward_;
-        boost::shared_ptr<SABRInterpolation> qlSABRInterpolation_;
+        QuantLib::Handle<QuantLib::Quote> forwardh_;
+        mutable QuantLib::Real forward_;
+        boost::shared_ptr<QuantLib::SABRInterpolation> qlSABRInterpolation_;
+        void performCalculations() const;
 %}
     };
 
@@ -308,8 +342,8 @@ namespace QuantLib {
         ) const;
 %insert(rp_class) %{
       protected:
-        std::vector<Real> x_, y_;
-        Matrix dataMatrix_;
+        std::vector<QuantLib::Real> x_, y_;
+        QuantLib::Matrix dataMatrix_;
 %}
     };
 }

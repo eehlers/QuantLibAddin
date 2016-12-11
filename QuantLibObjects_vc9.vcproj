@@ -1710,6 +1710,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\objects\obj_interpolation.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\objects\obj_interpolation_hw.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\qlo\objects\obj_latentmodels.hpp"
 				>
 			</File>
@@ -1917,10 +1925,6 @@
 				RelativePath=".\qlo\objects\objmanual_handles.hpp"
 				>
 			</File>
-			<File
-				RelativePath=".\qlo\objects\objmanual_interpolation.hpp"
-				>
-			</File>
 			<Filter
 				Name="cashflows"
 				>
@@ -2026,26 +2030,6 @@
 				</File>
 				<File
 					RelativePath=".\qlo\objects\instruments\creditdefaultswap.hpp"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="math"
-				>
-				<File
-					RelativePath=".\qlo\objects\math\interpolation.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\math\interpolation.hpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\math\interpolation2D.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\qlo\objects\math\interpolation2D.hpp"
 					>
 				</File>
 			</Filter>

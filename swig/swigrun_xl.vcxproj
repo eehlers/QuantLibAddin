@@ -38,6 +38,7 @@
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="functions\abcd.i" />
     <None Include="functions\all.i" />
     <None Include="functions\assetswap.i" />
     <None Include="functions\basketlossmodels.i" />

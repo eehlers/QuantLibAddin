@@ -597,6 +597,21 @@
     <ClInclude Include="qlo\auto_link.hpp" />
     <ClInclude Include="qlo\init.hpp" />
     <ClInclude Include="qlo\qladdindefines.hpp" />
+    <ClInclude Include="qlo\objects\obj_abcd.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_abcd.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_abcd.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_abcd.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_abcd.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="qlo\conversions\conversions.cpp">
@@ -1098,5 +1113,17 @@
       <Filter>objects\instruments</Filter>
     </ClCompile>
     <ClCompile Include="qlo\init.cpp" />
+    <ClCompile Include="qlo\objects\obj_abcd.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_abcd.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_abcd.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_abcd.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

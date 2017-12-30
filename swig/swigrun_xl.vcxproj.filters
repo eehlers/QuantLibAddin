@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="swig">
+      <UniqueIdentifier>{290a38f8-615c-4420-a429-42129e385db3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="swig\functions">
+      <UniqueIdentifier>{7044a170-4e0f-4d93-8996-f1670e82e4d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="swig\typemaps">
+      <UniqueIdentifier>{76672598-f6d4-46a3-a37d-ba83e9df52f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="swig\typedefs">
+      <UniqueIdentifier>{27c5263c-700b-4316-a6ce-527bf03d6609}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="quantlib.i">
+      <Filter>swig</Filter>
+    </None>
+    <None Include="functions\all.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\assetswap.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\basketlossmodels.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\bonds.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\calendars.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\capletvolstructure.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\couponvectors.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\credit.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\date.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\daycounters.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\defaultbasket.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\defaulttermstructures.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\exercise.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\handles.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\indexes.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\instruments.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\interpolation.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\latentmodels.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\leg.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\math.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\optimization.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\payoffs.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\piecewiseyieldcurve.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\prices.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\pricingengines.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\processes.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\quotes.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\ratehelpers.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\schedule.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\settings.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\shortratemodels.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\smilesection.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\swap.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\swaptionvolstructure.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\termstructures.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\timeseries.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\utilities.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\vanillaswap.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="functions\volatilities.i">
+      <Filter>swig\functions</Filter>
+    </None>
+    <None Include="typemaps\all.i">
+      <Filter>swig\typemaps</Filter>
+    </None>
+    <None Include="typemaps\apply.i">
+      <Filter>swig\typemaps</Filter>
+    </None>
+    <None Include="typemaps\ql_typemaps.i">
+      <Filter>swig\typemaps</Filter>
+    </None>
+    <None Include="typedefs\all.i">
+      <Filter>swig\typedefs</Filter>
+    </None>
+    <None Include="Makefile.vc" />
+  </ItemGroup>
+</Project>

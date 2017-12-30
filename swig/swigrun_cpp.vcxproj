@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="All|Win32">
+      <Configuration>All</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{88BE5568-6E55-41C5-A251-670FAFB44336}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="..\QuantLibAddin.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='All|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='All|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2010</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='All|Win32'">
+    <OutDir>build\vc\</OutDir>
+    <IntDir>build\vc\</IntDir>
+    <NMakeBuildCommandLine>NMAKE /f Makefile.vc SWIG_ARGS="-legacy -genc++" SWIG_BUILD_DIR="$(qlaCompilerTag)"</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>NMAKE /f Makefile.vc /a SWIG_ARGS="-legacy -genc++" SWIG_BUILD_DIR="$(qlaCompilerTag)"</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>NMAKE /f Makefile.vc clean</NMakeCleanCommandLine>
+    <NMakeOutput />
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="functions\all.i" />
+    <None Include="functions\calendars.i" />
+    <None Include="functions\couponvectors.i" />
+    <None Include="functions\date.i" />
+    <None Include="functions\daycounters.i" />
+    <None Include="functions\exercise.i" />
+    <None Include="functions\handles.i" />
+    <None Include="functions\indexes.i" />
+    <None Include="functions\instruments.i" />
+    <None Include="functions\interpolation.i" />
+    <None Include="functions\leg.i" />
+    <None Include="functions\math.i" />
+    <None Include="functions\models.i" />
+    <None Include="functions\payoffs.i" />
+    <None Include="functions\piecewiseyieldcurve.i" />
+    <None Include="functions\prices.i" />
+    <None Include="functions\pricingengines.i" />
+    <None Include="functions\processes.i" />
+    <None Include="functions\quotes.i" />
+    <None Include="functions\ratehelpers.i" />
+    <None Include="functions\schedule.i" />
+    <None Include="functions\settings.i" />
+    <None Include="functions\termstructures.i" />
+    <None Include="functions\timeseries.i" />
+    <None Include="functions\utilities.i" />
+    <None Include="functions\vanillaswaps.i" />
+    <None Include="functions\volatilities.i" />
+    <None Include="Makefile.vc" />
+    <None Include="quantlib.i" />
+    <None Include="typedefs\all.i" />
+    <None Include="typemaps\addincountify.i" />
+    <None Include="typemaps\addincpp.i" />
+    <None Include="typemaps\addincsharp.i" />
+    <None Include="typemaps\addinexcel.i" />
+    <None Include="typemaps\all.i" />
+    <None Include="typemaps\apply.i" />
+    <None Include="typemaps\doxygen.i" />
+    <None Include="typemaps\libraryobjects.i" />
+    <None Include="typemaps\serialization.i" />
+    <None Include="typemaps\shared.i" />
+    <None Include="typemaps\valueobjects.i" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\swig\swig.vcxproj">
+      <Project>{1bca73bb-0cad-4653-89e0-99c04c989cec}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

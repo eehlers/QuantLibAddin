@@ -1,0 +1,1102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="conversions">
+      <UniqueIdentifier>{131b3116-0320-4aa5-9d0f-e20efa571d86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enumerations">
+      <UniqueIdentifier>{d984d2c6-e9c7-4283-88eb-cfa27d156eaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enumerations\constructors">
+      <UniqueIdentifier>{6af0e7d5-b320-413e-a697-c6e21334b777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enumerations\factories">
+      <UniqueIdentifier>{7eada613-b687-4ada-bf50-d5f1d302e219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="enumerations\register">
+      <UniqueIdentifier>{7893dbd3-d2ab-41e0-825d-66a0a1ce1f40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization">
+      <UniqueIdentifier>{4d425f44-a717-4fdb-b819-8e91984fd9a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization\create">
+      <UniqueIdentifier>{44693f22-bcdf-496e-a273-2e2e8854e305}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialization\register">
+      <UniqueIdentifier>{85cd2efe-65b7-46fe-bf4c-6275e532e0fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="valueobjects">
+      <UniqueIdentifier>{f272212c-b92c-4a62-af55-04ce6a2f5703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="loop">
+      <UniqueIdentifier>{2243d2e3-cc13-4f7d-8b9a-80c8bb3eb854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects">
+      <UniqueIdentifier>{4353e128-7c86-457a-bf8a-c334ee4e1b8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects\cashflows">
+      <UniqueIdentifier>{9daf1774-c088-44f5-900b-6b2ae5f08036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects\indexes">
+      <UniqueIdentifier>{10df0aa4-cbae-420a-bc90-5f07c356cd36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects\indexes\ibor">
+      <UniqueIdentifier>{b6c5b764-1844-418c-8d80-66349945b03b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects\indexes\swap">
+      <UniqueIdentifier>{f3afa7c1-29ef-4b93-89fe-35133cf9ab1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects\credit">
+      <UniqueIdentifier>{c6ac51bf-fc1f-47f3-bd95-533f42b30dce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objects\instruments">
+      <UniqueIdentifier>{7522886c-066b-4cee-b085-ff9d36539528}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="qlo\conversions\all.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\coercehandle.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\coercelibrarydifferent.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\coercelibrarysame.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\coerceobject.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\coercequote.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\coercetermstructure.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\conversions.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\convert.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\convert_tmpl.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\conversions\get.hpp">
+      <Filter>conversions</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\constructors\enumeratedclasses.hpp">
+      <Filter>enumerations\constructors</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\constructors\enumeratedpairs.hpp">
+      <Filter>enumerations\constructors</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\factories\all.hpp">
+      <Filter>enumerations\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\factories\calendarfactory.hpp">
+      <Filter>enumerations\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\factories\conundrumpricerfactory.hpp">
+      <Filter>enumerations\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\factories\historicalforwardratesanalysisfactory.hpp">
+      <Filter>enumerations\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\factories\iborcouponpricersfactory.hpp">
+      <Filter>enumerations\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\factories\interpolationsfactory.hpp">
+      <Filter>enumerations\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\factories\payoffsfactory.hpp">
+      <Filter>enumerations\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\factories\pricingenginesfactory.hpp">
+      <Filter>enumerations\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\factories\termstructuresfactory.hpp">
+      <Filter>enumerations\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\register\register_all.hpp">
+      <Filter>enumerations\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\register\register_classes.hpp">
+      <Filter>enumerations\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\enumerations\register\register_types.hpp">
+      <Filter>enumerations\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\processor.hpp">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\serializationfactory.hpp">
+      <Filter>serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_all.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_assetswap.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_basketlossmodels.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_bonds.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_capletvolstructure.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_couponvectors.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_credit.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_defaultbasket.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_defaulttermstructures.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_exercise.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_handles.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_indexes.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_interpolation.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_latentmodels.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_leg.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_math.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_optimization.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_payoffs.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_piecewiseyieldcurve.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_pricingengines.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_processes.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_quotes.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_ratehelpers.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_schedule.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_shortratemodels.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_smilesection.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_swap.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_swaptionvolstructure.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_termstructures.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_timeseries.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_vanillaswap.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_volatilities.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_all.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_assetswap.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_basketlossmodels.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_bonds.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_capletvolstructure.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_couponvectors.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_credit.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_defaultbasket.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_defaulttermstructures.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_exercise.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_handles.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_indexes.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_interpolation.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_latentmodels.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_leg.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_math.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_optimization.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_payoffs.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_piecewiseyieldcurve.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_pricingengines.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_processes.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_quotes.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_ratehelpers.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_schedule.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_shortratemodels.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_smilesection.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_swap.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_swaptionvolstructure.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_termstructures.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_timeseries.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_vanillaswap.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_volatilities.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_assetswap.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_basketlossmodels.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_bonds.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_capletvolstructure.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_couponvectors.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_credit.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_defaultbasket.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_defaulttermstructures.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_exercise.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_handles.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_indexes.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_interpolation.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_latentmodels.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_leg.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_math.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_optimization.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_payoffs.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_piecewiseyieldcurve.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_pricingengines.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_processes.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_quotes.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_ratehelpers.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_schedule.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_shortratemodels.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_smilesection.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_swap.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_swaptionvolstructure.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_termstructures.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_timeseries.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_vanillaswap.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_volatilities.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_calendars.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_capletvolstructure.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_date.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_daycounters.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_defaulttermstructures.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_indexes.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_interpolation.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_swaptionvolstructure.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_termstructures.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\loop\loop_timeseries.hpp">
+      <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\handle.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\handleimpl.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_all.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_assetswap.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_basketlossmodels.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_bonds.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_calendars.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_capletvolstructure.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_couponvectors.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_credit.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_date.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_daycounters.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_defaultbasket.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_defaulttermstructures.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_exercise.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_indexes.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_instruments.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_interpolation.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_latentmodels.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_leg.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_math.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_optimization.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_payoffs.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_piecewiseyieldcurve.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_pricingengines.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_processes.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_quotes.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_ratehelpers.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_schedule.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_settings.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_shortratemodels.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_smilesection.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_swap.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_swaptionvolstructure.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_termstructures.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_timeseries.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_utilities.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_vanillaswap.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_volatilities.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\objmanual_handles.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\cashflows\flowanalysis.hpp">
+      <Filter>objects\cashflows</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\credit\basketlossmodels.hpp">
+      <Filter>objects\credit</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\credit\credit.hpp">
+      <Filter>objects\credit</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\credit\defaultbasket.hpp">
+      <Filter>objects\credit</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\credit\defaulttermstructures.hpp">
+      <Filter>objects\credit</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\credit\latentmodels.hpp">
+      <Filter>objects\credit</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\instruments\cdsoption.hpp">
+      <Filter>objects\instruments</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\instruments\creditdefaultswap.hpp">
+      <Filter>objects\instruments</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\auto_link.hpp" />
+    <ClInclude Include="qlo\init.hpp" />
+    <ClInclude Include="qlo\qladdindefines.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="qlo\conversions\conversions.cpp">
+      <Filter>conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\conversions\convert.cpp">
+      <Filter>conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\conversions\get.cpp">
+      <Filter>conversions</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\enumerations\constructors\enumeratedclasses.cpp">
+      <Filter>enumerations\constructors</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\enumerations\constructors\enumeratedpairs.cpp">
+      <Filter>enumerations\constructors</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\enumerations\factories\calendarfactory.cpp">
+      <Filter>enumerations\factories</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\enumerations\register\register_all.cpp">
+      <Filter>enumerations\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\enumerations\register\register_classes.cpp">
+      <Filter>enumerations\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\enumerations\register\register_pairs.cpp">
+      <Filter>enumerations\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\enumerations\register\register_types.cpp">
+      <Filter>enumerations\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\processor.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register_creators.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\serializationfactory.cpp">
+      <Filter>serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_assetswap.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_basketlossmodels.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_bonds.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_capletvolstructure.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_couponvectors.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_credit.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_defaultbasket.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_defaulttermstructures.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_exercise.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_handles.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_indexes.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_interpolation.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_latentmodels.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_leg.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_math.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_optimization.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_payoffs.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_piecewiseyieldcurve.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_pricingengines.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_processes.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_quotes.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_ratehelpers.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_schedule.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_shortratemodels.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_smilesection.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_swap.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_swaptionvolstructure.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_termstructures.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_timeseries.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_vanillaswap.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_volatilities.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_assetswap.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_basketlossmodels.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_bonds.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_capletvolstructure.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_couponvectors.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_credit.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_defaultbasket.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_defaulttermstructures.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_exercise.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_handles.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_indexes.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_interpolation.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_latentmodels.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_leg.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_math.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_optimization.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_payoffs.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_piecewiseyieldcurve.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_pricingengines.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_processes.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_quotes.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_ratehelpers.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_schedule.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_shortratemodels.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_smilesection.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_swap.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_swaptionvolstructure.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_termstructures.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_timeseries.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_vanillaswap.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_volatilities.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_assetswap.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_basketlossmodels.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_bonds.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_capletvolstructure.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_couponvectors.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_credit.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_defaultbasket.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_defaulttermstructures.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_exercise.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_handles.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_indexes.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_interpolation.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_latentmodels.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_leg.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_math.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_optimization.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_payoffs.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_piecewiseyieldcurve.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_pricingengines.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_processes.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_quotes.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_ratehelpers.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_schedule.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_shortratemodels.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_smilesection.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_swap.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_swaptionvolstructure.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_termstructures.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_timeseries.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_vanillaswap.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_volatilities.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_assetswap_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_basketlossmodels_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_bonds_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_capletvolstructure.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_capletvolstructure_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_couponvectors_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_credit.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_credit_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_date_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_defaultbasket_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_defaulttermstructures.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_defaulttermstructures_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_exercise.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_indexes.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_indexes_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_instruments_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_interpolation_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_latentmodels_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_leg_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_math.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_math_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_optimization.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_optimization_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_payoffs.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_payoffs_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_piecewiseyieldcurve_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_pricingengines.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_pricingengines_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_processes_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_quotes_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_ratehelpers_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_schedule.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_schedule_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_settings_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_shortratemodels.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_smilesection.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_smilesection_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_swap_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_swaptionvolstructure.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_swaptionvolstructure_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_termstructures.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_termstructures_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_timeseries_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_utilities_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_vanillaswap_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_volatilities.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_volatilities_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\cashflows\flowanalysis.cpp">
+      <Filter>objects\cashflows</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\indexes\swapindex.cpp">
+      <Filter>objects\indexes</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\indexes\ibor\euribor.cpp">
+      <Filter>objects\indexes\ibor</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\indexes\ibor\libor.cpp">
+      <Filter>objects\indexes\ibor</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\indexes\swap\euriborswap.cpp">
+      <Filter>objects\indexes\swap</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\indexes\swap\liborswap.cpp">
+      <Filter>objects\indexes\swap</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\credit\basketlossmodels.cpp">
+      <Filter>objects\credit</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\credit\credit.cpp">
+      <Filter>objects\credit</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\credit\defaultbasket.cpp">
+      <Filter>objects\credit</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\credit\defaulttermstructures.cpp">
+      <Filter>objects\credit</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\credit\latentmodels.cpp">
+      <Filter>objects\credit</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\instruments\cdsoption.cpp">
+      <Filter>objects\instruments</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\instruments\creditdefaultswap.cpp">
+      <Filter>objects\instruments</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\init.cpp" />
+  </ItemGroup>
+</Project>

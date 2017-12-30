@@ -159,6 +159,9 @@ QL_OBJECT_WRAPPER(SABRInterpolation)
 QL_OBJECT_WRAPPER(Interpolation2D)
 QL_OBJECT_WRAPPER(Issuer)
 
+QL_OBJECT_WRAPPER(AbcdFunction)
+QL_OBJECT_WRAPPER(AbcdCalibration)
+
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?
 %typemap(rp_tm_xll_cnvt) QuantLib::DiscountCurve & %{

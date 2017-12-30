@@ -1,4 +1,5 @@
 
+%include abcd.i
 %include assetswap.i
 %include basketlossmodels.i
 %include bonds.i

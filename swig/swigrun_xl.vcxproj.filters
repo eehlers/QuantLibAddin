@@ -13,6 +13,9 @@
     <Filter Include="swig\typedefs">
       <UniqueIdentifier>{27c5263c-700b-4316-a6ce-527bf03d6609}</UniqueIdentifier>
     </Filter>
+    <Filter Include="swig\functions\marketmodels">
+      <UniqueIdentifier>{a3cbe217-7c98-4fcc-bb82-448cbb140ecc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="quantlib.i">
@@ -149,7 +152,16 @@
     </None>
     <None Include="Makefile.vc" />
     <None Include="functions\abcd.i">
-      <Filter>swig\functions</Filter>
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
+    <None Include="functions\accountingengines.i">
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
+    <None Include="functions\browniangenerators.i">
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
+    <None Include="functions\volatility.i">
+      <Filter>swig\functions\marketmodels</Filter>
     </None>
   </ItemGroup>
 </Project>

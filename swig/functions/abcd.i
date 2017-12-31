@@ -27,7 +27,8 @@ namespace QuantLib {
                 QuantLib::Real A=-0.06, //!< The a coefficient in the abcd vol parametrization. Used as guess if the object is later calibrated.
                 QuantLib::Real B=0.17,  //!< The b coefficient in the abcd vol parametrization. Used as guess if the object is later calibrated.
                 QuantLib::Real C=0.54,  //!< The c coefficient in the abcd vol parametrization. Used as guess if the object is later calibrated.
-                QuantLib::Real D=0.17); //!< The d coefficient in the abcd vol parametrization. Used as guess if the object is later calibrated.
+                QuantLib::Real D=0.17   //!< The d coefficient in the abcd vol parametrization. Used as guess if the object is later calibrated.
+            );
 
             //! Returns the instantaneous volatility as function of residual time to maturity u=T-t: [a + b*u] * e^{-c*u} + d.
             %rename(instantaneousValue) operator();

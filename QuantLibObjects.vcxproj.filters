@@ -52,6 +52,9 @@
     <Filter Include="objects\instruments">
       <UniqueIdentifier>{7522886c-066b-4cee-b085-ff9d36539528}</UniqueIdentifier>
     </Filter>
+    <Filter Include="objects\marketmodels">
+      <UniqueIdentifier>{18f085d7-bf42-4a46-bb14-bf1614ffe180}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="qlo\conversions\all.hpp">
@@ -597,9 +600,6 @@
     <ClInclude Include="qlo\auto_link.hpp" />
     <ClInclude Include="qlo\init.hpp" />
     <ClInclude Include="qlo\qladdindefines.hpp" />
-    <ClInclude Include="qlo\objects\obj_abcd.hpp">
-      <Filter>objects</Filter>
-    </ClInclude>
     <ClInclude Include="qlo\valueobjects\vo_abcd.hpp">
       <Filter>valueobjects</Filter>
     </ClInclude>
@@ -611,6 +611,33 @@
     </ClInclude>
     <ClInclude Include="qlo\loop\loop_abcd.hpp">
       <Filter>loop</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_browniangenerators.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_browniangenerators.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_browniangenerators.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_abcd.hpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_browniangenerators.hpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\objects\obj_volatility.hpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_volatility.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_volatility.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_volatility.hpp">
+      <Filter>serialization\register</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1113,9 +1140,6 @@
       <Filter>objects\instruments</Filter>
     </ClCompile>
     <ClCompile Include="qlo\init.cpp" />
-    <ClCompile Include="qlo\objects\obj_abcd.cpp">
-      <Filter>objects</Filter>
-    </ClCompile>
     <ClCompile Include="qlo\valueobjects\vo_abcd.cpp">
       <Filter>valueobjects</Filter>
     </ClCompile>
@@ -1123,6 +1147,33 @@
       <Filter>serialization\create</Filter>
     </ClCompile>
     <ClCompile Include="qlo\serialization\register\serialization_abcd.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_browniangenerators.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_browniangenerators.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_browniangenerators.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_abcd.cpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_browniangenerators.cpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_volatility.cpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_volatility.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_volatility.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_volatility.cpp">
       <Filter>serialization\register</Filter>
     </ClCompile>
   </ItemGroup>

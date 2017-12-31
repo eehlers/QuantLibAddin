@@ -39,10 +39,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="functions\abcd.i" />
+    <None Include="functions\accountingengines.i" />
     <None Include="functions\all.i" />
     <None Include="functions\assetswap.i" />
     <None Include="functions\basketlossmodels.i" />
     <None Include="functions\bonds.i" />
+    <None Include="functions\browniangenerators.i" />
     <None Include="functions\calendars.i" />
     <None Include="functions\capletvolstructure.i" />
     <None Include="functions\couponvectors.i" />
@@ -78,6 +80,7 @@
     <None Include="functions\utilities.i" />
     <None Include="functions\vanillaswap.i" />
     <None Include="functions\volatilities.i" />
+    <None Include="functions\volatility.i" />
     <None Include="Makefile.vc" />
     <None Include="quantlib.i" />
     <None Include="typedefs\all.i" />

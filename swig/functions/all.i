@@ -1,8 +1,10 @@
 
 %include abcd.i
+//%include accountingengines.i
 %include assetswap.i
 %include basketlossmodels.i
 %include bonds.i
+%include browniangenerators.i
 %include calendars.i
 %include capletvolstructure.i
 %include couponvectors.i
@@ -18,6 +20,7 @@
 %include interpolation.i
 %include latentmodels.i
 %include leg.i                  // depends on capfloor
+//%include marketmodelevolvers.i
 %include math.i
 %include optimization.i
 %include payoffs.i
@@ -38,4 +41,4 @@
 %include utilities.i
 %include vanillaswap.i
 %include volatilities.i
-
+%include volatility.i

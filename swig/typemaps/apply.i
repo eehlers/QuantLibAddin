@@ -161,6 +161,13 @@ QL_OBJECT_WRAPPER(Issuer)
 
 QL_OBJECT_WRAPPER(AbcdFunction)
 QL_OBJECT_WRAPPER(AbcdCalibration)
+QL_OBJECT_WRAPPER(AccountingEngine)
+QL_OBJECT_WRAPPER(MTBrownianGeneratorFactory)
+QL_OBJECT_WRAPPER(LmVolatilityModel)
+QL_OBJECT_WRAPPER(LmLinearExponentialVolatilityModel)
+QL_OBJECT_WRAPPER(LmExtLinearExponentialVolModel)
+QL_OBJECT_WRAPPER(PiecewiseConstantVariance)
+QL_OBJECT_WRAPPER(PiecewiseConstantAbcdVariance)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

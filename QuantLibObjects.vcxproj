@@ -391,6 +391,7 @@
     <ClInclude Include="qlo\objects\obj_assetswap.hpp" />
     <ClInclude Include="qlo\objects\obj_basketlossmodels.hpp" />
     <ClInclude Include="qlo\objects\obj_bonds.hpp" />
+    <ClInclude Include="qlo\objects\obj_browniangenerators.hpp" />
     <ClInclude Include="qlo\objects\obj_calendars.hpp" />
     <ClInclude Include="qlo\objects\obj_capletvolstructure.hpp" />
     <ClInclude Include="qlo\objects\obj_couponvectors.hpp" />
@@ -424,12 +425,14 @@
     <ClInclude Include="qlo\objects\obj_utilities.hpp" />
     <ClInclude Include="qlo\objects\obj_vanillaswap.hpp" />
     <ClInclude Include="qlo\objects\obj_volatilities.hpp" />
+    <ClInclude Include="qlo\objects\obj_volatility.hpp" />
     <ClInclude Include="qlo\qladdindefines.hpp" />
     <ClInclude Include="qlo\serialization\create\create_abcd.hpp" />
     <ClInclude Include="qlo\serialization\create\create_all.hpp" />
     <ClInclude Include="qlo\serialization\create\create_assetswap.hpp" />
     <ClInclude Include="qlo\serialization\create\create_basketlossmodels.hpp" />
     <ClInclude Include="qlo\serialization\create\create_bonds.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_browniangenerators.hpp" />
     <ClInclude Include="qlo\serialization\create\create_capletvolstructure.hpp" />
     <ClInclude Include="qlo\serialization\create\create_couponvectors.hpp" />
     <ClInclude Include="qlo\serialization\create\create_credit.hpp" />
@@ -458,12 +461,14 @@
     <ClInclude Include="qlo\serialization\create\create_timeseries.hpp" />
     <ClInclude Include="qlo\serialization\create\create_vanillaswap.hpp" />
     <ClInclude Include="qlo\serialization\create\create_volatilities.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_volatility.hpp" />
     <ClInclude Include="qlo\serialization\processor.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_abcd.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_all.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_assetswap.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_basketlossmodels.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_bonds.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_browniangenerators.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_capletvolstructure.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_couponvectors.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_credit.hpp" />
@@ -492,11 +497,13 @@
     <ClInclude Include="qlo\serialization\register\serialization_timeseries.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_vanillaswap.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_volatilities.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_volatility.hpp" />
     <ClInclude Include="qlo\serialization\serializationfactory.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_abcd.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_assetswap.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_basketlossmodels.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_bonds.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_browniangenerators.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_capletvolstructure.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_couponvectors.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_credit.hpp" />
@@ -525,6 +532,7 @@
     <ClInclude Include="qlo\valueobjects\vo_timeseries.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_vanillaswap.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_volatilities.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_volatility.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="qlo\conversions\conversions.cpp" />
@@ -555,6 +563,7 @@
     <ClCompile Include="qlo\objects\obj_assetswap_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_basketlossmodels_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_bonds_hw.cpp" />
+    <ClCompile Include="qlo\objects\obj_browniangenerators.cpp" />
     <ClCompile Include="qlo\objects\obj_capletvolstructure.cpp" />
     <ClCompile Include="qlo\objects\obj_capletvolstructure_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_couponvectors_hw.cpp" />
@@ -599,10 +608,12 @@
     <ClCompile Include="qlo\objects\obj_vanillaswap_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_volatilities.cpp" />
     <ClCompile Include="qlo\objects\obj_volatilities_hw.cpp" />
+    <ClCompile Include="qlo\objects\obj_volatility.cpp" />
     <ClCompile Include="qlo\serialization\create\create_abcd.cpp" />
     <ClCompile Include="qlo\serialization\create\create_assetswap.cpp" />
     <ClCompile Include="qlo\serialization\create\create_basketlossmodels.cpp" />
     <ClCompile Include="qlo\serialization\create\create_bonds.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_browniangenerators.cpp" />
     <ClCompile Include="qlo\serialization\create\create_capletvolstructure.cpp" />
     <ClCompile Include="qlo\serialization\create\create_couponvectors.cpp" />
     <ClCompile Include="qlo\serialization\create\create_credit.cpp" />
@@ -631,11 +642,13 @@
     <ClCompile Include="qlo\serialization\create\create_timeseries.cpp" />
     <ClCompile Include="qlo\serialization\create\create_vanillaswap.cpp" />
     <ClCompile Include="qlo\serialization\create\create_volatilities.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_volatility.cpp" />
     <ClCompile Include="qlo\serialization\processor.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_abcd.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_assetswap.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_basketlossmodels.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_bonds.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_browniangenerators.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_capletvolstructure.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_couponvectors.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_credit.cpp" />
@@ -664,12 +677,14 @@
     <ClCompile Include="qlo\serialization\register\serialization_timeseries.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_vanillaswap.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_volatilities.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_volatility.cpp" />
     <ClCompile Include="qlo\serialization\register_creators.cpp" />
     <ClCompile Include="qlo\serialization\serializationfactory.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_abcd.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_assetswap.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_basketlossmodels.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_bonds.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_browniangenerators.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_capletvolstructure.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_couponvectors.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_credit.cpp" />
@@ -698,6 +713,7 @@
     <ClCompile Include="qlo\valueobjects\vo_timeseries.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_vanillaswap.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_volatilities.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_volatility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuantLib\QuantLib.vcxproj">

@@ -49,6 +49,7 @@
     <None Include="functions\capletvolstructure.i" />
     <None Include="functions\couponvectors.i" />
     <None Include="functions\credit.i" />
+    <None Include="functions\curvestate.i" />
     <None Include="functions\date.i" />
     <None Include="functions\daycounters.i" />
     <None Include="functions\defaultbasket.i" />

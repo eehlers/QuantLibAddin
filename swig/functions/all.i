@@ -9,6 +9,7 @@
 %include capletvolstructure.i
 %include couponvectors.i
 %include credit.i
+%include curvestate.i
 %include date.i
 %include daycounters.i
 %include defaultbasket.i

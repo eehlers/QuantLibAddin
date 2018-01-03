@@ -163,5 +163,8 @@
     <None Include="functions\volatility.i">
       <Filter>swig\functions\marketmodels</Filter>
     </None>
+    <None Include="functions\curvestate.i">
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
   </ItemGroup>
 </Project>

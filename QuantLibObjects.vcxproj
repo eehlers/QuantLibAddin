@@ -396,6 +396,7 @@
     <ClInclude Include="qlo\objects\obj_capletvolstructure.hpp" />
     <ClInclude Include="qlo\objects\obj_couponvectors.hpp" />
     <ClInclude Include="qlo\objects\obj_credit.hpp" />
+    <ClInclude Include="qlo\objects\obj_curvestate.hpp" />
     <ClInclude Include="qlo\objects\obj_date.hpp" />
     <ClInclude Include="qlo\objects\obj_daycounters.hpp" />
     <ClInclude Include="qlo\objects\obj_defaultbasket.hpp" />
@@ -436,6 +437,7 @@
     <ClInclude Include="qlo\serialization\create\create_capletvolstructure.hpp" />
     <ClInclude Include="qlo\serialization\create\create_couponvectors.hpp" />
     <ClInclude Include="qlo\serialization\create\create_credit.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_curvestate.hpp" />
     <ClInclude Include="qlo\serialization\create\create_defaultbasket.hpp" />
     <ClInclude Include="qlo\serialization\create\create_defaulttermstructures.hpp" />
     <ClInclude Include="qlo\serialization\create\create_exercise.hpp" />
@@ -472,6 +474,7 @@
     <ClInclude Include="qlo\serialization\register\serialization_capletvolstructure.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_couponvectors.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_credit.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_curvestate.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_defaultbasket.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_defaulttermstructures.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_exercise.hpp" />
@@ -507,6 +510,7 @@
     <ClInclude Include="qlo\valueobjects\vo_capletvolstructure.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_couponvectors.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_credit.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_curvestate.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_defaultbasket.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_defaulttermstructures.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_exercise.hpp" />
@@ -569,6 +573,8 @@
     <ClCompile Include="qlo\objects\obj_couponvectors_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_credit.cpp" />
     <ClCompile Include="qlo\objects\obj_credit_hw.cpp" />
+    <ClCompile Include="qlo\objects\obj_curvestate.cpp" />
+    <ClCompile Include="qlo\objects\obj_curvestate_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_date_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_defaultbasket_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_defaulttermstructures.cpp" />
@@ -617,6 +623,7 @@
     <ClCompile Include="qlo\serialization\create\create_capletvolstructure.cpp" />
     <ClCompile Include="qlo\serialization\create\create_couponvectors.cpp" />
     <ClCompile Include="qlo\serialization\create\create_credit.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_curvestate.cpp" />
     <ClCompile Include="qlo\serialization\create\create_defaultbasket.cpp" />
     <ClCompile Include="qlo\serialization\create\create_defaulttermstructures.cpp" />
     <ClCompile Include="qlo\serialization\create\create_exercise.cpp" />
@@ -652,6 +659,7 @@
     <ClCompile Include="qlo\serialization\register\serialization_capletvolstructure.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_couponvectors.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_credit.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_curvestate.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_defaultbasket.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_defaulttermstructures.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_exercise.cpp" />
@@ -688,6 +696,7 @@
     <ClCompile Include="qlo\valueobjects\vo_capletvolstructure.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_couponvectors.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_credit.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_curvestate.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_defaultbasket.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_defaulttermstructures.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_exercise.cpp" />

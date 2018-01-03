@@ -168,6 +168,10 @@ QL_OBJECT_WRAPPER(LmLinearExponentialVolatilityModel)
 QL_OBJECT_WRAPPER(LmExtLinearExponentialVolModel)
 QL_OBJECT_WRAPPER(PiecewiseConstantVariance)
 QL_OBJECT_WRAPPER(PiecewiseConstantAbcdVariance)
+QL_OBJECT_WRAPPER(CMSwapCurveState)
+QL_OBJECT_WRAPPER(CoterminalSwapCurveState)
+QL_OBJECT_WRAPPER(LMMCurveState)
+QL_OBJECT_WRAPPER(CurveState)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

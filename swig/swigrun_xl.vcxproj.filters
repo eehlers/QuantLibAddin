@@ -166,5 +166,8 @@
     <None Include="functions\curvestate.i">
       <Filter>swig\functions\marketmodels</Filter>
     </None>
+    <None Include="functions\alphaform.i">
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
   </ItemGroup>
 </Project>

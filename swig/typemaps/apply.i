@@ -172,6 +172,9 @@ QL_OBJECT_WRAPPER(CMSwapCurveState)
 QL_OBJECT_WRAPPER(CoterminalSwapCurveState)
 QL_OBJECT_WRAPPER(LMMCurveState)
 QL_OBJECT_WRAPPER(CurveState)
+QL_OBJECT_WRAPPER(AlphaForm)
+QL_OBJECT_WRAPPER(AlphaFormInverseLinear)
+QL_OBJECT_WRAPPER(AlphaFormLinearHyperbolic)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

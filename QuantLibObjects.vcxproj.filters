@@ -651,6 +651,18 @@
     <ClInclude Include="qlo\serialization\register\serialization_curvestate.hpp">
       <Filter>serialization\register</Filter>
     </ClInclude>
+    <ClInclude Include="qlo\objects\obj_alphaform.hpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_alphaform.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_alphaform.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_alphaform.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="qlo\conversions\conversions.cpp">
@@ -1202,6 +1214,18 @@
     </ClCompile>
     <ClCompile Include="qlo\serialization\register\serialization_curvestate.cpp">
       <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_alphaform.cpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_alphaform.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_alphaform.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_alphaform.cpp">
+      <Filter>valueobjects</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -125,6 +125,7 @@ namespace QuantLib {
             const std::vector<Real>& XArray,                                            //!< X array.
             const std::vector<Handle<Quote> >& YArray,                                  //!< Y array.
             Size SwitchIndex,                                                           //!< Zero based knot index at which interpolation switches from linear to cubic.
+			MixedInterpolation::Behavior behavior=ShareRanges,							//!< ShareRanges to join two different interpolations over all the pillars, SplitRanges otherwise.
             CubicInterpolation::DerivativeApprox DerApprox=Kruger,                      //!< Derivative approximation.
             bool Monotonic=false,                                                       //!< Monotonicity constraint flag.
             CubicInterpolation::BoundaryCondition LeftConditionType=SecondDerivative,   //!< Left boundary condition (NotAKnot, FirstDerivative, SecondDerivative, Periodic, Lagrange).

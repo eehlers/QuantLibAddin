@@ -364,8 +364,7 @@ namespace QuantLib {
 
         BlackSwaptionEngine(
             const QuantLib::Handle<QuantLib::YieldTermStructure> &YieldCurve,       //!< Discounting yield term structure object ID.
-            const QuantLib::Handle<QuantLib::SwaptionVolatilityStructure> &VolTS,   //!< SwaptionVolatilityStructure object ID.
-            const QuantLib::Real Displacement                                       //!< Displacement in a displaced diffusion model.
+            const QuantLib::Handle<QuantLib::SwaptionVolatilityStructure> &VolTS    //!< SwaptionVolatilityStructure object ID.
         );
 
         %rename(BlackSwaptionEngine2) BlackSwaptionEngine;

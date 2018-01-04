@@ -118,6 +118,7 @@ QuantLibAddin::MixedLinearCubicInterpolation::MixedLinearCubicInterpolation(
             std::vector< QuantLib::Real > const &XArray,
             std::vector< QuantLib::Handle< QuantLib::Quote > > const &YArray,
             QuantLib::Size SwitchIndex,
+			QuantLib::MixedInterpolation::Behavior behavior,
             QuantLib::CubicInterpolation::DerivativeApprox DerApprox,
             bool Monotonic,
             QuantLib::CubicInterpolation::BoundaryCondition LeftConditionType,
@@ -137,7 +138,7 @@ QuantLibAddin::MixedLinearCubicInterpolation::MixedLinearCubicInterpolation(
     libraryObject_ = boost::shared_ptr<QuantLib::Extrapolator>(new
         QuantLib::MixedLinearCubicInterpolation(
                                             x_.begin(), x_.end(),
-                                            y_.begin(), SwitchIndex,
+                                            y_.begin(), SwitchIndex, behavior,
                                             DerApprox, Monotonic,
                                             LeftConditionType, LeftConditionValue,
                                             RightConditionType, RightConditionValue));

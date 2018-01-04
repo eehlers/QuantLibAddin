@@ -7,11 +7,6 @@
 namespace QuantLib {
     class CurveState;
 }
-
-// FIXME workaround for limitation in %noctor()
-namespace QuantLibAddin {
-	RP_LIB_CLASS(CurveState, QuantLib::CurveState);
-}
 %}
 
 %insert(obj_cpp) %{
@@ -22,7 +17,6 @@ namespace QuantLibAddin {
 
 namespace QuantLib {
 
-    %noctor(CurveState);
     class CurveState {
         public:
             //! Return the rate times of the CurveState object.

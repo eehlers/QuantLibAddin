@@ -175,6 +175,10 @@ QL_OBJECT_WRAPPER(CurveState)
 QL_OBJECT_WRAPPER(AlphaForm)
 QL_OBJECT_WRAPPER(AlphaFormInverseLinear)
 QL_OBJECT_WRAPPER(AlphaFormLinearHyperbolic)
+QL_OBJECT_WRAPPER(LMMDriftCalculator)
+QL_OBJECT_WRAPPER(LMMNormalDriftCalculator)
+QL_OBJECT_WRAPPER(CMSMMDriftCalculator)
+QL_OBJECT_WRAPPER(SMMDriftCalculator)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

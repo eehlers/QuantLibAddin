@@ -55,6 +55,7 @@
     <None Include="functions\daycounters.i" />
     <None Include="functions\defaultbasket.i" />
     <None Include="functions\defaulttermstructures.i" />
+    <None Include="functions\driftcalculators.i" />
     <None Include="functions\exercise.i" />
     <None Include="functions\handles.i" />
     <None Include="functions\indexes.i" />

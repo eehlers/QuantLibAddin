@@ -663,6 +663,18 @@
     <ClInclude Include="qlo\valueobjects\vo_alphaform.hpp">
       <Filter>valueobjects</Filter>
     </ClInclude>
+    <ClInclude Include="qlo\objects\obj_driftcalculators.hpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_driftcalculators.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_driftcalculators.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_driftcalculators.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="qlo\conversions\conversions.cpp">
@@ -1225,6 +1237,18 @@
       <Filter>serialization\register</Filter>
     </ClCompile>
     <ClCompile Include="qlo\valueobjects\vo_alphaform.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_driftcalculators_hw.cpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_driftcalculators.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_driftcalculators.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_driftcalculators.cpp">
       <Filter>valueobjects</Filter>
     </ClCompile>
   </ItemGroup>

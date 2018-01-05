@@ -15,6 +15,7 @@
 %include daycounters.i
 %include defaultbasket.i
 %include defaulttermstructures.i
+%include driftcalculators.i
 %include exercise.i
 %include handles.i
 %include indexes.i

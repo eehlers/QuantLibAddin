@@ -418,6 +418,7 @@
     <ClInclude Include="qlo\objects\obj_quotes.hpp" />
     <ClInclude Include="qlo\objects\obj_ratehelpers.hpp" />
     <ClInclude Include="qlo\objects\obj_schedule.hpp" />
+    <ClInclude Include="qlo\objects\obj_sequencestatistics.hpp" />
     <ClInclude Include="qlo\objects\obj_settings.hpp" />
     <ClInclude Include="qlo\objects\obj_shortratemodels.hpp" />
     <ClInclude Include="qlo\objects\obj_smilesection.hpp" />
@@ -459,6 +460,7 @@
     <ClInclude Include="qlo\serialization\create\create_quotes.hpp" />
     <ClInclude Include="qlo\serialization\create\create_ratehelpers.hpp" />
     <ClInclude Include="qlo\serialization\create\create_schedule.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_sequencestatistics.hpp" />
     <ClInclude Include="qlo\serialization\create\create_shortratemodels.hpp" />
     <ClInclude Include="qlo\serialization\create\create_smilesection.hpp" />
     <ClInclude Include="qlo\serialization\create\create_swap.hpp" />
@@ -498,6 +500,7 @@
     <ClInclude Include="qlo\serialization\register\serialization_quotes.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_ratehelpers.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_schedule.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_sequencestatistics.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_shortratemodels.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_smilesection.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_swap.hpp" />
@@ -536,6 +539,7 @@
     <ClInclude Include="qlo\valueobjects\vo_quotes.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_ratehelpers.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_schedule.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_sequencestatistics.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_shortratemodels.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_smilesection.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_swap.hpp" />
@@ -610,6 +614,8 @@
     <ClCompile Include="qlo\objects\obj_ratehelpers_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_schedule.cpp" />
     <ClCompile Include="qlo\objects\obj_schedule_hw.cpp" />
+    <ClCompile Include="qlo\objects\obj_sequencestatistics.cpp" />
+    <ClCompile Include="qlo\objects\obj_sequencestatistics_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_settings_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_shortratemodels.cpp" />
     <ClCompile Include="qlo\objects\obj_smilesection.cpp" />
@@ -653,6 +659,7 @@
     <ClCompile Include="qlo\serialization\create\create_quotes.cpp" />
     <ClCompile Include="qlo\serialization\create\create_ratehelpers.cpp" />
     <ClCompile Include="qlo\serialization\create\create_schedule.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_sequencestatistics.cpp" />
     <ClCompile Include="qlo\serialization\create\create_shortratemodels.cpp" />
     <ClCompile Include="qlo\serialization\create\create_smilesection.cpp" />
     <ClCompile Include="qlo\serialization\create\create_swap.cpp" />
@@ -691,6 +698,7 @@
     <ClCompile Include="qlo\serialization\register\serialization_quotes.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_ratehelpers.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_schedule.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_sequencestatistics.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_shortratemodels.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_smilesection.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_swap.cpp" />
@@ -730,6 +738,7 @@
     <ClCompile Include="qlo\valueobjects\vo_quotes.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_ratehelpers.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_schedule.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_sequencestatistics.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_shortratemodels.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_smilesection.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_swap.cpp" />

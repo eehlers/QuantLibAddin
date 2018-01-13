@@ -675,6 +675,18 @@
     <ClInclude Include="qlo\valueobjects\vo_driftcalculators.hpp">
       <Filter>valueobjects</Filter>
     </ClInclude>
+    <ClInclude Include="qlo\objects\obj_sequencestatistics.hpp">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_sequencestatistics.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_sequencestatistics.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_sequencestatistics.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="qlo\conversions\conversions.cpp">
@@ -1249,6 +1261,21 @@
       <Filter>serialization\create</Filter>
     </ClCompile>
     <ClCompile Include="qlo\valueobjects\vo_driftcalculators.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_sequencestatistics.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_sequencestatistics_hw.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_sequencestatistics.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_sequencestatistics.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_sequencestatistics.cpp">
       <Filter>valueobjects</Filter>
     </ClCompile>
   </ItemGroup>

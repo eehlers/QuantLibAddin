@@ -73,6 +73,7 @@
     <None Include="functions\quotes.i" />
     <None Include="functions\ratehelpers.i" />
     <None Include="functions\schedule.i" />
+    <None Include="functions\sequencestatistics.i" />
     <None Include="functions\settings.i" />
     <None Include="functions\shortratemodels.i" />
     <None Include="functions\smilesection.i" />

@@ -179,6 +179,8 @@ QL_OBJECT_WRAPPER(LMMDriftCalculator)
 QL_OBJECT_WRAPPER(LMMNormalDriftCalculator)
 QL_OBJECT_WRAPPER(CMSMMDriftCalculator)
 QL_OBJECT_WRAPPER(SMMDriftCalculator)
+QL_OBJECT_WRAPPER(SequenceStatistics)
+QL_OBJECT_WRAPPER(SequenceStatisticsInc)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

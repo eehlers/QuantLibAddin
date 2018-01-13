@@ -35,6 +35,7 @@
 %include ratehelpers.i
 %include schedule.i
 %include settings.i
+%include sequencestatistics.i
 %include shortratemodels.i
 %include smilesection.i
 %include swap.i

@@ -8,6 +8,7 @@
 %include browniangenerators.i
 %include calendars.i
 %include capletvolstructure.i
+%include correlation.i
 %include couponvectors.i
 %include credit.i
 %include curvestate.i

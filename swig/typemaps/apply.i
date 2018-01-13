@@ -181,6 +181,13 @@ QL_OBJECT_WRAPPER(CMSMMDriftCalculator)
 QL_OBJECT_WRAPPER(SMMDriftCalculator)
 QL_OBJECT_WRAPPER(SequenceStatistics)
 QL_OBJECT_WRAPPER(SequenceStatisticsInc)
+QL_OBJECT_WRAPPER(LmLinearExponentialCorrelationModel)
+QL_OBJECT_WRAPPER(HistoricalForwardRatesAnalysis)
+QL_OBJECT_WRAPPER(HistoricalRatesAnalysis)
+QL_OBJECT_WRAPPER(TimeHomogeneousForwardCorrelation)
+QL_OBJECT_WRAPPER(ExponentialForwardCorrelation)
+QL_OBJECT_WRAPPER(CotSwapFromFwdCorrelation)
+QL_OBJECT_WRAPPER(PiecewiseConstantCorrelation)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

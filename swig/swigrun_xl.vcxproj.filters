@@ -175,5 +175,8 @@
     <None Include="functions\sequencestatistics.i">
       <Filter>swig\functions</Filter>
     </None>
+    <None Include="functions\correlation.i">
+      <Filter>swig\functions</Filter>
+    </None>
   </ItemGroup>
 </Project>

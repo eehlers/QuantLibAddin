@@ -48,6 +48,7 @@
     <None Include="functions\browniangenerators.i" />
     <None Include="functions\calendars.i" />
     <None Include="functions\capletvolstructure.i" />
+    <None Include="functions\correlation.i" />
     <None Include="functions\couponvectors.i" />
     <None Include="functions\credit.i" />
     <None Include="functions\curvestate.i" />

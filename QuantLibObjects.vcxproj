@@ -395,6 +395,7 @@
     <ClInclude Include="qlo\objects\obj_browniangenerators.hpp" />
     <ClInclude Include="qlo\objects\obj_calendars.hpp" />
     <ClInclude Include="qlo\objects\obj_capletvolstructure.hpp" />
+    <ClInclude Include="qlo\objects\obj_correlation.hpp" />
     <ClInclude Include="qlo\objects\obj_couponvectors.hpp" />
     <ClInclude Include="qlo\objects\obj_credit.hpp" />
     <ClInclude Include="qlo\objects\obj_curvestate.hpp" />
@@ -439,6 +440,7 @@
     <ClInclude Include="qlo\serialization\create\create_bonds.hpp" />
     <ClInclude Include="qlo\serialization\create\create_browniangenerators.hpp" />
     <ClInclude Include="qlo\serialization\create\create_capletvolstructure.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_correlation.hpp" />
     <ClInclude Include="qlo\serialization\create\create_couponvectors.hpp" />
     <ClInclude Include="qlo\serialization\create\create_credit.hpp" />
     <ClInclude Include="qlo\serialization\create\create_curvestate.hpp" />
@@ -479,6 +481,7 @@
     <ClInclude Include="qlo\serialization\register\serialization_bonds.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_browniangenerators.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_capletvolstructure.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_correlation.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_couponvectors.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_credit.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_curvestate.hpp" />
@@ -518,6 +521,7 @@
     <ClInclude Include="qlo\valueobjects\vo_bonds.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_browniangenerators.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_capletvolstructure.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_correlation.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_couponvectors.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_credit.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_curvestate.hpp" />
@@ -583,6 +587,8 @@
     <ClCompile Include="qlo\objects\obj_browniangenerators.cpp" />
     <ClCompile Include="qlo\objects\obj_capletvolstructure.cpp" />
     <ClCompile Include="qlo\objects\obj_capletvolstructure_hw.cpp" />
+    <ClCompile Include="qlo\objects\obj_correlation.cpp" />
+    <ClCompile Include="qlo\objects\obj_correlation_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_couponvectors_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_credit.cpp" />
     <ClCompile Include="qlo\objects\obj_credit_hw.cpp" />
@@ -638,6 +644,7 @@
     <ClCompile Include="qlo\serialization\create\create_bonds.cpp" />
     <ClCompile Include="qlo\serialization\create\create_browniangenerators.cpp" />
     <ClCompile Include="qlo\serialization\create\create_capletvolstructure.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_correlation.cpp" />
     <ClCompile Include="qlo\serialization\create\create_couponvectors.cpp" />
     <ClCompile Include="qlo\serialization\create\create_credit.cpp" />
     <ClCompile Include="qlo\serialization\create\create_curvestate.cpp" />
@@ -677,6 +684,7 @@
     <ClCompile Include="qlo\serialization\register\serialization_bonds.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_browniangenerators.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_capletvolstructure.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_correlation.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_couponvectors.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_credit.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_curvestate.cpp" />
@@ -717,6 +725,7 @@
     <ClCompile Include="qlo\valueobjects\vo_bonds.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_browniangenerators.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_capletvolstructure.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_correlation.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_couponvectors.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_credit.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_curvestate.cpp" />

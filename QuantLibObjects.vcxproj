@@ -416,6 +416,7 @@
     <ClInclude Include="qlo\objects\obj_piecewiseyieldcurve.hpp" />
     <ClInclude Include="qlo\objects\obj_pricingengines.hpp" />
     <ClInclude Include="qlo\objects\obj_processes.hpp" />
+    <ClInclude Include="qlo\objects\obj_products.hpp" />
     <ClInclude Include="qlo\objects\obj_quotes.hpp" />
     <ClInclude Include="qlo\objects\obj_ratehelpers.hpp" />
     <ClInclude Include="qlo\objects\obj_schedule.hpp" />
@@ -459,6 +460,7 @@
     <ClInclude Include="qlo\serialization\create\create_piecewiseyieldcurve.hpp" />
     <ClInclude Include="qlo\serialization\create\create_pricingengines.hpp" />
     <ClInclude Include="qlo\serialization\create\create_processes.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_products.hpp" />
     <ClInclude Include="qlo\serialization\create\create_quotes.hpp" />
     <ClInclude Include="qlo\serialization\create\create_ratehelpers.hpp" />
     <ClInclude Include="qlo\serialization\create\create_schedule.hpp" />
@@ -500,6 +502,7 @@
     <ClInclude Include="qlo\serialization\register\serialization_piecewiseyieldcurve.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_pricingengines.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_processes.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_products.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_quotes.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_ratehelpers.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_schedule.hpp" />
@@ -540,6 +543,7 @@
     <ClInclude Include="qlo\valueobjects\vo_piecewiseyieldcurve.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_pricingengines.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_processes.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_products.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_quotes.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_ratehelpers.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_schedule.hpp" />
@@ -616,6 +620,7 @@
     <ClCompile Include="qlo\objects\obj_pricingengines.cpp" />
     <ClCompile Include="qlo\objects\obj_pricingengines_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_processes_hw.cpp" />
+    <ClCompile Include="qlo\objects\obj_products.cpp" />
     <ClCompile Include="qlo\objects\obj_quotes_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_ratehelpers_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_schedule.cpp" />
@@ -663,6 +668,7 @@
     <ClCompile Include="qlo\serialization\create\create_piecewiseyieldcurve.cpp" />
     <ClCompile Include="qlo\serialization\create\create_pricingengines.cpp" />
     <ClCompile Include="qlo\serialization\create\create_processes.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_products.cpp" />
     <ClCompile Include="qlo\serialization\create\create_quotes.cpp" />
     <ClCompile Include="qlo\serialization\create\create_ratehelpers.cpp" />
     <ClCompile Include="qlo\serialization\create\create_schedule.cpp" />
@@ -703,6 +709,7 @@
     <ClCompile Include="qlo\serialization\register\serialization_piecewiseyieldcurve.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_pricingengines.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_processes.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_products.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_quotes.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_ratehelpers.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_schedule.cpp" />
@@ -744,6 +751,7 @@
     <ClCompile Include="qlo\valueobjects\vo_piecewiseyieldcurve.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_pricingengines.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_processes.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_products.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_quotes.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_ratehelpers.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_schedule.cpp" />

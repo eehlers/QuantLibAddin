@@ -300,6 +300,14 @@
 QL_VEC_RET(QuantLib::Date, long)
 QL_VEC_RET(QuantLib::Period, std::string)
 
+// FIXME QuantLib::Size=std::size_t, this typemap could be moved into the reposit swig module
+%typemap(rp_tm_xll_rtst) std::vector<QuantLib::Size> %{
+        std::vector<long> returnValVec = QuantLibAddin::convertVector<QuantLib::Size, long>(returnValue);
+        static OPER xRet;
+        reposit::vectorToOper(returnValVec, xRet);
+        return &xRet;
+%}
+
 // rp_tm_xll_cdrt - code to register the return type with Excel
 
 %typemap(rp_tm_xll_cdrt) QuantLib::Date "N";

@@ -12,11 +12,13 @@
 %include couponvectors.i
 %include credit.i
 %include curvestate.i
+//%include ctsmmcapletcalibration.i
 %include date.i
 %include daycounters.i
 %include defaultbasket.i
 %include defaulttermstructures.i
 %include driftcalculators.i
+//%include evolutiondescription.i
 %include exercise.i
 %include handles.i
 %include indexes.i
@@ -32,6 +34,7 @@
 %include prices.i
 %include pricingengines.i
 %include processes.i
+%include products.i
 %include quotes.i
 %include ratehelpers.i
 %include schedule.i

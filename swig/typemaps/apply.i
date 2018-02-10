@@ -189,6 +189,20 @@ QL_OBJECT_WRAPPER(ExponentialForwardCorrelation)
 QL_OBJECT_WRAPPER(CotSwapFromFwdCorrelation)
 QL_OBJECT_WRAPPER(PiecewiseConstantCorrelation)
 
+QL_OBJECT_WRAPPER(EvolutionDescription)
+QL_OBJECT_WRAPPER(CTSMMCapletOriginalCalibration)
+QL_OBJECT_WRAPPER(CTSMMCapletAlphaFormCalibration)
+QL_OBJECT_WRAPPER(CTSMMCapletMaxHomogeneityCalibration)
+
+//QL_OBJECT_WRAPPER(xxx)
+QL_OBJECT_WRAPPER(MarketModelMultiProduct)
+QL_OBJECT_WRAPPER(MarketModelComposite)
+QL_OBJECT_WRAPPER(MultiProductComposite)
+QL_OBJECT_WRAPPER(OneStepForwards)
+QL_OBJECT_WRAPPER(MultiStepRatchet)
+QL_OBJECT_WRAPPER(OneStepOptionlets)
+
+
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?
 %typemap(rp_tm_xll_cnvt) QuantLib::DiscountCurve & %{

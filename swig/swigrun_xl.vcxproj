@@ -51,12 +51,14 @@
     <None Include="functions\correlation.i" />
     <None Include="functions\couponvectors.i" />
     <None Include="functions\credit.i" />
+    <None Include="functions\ctsmmcapletcalibration.i" />
     <None Include="functions\curvestate.i" />
     <None Include="functions\date.i" />
     <None Include="functions\daycounters.i" />
     <None Include="functions\defaultbasket.i" />
     <None Include="functions\defaulttermstructures.i" />
     <None Include="functions\driftcalculators.i" />
+    <None Include="functions\evolutiondescription.i" />
     <None Include="functions\exercise.i" />
     <None Include="functions\handles.i" />
     <None Include="functions\indexes.i" />
@@ -71,6 +73,7 @@
     <None Include="functions\prices.i" />
     <None Include="functions\pricingengines.i" />
     <None Include="functions\processes.i" />
+    <None Include="functions\products.i" />
     <None Include="functions\quotes.i" />
     <None Include="functions\ratehelpers.i" />
     <None Include="functions\schedule.i" />

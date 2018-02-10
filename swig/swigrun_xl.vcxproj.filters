@@ -178,5 +178,14 @@
     <None Include="functions\correlation.i">
       <Filter>swig\functions</Filter>
     </None>
+    <None Include="functions\ctsmmcapletcalibration.i">
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
+    <None Include="functions\evolutiondescription.i">
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
+    <None Include="functions\products.i">
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
   </ItemGroup>
 </Project>

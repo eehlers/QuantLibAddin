@@ -723,6 +723,18 @@
     <ClInclude Include="qlo\valueobjects\vo_evolutiondescription.hpp">
       <Filter>valueobjects</Filter>
     </ClInclude>
+    <ClInclude Include="qlo\objects\obj_ctsmmcapletcalibration.hpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_ctsmmcapletcalibration.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_ctsmmcapletcalibration.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_ctsmmcapletcalibration.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="qlo\conversions\conversions.cpp">
@@ -1354,6 +1366,18 @@
       <Filter>serialization\create</Filter>
     </ClCompile>
     <ClCompile Include="qlo\valueobjects\vo_evolutiondescription.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_ctsmmcapletcalibration.cpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_ctsmmcapletcalibration.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_ctsmmcapletcalibration.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_ctsmmcapletcalibration.cpp">
       <Filter>valueobjects</Filter>
     </ClCompile>
   </ItemGroup>

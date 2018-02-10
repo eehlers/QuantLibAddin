@@ -12,7 +12,7 @@
 %include couponvectors.i
 %include credit.i
 %include curvestate.i
-//%include ctsmmcapletcalibration.i
+%include ctsmmcapletcalibration.i
 %include date.i
 %include daycounters.i
 %include defaultbasket.i

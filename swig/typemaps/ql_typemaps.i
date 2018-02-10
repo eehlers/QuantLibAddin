@@ -307,6 +307,12 @@ QL_VEC_RET(QuantLib::Period, std::string)
         reposit::vectorToOper(returnValVec, xRet);
         return &xRet;
 %}
+%typemap(rp_tm_xll_rtst) const std::vector<QuantLib::Size>& %{
+        std::vector<long> returnValVec = QuantLibAddin::convertVector<QuantLib::Size, long>(returnValue);
+        static OPER xRet;
+        reposit::vectorToOper(returnValVec, xRet);
+        return &xRet;
+%}
 
 // rp_tm_xll_cdrt - code to register the return type with Excel
 

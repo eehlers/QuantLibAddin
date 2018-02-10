@@ -18,7 +18,7 @@
 %include defaultbasket.i
 %include defaulttermstructures.i
 %include driftcalculators.i
-//%include evolutiondescription.i
+%include evolutiondescription.i
 %include exercise.i
 %include handles.i
 %include indexes.i

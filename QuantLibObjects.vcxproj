@@ -404,6 +404,7 @@
     <ClInclude Include="qlo\objects\obj_defaultbasket.hpp" />
     <ClInclude Include="qlo\objects\obj_defaulttermstructures.hpp" />
     <ClInclude Include="qlo\objects\obj_driftcalculators.hpp" />
+    <ClInclude Include="qlo\objects\obj_evolutiondescription.hpp" />
     <ClInclude Include="qlo\objects\obj_exercise.hpp" />
     <ClInclude Include="qlo\objects\obj_indexes.hpp" />
     <ClInclude Include="qlo\objects\obj_instruments.hpp" />
@@ -448,6 +449,7 @@
     <ClInclude Include="qlo\serialization\create\create_defaultbasket.hpp" />
     <ClInclude Include="qlo\serialization\create\create_defaulttermstructures.hpp" />
     <ClInclude Include="qlo\serialization\create\create_driftcalculators.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_evolutiondescription.hpp" />
     <ClInclude Include="qlo\serialization\create\create_exercise.hpp" />
     <ClInclude Include="qlo\serialization\create\create_handles.hpp" />
     <ClInclude Include="qlo\serialization\create\create_indexes.hpp" />
@@ -490,6 +492,7 @@
     <ClInclude Include="qlo\serialization\register\serialization_defaultbasket.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_defaulttermstructures.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_driftcalculators.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_evolutiondescription.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_exercise.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_handles.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_indexes.hpp" />
@@ -531,6 +534,7 @@
     <ClInclude Include="qlo\valueobjects\vo_defaultbasket.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_defaulttermstructures.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_driftcalculators.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_evolutiondescription.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_exercise.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_handles.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_indexes.hpp" />
@@ -603,6 +607,8 @@
     <ClCompile Include="qlo\objects\obj_defaulttermstructures.cpp" />
     <ClCompile Include="qlo\objects\obj_defaulttermstructures_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_driftcalculators_hw.cpp" />
+    <ClCompile Include="qlo\objects\obj_evolutiondescription.cpp" />
+    <ClCompile Include="qlo\objects\obj_evolutiondescription_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_exercise.cpp" />
     <ClCompile Include="qlo\objects\obj_indexes.cpp" />
     <ClCompile Include="qlo\objects\obj_indexes_hw.cpp" />
@@ -656,6 +662,7 @@
     <ClCompile Include="qlo\serialization\create\create_defaultbasket.cpp" />
     <ClCompile Include="qlo\serialization\create\create_defaulttermstructures.cpp" />
     <ClCompile Include="qlo\serialization\create\create_driftcalculators.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_evolutiondescription.cpp" />
     <ClCompile Include="qlo\serialization\create\create_exercise.cpp" />
     <ClCompile Include="qlo\serialization\create\create_handles.cpp" />
     <ClCompile Include="qlo\serialization\create\create_indexes.cpp" />
@@ -697,6 +704,7 @@
     <ClCompile Include="qlo\serialization\register\serialization_defaultbasket.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_defaulttermstructures.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_driftcalculators.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_evolutiondescription.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_exercise.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_handles.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_indexes.cpp" />
@@ -739,6 +747,7 @@
     <ClCompile Include="qlo\valueobjects\vo_defaultbasket.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_defaulttermstructures.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_driftcalculators.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_evolutiondescription.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_exercise.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_handles.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_indexes.cpp" />

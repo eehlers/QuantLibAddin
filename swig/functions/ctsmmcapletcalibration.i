@@ -29,7 +29,6 @@ namespace QuantLib {
 
 namespace QuantLib {
 
-    //%noctor(CTSMMCapletCalibration);
     class CTSMMCapletCalibration{
         public:
             //! Returns vector of historic dates for which some fixing is missing.

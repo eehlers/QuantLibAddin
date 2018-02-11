@@ -412,6 +412,7 @@
     <ClInclude Include="qlo\objects\obj_interpolation.hpp" />
     <ClInclude Include="qlo\objects\obj_latentmodels.hpp" />
     <ClInclude Include="qlo\objects\obj_leg.hpp" />
+    <ClInclude Include="qlo\objects\obj_marketmodels.hpp" />
     <ClInclude Include="qlo\objects\obj_math.hpp" />
     <ClInclude Include="qlo\objects\obj_optimization.hpp" />
     <ClInclude Include="qlo\objects\obj_payoffs.hpp" />
@@ -458,6 +459,7 @@
     <ClInclude Include="qlo\serialization\create\create_interpolation.hpp" />
     <ClInclude Include="qlo\serialization\create\create_latentmodels.hpp" />
     <ClInclude Include="qlo\serialization\create\create_leg.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_marketmodels.hpp" />
     <ClInclude Include="qlo\serialization\create\create_math.hpp" />
     <ClInclude Include="qlo\serialization\create\create_optimization.hpp" />
     <ClInclude Include="qlo\serialization\create\create_payoffs.hpp" />
@@ -502,6 +504,7 @@
     <ClInclude Include="qlo\serialization\register\serialization_interpolation.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_latentmodels.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_leg.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_marketmodels.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_math.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_optimization.hpp" />
     <ClInclude Include="qlo\serialization\register\serialization_payoffs.hpp" />
@@ -545,6 +548,7 @@
     <ClInclude Include="qlo\valueobjects\vo_interpolation.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_latentmodels.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_leg.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_marketmodels.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_math.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_optimization.hpp" />
     <ClInclude Include="qlo\valueobjects\vo_payoffs.hpp" />
@@ -621,6 +625,8 @@
     <ClCompile Include="qlo\objects\obj_interpolation_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_latentmodels_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_leg_hw.cpp" />
+    <ClCompile Include="qlo\objects\obj_marketmodels.cpp" />
+    <ClCompile Include="qlo\objects\obj_marketmodels_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_math.cpp" />
     <ClCompile Include="qlo\objects\obj_math_hw.cpp" />
     <ClCompile Include="qlo\objects\obj_optimization.cpp" />
@@ -675,6 +681,7 @@
     <ClCompile Include="qlo\serialization\create\create_interpolation.cpp" />
     <ClCompile Include="qlo\serialization\create\create_latentmodels.cpp" />
     <ClCompile Include="qlo\serialization\create\create_leg.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_marketmodels.cpp" />
     <ClCompile Include="qlo\serialization\create\create_math.cpp" />
     <ClCompile Include="qlo\serialization\create\create_optimization.cpp" />
     <ClCompile Include="qlo\serialization\create\create_payoffs.cpp" />
@@ -718,6 +725,7 @@
     <ClCompile Include="qlo\serialization\register\serialization_interpolation.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_latentmodels.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_leg.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_marketmodels.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_math.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_optimization.cpp" />
     <ClCompile Include="qlo\serialization\register\serialization_payoffs.cpp" />
@@ -762,6 +770,7 @@
     <ClCompile Include="qlo\valueobjects\vo_interpolation.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_latentmodels.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_leg.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_marketmodels.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_math.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_optimization.cpp" />
     <ClCompile Include="qlo\valueobjects\vo_payoffs.cpp" />

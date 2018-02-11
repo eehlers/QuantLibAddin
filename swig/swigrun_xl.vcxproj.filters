@@ -187,5 +187,8 @@
     <None Include="functions\products.i">
       <Filter>swig\functions\marketmodels</Filter>
     </None>
+    <None Include="functions\marketmodels.i">
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
   </ItemGroup>
 </Project>

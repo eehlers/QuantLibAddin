@@ -190,11 +190,11 @@ QL_OBJECT_WRAPPER(CotSwapFromFwdCorrelation)
 QL_OBJECT_WRAPPER(PiecewiseConstantCorrelation)
 
 QL_OBJECT_WRAPPER(EvolutionDescription)
+QL_OBJECT_WRAPPER(CTSMMCapletCalibration)
 QL_OBJECT_WRAPPER(CTSMMCapletOriginalCalibration)
 QL_OBJECT_WRAPPER(CTSMMCapletAlphaFormCalibration)
 QL_OBJECT_WRAPPER(CTSMMCapletMaxHomogeneityCalibration)
 
-//QL_OBJECT_WRAPPER(xxx)
 QL_OBJECT_WRAPPER(MarketModelMultiProduct)
 QL_OBJECT_WRAPPER(MarketModelComposite)
 QL_OBJECT_WRAPPER(MultiProductComposite)
@@ -202,6 +202,14 @@ QL_OBJECT_WRAPPER(OneStepForwards)
 QL_OBJECT_WRAPPER(MultiStepRatchet)
 QL_OBJECT_WRAPPER(OneStepOptionlets)
 
+QL_OBJECT_WRAPPER(MarketModel)
+QL_OBJECT_WRAPPER(FlatVol)
+QL_OBJECT_WRAPPER(AbcdVol)
+QL_OBJECT_WRAPPER(PseudoRootFacade)
+QL_OBJECT_WRAPPER(CotSwapToFwdAdapter)
+QL_OBJECT_WRAPPER(FwdPeriodAdapter)
+QL_OBJECT_WRAPPER(FwdToCotSwapAdapter)
+QL_OBJECT_WRAPPER(FlatVolFactory)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

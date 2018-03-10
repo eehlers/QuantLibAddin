@@ -759,6 +759,18 @@
     <ClInclude Include="qlo\valueobjects\vo_marketmodelevolvers.hpp">
       <Filter>valueobjects</Filter>
     </ClInclude>
+    <ClInclude Include="qlo\objects\obj_accountingengines.hpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_accountingengines.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_accountingengines.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_accountingengines.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="qlo\conversions\conversions.cpp">
@@ -1429,6 +1441,18 @@
       <Filter>serialization\register</Filter>
     </ClCompile>
     <ClCompile Include="qlo\valueobjects\vo_marketmodelevolvers.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\objects\obj_accountingengines.cpp">
+      <Filter>objects\marketmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_accountingengines.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_accountingengines.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_accountingengines.cpp">
       <Filter>valueobjects</Filter>
     </ClCompile>
   </ItemGroup>

@@ -57,10 +57,18 @@ namespace QuantLib {
     class T;
 }
 // FIXME - Move this into reposit swig module.
-%typemap(rp_tm_xll_cnvt) QuantLib::T & %{
+%typemap(rp_tm_xll_cnvt) QuantLib::T const & %{
         boost::shared_ptr<QuantLib::T> $1_name_temp =
             QuantLibAddin::GetObject<QuantLibAddin::T, QuantLib::T>::f($1_name);
         const QuantLib::T &$1_name_obj = *($1_name_temp.get());
+%}
+
+%typemap(rp_tm_xll_cnvt) QuantLib::T & %{
+        boost::shared_ptr<QuantLibAddin::T > $1_name_temp2;
+        reposit::Repository::instance().retrieveObject($1_name_temp2, $1_name);
+        boost::shared_ptr<QuantLib::T> $1_name_temp1;
+        $1_name_temp2->getLibraryObject($1_name_temp1);
+        QuantLib::T &$1_name_obj = *($1_name_temp1.get());
 %}
 
 OBJECT_WRAPPER(QuantLibAddin::T, QuantLib::T)
@@ -217,6 +225,7 @@ QL_OBJECT_WRAPPER(MarketModelEvolver)
 QL_OBJECT_WRAPPER(LogNormalFwdRatePc)
 QL_OBJECT_WRAPPER(LogNormalFwdRateIpc)
 QL_OBJECT_WRAPPER(NormalFwdRatePc)
+QL_OBJECT_WRAPPER(AccountingEngine)
 
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?

@@ -1,6 +1,6 @@
 
 %include abcd.i
-//%include accountingengines.i
+%include accountingengines.i
 %include alphaform.i
 %include assetswap.i
 %include basketlossmodels.i

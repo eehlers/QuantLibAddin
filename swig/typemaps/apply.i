@@ -63,6 +63,7 @@ namespace QuantLib {
         const QuantLib::T &$1_name_obj = *($1_name_temp.get());
 %}
 
+// FIXME - Move this into reposit swig module.  Consolidate it into RP_GET_UNDERLYING_NONCONST (see qlAccountingEngineMultiplePathValues() in the old build)
 %typemap(rp_tm_xll_cnvt) QuantLib::T & %{
         boost::shared_ptr<QuantLibAddin::T > $1_name_temp2;
         reposit::Repository::instance().retrieveObject($1_name_temp2, $1_name);

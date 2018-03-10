@@ -2,6 +2,8 @@
 %group(marketmodelevolvers);
 
 %insert(obj_hpp) %{
+#include <ql/types.hpp>
+
 namespace QuantLib {
     class MarketModelEvolver;
     class BrownianGeneratorFactory;
@@ -10,7 +12,9 @@ namespace QuantLib {
 %}
 
 %insert(obj_cpp) %{
-#include <qlo/marketmodelevolvers.hpp>
+#include <qlo/objects/obj_marketmodels.hpp>
+#include <qlo/objects/obj_browniangenerators.hpp>
+
 #include <ql/models/marketmodels/evolvers/lognormalfwdratepc.hpp>
 #include <ql/models/marketmodels/evolvers/lognormalfwdrateipc.hpp>
 #include <ql/models/marketmodels/evolvers/normalfwdratepc.hpp>
@@ -35,6 +39,7 @@ namespace QuantLib {
 
     class LogNormalFwdRatePc : public MarketModelEvolver {
         public:
+            %rename2(LogNormalFwdRatePc, ForwardRatePc);
             LogNormalFwdRatePc(
                 const boost::shared_ptr<MarketModel>& MarketModel,          //!< MarketModel object ID.
                 const BrownianGeneratorFactory& BrownianGeneratorFactory,   //!< Brownian generator factory.
@@ -44,6 +49,7 @@ namespace QuantLib {
 
     class LogNormalFwdRateIpc : public MarketModelEvolver {
         public:
+            %rename2(LogNormalFwdRateIpc, ForwardRateIpc);
             LogNormalFwdRateIpc(
                 const boost::shared_ptr<MarketModel>& MarketModel,          //!< MarketModel object ID.
                 const BrownianGeneratorFactory& BrownianGeneratorFactory,   //!< Brownian generator factory.
@@ -53,6 +59,7 @@ namespace QuantLib {
 
     class NormalFwdRatePc : public MarketModelEvolver {
         public:
+            %rename2(NormalFwdRatePc, ForwardRateNormalPc);
             NormalFwdRatePc(
                 const boost::shared_ptr<MarketModel>& MarketModel,          //!< MarketModel object ID.
                 const BrownianGeneratorFactory& BrownianGeneratorFactory,   //!< Brownian generator factory.

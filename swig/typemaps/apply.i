@@ -211,6 +211,13 @@ QL_OBJECT_WRAPPER(FwdPeriodAdapter)
 QL_OBJECT_WRAPPER(FwdToCotSwapAdapter)
 QL_OBJECT_WRAPPER(FlatVolFactory)
 
+QL_OBJECT_WRAPPER(BrownianGeneratorFactory)
+QL_OBJECT_WRAPPER(MTBrownianGeneratorFactory)
+QL_OBJECT_WRAPPER(MarketModelEvolver)
+QL_OBJECT_WRAPPER(LogNormalFwdRatePc)
+QL_OBJECT_WRAPPER(LogNormalFwdRateIpc)
+QL_OBJECT_WRAPPER(NormalFwdRatePc)
+
 // This functionality is copied directly from the old build - see function qlLegNPV().
 // It looks a little odd?  Treating a DiscountCurve like a YieldTermStructure?
 %typemap(rp_tm_xll_cnvt) QuantLib::DiscountCurve & %{

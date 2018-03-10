@@ -3,6 +3,7 @@
 
 %insert(obj_hpp) %{
 namespace QuantLib {
+    class BrownianGeneratorFactory;
     class MTBrownianGeneratorFactory;
 }
 %}
@@ -13,9 +14,9 @@ namespace QuantLib {
 
 namespace QuantLib {
 
-    //class BrownianGeneratorFactory{};
+    class BrownianGeneratorFactory{};
 
-    class MTBrownianGeneratorFactory /*: public BrownianGeneratorFactory*/ {
+    class MTBrownianGeneratorFactory : public BrownianGeneratorFactory {
         public:
             MTBrownianGeneratorFactory(
                 /*unsigned*/ long seed = 0  //!< Seed for random sequence generator.

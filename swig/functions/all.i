@@ -26,7 +26,7 @@
 %include interpolation.i
 %include latentmodels.i
 %include leg.i                  // depends on capfloor
-//%include marketmodelevolvers.i
+%include marketmodelevolvers.i
 %include marketmodels.i
 %include math.i
 %include optimization.i

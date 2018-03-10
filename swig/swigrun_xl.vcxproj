@@ -66,6 +66,7 @@
     <None Include="functions\interpolation.i" />
     <None Include="functions\latentmodels.i" />
     <None Include="functions\leg.i" />
+    <None Include="functions\marketmodelevolvers.i" />
     <None Include="functions\marketmodels.i" />
     <None Include="functions\math.i" />
     <None Include="functions\optimization.i" />

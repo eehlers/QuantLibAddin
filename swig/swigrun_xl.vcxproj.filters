@@ -190,5 +190,8 @@
     <None Include="functions\marketmodels.i">
       <Filter>swig\functions\marketmodels</Filter>
     </None>
+    <None Include="functions\marketmodelevolvers.i">
+      <Filter>swig\functions\marketmodels</Filter>
+    </None>
   </ItemGroup>
 </Project>
